@@ -3,7 +3,7 @@ import bg from "@/app/images/Conferance.png";
 
 const Conference = () => {
   return (
-    <section className="relative px-4 md:px-[120px] py-12 bg-gray-50  w-screen">
+    <section className="relative px-4 md:px-[120px] py-12 bg-white  w-screen">
       <div
         className="max-w-6xl mx-auto flex rounded-3xl  justify-end items-start p-10 h-[500px]"
         style={{

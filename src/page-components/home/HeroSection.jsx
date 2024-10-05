@@ -4,7 +4,7 @@ import Image from "next/image";
 import bg from "@/app/images/bg.png";
 const HeroSection = () => {
   return (
-    <div className="min-h-[59vh] bg-gray-100">
+    <div className="min-h-[59vh] bg-gray-50">
       {/* Navbar */}
 
       {/* Hero Section */}
