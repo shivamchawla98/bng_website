@@ -3,7 +3,7 @@ import React from "react";
 import Logo1 from "@/app/images/logos/logo1.png";
 function OurPartners() {
   return (
-    <div className="py-8px-4 mx-auto max-w-screen-xl flex flex-col justify-center items-center text-center lg:py-16 lg:px-6">
+    <div className="  mx-auto max-w-screen-xl flex flex-col justify-center items-center text-center lg:py-16 lg:px-6">
              <h2 className="mb-4 text-[52px] tracking-tight font-extrabold text-black ">
             Our Partners
           </h2>
