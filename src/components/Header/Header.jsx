@@ -20,8 +20,8 @@ function Header() {
         <div className="hidden md:flex space-x-4">
           <Link href="/" className="hover:text-purple-300">Home</Link>
           <Link href="/benefits" className="hover:text-purple-300">Benefits</Link>
-          <Link href="/about" className="hover:text-purple-300">About us</Link>
-          <Link href="/conference" className="hover:text-purple-300">Conference</Link>
+          <Link href="/our-company" className="hover:text-purple-300">About us</Link>
+          <Link href="/conferance" className="hover:text-purple-300">Conference</Link>
           <Link href="/contact" className="hover:text-purple-300">Contact Us</Link>
 
         </div>
@@ -59,8 +59,8 @@ function Header() {
         <div className="flex flex-col p-4 space-y-4">
           <Link href="/" className="text-black hover:text-purple-300 py-2">Home</Link>
           <Link href="/benefits" className="text-black hover:text-purple-300 py-2">Benefits</Link>
-          <Link href="/about" className="text-black hover:text-purple-300 py-2">About us</Link>
-          <Link href="/conference" className="text-black hover:text-purple-300 py-2">Conference</Link>
+          <Link href="/our-company" className="text-black hover:text-purple-300 py-2">About us</Link>
+          <Link href="/conferance" className="text-black hover:text-purple-300 py-2">Conference</Link>
           <Link href="/contact" className="text-black hover:text-purple-300 py-2">Contact Us</Link>
           <div className="flex flex-col space-y-3 pt-4 border-t">
             <button className="bg-primary rounded-full text-white px-6 py-3 hover:bg-gradient-to-tr from-purple-700 to-purple-600 flex items-center justify-center">
