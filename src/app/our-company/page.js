@@ -6,13 +6,11 @@ import OurPartners from "@/page-components/OurCompany/OurPartners";
 import { QuoteForm } from "@/page-components/OurCompany/QuoteForm";
 import { FeatureCard } from "@/page-components/OurCompany/FeatureCard";
 import AboutSection from "@/page-components/OurCompany/AboutSections";
+import { AboutUsHero } from "@/page-components/OurCompany/AboutUsHero";
 function page() {
   return (
     <div className="bg-white">
-      <CommonHeroSection
-        title="Our Company"
-        subtitle="Explore the latest innovations and network!"
-      />
+   <AboutUsHero />
       <AboutSection />
       <section className="py-16  w-full mx-auto px-4 bg-gray-50">
         <h2 className="text-[48px] text-center font-bold text-black">
@@ -45,9 +43,9 @@ function page() {
           />
         </div>
       </section>
-      <section className="bg-white py-12">
+      {/* <section className="bg-white py-12">
         <TeamSection />
-      </section>
+      </section> */}
       <section className="bg-gray-50 py-12 md:px-[112px]">
         <OurPartners />
       </section>
