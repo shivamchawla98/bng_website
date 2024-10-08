@@ -12,7 +12,7 @@ return(
   <div className=" bg-white w-screen">
   <HeroSection />
   <AboutUs />
-  {/* <MemberBenefits /> */}
+  <MemberBenefits />
   <TestimonialSlider />
   <WorldWideReach />
   <Solutions />
