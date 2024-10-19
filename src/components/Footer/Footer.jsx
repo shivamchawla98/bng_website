@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="bg-primary text-white">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex  md:justify-between ] ">
-          <div className="mt-6 md:mb-0 ">
+          <div className="mt-6 md:mb-2 ">
             <SocialLinks />
             <div className="mt-10">
               <h3 className="text-2xl text-wrap font-bold max-w-[250px]">
