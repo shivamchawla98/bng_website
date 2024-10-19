@@ -14,7 +14,7 @@ const Footer = () => {
             <SocialLinks />
             <div className="mt-10">
               <h3 className="text-2xl text-wrap font-bold max-w-[250px]">
-                Subscribe to our newsletter now!
+                Subscribe to our newsletters now!
               </h3>
               <div className="mt-6 border-b-[0.9px] w-max">
                 <input
