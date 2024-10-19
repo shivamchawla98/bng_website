@@ -18,7 +18,7 @@ function page() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
           <FeatureCard
-            title="Appearance"
+            title="Appearanc"
             description="Professional development focused on presentation skills"
           />
           <FeatureCard
