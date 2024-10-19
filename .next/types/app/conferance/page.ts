@@ -1,4 +1,4 @@
-// File: /Users/vidhitomar/Desktop/bng_website/src/app/conferance/page.js
+// File: /Users/vidhitomar/bng_website/src/app/conferance/page.js
 import * as entry from '../../../../src/app/conferance/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
