@@ -19,7 +19,7 @@ function Header() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-4">
           <Link href="/" className="hover:text-purple-300">Home</Link>
-          <Link href="/benefits" className="hover:text-purple-300">Benefits</Link>
+          <Link href="/benifits" className="hover:text-purple-300">Benefits</Link>
           <Link href="/our-company" className="hover:text-purple-300">About us</Link>
           <Link href="/conferance" className="hover:text-purple-300">Conference</Link>
           <Link href="/contact" className="hover:text-purple-300">Contact Us</Link>
