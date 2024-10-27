@@ -7,7 +7,6 @@ const AboutSection = () => {
     <>
       <section className="py-24 bg-white">
         <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto ">
-          {/* First section */}
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
             <div className="relative flex justify-center items-center">
               <div className="hidden lg:block absolute left-16 bottom-12 h-[350px] w-[400px] border-primary border-2 rounded-md"></div>
@@ -35,8 +34,6 @@ const AboutSection = () => {
               </p>
             </div>
           </div>
-
-          {/* Second section */}
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
             <div className="relative flex justify-center items-center lg:order-2">
               <div className="hidden lg:block absolute right-16 bottom-12 h-[350px] w-[400px] border-primary border-2 rounded-md"></div>

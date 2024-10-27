@@ -7,9 +7,10 @@ import WorldWideReach from "@/page-components/home/WorldWideReach";
 import Solutions from "@/page-components/home/Solutions";
 import News from "@/page-components/home/News";
 import Conference from "@/page-components/home/Conferance";
+
 export default function Home() {
 return(
-  <div className=" bg-white w-screen">
+  <div className=" w-screen">
   <HeroSection />
   <AboutUs />
   <MemberBenefits />

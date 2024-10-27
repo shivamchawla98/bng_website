@@ -2,11 +2,12 @@ import React from "react";
 import Image from "next/image";
 import centeredImage from "@/app/images/memberBenifits.svg";
 import handShake from "@/app/images/handSHake.svg";
-
+import Vector1 from "@/app/images/Patch1.svg";
 function MemberBenefits() {
   return (
-    <div className="bg-gray-100 py-24">
-      <div className="container mx-auto px-4">
+    <div className="relative py-24 w-full">
+      {/* <Image src={Vector1} alt="Vector" className="absolute left-0 bottom-[-20rem]  h-full " /> */}
+      <div className="container mx-auto px-4 ">
         <h2 className="text-4xl text-black font-bold text-center mb-12">
           Member Benefits
         </h2>

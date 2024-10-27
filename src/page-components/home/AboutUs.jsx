@@ -4,7 +4,7 @@ import rightImg from "@/app/images/section2.png";
 
 function AboutUs() {
   return (
-    <div className=" px-4 md:px-[112px]  flex flex-col md:flex-row items-center justify-between ">
+    <div className=" bg-white px-4 md:px-[112px]  flex flex-col md:flex-row items-center justify-between pb-14 ">
       <div className="md:w-[400px] relative">
         <Image
           src={rightImg}
@@ -15,7 +15,7 @@ function AboutUs() {
           className="rounded-lg w-100"
         />
       </div>
-      <div className="md:w-1/2 md:pr-10 mb-8 md:mb-0 md:ml-10 mt-10 md:mt-0">
+      <div className="md:w-1/2 md:pr-10 mb-8 md:mb-0 md:ml-10 mt-10 md:mt-0 ">
         <h2 className="text-4xl font-bold mb-4 text-black">About Us?</h2>
         <p className="text-gray-600 mb-4">
           Lorem Ipsum is simply dummy text of the printing and typesetting

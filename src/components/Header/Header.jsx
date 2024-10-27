@@ -2,8 +2,9 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from 'next/link';
-
+import { useRouter } from "next/navigation";
 function Header() {
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -28,7 +29,7 @@ function Header() {
 
         {/* Desktop Buttons */}
         <div className="hidden md:flex space-x-4">
-          <button className="bg-primary rounded-full text-white px-6 py-3 hover:bg-gradient-to-tr from-purple-700 to-purple-600 flex items-center">
+          <button onClick={() => router.push("/become-a-member")} className="bg-primary rounded-full text-white px-6 py-3 hover:bg-gradient-to-tr from-purple-700 to-purple-600 flex items-center">
             Become a Member
           </button>
           <button className="bg-white text-black px-6 py-3 flex items-center border border-gray-200 rounded-full">
