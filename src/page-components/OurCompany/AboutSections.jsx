@@ -19,16 +19,19 @@ const AboutSection = () => {
             </div>
             <div className="flex flex-col justify-center items-center lg:items-start gap-8">
               <h2 className="text-gray-900 text-4xl font-extrabold leading-normal text-center lg:text-start">
-                About Company
+                About BNG: Building Global Connections in Logistics
               </h2>
               <p className="text-gray-500 text-base leading-relaxed text-center lg:text-start">
-                BNG Group Incorporated in the year of 2020, By the team of
-                professionals with +20 years’ experience of logistics and supply
-                chain management, through good times and tough economic
-                situations, we gathered an abundance of expert and
-                administrative experience alongside priceless industry knowledge
-                contacts that place us in great stead as an innovator in
-                production network and B2B business organizing.
+                BNG Logistics Network is a global platform built to unite
+                logistics professionals, freight forwarders, and industry
+                leaders in an environment optimized for growth and
+                collaboration. Our network is designed around core values of
+                trust, transparency, and advanced technology, rigorously vetting
+                each member to ensure reliable, high-quality partnerships. By
+                offering a fully digitalized, secure platform, BNG empowers
+                members to streamline operations, enhance communication, and
+                access vital tools for data-driven decision-making in a dynamic
+                industry.
               </p>
             </div>
           </div>
@@ -44,15 +47,15 @@ const AboutSection = () => {
             </div>
             <div className="flex flex-col justify-center items-center lg:items-start gap-8">
               <p className="text-gray-500 text-base leading-relaxed text-center lg:text-start">
-                BNG is a power-full logistics network that offers protected,
-                secure and completely mechanized digitalized environment to all
-                individuals. We examined each part of market and after right
-                around 3 years profound investigation and study come-up BNG
-                Logistics Network with extra-customary components which can help
-                you to assembled solid associations across the globe and
-                simultaneously you will have full admittance to a biggest
-                Exporters/Importers DATA Bank " fuelled and kept up with by BNG
-                GROUP.
+                Members of BNG benefit from around-the-clock customer support,
+                an extensive trade directory, and free promotional services that
+                increase their visibility in the global market. Through
+                real-time chat, virtual meetings, and a unique payment
+                protection framework, BNG provides the resources needed to build
+                meaningful, profitable connections. Our commitment to innovation
+                and customer-centric support allows BNG members to expand their
+                networks and pursue new business opportunities with confidence
+                across international borders.
               </p>
             </div>
           </div>
@@ -65,28 +68,29 @@ const AboutSection = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
           <FeatureCard
-            title="Appearanc"
-            description="Professional development focused on presentation skills"
+            title="Global Collaboration
+"
+            description="Connecting logistics professionals worldwide to foster strong, reliable partnerships that drive growth and mutual success across borders."
           />
           <FeatureCard
-            title="Confidence"
-            description="Build your professional confidence through expert guidance"
+            title="Integrity & Trust"
+            description="Upholding rigorous standards in member vetting, ensuring trustworthy relationships and a secure, credible network for dependable business interactions."
           />
           <FeatureCard
-            title="Curiosity"
-            description="Explore new ideas and innovations in your field"
+            title="Innovation & Technology"
+            description="Leveraging advanced tools and technology to streamline operations, enhance communication, and provide valuable insights for informed decision-making."
           />
           <FeatureCard
-            title="Appearance"
-            description="Professional development focused on presentation skills"
+            title="Customer-Centric Support"
+            description="Providing 24/7 customer support and regional assistance, dedicated to ensuring seamless service and immediate help whenever needed."
           />
           <FeatureCard
-            title="Confidence"
-            description="Build your professional confidence through expert guidance"
+            title="Transparency & Accountability"
+            description="Offering real-time monitoring, performance tracking, and payment protection for clear, accountable, and secure business operations."
           />
           <FeatureCard
-            title="Curiosity"
-            description="Explore new ideas and innovations in your field"
+            title="Growth & Opportunity"
+            description="Empowering members with resources like marketing support, a trade directory, and live networking opportunities to fuel continuous growth and success."
           />
         </div>
       </section>
@@ -104,19 +108,19 @@ const AboutSection = () => {
             </div>
             <div className="flex flex-col justify-center items-center lg:items-start gap-8">
               <h2 className="text-gray-900 text-4xl font-extrabold leading-normal text-center lg:text-start">
-                Why Us?
+                Our Vision
               </h2>
               <p className="text-gray-500 text-base leading-relaxed text-center lg:text-start">
-                We believe that the key to success lies in understanding our
-                clients' unique needs. Our customer-first approach ensures that
-                every interaction, from the initial consultation to project
-                delivery, is seamless and efficient. We prioritize open
-                communication, transparency, and collaboration, ensuring that
-                each project exceeds expectations. By fostering strong
-                relationships, we’ve created a loyal clientele who trusts us to
-                handle their most challenging ventures. Your success is our
-                priority, and we strive to be your partner in achieving
-                greatness.
+                Our vision at BNG Logistics Network is to be the premier global
+                platform where logistics professionals seamlessly connect,
+                collaborate, and innovate to drive industry excellence. We
+                aspire to create a trusted network that transcends borders,
+                fostering reliable partnerships and setting new standards for
+                transparency, efficiency, and technological advancement. By
+                empowering our members with essential tools, real-time
+                resources, and robust support, we envision a world where
+                logistics thrives through unified, data-driven, and sustainable
+                growth on an international scale.
               </p>
             </div>
           </div>
@@ -134,21 +138,22 @@ const AboutSection = () => {
             </div>
             <div className="flex flex-col justify-center items-center lg:items-start gap-8">
               <h2 className="text-gray-900 text-4xl font-extrabold leading-normal text-center lg:text-start">
-                Our Vision
+                Our Mission
               </h2>
               <p className="text-gray-500 text-base leading-relaxed text-center lg:text-start">
-                Our vision is to be at the forefront of industry transformation,
-                constantly innovating to bring sustainable, forward-thinking
-                solutions to our clients. We aspire to create a future where our
-                projects not only fulfill immediate goals but also contribute to
-                long-term environmental and societal impact. By focusing on
-                technology and sustainability, we aim to build a legacy that
-                will inspire future generations. We envision a world where our
-                work enhances communities and drives positive change globally.{" "}
+                Our mission is to provide logistics professionals worldwide with
+                a secure, digitalized environment that enhances connectivity,
+                maximizes business potential, and fosters enduring partnerships.
+                We are committed to upholding high standards of integrity,
+                rigorous member vetting, and cutting-edge technology, ensuring
+                that each interaction within the BNG network brings real value.
+                Through dedicated customer support, innovation-driven tools, and
+                proactive engagement, we aim to support our members in achieving
+                consistent success and expanding their global reach
               </p>
             </div>
           </div>
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mt-16">
+          {/* <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mt-16">
             <div className="relative flex justify-center items-center">
               <div className="hidden lg:block absolute left-16 bottom-12 h-[350px] w-[400px] border-primary border-2 rounded-md"></div>
               <Image
@@ -175,7 +180,7 @@ const AboutSection = () => {
                 greatness.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </>
