@@ -6,8 +6,8 @@ export const AboutUsHero = () => {
         <h1 className="text-xl font-bold text-white relative z-10">
           Contact Us
         </h1>
-        <h2 className="text-[52px] font-bold text-white relative z-10">
-          We'd love to hear from You.
+        <h2 className="text-[52px] font-bold text-white relative z-10 max-w-3xl">
+        Feel the power of Business Networking with Automation
         </h2>
       </div>
     </div>

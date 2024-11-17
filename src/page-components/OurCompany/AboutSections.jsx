@@ -22,15 +22,13 @@ const AboutSection = () => {
                 About Company
               </h2>
               <p className="text-gray-500 text-base leading-relaxed text-center lg:text-start">
-                At our company, innovation drives everything we do. We aim to
-                blend tradition with technology, crafting solutions that are
-                both cutting-edge and timeless. Our team is committed to
-                delivering excellence in every project, big or small, ensuring
-                client satisfaction is at the forefront of our mission. With a
-                wealth of experience across various industries, we’ve built a
-                reputation for quality, trust, and outstanding results. Join us
-                on a journey to redefine what's possible in the world of
-                business and construction{" "}
+                BNG Group Incorporated in the year of 2020, By the team of
+                professionals with +20 years’ experience of logistics and supply
+                chain management, through good times and tough economic
+                situations, we gathered an abundance of expert and
+                administrative experience alongside priceless industry knowledge
+                contacts that place us in great stead as an innovator in
+                production network and B2B business organizing.
               </p>
             </div>
           </div>
@@ -46,16 +44,15 @@ const AboutSection = () => {
             </div>
             <div className="flex flex-col justify-center items-center lg:items-start gap-8">
               <p className="text-gray-500 text-base leading-relaxed text-center lg:text-start">
-                We believe that the key to success lies in understanding our
-                clients' unique needs. Our customer-first approach ensures that
-                every interaction, from the initial consultation to project
-                delivery, is seamless and efficient. We prioritize open
-                communication, transparency, and collaboration, ensuring that
-                each project exceeds expectations. By fostering strong
-                relationships, we’ve created a loyal clientele who trusts us to
-                handle their most challenging ventures. Your success is our
-                priority, and we strive to be your partner in achieving
-                greatness.{" "}
+                BNG is a power-full logistics network that offers protected,
+                secure and completely mechanized digitalized environment to all
+                individuals. We examined each part of market and after right
+                around 3 years profound investigation and study come-up BNG
+                Logistics Network with extra-customary components which can help
+                you to assembled solid associations across the globe and
+                simultaneously you will have full admittance to a biggest
+                Exporters/Importers DATA Bank " fuelled and kept up with by BNG
+                GROUP.
               </p>
             </div>
           </div>

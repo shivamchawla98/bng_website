@@ -7,7 +7,7 @@ export const BenifitsHero = () => {
           Benifits
         </h1>
         <h2 className="text-[52px] font-bold text-white relative z-10">
-          The Benefits of Working with Reflect
+        Small investment big benefits
         </h2>
       </div>
     </div>

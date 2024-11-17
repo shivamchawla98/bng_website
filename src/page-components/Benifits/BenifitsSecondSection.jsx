@@ -16,22 +16,22 @@ function BenifitsSecondSection() {
               className="rounded-sm md:w-[500px] md:h-[500px] object-cover "
             />
             <p className="text-gray-700 text-[20px] mt-4 md:max-w-[500px]">
-              Founded in 2022,{" "}
-              <span className="font-bold text-red-500">BNG</span> has emerged as
-              a transformative force in international logistics networking. We
-              emphasize professionalism, accountability, and innovation.{" "}
-              <span className="font-bold text-red-500">BNG</span>{" "}
-              membership is setting new industry benchmarks. Every member
-              benefits from a robust financial protection program, ensuring
-              secure transactions.
+              Every buyer, seller, and logistics professional undergoes a
+              rigorous approval process, ensuring a trusted business community.
+              Join the largest network of industry professionals today!
             </p>{" "}
           </div>
-          <div className="flex  flex-col md:max-w-[700px] py-6">
+          <div className="flex justify-start place-content-start  flex-col md:max-w-[700px] py-6">
             <h3 className="text-black">About BNG --</h3>
             <h1 className="text-primary text-4xl font-bold">
-              Forging Connections, Empowering Operations, and Expanding your
-              Global Reach{" "}
+              Small investment big benefits
             </h1>
+            <h2 className="font-bold">
+              With BNG, Access Over 10 Million Buyers, Sellers, and Freight
+              Forwarders—Discover New Business Opportunities in Just a Few
+              Clicks.
+            </h2>
+
             <Image
               src={about2}
               alt="About Image 1"

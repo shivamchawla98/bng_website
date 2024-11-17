@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
       </Head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#E6EBF4]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#E6EBF4] overflow-x-hidden`}
       >
         <Header />
         {children}

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Check, Home, Rocket, Globe } from 'lucide-react';
-
+import Image from 'next/image';
+import character from '@/app/images/character.svg'
+import character2 from '@/app/images/Rafiki.svg'
 const PricingCard = ({ tier, features, price, icon: Icon, isPopular }) => (
   <div className="bg-white rounded-2xl p-8 shadow-xl relative flex flex-col h-full transform transition-transform hover:scale-105">
     <div className="w-16 h-16 mb-6 text-primary">
@@ -131,8 +133,12 @@ const PricingTable = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-primary to-purple-600 py-20 rounded-md">
-      <div className="max-w-7xl mx-auto px-4">
+    <div className="min-h-screen relative bg-gradient-to-b max-w-5xl mx-auto from-primary to-purple-600 py-20 rounded-md">
+
+        <Image src={character} alt="pricing-bg" width={300} height={300} className="absolute right-[-20%] bottom-0 " />
+        <Image src={character2} alt="pricing-bg" width={150} height={300} className="absolute left-[-17%] bottom-0 " />
+ 
+      <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-white mb-4">
             Get started with Global Freight
@@ -142,7 +148,7 @@ const PricingTable = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {tiers.map((tier) => (
             <PricingCard key={tier.tier} {...tier} />
           ))}

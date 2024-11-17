@@ -11,13 +11,15 @@ const HeroSection = () => {
       <div className="container py-6 mx-auto  px-4 flex flex-col lg:flex-row items-center">
         <div className="lg:w-1/2 mb-8 lg:mb-0">
           <h1 className="text-5xl font-bold mb-4 text-black">
-            Do business with other{" "}
-            <span className="text-primary">forwarders</span> everyday
+            Connect and
+            <span className="text-primary"> collaborate</span> with
+            <span className="text-primary"> forwarders </span>
+            daily
           </h1>
           <p className="text-black mb-8">
-            Meet the evolution of forwarder networks. If you are tired of paying
-            for multiple networks with no real benefits and want a new way to
-            partner, look no further!
+            Experience the next generation of forwarder networks. Tired of
+            investing in multiple networks with minimal returns? Discover a
+            fresh approach to partnership here!
           </p>
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
             <button className="bg-primary w-max rounded-full text-white px-6 py-3  hover:bg-gradient-to-tr from-purple-700 to-purple-600 flex items-center">
@@ -27,8 +29,7 @@ const HeroSection = () => {
                 className="h-5 w-5 ml-2"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
+                stroke="currentColor">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -46,8 +47,7 @@ const HeroSection = () => {
                 className="h-5 w-5 ml-2"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
+                stroke="currentColor">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -74,8 +74,7 @@ const HeroSection = () => {
                   className="h-6 w-6 text-purple-600"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
+                  stroke="currentColor">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -103,8 +102,7 @@ const HeroSection = () => {
                   className="h-6 w-6 text-purple-600"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
+                  stroke="currentColor">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -130,8 +128,7 @@ const HeroSection = () => {
                   className="h-6 w-6 text-purple-600"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
+                  stroke="currentColor">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
