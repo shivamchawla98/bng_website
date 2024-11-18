@@ -1,7 +1,7 @@
 import React from 'react';
 import { Check, Home, Rocket, Globe } from 'lucide-react';
 import Image from 'next/image';
-import character from '@/app/images/character.svg'
+import character from '@/app/images/Character.svg'
 import character2 from '@/app/images/Rafiki.svg'
 const PricingCard = ({ tier, features, price, icon: Icon, isPopular }) => (
   <div className="bg-white rounded-2xl p-8 shadow-xl relative flex flex-col h-full transform transition-transform hover:scale-105">
