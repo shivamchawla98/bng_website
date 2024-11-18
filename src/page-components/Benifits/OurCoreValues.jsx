@@ -342,7 +342,7 @@ function OurCoreValues() {
                     "Claim Center",
                   ][index]
                 }`}</h2>
-                {content}
+                <p className="text-black">{content}</p>
               </div>
             </div>
 
@@ -364,7 +364,7 @@ function OurCoreValues() {
                 />
               </div>
               <div className="flex flex-col justify-center items-center lg:items-start gap-8">
-                {contentTwo}
+                <p className="text-black">{contentTwo}</p>
               </div>
             </div>
           </div>

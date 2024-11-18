@@ -1,3 +1,6 @@
+// FeatureCard.jsx
+"use client";
+
 export const FeatureCard = ({ title, description, onClick }) => (
   <button
     className="flex flex-col items-center p-6 text-center cursor-pointer"

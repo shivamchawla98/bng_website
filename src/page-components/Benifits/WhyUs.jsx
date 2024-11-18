@@ -294,7 +294,7 @@ const WhyUs = () => {
                     ref={(el) => (solutionRefs.current[index] = el)} // Referencing the solution details section
                   >
                     <h2 className="text-3xl font-bold text-black">{heading}</h2>
-                    <p>{description2}</p>
+                    <p className="text-black">{description2}</p>
                   </div>
                 </div>
 
@@ -316,7 +316,7 @@ const WhyUs = () => {
                     />
                   </div>
                   <div className="flex flex-col justify-center items-center lg:items-start gap-8">
-                    <p>{description3}</p>
+                    <p className="text-black">{description3}</p>
                   </div>
                 </div>
               </div>
