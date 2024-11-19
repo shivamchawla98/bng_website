@@ -213,13 +213,13 @@ const WhyUs = () => {
   };
 
   return (
-    <section className="py-12 flex flex-col h-max gap-y-96 bg-white">
-      <div className="max-w-6xl mx-auto py-10 px-4 sm:px-6 lg:px-8 bg-white max-h-max">
+    <section className="py-12 flex flex-col  bg-white">
+      <div className="max-w-6xl mx-auto  px-4 sm:px-6 lg:px-8 bg-white max-h-max">
         <h2 className="text-4xl font-bold text-center text-black mb-8">
           Why Us?
         </h2>
         <div className="flex w-[100%] justify-center">
-          <p className="text-center w-[80%]">
+          <p className="text-center w-[80%] text-gray-900">
             With BNG, receive comprehensive marketing support, 24/7 assistance,
             and participate in live industry events. Access a global trade
             directory, advanced tools, and real-time communication features to
@@ -228,7 +228,7 @@ const WhyUs = () => {
         </div>
 
         {/* Grid with 3 columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full h-[100vh]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full ">
           {solutionsData?.map(
             (
               {
@@ -267,10 +267,10 @@ const WhyUs = () => {
         </div>
       </div>
       {/* Dynamic Content */}
-      <section className=" bg-white">
+      <section className=" bg-white ">
         {solutionsData2.map(
           ({ heading, description1, description2, description3 }, index) => (
-            <section key={index} className=" bg-white mt-[100px]">
+            <section key={index} className=" bg-white  py-12">
               <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
                 {/* First Row */}
                 <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
@@ -294,12 +294,13 @@ const WhyUs = () => {
                     ref={(el) => (solutionRefs.current[index] = el)} // Referencing the solution details section
                   >
                     <h2 className="text-3xl font-bold text-black">{heading}</h2>
-                    <p className="text-black">{description2}</p>
+                    <p className="text-black">{description2}{description3}</p>
+                    
                   </div>
                 </div>
 
                 {/* Second Row */}
-                <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
+                {/* <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
                   <div
                     className={`relative flex justify-center items-center ${
                       index % 2 === 0 ? "lg:order-2" : ""
@@ -318,7 +319,7 @@ const WhyUs = () => {
                   <div className="flex flex-col justify-center items-center lg:items-start gap-8">
                     <p className="text-black">{description3}</p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </section>
           )

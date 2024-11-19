@@ -34,7 +34,16 @@ function OurCoreValues() {
       seeking a streamlined networking experience. Crafted by a team of skilled
       engineers, this space offers an intuitive graphical interface where
       members can monitor key data relevant to their objectives through an array
-      of visual dashboards.
+      of visual dashboards. The Member Area provides multiple benefits,
+      including time savings, enhanced productivity, and real-time monitoring
+      for fast decision-making. Members can track progress, measure performance,
+      and communicate more effectively, all in one convenient place. Designed
+      with transparency and accountability in mind, the platform ensures
+      at-a-glance visibility into vital metrics and up-to-date progress
+      evaluations. This automated, efficient system allows members to stay
+      informed and make impactful decisions without extensive resources, all
+      while optimizing their networking capabilities for better business
+      outcomes.
     </p>
   );
   const membersAreaContentTwo = (
@@ -58,7 +67,15 @@ function OurCoreValues() {
       designed to increase members’ visibility, allowing them to market their
       services effectively and attract new business. Through ongoing efforts, we
       build a community of qualified, reliable partners, ensuring lasting and
-      profitable partnerships across the globe.
+      profitable partnerships across the globe.Since our inception, BNG has
+      received enthusiastic support from the freight, logistics, and trade
+      industries worldwide. Within just 18 days, we welcomed over 300 new
+      members, with a projected total of 800 by the end of 2024. Each membership
+      undergoes a rigorous vetting process, including quality assessments and
+      reference checks by regional partners, ensuring that every new member
+      meets our high standards. With BNG, members are assured of connecting with
+      credible partners, making each interaction meaningful and reliable within
+      a community committed to industry excellence.
     </p>
   );
   const globalReachContentTwo = (
@@ -81,7 +98,16 @@ function OurCoreValues() {
       participate in active bids, and submit proposals directly to clients
       around the world. Designed to maximize business potential, the Business
       Centre allows members to interact with a global network, including
-      exporters, importers, and manufacturers, in real time.
+      exporters, importers, and manufacturers, in real time.This unique feature
+      enables members to engage in a live bidding process without geographic
+      limitations, providing opportunities to increase visibility, post
+      requests, and send quotations directly to relevant clients. The Business
+      Centre fosters increased revenue and profitability, offering members a
+      versatile space where they can efficiently promote services, drive
+      meaningful connections, and grow their business. By merging technology
+      with practical industry solutions, BNG ensures members can access and act
+      upon valuable leads instantly, supporting their business goals in a
+      competitive, dynamic market.
     </p>
   );
   const businessXchangeContentTwo = (
@@ -128,7 +154,15 @@ function OurCoreValues() {
       paramount. Our team of legal and trade experts reviews each application,
       examining business profiles, establishment credentials, debt history, and
       market reputation. Only those who meet our high standards are granted
-      membership.
+      membership. To join BNG, applicants must have a proven record of
+      credibility, demonstrated by a three-year business history and two trade
+      references. The admission process involves multiple steps to confirm
+      trustworthiness: submitting an application, undergoing a trust scan by our
+      legal team, verifying references, and final approval. This structured
+      approach ensures that BNG members work with reputable, vetted partners,
+      creating a network where connections are built on mutual trust and
+      quality. Joining BNG means joining a community of professionals dedicated
+      to maintaining high standards and delivering dependable services.
     </p>
   );
   const trustedPartnersContentTwo = (
@@ -150,7 +184,16 @@ function OurCoreValues() {
       Payment security is crucial for business, and BNG’s Payment Protection
       Framework (PPF) empowers members to control financial risk with
       confidence. The PPF offers coverage up to $50,000 for elite members,
-      providing a safeguard in the event of payment disputes or delays.
+      providing a safeguard in the event of payment disputes or delays.Our
+      advanced, digital framework allows members to operate in a secure
+      environment, equipped to mitigate financial uncertainties. Each member’s
+      dedicated dashboard contains the full terms and conditions of the PPF,
+      ensuring transparency and providing easy access to guidelines. This
+      feature is designed to help members maintain smooth business transactions,
+      knowing they have reliable financial support if issues arise. BNG’s
+      payment protection framework reflects our commitment to supporting
+      members’ financial well-being, allowing them to conduct business without
+      unnecessary risk.
     </p>
   );
   const paymentProtectionContentTwo = (
@@ -173,7 +216,14 @@ function OurCoreValues() {
       invoices, making it easier to monitor receivables and payables
       efficiently. By simply submitting data, members activate an automated
       tracking process that handles payment reminders, invoice updates, and
-      other payment-related tasks.
+      other payment-related tasks. This comprehensive framework reduces the need
+      for manual follow-ups, helping members save time and stay organized with
+      their financial operations. The system’s automated reminders and real-time
+      updates ensure that payments are always accurately tracked and recorded,
+      providing peace of mind to members and helping them avoid potential
+      financial discrepancies. BNG’s payment monitoring solution exemplifies our
+      dedication to optimizing members’ experience, enabling smooth financial
+      processes that support stable, efficient business operations.
     </p>
   );
   const paymentMonitoringContentTwo = (
@@ -195,7 +245,15 @@ function OurCoreValues() {
       reporting is essential to ensure smooth resolution. BNG’s Claim Center
       provides a fully digital interface where members can file claims and track
       their status in real time, helping to resolve conflicts swiftly and with
-      full transparency.
+      full transparency. Our Claim Center is designed for efficiency,
+      guaranteeing members an expedited process for addressing disputes. By
+      filing claims digitally, members can ensure that each case is addressed
+      accurately, and the network is committed to achieving 100% satisfaction
+      with each resolution. The Claim Center embodies BNG’s dedication to
+      maintaining a trusted, fair environment where all issues are handled
+      professionally and transparently. This resource empowers members to
+      address concerns promptly, keeping business operations steady and
+      fostering a secure community where disputes are resolved effectively.
     </p>
   );
 
@@ -216,7 +274,7 @@ function OurCoreValues() {
     <section className="py-16 w-full mx-auto px-4 bg-gray-50 text-center flex flex-col justify-center align-middle">
       <h2 className="text-[48px] font-bold text-black">Member Benefits</h2>
       <div className="flex w-full justify-center">
-        <p className="text-center w-[80%]">
+        <p className="text-center w-[80%] text-gray-900">
           Gain access to a secure, digitalized platform with global connections,
           exclusive data resources, 24/7 support, and advanced tools.
         </p>
@@ -308,7 +366,7 @@ function OurCoreValues() {
           contentTwo: claimCenterContentTwo,
         },
       ].map(({ ref, content, contentTwo }, index) => (
-        <section className="py-24 bg-white" key={index}>
+        <section className="py-12 bg-white" key={index}>
           <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
             {/* First Row */}
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
@@ -347,7 +405,7 @@ function OurCoreValues() {
             </div>
 
             {/* Second Row */}
-            <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
+            {/* <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
               <div
                 className={`relative flex justify-center items-center ${
                   index % 2 === 0 ? "lg:order-2" : ""
@@ -366,7 +424,7 @@ function OurCoreValues() {
               <div className="flex flex-col justify-center items-center lg:items-start gap-8">
                 <p className="text-black">{contentTwo}</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
       ))}
