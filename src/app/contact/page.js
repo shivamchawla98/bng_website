@@ -1,6 +1,7 @@
 import React from 'react';
 import { ContactHero } from '@/page-components/Contact/ContactHero';
-import { FAQ } from '@/page-components/Contact/FAQ';
+import { FAQ } from "@/components/Faq";
+
 import { QuoteForm } from '@/page-components/Contact/QuoteForm';
 import { SocialMedia } from '@/page-components/Contact/SocialMedia';
 

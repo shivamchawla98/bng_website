@@ -6,7 +6,9 @@ import React from "react";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { ConferenceHeroSection } from "@/page-components/Conferance/ConferanceHaeroSection";
 import { FeatureCard } from "@/page-components/Conferance/FeatureCard";
-import { FAQ } from "@/page-components/Conferance/FAQ";
+import { FAQ } from "@/components/Faq";
+
+
 import { ConferenceCard } from "@/page-components/Conferance/ConferanceCard";
 import Sponsorship from "@/page-components/Conferance/Sponshership";
 import ConferanceSecondSection from "@/page-components/Conferance/ConferanceSecondSection";

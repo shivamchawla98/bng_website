@@ -15,13 +15,12 @@ const BecomeHeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary to-purple-900 mix-blend-lighten" />
         <div className="flex  max-w-xl">
           <div>
-            <h1 className="text-[52px] md:max-w-[280px] leading-normal font-extrabold text-white mb-4">
-              Become A Member
-             
+            <h1 className="text-[52px] md:max-w-[480px] leading-normal font-extrabold text-white mb-4">
+              Elevate Your Logistics Game
             </h1>
-            <p className="text-gray-200 mb-6 text-lg">
-              Take operations from across the world through a faith minded
-              community of freight forwarders to start exchanging business.
+            <p className="text-gray-200 mb-6 text-lg md:max-w-[500px]">
+              Access a trusted network, advanced tools, and global opportunities
+              with a single membership.
             </p>
           </div>
         </div>

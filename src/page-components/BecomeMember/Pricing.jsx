@@ -70,7 +70,7 @@ const PricingCard = ({ tier, features, price, icon: Icon, isPopular }) => (
       ${isPopular 
         ? 'bg-primary text-white hover:bg-black' 
         : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}>
-      Contact Us
+      Choose Plan
     </button>
   </div>
 );
@@ -78,7 +78,7 @@ const PricingCard = ({ tier, features, price, icon: Icon, isPopular }) => (
 const PricingTable = () => {
   const tiers = [
     {
-      tier: 'STANDARD',
+      tier: 'Basic',
       price: '199',
       icon: Home,
       features: {
@@ -93,7 +93,7 @@ const PricingTable = () => {
       },
     },
     {
-      tier: 'PREMIUM',
+      tier: 'Premium',
       price: '499',
       icon: Rocket,
       isPopular: true,
