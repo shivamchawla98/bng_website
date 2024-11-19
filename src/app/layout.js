@@ -1,20 +1,7 @@
-import localFont from "next/font/local";
 import Head from "next/head";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata = {
   title: "Create Next App",
@@ -26,13 +13,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        />
         <meta name="robots" content="noindex,nofollow" />
       </Head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#E6EBF4] overflow-x-hidden`}
-      >
+      <body className="antialiased bg-[#E6EBF4] overflow-x-hidden">
         <Header />
         {children}
         <Footer />

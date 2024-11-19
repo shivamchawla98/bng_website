@@ -14,6 +14,10 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: ["'Plus Jakarta Sans'", "sans-serif"],
+        display: ["'Paytone One'", "sans-serif"],
+      },
     },
   },
   plugins: [],

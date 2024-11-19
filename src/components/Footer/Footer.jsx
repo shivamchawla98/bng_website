@@ -138,7 +138,7 @@ const SocialLinks = () => (
 const socialMediaLinks = [
   {
     name: "Facebook page",
-    href: "#",
+    href: "#/",
     image: fb,
   },
   {
