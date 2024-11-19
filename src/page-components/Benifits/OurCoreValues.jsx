@@ -272,7 +272,7 @@ function OurCoreValues() {
   );
   return (
     <section className="py-16 w-full mx-auto px-4 bg-gray-50 text-center flex flex-col justify-center align-middle">
-      <h2 className="text-[48px] font-bold text-black">Member Benefits</h2>
+      <h2 className="text-[60px] font-bold text-black">Member Benefits</h2>
       <div className="flex w-full justify-center">
         <p className="text-center w-[80%] text-gray-900">
           Gain access to a secure, digitalized platform with global connections,

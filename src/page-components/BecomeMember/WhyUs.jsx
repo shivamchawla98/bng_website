@@ -219,11 +219,11 @@ const WhyUs = () => {
   return (
     <section className="py-12 flex flex-col   bg-white ">
       <div className="max-w-6xl mx-auto py-10 px-4 sm:px-6 lg:px-8 bg-white h-[max-content]">
-        <h2 className="text-4xl font-bold text-center text-black mb-8">
+        <h2 className="text-[60px] font-bold text-center text-black mb-8">
           Why Us?
         </h2>
-        <div className="flex w-[100%] justify-center">
-          <p className="text-center w-[80%]">
+        <div className="flex w-[100%] justify-center ">
+          <p className="text-center w-[80%] text-gray-900">
             With BNG, receive comprehensive marketing support, 24/7 assistance,
             and participate in live industry events. Access a global trade
             directory, advanced tools, and real-time communication features to
@@ -232,7 +232,7 @@ const WhyUs = () => {
         </div>
 
         {/* Grid with 3 columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-10">
           {solutionsData?.map(
             (
               {

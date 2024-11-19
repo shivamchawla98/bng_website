@@ -26,7 +26,7 @@ function WorldWideReach() {
         backgroundSize: "300px 100px",
       }}
     >
-      <h2 className="text-black font-bold text-[44px]">Worldwide Reach</h2>
+      <h2 className="text-black font-bold text-[60px]">Worldwide Reach</h2>
       <div className="relative">
         <Image src={Map} objectFit="contain" width={1000} height={500} />
        

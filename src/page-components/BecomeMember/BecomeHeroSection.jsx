@@ -15,7 +15,7 @@ const BecomeHeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary to-purple-900 mix-blend-lighten" />
         <div className="flex  max-w-xl">
           <div>
-            <h1 className="text-[52px] md:max-w-[480px] leading-normal font-extrabold text-white mb-4">
+            <h1 className="text-[60px] md:max-w-[480px] leading-normal font-extrabold text-white mb-4">
               Elevate Your Logistics Game
             </h1>
             <p className="text-gray-200 mb-6 text-lg md:max-w-[500px]">

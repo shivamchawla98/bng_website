@@ -28,7 +28,7 @@ const ContactUsMap = () => {
     <div>
       {/* Header */}
       <div className="text-center py-10">
-        <h1 className="text-4xl font-bold">We'd love to hear from you</h1>
+        <h1 className="text-[60px] font-bold">We'd love to hear from you</h1>
         <p className="text-lg text-gray-600">
           We have offices and teams all around the world.
         </p>

@@ -5,7 +5,7 @@ function BenifitsThirdSection() {
   return (
     <div className="bg-white py-10">
       <div className="container mx-auto flex flex-col  items-center justify-center">
-        <h2 className="text-black text-4xl font-bold text-center">
+        <h2 className="text-black text-[60px] font-bold text-center">
           Why choose us?
         </h2>
         <div className="flex w-full justify-between align-middle mt-16">

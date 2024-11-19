@@ -36,7 +36,7 @@ export const FAQ = () => {
   
     return (
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-black mb-8">
+        <h2 className="text-[60px] font-bold text-center text-black mb-8">
           Frequently Asked Questions
         </h2>
         <div className="space-y-4">

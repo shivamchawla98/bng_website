@@ -215,7 +215,7 @@ const WhyUs = () => {
   return (
     <section className="py-12 flex flex-col  bg-white">
       <div className="max-w-6xl mx-auto  px-4 sm:px-6 lg:px-8 bg-white max-h-max">
-        <h2 className="text-4xl font-bold text-center text-black mb-8">
+        <h2 className="text-[60px] font-bold text-center text-black mb-8">
           Why Us?
         </h2>
         <div className="flex w-[100%] justify-center">

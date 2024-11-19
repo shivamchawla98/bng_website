@@ -96,7 +96,7 @@ function MemberBenefits() {
   return (
     <div className="relative py-24 w-[100%] overflow-x-hidden">
       <div className="flex flex-col justify-center w-[100%] px-4 overflow-x-hidden">
-        <h2 className="text-4xl text-black font-bold text-center mb-12">
+        <h2 className="text-[60px] text-black font-bold text-center mb-12">
           Member Benefits
         </h2>
         <div className=" hidden h-max md:flex flex-row space-x-6 justify-center w-[100%] overflow-x-hidden align-middle">

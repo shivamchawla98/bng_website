@@ -16,7 +16,7 @@ function AboutUs() {
         />
       </div>
       <div className="md:w-1/2 md:pr-10 mb-8 md:mb-0 md:ml-10 mt-10 md:mt-0 py-10 ">
-        <h2 className="text-4xl font-bold mb-4 text-black">Who We Are?</h2>
+        <h2 className="text-[60px] font-bold mb-4 text-black">Who We Are?</h2>
         <p className="text-gray-600 mb-4">
           Built by a team with over 20 years of expertise in logistics and
           supply chain management, BNG Group has emerged as a resilient leader

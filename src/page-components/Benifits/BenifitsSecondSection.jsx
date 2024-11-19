@@ -23,10 +23,10 @@ function BenifitsSecondSection() {
           </div>
           <div className="flex justify-start place-content-start  flex-col md:max-w-[700px] py-6">
             <h3 className="text-black">About BNG --</h3>
-            <h1 className="text-primary text-4xl font-bold">
+            <h1 className="text-primary text-[60px] font-bold">
               Small investment big benefits
             </h1>
-            <h2 className="font-bold">
+            <h2 className="font-bold text-gray-900">
               With BNG, Access Over 10 Million Buyers, Sellers, and Freight
               Forwarders—Discover New Business Opportunities in Just a Few
               Clicks.

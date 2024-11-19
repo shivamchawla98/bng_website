@@ -10,9 +10,9 @@ export const ConferenceHeroSection = () => {
       }}
     >
       <div className="flex flex-col">
-        <h1 className="text-xl font-bold text-white relative z-10">
+        <h3 className="text-2xl  font-bold text-white relative z-10">
         Conferance
-        </h1>
+        </h3>
         <h2 className="text-[52px] font-bold text-white relative z-10">
           Unlock Your Business Potential
         </h2>

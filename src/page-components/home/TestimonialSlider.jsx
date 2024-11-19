@@ -77,14 +77,14 @@ const TestimonialSlider = () => {
               className="object-contain"
               priority
             />
-            <h2 className="text-4xl font-bold text-gray-900 mb-16 text-center mt-10">
+            <h2 className="text-[60px] font-bold text-gray-900 mb-16 text-center mt-10">
               Our Partners
             </h2>
           </div>
 
           {/* Slider Section */}
           <div className=" lg:w-1/2 max-h-[500px] ">
-            <h2 className="text-4xl font-bold text-gray-900 mb-16 text-left">
+            <h2 className="text-[60px] font-bold text-gray-900 mb-16 text-left">
               Testimonials
             </h2>
             <Slider {...settings}>

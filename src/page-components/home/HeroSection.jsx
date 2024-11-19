@@ -10,7 +10,7 @@ const HeroSection = () => {
       {/* Hero Section */}
       <div className="container py-6 mx-auto  px-4 flex flex-col lg:flex-row items-center">
         <div className="lg:w-1/2 mb-8 lg:mb-0">
-          <h1 className="text-5xl font-bold mb-4 text-black">
+          <h1 className="text-[60px] font-bold mb-4 text-black">
             Connect and
             <span className="text-primary"> collaborate</span> with
             <span className="text-primary"> forwarders </span>
