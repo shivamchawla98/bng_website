@@ -4,7 +4,7 @@ import rightImg from "@/app/images/section2.png";
 
 function AboutUs() {
   return (
-    <div className=" bg-white px-4 md:px-[112px]  flex flex-col md:flex-row items-center justify-between ">
+    <div className=" bg-secondryBg px-4 md:px-[112px]  flex flex-col md:flex-row items-center justify-center gap-16 ">
       <div className="md:w-[400px] relative">
         <Image
           src={rightImg}
@@ -16,7 +16,16 @@ function AboutUs() {
         />
       </div>
       <div className="md:w-1/2 md:pr-10 mb-8 md:mb-0 md:ml-10 mt-10 md:mt-0 py-10 ">
-        <h2 className="text-[60px] font-bold mb-4 text-black">Who We Are?</h2>
+        <div className="relative">
+          <h2 className="text-[40px] font-bold mb-4 text-[#27293B] relative z-10">
+            Why Us?
+          </h2>
+          <h2
+            className="absolute top-[-20px] left-0 text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            aria-hidden="true">
+            Why Us?
+          </h2>
+        </div>
         <p className="text-gray-600 mb-4">
           Built by a team with over 20 years of expertise in logistics and
           supply chain management, BNG Group has emerged as a resilient leader
@@ -35,7 +44,7 @@ function AboutUs() {
           Data Banks—sourced and maintained by BNG Group—designed to support
           successful, data-driven connections across the globe.
         </p>
-        <button  className="bg-primary text-white px-6 py-2 rounded-full hover:bg-purple-700 inline-flex items-center">
+        <button className="bg-primary text-white px-6 py-2 rounded-full hover:bg-purple-700 inline-flex items-center">
           know more
           <svg
             xmlns="http://www.w3.org/2000/svg"

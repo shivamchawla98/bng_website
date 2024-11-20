@@ -1,26 +1,26 @@
-import React from 'react';
+import React from "react";
 
 const ContactUsMap = () => {
   const locations = [
     {
-      name: 'Melbourne, AUS',
-      address: '100 Flinders Street, Melbourne VIC 3000 AU',
-      coordinates: '-37.817209,144.964873',
+      name: "Melbourne, AUS",
+      address: "100 Flinders Street, Melbourne VIC 3000 AU",
+      coordinates: "-37.817209,144.964873",
     },
     {
-      name: 'London, UK',
-      address: '100 Oxford Street, London W1D 1LL UK',
-      coordinates: '51.5145,-0.1494',
+      name: "London, UK",
+      address: "100 Oxford Street, London W1D 1LL UK",
+      coordinates: "51.5145,-0.1494",
     },
     {
-      name: 'San Francisco, USA',
-      address: '100 Market Street, San Francisco, CA 94105 USA',
-      coordinates: '37.793611,-122.396111',
+      name: "San Francisco, USA",
+      address: "100 Market Street, San Francisco, CA 94105 USA",
+      coordinates: "37.793611,-122.396111",
     },
   ];
 
   const renderMap = () => {
-    const coordinates = locations.map(loc => loc.coordinates).join('|');
+    const coordinates = locations.map((loc) => loc.coordinates).join("|");
     return `https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=${coordinates}`;
   };
 
@@ -28,7 +28,7 @@ const ContactUsMap = () => {
     <div>
       {/* Header */}
       <div className="text-center py-10">
-        <h1 className="text-[60px] font-bold">We'd love to hear from you</h1>
+        <h1 className="text-[55px] font-bold">We'd love to hear from you</h1>
         <p className="text-lg text-gray-600">
           We have offices and teams all around the world.
         </p>
@@ -42,8 +42,7 @@ const ContactUsMap = () => {
           height="500"
           allowFullScreen
           loading="lazy"
-          className="border-0"
-        ></iframe>
+          className="border-0"></iframe>
       </div>
 
       {/* Contact Details */}

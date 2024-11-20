@@ -22,8 +22,8 @@ function BenifitsSecondSection() {
             </p>{" "}
           </div>
           <div className="flex justify-start place-content-start  flex-col md:max-w-[700px] py-6">
-            <h3 className="text-black">About BNG --</h3>
-            <h1 className="text-primary text-[60px] font-bold">
+            <h3 className="text-[#27293B]">About BNG --</h3>
+            <h1 className="text-primary text-[55px] font-bold">
               Small investment big benefits
             </h1>
             <h2 className="font-bold text-gray-900">

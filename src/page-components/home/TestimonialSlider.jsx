@@ -47,13 +47,22 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <section className="relative bg-gradient-to-b from-purple-50 to-white"       style={{
-      backgroundImage: `url(${Vector.src})`,
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "top center",
-      backgroundSize: "cover", // You can set 'auto' if you don't want it to cover fully
-      backgroundColor: "rgba(0, 0, 0, 0)",
-    }}>
+    <section
+      className="relative bg-secondryBg bg-gradient-to-b from-purple-50 to-white"
+      style={{
+        backgroundImage: `url(${Vector.src})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "top center",
+        backgroundSize: "cover", // You can set 'auto' if you don't want it to cover fully
+        backgroundColor: "rgba(0, 0, 0, 0)",
+      }}>
+      <div
+        className="absolute bottom-16 left-8 w-[200px] h-[200px] rounded-full"
+        style={{
+          background: "linear-gradient(180deg, #D186EB 10%, #D186EB 90%)",
+
+          filter: "blur(100.8px)",
+        }}></div>
       {/* Curved Background */}
       {/* <div className="absolute inset-0 h-[20%] bg-purple-50">
         <div className="absolute bottom-0 left-0 w-full h-32 bg-white" style={{
@@ -73,20 +82,34 @@ const TestimonialSlider = () => {
             <Image
               src={Partner}
               alt="Partners"
-           
               className="object-contain"
               priority
             />
-            <h2 className="text-[60px] font-bold text-gray-900 mb-16 text-center mt-10">
-              Our Partners
-            </h2>
+
+            <div className="relative w-full max-w-[800px]">
+              <h2 className="text-[40px] font-bold text-gray-900 mb-16 text-left mt-10 relative z-10">
+                Our Partners
+              </h2>
+              <h2
+                className="absolute text-left top-2 left-0 text-[80px] w-full font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+                aria-hidden="true">
+                Our Partners
+              </h2>
+            </div>
           </div>
 
           {/* Slider Section */}
           <div className=" lg:w-1/2 max-h-[500px] ">
-            <h2 className="text-[60px] font-bold text-gray-900 mb-16 text-left">
-              Testimonials
-            </h2>
+            <div className="relative ]">
+              <h2 className="text-[40px] font-bold text-gray-900 mb-16 text-left mt-10 relative z-10">
+                Testimonials
+              </h2>
+              <h2
+                className="absolute hidden md:block max-w-[3vw] text-left top-[-30px] left-0 text-[80px] md:w-full font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+                aria-hidden="true">
+                Testimonials
+              </h2>
+            </div>
             <Slider {...settings}>
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="p-4">

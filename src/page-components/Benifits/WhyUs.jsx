@@ -215,7 +215,7 @@ const WhyUs = () => {
   return (
     <section className="py-12 flex flex-col  bg-white">
       <div className="max-w-6xl mx-auto  px-4 sm:px-6 lg:px-8 bg-white max-h-max">
-        <h2 className="text-[60px] font-bold text-center text-black mb-8">
+        <h2 className="text-[55px] font-bold text-center text-[#27293B] mb-8">
           Why Us?
         </h2>
         <div className="flex w-[100%] justify-center">
@@ -293,9 +293,13 @@ const WhyUs = () => {
                     className="flex flex-col justify-center items-center lg:items-start gap-8"
                     ref={(el) => (solutionRefs.current[index] = el)} // Referencing the solution details section
                   >
-                    <h2 className="text-3xl font-bold text-black">{heading}</h2>
-                    <p className="text-black">{description2}{description3}</p>
-                    
+                    <h2 className="text-3xl font-bold text-[#27293B]">
+                      {heading}
+                    </h2>
+                    <p className="text-[#27293B]">
+                      {description2}
+                      {description3}
+                    </p>
                   </div>
                 </div>
 
@@ -317,7 +321,7 @@ const WhyUs = () => {
                     />
                   </div>
                   <div className="flex flex-col justify-center items-center lg:items-start gap-8">
-                    <p className="text-black">{description3}</p>
+                    <p className="text-[#27293B]">{description3}</p>
                   </div>
                 </div> */}
               </div>

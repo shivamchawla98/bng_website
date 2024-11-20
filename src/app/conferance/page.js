@@ -64,7 +64,7 @@ const ConferencePage = () => (
     <ConferanceThirdSection />
 
     <section className="py-24 bg-white container mx-auto px-4">
-      <h2 className="text-4xl font-bold mb-8 text-black text-center">
+      <h2 className="text-4xl font-bold mb-8 text-[#27293B] text-center">
         Upcoming Conferences
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">

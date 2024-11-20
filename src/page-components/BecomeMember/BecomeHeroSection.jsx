@@ -15,7 +15,7 @@ const BecomeHeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary to-purple-900 mix-blend-lighten" />
         <div className="flex  max-w-xl">
           <div>
-            <h1 className="text-[60px] md:max-w-[480px] leading-normal font-extrabold text-white mb-4">
+            <h1 className="text-[55px] md:max-w-[480px] leading-normal font-extrabold text-white mb-4">
               Elevate Your Logistics Game
             </h1>
             <p className="text-gray-200 mb-6 text-lg md:max-w-[500px]">
@@ -29,7 +29,7 @@ const BecomeHeroSection = () => {
         <div className="  bg-white rounded-xl p-8 shadow-lg w-max hidden md:block">
           <div className="flex ">
             <div>
-              <h2 className="text-xl font-semibold mb-2 text-black">
+              <h2 className="text-xl font-semibold mb-2 text-[#27293B]">
                 Logistics Network
                 <br />
                 Membership

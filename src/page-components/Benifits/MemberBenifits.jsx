@@ -26,7 +26,7 @@ function MemberBenefits() {
       {/* Content Section */}
       <div className="container mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-[60px] font-bold text-gray-900 mb-4">
+        <h2 className="text-[55px] font-bold text-gray-900 mb-4">
           Member Benefits
         </h2>
         <p className="text-gray-700 mb-10 max-w-3xl mx-auto">

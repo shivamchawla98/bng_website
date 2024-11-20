@@ -34,14 +34,27 @@ const newsData = [
 
 const News = () => {
   return (
-    <section className="py-12 md:min-h-[600px] bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-[60px] font-bold text-center text-black mb-8">
-          Latest News
-        </h2>
+    <section className="py-12 md:min-h-[600px] bg-primaryBg relative">
+      <div
+        className="absolute top-0 left-8 w-[200px] h-[200px] rounded-full"
+        style={{
+          background: "linear-gradient(180deg, #6853DB 10%, #6853DB 90%)",
 
+          filter: "blur(100.8px)",
+        }}></div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div className="relative">
+          <h2 className="text-[40px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
+            Latest News
+          </h2>
+          <h2
+            className="absolute text-center top-[-60px] md:top-[-30px] md:left-[32%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            aria-hidden="true">
+            Latest News
+          </h2>
+        </div>
         {/* Grid with 3 columns for news cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
           {newsData.map(({ id, src, alt, description, link, top }) => (
             <div
               key={id}

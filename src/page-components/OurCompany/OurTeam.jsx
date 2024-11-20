@@ -83,7 +83,7 @@ const TeamSection = () => {
     <section className="bg-white">
       <div className="py-8 px-4 mx-auto max-w-screen-xl flex flex-col justify-center items-center text-center lg:py-16 lg:px-6">
         <div className="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-          <h2 className="mb-4 text-[52px] tracking-tight font-extrabold text-black ">
+          <h2 className="mb-4 text-[52px] tracking-tight font-extrabold text-[#27293B] ">
             Our Team
           </h2>
           <p className="font-light text-gray-500 sm:text-xl dark:text-gray-400">
@@ -95,8 +95,7 @@ const TeamSection = () => {
           {teamMembers.slice(0, 6).map((member, index) => (
             <div
               key={index}
-              className="text-center mt-4 text-gray-500 dark:text-gray-400"
-            >
+              className="text-center mt-4 text-gray-500 dark:text-gray-400">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
                 src={member.imgSrc}
@@ -112,8 +111,7 @@ const TeamSection = () => {
                 <li>
                   <a
                     href={member.socialLinks.facebook}
-                    className="text-[#39569c] hover:text-gray-900 dark:hover:text-white"
-                  >
+                    className="text-[#39569c] hover:text-gray-900 dark:hover:text-white">
                     <Image
                       src={facebookIcon}
                       alt="Facebook"
@@ -125,8 +123,7 @@ const TeamSection = () => {
                 <li>
                   <a
                     href={member.socialLinks.twitter}
-                    className="text-[#00acee] hover:text-gray-900 dark:hover:text-white"
-                  >
+                    className="text-[#00acee] hover:text-gray-900 dark:hover:text-white">
                     <Image
                       src={twitterIcon}
                       alt="Twitter"
@@ -138,8 +135,7 @@ const TeamSection = () => {
                 <li>
                   <a
                     href={member.socialLinks.github}
-                    className="text-gray-900 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-                  >
+                    className="text-gray-900 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
                     <Image
                       src={githubIcon}
                       alt="GitHub"
@@ -151,8 +147,7 @@ const TeamSection = () => {
                 <li>
                   <a
                     href={member.socialLinks.dribbble}
-                    className="text-[#ea4c89] hover:text-gray-900 dark:hover:text-white"
-                  >
+                    className="text-[#ea4c89] hover:text-gray-900 dark:hover:text-white">
                     <Image
                       src={dribbbleIcon}
                       alt="Dribbble"

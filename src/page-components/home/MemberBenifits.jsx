@@ -94,11 +94,36 @@ function MemberBenefits() {
   ];
 
   return (
-    <div className="relative py-24 w-[100%] overflow-x-hidden">
-      <div className="flex flex-col justify-center w-[100%] px-4 overflow-x-hidden">
-        <h2 className="text-[60px] text-black font-bold text-center mb-12">
+    <div className="relative py-24 w-[100%] overflow-x-hidden bg-primaryBg">
+      {/* Top-left Patch */}
+      <div
+        className="absolute top-16 right-0 w-[200px] h-[200px] rounded-full"
+        style={{
+          background: "linear-gradient(180deg, #4D7DB5 10%, #D186EB 90%)",
+          zIndex: 1,
+          filter: "blur(60.8px)",
+        }}></div>
+      <div
+        className="absolute bottom-16 left-8 w-[200px] h-[200px] rounded-full"
+        style={{
+          background: "linear-gradient(180deg, #D186EB 10%, #D186EB 90%)",
+          zIndex: 1,
+          filter: "blur(60.8px)",
+        }}></div>
+      <div className="flex flex-col justify-center w-[100%] px-4 overflow-x-hidden py-10">
+        {/* <h2 className="text-[55px] text-[#27293B] font-bold text-center mb-12">
           Member Benefits
-        </h2>
+        </h2> */}
+        <div className="relative">
+          <h2 className="text-[40px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
+            Member Benefits
+          </h2>
+          <h2
+            className="absolute text-center top-[-30px] md:left-[30%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            aria-hidden="true">
+            Member Benefits
+          </h2>
+        </div>
         <div className=" hidden h-max md:flex flex-row space-x-6 justify-center w-[100%] overflow-x-hidden align-middle">
           <div className="h-max flex flex-col justify-center overflow-x-hidden align-middle">
             {benefits.map((benefit, index) => (

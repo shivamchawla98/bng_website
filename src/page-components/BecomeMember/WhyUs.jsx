@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useRef } from "react";
 
@@ -219,7 +219,7 @@ const WhyUs = () => {
   return (
     <section className="py-12 flex flex-col   bg-white ">
       <div className="max-w-6xl mx-auto py-10 px-4 sm:px-6 lg:px-8 bg-white h-[max-content]">
-        <h2 className="text-[60px] font-bold text-center text-black mb-8">
+        <h2 className="text-[55px] font-bold text-center text-[#27293B] mb-8">
           Why Us?
         </h2>
         <div className="flex w-[100%] justify-center ">
@@ -246,11 +246,7 @@ const WhyUs = () => {
               },
               index
             ) => (
-              <div
-                className={`relative ${heightClass} `}
-                key={id}
-           
-              >
+              <div className={`relative ${heightClass} `} key={id}>
                 <Image
                   src={src}
                   className="rounded-lg w-full h-full object-cover"
@@ -270,7 +266,6 @@ const WhyUs = () => {
         </div>
       </div>
       {/* Dynamic Content */}
-  
     </section>
   );
 };
