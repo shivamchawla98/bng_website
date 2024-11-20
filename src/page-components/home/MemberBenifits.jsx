@@ -3,6 +3,14 @@ import Image from "next/image";
 import centeredImage from "@/app/images/memberBenifits.svg";
 import handShake from "@/app/images/handSHake.svg";
 import Vector1 from "@/app/images/Patch1.svg";
+import MembersAreaVector from '@/app/images/home/MembersArea.svg'
+import GlobalReachVector from '@/app/images/home/GlobalReach.svg'
+import BusinessXchangeVector from '@/app/images/home/BusinessXchange.svg'
+import TrustedPartnersVector from '@/app/images/home/TrustedPartners.svg'
+import PaymentProtectionVector from '@/app/images/home/PaymentProtection.svg'
+import PaymentMonitoringVector from '@/app/images/home/PaymentMonitoring.webp'
+import ClaimCenterVector from '@/app/images/home/ClaimCenter.svg'
+import FreightXchangeVector from '@/app/images/home/FreightXchange.svg'
 
 function MemberBenefits() {
   const benefits = [
@@ -10,21 +18,25 @@ function MemberBenefits() {
       title: "Members Area",
       description:
         "An intuitive, user-friendly member portal designed to streamline networking, providing a centralized space for all your business connections and collaboration needs.",
+      image: MembersAreaVector,
     },
     {
       title: "Global Reach",
       description:
         "Connect with reliable partners worldwide and access a growing community that meets all your logistics and supply chain requirements.",
+      image: GlobalReachVector,
     },
     {
       title: "Business Xchange",
       description:
         "Access the Business Center, a dedicated area for finding active business leads and sharing opportunities directly with clients in your network.",
+      image: BusinessXchangeVector,
     },
     {
       title: "Trusted Partners",
       description:
         "Membership is granted exclusively to companies with solid reputations, verified through a three-year track record and two business references.",
+      image: TrustedPartnersVector,
     },
   ];
 
@@ -33,21 +45,25 @@ function MemberBenefits() {
       title: "Payment Protection",
       description:
         "The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment",
+      image: PaymentProtectionVector,
     },
     {
       title: "Payment Monitoring",
       description:
         "A state-of-the-art system that automatically tracks receivables and payables, keeping all transactions organized and up-to-date.",
+      image: PaymentMonitoringVector,
     },
     {
       title: "Claim Center",
       description:
         "A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts.",
+      image: ClaimCenterVector,
     },
     {
       title: "Freight Xchange",
       description:
         "Showcase your freight rates and services to the global trade community via BNG Logistics & B2B Portals, boosting your visibility and increasing business opportunities.",
+      image: FreightXchangeVector,
     },
   ];
   const mobileBenefits = [
@@ -55,41 +71,49 @@ function MemberBenefits() {
       title: "Trusted Partners",
       description:
         "Membership is granted exclusively to companies with solid reputations, verified through a three-year track record and two business references.",
+      image: TrustedPartnersVector,
     },
     {
       title: "Payment Protection",
       description:
         "The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment.",
+      image: PaymentProtectionVector,
     },
     {
       title: "Payment Monitoring",
       description:
         "A state-of-the-art system that automatically tracks receivables and payables, keeping all transactions organized and up-to-date.",
+      image: PaymentMonitoringVector,
     },
     {
       title: "Claim Center",
       description:
         "A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts.",
+      image: ClaimCenterVector,
     },
     {
       title: "Members Area",
       description:
         "An intuitive, user-friendly member portal designed to streamline networking, providing a centralized space for all your business connections and collaboration needs.",
+      image: MembersAreaVector,
     },
     {
       title: "Global Reach",
       description:
         "Connect with reliable partners worldwide and access a growing community that meets all your logistics and supply chain requirements.",
+      image: GlobalReachVector,
     },
     {
       title: "Business Xchange",
       description:
         "Access the Business Center, a dedicated area for finding active business leads and sharing opportunities directly with clients in your network.",
+      image: BusinessXchangeVector,
     },
     {
       title: "Freight Xchange",
       description:
         "Showcase your freight rates and services to the global trade community via BNG Logistics & B2B Portals, boosting your visibility and increasing business opportunities.",
+      image: FreightXchangeVector,
     },
   ];
 
@@ -133,8 +157,9 @@ function MemberBenefits() {
                 <div className="top-0 w-[300px] justify-center flex flex-col items-center">
                   <div className="w-40 h-40 bg-primary rounded-full flex flex-col items-center justify-center">
                     <Image
-                      src={handShake}
+                      src={benefit.image}
                       alt="Member Benefits"
+                      height={50}
                       className="object-contain md:block hidden relative"
                     />
                     <div className="text-white text-center mt-2">
@@ -162,8 +187,9 @@ function MemberBenefits() {
                   </p>
                   <div className="w-40 h-40 mt-4 bg-primary rounded-full flex flex-col items-center justify-center relative right-10">
                     <Image
-                      src={handShake}
+                      src={benefit.image}
                       alt="Member Benefits"
+                      height={50}
                       className="object-contain md:block hidden relative"
                     />
                     <div className="text-white text-center mt-2">

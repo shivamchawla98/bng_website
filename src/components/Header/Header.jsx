@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 function Header() {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -65,7 +66,8 @@ function Header() {
       <div
         className={`${
           isMenuOpen ? "flex" : "hidden"
-        } md:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-50 flex-col w-full`}>
+        } md:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-50 flex-col w-full`}
+      >
         <div className="flex flex-col p-4 space-y-4">
           <Link href="/" className="text-[#27293B] hover:text-purple-300 py-2">
             Home
