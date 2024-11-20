@@ -26,7 +26,7 @@ const Conference = () => {
             management. Don't miss the opportunity to connect and learn from the
             best!
           </p>
-          <button className="  bg-white mt-4  text-[#27293B] px-6 py-3  flex items-center border border-gray-200 rounded-full">
+          {/* <button className="  bg-white mt-4  text-[#27293B] px-6 py-3  flex items-center border border-gray-200 rounded-full">
             {" "}
             Talk to Sales{" "}
             <svg
@@ -42,7 +42,7 @@ const Conference = () => {
                 d="M14 5l7 7m0 0l-7 7m7-7H3"
               />
             </svg>
-          </button>
+          </button> */}
         </div>
       </div>
       <div class="bg-white shadow-md rounded-lg p-4 max-w-[80%] mx-auto  mt-14">

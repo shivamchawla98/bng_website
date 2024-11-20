@@ -219,7 +219,7 @@ const WhyUs = () => {
           Why Us?
         </h2>
         <div className="flex w-[100%] justify-center">
-          <p className="text-center w-[80%] text-gray-900">
+          <p className="text-center w-[80%] text-gray-400">
             With BNG, receive comprehensive marketing support, 24/7 assistance,
             and participate in live industry events. Access a global trade
             directory, advanced tools, and real-time communication features to
@@ -296,7 +296,7 @@ const WhyUs = () => {
                     <h2 className="text-3xl font-bold text-[#27293B]">
                       {heading}
                     </h2>
-                    <p className="text-[#27293B]">
+                    <p className="text-gray-400">
                       {description2}
                       {description3}
                     </p>

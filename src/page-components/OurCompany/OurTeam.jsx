@@ -86,7 +86,7 @@ const TeamSection = () => {
           <h2 className="mb-4 text-[52px] tracking-tight font-extrabold text-[#27293B] ">
             Our Team
           </h2>
-          <p className="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+          <p className="font-light text-gray-400 sm:text-xl dark:text-gray-400">
             Explore the whole collection of open-source web components and
             elements built with the utility classes from Tailwind.
           </p>
@@ -95,7 +95,7 @@ const TeamSection = () => {
           {teamMembers.slice(0, 6).map((member, index) => (
             <div
               key={index}
-              className="text-center mt-4 text-gray-500 dark:text-gray-400">
+              className="text-center mt-4 text-gray-400 dark:text-gray-400">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
                 src={member.imgSrc}

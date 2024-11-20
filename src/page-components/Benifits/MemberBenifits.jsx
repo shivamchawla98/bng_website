@@ -29,7 +29,7 @@ function MemberBenefits() {
         <h2 className="text-[55px] font-bold text-gray-900 mb-4">
           Member Benefits
         </h2>
-        <p className="text-gray-700 mb-10 max-w-3xl mx-auto">
+        <p className="text-gray-400 mb-10 max-w-3xl mx-auto">
           The key point of membership is to grow your business. By keeping
           business within the group, X2 Logistics Networks can operate as a
           unified global identity with working partnerships and the ability to

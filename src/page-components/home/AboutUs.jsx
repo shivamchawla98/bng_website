@@ -26,7 +26,7 @@ function AboutUs() {
             Why Us?
           </h2>
         </div>
-        <p className="text-gray-600 mb-4">
+        <p className="text-gray-400 mb-4">
           Built by a team with over 20 years of expertise in logistics and
           supply chain management, BNG Group has emerged as a resilient leader
           in both robust network solutions and B2B relationship-building.
@@ -34,7 +34,7 @@ function AboutUs() {
           challenges, we bring a wealth of operational experience and industry
           connections that position us as pioneers in logistics networking.
         </p>
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-400 mb-6">
           BNG Logistics Network offers a powerful, secure, and fully digitized
           platform designed for seamless collaboration among logistics
           professionals. Following nearly three years of in-depth market
@@ -45,7 +45,7 @@ function AboutUs() {
           successful, data-driven connections across the globe.
         </p>
         <button className="bg-primary text-white px-6 py-2 rounded-full hover:bg-purple-700 inline-flex items-center">
-          know more
+          Know more
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5 ml-2"

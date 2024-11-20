@@ -71,7 +71,7 @@ const News = () => {
                 />
               </div>
               <div className="p-4">
-                <p className="text-gray-700 mb-4">{description}</p>
+                <p className="text-gray-400 mb-4">{description}</p>
                 <a href={link} className="text-blue-500 hover:underline">
                   View More
                 </a>

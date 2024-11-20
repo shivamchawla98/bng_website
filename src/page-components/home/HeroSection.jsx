@@ -37,7 +37,7 @@ const HeroSection = () => {
             <span className="text-primary"> forwarders </span>
             daily
           </h1>
-          <p className="text-[#27293B] mb-8 text-[16px]">
+          <p className="text-gray-400 mb-8 text-[16px]">
             Experience the next generation of forwarder networks. Tired of
             investing in multiple networks with minimal returns? Discover a
             fresh approach to partnership here!
@@ -60,7 +60,7 @@ const HeroSection = () => {
               </svg>
             </button>
 
-            <button className="bg-white w-max text-[#27293B] px-6 py-3 flex items-center border border-gray-200 rounded-full">
+            {/* <button className="bg-white w-max text-[#27293B] px-6 py-3 flex items-center border border-gray-200 rounded-full">
               Talk to Sales
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@ const HeroSection = () => {
                   d="M14 5l7 7m0 0l-7 7m7-7H3"
                 />
               </svg>
-            </button>
+            </button> */}
           </div>
         </div>
         <div className="lg:w-1/2 relative">

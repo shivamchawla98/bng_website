@@ -23,7 +23,7 @@ function ConferanceSecondSection() {
             <h2 className="text-gray-900 text-4xl font-extrabold leading-normal text-center lg:text-start">
               What 's Special about the BNG Conference?
             </h2>
-            <p className="text-gray-500 text-base leading-relaxed text-center lg:text-start">
+            <p className="text-gray-400 text-base leading-relaxed text-center lg:text-start">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley. Lorem

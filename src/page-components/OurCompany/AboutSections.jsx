@@ -21,7 +21,7 @@ const AboutSection = () => {
               <h2 className="text-gray-900 text-4xl font-extrabold leading-normal text-center lg:text-start">
                 About BNG: Building Global Connections in Logistics
               </h2>
-              <p className="text-gray-500 text-base leading-relaxed text-center lg:text-start">
+              <p className="text-gray-400 text-base leading-relaxed text-center lg:text-start">
                 BNG Logistics Network is a global platform built to unite
                 logistics professionals, freight forwarders, and industry
                 leaders in an environment optimized for growth and
@@ -46,7 +46,7 @@ const AboutSection = () => {
               />
             </div>
             <div className="flex flex-col justify-center items-center lg:items-start gap-8">
-              <p className="text-gray-500 text-base leading-relaxed text-center lg:text-start">
+              <p className="text-gray-400 text-base leading-relaxed text-center lg:text-start">
                 Members of BNG benefit from around-the-clock customer support,
                 an extensive trade directory, and free promotional services that
                 increase their visibility in the global market. Through
@@ -110,7 +110,7 @@ const AboutSection = () => {
               <h2 className="text-gray-900 text-4xl font-extrabold leading-normal text-center lg:text-start">
                 Our Vision
               </h2>
-              <p className="text-gray-500 text-base leading-relaxed text-center lg:text-start">
+              <p className="text-gray-400 text-base leading-relaxed text-center lg:text-start">
                 Our vision at BNG Logistics Network is to be the premier global
                 platform where logistics professionals seamlessly connect,
                 collaborate, and innovate to drive industry excellence. We
@@ -140,7 +140,7 @@ const AboutSection = () => {
               <h2 className="text-gray-900 text-4xl font-extrabold leading-normal text-center lg:text-start">
                 Our Mission
               </h2>
-              <p className="text-gray-500 text-base leading-relaxed text-center lg:text-start">
+              <p className="text-gray-400 text-base leading-relaxed text-center lg:text-start">
                 Our mission is to provide logistics professionals worldwide with
                 a secure, digitalized environment that enhances connectivity,
                 maximizes business potential, and fosters enduring partnerships.
@@ -167,7 +167,7 @@ const AboutSection = () => {
               <h2 className="text-gray-900 text-4xl font-extrabold leading-normal text-center lg:text-start">
                 Our Mission
               </h2>
-              <p className="text-gray-500 text-base leading-relaxed text-center lg:text-start">
+              <p className="text-gray-400 text-base leading-relaxed text-center lg:text-start">
                 We believe that the key to success lies in understanding our
                 clients' unique needs. Our customer-first approach ensures that
                 every interaction, from the initial consultation to project

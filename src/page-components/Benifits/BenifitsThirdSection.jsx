@@ -11,7 +11,7 @@ function BenifitsThirdSection() {
         <div className="flex w-full justify-between align-middle mt-16">
           <Image src={benifit3} alt="benifit3" className="w-full h-full" />
           <div className="flex flex-col md:max-w-[700px]">
-            <p className="text-gray-700  ">
+            <p className="text-gray-400  ">
               The key point of membership is to grow your business. By keeping
               business within the group, X2 Logistics Networks can operate as a
               unified global identity with working partnerships and the ability
