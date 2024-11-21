@@ -30,7 +30,7 @@ const SecuritySteps = () => {
       <div className="text-center mb-16">
         <h2 className="text-4xl font-extrabold mb-2 text-primary">Multilayer Validation Steps</h2>
 
-        <p className="text-gray-400 tracking-widest text-sm">
+        <p className="text-gray-600 tracking-widest text-sm">
           WE FOLLOW STRONG DUE DILIGENCE PROCESS
         </p>
       </div>
@@ -58,7 +58,7 @@ const SecuritySteps = () => {
             
             {/* Description Box */}
             <div className="bg-white shadow-lg min-h-[200px] rounded-b-lg p-4 w-full border border-primary">
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 {step.description}
               </p>
             </div>

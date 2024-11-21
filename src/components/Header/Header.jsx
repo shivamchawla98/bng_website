@@ -25,19 +25,19 @@ function Header() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-4">
-          <Link href="/" className="text-white font-semibold hover:text-purple-300">
+          <Link href="/" className="text-white font-medium hover:text-purple-300">
             Home
           </Link>
-          <Link href="/benifits" className="text-white font-semibold hover:text-purple-300">
+          <Link href="/benifits" className="text-white font-medium hover:text-purple-300">
             Benefits
           </Link>
-          <Link href="/our-company" className="text-white font-semibold hover:text-purple-300">
+          <Link href="/our-company" className="text-white font-medium hover:text-purple-300">
             About us
           </Link>
-          <Link href="/conferance" className="text-white font-semibold hover:text-purple-300">
+          <Link href="/conferance" className="text-white font-medium hover:text-purple-300">
             Conference
           </Link>
-          <Link href="/contact" className="text-white font-semibold hover:text-purple-300">
+          <Link href="/contact" className="text-white font-medium hover:text-purple-300">
             Contact Us
           </Link>
         </div>
@@ -60,9 +60,9 @@ function Header() {
           onClick={toggleMenu}
           aria-label="Toggle menu">
           {isMenuOpen ? (
-            <X size={24} className="text-gray-400" />
+            <X size={24} className="text-gray-600" />
           ) : (
-            <Menu size={24} className="text-gray-400" />
+            <Menu size={24} className="text-gray-600" />
           )}
         </button>
       </div>

@@ -37,7 +37,7 @@ const HeroSection = () => {
             <span className="text-primary"> forwarders </span>
             daily
           </h1>
-          <p className="text-gray-400 mb-8 text-[16px]">
+          <p className="text-gray-600 mb-8 text-[16px]">
             Experience the next generation of forwarder networks. Tired of
             investing in multiple networks with minimal returns? Discover a
             fresh approach to partnership here!

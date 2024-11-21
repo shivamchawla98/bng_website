@@ -29,7 +29,7 @@ export const FAQ = () => {
               {faq.question}
             </summary>
             <div className="px-6 py-4 bg-gray-50">
-              <p className="text-gray-400">{faq.answer}</p>
+              <p className="text-gray-600">{faq.answer}</p>
             </div>
           </details>
         ))}

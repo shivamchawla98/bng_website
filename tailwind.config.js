@@ -11,8 +11,8 @@ module.exports = {
       colors: {
         primary: "#3A1078",
         secondary: "#fef3f4",
-        primaryBg:"#E6EBF4",
-        secondryBg:"#EFF6FF",
+        primaryBg: "#E6EBF4",
+        secondryBg: "#EFF6FF",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
@@ -20,6 +20,7 @@ module.exports = {
         sans: ["'Plus Jakarta Sans'", "sans-serif"],
         display: ["'Paytone One'", "sans-serif"],
       },
+      backgroundImage: { 'custom-nav-gradient': 'linear-gradient(to bottom, #27293B, rgb(230, 235, 244))', },
     },
   },
   plugins: [],

@@ -15,7 +15,7 @@ function BenifitsSecondSection() {
               alt="About Image 1"
               className="rounded-sm md:w-[500px] md:h-[500px] object-cover "
             />
-            <p className="text-gray-400 text-[20px] mt-4 md:max-w-[500px]">
+            <p className="text-gray-600 text-[20px] mt-4 md:max-w-[500px]">
               Every buyer, seller, and logistics professional undergoes a
               rigorous approval process, ensuring a trusted business community.
               Join the largest network of industry professionals today!
@@ -26,7 +26,7 @@ function BenifitsSecondSection() {
             <h1 className="text-primary text-[55px] font-bold">
               Small investment big benefits
             </h1>
-            <h2 className="font-bold text-gray-400">
+            <h2 className="font-bold text-gray-600">
               With BNG, Access Over 10 Million Buyers, Sellers, and Freight
               Forwarders—Discover New Business Opportunities in Just a Few
               Clicks.

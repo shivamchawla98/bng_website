@@ -12,22 +12,22 @@ const PricingCard = ({ tier, features, price, icon: Icon, isPopular }) => (
     <h3 className="text-xl font-bold mb-2 text-primary">{tier}</h3>
     <div className="mb-6">
       <span className="text-4xl font-bold text-gray-900">${price}</span>
-      <span className="text-gray-400 ml-2">/month</span>
+      <span className="text-gray-600 ml-2">/month</span>
     </div>
 
     <div className="space-y-4 flex-grow">
       {features.basic.map((feature) => (
         <div key={feature} className="flex items-center">
           <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-          <span className="text-gray-400 text-sm">{feature}</span>
+          <span className="text-gray-600 text-sm">{feature}</span>
         </div>
       ))}
 
       <div className="flex items-start">
         <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-1" />
         <div>
-          <p className="text-gray-400 text-sm">UNLIMITED TEAM MEMBER</p>
-          <p className="text-gray-400 text-xs">(Same Country / Same Company)</p>
+          <p className="text-gray-600 text-sm">UNLIMITED TEAM MEMBER</p>
+          <p className="text-gray-600 text-xs">(Same Country / Same Company)</p>
           <p className="text-gray-800 font-medium text-sm">{features.team}</p>
         </div>
       </div>
@@ -35,8 +35,8 @@ const PricingCard = ({ tier, features, price, icon: Icon, isPopular }) => (
       <div className="flex items-start">
         <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-1" />
         <div>
-          <p className="text-gray-400 text-sm">BUSINESS LEAD CENTER</p>
-          <p className="text-gray-400 text-xs italic">
+          <p className="text-gray-600 text-sm">BUSINESS LEAD CENTER</p>
+          <p className="text-gray-600 text-xs italic">
             (A ROBUST SYSTEM WITH FREIGHT ENQUIRIES)
           </p>
           <p className="text-gray-800 font-medium text-sm">
@@ -48,8 +48,8 @@ const PricingCard = ({ tier, features, price, icon: Icon, isPopular }) => (
       <div className="flex items-start">
         <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-1" />
         <div>
-          <p className="text-gray-400 text-sm">FREIGHT VIEWER</p>
-          <p className="text-gray-400 text-xs italic">(GROW YOUR VISIBILITY)</p>
+          <p className="text-gray-600 text-sm">FREIGHT VIEWER</p>
+          <p className="text-gray-600 text-xs italic">(GROW YOUR VISIBILITY)</p>
           <p className="text-gray-800 font-medium text-sm">
             {features.freight}
           </p>
@@ -61,7 +61,7 @@ const PricingCard = ({ tier, features, price, icon: Icon, isPopular }) => (
           {features.additionalFeatures.map((feature) => (
             <div key={feature} className="flex items-center mb-4">
               <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-              <span className="text-gray-400 text-sm">{feature}</span>
+              <span className="text-gray-600 text-sm">{feature}</span>
             </div>
           ))}
         </div>

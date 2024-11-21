@@ -115,7 +115,7 @@ const TestimonialSlider = () => {
                 <div key={index} className="p-4">
                   <div className="bg-white shadow-lg rounded-xl p-6 max-w-[300px]">
                     <div className="space-y-6">
-                      <p className="text-gray-400 text-sm">
+                      <p className="text-gray-600 text-sm">
                         {testimonial.text}
                       </p>
                       <div className="flex items-center gap-4">
@@ -128,7 +128,7 @@ const TestimonialSlider = () => {
                           <h4 className="font-semibold text-gray-900">
                             {testimonial.name}
                           </h4>
-                          <p className="text-gray-400 text-sm">
+                          <p className="text-gray-600 text-sm">
                             {testimonial.email}
                           </p>
                         </div>

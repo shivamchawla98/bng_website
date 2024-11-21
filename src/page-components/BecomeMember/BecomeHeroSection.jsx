@@ -34,7 +34,7 @@ const BecomeHeroSection = () => {
                 <br />
                 Membership
               </h2>
-              <p className="text-gray-400 mb-4 max-w-[280px]">
+              <p className="text-gray-600 mb-4 max-w-[280px]">
                 Become part of our community of freight forwarders to start
                 exchanging business
               </p>
@@ -43,7 +43,7 @@ const BecomeHeroSection = () => {
                 <span className="text-[58px] font-extrabold text-[#000]">
                   $999
                 </span>
-                <span className="text-gray-400">/year</span>
+                <span className="text-gray-600">/year</span>
               </div>
               <button className="bg-primary rounded-full text-white px-6 py-3 hover:bg-gradient-to-tr from-purple-700 to-purple-600 flex items-center">
                 Become a Member
@@ -64,7 +64,7 @@ const BecomeHeroSection = () => {
                 ].map((feature, index) => (
                   <li key={index} className="flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-green-500" />
-                    <span className="text-gray-400">{feature}</span>
+                    <span className="text-gray-600">{feature}</span>
                   </li>
                 ))}
               </ul>

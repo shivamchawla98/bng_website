@@ -7,7 +7,7 @@ function ConferanceThirdSection() {
         <h2 className="font-bold text-2xl text-[#27293B]">
           Why you should Attend
         </h2>
-        <p className="text-gray-400">
+        <p className="text-gray-600">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley. Lorem Ipsum is
@@ -18,7 +18,7 @@ function ConferanceThirdSection() {
         <h2 className="font-bold text-2xl text-[#27293B]">
           Why you should Sponsor?
         </h2>
-        <p className="text-gray-400">
+        <p className="text-gray-600">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley. Lorem Ipsum is

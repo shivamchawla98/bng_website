@@ -126,7 +126,7 @@ const SocialLinks = () => (
       <a
         key={index}
         href={social.href}
-        className="text-gray-400 hover:text-white dark:hover:ms-5"
+        className="text-gray-600 hover:text-white dark:hover:ms-5"
       >
         <Image src={social.image} alt={social.name} />
         <span className="sr-only">{social.name}</span>
