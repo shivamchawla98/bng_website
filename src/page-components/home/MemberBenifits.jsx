@@ -154,7 +154,7 @@ function MemberBenefits() {
               <div
                 key={index}
                 className="flex flex-col p-4 justify-center align-middle">
-                <div className="top-0 w-[300px] justify-center flex flex-col items-center">
+                <div className="top-0 w-[300px] justify-center flex flex-col items-center align-middle">
                   <div className="w-40 h-40 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center">
                     <Image
                       src={benefit.image}
@@ -168,9 +168,12 @@ function MemberBenefits() {
                       </div>
                     </div>
                   </div>
-                  <p className="text-gray-600 text-sm text-left mt-4">
-                    {benefit.description}
-                  </p>
+
+                  <div class="flex items-center justify-center h-40">
+                    <p className="text-gray-600 text-[16px] text-left">
+                      {benefit.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -181,11 +184,13 @@ function MemberBenefits() {
               <div
                 key={index}
                 className="flex flex-col p-4 justify-center align-middle">
-                <div className="top-0 w-[300px] justify-center flex flex-col items-center">
-                  <p className="text-gray-600 text-sm text-left mt-4">
-                    {benefit.description}
-                  </p>
-                  <div className="w-40 h-40 mt-4 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center relative right-10">
+                <div className="top-0 w-[300px] justify-center flex flex-col items-center align-middle">
+                  <div class="flex items-center justify-center h-40">
+                    <p className="text-gray-600 text-[16px] text-left">
+                      {benefit.description}
+                    </p>
+                  </div>
+                  <div className="w-40 h-40 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center">
                     <Image
                       src={benefit.image}
                       alt="Member Benefits"
