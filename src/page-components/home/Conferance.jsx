@@ -45,7 +45,7 @@ const Conference = () => {
           </button> */}
         </div>
       </div>
-      <div class="bg-white shadow-md rounded-lg p-4 max-w-[80%] mx-auto  mt-14">
+      {/* <div class="bg-white shadow-md rounded-lg p-4 max-w-[80%] mx-auto  mt-14">
         <h2 class="text-2xl font-extrabold text-[#27293B] ">
           Get an Instant Quote Online
         </h2>
@@ -60,7 +60,7 @@ const Conference = () => {
             Get a Quote
           </button>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

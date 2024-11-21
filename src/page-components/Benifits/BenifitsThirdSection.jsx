@@ -54,7 +54,7 @@ function BenifitsThirdSection() {
             </p>
           </div>
         </div>
-        <button className="bg-primary mt-10 w-max rounded-full text-white px-6 py-3  hover:bg-gradient-to-tr from-purple-700 to-purple-600 flex items-center">
+        <button className="bg-primary mt-10 w-max rounded-full text-white px-6 py-3  hover:bg-gradient-to-tr from-[#6853DB] to-[#6853DB] flex items-center">
           Become a member
           <svg
             xmlns="http://www.w3.org/2000/svg"

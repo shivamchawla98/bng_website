@@ -155,7 +155,7 @@ function MemberBenefits() {
                 key={index}
                 className="flex flex-col p-4 justify-center align-middle">
                 <div className="top-0 w-[300px] justify-center flex flex-col items-center">
-                  <div className="w-40 h-40 bg-primary rounded-full flex flex-col items-center justify-center">
+                  <div className="w-40 h-40 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center">
                     <Image
                       src={benefit.image}
                       alt="Member Benefits"
@@ -185,7 +185,7 @@ function MemberBenefits() {
                   <p className="text-gray-600 text-sm text-left mt-4">
                     {benefit.description}
                   </p>
-                  <div className="w-40 h-40 mt-4 bg-primary rounded-full flex flex-col items-center justify-center relative right-10">
+                  <div className="w-40 h-40 mt-4 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center relative right-10">
                     <Image
                       src={benefit.image}
                       alt="Member Benefits"
