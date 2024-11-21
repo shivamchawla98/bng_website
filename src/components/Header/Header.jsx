@@ -20,7 +20,7 @@ function Header() {
   };
 
   return (
-    <nav className="text-[#27293b] p-4 w-full shadow-lg relative bg-gradient-to-tr from-primaryBg to-secondryBg">
+    <nav className="text-[#27293b] p-4 w-full relative bg-gradient-to-tr from-primaryBg to-secondryBg">
       <div className="container mx-auto flex justify-between items-center text-[#27293B]">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold">
