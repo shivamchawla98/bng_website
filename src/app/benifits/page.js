@@ -12,7 +12,7 @@ import WhyUs from '@/page-components/Benifits/WhyUs'
 import SecuritySteps from '@/page-components/BecomeMember/SecuritySteps'
 function page() {
   return (
-    <div>
+    <div className='bg-primaryBg'>
       <BenifitsHero />
       <BenifitsSecondSection />
       <StatsCounter/>

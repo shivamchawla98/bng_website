@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Conferance from "@/app/images/Split.jpeg"
 const SplitScreenCTA = () => {
   return (
-    <div className="grid md:grid-cols-2 h-[600px]  bg-white">
+    <div className="grid md:grid-cols-2 h-[600px]  bg-primaryBg">
       {/* Conference Section */}
       <Link href="/conference" className="relative group overflow-hidden">
         <div className="absolute inset-0 bg-blue-900/60 group-hover:bg-blue-900/70 transition-colors z-10" />

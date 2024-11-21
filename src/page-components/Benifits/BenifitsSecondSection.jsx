@@ -5,8 +5,29 @@ import about2 from "@/app/images/about2.png";
 
 function BenifitsSecondSection() {
   return (
-    <div className="bg-white py-10">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
+    <div className="bg-primaryBg py-10 relative">
+      <div
+        className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
+        style={{
+          background:
+            "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
+
+          zIndex: 1,
+          filter: "blur(110px)",
+       // Alternative fallback
+        }}></div>
+
+      {/* Right-middle Patch */}
+      <div
+        className="absolute top-10 right-12 transform translate-x-1/2 -translate-y-1/2 md:w-[160px] h-[20%] rounded-full"
+        style={{
+          background:
+            "linear-gradient(180deg, #D186EB 100%, #D186EB 100.86%, #D186EB 100%)",
+          zIndex: 1,
+          filter: "blur(50px)",
+        }}></div>
+
+      <div className="container bg-primaryBg mx-auto flex flex-col md:flex-row items-center justify-between">
         {/* left side */}
         <div className="flex md:flex-row flex-col justify-between w-full ">
           <div className=" mb-6 flex-col ">

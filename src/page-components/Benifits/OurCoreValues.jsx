@@ -271,7 +271,37 @@ function OurCoreValues() {
     </p>
   );
   return (
-    <section className="py-16 w-full mx-auto px-4 bg-gray-50 text-center flex flex-col justify-center align-middle">
+    <section className="py-16 w-full mx-auto px-4 bg-primaryBg text-center flex flex-col justify-center align-middle relative">
+      <div
+        className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
+        style={{
+          background:
+            "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
+
+          zIndex: 1,
+          filter: "blur(110px)",
+          // Alternative fallback
+        }}></div>
+
+<div
+        className="absolute top-[50%] left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
+        style={{
+          background:
+            "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
+
+          zIndex: 1,
+          filter: "blur(110px)",
+          // Alternative fallback
+        }}></div>
+      {/* Right-middle Patch */}
+      <div
+        className="absolute top-[4%] right-[80px] transform translate-x-1/2 -translate-y-1/2 md:w-[160px] h-[5%] rounded-full"
+        style={{
+          background:
+            "linear-gradient(180deg, #D186EB 100%, #D186EB 100.86%, #D186EB 100%)",
+          zIndex: 1,
+          filter: "blur(50px)",
+        }}></div>
       <h2 className="text-[55px] font-bold text-[#27293B]">Member Benefits</h2>
       <div className="flex w-full justify-center">
         <p className="text-center w-[80%] text-gray-900">
@@ -366,7 +396,7 @@ function OurCoreValues() {
           contentTwo: claimCenterContentTwo,
         },
       ].map(({ ref, content, contentTwo }, index) => (
-        <section className="py-12 bg-white" key={index}>
+        <section className="py-12 bg-primaryBg" key={index}>
           <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
             {/* First Row */}
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">

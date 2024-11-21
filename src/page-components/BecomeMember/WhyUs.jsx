@@ -217,8 +217,28 @@ const WhyUs = () => {
   };
 
   return (
-    <section className="py-12 flex flex-col   bg-white ">
-      <div className="max-w-6xl mx-auto py-10 px-4 sm:px-6 lg:px-8 bg-white h-[max-content]">
+    <section className="py-12 flex flex-col   bg-primaryBg relative">
+          <div
+        className="absolute top-50 right-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
+        style={{
+          background:
+            "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
+
+          zIndex: 1,
+          filter: "blur(110px)",
+          // Alternative fallback
+        }}></div>
+          <div
+        className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
+        style={{
+          background:
+            "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
+
+          zIndex: 1,
+          filter: "blur(110px)",
+          // Alternative fallback
+        }}></div>
+      <div className="max-w-6xl mx-auto py-10 px-4 sm:px-6 lg:px-8 bg-primaryBg h-[max-content]">
         <h2 className="text-[55px] font-bold text-center text-[#27293B] mb-8">
           Why Us?
         </h2>

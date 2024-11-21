@@ -3,11 +3,31 @@ import Image from "next/image";
 import benifit3 from "@/app/images/benifit.webp";
 function BenifitsThirdSection() {
   return (
-    <div className="bg-white py-10">
+    <div className="bg-primaryBg py-10 relative">
       <div className="container mx-auto flex flex-col  items-center justify-center">
         <h2 className="text-[#27293B] text-[55px] font-bold text-center">
           Why choose us?
         </h2>
+        <div
+        className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
+        style={{
+          background:
+            "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
+
+          zIndex: 1,
+          filter: "blur(110px)",
+       // Alternative fallback
+        }}></div>
+
+      {/* Right-middle Patch */}
+      <div
+        className="absolute top-10 right-12 transform translate-x-1/2 -translate-y-1/2 md:w-[160px] h-[20%] rounded-full"
+        style={{
+          background:
+            "linear-gradient(180deg, #D186EB 100%, #D186EB 100.86%, #D186EB 100%)",
+          zIndex: 1,
+          filter: "blur(50px)",
+        }}></div>
         <div className="flex w-full justify-between align-middle mt-16">
           <Image src={benifit3} alt="benifit3" className="w-full h-full" />
           <div className="flex flex-col md:max-w-[700px]">

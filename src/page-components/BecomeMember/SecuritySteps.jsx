@@ -25,7 +25,7 @@ const SecuritySteps = () => {
   ];
 
   return (
-    <div className="w-full  mx-auto px-12 py-12 bg-white">
+    <div className="w-full  mx-auto px-12 py-12 bg-secondryBg">
       {/* Header */}
       <div className="text-center mb-16">
         <h2 className="text-4xl font-extrabold mb-2 text-primary">Multilayer Validation Steps</h2>

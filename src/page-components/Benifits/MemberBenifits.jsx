@@ -12,7 +12,7 @@ import benifitBackground from "@/app/images/benef_uper.jpg";
 function MemberBenefits() {
   return (
     <div
-      className="relative bg-white py-20"
+      className="relative bg-secondryBg py-20 "
       style={{
         backgroundImage: `url(${benifitBackground.src})`,
         backgroundRepeat: "no-repeat",
@@ -20,6 +20,19 @@ function MemberBenefits() {
         backgroundSize: "cover", // You can set 'auto' if you don't want it to cover fully
         backgroundColor: "rgba(0, 0, 0, 0)",
       }}>
+          <div
+        className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
+        style={{
+          background:
+            "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
+
+          zIndex: 1,
+          filter: "blur(110px)",
+       // Alternative fallback
+        }}></div>
+
+      {/* Right-middle Patch */}
+     
       {/* Curved background */}
       <div className="absolute inset-x-0 top-0 -z-10 h-32 bg-blue-900 transform -skew-y-3 origin-top" />
 
@@ -37,7 +50,7 @@ function MemberBenefits() {
         </p>
 
         {/* Benefits Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 z-10">
           {/* Benefit Item */}
           <div className="flex flex-col items-center ">
             <div className="flex flex-col items-center justify-center rounded-full bg-white w-[120px] h-[120px]">

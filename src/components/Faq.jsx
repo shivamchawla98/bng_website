@@ -35,7 +35,7 @@ export const FAQ = () => {
   ];
 
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl mx-auto bg-primaryBg">
       <h2 className="text-[55px] font-bold text-center text-[#27293B] mb-8">
         Frequently Asked Questions
       </h2>

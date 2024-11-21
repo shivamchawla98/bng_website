@@ -5,7 +5,27 @@ import { FeatureCard } from "./FeatureCard";
 const AboutSection = () => {
   return (
     <>
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-primaryBg relative">
+      <div
+        className="absolute bottom-0 right-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
+        style={{
+          background:
+            "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
+
+          zIndex: 1,
+          filter: "blur(110px)",
+          // Alternative fallback
+        }}></div>
+              <div
+        className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
+        style={{
+          background:
+            "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
+
+          zIndex: 1,
+          filter: "blur(110px)",
+          // Alternative fallback
+        }}></div>
         <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto ">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
             <div className="relative flex justify-center items-center">
@@ -62,7 +82,7 @@ const AboutSection = () => {
         </div>
       </section>
 
-      <section className="py-16  w-[100%] mx-auto px-4 bg-gray-50">
+      <section className="py-16  w-[100%] mx-auto px-4 bg-primaryBg">
         <h2 className="text-[48px] text-center font-bold text-[#27293B]">
           Our Core Values
         </h2>
@@ -94,7 +114,27 @@ const AboutSection = () => {
           />
         </div>
       </section>
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-primaryBg relative">
+      <div
+        className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
+        style={{
+          background:
+            "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
+
+          zIndex: 1,
+          filter: "blur(110px)",
+          // Alternative fallback
+        }}></div>
+            <div
+        className="absolute top-0 right-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
+        style={{
+          background:
+            "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
+
+          zIndex: 1,
+          filter: "blur(110px)",
+          // Alternative fallback
+        }}></div>
         <div className="w-full max-w-7xl px-4 mx-auto md:px-5 lg:px-5 ">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
             <div className="relative flex justify-center items-center">

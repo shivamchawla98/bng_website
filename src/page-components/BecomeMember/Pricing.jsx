@@ -4,7 +4,7 @@ import Image from "next/image";
 import character from "@/app/images/Character.svg";
 import character2 from "@/app/images/Rafiki.svg";
 const PricingCard = ({ tier, features, price, icon: Icon, isPopular }) => (
-  <div className="bg-white rounded-2xl p-8 shadow-xl relative flex flex-col h-full transform transition-transform hover:scale-105">
+  <div className="bg-secondryBg rounded-2xl p-8 shadow-xl relative flex flex-col h-full transform transition-transform hover:scale-105">
     <div className="w-16 h-16 mb-6 text-primary">
       <Icon size={48} />
     </div>

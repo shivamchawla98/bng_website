@@ -213,8 +213,38 @@ const WhyUs = () => {
   };
 
   return (
-    <section className="py-12 flex flex-col  bg-white">
-      <div className="max-w-6xl mx-auto  px-4 sm:px-6 lg:px-8 bg-white max-h-max">
+    <section className="py-12 flex flex-col  bg-secondryBg relative">
+          <div
+        className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
+        style={{
+          background:
+            "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
+
+          zIndex: 1,
+          filter: "blur(110px)",
+       // Alternative fallback
+        }}></div>
+     <div
+        className="absolute top-[50%] left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
+        style={{
+          background:
+            "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
+
+          zIndex: 1,
+          filter: "blur(110px)",
+       // Alternative fallback
+        }}></div>
+      {/* Right-middle Patch */}
+      <div
+        className="absolute top-[190px] right-12 transform translate-x-1/2 -translate-y-1/2 md:w-[160px] h-[5%] rounded-full"
+        style={{
+          background:
+            "linear-gradient(180deg, #4D7DB5 10%, #4D7DB5 10%, #D186EB 100%)",
+          zIndex: 1,
+          filter: "blur(50px)",
+        }}></div>
+
+      <div className="max-w-6xl mx-auto  px-4 sm:px-6 lg:px-8 bg-secondryBg max-h-max py-10">
         <h2 className="text-[55px] font-bold text-center text-[#27293B] mb-8">
           Why Us?
         </h2>
@@ -267,10 +297,10 @@ const WhyUs = () => {
         </div>
       </div>
       {/* Dynamic Content */}
-      <section className=" bg-white ">
+      <section className=" bg-secondryBg ">
         {solutionsData2.map(
           ({ heading, description1, description2, description3 }, index) => (
-            <section key={index} className=" bg-white  py-12">
+            <section key={index} className="bg-secondryBg  py-12">
               <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
                 {/* First Row */}
                 <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">

@@ -18,12 +18,12 @@ function AboutUs() {
       <div className="md:w-1/2 md:pr-10 mb-8 md:mb-0 md:ml-10 mt-10 md:mt-0 py-10 ">
         <div className="relative">
           <h2 className="text-[40px] font-bold mb-4 text-[#27293B] relative z-10">
-            Why Us?
+            About BNG
           </h2>
           <h2
             className="absolute top-[-20px] left-0 text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
             aria-hidden="true">
-            Why Us?
+            About BNG
           </h2>
         </div>
         <p className="text-gray-600 mb-4">
