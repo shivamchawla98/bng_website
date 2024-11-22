@@ -106,7 +106,7 @@ function MemberBenefits() {
                 key={index}
                 className="flex flex-col p-4 justify-center align-middle">
                 <div className="top-0 w-[300px] justify-center flex flex-col items-center">
-                  <div className="w-40 h-40 bg-primary rounded-full flex flex-col items-center justify-center">
+                  <div className="w-40 h-40 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center">
                     <Image
                       src={handShake}
                       alt="Member Benefits"

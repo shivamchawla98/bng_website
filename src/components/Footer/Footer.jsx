@@ -120,7 +120,7 @@ const FooterSection = ({ title, links }) => (
     <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">
       {title}
     </h2>
-    <ul className="text-gray-900 font-medium">
+    <ul className="text-gray-600 font-medium">
       {links.map((link, index) => (
         <li key={index} className="mb-4">
           <a href={link.href} className="hover:underline">

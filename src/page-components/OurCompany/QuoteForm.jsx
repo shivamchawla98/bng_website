@@ -1,7 +1,7 @@
 export const QuoteForm = () => {
   return (
     <div className="flex flex-col justify-center items-center w-full ">
-      <div className="bg-white rounded-lg shadow-lg p-4 w-full">
+      {/* <div className="bg-white rounded-lg shadow-lg p-4 w-full">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">
           Get An Instant Quote
         </h2>
@@ -15,7 +15,7 @@ export const QuoteForm = () => {
             Get a quote
           </button>
         </form>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { Phone } from "lucide-react";
 import Image from "next/image";
-import bg from "@/app/images/home/hero-right-vector.png";
+import bg from "@/app/images/bg.png";
 const HeroSection = () => {
   return (
     <div className="min-h-[59vh] relative">
@@ -43,7 +43,7 @@ const HeroSection = () => {
             fresh approach to partnership here!
           </p>
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-            <button className="bg-primary w-max rounded-full text-white px-6 py-3 hover:bg-gradient-to-tr from-purple-700 to-purple-600 flex items-center">
+            <button className="bg-primary w-max rounded-full text-white px-6 py-3 hover:bg-gradient-to-tr from-[#6853DB] to-[#6853DB] flex items-center">
               Become a Member
               <svg
                 xmlns="http://www.w3.org/2000/svg"

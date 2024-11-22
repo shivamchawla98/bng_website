@@ -45,7 +45,7 @@ const BecomeHeroSection = () => {
                 </span>
                 <span className="text-gray-600">/year</span>
               </div>
-              <button className="bg-primary rounded-full text-white px-6 py-3 hover:bg-gradient-to-tr from-purple-700 to-purple-600 flex items-center">
+              <button className="bg-primary rounded-full text-white px-6 py-3 hover:bg-gradient-to-tr from-[#6853DB] to-[#6853DB] flex items-center">
                 Become a Member
               </button>
             </div>

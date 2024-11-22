@@ -20,7 +20,7 @@ function Header() {
   };
 
   return (
-    <nav className="text-[#27293b] p-4 w-full shadow-lg relative bg-gradient-to-tr from-primaryBg to-secondryBg">
+    <nav className="text-[#27293b] p-4 w-full relative bg-gradient-to-tr from-primaryBg to-secondryBg">
       <div className="container mx-auto flex justify-between items-center text-[#27293B]">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold">
@@ -80,7 +80,7 @@ function Header() {
         <div className="hidden md:flex space-x-4">
           <button
             onClick={() => router.push("/become-a-member")}
-            className="bg-primary rounded-full text-white px-6 py-3 hover:bg-gradient-to-tr from-purple-700 to-purple-600 flex items-center"
+            className="bg-primary rounded-full text-white px-6 py-3 hover:bg-gradient-to-tr from-[#6853DB] to-[#6853DB] flex items-center"
           >
             Become a Member
           </button>
@@ -162,7 +162,7 @@ function Header() {
           </div>
 
           <div className="flex flex-col space-y-3 pt-4 border-t">
-            <button className="bg-primary rounded-full text-white px-6 py-3 hover:bg-gradient-to-tr from-purple-700 to-purple-600 flex items-center justify-center">
+            <button className="bg-primary rounded-full text-white px-6 py-3 hover:bg-gradient-to-tr from-[#6853DB] to-[#6853DB] flex items-center justify-center">
               Become a Member
             </button>
           </div>

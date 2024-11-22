@@ -44,7 +44,7 @@ function AboutUs() {
           Data Banks—sourced and maintained by BNG Group—designed to support
           successful, data-driven connections across the globe.
         </p>
-        <button className="bg-primary text-white px-6 py-2 rounded-full hover:bg-purple-700 inline-flex items-center">
+        <button className="bg-primary text-white px-6 py-2 rounded-full hover:bg-[#6853DB] inline-flex items-center">
           Know more
           <svg
             xmlns="http://www.w3.org/2000/svg"
