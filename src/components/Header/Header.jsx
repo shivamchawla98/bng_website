@@ -32,13 +32,13 @@ function Header() {
           <Link href="/" className="font-medium hover:text-purple-300">
             Home
           </Link>
-          <Link href="/benefits" className="font-medium hover:text-purple-300">
+          <Link href="/benifits" className="font-medium hover:text-purple-300">
             Benefits
           </Link>
           <Link href="/our-company" className="font-medium hover:text-purple-300">
             About us
           </Link>
-          <Link href="/conference" className="font-medium hover:text-purple-300">
+          <Link href="/conferance" className="font-medium hover:text-purple-300">
             Conference
           </Link>
           <Link href="/contact" className="font-medium hover:text-purple-300">
