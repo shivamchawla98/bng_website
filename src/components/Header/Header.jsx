@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import LOGO from "@/app/images/logos/logo.jpeg";
+import LOGO from "@/app/images/logos/Logistic3.png";
 import Image from "next/image";
 
 function Header() {
@@ -24,7 +24,7 @@ function Header() {
       <div className="container mx-auto flex justify-between items-center text-[#27293B]">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold">
-          <Image src={LOGO} alt="logo" width={100} height={100} />
+          <Image src={LOGO} alt="logo" width={100} className="w-full"/>
         </Link>
 
         {/* Desktop Navigation */}

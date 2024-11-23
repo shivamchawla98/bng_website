@@ -3,7 +3,7 @@
 import React from "react";
 import { Phone } from "lucide-react";
 import Image from "next/image";
-import bg from "@/app/images/bg.png";
+import bg from "@/app/images/home/hero-right-vector1.png";
 import { useRouter } from "next/navigation";
 const HeroSection = () => {
   const router = useRouter()
