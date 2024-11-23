@@ -273,7 +273,7 @@ const WhyUs = () => {
               index
             ) => (
               <div
-                className={`relative ${heightClass} cursor-pointer`}
+                className={`relative ${heightClass} cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out hover:shadow-lg`}
                 key={id}
                 onClick={() => scrollToSolution(index)}
                 ref={(el) => (solutionRefs.current[index] = el)} // Storing reference to each section

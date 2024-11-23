@@ -131,7 +131,8 @@ const Solutions = () => {
                     : ""
                 }`} // Apply relative and bottom margin only to Warehouse Solutions
               >
-                <div className={`relative ${heightClass}`}>
+                <div className={`relative ${heightClass} group hover:scale-105 transition-transform duration-300 ease-in-out hover:shadow-lg`}
+                >
                   <Image
                     src={src}
                     className="rounded-lg w-full h-full object-cover"

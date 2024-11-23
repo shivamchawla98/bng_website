@@ -4,6 +4,7 @@ import { FAQ } from "@/components/Faq";
 
 import { QuoteForm } from '@/page-components/Contact/QuoteForm';
 import { SocialMedia } from '@/page-components/Contact/SocialMedia';
+import ContactUsMap from '@/page-components/Contact/ContactUsMap';
 
 const ContactPage = () => {
   return (
@@ -13,6 +14,7 @@ const ContactPage = () => {
       <div className="container mx-auto px-4 py-12 -mt-20 relative z-10">
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <QuoteForm />
+          {/* <ContactUsMap /> */}
           <SocialMedia />
         </div>
         

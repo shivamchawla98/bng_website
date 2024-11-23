@@ -47,7 +47,7 @@ function AboutUs() {
           Data Banks—sourced and maintained by BNG Group—designed to support
           successful, data-driven connections across the globe.
         </p>
-        <button   onClick={() => router.push("/our-company")}  className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-full text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent hover:to-transparent" >
+        <button   onClick={() => router.push("/our-company")}  className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-full text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent hover:to-transparent hover:to-transparent transition ease-in-out delay-150 bg-primary hover:-translate-y-1 hover:scale-110" >
           Know more
           <svg
             xmlns="http://www.w3.org/2000/svg"

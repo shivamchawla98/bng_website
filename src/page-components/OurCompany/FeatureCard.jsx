@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export const FeatureCard = ({ title, description, onClick }) => (
   <button
-    className="flex flex-col items-center p-6 text-center cursor-pointer"
+    className="flex flex-col items-center p-6 text-center cursor-pointer hover:transform: scaleY(1.25) duration-300 "
     onClick={() => {
       console.log(`Clicked on ${title}`);
       onClick && onClick(); // Check if onClick exists and call it

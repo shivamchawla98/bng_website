@@ -18,10 +18,10 @@ const ContactUsMap = () => {
       coordinates: "37.793611,-122.396111",
     },
   ];
-
+  const key = "6LfYv4cqAAAAAOwVM_YCGHfZDEGPcsX5CH1jqSin";
   const renderMap = () => {
     const coordinates = locations.map((loc) => loc.coordinates).join("|");
-    return `https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=${coordinates}`;
+    return `https://www.google.com/maps/embed/v1/place?key=${key}&q=${coordinates}`;
   };
 
   return (
