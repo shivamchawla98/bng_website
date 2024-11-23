@@ -91,7 +91,7 @@ const solutionsData = [
 
 const Solutions = () => {
   return (
-    <section className="py-12 bg-primaryBg relative">
+    <section className="py-14 bg-primaryBg relative">
       <div
         className="absolute top-0 right-8 w-40 md:w-[200px] h-[200px] rounded-full"
         style={{
@@ -142,7 +142,7 @@ const Solutions = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent rounded-lg">
                     <div className="absolute bottom-4 left-4 text-white">
                       <h3 className="text-xl font-bold">{heading}</h3>
-                      <p className="text-sm">{description1}</p>
+                      <p className="text-[18px]">{description1}</p>
                       {/* <p className="text-sm">{description2}</p> */}
                     </div>
                   </div>

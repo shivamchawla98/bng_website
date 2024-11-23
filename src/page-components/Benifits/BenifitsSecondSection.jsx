@@ -5,7 +5,7 @@ import about2 from "@/app/images/about2.png";
 
 function BenifitsSecondSection() {
   return (
-    <div className="bg-primaryBg py-10 relative">
+    <div className="bg-primaryBg py-14 relative">
       <div
         className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
         style={{
@@ -36,14 +36,13 @@ function BenifitsSecondSection() {
               alt="About Image 1"
               className="rounded-sm md:w-[500px] md:h-[500px] object-cover "
             />
-            <p className="text-gray-600 text-[20px] mt-4 md:max-w-[500px]">
+            <p className="text-gray-600 text-[18px] mt-4 md:max-w-[500px]">
               Every buyer, seller, and logistics professional undergoes a
               rigorous approval process, ensuring a trusted business community.
               Join the largest network of industry professionals today!
             </p>{" "}
           </div>
-          <div className="flex justify-start place-content-start  flex-col md:max-w-[700px] py-6">
-            <h3 className="text-[#27293B]">About BNG --</h3>
+          <div className="flex justify-start place-content-start  flex-col md:max-w-[700px] ">
             <h1 className="text-primary text-[55px] font-bold">
               Small investment big benefits
             </h1>
@@ -58,7 +57,7 @@ function BenifitsSecondSection() {
               alt="About Image 1"
               className="rounded-sm  object-cover md:h-[450px] w-full mt-6 "
             />
-            <button className="bg-primary mt-8 w-max rounded-full text-white px-6 py-3  hover:bg-gradient-to-tr from-[#6853DB] to-[#6853DB] flex items-center">
+            <button  className=" mt-10 w-max group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-full text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent hover:to-transparent">
               Find out more
               <svg
                 xmlns="http://www.w3.org/2000/svg"

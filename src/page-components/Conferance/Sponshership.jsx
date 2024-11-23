@@ -58,7 +58,7 @@ function Sponsorship() {
               <h2 className="text-3xl font-bold mb-4 text-primary">
                 Why you should Attend
               </h2>
-              <p className="text-gray-600 text-lg mb-6">
+              <p className="text-gray-600 text-[18px] mb-6">
                 Transform your professional journey with unparalleled learning and networking opportunities.
               </p>
               <FeatureList items={attendeeFeatures} />
@@ -76,7 +76,7 @@ function Sponsorship() {
               <h2 className="text-3xl font-bold mb-4  text-primary  ">
                 Why you should Sponsor
               </h2>
-              <p className="text-gray-600 text-lg mb-6">
+              <p className="text-gray-600 text-[18px] mb-6">
                 Elevate your brand presence and connect with key industry stakeholders.
               </p>
               <FeatureList items={sponsorFeatures} />

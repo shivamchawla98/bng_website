@@ -18,7 +18,7 @@ const BecomeHeroSection = () => {
             <h1 className="text-[55px] md:max-w-[480px] leading-normal font-extrabold text-white mb-4">
               Elevate Your Logistics Game
             </h1>
-            <p className="text-gray-200 mb-6 text-lg md:max-w-[500px]">
+            <p className="text-gray-200 mb-6 text-[18px] md:max-w-[500px]">
               Access a trusted network, advanced tools, and global opportunities
               with a single membership.
             </p>
@@ -34,7 +34,7 @@ const BecomeHeroSection = () => {
                 <br />
                 Membership
               </h2>
-              <p className="text-gray-600 mb-4 max-w-[280px]">
+              <p className="text-gray-600 mb-4 max-w-[280px] text-[18px]">
                 Become part of our community of freight forwarders to start
                 exchanging business
               </p>

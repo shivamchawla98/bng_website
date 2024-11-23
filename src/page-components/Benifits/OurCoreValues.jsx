@@ -27,7 +27,7 @@ function OurCoreValues() {
 
   // Paragraph content for each section
   const membersAreaContent = (
-    <p className="text-gray-600 text-base leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
       In today’s digital age, access to accurate data is vital for boosting
       business presence, sales, and revenue. BNG's Member Area is a
       user-friendly, centralized platform designed for logistics professionals
@@ -47,7 +47,7 @@ function OurCoreValues() {
     </p>
   );
   const membersAreaContentTwo = (
-    <p className="text-gray-600 text-base leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
       The Member Area provides multiple benefits, including time savings,
       enhanced productivity, and real-time monitoring for fast decision-making.
       Members can track progress, measure performance, and communicate more
@@ -61,7 +61,7 @@ function OurCoreValues() {
   );
 
   const globalReachContent = (
-    <p className="text-gray-600 text-base leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
       At BNG, we prioritize creating a safe, reliable environment for members to
       establish strong global connections. Our Global Reach initiative is
       designed to increase members’ visibility, allowing them to market their
@@ -79,7 +79,7 @@ function OurCoreValues() {
     </p>
   );
   const globalReachContentTwo = (
-    <p className="text-gray-600 text-base leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
       Since our inception, BNG has received enthusiastic support from the
       freight, logistics, and trade industries worldwide. Within just 18 days,
       we welcomed over 300 new members, with a projected total of 800 by the end
@@ -92,7 +92,7 @@ function OurCoreValues() {
     </p>
   );
   const businessXchangeContent = (
-    <p className="text-gray-600 text-base leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
       BNG’s Business Centre combines advanced technology and industry expertise
       to create a digital marketplace where members can find business leads,
       participate in active bids, and submit proposals directly to clients
@@ -111,7 +111,7 @@ function OurCoreValues() {
     </p>
   );
   const businessXchangeContentTwo = (
-    <p className="text-gray-600 text-base leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
       This unique feature enables members to engage in a live bidding process
       without geographic limitations, providing opportunities to increase
       visibility, post requests, and send quotations directly to relevant
@@ -124,7 +124,7 @@ function OurCoreValues() {
     </p>
   );
   const freightXchangeContent = (
-    <p className="text-gray-600 text-base leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
       This feature is designed to help members attract new business by
       increasing their exposure within the global logistics network. The
       platform prioritizes competitive rates, enabling members to gain an edge
@@ -136,7 +136,7 @@ function OurCoreValues() {
     </p>
   );
   const freightXchangeContentTwo = (
-    <p className="text-gray-600 text-base leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
       This feature is designed to help members attract new business by
       increasing their exposure within the global logistics network. The
       platform prioritizes competitive rates, enabling members to gain an edge
@@ -148,7 +148,7 @@ function OurCoreValues() {
     </p>
   );
   const trustedPartnersContent = (
-    <p className="text-gray-600 text-base leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
       BNG upholds a rigorous vetting process to ensure that all members are
       reliable and trustworthy, fostering a community where credibility is
       paramount. Our team of legal and trade experts reviews each application,
@@ -166,7 +166,7 @@ function OurCoreValues() {
     </p>
   );
   const trustedPartnersContentTwo = (
-    <p className="text-gray-600 text-base leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
       To join BNG, applicants must have a proven record of credibility,
       demonstrated by a three-year business history and two trade references.
       The admission process involves multiple steps to confirm trustworthiness:
@@ -180,7 +180,7 @@ function OurCoreValues() {
   );
 
   const paymentProtectionContent = (
-    <p className="text-gray-600 text-base leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
       Payment security is crucial for business, and BNG’s Payment Protection
       Framework (PPF) empowers members to control financial risk with
       confidence. The PPF offers coverage up to $50,000 for elite members,
@@ -197,7 +197,7 @@ function OurCoreValues() {
     </p>
   );
   const paymentProtectionContentTwo = (
-    <p className="text-gray-600 text-base leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
       Our advanced, digital framework allows members to operate in a secure
       environment, equipped to mitigate financial uncertainties. Each member’s
       dedicated dashboard contains the full terms and conditions of the PPF,
@@ -211,7 +211,7 @@ function OurCoreValues() {
   );
 
   const paymentMonitoringContent = (
-    <p className="text-gray-600 text-base leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
       BNG’s advanced payment monitoring system simplifies tracking and managing
       invoices, making it easier to monitor receivables and payables
       efficiently. By simply submitting data, members activate an automated
@@ -227,7 +227,7 @@ function OurCoreValues() {
     </p>
   );
   const paymentMonitoringContentTwo = (
-    <p className="text-gray-600 text-base leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
       This comprehensive framework reduces the need for manual follow-ups,
       helping members save time and stay organized with their financial
       operations. The system’s automated reminders and real-time updates ensure
@@ -240,7 +240,7 @@ function OurCoreValues() {
   );
 
   const claimCenterContent = (
-    <p className="text-gray-600 text-base leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
       In situations of disagreement, misunderstanding, or conflict, prompt
       reporting is essential to ensure smooth resolution. BNG’s Claim Center
       provides a fully digital interface where members can file claims and track
@@ -258,7 +258,7 @@ function OurCoreValues() {
   );
 
   const claimCenterContentTwo = (
-    <p className="text-gray-600 text-base leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
       Our Claim Center is designed for efficiency, guaranteeing members an
       expedited process for addressing disputes. By filing claims digitally,
       members can ensure that each case is addressed accurately, and the network
@@ -271,7 +271,7 @@ function OurCoreValues() {
     </p>
   );
   return (
-    <section className="py-16 w-full mx-auto px-4 bg-primaryBg text-center flex flex-col justify-center align-middle relative">
+    <section className="py-14 w-full mx-auto px-4 bg-primaryBg text-center flex flex-col justify-center align-middle relative">
       <div
         className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
         style={{
@@ -396,7 +396,7 @@ function OurCoreValues() {
           contentTwo: claimCenterContentTwo,
         },
       ].map(({ ref, content, contentTwo }, index) => (
-        <section className="py-12 bg-primaryBg" key={index}>
+        <section className="bg-primaryBg " key={index}>
           <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
             {/* First Row */}
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
@@ -405,9 +405,9 @@ function OurCoreValues() {
                   index % 2 !== 0 ? "lg:order-2" : ""
                 }`}>
                 <div
-                  className={`hidden lg:block absolute ${
-                    index % 2 === 0 ? "left-16" : "right-16"
-                  } bottom-12 h-[350px] w-[400px] border-primary border-2 rounded-md`}></div>
+                  className={`hidden lg:block absolute  ${
+                    index % 2 === 0 ? "left-16 top-12" : "right-16  bottom-10"
+                  }  h-[350px] w-[400px] border-primary border-2 rounded-md`}></div>
                 <Image
                   className="rounded-xl object-cover z-10"
                   src={index % 2 === 0 ? about1 : about2}
@@ -430,7 +430,7 @@ function OurCoreValues() {
                     "Claim Center",
                   ][index]
                 }`}</h2>
-                <p className="text-[#27293B]">{content}</p>
+                <p className="text-[#27293B] text-[18px]">{content}</p>
               </div>
             </div>
 

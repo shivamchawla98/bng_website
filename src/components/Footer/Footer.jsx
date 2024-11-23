@@ -10,7 +10,8 @@ const Footer = () => {
     <footer
       className=" text-gray-900 relative shadow-md"
       style={{
-        background: "linear-gradient(180deg, #EFF6FF 100%,#E6EBF4  100%, #D186EB 100%)",
+        background:
+          "linear-gradient(180deg, #EFF6FF 100%,#E6EBF4  100%, #D186EB 100%)",
       }}>
       <div
         className="absolute bottom-0 right-0 w-[200px] h-[200px] rounded-full"
@@ -27,13 +28,13 @@ const Footer = () => {
               <h3 className="text-2xl text-wrap font-bold max-w-[250px]">
                 Subscribe to our newsletters now!
               </h3>
-              <div className="mt-6 border-b-[0.9px] w-max">
+              <div className="mt-6 border-b-[0.9px] w-max bg-white rounded-full">
                 <input
                   type="email"
-                  className="rounded p-2 bg-transparent border-white"
+                  className="rounded-full p-2 bg-white border-primary"
                   placeholder="Enter your email"
                 />
-                <button className="rounded p-2 ml-2 bg-transparent border-white">
+                <button className=" p-2  py-[12px] ml-2 bg-primary border-white rounded-full">
                   <svg
                     width="23"
                     height="16"
@@ -117,12 +118,13 @@ const Footer = () => {
 
 const FooterSection = ({ title, links }) => (
   <div>
-    <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">
+    
+    <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase border-b-[2px]">
       {title}
     </h2>
     <ul className="text-gray-600 font-medium">
       {links.map((link, index) => (
-        <li key={index} className="mb-4">
+        <li key={index} className="mb-4 ">
           <a href={link.href} className="hover:underline">
             {link.label}
           </a>
@@ -139,7 +141,7 @@ const SocialLinks = () => (
         key={index}
         href={social.href}
         className="text-gray-600 hover:text-gray-900 dark:hover:ms-5">
-        <Image src={social.image} alt={social.name} />
+        <Image src={social.image} alt={social.name} width={30} height={50} />
         <span className="sr-only">{social.name}</span>
       </a>
     ))}

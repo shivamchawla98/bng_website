@@ -2,6 +2,7 @@ import Head from "next/head";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import Cta from "@/components/Cta";
 
 export const metadata = {
   title: "Create Next App",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
       <body className="antialiased bg-[#E6EBF4] overflow-x-hidden">
         <Header />
         {children}
+        <Cta />
         <Footer />
       </body>
     </html>

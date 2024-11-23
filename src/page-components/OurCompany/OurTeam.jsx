@@ -86,7 +86,7 @@ const TeamSection = () => {
           <h2 className="mb-4 text-[52px] tracking-tight font-extrabold text-[#27293B] ">
             Our Team
           </h2>
-          <p className="font-light text-gray-600 sm:text-xl dark:text-gray-600">
+          <p className="font-light text-gray-600 sm:text-xl dark:text-gray-600 text-[18px]">
             Explore the whole collection of open-source web components and
             elements built with the utility classes from Tailwind.
           </p>

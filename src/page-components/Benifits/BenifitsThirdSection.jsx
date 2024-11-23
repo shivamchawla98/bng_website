@@ -3,7 +3,7 @@ import Image from "next/image";
 import benifit3 from "@/app/images/benifit.webp";
 function BenifitsThirdSection() {
   return (
-    <div className="bg-primaryBg py-10 relative">
+    <div className="bg-primaryBg py-14 relative">
       <div className="container mx-auto flex flex-col  items-center justify-center">
         <h2 className="text-[#27293B] text-[55px] font-bold text-center">
           Why choose us?
@@ -31,7 +31,7 @@ function BenifitsThirdSection() {
         <div className="flex w-full justify-between align-middle mt-16">
           <Image src={benifit3} alt="benifit3" className="w-full h-full" />
           <div className="flex flex-col md:max-w-[700px]">
-            <p className="text-gray-600  ">
+            <p className="text-gray-600 text-[18px] ">
               The key point of membership is to grow your business. By keeping
               business within the group, X2 Logistics Networks can operate as a
               unified global identity with working partnerships and the ability
@@ -54,7 +54,7 @@ function BenifitsThirdSection() {
             </p>
           </div>
         </div>
-        <button className="bg-primary mt-10 w-max rounded-full text-white px-6 py-3  hover:bg-gradient-to-tr from-[#6853DB] to-[#6853DB] flex items-center">
+        <button  className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-full text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent hover:to-transparent mt-10 ml-16">
           Become a member
           <svg
             xmlns="http://www.w3.org/2000/svg"

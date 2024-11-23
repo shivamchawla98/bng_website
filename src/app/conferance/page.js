@@ -79,10 +79,8 @@ const ConferencePage = () => (
       </div>
     </section>
 
-    <section className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <FAQ />
-      </div>
+    <section className="py-14 bg-primaryBg">
+      <FAQ />
     </section>
   </div>
 );

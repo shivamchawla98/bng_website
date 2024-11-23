@@ -26,8 +26,8 @@ const AboutSection = () => {
           filter: "blur(110px)",
           // Alternative fallback
         }}></div>
-        <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto ">
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
+        <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto  ">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12 ">
             <div className="relative flex justify-center items-center">
               <div className="hidden lg:block absolute left-16 bottom-12 h-[350px] w-[400px] border-primary border-2 rounded-md"></div>
               <Image
@@ -41,7 +41,7 @@ const AboutSection = () => {
               <h2 className="text-gray-900 text-4xl font-extrabold leading-normal text-center lg:text-start">
                 About BNG: Building Global Connections in Logistics
               </h2>
-              <p className="text-gray-600 text-base leading-relaxed text-center lg:text-start">
+              <p className="text-gray-600 text-base text-[18px] leading-relaxed text-center lg:text-start">
                 BNG Logistics Network is a global platform built to unite
                 logistics professionals, freight forwarders, and industry
                 leaders in an environment optimized for growth and
@@ -55,7 +55,7 @@ const AboutSection = () => {
               </p>
             </div>
           </div>
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12 py-10">
             <div className="relative flex justify-center items-center lg:order-2">
               <div className="hidden lg:block absolute right-16 bottom-12 h-[350px] w-[400px] border-primary border-2 rounded-md"></div>
               <Image
@@ -66,7 +66,7 @@ const AboutSection = () => {
               />
             </div>
             <div className="flex flex-col justify-center items-center lg:items-start gap-8">
-              <p className="text-gray-600 text-base leading-relaxed text-center lg:text-start">
+              <p className="text-gray-600  leading-relaxed text-center text-[18px] lg:text-start">
                 Members of BNG benefit from around-the-clock customer support,
                 an extensive trade directory, and free promotional services that
                 increase their visibility in the global market. Through
@@ -150,7 +150,7 @@ const AboutSection = () => {
               <h2 className="text-gray-900 text-4xl font-extrabold leading-normal text-center lg:text-start">
                 Our Vision
               </h2>
-              <p className="text-gray-600 text-base leading-relaxed text-center lg:text-start">
+              <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
                 Our vision at BNG Logistics Network is to be the premier global
                 platform where logistics professionals seamlessly connect,
                 collaborate, and innovate to drive industry excellence. We
@@ -180,7 +180,7 @@ const AboutSection = () => {
               <h2 className="text-gray-900 text-4xl font-extrabold leading-normal text-center lg:text-start">
                 Our Mission
               </h2>
-              <p className="text-gray-600 text-base leading-relaxed text-center lg:text-start">
+              <p className="text-gray-600 text-[18px] text-base leading-relaxed text-center lg:text-start">
                 Our mission is to provide logistics professionals worldwide with
                 a secure, digitalized environment that enhances connectivity,
                 maximizes business potential, and fosters enduring partnerships.

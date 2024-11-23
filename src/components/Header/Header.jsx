@@ -20,7 +20,7 @@ function Header() {
   };
 
   return (
-    <nav className="text-[#27293b] p-4 w-full relative bg-gradient-to-tr from-primaryBg to-secondryBg">
+    <nav className="text-[#27293b] p-4 w-full bg-gradient-to-tr from-primaryBg to-secondryBg sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center text-[#27293B]">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold">
@@ -35,10 +35,14 @@ function Header() {
           <Link href="/benifits" className="font-medium hover:text-purple-300">
             Benefits
           </Link>
-          <Link href="/our-company" className="font-medium hover:text-purple-300">
+          <Link
+            href="/our-company"
+            className="font-medium hover:text-purple-300">
             About us
           </Link>
-          <Link href="/conferance" className="font-medium hover:text-purple-300">
+          <Link
+            href="/conferance"
+            className="font-medium hover:text-purple-300">
             Conference
           </Link>
           <Link href="/contact" className="font-medium hover:text-purple-300">
@@ -49,26 +53,22 @@ function Header() {
           <div
             className="relative"
             onMouseEnter={() => setIsDropdownOpen(true)}
-            onMouseLeave={() => setIsDropdownOpen(false)}
-          >
+            onMouseLeave={() => setIsDropdownOpen(false)}>
             <button
               className="font-medium hover:text-purple-300 focus:outline-none"
-              onClick={toggleDropdown}
-            >
+              onClick={toggleDropdown}>
               Specialties
             </button>
             {isDropdownOpen && (
               <div className="absolute top-full left-0 bg-white shadow-lg rounded-lg p-4 space-y-2 w-48 z-50">
                 <Link
                   href="/freight-xchange"
-                  className="block text-gray-700 hover:text-purple-300"
-                >
+                  className="block text-gray-700 hover:text-purple-300">
                   Freight Xchange
                 </Link>
                 <Link
                   href="/business-xchange"
-                  className="block text-gray-700 hover:text-purple-300"
-                >
+                  className="block text-gray-700 hover:text-purple-300">
                   Business Xchange
                 </Link>
               </div>
@@ -77,21 +77,24 @@ function Header() {
         </div>
 
         {/* Desktop Buttons */}
-        <div className="hidden md:flex space-x-4">
-          <button
-            onClick={() => router.push("/become-a-member")}
-            className="bg-primary rounded-full text-white px-6 py-3 hover:bg-gradient-to-tr from-[#6853DB] to-[#6853DB] flex items-center"
-          >
-            Become a Member
+        <div className="flex align-items-center">
+          <button className="text-primary rounded-full font-bold px-6 py-3 cursor-pointer flex items-center hover:text-[#6853DB] ">
+            Login
           </button>
+          <div className="hidden md:flex space-x-4">
+            <button
+              onClick={() => router.push("/become-a-member")}
+              className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-full text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent hover:to-transparent">
+              Become a Member
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
         <button
           className="md:hidden text-[#27293B]"
           onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
+          aria-label="Toggle menu">
           {isMenuOpen ? (
             <X size={24} className="text-gray-600" />
           ) : (
@@ -104,34 +107,29 @@ function Header() {
       <div
         className={`${
           isMenuOpen ? "flex" : "hidden"
-        } md:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-50 flex-col w-full`}
-      >
+        } md:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-50 flex-col w-full`}>
         <div className="flex flex-col p-4 space-y-4">
           <Link href="/" className="text-[#27293B] hover:text-purple-300 py-2">
             Home
           </Link>
           <Link
             href="/benefits"
-            className="text-gray-700 hover:text-purple-300 py-2"
-          >
+            className="text-gray-700 hover:text-purple-300 py-2">
             Benefits
           </Link>
           <Link
             href="/our-company"
-            className="text-gray-700 hover:text-purple-300 py-2"
-          >
+            className="text-gray-700 hover:text-purple-300 py-2">
             About us
           </Link>
           <Link
             href="/conference"
-            className="text-gray-700 hover:text-purple-300 py-2"
-          >
+            className="text-gray-700 hover:text-purple-300 py-2">
             Conference
           </Link>
           <Link
             href="/contact"
-            className="text-gray-700 hover:text-purple-300 py-2"
-          >
+            className="text-gray-700 hover:text-purple-300 py-2">
             Contact Us
           </Link>
 
@@ -139,22 +137,19 @@ function Header() {
           <div>
             <button
               className="text-[#27293B] hover:text-purple-300 py-2"
-              onClick={toggleDropdown}
-            >
+              onClick={toggleDropdown}>
               Specialties
             </button>
             {isDropdownOpen && (
               <div className="pl-4 space-y-2">
                 <Link
                   href="/freight-xchange"
-                  className="text-gray-700 hover:text-purple-300 py-1 block"
-                >
+                  className="text-gray-700 hover:text-purple-300 py-1 block">
                   Freight Xchange
                 </Link>
                 <Link
                   href="/business-xchange"
-                  className="text-gray-700 hover:text-purple-300 py-1 block"
-                >
+                  className="text-gray-700 hover:text-purple-300 py-1 block">
                   Business Xchange
                 </Link>
               </div>

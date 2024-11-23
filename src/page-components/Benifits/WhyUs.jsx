@@ -213,7 +213,7 @@ const WhyUs = () => {
   };
 
   return (
-    <section className="py-12 flex flex-col  bg-secondryBg relative">
+    <section className="py-14 flex flex-col  bg-secondryBg relative">
           <div
         className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
         style={{
@@ -244,7 +244,7 @@ const WhyUs = () => {
           filter: "blur(50px)",
         }}></div>
 
-      <div className="max-w-6xl mx-auto  px-4 sm:px-6 lg:px-8 bg-secondryBg max-h-max py-10">
+      <div className="max-w-6xl mx-auto  px-4 sm:px-6 lg:px-8 bg-secondryBg max-h-max ">
         <h2 className="text-[55px] font-bold text-center text-[#27293B] mb-8">
           Why Us?
         </h2>
@@ -288,7 +288,7 @@ const WhyUs = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent rounded-lg">
                   <div className="absolute bottom-4 left-4 text-white">
                     <h3 className="text-xl font-bold text-white">{heading}</h3>
-                    <p className="text-sm text-white">{description1}</p>
+                    <p className="text-[18px] text-white">{description1}</p>
                   </div>
                 </div>
               </div>
@@ -310,8 +310,8 @@ const WhyUs = () => {
                     }`}>
                     <div
                       className={`hidden lg:block absolute ${
-                        index % 2 === 0 ? "left-16" : "right-16"
-                      } bottom-12 h-[350px] w-[400px] border-primary border-2 rounded-md`}></div>
+                                index % 2 === 0 ? "left-16 top-12" : "right-16  bottom-10"
+                      } bottom-[-2px] h-[350px] w-[400px] border-primary border-2 rounded-md`}></div>
                     <Image
                       className="rounded-xl object-cover z-10"
                       src={index % 2 === 0 ? about2 : about1}
@@ -326,7 +326,7 @@ const WhyUs = () => {
                     <h2 className="text-3xl font-bold text-[#27293B]">
                       {heading}
                     </h2>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 text-[18px]">
                       {description2}
                       {description3}
                     </p>

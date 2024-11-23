@@ -12,7 +12,7 @@ import benifitBackground from "@/app/images/benef_uper.jpg";
 function MemberBenefits() {
   return (
     <div
-      className="relative bg-secondryBg py-20 "
+      className="relative bg-secondryBg py-14 "
       style={{
         backgroundImage: `url(${benifitBackground.src})`,
         backgroundRepeat: "no-repeat",
@@ -37,12 +37,12 @@ function MemberBenefits() {
       <div className="absolute inset-x-0 top-0 -z-10 h-32 bg-blue-900 transform -skew-y-3 origin-top" />
 
       {/* Content Section */}
-      <div className="container mx-auto text-center">
+      <div className=" mx-auto text-center">
         {/* Heading */}
         <h2 className="text-[55px] font-bold text-gray-900 mb-4">
           Member Benefits
         </h2>
-        <p className="text-gray-600 mb-10 max-w-3xl mx-auto">
+        <p className="text-gray-600 text-[18px] mb-10 max-w-3xl mx-auto">
           The key point of membership is to grow your business. By keeping
           business within the group, X2 Logistics Networks can operate as a
           unified global identity with working partnerships and the ability to

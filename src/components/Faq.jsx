@@ -48,7 +48,7 @@ export const FAQ = () => {
               {faq.question}
             </summary>
             <div className="px-6 py-4 bg-gray-50">
-              <p className="text-gray-600 whitespace-pre-line">{faq.answer}</p>
+              <p className="text-gray-600 whitespace-pre-line text-[18px]">{faq.answer}</p>
             </div>
           </details>
         ))}

@@ -67,7 +67,7 @@ const SplitScreenCTA = () => {
               />
             </svg>
           </div>
-          <p className="text-lg text-white/90 max-w-md">
+          <p className="text-[18px] text-white/90 max-w-md">
             Unlocking a World of Reliable Solutions
           </p>
         </div>

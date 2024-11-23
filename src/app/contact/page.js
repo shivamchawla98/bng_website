@@ -7,7 +7,7 @@ import { SocialMedia } from '@/page-components/Contact/SocialMedia';
 
 const ContactPage = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-primaryBg">
       <ContactHero />
       
       <div className="container mx-auto px-4 py-12 -mt-20 relative z-10">

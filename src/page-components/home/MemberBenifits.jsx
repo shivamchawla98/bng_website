@@ -3,14 +3,14 @@ import Image from "next/image";
 import centeredImage from "@/app/images/memberBenifits.svg";
 import handShake from "@/app/images/handSHake.svg";
 import Vector1 from "@/app/images/Patch1.svg";
-import MembersAreaVector from '@/app/images/home/MembersArea.svg'
-import GlobalReachVector from '@/app/images/home/GlobalReach.svg'
-import BusinessXchangeVector from '@/app/images/home/BusinessXchange.svg'
-import TrustedPartnersVector from '@/app/images/home/TrustedPartners.svg'
-import PaymentProtectionVector from '@/app/images/home/PaymentProtection.svg'
-import PaymentMonitoringVector from '@/app/images/home/PaymentMonitoring.webp'
-import ClaimCenterVector from '@/app/images/home/ClaimCenter.svg'
-import FreightXchangeVector from '@/app/images/home/FreightXchange.svg'
+import MembersAreaVector from "@/app/images/home/MembersArea.svg";
+import GlobalReachVector from "@/app/images/home/GlobalReach.svg";
+import BusinessXchangeVector from "@/app/images/home/BusinessXchange.svg";
+import TrustedPartnersVector from "@/app/images/home/TrustedPartners.svg";
+import PaymentProtectionVector from "@/app/images/home/PaymentProtection.svg";
+import PaymentMonitoringVector from "@/app/images/home/PaymentMonitoring.webp";
+import ClaimCenterVector from "@/app/images/home/ClaimCenter.svg";
+import FreightXchangeVector from "@/app/images/home/FreightXchange.svg";
 
 function MemberBenefits() {
   const benefits = [
@@ -118,7 +118,7 @@ function MemberBenefits() {
   ];
 
   return (
-    <div className="relative py-24 w-[100%] overflow-x-hidden bg-primaryBg">
+    <div className="relative  w-[100%] overflow-x-hidden bg-primaryBg">
       {/* Top-left Patch */}
       <div
         className="absolute top-16 right-0 w-[200px] h-[200px] rounded-full"
@@ -128,13 +128,13 @@ function MemberBenefits() {
           filter: "blur(60.8px)",
         }}></div>
       <div
-        className="absolute bottom-16 left-8 w-[200px] h-[200px] rounded-full"
+        className="absolute bottom-[10%] left-8 w-[200px] h-[200px] rounded-full"
         style={{
           background: "linear-gradient(180deg, #D186EB 10%, #D186EB 90%)",
           zIndex: 1,
           filter: "blur(60.8px)",
         }}></div>
-      <div className="flex flex-col justify-center w-[100%] px-4 overflow-x-hidden py-10">
+      <div className="flex flex-col justify-center w-[100%] px-4 overflow-x-hidden py-14">
         {/* <h2 className="text-[55px] text-[#27293B] font-bold text-center mb-12">
           Member Benefits
         </h2> */}
@@ -170,7 +170,7 @@ function MemberBenefits() {
                   </div>
 
                   <div class="flex items-center justify-center h-40">
-                    <p className="text-gray-600 text-[16px] text-left">
+                    <p className="text-gray-600 text-[18px] text-left">
                       {benefit.description}
                     </p>
                   </div>
@@ -186,7 +186,7 @@ function MemberBenefits() {
                 className="flex flex-col p-4 justify-center align-middle">
                 <div className="top-0 w-[300px] justify-center flex flex-col items-center align-middle">
                   <div class="flex items-center justify-center h-40">
-                    <p className="text-gray-600 text-[16px] text-left">
+                    <p className="text-gray-600 text-[18px] text-left">
                       {benefit.description}
                     </p>
                   </div>
@@ -224,7 +224,7 @@ function MemberBenefits() {
                   </div>
                 </div>
               </div>
-              <p className="text-gray-600 text-sm text-left mt-4">
+              <p className="text-gray-600 text-sm text-left mt-4 text-[18px]">
                 {benefit.description}
               </p>
             </div>

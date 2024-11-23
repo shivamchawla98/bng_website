@@ -58,7 +58,7 @@ const SecuritySteps = () => {
             
             {/* Description Box */}
             <div className="bg-white shadow-lg min-h-[200px] rounded-b-lg p-4 w-full border border-primary">
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-600 text-[18px] leading-relaxed">
                 {step.description}
               </p>
             </div>

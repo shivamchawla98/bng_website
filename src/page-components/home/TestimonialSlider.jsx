@@ -72,7 +72,7 @@ const TestimonialSlider = () => {
       </div> */}
 
       {/* Content Container */}
-      <div className="relative mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full flex  items-center justify-center">
+      <div className="relative mx-auto px-4 sm:px-6 lg:px-8 py-14 w-full flex  items-center justify-center">
         {/* Title */}
 
         {/* Flex Container for Image and Slider */}
@@ -115,7 +115,7 @@ const TestimonialSlider = () => {
                 <div key={index} className="p-4">
                   <div className="bg-white shadow-lg rounded-xl p-6 max-w-[300px]">
                     <div className="space-y-6">
-                      <p className="text-gray-600 text-sm">
+                      <p className="text-gray-600 text-[18px]">
                         {testimonial.text}
                       </p>
                       <div className="flex items-center gap-4">
@@ -128,7 +128,7 @@ const TestimonialSlider = () => {
                           <h4 className="font-semibold text-gray-900">
                             {testimonial.name}
                           </h4>
-                          <p className="text-gray-600 text-sm">
+                          <p className="text-gray-600 text-[18px]">
                             {testimonial.email}
                           </p>
                         </div>

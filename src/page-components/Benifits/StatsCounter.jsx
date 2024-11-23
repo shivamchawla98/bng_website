@@ -43,7 +43,7 @@ const StatsCounter = () => {
   }, []);
 
   return (
-    <div className='bg-primaryBg py-12'>
+    <div className='bg-primaryBg '>
     <div className="w-full bg-primary p-8 ">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Members Stats */}

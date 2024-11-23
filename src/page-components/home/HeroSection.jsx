@@ -1,8 +1,12 @@
+"use client";
+
 import React from "react";
 import { Phone } from "lucide-react";
 import Image from "next/image";
 import bg from "@/app/images/bg.png";
+import { useRouter } from "next/navigation";
 const HeroSection = () => {
+  const router = useRouter()
   return (
     <div className="min-h-[59vh] relative">
       {/* Top-left Patch */}
@@ -37,13 +41,13 @@ const HeroSection = () => {
             <span className="text-primary"> forwarders </span>
             daily
           </h1>
-          <p className="text-gray-600 mb-8 text-[16px]">
+          <p className="text-gray-600 mb-8 text-[18px]">
             Experience the next generation of forwarder networks. Tired of
             investing in multiple networks with minimal returns? Discover a
             fresh approach to partnership here!
           </p>
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-            <button className="bg-primary w-max rounded-full text-white px-6 py-3 hover:bg-gradient-to-tr from-[#6853DB] to-[#6853DB] flex items-center">
+            <button      onClick={() => router.push("/become-a-member")}  className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-full text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent hover:to-transparent">
               Become a Member
               <svg
                 xmlns="http://www.w3.org/2000/svg"

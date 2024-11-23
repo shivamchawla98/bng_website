@@ -34,7 +34,7 @@ const newsData = [
 
 const News = () => {
   return (
-    <section className="py-12 md:min-h-[600px] bg-primaryBg relative">
+    <section className="py-14 md:min-h-[600px] bg-primaryBg relative">
       <div
         className="absolute top-0 left-8 w-[200px] h-[200px] rounded-full"
         style={{
@@ -71,7 +71,7 @@ const News = () => {
                 />
               </div>
               <div className="p-4">
-                <p className="text-gray-600 mb-4">{description}</p>
+                <p className="text-gray-600 mb-4 text-[18px]">{description}</p>
                 <a href={link} className="text-blue-500 hover:underline">
                   View More
                 </a>

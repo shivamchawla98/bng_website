@@ -1,8 +1,11 @@
+
+"use client"
 import React from "react";
 import Image from "next/image";
 import rightImg from "@/app/images/section2.png";
-
+import { useRouter } from "next/navigation";
 function AboutUs() {
+  const router = useRouter()
   return (
     <div className=" bg-secondryBg px-4 md:px-[112px]  flex flex-col md:flex-row items-center justify-center gap-16 ">
       <div className="md:w-[400px] relative">
@@ -15,7 +18,7 @@ function AboutUs() {
           className="rounded-lg w-100"
         />
       </div>
-      <div className="md:w-1/2 md:pr-10 mb-8 md:mb-0 md:ml-10 mt-10 md:mt-0 py-10 ">
+      <div className="md:w-1/2 md:pr-10 mb-8 md:mb-0 md:ml-10 mt-10 md:mt-0 py-14 ">
         <div className="relative">
           <h2 className="text-[40px] font-bold mb-4 text-[#27293B] relative z-10">
             About BNG
@@ -26,7 +29,7 @@ function AboutUs() {
             About BNG
           </h2>
         </div>
-        <p className="text-gray-600 mb-4">
+        <p className="text-gray-600 mb-4 text-[18px]">
           Built by a team with over 20 years of expertise in logistics and
           supply chain management, BNG Group has emerged as a resilient leader
           in both robust network solutions and B2B relationship-building.
@@ -34,7 +37,7 @@ function AboutUs() {
           challenges, we bring a wealth of operational experience and industry
           connections that position us as pioneers in logistics networking.
         </p>
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-600 mb-6 text-[18px]">
           BNG Logistics Network offers a powerful, secure, and fully digitized
           platform designed for seamless collaboration among logistics
           professionals. Following nearly three years of in-depth market
@@ -44,7 +47,7 @@ function AboutUs() {
           Data Banks—sourced and maintained by BNG Group—designed to support
           successful, data-driven connections across the globe.
         </p>
-        <button className="bg-primary text-white px-6 py-2 rounded-full hover:bg-[#6853DB] inline-flex items-center">
+        <button   onClick={() => router.push("/our-company")}  className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-full text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent hover:to-transparent" >
           Know more
           <svg
             xmlns="http://www.w3.org/2000/svg"
