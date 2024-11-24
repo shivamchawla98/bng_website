@@ -12,7 +12,7 @@ import TrustedPartnersVector from "@/app/images/home/TrustedPartners.svg";
 import PaymentProtectionVector from "@/app/images/home/PaymentProtection.svg";
 import PaymentMonitoringVector from "@/app/images/home/PaymentMonitoring.webp";
 import ClaimCenterVector from "@/app/images/home/ClaimCenter.svg";
-import FreightXchangeVector from "@/app/images/home/FreightXchange.svg";
+import FreightXchangeVector from "@/app/images/home/FreightXchange.png";
 import ship from "@/app/images/home/ship.png";
 
 function MemberBenefits() {
