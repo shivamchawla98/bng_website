@@ -2,7 +2,7 @@
 "use client"
 import React from "react";
 import Image from "next/image";
-import rightImg from "@/app/images/section2.png";
+import rightImg from "@/app/images/home/about-BNG-02.png";
 import { useRouter } from "next/navigation";
 function AboutUs() {
   const router = useRouter()

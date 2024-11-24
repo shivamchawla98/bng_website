@@ -154,8 +154,8 @@ function MemberBenefits() {
               <div
                 key={index}
                 className="flex flex-col p-4 justify-center align-middle">
-                <div className="top-0 w-[300px] justify-center flex flex-col items-center align-middle">
-                  <div className="w-40 h-40 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center">
+                <div className="top-0 w-[400px] justify-center flex flex-col items-center align-middle">
+                  <div className="w-40 h-44 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center">
                     <Image
                       src={benefit.image}
                       alt="Member Benefits"
@@ -169,7 +169,7 @@ function MemberBenefits() {
                     </div>
                   </div>
 
-                  <div class="flex items-center justify-center h-40">
+                  <div class="flex items-center justify-center h-44">
                     <p className="text-gray-600 text-[18px] text-left">
                       {benefit.description}
                     </p>
@@ -184,13 +184,13 @@ function MemberBenefits() {
               <div
                 key={index}
                 className="flex flex-col p-4 justify-center align-middle">
-                <div className="top-0 w-[300px] justify-center flex flex-col items-center align-middle">
-                  <div class="flex items-center justify-center h-40">
+                <div className="top-0 w-[400px] justify-center flex flex-col items-center align-middle">
+                  <div class="flex items-center justify-center h-44">
                     <p className="text-gray-600 text-[18px] text-left">
                       {benefit.description}
                     </p>
                   </div>
-                  <div className="w-40 h-40 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center">
+                  <div className="w-40 h-44 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center">
                     <Image
                       src={benefit.image}
                       alt="Member Benefits"
@@ -211,7 +211,7 @@ function MemberBenefits() {
 
         <div className="relative md:hidden md:h-[600px] top-10 w-max mx-auto flex flex-col justify-center items-center">
           {mobileBenefits.map((benefit, index) => (
-            <div key={index} className="w-[300px] flex flex-col items-center">
+            <div key={index} className="w-[400px] flex flex-col items-center">
               <div className="w-32 h-32 bg-primary rounded-full flex flex-col items-center justify-center">
                 <Image
                   src={handShake}

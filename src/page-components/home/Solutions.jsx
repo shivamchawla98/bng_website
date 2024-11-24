@@ -1,10 +1,10 @@
 import Image from "next/image";
-import grid1 from "@/app/images/grid1.png";
-import grid2 from "@/app/images/grid2.png";
-import grid3 from "@/app/images/grid3.png";
-import grid4 from "@/app/images/grid4.png";
-import grid5 from "@/app/images/grid5.png";
-import grid6 from "@/app/images/grid6.png";
+import grid1 from "@/app/images/home/Marketing-PR.jpg";
+import grid2 from "@/app/images/home/24-7-Support.jpg";
+import grid3 from "@/app/images/home/Annual-Meetings.jpg";
+import grid4 from "@/app/images/home/Trade-Directory.jpg";
+import grid5 from "@/app/images/home/Advanced-Tools.jpg";
+import grid6 from "@/app/images/home/Real-Time-Chat.jpg";
 
 const solutionsData = [
   {
