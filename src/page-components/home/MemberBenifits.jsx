@@ -210,14 +210,14 @@ function MemberBenefits() {
             <div 
               className="absolute"
               style={{
-                left: 'calc(50% - 100px)',
+                left: 'calc(50% - 130px)',
                 top: '-20px',
                 transform: `translateY(${scrollY}px)`,
                 transition: 'transform 0.1s ease-out',
                 zIndex: 1000
               }}
             >
-              <div className="w-[200px] h-[200px] relative">
+              <div className="w-[260px] h-[260px] relative">
                 <Image
                   src={ship}
                   alt="Ship"
