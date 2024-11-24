@@ -104,9 +104,9 @@ const Footer = () => {
         <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm sm:text-center text-gray-900">
-            © 2024{" "}
+            2024{" "}
             <a href="https://google.com/" className="hover:underline">
-              BNG™
+              BNG
             </a>
             . All Rights Reserved.
           </span>
@@ -138,10 +138,17 @@ const SocialLinks = () => (
   <div className="flex mt-4 sm:mt-0 gap-2">
     {socialMediaLinks.map((social, index) => (
       <a
-        key={index}
+        key={social.name}
         href={social.href}
-        className="text-gray-600 hover:text-gray-900 dark:hover:ms-5">
-        <Image src={social.image} alt={social.name} width={30} height={50} />
+        className="text-gray-600 hover:text-gray-900 transition-all duration-300 ease-in-out transform hover:scale-110"
+      >
+        <Image 
+          src={social.image} 
+          alt={social.name} 
+          width={30} 
+          height={50}
+          className="transition-transform duration-300 ease-in-out"
+        />
         <span className="sr-only">{social.name}</span>
       </a>
     ))}

@@ -1,12 +1,24 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Phone } from "lucide-react";
 import Image from "next/image";
-import bg from "@/app/images/home/hero-right-vector1.png";
+import bg from "@/app/images/home/Ellipse2.png";
 import { useRouter } from "next/navigation";
 const HeroSection = () => {
-  const router = useRouter()
+  const router = useRouter();
+  const [scrollY, setScrollY] = useState(0);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="min-h-[59vh] relative">
       {/* Top-left Patch */}
@@ -88,9 +100,18 @@ const HeroSection = () => {
             src={bg} // The imported image
             alt="Background Image"
             priority={true} // Optimizes loading for the hero image
+            style={{
+              transform: `translateX(${Math.min(scrollY * 0.2, 100)}px)`,
+              transition: 'transform 0.3s ease-out'
+            }}
           />
           {/* Info Cards */}
-          <div className="absolute bottom-10 left-0 bg-white p-3 rounded-lg shadow-md z-20">
+          <div className="absolute bottom-10 left-0 bg-white p-3 rounded-lg shadow-md z-20"
+            style={{
+              transform: `translateY(${Math.min(scrollY * 0.1, 20)}px) rotate(${Math.min(scrollY * 0.05, 5)}deg) scale(${1 + Math.min(scrollY * 0.001, 0.1)})`,
+              opacity: Math.max(1 - scrollY * 0.002, 0.7),
+              transition: 'all 0.3s ease-out'
+            }}>
             <div className="flex items-center space-x-2">
               <div className="bg-purple-100 p-2 rounded-full">
                 <svg
@@ -118,7 +139,12 @@ const HeroSection = () => {
               </span>
             </div>
           </div>
-          <div className="absolute bottom-10 right-0 bg-white p-3 rounded-lg shadow-md z-20">
+          <div className="absolute bottom-10 right-0 bg-white p-3 rounded-lg shadow-md z-20"
+            style={{
+              transform: `translateY(${Math.min(scrollY * 0.15, 25)}px) rotate(${Math.min(scrollY * -0.05, -5)}deg) scale(${1 + Math.min(scrollY * 0.001, 0.1)})`,
+              opacity: Math.max(1 - scrollY * 0.002, 0.7),
+              transition: 'all 0.3s ease-out'
+            }}>
             <div className="flex items-center space-x-2">
               <div className="bg-purple-100 p-2 rounded-full">
                 <svg
@@ -142,11 +168,16 @@ const HeroSection = () => {
                 </svg>
               </div>
               <span className="font-semibold text-[#27293B]">
-                215+ Ports and Airports
+                85% Active Members
               </span>
             </div>
           </div>
-          <div className="absolute top-10 left-0 bg-white p-3 rounded-lg shadow-md z-20">
+          <div className="absolute top-10 left-0 bg-white p-3 rounded-lg shadow-md z-20"
+            style={{
+              transform: `translateY(${Math.min(scrollY * 0.12, 22)}px) rotate(${Math.min(scrollY * -0.04, -4)}deg) scale(${1 + Math.min(scrollY * 0.001, 0.1)})`,
+              opacity: Math.max(1 - scrollY * 0.002, 0.7),
+              transition: 'all 0.3s ease-out'
+            }}>
             <div className="flex items-center space-x-2">
               <div className="bg-purple-100 p-2 rounded-full">
                 <svg
@@ -170,11 +201,16 @@ const HeroSection = () => {
                 </svg>
               </div>
               <span className="font-semibold text-[#27293B]">
-                215+ Ports and Airports
+                20+ Years of Experience
               </span>
             </div>
           </div>
-          <div className="absolute top-10 right-0 bg-white p-3 rounded-lg shadow-md z-20">
+          <div className="absolute top-10 right-0 bg-white p-3 rounded-lg shadow-md z-20"
+            style={{
+              transform: `translateY(${Math.min(scrollY * 0.13, 23)}px) rotate(${Math.min(scrollY * 0.04, 4)}deg) scale(${1 + Math.min(scrollY * 0.001, 0.1)})`,
+              opacity: Math.max(1 - scrollY * 0.002, 0.7),
+              transition: 'all 0.3s ease-out'
+            }}>
             <div className="flex items-center space-x-2">
               <div className="bg-purple-100 p-2 rounded-full">
                 <svg
@@ -198,7 +234,7 @@ const HeroSection = () => {
                 </svg>
               </div>
               <span className="font-semibold text-[#27293B]">
-                700+ countries
+                150+ Countries
               </span>
             </div>
           </div>

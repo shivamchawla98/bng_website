@@ -1,4 +1,6 @@
-import React from "react";
+'use client';
+
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import centeredImage from "@/app/images/memberBenifits.svg";
 import handShake from "@/app/images/handSHake.svg";
@@ -11,31 +13,50 @@ import PaymentProtectionVector from "@/app/images/home/PaymentProtection.svg";
 import PaymentMonitoringVector from "@/app/images/home/PaymentMonitoring.webp";
 import ClaimCenterVector from "@/app/images/home/ClaimCenter.svg";
 import FreightXchangeVector from "@/app/images/home/FreightXchange.svg";
+import ship from "@/app/images/home/ship.png";
 
 function MemberBenefits() {
+  const [scrollY, setScrollY] = useState(0);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (sectionRef.current) {
+        const rect = sectionRef.current.getBoundingClientRect();
+        const scrollPercent = (window.scrollY - rect.top - window.pageYOffset) / rect.height;
+        const scrollValue = Math.max(0, Math.min(1, scrollPercent)) * rect.height;
+        setScrollY(scrollValue);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial calculation
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const benefits = [
     {
       title: "Members Area",
       description:
-        "An intuitive, user-friendly member portal designed to streamline networking, providing a centralized space for all your business connections and collaboration needs.",
+        "The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment",
       image: MembersAreaVector,
     },
     {
       title: "Global Reach",
       description:
-        "Connect with reliable partners worldwide and access a growing community that meets all your logistics and supply chain requirements.",
+        "A state-of-the-art system that automatically tracks receivables and payables, keeping all transactions organized and up-to-date.",
       image: GlobalReachVector,
     },
     {
       title: "Business Xchange",
       description:
-        "Access the Business Center, a dedicated area for finding active business leads and sharing opportunities directly with clients in your network.",
+        "A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts.",
       image: BusinessXchangeVector,
     },
     {
       title: "Trusted Partners",
       description:
-        "Membership is granted exclusively to companies with solid reputations, verified through a three-year track record and two business references.",
+        "Showcase your freight rates and services to the global trade community via BNG Logistics & B2B Portals, boosting your visibility and increasing business opportunities.",
       image: TrustedPartnersVector,
     },
   ];
@@ -44,25 +65,25 @@ function MemberBenefits() {
     {
       title: "Payment Protection",
       description:
-        "The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment",
+        "An intuitive, user-friendly member portal designed to streamline networking, providing a centralized space for all your business connections and collaboration needs.",
       image: PaymentProtectionVector,
     },
     {
       title: "Payment Monitoring",
       description:
-        "A state-of-the-art system that automatically tracks receivables and payables, keeping all transactions organized and up-to-date.",
+        "Connect with reliable partners worldwide and access a growing community that meets all your logistics and supply chain requirements.",
       image: PaymentMonitoringVector,
     },
     {
       title: "Claim Center",
       description:
-        "A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts.",
+        "Access the Business Center, a dedicated area for finding active business leads and sharing opportunities directly with clients in your network.",
       image: ClaimCenterVector,
     },
     {
       title: "Freight Xchange",
       description:
-        "Showcase your freight rates and services to the global trade community via BNG Logistics & B2B Portals, boosting your visibility and increasing business opportunities.",
+        "Membership is granted exclusively to companies with solid reputations, verified through a three-year track record and two business references.",
       image: FreightXchangeVector,
     },
   ];
@@ -134,7 +155,7 @@ function MemberBenefits() {
           zIndex: 1,
           filter: "blur(60.8px)",
         }}></div>
-      <div className="flex flex-col justify-center w-[100%] px-4 overflow-x-hidden py-14">
+      <div ref={sectionRef} className="flex flex-col justify-center w-[100%] px-4 overflow-x-hidden py-14">
         {/* <h2 className="text-[55px] text-[#27293B] font-bold text-center mb-12">
           Member Benefits
         </h2> */}
@@ -155,7 +176,7 @@ function MemberBenefits() {
                 key={index}
                 className="flex flex-col p-4 justify-center align-middle">
                 <div className="top-0 w-[400px] justify-center flex flex-col items-center align-middle">
-                  <div className="w-40 h-44 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center">
+                  <div className="w-44 h-44 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center">
                     <Image
                       src={benefit.image}
                       alt="Member Benefits"
@@ -178,7 +199,35 @@ function MemberBenefits() {
               </div>
             ))}
           </div>
-          <div className="border-[0.8px] border-gray-600"></div>
+          <div className="relative" style={{ minHeight: '800px' }}>
+            {/* Dotted Line */}
+            <div 
+              className="border-[0.8px] border-dotted border-gray-600 absolute left-1/2 -translate-x-1/2"
+              style={{ height: '100%', top: '0', bottom: '0' }}
+            />
+            
+            {/* Ship Container */}
+            <div 
+              className="absolute"
+              style={{
+                left: 'calc(50% - 100px)',
+                top: '-20px',
+                transform: `translateY(${scrollY}px)`,
+                transition: 'transform 0.1s ease-out',
+                zIndex: 1000
+              }}
+            >
+              <div className="w-[200px] h-[200px] relative">
+                <Image
+                  src={ship}
+                  alt="Ship"
+                  fill
+                  style={{ objectFit: 'contain' }}
+                  priority
+                />
+              </div>
+            </div>
+          </div>
           <div className="h-max flex flex-col justify-center align-middle">
             {benefitsTwo?.map((benefit, index) => (
               <div
@@ -190,7 +239,7 @@ function MemberBenefits() {
                       {benefit.description}
                     </p>
                   </div>
-                  <div className="w-40 h-44 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center">
+                  <div className="w-44 h-44 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center">
                     <Image
                       src={benefit.image}
                       alt="Member Benefits"
