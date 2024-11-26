@@ -69,7 +69,7 @@ const PricingCard = ({ tier, features, price, icon: Icon, isPopular }) => (
     </div>
 
     <button
-      className={`mt-8 w-full py-3 px-4 rounded-xl font-medium transition-colors
+      className={`mt-8 w-full py-3 px-4 rounded-lg font-medium transition-colors
       ${
         isPopular
           ? "bg-primary text-white hover:bg-black"

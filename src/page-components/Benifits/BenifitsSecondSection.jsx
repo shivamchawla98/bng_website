@@ -57,7 +57,7 @@ function BenifitsSecondSection() {
               alt="About Image 1"
               className="rounded-sm  object-cover md:h-[450px] w-full mt-6 "
             />
-            <button  className=" mt-10 w-max group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-full text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent hover:to-transparent">
+            <button  className=" mt-10 w-max group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent hover:to-transparent">
               Find out more
               <svg
                 xmlns="http://www.w3.org/2000/svg"

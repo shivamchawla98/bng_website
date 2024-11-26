@@ -176,15 +176,15 @@ function MemberBenefits() {
                 key={index}
                 className="flex flex-col p-4 justify-center align-middle">
                 <div className="top-0 w-[400px] justify-center flex flex-col items-center align-middle">
-                  <div className="w-44 h-44 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center">
+                  <div className="w-44 h-44 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer">
                     <Image
                       src={benefit.image}
                       alt="Member Benefits"
                       height={50}
-                      className="object-contain md:block hidden relative"
+                      className="object-contain md:block hidden relative transition-transform duration-300 group-hover:scale-110"
                     />
-                    <div className="text-white text-center mt-2">
-                      <div className="font-semibold text-[14px]">
+                    <div className="text-white text-center mt-2 transition-all duration-300 group-hover:translate-y-1">
+                      <div className="font-semibold text-[14px] group-hover:text-opacity-90">
                         {benefit.title}
                       </div>
                     </div>
@@ -239,15 +239,15 @@ function MemberBenefits() {
                       {benefit.description}
                     </p>
                   </div>
-                  <div className="w-44 h-44 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center">
+                  <div className="w-44 h-44 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer">
                     <Image
                       src={benefit.image}
                       alt="Member Benefits"
                       height={50}
-                      className="object-contain md:block hidden relative"
+                      className="object-contain md:block hidden relative transition-transform duration-300 group-hover:scale-110"
                     />
-                    <div className="text-white text-center mt-2">
-                      <div className="font-semibold text-[14px]">
+                    <div className="text-white text-center mt-2 transition-all duration-300 group-hover:translate-y-1">
+                      <div className="font-semibold text-[14px] group-hover:text-opacity-90">
                         {benefit.title}
                       </div>
                     </div>

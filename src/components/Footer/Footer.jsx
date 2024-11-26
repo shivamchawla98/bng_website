@@ -31,7 +31,7 @@ const Footer = () => {
               <div className="mt-6 border-b-[0.9px] w-max bg-white rounded-full">
                 <input
                   type="email"
-                  className="rounded-full p-2 bg-white border-primary"
+                  className="rounded-lg p-2 bg-white border-primary"
                   placeholder="Enter your email"
                 />
                 <button className=" p-2  py-[12px] ml-2 bg-primary border-white rounded-full">

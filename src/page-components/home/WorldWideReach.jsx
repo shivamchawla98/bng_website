@@ -40,7 +40,7 @@ function WorldWideReach() {
         <Image src={Map} objectFit="contain" width={1000} height={500} />
       </div>
       <form className="max-w-2xl mx-auto">
-  <div className="flex md:w-[600px] shadow-md rounded-full overflow-hidden border border-gray-300">
+  <div className="flex md:w-[600px] shadow-md rounded-sm overflow-hidden border border-gray-300">
     {/* Dropdown Button */}
     <button
       id="dropdown-button"

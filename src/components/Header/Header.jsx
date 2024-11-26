@@ -29,9 +29,9 @@ function Header() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-4 items-center">
-          <Link href="/" className="font-medium hover:text-primary text-[18px]">
+          {/* <Link href="/" className="font-medium hover:text-primary text-[18px]">
             Home
-          </Link>
+          </Link> */}
           <Link href="/benifits" className="font-medium hover:text-primary text-[18px]">
             Benefits
           </Link>
@@ -55,9 +55,22 @@ function Header() {
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}>
             <button
-              className="font-medium hover:text-primary text-[18px] focus:outline-none"
+              className="font-medium hover:text-primary text-[18px] focus:outline-none flex items-center gap-1"
               onClick={toggleDropdown}>
               Specialties
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className={`h-4 w-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
             </button>
             {isDropdownOpen && (
               <div className="absolute top-full left-0 bg-white shadow-lg rounded-lg p-4 space-y-2 w-48 z-50">
@@ -78,13 +91,13 @@ function Header() {
 
         {/* Desktop Buttons */}
         <div className="flex align-items-center">
-          <button className="text-primary rounded-full font-bold px-6 py-3 cursor-pointer flex items-center hover:text-primary text-[18px] ">
+          <button className="text-primary rounded-lg font-bold px-6 py-3 cursor-pointer flex items-center hover:text-primary text-[18px] ">
             Login
           </button>
           <div className="hidden md:flex space-x-4">
             <button
               onClick={() => router.push("/become-a-member")}
-              className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-full text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent hover:to-transparent">
+              className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent hover:to-transparent">
               Become a Member
             </button>
           </div>
@@ -136,9 +149,22 @@ function Header() {
           {/* Specialties Dropdown for Mobile */}
           <div>
             <button
-              className="text-[#27293B] hover:text-primary text-[18px] py-2"
+              className="text-[#27293B] hover:text-primary text-[18px] py-2 flex items-center gap-1"
               onClick={toggleDropdown}>
               Specialties
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className={`h-4 w-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
             </button>
             {isDropdownOpen && (
               <div className="pl-4 space-y-2">
@@ -157,7 +183,7 @@ function Header() {
           </div>
 
           <div className="flex flex-col space-y-3 pt-4 border-t">
-            <button className="bg-primary rounded-full text-white px-6 py-3 hover:bg-gradient-to-tr from-[#6853DB] to-[#6853DB] flex items-center justify-center hover:to-transparent transition ease-in-out delay-150 bg-primary hover:-translate-y-1 hover:scale-110">
+            <button className="bg-primary rounded-lg text-white px-6 py-3 hover:bg-gradient-to-tr from-[#6853DB] to-[#6853DB] flex items-center justify-center hover:to-transparent transition ease-in-out delay-150 bg-primary hover:-translate-y-1 hover:scale-110">
               Become a Member
             </button>
           </div>

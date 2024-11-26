@@ -10,7 +10,7 @@ export const QuoteForm = () => {
           placeholder="Enter your email / phone no."
           className="w-full p-3  border-b-2 border-b-gray-400  text-[#27293B] focus:outline-none "
         />
-        <button className="w-max float-left bg-primary rounded-full text-white py-3 px-6 transition-colors">
+        <button className="w-max float-left bg-primary rounded-lg text-white py-3 px-6 transition-colors">
           Get a quote
         </button>
       </form>

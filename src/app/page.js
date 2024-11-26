@@ -17,8 +17,8 @@ return(
   <TestimonialSlider />
   <WorldWideReach />
   <Solutions />
-  <News />
   <Conference />
+  <News />
   </div>
 
   

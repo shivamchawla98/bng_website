@@ -18,9 +18,9 @@ function page() {
       <StatsCounter/>
       <OurCoreValues />
       <WhyUs />
-      <BenifitsThirdSection />
+      {/* <BenifitsThirdSection />
 
-      <MemberBenefits/>
+      <MemberBenefits/> */}
     
  
       <SplitScreenCTA/>
