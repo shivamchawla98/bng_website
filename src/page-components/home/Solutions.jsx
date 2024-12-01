@@ -5,8 +5,8 @@ import grid3 from "@/app/images/home/Annual-Meetings.jpg";
 import grid4 from "@/app/images/home/Trade-Directory.jpg";
 import grid5 from "@/app/images/home/Advanced-Tools.jpg";
 import grid6 from "@/app/images/home/Real-Time-Chat.jpg";
-import grid7 from "@/app/images/home/Live-Talk.jpg";
 import grid8 from "@/app/images/home/Industry-Surveys.jpg";
+import grid7 from "@/app/images/home/Live-Talk.jpg";
 
 import logo1 from "@/app/images/icon1.svg";
 import logo2 from "@/app/images/icon1.svg";
