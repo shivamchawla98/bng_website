@@ -5,6 +5,20 @@ import grid3 from "@/app/images/home/Annual-Meetings.jpg";
 import grid4 from "@/app/images/home/Trade-Directory.jpg";
 import grid5 from "@/app/images/home/Advanced-Tools.jpg";
 import grid6 from "@/app/images/home/Real-Time-Chat.jpg";
+import grid7 from "@/app/images/home/Live-Talk.jpg";
+import grid8 from "@/app/images/home/Industry-Surveys.jpg";
+
+import logo1 from "@/app/images/icon1.svg";
+import logo2 from "@/app/images/icon1.svg";
+import logo3 from "@/app/images/icon1.svg";
+import logo4 from "@/app/images/icon1.svg";
+import logo5 from "@/app/images/icon1.svg";
+import logo6 from "@/app/images/icon1.svg";
+import logo7 from "@/app/images/icon1.svg";
+import logo8 from "@/app/images/icon1.svg";
+
+import ship from "@/app/images/grid1.png"; // Using the ship image from your structure
+
 
 const solutionsData = [
   {
@@ -16,6 +30,7 @@ const solutionsData = [
       "Expand your business visibility not only within the network but also on a global B2B portal—all included at no extra cost..",
 
     heightClass: "h-56 lg:h-64 xl:h-auto",
+    logo: logo1,
   },
   {
     id: 2,
@@ -26,6 +41,7 @@ const solutionsData = [
       "Our dedicated support team is available 24/7, 365 days a year. Reach out anytime—by call, message, or email—wherever you are in the world.",
 
     heightClass: "h-48 lg:h-56",
+    logo: logo2,
   },
   {
     id: 3,
@@ -36,6 +52,7 @@ const solutionsData = [
       "Attend our grand symposium to meet partners and clients in person, fostering strong connections and increasing your visibility within the industry.",
     description2: "Efficient land transportation solutions.",
     heightClass: "h-64 lg:h-72",
+    logo: logo3,
   },
   {
     id: 4,
@@ -46,6 +63,7 @@ const solutionsData = [
       "Access a fully digital directory of global exporters, importers, and logistics professionals, connecting you instantly with key players worldwide.",
     description2: "Cost-effective and reliable rail transport.",
     heightClass: "h-64 lg:h-72",
+    logo: logo4,
   },
   {
     id: 5,
@@ -56,6 +74,7 @@ const solutionsData = [
       "Our technology-centered platform provides essential tools in one place, maximizing the benefits of your membership.",
     description2: "Secure storage facilities and management.",
     heightClass: "h-80 lg:h-96",
+    logo: logo5,
   },
   {
     id: 6,
@@ -66,40 +85,45 @@ const solutionsData = [
       "Enjoy seamless, real-time chat functionality that enables fast, synchronized communication, enhancing networking efficiency.",
     description2: "Tailored logistics solutions for your needs.",
     heightClass: "h-48 lg:h-56",
+    logo: logo6,
   },
   {
     id: 7,
-    src: grid4,
+    src: grid7,
     alt: "Solution 4",
     heading: "Live Talk",
     description1:
       "Engage in virtual meetings on a platform that connects you to thousands of industry professionals worldwide, 24/7. Network, collaborate, and grow your business with ease.",
 
     heightClass: "h-64 lg:h-72",
+    logo: logo7,
   },
   {
     id: 8,
-    src: grid5,
+    src: grid8,
     alt: "Solution 5",
     heading: "Industry Surveys",
     description1:
       "Receive valuable insights from network surveys that keep you informed about market trends and industry benchmarks, helping you stay competitive and informed.",
     description2: "Secure storage facilities and management.",
     heightClass: "h-80 lg:h-96",
+    logo: logo8,
   },
 ];
 
 const Solutions = () => {
   return (
-    <section className="py-14 bg-primaryBg relative">
-      <div
-        className="absolute top-0 right-8 w-40 md:w-[200px] h-[200px] rounded-full"
-        style={{
-          background: "linear-gradient(180deg, #6853DB 10%, #6853DB 90%)",
-
-          filter: "blur(100.8px)",
-        }}></div>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-14 relative overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={ship}
+          alt="Ship background"
+          layout="fill"
+          objectFit="cover"
+          className="opacity-30"
+        />
+      </div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="relative">
           <h2 className="text-[40px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
             Why Us?
@@ -112,45 +136,40 @@ const Solutions = () => {
         </div>
 
         {/* Grid with 3 columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {solutionsData.map(
-            ({
-              id,
-              src,
-              alt,
-              heading,
-              description1,
-              description2,
-              heightClass,
-            }) => (
-              <div
-                key={id}
-                className={`grid ${
-                  heading === "Warehouse Solutions"
-                    ? "relative bottom-12  "
-                    : ""
-                }`} // Apply relative and bottom margin only to Warehouse Solutions
-              >
-                <div className={`relative ${heightClass} group hover:scale-105 transition-transform duration-300 ease-in-out hover:shadow-lg`}
-                >
-                  <Image
-                    src={src}
-                    className="rounded-lg w-full h-full object-cover"
-                    alt={alt}
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent rounded-lg">
-                    <div className="absolute bottom-4 left-4 text-white">
-                      <h3 className="text-xl font-bold">{heading}</h3>
-                      <p className="text-[18px]">{description1}</p>
-                      {/* <p className="text-sm">{description2}</p> */}
-                    </div>
-                  </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {solutionsData.map(({ id, src, alt, heading, description1, logo }) => (
+            <div
+              key={id}
+              className="relative aspect-square overflow-hidden group rounded-lg shadow-lg"
+            >
+              <Image
+                src={src}
+                alt={alt}
+                layout="fill"
+                objectFit="cover"
+                className="transition-transform duration-300 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+              <div className="absolute inset-0 flex flex-col justify-between p-6 text-white">
+                <Image
+                  src={logo}
+                  alt="Logo"
+                  width={40}
+                  height={40}
+                  className="self-start"
+                />
+                <div className="transform transition-all duration-300 translate-y-8 group-hover:translate-y-0">
+                  <h3 className="text-xl font-bold mb-2">
+                    {heading}
+                  </h3>
+                  <p className="text-sm max-h-0 group-hover:max-h-40 overflow-hidden transition-all duration-300">
+                    {description1}
+                  </p>
                 </div>
               </div>
-            )
-          )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
