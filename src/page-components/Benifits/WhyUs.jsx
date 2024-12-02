@@ -1,10 +1,12 @@
 import Image from "next/image";
-import grid1 from "@/app/images/grid1.png";
-import grid2 from "@/app/images/grid2.png";
-import grid3 from "@/app/images/grid3.png";
-import grid4 from "@/app/images/grid4.png";
-import grid5 from "@/app/images/grid5.png";
-import grid6 from "@/app/images/grid6.png";
+import grid1 from "@/app/images/benifits/Marketing-PR-detail.jpg";
+import grid2 from "@/app/images/benifits/24-7-Support-detail.jpg";
+import grid3 from "@/app/images/benifits/Annual-Meetings-detail.jpg";
+import grid4 from "@/app/images/benifits/Trade-directory-detail.jpg";
+import grid5 from "@/app/images/benifits/Advanced-Tools-detail.jpg";
+import grid6 from "@/app/images/benifits/Real-timechat-detail.jpg";
+import grid7 from "@/app/images/benifits/Live-Talk-detail.png";
+import grid8 from "@/app/images/benifits/Industry-Surveys-detail.jpg";
 import about1 from "@/app/images/abou1.png";
 import about2 from "@/app/images/about2.png";
 import { useRef } from "react";
@@ -299,7 +301,7 @@ const WhyUs = () => {
       {/* Dynamic Content */}
       <section className=" bg-secondryBg ">
         {solutionsData2.map(
-          ({ heading, description1, description2, description3 }, index) => (
+          ({ heading, description1, description2, description3, src }, index) => (
             <section key={index} className="bg-secondryBg  py-12">
               <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
                 {/* First Row */}
@@ -314,7 +316,7 @@ const WhyUs = () => {
                       } bottom-[-2px] h-[350px] w-[400px] border-primary border-2 rounded-md`}></div>
                     <Image
                       className="rounded-xl object-cover z-10"
-                      src={index % 2 === 0 ? about2 : about1}
+                      src={src}
                       height={350}
                       alt={`About Us Image ${index + 2}`}
                     />

@@ -1,13 +1,13 @@
 import React, { useRef } from "react";
 import { FeatureCard } from "../OurCompany/FeatureCard";
-import MembersAreaImage from "@/app/images/benifits/Members-Area.jpg";
-import GlobalReachImage from "@/app/images/benifits/Global-Reach.JPG";
-import BusinessXchangeImage from "@/app/images/benifits/Business-Xchange.jpg";
-import FreightXchangeImage from "@/app/images/benifits/Freight-Xchange.png";
-import TrustedPartnersImage from "@/app/images/benifits/Trusted-Partners.jpg";
-import PaymentProtectionImage from "@/app/images/benifits/Payment-Protection.jpg";
-import PaymentMonitoringImage from "@/app/images/benifits/Payment-Monitoring.jpg";
-import ClaimCenterImage from "@/app/images/benifits/Claim-Center.jpg";
+import MembersAreaImage from "@/app/images/benifits/Members-Area-detail.jpg";
+import GlobalReachImage from "@/app/images/benifits/Global-Reach-detail.JPG";
+import BusinessXchangeImage from "@/app/images/benifits/Business-Xchange-detail.jpg";
+import FreightXchangeImage from "@/app/images/benifits/Freight-Xchange-detail.jpg";
+import TrustedPartnersImage from "@/app/images/benifits/Trusted-Partners-detail.jpg";
+import PaymentProtectionImage from "@/app/images/benifits/Payment-Protection-detail.jpg";
+import PaymentMonitoringImage from "@/app/images/benifits/Payment-Monitoring-detail.jpg";
+import ClaimCenterImage from "@/app/images/benifits/Claim-Center-detail.jpg";
 import Image from "next/image";
 
 function OurCoreValues() {

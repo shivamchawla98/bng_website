@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Conferance from "@/app/images/Split.jpeg"
+import FXVisit from "@/app/images/benifits/FX-Visit-card.png";
+import BXVisit from "@/app/images/benifits/BX-Visit-card.png";
 const SplitScreenCTA = () => {
   return (
     <div className="grid md:grid-cols-2 h-[600px]  bg-primaryBg">
@@ -9,7 +10,7 @@ const SplitScreenCTA = () => {
       <Link href="/conference" className="relative group overflow-hidden">
         <div className="absolute inset-0 bg-blue-900/60 group-hover:bg-blue-900/70 transition-colors z-10" />
         <Image
-          src={Conferance}
+          src={FXVisit}
           alt="Conference room setup"
           fill
           className="object-cover transform group-hover:scale-105 transition-transform duration-500"
@@ -43,7 +44,7 @@ const SplitScreenCTA = () => {
       <Link href="/member-portal" className="relative group overflow-hidden">
         <div className="absolute inset-0 bg-red-900/60 group-hover:bg-red-900/70 transition-colors z-10" />
         <Image
-      src={Conferance}
+      src={BXVisit}
           alt="Logistics truck"
           fill
           className="object-cover transform group-hover:scale-105 transition-transform duration-500"
