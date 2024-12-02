@@ -59,12 +59,12 @@ const HeroSection = () => {
             fresh approach to partnership here!
           </p>
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-            <button      onClick={() => router.push("/become-a-member")}  className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent hover:to-transparent transition ease-in-out delay-150 bg-primary hover:-translate-y-1 hover:scale-110"
+            <button      onClick={() => router.push("/become-a-member")}  className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary transition-all duration-300 group transform hover:translate-x-2"
             >
               Become a Member
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 ml-2"
+                className="h-5 w-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-2"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor">

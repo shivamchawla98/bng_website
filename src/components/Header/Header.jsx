@@ -97,7 +97,7 @@ function Header() {
           <div className="hidden md:flex space-x-4">
             <button
               onClick={() => router.push("/become-a-member")}
-              className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent hover:to-transparent">
+              className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary transition-all duration-300 transform hover:translate-x-2">
               Become a Member
             </button>
           </div>
@@ -183,7 +183,7 @@ function Header() {
           </div>
 
           <div className="flex flex-col space-y-3 pt-4 border-t">
-            <button className="bg-primary rounded-lg text-white px-6 py-3 hover:bg-gradient-to-tr from-[#6853DB] to-[#6853DB] flex items-center justify-center hover:to-transparent transition ease-in-out delay-150 bg-primary hover:-translate-y-1 hover:scale-110">
+            <button className="bg-primary rounded-lg text-white px-6 py-3 hover:bg-gradient-to-tr from-[#6853DB] to-[#6853DB] flex items-center justify-center hover:to-transparent transition-all duration-300 group hover:translate-x-2">
               Become a Member
             </button>
           </div>

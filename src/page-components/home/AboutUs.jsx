@@ -2,7 +2,7 @@
 "use client"
 import React from "react";
 import Image from "next/image";
-import rightImg from "@/app/images/home/about-BNG-02.png";
+import rightImg from "@/app/images/home/Our-Story.png";
 import { useRouter } from "next/navigation";
 function AboutUs() {
   const router = useRouter()
@@ -47,11 +47,11 @@ function AboutUs() {
           Data Banks—sourced and maintained by BNG Group—designed to support
           successful, data-driven connections across the globe.
         </p>
-        <button   onClick={() => router.push("/our-company")}  className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent hover:to-transparent hover:to-transparent transition ease-in-out delay-150 bg-primary hover:-translate-y-1 hover:scale-110" >
+        <button   onClick={() => router.push("/our-company")}  className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent transition-all duraton-300 bg-primary transform hover:translate-x-2" >
           Know more
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 ml-2"
+            className="h-5 w-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-2"
             viewBox="0 0 20 20"
             fill="currentColor">
             <path

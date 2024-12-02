@@ -1,7 +1,13 @@
 import React, { useRef } from "react";
 import { FeatureCard } from "../OurCompany/FeatureCard";
-import about1 from "@/app/images/abou1.png";
-import about2 from "@/app/images/about2.png";
+import MembersAreaImage from "@/app/images/benifits/Members-Area.jpg";
+import GlobalReachImage from "@/app/images/benifits/Global-Reach.JPG";
+import BusinessXchangeImage from "@/app/images/benifits/Business-Xchange.jpg";
+import FreightXchangeImage from "@/app/images/benifits/Freight-Xchange.png";
+import TrustedPartnersImage from "@/app/images/benifits/Trusted-Partners.jpg";
+import PaymentProtectionImage from "@/app/images/benifits/Payment-Protection.jpg";
+import PaymentMonitoringImage from "@/app/images/benifits/Payment-Monitoring.jpg";
+import ClaimCenterImage from "@/app/images/benifits/Claim-Center.jpg";
 import Image from "next/image";
 
 function OurCoreValues() {
@@ -359,43 +365,51 @@ function OurCoreValues() {
           ref: membersAreaRef,
           content: membersAreaContent,
           contentTwo: membersAreaContentTwo,
+          img: MembersAreaImage,
         },
         {
           ref: globalReachRef,
           content: globalReachContent,
           contentTwo: globalReachContentTwo,
+          img: GlobalReachImage,
         },
         {
           ref: businessXchangeRef,
           content: businessXchangeContent,
           contentTwo: businessXchangeContentTwo,
+          img: BusinessXchangeImage,
         },
         {
           ref: freightXchangeRef,
           content: freightXchangeContent,
           contentTwo: freightXchangeContentTwo,
+          img:  FreightXchangeImage,
         },
         {
           ref: trustedPartnersRef,
           content: trustedPartnersContent,
           contentTwo: trustedPartnersContentTwo,
+          img: TrustedPartnersImage,
         },
         {
           ref: paymentProtectionRef,
           content: paymentProtectionContent,
           contentTwo: paymentProtectionContentTwo,
+          img: PaymentProtectionImage,
         },
         {
           ref: paymentMonitoringRef,
           content: paymentMonitoringContent,
           contentTwo: paymentMonitoringContentTwo,
+          img: PaymentMonitoringImage,
         },
         {
           ref: claimCenterRef,
           content: claimCenterContent,
           contentTwo: claimCenterContentTwo,
+          img: ClaimCenterImage,
         },
-      ].map(({ ref, content, contentTwo }, index) => (
+      ].map(({ ref, content, contentTwo, img }, index) => (
         <section className="bg-primaryBg " key={index}>
           <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
             {/* First Row */}
@@ -410,7 +424,7 @@ function OurCoreValues() {
                   }  h-[350px] w-[400px] border-primary border-2 rounded-md`}></div>
                 <Image
                   className="rounded-xl object-cover z-10"
-                  src={index % 2 === 0 ? about1 : about2}
+                  src={img}
                   height={350}
                   alt={`About Us Image ${index + 1}`}
                 />

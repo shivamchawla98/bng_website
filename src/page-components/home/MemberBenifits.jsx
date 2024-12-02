@@ -38,80 +38,56 @@ function MemberBenefits() {
     {
       title: "Members Area",
       description:
-        "The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment",
+        "Membership is granted exclusively to companies with solid reputations, verified through a three-year track record and two business references.",
       image: MembersAreaVector,
-    },
-    {
-      title: "Global Reach",
-      description:
-        "A state-of-the-art system that automatically tracks receivables and payables, keeping all transactions organized and up-to-date.",
-      image: GlobalReachVector,
     },
     {
       title: "Business Xchange",
       description:
-        "A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts.",
+        "Showcase your freight rates and services to the global trade community via BNG Logistics & B2B Portals, boosting your visibility and increasing business opportunities.",
       image: BusinessXchangeVector,
     },
     {
       title: "Trusted Partners",
       description:
-        "Showcase your freight rates and services to the global trade community via BNG Logistics & B2B Portals, boosting your visibility and increasing business opportunities.",
+        "The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment",
       image: TrustedPartnersVector,
+    },
+    {
+      title: "Payment Monitoring",
+      description:
+        "A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts.",
+      image: PaymentMonitoringVector,
     },
   ];
 
   const benefitsTwo = [
     {
-      title: "Payment Protection",
+      title: "Global Reach",
       description:
         "An intuitive, user-friendly member portal designed to streamline networking, providing a centralized space for all your business connections and collaboration needs.",
-      image: PaymentProtectionVector,
-    },
-    {
-      title: "Payment Monitoring",
-      description:
-        "Connect with reliable partners worldwide and access a growing community that meets all your logistics and supply chain requirements.",
-      image: PaymentMonitoringVector,
-    },
-    {
-      title: "Claim Center",
-      description:
-        "Access the Business Center, a dedicated area for finding active business leads and sharing opportunities directly with clients in your network.",
-      image: ClaimCenterVector,
+      image: GlobalReachVector,
     },
     {
       title: "Freight Xchange",
       description:
-        "Membership is granted exclusively to companies with solid reputations, verified through a three-year track record and two business references.",
+        "Access the Business Center, a dedicated area for finding active business leads and sharing opportunities directly with clients in your network.",
       image: FreightXchangeVector,
-    },
-  ];
-  const mobileBenefits = [
-    {
-      title: "Trusted Partners",
-      description:
-        "Membership is granted exclusively to companies with solid reputations, verified through a three-year track record and two business references.",
-      image: TrustedPartnersVector,
     },
     {
       title: "Payment Protection",
       description:
-        "The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment.",
+        "Connect with reliable partners worldwide and access a growing community that meets all your logistics and supply chain requirements.",
       image: PaymentProtectionVector,
-    },
-    {
-      title: "Payment Monitoring",
-      description:
-        "A state-of-the-art system that automatically tracks receivables and payables, keeping all transactions organized and up-to-date.",
-      image: PaymentMonitoringVector,
     },
     {
       title: "Claim Center",
       description:
-        "A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts.",
+        "A state-of-the-art system that automatically tracks receivables and payables, keeping all transactions organized and up-to-date.",
       image: ClaimCenterVector,
     },
+  ];
+  const mobileBenefits = [
     {
       title: "Members Area",
       description:
@@ -135,6 +111,30 @@ function MemberBenefits() {
       description:
         "Showcase your freight rates and services to the global trade community via BNG Logistics & B2B Portals, boosting your visibility and increasing business opportunities.",
       image: FreightXchangeVector,
+    },
+    {
+      title: "Trusted Partners",
+      description:
+        "Membership is granted exclusively to companies with solid reputations, verified through a three-year track record and two business references.",
+      image: TrustedPartnersVector,
+    },
+    {
+      title: "Payment Protection",
+      description:
+        "The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment.",
+      image: PaymentProtectionVector,
+    },
+    {
+      title: "Payment Monitoring",
+      description:
+        "A state-of-the-art system that automatically tracks receivables and payables, keeping all transactions organized and up-to-date.",
+      image: PaymentMonitoringVector,
+    },
+    {
+      title: "Claim Center",
+      description:
+        "A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts.",
+      image: ClaimCenterVector,
     },
   ];
 
