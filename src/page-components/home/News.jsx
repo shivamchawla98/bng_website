@@ -1,7 +1,7 @@
 import Image from "next/image";
-import newsImg1 from "@/app/images/News.png";
-import newsImg2 from "@/app/images/News.png";
-import newsImg3 from "@/app/images/News.png";
+import newsImg1 from "@/app/images/home/News-The-Future-of-Logistics.png";
+import newsImg2 from "@/app/images/home/News-BNG-Welcomes-100-New-Members-In-Record-Time.png";
+import newsImg3 from "@/app/images/home/News-Global-Freight-Trends.png";
 
 const newsData = [
   {
