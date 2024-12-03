@@ -13,7 +13,7 @@ import PaymentProtectionVector from "@/app/images/home/PaymentProtection.svg";
 import PaymentMonitoringVector from "@/app/images/home/PaymentMonitoring.webp";
 import ClaimCenterVector from "@/app/images/home/ClaimCenter.svg";
 import FreightXchangeVector from "@/app/images/home/FreightXchange.png";
-import ship from "@/app/images/home/ship.png";
+import ship from "@/app/images/home/Benifits-Blue-Ship.png";
 
 function MemberBenefits() {
   const [scrollY, setScrollY] = useState(0);
@@ -202,7 +202,7 @@ function MemberBenefits() {
           <div className="relative" style={{ minHeight: '800px' }}>
             {/* Dotted Line */}
             <div 
-              className="border-[0.8px] border-dotted border-gray-600 absolute left-1/2 -translate-x-1/2"
+              className="border-[2.5px] border-dotted  border-gray-600 absolute left-1/2 -translate-x-1/2"
               style={{ height: '100%', top: '0', bottom: '0' }}
             />
             

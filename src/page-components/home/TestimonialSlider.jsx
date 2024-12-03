@@ -7,26 +7,38 @@ import Vector from "@/app/images/Vector5.svg";
 import LOGO from "@/app/images/logos/logo.jpeg";
 const testimonials = [
   {
-    name: "Chanchal",
-    email: "chanchal@gmail.com",
+    name: "Ms. Rekha",
+    email: "Manager Network  & Inside Sales",
     text: "We have been in Parimity for a few years and have developed strong relations. They have been doing great things in the freight forwarding networking industry. Keep up with the good work!",
     image: "/api/placeholder/40/40",
   },
   {
-    name: "Bonnie Green",
-    email: "bonnie@gmail.com",
+    name: "Mr. Gurbeer Singh Sethi",
+    email: "Director",
     text: "Parimity has transformed the freight forwarding industry with their innovative solutions. We've seen a major difference in our operations.",
     image: "/api/placeholder/40/40",
   },
   {
-    name: "John Doe",
-    email: "johndoe@gmail.com",
+    name: "Mr. Munish Kumar Bindlish",
+    email: "Director",
     text: "Amazing experience with the Parimity platform, it has made our job much easier and more efficient!",
     image: "/api/placeholder/40/40",
   },
   {
-    name: "Jane Smith",
-    email: "janesmith@gmail.com",
+    name: "Mr. JASON KLINE",
+    email: "Managing Director",
+    text: "The Parimity network has been a game-changer for us. Highly recommend!",
+    image: "/api/placeholder/40/40",
+  },
+  {
+    name: "Mr. Axel Damian Alvarez",
+    email: "General Manager",
+    text: "The Parimity network has been a game-changer for us. Highly recommend!",
+    image: "/api/placeholder/40/40",
+  },
+  {
+    name: "Ms. Sabrina",
+    email: "CEO",
     text: "The Parimity network has been a game-changer for us. Highly recommend!",
     image: "/api/placeholder/40/40",
   },

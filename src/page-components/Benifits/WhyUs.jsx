@@ -1,12 +1,23 @@
 import Image from "next/image";
-import grid1 from "@/app/images/benifits/Marketing-PR-detail.jpg";
-import grid2 from "@/app/images/benifits/24-7-Support-detail.jpg";
-import grid3 from "@/app/images/benifits/24-7-Support-detail.jpg";
-import grid4 from "@/app/images/benifits/Trade-Directory-detail.jpg";
-import grid5 from "@/app/images/benifits/Advanced-Tools-detail.jpg";
-import grid6 from "@/app/images/benifits/Real-timechat-detail.jpg";
-import grid7 from "@/app/images/benifits/Live-Talk-detail.png";
-import grid8 from "@/app/images/benifits/Industry-Surveys-detail.jpg";
+import grid1 from "@/app/images/home/Marketing-PR.png";
+import grid2 from "@/app/images/home/24-7-Support.png";
+import grid3 from "@/app/images/home/Annual-Meetings.png";
+import grid4 from "@/app/images/home/Trade-Directory.png";
+import grid5 from "@/app/images/home/Advance-Tools.jpg";
+import grid6 from "@/app/images/home/Real-Time-Chat.png";
+import grid7 from "@/app/images/home/Live-Talk.png";
+import grid8 from "@/app/images/home/Industry-Surveys.png";
+import grid9 from "@/app/images/home/Strict-Selection-Process.png";
+
+import logo1 from "@/app/images/icon1.svg";
+import logo2 from "@/app/images/icon1.svg";
+import logo3 from "@/app/images/icon1.svg";
+import logo4 from "@/app/images/icon1.svg";
+import logo5 from "@/app/images/icon1.svg";
+import logo6 from "@/app/images/icon1.svg";
+import logo7 from "@/app/images/icon1.svg";
+import logo8 from "@/app/images/icon1.svg";
+
 import about1 from "@/app/images/abou1.png";
 import about2 from "@/app/images/about2.png";
 import { useRef } from "react";
@@ -24,6 +35,7 @@ const solutionsData2 = [
     description3:
       "BNG-Media is dedicated to empowering brands through transformative digital experiences, meeting the growing necessity for digital innovation. For digital project discussions or consultations, BNG members are welcome to contact us at digital@bngglobalmedia.com. We’re committed to delivering impactful, cost-effective solutions, helping our members strengthen their market presence in the fast-paced digital world.",
     heightClass: "h-56 lg:h-64 xl:h-auto",
+    logo: logo1,
   },
   {
     id: 2,
@@ -37,6 +49,7 @@ const solutionsData2 = [
     description3:
       "Currently, BNG operates through four regional offices and a growing team of 23 support specialists, with more expansions planned in the near future. Our customer support team is dedicated to ensuring members can manage their logistics challenges with confidence and ease. Whether members need immediate support or have general inquiries, BNG’s team is here to provide solutions, delivering prompt assistance across time zones to keep our global network running smoothly.",
     heightClass: "h-56 lg:h-64 xl:h-auto",
+    logo: logo1,
   },
   {
     id: 3,
@@ -50,6 +63,7 @@ const solutionsData2 = [
     description3:
       "These gatherings are designed to support BNG members in growing their networks and advancing their business goals, encouraging meaningful interactions and knowledge sharing. With a mix of virtual and in-person events, members enjoy flexible options to participate, no matter their location. By attending these meetings, members gain a competitive edge in the industry, discover potential collaborations, and strengthen their place within BNG’s global community, creating a more interconnected, dynamic network.",
     heightClass: "h-56 lg:h-64 xl:h-auto",
+    logo: logo1,
   },
   {
     id: 4,
@@ -63,6 +77,7 @@ const solutionsData2 = [
     description3:
       "BNG-Media is dedicated to empowering brands through transformative digital experiences, meeting the growing necessity for digital innovation. For digital project discussions or consultations, BNG members are welcome to contact us at digital@bngglobalmedia.com. We’re committed to delivering impactful, cost-effective solutions, helping our members strengthen their market presence in the fast-paced digital world.",
     heightClass: "h-56 lg:h-64 xl:h-auto",
+    logo: logo1,
   },
   {
     id: 5,
@@ -76,6 +91,7 @@ const solutionsData2 = [
     description3:
       "The Trade Directory is updated to ensure that members have access to accurate, relevant data, helping them make informed decisions and strategically grow their business. By providing access to a vast network of verified contacts, this directory serves as a bridge between BNG members and the wider logistics community, facilitating connections that are essential for expanding influence and visibility. With the Trade Directory, BNG supports members in building a strong foundation of reliable contacts, fostering successful collaborations that drive long-term growth and profitability.",
     heightClass: "h-56 lg:h-64 xl:h-auto",
+    logo: logo1,
   },
   {
     id: 6,
@@ -89,6 +105,7 @@ const solutionsData2 = [
     description3:
       "Whether it’s a quick question or a more detailed discussion, members can connect with colleagues, partners, and new prospects directly within the BNG platform. The chat feature enhances communication across the network, helping members stay in touch and take action on new opportunities as they arise. This interactive approach to communication supports BNG’s goal of building a responsive, engaged community of logistics professionals who can collaborate effectively anytime, anywhere.",
     heightClass: "h-56 lg:h-64 xl:h-auto",
+    logo: logo1,
   },
   {
     id: 7,
@@ -103,6 +120,7 @@ const solutionsData2 = [
     description3:
       "The platform is designed to accommodate a variety of business discussions, from quick check-ins to in-depth negotiations, ensuring members can maximize networking opportunities within a secure, accessible environment. Through Live Talk, BNG members can maintain strong, active connections across borders, fostering collaboration and enabling business growth. By facilitating direct, instant communication, Live Talk empowers members to strengthen relationships and develop strategic partnerships, supporting a more interconnected and engaged logistics community.",
     heightClass: "h-56 lg:h-64 xl:h-auto",
+    logo: logo1,
   },
   {
     id: 8,
@@ -117,6 +135,7 @@ const solutionsData2 = [
     description3:
       "Members receive exclusive access to survey findings, allowing them to make informed decisions and adapt their strategies based on the latest insights from peers and industry leaders. BNG’s Survey feature encourages active participation, helping members contribute to a shared knowledge base that benefits the entire network. With access to timely, relevant data, members can adjust their business approaches to stay ahead, ultimately creating a more adaptive and forward-thinking logistics community within BNG.",
     heightClass: "h-56 lg:h-64 xl:h-auto",
+    logo: logo1,
   },
 ];
 const solutionsData = [
@@ -200,6 +219,17 @@ const solutionsData = [
     description2: "Secure storage facilities and management.",
     heightClass: "h-80 lg:h-96",
   },
+  {
+    id: 9,
+    src: grid9,
+    alt: "Solution 5",
+    heading: "Strict Selection Process",
+    description1:
+      "BNG ensures that only reliable and trustworthy companies join the network through a rigorous selection process.",
+    description2: "Secure storage facilities and management.",
+    heightClass: "h-80 lg:h-96",
+    logo: logo8,
+  },
 ];
 
 const WhyUs = () => {
@@ -216,7 +246,7 @@ const WhyUs = () => {
 
   return (
     <section className="py-14 flex flex-col  bg-secondryBg relative">
-          <div
+      <div
         className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
         style={{
           background:
@@ -224,9 +254,9 @@ const WhyUs = () => {
 
           zIndex: 1,
           filter: "blur(110px)",
-       // Alternative fallback
+          // Alternative fallback
         }}></div>
-     <div
+      <div
         className="absolute top-[50%] left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
         style={{
           background:
@@ -234,7 +264,7 @@ const WhyUs = () => {
 
           zIndex: 1,
           filter: "blur(110px)",
-       // Alternative fallback
+          // Alternative fallback
         }}></div>
       {/* Right-middle Patch */}
       <div
@@ -275,7 +305,7 @@ const WhyUs = () => {
               index
             ) => (
               <div
-                className={`relative ${heightClass} cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out hover:shadow-lg`}
+                className={`relative aspect-square overflow-hidden group rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out hover:shadow-lg`}
                 key={id}
                 onClick={() => scrollToSolution(index)}
                 ref={(el) => (solutionRefs.current[index] = el)} // Storing reference to each section
@@ -307,13 +337,11 @@ const WhyUs = () => {
                 {/* First Row */}
                 <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
                   <div
-                    className={`relative flex justify-center items-center ${
-                      index % 2 !== 0 ? "lg:order-2" : ""
-                    }`}>
+                    className={`relative flex justify-center items-center ${index % 2 !== 0 ? "lg:order-2" : ""
+                      }`}>
                     <div
-                      className={`hidden lg:block absolute ${
-                                index % 2 === 0 ? "left-16 top-12" : "right-16  bottom-10"
-                      } bottom-[-2px] h-[350px] w-[400px] border-primary border-2 rounded-md`}></div>
+                      className={`hidden lg:block absolute ${index % 2 === 0 ? "left-16 top-12" : "right-16  bottom-10"
+                        } bottom-[-2px] h-[350px] w-[400px] border-primary border-2 rounded-md`}></div>
                     <Image
                       className="rounded-xl object-cover z-10"
                       src={src}

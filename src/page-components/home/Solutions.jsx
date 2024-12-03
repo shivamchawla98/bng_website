@@ -111,7 +111,7 @@ const solutionsData = [
     logo: logo8,
   },
   {
-    id: 8,
+    id: 9,
     src: grid9,
     alt: "Solution 5",
     heading: "Strict Selection Process",
@@ -126,7 +126,7 @@ const solutionsData = [
 const Solutions = () => {
   return (
     <section className="py-14 relative overflow-hidden">
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <Image
           src={Background}
           alt="Ship background"
@@ -134,7 +134,7 @@ const Solutions = () => {
           objectFit="cover"
           className="opacity-80"
         />
-      </div>
+      </div> */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="relative">
           <h2 className="text-[40px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
