@@ -153,7 +153,7 @@ const Solutions = () => {
           {solutionsData.map(({ id, src, alt, heading, description1, logo }) => (
             <div
               key={id}
-              className="relative aspect-square overflow-hidden group rounded-lg shadow-lg"
+              className="relative aspect-square overflow-hidden group rounded-lg shadow-lg cursor-pointer"
             >
               <Image
                 src={src}

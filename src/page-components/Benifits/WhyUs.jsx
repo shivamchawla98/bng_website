@@ -323,7 +323,7 @@ const WhyUs = () => {
               index
             ) => (
               <div
-                className={`relative aspect-square overflow-hidden group rounded-lg shadow-lg`}
+                className={`relative aspect-square overflow-hidden group rounded-lg shadow-lg cursor-pointer`}
                 key={id}
                 onClick={() => scrollToSolution(index)}
                 ref={(el) => (solutionRefs.current[index] = el)} // Storing reference to each section

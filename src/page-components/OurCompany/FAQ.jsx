@@ -17,9 +17,16 @@ export const FAQ = () => {
 
   return (
     <div className="max-w-3xl mx-auto">
-      <h2 className="text-2xl font-bold text-center text-[#27293B] mb-8">
-        Frequently Asked Questions
-      </h2>
+      <div className="relative">
+          <h2 className="text-[40px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
+            Frequently Asked Questions
+          </h2>
+          <h2
+            className="absolute text-center top-[-30px] md:left-[30%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            aria-hidden="true">
+            Frequently Asked Questions
+          </h2>
+        </div>
       <div className="space-y-4">
         {faqs.map((faq) => (
           <details

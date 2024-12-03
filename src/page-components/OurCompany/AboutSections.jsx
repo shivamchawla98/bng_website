@@ -6,26 +6,26 @@ const AboutSection = () => {
   return (
     <>
       <section className="py-24 bg-primaryBg relative">
-      <div
-        className="absolute bottom-0 right-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
-        style={{
-          background:
-            "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
+        <div
+          className="absolute bottom-0 right-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
+          style={{
+            background:
+              "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
 
-          zIndex: 1,
-          filter: "blur(110px)",
-          // Alternative fallback
-        }}></div>
-              <div
-        className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
-        style={{
-          background:
-            "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
+            zIndex: 1,
+            filter: "blur(110px)",
+            // Alternative fallback
+          }}></div>
+        <div
+          className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
+          style={{
+            background:
+              "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
 
-          zIndex: 1,
-          filter: "blur(110px)",
-          // Alternative fallback
-        }}></div>
+            zIndex: 1,
+            filter: "blur(110px)",
+            // Alternative fallback
+          }}></div>
         <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto  ">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12 ">
             <div className="relative flex justify-center items-center">
@@ -41,7 +41,7 @@ const AboutSection = () => {
               <h2 className="text-gray-900 text-4xl font-extrabold leading-normal text-center lg:text-start">
                 About BNG: Building Global Connections in Logistics
               </h2>
-              <p className="text-gray-600 text-base text-[18px] leading-relaxed text-center lg:text-start">
+              <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
                 BNG Logistics Network is a global platform built to unite
                 logistics professionals, freight forwarders, and industry
                 leaders in an environment optimized for growth and
@@ -82,10 +82,17 @@ const AboutSection = () => {
         </div>
       </section>
 
-      <section className="py-16  w-[100%] mx-auto px-4 bg-primaryBg">
-        <h2 className="text-[48px] text-center font-bold text-[#27293B]">
-          Our Core Values
-        </h2>
+      <section className="py-16  w-[100%] mx-auto px-4 bg-primaryBg items-center">
+        <div className="relative">
+          <h2 className="text-[40px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
+            Our Core Values
+          </h2>
+          <h2
+            className="absolute text-center top-[-30px] md:left-[30%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            aria-hidden="true">
+            Our Core Values
+          </h2>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
           <FeatureCard
             title="Global Collaboration
@@ -115,26 +122,26 @@ const AboutSection = () => {
         </div>
       </section>
       <section className="py-24 bg-primaryBg relative">
-      <div
-        className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
-        style={{
-          background:
-            "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
+        <div
+          className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
+          style={{
+            background:
+              "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
 
-          zIndex: 1,
-          filter: "blur(110px)",
-          // Alternative fallback
-        }}></div>
-            <div
-        className="absolute top-0 right-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
-        style={{
-          background:
-            "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
+            zIndex: 1,
+            filter: "blur(110px)",
+            // Alternative fallback
+          }}></div>
+        <div
+          className="absolute top-0 right-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
+          style={{
+            background:
+              "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
 
-          zIndex: 1,
-          filter: "blur(110px)",
-          // Alternative fallback
-        }}></div>
+            zIndex: 1,
+            filter: "blur(110px)",
+            // Alternative fallback
+          }}></div>
         <div className="w-full max-w-7xl px-4 mx-auto md:px-5 lg:px-5 ">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
             <div className="relative flex justify-center items-center">
@@ -147,9 +154,16 @@ const AboutSection = () => {
               />
             </div>
             <div className="flex flex-col justify-center items-center lg:items-start gap-8">
-              <h2 className="text-gray-900 text-4xl font-extrabold leading-normal text-center lg:text-start">
-                Our Vision
-              </h2>
+              <div className="relative">
+                <h2 className="text-[40px] font-bold mb-4 text-[#27293B] relative z-10">
+                  Our Vision
+                </h2>
+                <h2
+                  className="absolute top-[-20px] left-0 text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+                  aria-hidden="true">
+                  Our Vision
+                </h2>
+              </div>
               <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
                 Our vision at BNG Logistics Network is to be the premier global
                 platform where logistics professionals seamlessly connect,
@@ -177,10 +191,17 @@ const AboutSection = () => {
               />
             </div>
             <div className="flex flex-col justify-center items-center lg:items-start gap-8">
-              <h2 className="text-gray-900 text-4xl font-extrabold leading-normal text-center lg:text-start">
-                Our Mission
-              </h2>
-              <p className="text-gray-600 text-[18px] text-base leading-relaxed text-center lg:text-start">
+              <div className="relative">
+                <h2 className="text-[40px] font-bold mb-4 text-[#27293B] relative z-10">
+                  Our Mission
+                </h2>
+                <h2
+                  className="absolute top-[-20px] left-0 text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+                  aria-hidden="true">
+                  Our Mission
+                </h2>
+              </div>
+              <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
                 Our mission is to provide logistics professionals worldwide with
                 a secure, digitalized environment that enhances connectivity,
                 maximizes business potential, and fosters enduring partnerships.
