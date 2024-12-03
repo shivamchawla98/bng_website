@@ -11,7 +11,7 @@ function Cta() {
       See How BNG Can Work for You
     </p>
     <button
-      className="mt-8 px-6 py-3 border-2 border-white text-white text-lg font-semibold rounded-md hover:bg-white hover:text-[#072a47] transition-all duration-300">
+      className="mt-8 px-6 py-3 border-2 border-white text-white text-lg font-semibold rounded-lg hover:bg-white hover:text-[#072a47] transition-all duration-300">
       Request a Demo
     </button>
   </div>

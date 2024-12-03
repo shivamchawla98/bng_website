@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { FeatureCard } from "../OurCompany/FeatureCard";
 import MembersAreaImage from "@/app/images/benifits/Members-Area-detail.jpg";
-import GlobalReachImage from "@/app/images/benifits/Global-Reach-detail.JPG";
+import GlobalReachImage from "@/app/images/benifits/Global-Reach-detail.jpg";
 import BusinessXchangeImage from "@/app/images/benifits/Business-Xchange-detail.jpg";
 import FreightXchangeImage from "@/app/images/benifits/Freight-Xchange-detail.jpg";
 import TrustedPartnersImage from "@/app/images/benifits/Trusted-Partners-detail.jpg";

@@ -2,7 +2,7 @@ import Image from "next/image";
 import grid1 from "@/app/images/benifits/Marketing-PR-detail.jpg";
 import grid2 from "@/app/images/benifits/24-7-Support-detail.jpg";
 import grid3 from "@/app/images/benifits/Annual-Meetings-detail.jpg";
-import grid4 from "@/app/images/benifits/Trade-directory-detail.jpg";
+import grid4 from "@/app/images/benifits/Trade-Directory-detail.jpg";
 import grid5 from "@/app/images/benifits/Advanced-Tools-detail.jpg";
 import grid6 from "@/app/images/benifits/Real-timechat-detail.jpg";
 import grid7 from "@/app/images/benifits/Live-Talk-detail.png";

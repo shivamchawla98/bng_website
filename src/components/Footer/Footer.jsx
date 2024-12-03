@@ -34,7 +34,7 @@ const Footer = () => {
                   className="rounded-lg p-2 bg-white border-primary"
                   placeholder="Enter your email"
                 />
-                <button className=" p-2  py-[12px] ml-2 bg-primary border-white rounded-full">
+                <button className=" p-2  py-[12px] ml-2  bg-gradient-to-tr from-[#6853DB] to-[#6853DB] border-white rounded-r-lg">
                   <svg
                     width="23"
                     height="16"
