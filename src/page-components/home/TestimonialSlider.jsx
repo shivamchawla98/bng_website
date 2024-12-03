@@ -4,7 +4,17 @@ import Slider from "react-slick";
 import Image from "next/image";
 import Partner from "@/app/images/partners.jpg";
 import Vector from "@/app/images/Vector5.svg";
-import LOGO from "@/app/images/logos/logo.jpeg";
+import LOGO1 from "@/app/images/logos/latest-members/AEO.png";
+import LOGO2 from "@/app/images/logos/latest-members/CTPAT.png";
+import LOGO3 from "@/app/images/logos/latest-members/FIATA.png";
+import LOGO4 from "@/app/images/logos/latest-members/IATA-ANIMALS.png";
+import LOGO5 from "@/app/images/logos/latest-members/IATA-CEIV-FRESH.png";
+import LOGO6 from "@/app/images/logos/latest-members/IATA-CEIV-PHARMA.png";
+import LOGO7 from "@/app/images/logos/latest-members/IATA-LITHIUM.png";
+import LOGO8 from "@/app/images/logos/latest-members/IATA.png";
+import LOGO9 from "@/app/images/logos/latest-members/ICC.png";
+import LOGO10 from "@/app/images/logos/latest-members/ISO.png";
+import LOGO11 from "@/app/images/logos/latest-members/NVOCC.png";
 const testimonials = [
   {
     name: "Ms. Rekha",
@@ -44,9 +54,7 @@ const testimonials = [
   },
 ];
 const partnerLogos = [
- LOGO,LOGO,LOGO,LOGO,LOGO,LOGO,LOGO,LOGO,
- LOGO,LOGO,LOGO,LOGO,LOGO,LOGO,LOGO,LOGO,LOGO,LOGO,LOGO,LOGO,LOGO,LOGO,LOGO,
-  // Add more logo URLs as needed
+  LOGO1, LOGO2, LOGO3, LOGO4, LOGO5, LOGO6, LOGO7, LOGO8, LOGO9, LOGO10, LOGO11
 ];
 const TestimonialSlider = () => {
   const settings = {
@@ -96,28 +104,28 @@ const TestimonialSlider = () => {
         <div className="flex flex-col lg:flex-row  items-center justify-center w-full gap-8 translate-y-[20px] md:translate-x-[150px]">
           {/* Image Section */}
           <div className="w-full lg:w-1/2 relative h-[400px] flex flex-col items-start justify-center mt-[10rem]">
-          <div className="flex flex-wrap gap-4 mt-4">
+            <div className="flex flex-wrap gap-8 m-12">
               {partnerLogos.map((logo, index) => (
                 <Image
                   key={index}
                   src={logo}
                   alt={`Partner ${index + 1}`}
-                  width={80}
+                  width={140}
                   height={80}
-                  className="object-contain  shadow-md"
+                  className="object-scale-down w-[120px] h-[80px]"
                 />
               ))}
             </div>
-        
+
 
             <div className="relative w-full max-w-[800px]">
               <h2 className="text-[40px] font-bold text-gray-900 mb-16 text-left mt-10 relative z-10">
-                Our Partners
+                Latest Members
               </h2>
               <h2
                 className="absolute text-left top-2 left-0 text-[80px] w-full font-bold text-[#27293B] opacity-[3%] leading-none z-2"
                 aria-hidden="true">
-                Our Partners
+                Latest Members
               </h2>
             </div>
           </div>

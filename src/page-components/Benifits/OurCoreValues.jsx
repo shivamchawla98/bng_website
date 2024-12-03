@@ -20,6 +20,7 @@ function OurCoreValues() {
   const paymentMonitoringRef = useRef(null);
   const freightXchangeRef = useRef(null);
   const claimCenterRef = useRef(null);
+  const acknowledgmentInsigniasRef = useRef(null);
 
   // Scroll handler
   const handleScrollToSection = (sectionRef) => {
@@ -276,6 +277,17 @@ function OurCoreValues() {
       are resolved effectively.
     </p>
   );
+  
+  const acknowledgmentInsigniasContent = (
+    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+      BNG’s acknowledgment insignias elevate your profile, showcasing your credibility, payment reliability, and activity level. These badges highlight your professionalism and build trust.
+    </p>
+  );
+
+  const acknowledgmentInsigniasContentTwo = (
+    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+    </p>
+  );
   return (
     <section className="py-14 w-full mx-auto px-4 bg-primaryBg text-center flex flex-col justify-center align-middle relative">
       <div
@@ -289,7 +301,7 @@ function OurCoreValues() {
           // Alternative fallback
         }}></div>
 
-<div
+      <div
         className="absolute top-[50%] left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
         style={{
           background:
@@ -358,6 +370,11 @@ function OurCoreValues() {
           description="A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts."
           onClick={() => handleScrollToSection(claimCenterRef)}
         />
+        <FeatureCard
+          title="Acknowledgment Insignias"
+          description="BNG’s acknowledgment insignias elevate your profile, showcasing your credibility, payment reliability, and activity level. These badges highlight your professionalism and build trust."
+          onClick={() => handleScrollToSection(acknowledgmentInsigniasRef)}
+        />
       </div>
       {/* Detailed Sections */}
       {[
@@ -383,7 +400,7 @@ function OurCoreValues() {
           ref: freightXchangeRef,
           content: freightXchangeContent,
           contentTwo: freightXchangeContentTwo,
-          img:  FreightXchangeImage,
+          img: FreightXchangeImage,
         },
         {
           ref: trustedPartnersRef,
@@ -409,19 +426,23 @@ function OurCoreValues() {
           contentTwo: claimCenterContentTwo,
           img: ClaimCenterImage,
         },
+        {
+          ref: claimCenterRef,
+          content: claimCenterContent,
+          contentTwo: claimCenterContentTwo,
+          img: ClaimCenterImage,
+        },
       ].map(({ ref, content, contentTwo, img }, index) => (
         <section className="bg-primaryBg " key={index}>
           <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
             {/* First Row */}
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
               <div
-                className={`relative flex justify-center items-center ${
-                  index % 2 !== 0 ? "lg:order-2" : ""
-                }`}>
+                className={`relative flex justify-center items-center ${index % 2 !== 0 ? "lg:order-2" : ""
+                  }`}>
                 <div
-                  className={`hidden lg:block absolute  ${
-                    index % 2 === 0 ? "left-16 top-12" : "right-16  bottom-10"
-                  }  h-[350px] w-[400px] border-primary border-2 rounded-md`}></div>
+                  className={`hidden lg:block absolute  ${index % 2 === 0 ? "left-16 top-12" : "right-16  bottom-10"
+                    }  h-[350px] w-[400px] border-primary border-2 rounded-md`}></div>
                 <Image
                   className="rounded-xl object-cover z-10"
                   src={img}
@@ -432,8 +453,7 @@ function OurCoreValues() {
               <div
                 className="flex flex-col justify-center items-center lg:items-start gap-8"
                 ref={ref}>
-                <h2 className="text-3xl font-bold text-[#27293B]">{`  ${
-                  [
+                <h2 className="text-3xl font-bold text-[#27293B]">{`  ${[
                     "Members Area",
                     "Global Reach",
                     "Business Xchange",
@@ -443,7 +463,7 @@ function OurCoreValues() {
                     "Payment Monitoring",
                     "Claim Center",
                   ][index]
-                }`}</h2>
+                  }`}</h2>
                 <p className="text-[#27293B] text-[18px]">{content}</p>
               </div>
             </div>
