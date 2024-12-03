@@ -1,12 +1,13 @@
 import Image from "next/image";
-import grid1 from "@/app/images/home/Marketing-PR.jpg";
-import grid2 from "@/app/images/home/24-7-Support.jpg";
-import grid3 from "@/app/images/home/Annual-Meetings.jpg";
-import grid4 from "@/app/images/home/Trade-Directory.jpg";
-import grid5 from "@/app/images/home/Advanced-Tools.jpg";
-import grid6 from "@/app/images/home/Real-Time-Chat.jpg";
-import grid8 from "@/app/images/home/Industry-Surveys.jpg";
-import grid7 from "@/app/images/home/Industry-Surveys.jpg";
+import grid1 from "@/app/images/home/Marketing-PR.png";
+import grid2 from "@/app/images/home/24-7-Support.png";
+import grid3 from "@/app/images/home/Annual-Meetings.png";
+import grid4 from "@/app/images/home/Trade-Directory.png";
+import grid5 from "@/app/images/home/Advance-Tools.jpg";
+import grid6 from "@/app/images/home/Real-Time-Chat.png";
+import grid7 from "@/app/images/home/Live-Talk.png";
+import grid8 from "@/app/images/home/Industry-Surveys.png";
+import grid9 from "@/app/images/home/Strict-Selection-Process.png";
 
 import logo1 from "@/app/images/icon1.svg";
 import logo2 from "@/app/images/icon1.svg";
@@ -17,7 +18,7 @@ import logo6 from "@/app/images/icon1.svg";
 import logo7 from "@/app/images/icon1.svg";
 import logo8 from "@/app/images/icon1.svg";
 
-import ship from "@/app/images/grid1.png"; // Using the ship image from your structure
+import Background from "@/app/images/home/WhyUs-Background.webp"; // Using the ship image from your structure
 
 
 const solutionsData = [
@@ -109,6 +110,17 @@ const solutionsData = [
     heightClass: "h-80 lg:h-96",
     logo: logo8,
   },
+  {
+    id: 8,
+    src: grid9,
+    alt: "Solution 5",
+    heading: "Strict Selection Process",
+    description1:
+      "BNG ensures that only reliable and trustworthy companies join the network through a rigorous selection process.",
+    description2: "Secure storage facilities and management.",
+    heightClass: "h-80 lg:h-96",
+    logo: logo8,
+  },
 ];
 
 const Solutions = () => {
@@ -116,11 +128,11 @@ const Solutions = () => {
     <section className="py-14 relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src={ship}
+          src={Background}
           alt="Ship background"
           layout="fill"
           objectFit="cover"
-          className="opacity-30"
+          className="opacity-80"
         />
       </div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

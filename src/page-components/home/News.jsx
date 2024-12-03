@@ -8,16 +8,18 @@ const newsData = [
     id: 1,
     src: newsImg1,
     alt: "News Item 1",
+    title: "The Future of Logistics: Embracing Digital Transformation",
     description:
-      "Discover the latest trends in logistics and supply chain management.",
+      "Discover how advanced technologies like AI, IoT, and blockchain are reshaping logistics and supply chain management for a smarter future.",
     link: "#",
   },
   {
     id: 2,
     src: newsImg2,
     alt: "News Item 2",
+    title: "BNG Welcomes 100 New Members in Record Time!",
     description:
-      "How technology is transforming the freight industry for the better.",
+      "Our network continues to grow rapidly, with over 100 new freight forwarders and logisticians joining this month. Explore the opportunities.",
     link: "#",
     top: "2rem", // This will push the second card down by 20px
   },
@@ -25,8 +27,9 @@ const newsData = [
     id: 3,
     src: newsImg3,
     alt: "News Item 3",
+    title: "Global Freight Trends: Challenges and Opportunities in 2024",
     description:
-      "Insights from industry experts on future logistics challenges.",
+      "Get insights into shifting global trade patterns, rising fuel costs, and how businesses can stay resilient in a dynamic market.",
     link: "#",
     top: "4rem", // This will push the third card down by 30px
   },
@@ -55,7 +58,7 @@ const News = () => {
         </div>
         {/* Grid with 3 columns for news cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
-          {newsData.map(({ id, src, alt, description, link, top }) => (
+          {newsData.map(({ id, src, alt, title, description, link, top }) => (
             <div
               key={id}
               className={`relative rounded-lg overflow-hidden shadow-lg bg-white shadow-slate-200 transition-transform transform hover:scale-105 px-2 max-w-[350px] py-4`}
@@ -71,6 +74,7 @@ const News = () => {
                 />
               </div>
               <div className="p-4">
+                <h3 className="text-[#27293B] font-semibold mb-2">{title}</h3>
                 <p className="text-gray-600 mb-4 text-[18px]">{description}</p>
                 <a href={link} className="text-blue-500 hover:underline">
                   View More

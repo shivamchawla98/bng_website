@@ -33,10 +33,7 @@ const Conference = () => {
               Conference
             </h2>
             <p className={`text-[18px] text-white/90 leading-relaxed mb-8 ${styles.slideUp}`}>
-              Join us for an engaging conference where industry leaders share
-              insights and explore the latest trends in logistics and supply chain
-              management. Don't miss the opportunity to connect and learn from the
-              best!
+            Be part of an inspiring conference where industry leaders unveil insights and dive into the latest logistics and supply chain trends. Network with top professionals, gain valuable knowledge, and elevate your expertise—don’t miss out!
             </p>
             <button className="bg-white/10 text-white px-8 py-4 flex items-center border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-300 group transform hover:translate-x-2">
               Register Now
