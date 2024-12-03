@@ -367,7 +367,7 @@ const WhyUs = () => {
                       }`}>
                     <div
                       className={`hidden lg:block absolute ${index % 2 === 0 ? "left-16 top-12" : "right-16  bottom-10"
-                        } bottom-[-2px] h-[350px] w-[400px] border-primary border-2 rounded-md`}></div>
+                        } bottom-[-2px] h-[350px] w-[400px] border-[#6853DB] border-2 rounded-md`}></div>
                     <Image
                       className="rounded-xl object-cover z-10"
                       src={src}
@@ -384,7 +384,7 @@ const WhyUs = () => {
                     </h2>
                     <p className="text-gray-600 text-[18px]">
                       {description2}
-                      {description3}
+                      {/* {description3} */}
                     </p>
                   </div>
                 </div>

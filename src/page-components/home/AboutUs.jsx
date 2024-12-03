@@ -2,7 +2,7 @@
 "use client"
 import React from "react";
 import Image from "next/image";
-import rightImg from "@/app/images/home/Our-Story.png";
+import rightImg from "@/app/images/home/Logistic2.png";
 import { useRouter } from "next/navigation";
 function AboutUs() {
   const router = useRouter()
@@ -30,24 +30,13 @@ function AboutUs() {
           </h2>
         </div>
         <p className="text-gray-600 mb-4 text-[18px]">
-          Built by a team with over 20 years of expertise in logistics and
-          supply chain management, BNG Group has emerged as a resilient leader
-          in both robust network solutions and B2B relationship-building.
-          Drawing from years of navigating both thriving markets and economic
-          challenges, we bring a wealth of operational experience and industry
-          connections that position us as pioneers in logistics networking.
+          Built by a team with over 20 years of expertise in logistics and supply chain management. BNG Group has emerged as a resilient leader in both robust network solutions and B2B relationship-building
+          Following nearly three years of in-depth market research and analysis, we launched a network with unique features that empower members to forge strong global partnerships.
         </p>
         <p className="text-gray-600 mb-6 text-[18px]">
-          BNG Logistics Network offers a powerful, secure, and fully digitized
-          platform designed for seamless collaboration among logistics
-          professionals. Following nearly three years of in-depth market
-          research and analysis, we launched a network with unique features that
-          empower members to forge strong global partnerships. Members also gain
-          exclusive access to one of the industry’s largest Exporters/Importers
-          Data Banks—sourced and maintained by BNG Group—designed to support
-          successful, data-driven connections across the globe.
+          Join us and gain exclusive access to one of the industry’s largest Exporters/Importers Data Banks—sourced and maintained by BNG Group—designed to support successful, data-driven connections across the globe.
         </p>
-        <button   onClick={() => router.push("/our-company")}  className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent transition-all duraton-300 bg-primary transform hover:translate-x-2" >
+        <button onClick={() => router.push("/our-company")} className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent transition-all duraton-300 bg-primary transform hover:translate-x-2" >
           Know more
           <svg
             xmlns="http://www.w3.org/2000/svg"

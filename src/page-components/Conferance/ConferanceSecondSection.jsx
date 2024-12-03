@@ -11,7 +11,7 @@ function ConferanceSecondSection() {
         {/* First section */}
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
           <div className="relative flex justify-center items-center">
-            <div className="hidden lg:block absolute left-16 bottom-12 h-[350px] w-[400px] border-primary border-2 rounded-md"></div>
+            <div className="hidden lg:block absolute left-16 bottom-12 h-[350px] w-[400px] border-[#6853DB] border-2 rounded-md"></div>
             <Image
               className="rounded-xl object-cover z-10"
               src={about1}

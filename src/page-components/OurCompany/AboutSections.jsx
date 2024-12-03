@@ -29,7 +29,7 @@ const AboutSection = () => {
         <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto  ">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12 ">
             <div className="relative flex justify-center items-center">
-              <div className="hidden lg:block absolute left-16 bottom-12 h-[350px] w-[400px] border-primary border-2 rounded-md"></div>
+              <div className="hidden lg:block absolute left-16 bottom-12 h-[350px] w-[400px] border-[#6853DB] border-2 rounded-md"></div>
               <Image
                 className="rounded-xl object-cover z-10"
                 src={about1}
@@ -57,7 +57,7 @@ const AboutSection = () => {
           </div>
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12 py-10">
             <div className="relative flex justify-center items-center lg:order-2">
-              <div className="hidden lg:block absolute right-16 bottom-12 h-[350px] w-[400px] border-primary border-2 rounded-md"></div>
+              <div className="hidden lg:block absolute right-16 bottom-12 h-[350px] w-[400px] border-[#6853DB] border-2 rounded-md"></div>
               <Image
                 className="rounded-xl object-cover z-10"
                 src={about2}
@@ -145,7 +145,7 @@ const AboutSection = () => {
         <div className="w-full max-w-7xl px-4 mx-auto md:px-5 lg:px-5 ">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
             <div className="relative flex justify-center items-center">
-              <div className="hidden lg:block absolute left-16 bottom-12 h-[350px] w-[400px] border-primary border-2 rounded-md"></div>
+              <div className="hidden lg:block absolute left-16 bottom-12 h-[350px] w-[400px] border-[#6853DB] border-2 rounded-md"></div>
               <Image
                 className="rounded-xl object-cover z-10"
                 src={about1}
@@ -182,7 +182,7 @@ const AboutSection = () => {
           {/* Fourth section */}
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-12">
             <div className="relative flex justify-center items-center lg:order-2">
-              <div className="hidden lg:block absolute right-16 bottom-12 h-[350px] w-[400px] border-primary border-2 rounded-md"></div>
+              <div className="hidden lg:block absolute right-16 bottom-12 h-[350px] w-[400px] border-[#6853DB] border-2 rounded-md"></div>
               <Image
                 className="rounded-xl object-cover z-10"
                 src={about2}

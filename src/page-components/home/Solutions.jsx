@@ -9,14 +9,15 @@ import grid7 from "@/app/images/home/Live-Talk.png";
 import grid8 from "@/app/images/home/Industry-Surveys.png";
 import grid9 from "@/app/images/home/Strict-Selection-Process.png";
 
-import logo1 from "@/app/images/icon1.svg";
-import logo2 from "@/app/images/icon1.svg";
-import logo3 from "@/app/images/icon1.svg";
-import logo4 from "@/app/images/icon1.svg";
-import logo5 from "@/app/images/icon1.svg";
-import logo6 from "@/app/images/icon1.svg";
-import logo7 from "@/app/images/icon1.svg";
-import logo8 from "@/app/images/icon1.svg";
+import logo1 from "@/app/images/logos/why-us/PR.png";
+import logo2 from "@/app/images/logos/why-us/24-7.png";
+import logo3 from "@/app/images/logos/why-us/Meetings.png";
+import logo4 from "@/app/images/logos/why-us/Trade-Directory.png";
+import logo5 from "@/app/images/logos/why-us/Advanced-Tool.png";
+import logo6 from "@/app/images/logos/why-us/real-time-chat.png";
+import logo7 from "@/app/images/logos/why-us/Live-talk.png";
+import logo8 from "@/app/images/logos/why-us/survey.png";
+import logo9 from "@/app/images/logos/why-us/survey.png";
 
 import Background from "@/app/images/home/WhyUs-Background.webp"; // Using the ship image from your structure
 
@@ -167,9 +168,9 @@ const Solutions = () => {
                 <Image
                   src={logo}
                   alt="Logo"
-                  width={40}
-                  height={40}
-                  className="self-start"
+                  width={60}
+                  height={60}
+                  className="self-start bg-white p-2 rounded-full"
                 />
                 <div className="transform transition-all duration-300 translate-y-8 group-hover:translate-y-0">
                   <h3 className="text-xl font-bold mb-2">

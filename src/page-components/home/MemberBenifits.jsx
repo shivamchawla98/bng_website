@@ -59,6 +59,12 @@ function MemberBenefits() {
         "A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts.",
       image: PaymentMonitoringVector,
     },
+    {
+      title: "Acknowledgement Insignias",
+      // description:
+      //   "A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts.",
+      image: ClaimCenterVector,
+    },
   ];
 
   const benefitsTwo = [
@@ -85,6 +91,12 @@ function MemberBenefits() {
       description:
         "A state-of-the-art system that automatically tracks receivables and payables, keeping all transactions organized and up-to-date.",
       image: ClaimCenterVector,
+    },
+    {
+      title: "",
+      description:
+        "A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts.",
+      // image: ClaimCenterVector,
     },
   ];
   const mobileBenefits = [
@@ -132,6 +144,12 @@ function MemberBenefits() {
     },
     {
       title: "Claim Center",
+      description:
+        "A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts.",
+      image: ClaimCenterVector,
+    },
+    {
+      title: "Acknowledgement Insignias",
       description:
         "A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts.",
       image: ClaimCenterVector,
@@ -201,13 +219,13 @@ function MemberBenefits() {
           </div>
           <div className="relative" style={{ minHeight: '800px' }}>
             {/* Dotted Line */}
-            <div 
+            <div
               className="border-[2.5px] border-dotted  border-gray-600 absolute left-1/2 -translate-x-1/2"
               style={{ height: '100%', top: '0', bottom: '0' }}
             />
-            
+
             {/* Ship Container */}
-            <div 
+            <div
               className="absolute"
               style={{
                 left: 'calc(50% - 130px)',
@@ -239,7 +257,7 @@ function MemberBenefits() {
                       {benefit.description}
                     </p>
                   </div>
-                  <div className="w-44 h-44 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer">
+                  {benefit.image && benefit.title && <div className="w-44 h-44 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer">
                     <Image
                       src={benefit.image}
                       alt="Member Benefits"
@@ -251,7 +269,7 @@ function MemberBenefits() {
                         {benefit.title}
                       </div>
                     </div>
-                  </div>
+                  </div>}
                 </div>
               </div>
             ))}

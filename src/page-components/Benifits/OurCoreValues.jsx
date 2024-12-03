@@ -8,6 +8,7 @@ import TrustedPartnersImage from "@/app/images/benifits/Trusted-Partners-detail.
 import PaymentProtectionImage from "@/app/images/benifits/Payment-Protection-detail.jpg";
 import PaymentMonitoringImage from "@/app/images/benifits/Payment-Monitoring-detail.jpg";
 import ClaimCenterImage from "@/app/images/benifits/Claim-Center-detail.jpg";
+import AcknowledgmentInsigniasImage from "@/app/images/benifits/Acknowledgement-Insegnia-detail.jpg";
 import Image from "next/image";
 
 function OurCoreValues() {
@@ -333,7 +334,7 @@ function OurCoreValues() {
           ref: acknowledgmentInsigniasRef,
           content: acknowledgmentInsigniasContent,
           contentTwo: acknowledgmentInsigniasContentTwo,
-          img: ClaimCenterImage,
+          img: AcknowledgmentInsigniasImage,
         },
       ].map(({ ref, content, contentTwo, img }, index) => (
         <section className="bg-primaryBg " key={index}>
@@ -345,7 +346,7 @@ function OurCoreValues() {
                   }`}>
                 <div
                   className={`hidden lg:block absolute  ${index % 2 === 0 ? "left-16 top-12" : "right-16  bottom-10"
-                    }  h-[350px] w-[400px] border-primary border-2 rounded-md`}></div>
+                    }  h-[350px] w-[400px] border-[#6853DB] border-2 rounded-md`}></div>
                 <Image
                   className="rounded-xl object-cover z-10"
                   src={img}
