@@ -1,6 +1,8 @@
 import Image from "next/image";
-import about1 from "@/app/images/abou1.png";
-import about2 from "@/app/images/about2.png";
+import about1 from "@/app/images/about-us/About-us-image-1.jpg";
+import about2 from "@/app/images/about-us/About-us-image-2.jpg";
+import OurVisionImage from "@/app/images/about-us/Vision.png";
+import OurMissionImage from "@/app/images/about-us/Mission.png";
 import { FeatureCard } from "./FeatureCard";
 const AboutSection = () => {
   return (
@@ -148,7 +150,7 @@ const AboutSection = () => {
               <div className="hidden lg:block absolute left-16 bottom-12 h-[350px] w-[400px] border-[#6853DB] border-2 rounded-md"></div>
               <Image
                 className="rounded-xl object-cover z-10"
-                src={about1}
+                src={OurVisionImage}
                 height={350}
                 alt="Why Us Image"
               />
@@ -185,7 +187,7 @@ const AboutSection = () => {
               <div className="hidden lg:block absolute right-16 bottom-12 h-[350px] w-[400px] border-[#6853DB] border-2 rounded-md"></div>
               <Image
                 className="rounded-xl object-cover z-10"
-                src={about2}
+                src={OurMissionImage}
                 height={350}
                 alt="Vision Image"
               />
