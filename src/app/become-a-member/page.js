@@ -23,18 +23,18 @@ export default function BecomeAMember() {
       <SecuritySteps />
 
       <section className="py-16 bg-primaryBg relative">
-      <div
-        className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
-        style={{
-          background:
-            "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
+        <div
+          className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
+          style={{
+            background:
+              "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
 
-          zIndex: 1,
-          filter: "blur(110px)",
-          // Alternative fallback
-        }}></div>
+            zIndex: 1,
+            filter: "blur(110px)",
+            // Alternative fallback
+          }}></div>
         <div className="container mx-auto px-4">
-<FAQ />
+          <FAQ />
         </div>
       </section>
     </div>

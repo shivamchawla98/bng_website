@@ -53,14 +53,14 @@ const BecomeHeroSection = () => {
             <div>
               <ul className="space-y-3 mb-6">
                 {[
-                  "Unlimited partnerships",
-                  "Store review operation",
-                  "Unlimited access to business hub",
-                  "Unlimited report views",
-                  "Unlimited branch offices",
-                  "Premium user support",
-                  "Budget onboarding",
-                  "Payment Protection *additional Cost",
+                  "Unlimited Member Searches",
+                  "Real-Time Chat Tool",
+                  "Dedicated Membership Profiles",
+                  "Unlimited Freight Viewer",
+                  "Business Lead Center",
+                  "Payment Protection Framework",
+                  "PR & Marketing Support",
+                  "Top Search Rankings",
                 ].map((feature, index) => (
                   <li key={index} className="flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-green-500" />
