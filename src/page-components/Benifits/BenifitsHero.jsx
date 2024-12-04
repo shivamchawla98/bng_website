@@ -1,4 +1,4 @@
-import Contactbg from "@/app/images/benifits/Benifits-Page-Banner-2.jpg"
+import Contactbg from "@/app/images/benifits/Benifits-Page-Banner-3.jpg"
 export const BenifitsHero = () => {
   return (
     <div className="relative h-[400px] bg-primary flex items-center justify-start pl-10" style={{ backgroundImage: `url(${Contactbg.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>

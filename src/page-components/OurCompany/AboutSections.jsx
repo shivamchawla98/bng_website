@@ -7,7 +7,7 @@ import { FeatureCard } from "./FeatureCard";
 const AboutSection = () => {
   return (
     <>
-      <section className="py-24 bg-primaryBg relative">
+      <section className="pt-24 bg-primaryBg relative">
         <div
           className="absolute bottom-0 right-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
           style={{
@@ -41,7 +41,7 @@ const AboutSection = () => {
             </div>
             <div className="flex flex-col justify-center items-center lg:items-start gap-8">
               <h2 className="text-gray-900 text-4xl font-extrabold leading-normal text-center lg:text-start">
-                About BNG: Building Global Connections in Logistics
+                Building Global Connections in Logistics
               </h2>
               <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
                 BNG Logistics Network is a global platform built to unite
@@ -84,7 +84,7 @@ const AboutSection = () => {
         </div>
       </section>
 
-      <section className="py-16  w-[100%] mx-auto px-4 bg-primaryBg items-center">
+      <section className="pt-16 w-[100%] mx-auto px-4 bg-primaryBg items-center">
         <div className="relative">
           <h2 className="text-[40px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
             Our Core Values
@@ -97,8 +97,7 @@ const AboutSection = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
           <FeatureCard
-            title="Global Collaboration
-"
+            title="Global Collaboration"
             description="Connecting logistics professionals worldwide to foster strong, reliable partnerships that drive growth and mutual success across borders."
           />
           <FeatureCard

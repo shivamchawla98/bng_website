@@ -337,7 +337,7 @@ function OurCoreValues() {
           img: AcknowledgmentInsigniasImage,
         },
       ].map(({ ref, content, contentTwo, img }, index) => (
-        <section className="bg-primaryBg " key={index}>
+        <section className="bg-primaryBg py-12" key={index}>
           <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
             {/* First Row */}
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">

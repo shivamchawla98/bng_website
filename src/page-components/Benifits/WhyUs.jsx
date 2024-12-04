@@ -9,14 +9,25 @@ import grid7 from "@/app/images/home/Live-Talk.png";
 import grid8 from "@/app/images/home/Industry-Surveys.png";
 import grid9 from "@/app/images/home/Strict-Selection-Process.png";
 
-import logo1 from "@/app/images/icon1.svg";
-import logo2 from "@/app/images/icon1.svg";
-import logo3 from "@/app/images/icon1.svg";
-import logo4 from "@/app/images/icon1.svg";
-import logo5 from "@/app/images/icon1.svg";
-import logo6 from "@/app/images/icon1.svg";
-import logo7 from "@/app/images/icon1.svg";
-import logo8 from "@/app/images/icon1.svg";
+import MarketingPRDetailImage from "@/app/images/benifits/Marketing-PR-detail.jpg";
+import Support247DetailImage from "@/app/images/benifits/24-7-Support-detail.jpg";
+import AnnualMeetingsDetailImage from "@/app/images/benifits/Annual-Meetings-detail.jpg";
+import TradeDirectoryDetailImage from "@/app/images/benifits/Trade-Directory-detail.jpg";
+import AdvanceToolsDetailImage from "@/app/images/benifits/Advanced-Tools-detail.jpg";
+import RealTimeChatDetailImage from "@/app/images/benifits/Real-timechat-detail.jpg";
+import LiveTalkDetailImage from "@/app/images/benifits/Live-Talk-detail.png";
+import IndustrySureveysDetailImage from "@/app/images/benifits/Industry-Surveys-detail.jpg";
+import StrictSelectionProcessDetailImage from "@/app/images/benifits/Strict-Selection-Process-detail.jpg";
+
+import logo1 from "@/app/images/logos/why-us/PR.png";
+import logo2 from "@/app/images/logos/why-us/24-7.png";
+import logo3 from "@/app/images/logos/why-us/Meetings.png";
+import logo4 from "@/app/images/logos/why-us/Trade-Directory.png";
+import logo5 from "@/app/images/logos/why-us/Advanced-Tool.png";
+import logo6 from "@/app/images/logos/why-us/real-time-chat.png";
+import logo7 from "@/app/images/logos/why-us/Live-talk.png";
+import logo8 from "@/app/images/logos/why-us/survey.png";
+import logo9 from "@/app/images/logos/why-us/survey.png";
 
 import about1 from "@/app/images/abou1.png";
 import about2 from "@/app/images/about2.png";
@@ -25,7 +36,7 @@ import { useRef } from "react";
 const solutionsData2 = [
   {
     id: 1,
-    src: grid1,
+    src: MarketingPRDetailImage,
     alt: "Solution 1",
     heading: "Marketing & PR",
     description1:
@@ -39,7 +50,7 @@ const solutionsData2 = [
   },
   {
     id: 2,
-    src: grid2,
+    src: Support247DetailImage,
     alt: "Solution 2",
     heading: "24/7 Support",
     description1:
@@ -49,11 +60,11 @@ const solutionsData2 = [
     description3:
       "Currently, BNG operates through four regional offices and a growing team of 23 support specialists, with more expansions planned in the near future. Our customer support team is dedicated to ensuring members can manage their logistics challenges with confidence and ease. Whether members need immediate support or have general inquiries, BNG’s team is here to provide solutions, delivering prompt assistance across time zones to keep our global network running smoothly.",
     heightClass: "h-56 lg:h-64 xl:h-auto",
-    logo: logo1,
+    logo: logo2,
   },
   {
     id: 3,
-    src: grid3,
+    src: AnnualMeetingsDetailImage,
     alt: "Solution 3",
     heading: "Annual Meetings",
     description1:
@@ -63,7 +74,7 @@ const solutionsData2 = [
     description3:
       "These gatherings are designed to support BNG members in growing their networks and advancing their business goals, encouraging meaningful interactions and knowledge sharing. With a mix of virtual and in-person events, members enjoy flexible options to participate, no matter their location. By attending these meetings, members gain a competitive edge in the industry, discover potential collaborations, and strengthen their place within BNG’s global community, creating a more interconnected, dynamic network.",
     heightClass: "h-56 lg:h-64 xl:h-auto",
-    logo: logo1,
+    logo: logo3,
   },
   {
     id: 4,
@@ -77,11 +88,11 @@ const solutionsData2 = [
     description3:
       "BNG-Media is dedicated to empowering brands through transformative digital experiences, meeting the growing necessity for digital innovation. For digital project discussions or consultations, BNG members are welcome to contact us at digital@bngglobalmedia.com. We’re committed to delivering impactful, cost-effective solutions, helping our members strengthen their market presence in the fast-paced digital world.",
     heightClass: "h-56 lg:h-64 xl:h-auto",
-    logo: logo1,
+    logo: logo4,
   },
   {
     id: 5,
-    src: grid5,
+    src: AdvanceToolsDetailImage,
     alt: "Solution 5",
     heading: "Advanced Tools",
     description1:
@@ -91,11 +102,11 @@ const solutionsData2 = [
     description3:
       "The Trade Directory is updated to ensure that members have access to accurate, relevant data, helping them make informed decisions and strategically grow their business. By providing access to a vast network of verified contacts, this directory serves as a bridge between BNG members and the wider logistics community, facilitating connections that are essential for expanding influence and visibility. With the Trade Directory, BNG supports members in building a strong foundation of reliable contacts, fostering successful collaborations that drive long-term growth and profitability.",
     heightClass: "h-56 lg:h-64 xl:h-auto",
-    logo: logo1,
+    logo: logo5,
   },
   {
     id: 6,
-    src: grid6,
+    src: RealTimeChatDetailImage,
     alt: "Solution 6",
     heading: "Real-Time Chat",
     description1:
@@ -105,11 +116,11 @@ const solutionsData2 = [
     description3:
       "Whether it’s a quick question or a more detailed discussion, members can connect with colleagues, partners, and new prospects directly within the BNG platform. The chat feature enhances communication across the network, helping members stay in touch and take action on new opportunities as they arise. This interactive approach to communication supports BNG’s goal of building a responsive, engaged community of logistics professionals who can collaborate effectively anytime, anywhere.",
     heightClass: "h-56 lg:h-64 xl:h-auto",
-    logo: logo1,
+    logo: logo6,
   },
   {
     id: 7,
-    src: grid4,
+    src: LiveTalkDetailImage,
     alt: "Solution 7",
     heading: "Live Talk",
     description1:
@@ -120,11 +131,11 @@ const solutionsData2 = [
     description3:
       "The platform is designed to accommodate a variety of business discussions, from quick check-ins to in-depth negotiations, ensuring members can maximize networking opportunities within a secure, accessible environment. Through Live Talk, BNG members can maintain strong, active connections across borders, fostering collaboration and enabling business growth. By facilitating direct, instant communication, Live Talk empowers members to strengthen relationships and develop strategic partnerships, supporting a more interconnected and engaged logistics community.",
     heightClass: "h-56 lg:h-64 xl:h-auto",
-    logo: logo1,
+    logo: logo7,
   },
   {
     id: 8,
-    src: grid5,
+    src: IndustrySureveysDetailImage,
     alt: "Solution 8",
     heading: "Industry Surveys",
     description1:
@@ -135,18 +146,18 @@ const solutionsData2 = [
     description3:
       "Members receive exclusive access to survey findings, allowing them to make informed decisions and adapt their strategies based on the latest insights from peers and industry leaders. BNG’s Survey feature encourages active participation, helping members contribute to a shared knowledge base that benefits the entire network. With access to timely, relevant data, members can adjust their business approaches to stay ahead, ultimately creating a more adaptive and forward-thinking logistics community within BNG.",
     heightClass: "h-56 lg:h-64 xl:h-auto",
-    logo: logo1,
+    logo: logo8,
   },
   {
     id: 9,
-    src: grid9,
+    src: StrictSelectionProcessDetailImage,
     alt: "Solution 5",
     heading: "Strict Selection Process",
     description1:
       "BNG ensures that only reliable and trustworthy companies join the network through a rigorous selection process.",
     description2: "BNG ensures that only reliable and trustworthy companies join the network through a rigorous selection process. Applications undergo credit checks, legal verifications, and trade reference reviews. This thorough process guarantees that all members meet high standards of professionalism, credibility, and reliability. By maintaining a strict selection process, BNG fosters a trusted community where members can collaborate confidently, build valuable partnerships, and grow their businesses within a secure and credible network.",
     heightClass: "h-56 lg:h-64 xl:h-auto",
-    logo: logo8,
+    logo: logo9,
   },
 ];
 const solutionsData = [
@@ -159,6 +170,7 @@ const solutionsData = [
       "Expand your business visibility not only within the network but also on a global B2B portal—all included at no extra cost.",
     description2: "",
     heightClass: "h-56 lg:h-64 xl:h-auto",
+    logo: logo1,
   },
   {
     id: 2,
@@ -169,6 +181,7 @@ const solutionsData = [
       "Our dedicated support team is available 24/7, 365 days a year. Reach out anytime—by call, message, or email—wherever you are in the world.",
     description2: "",
     heightClass: "h-48 lg:h-56",
+    logo: logo2,
   },
   {
     id: 3,
@@ -179,6 +192,7 @@ const solutionsData = [
       "Attend our grand symposium to meet partners and clients in person, fostering strong connections and increasing your visibility within the industry.",
     description2: "Efficient land transportation solutions.",
     heightClass: "h-64 lg:h-72",
+    logo: logo3,
   },
   {
     id: 4,
@@ -189,6 +203,7 @@ const solutionsData = [
       "Access a fully digital directory of global exporters, importers, and logistics professionals, connecting you instantly with key players worldwide.",
     description2: "Cost-effective and reliable rail transport.",
     heightClass: "h-64 lg:h-72",
+    logo: logo4,
   },
   {
     id: 5,
@@ -199,6 +214,7 @@ const solutionsData = [
       "Our technology-centered platform provides essential tools in one place, maximizing the benefits of your membership.",
     description2: "Secure storage facilities and management.",
     heightClass: "h-80 lg:h-96",
+    logo: logo5,
   },
   {
     id: 6,
@@ -209,10 +225,11 @@ const solutionsData = [
       "Enjoy seamless, real-time chat functionality that enables fast, synchronized communication, enhancing networking efficiency.",
     description2: "Tailored logistics solutions for your needs.",
     heightClass: "h-48 lg:h-56",
+    logo: logo6,
   },
   {
     id: 7,
-    src: grid4,
+    src: grid7,
     alt: "Solution 7",
     heading: "Live Talk",
     description1:
@@ -222,13 +239,14 @@ const solutionsData = [
   },
   {
     id: 8,
-    src: grid5,
+    src: grid8,
     alt: "Solution 8",
     heading: "Industry Surveys",
     description1:
       "Receive valuable insights from network surveys that keep you informed about market trends and industry benchmarks, helping you stay competitive and informed.",
     description2: "Secure storage facilities and management.",
     heightClass: "h-80 lg:h-96",
+    logo: logo8,
   },
   {
     id: 9,
@@ -239,7 +257,7 @@ const solutionsData = [
       "BNG ensures that only reliable and trustworthy companies join the network through a rigorous selection process.",
     description2: "BNG ensures that only reliable and trustworthy companies join the network through a rigorous selection process. Applications undergo credit checks, legal verifications, and trade reference reviews. This thorough process guarantees that all members meet high standards of professionalism, credibility, and reliability. By maintaining a strict selection process, BNG fosters a trusted community where members can collaborate confidently, build valuable partnerships, and grow their businesses within a secure and credible network.",
     heightClass: "h-80 lg:h-96",
-    logo: logo8,
+    logo: logo9,
   },
 ];
 
@@ -272,7 +290,6 @@ const WhyUs = () => {
         style={{
           background:
             "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
-
           zIndex: 1,
           filter: "blur(110px)",
           // Alternative fallback
@@ -340,9 +357,9 @@ const WhyUs = () => {
                   <Image
                     src={logo}
                     alt="Logo"
-                    width={40}
-                    height={40}
-                    className="self-start"
+                    width={60}
+                    height={60}
+                    className="self-start bg-white p-2 rounded-full"
                   />
                   <div className="transform transition-all duration-300 translate-y-8 group-hover:translate-y-0">
                     <h3 className="text-xl font-bold mb-2">{heading}</h3>
@@ -367,7 +384,7 @@ const WhyUs = () => {
                       }`}>
                     <div
                       className={`hidden lg:block absolute ${index % 2 === 0 ? "left-16 top-12" : "right-16  bottom-10"
-                        } bottom-[-2px] h-[350px] w-[400px] border-[#6853DB] border-2 rounded-md`}></div>
+                        } h-[350px] w-[400px] border-[#6853DB] border-2 rounded-md`}></div>
                     <Image
                       className="rounded-xl object-cover z-10"
                       src={src}
