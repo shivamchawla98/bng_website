@@ -4,6 +4,7 @@ import about1 from "@/app/images/abou1.png"; // Replace with actual image paths
 import about2 from "@/app/images/about2.png";
 
 function BenifitsSecondSection() {
+  
   return (
     <div className="bg-primaryBg py-14 relative">
       <div
@@ -27,23 +28,23 @@ function BenifitsSecondSection() {
           filter: "blur(50px)",
         }}></div>
 
-      <div className="container bg-primaryBg mx-auto flex flex-col md:flex-row items-center justify-between">
+      <div className="container mx-auto px-8 md:px-16 flex flex-col md:flex-row items-center justify-between">
         {/* left side */}
-        <div className="flex md:flex-row flex-col justify-between w-full ">
-          <div className=" mb-6 flex-col ">
+        <div className="flex flex-col md:flex-row justify-between w-full gap-8">
+          <div className="flex flex-col mb-6 md:max-w-[500px]">
             <Image
               src={about1}
               alt="About Image 1"
-              className="rounded-sm md:w-[500px] md:h-[500px] object-cover "
+              className="rounded-sm w-full h-auto object-cover"
             />
             <p className="text-gray-600 text-[18px] mt-4 md:max-w-[500px]">
               Every buyer, seller, and logistics professional undergoes a
               rigorous approval process, ensuring a trusted business community.
               Join the largest network of industry professionals today!
-            </p>{" "}
+            </p>
           </div>
-          <div className="flex justify-start place-content-start  flex-col md:max-w-[700px] ">
-            <h1 className="text-primary text-[55px] font-bold">
+          <div className="flex flex-col md:max-w-[700px]">
+            <h1 className="text-primary text-[40px] md:text-[55px] font-bold">
               Small investment big benefits
             </h1>
             <h2 className="font-bold text-gray-600">
@@ -54,10 +55,10 @@ function BenifitsSecondSection() {
 
             <Image
               src={about2}
-              alt="About Image 1"
-              className="rounded-sm  object-cover md:h-[450px] w-full mt-6 "
+              alt="About Image 2"
+              className="rounded-sm object-cover w-full h-auto mt-6 md:h-[450px]"
             />
-            <button  className=" mt-10 w-max group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent hover:to-transparent">
+            <button className="mt-10 w-max group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent hover:to-transparent">
               Find out more
               <svg
                 xmlns="http://www.w3.org/2000/svg"

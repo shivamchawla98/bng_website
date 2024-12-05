@@ -78,7 +78,7 @@ const solutionsData2 = [
   },
   {
     id: 4,
-    src: grid4,
+    src: TradeDirectoryDetailImage,
     alt: "Solution 4",
     heading: "Trade Directory",
     description1:

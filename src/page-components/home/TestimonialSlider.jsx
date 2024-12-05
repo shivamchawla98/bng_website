@@ -4,17 +4,18 @@ import Slider from "react-slick";
 import Image from "next/image";
 import Partner from "@/app/images/partners.jpg";
 import Vector from "@/app/images/Vector5.svg";
-import LOGO1 from "@/app/images/logos/latest-members/AEO.png";
-import LOGO2 from "@/app/images/logos/latest-members/CTPAT.png";
-import LOGO3 from "@/app/images/logos/latest-members/FIATA.png";
-import LOGO4 from "@/app/images/logos/latest-members/IATA-ANIMALS.png";
-import LOGO5 from "@/app/images/logos/latest-members/IATA-CEIV-FRESH.png";
-import LOGO6 from "@/app/images/logos/latest-members/IATA-CEIV-PHARMA.png";
-import LOGO7 from "@/app/images/logos/latest-members/IATA-LITHIUM.png";
-import LOGO8 from "@/app/images/logos/latest-members/IATA.png";
-import LOGO9 from "@/app/images/logos/latest-members/ICC.png";
-import LOGO10 from "@/app/images/logos/latest-members/ISO.png";
-import LOGO11 from "@/app/images/logos/latest-members/NVOCC.png";
+import LOGO1 from "@/app/images/logos/members-credited/AEO.png";
+import LOGO2 from "@/app/images/logos/members-credited/CTPAT.png";
+import LOGO3 from "@/app/images/logos/members-credited/FIATA.png";
+import LOGO4 from "@/app/images/logos/members-credited/IATA-ANIMALS.png";
+import LOGO5 from "@/app/images/logos/members-credited/IATA-CEIV-FRESH.png";
+import LOGO6 from "@/app/images/logos/members-credited/IATA-CEIV-PHARMA.png";
+import LOGO7 from "@/app/images/logos/members-credited/IATA-LITHIUM.png";
+import LOGO8 from "@/app/images/logos/members-credited/IATA.png";
+import LOGO9 from "@/app/images/logos/members-credited/ICC.png";
+import LOGO10 from "@/app/images/logos/members-credited/ISO.png";
+import LOGO11 from "@/app/images/logos/members-credited/NVOCC.png";
+import LOGO12 from "@/app/images/logos/members-credited/duns.png";
 const testimonials = [
   {
     name: "Ms. Rekha",
@@ -54,7 +55,7 @@ const testimonials = [
   },
 ];
 const partnerLogos = [
-  LOGO1, LOGO2, LOGO3, LOGO4, LOGO5, LOGO6, LOGO7, LOGO8, LOGO9, LOGO10, LOGO11
+  LOGO1, LOGO2, LOGO3, LOGO4, LOGO5, LOGO6, LOGO7, LOGO8, LOGO9, LOGO10, LOGO11, LOGO12
 ];
 const TestimonialSlider = () => {
   const settings = {
@@ -120,12 +121,12 @@ const TestimonialSlider = () => {
 
             <div className="relative w-full max-w-[800px]">
               <h2 className="text-[40px] font-bold text-gray-900 mb-16 text-left mt-10 relative z-10">
-                Latest Members
+                Members Accredited
               </h2>
               <h2
                 className="absolute text-left top-2 left-0 text-[80px] w-full font-bold text-[#27293B] opacity-[3%] leading-none z-2"
                 aria-hidden="true">
-                Latest Members
+                Members Accredited
               </h2>
             </div>
           </div>

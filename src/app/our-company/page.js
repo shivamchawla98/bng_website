@@ -1,7 +1,7 @@
 import React from "react";
 import { CommonHeroSection } from "@/components/CommonHeroSection/CommonHeroSection";
 import TeamSection from "@/page-components/OurCompany/OurTeam";
-import OurPartners from "@/page-components/OurCompany/OurPartners";
+import LatestMembers from "@/page-components/OurCompany/LatestMembers";
 import { QuoteForm } from "@/page-components/OurCompany/QuoteForm";
 import { FeatureCard } from "@/page-components/OurCompany/FeatureCard";
 import AboutSection from "@/page-components/OurCompany/AboutSections";
@@ -19,7 +19,7 @@ function page() {
         <TeamSection />
       </section> */}
       <section className="bg-secondryBg py-12 md:px-[112px]">
-        <OurPartners />
+        <LatestMembers />
       </section>
       <TestimonialSlider />
       <section className="bg-primaryBg py-14 px-4 relative">

@@ -1,4 +1,4 @@
-import Contactbg from "@/app/images/aboutUsBanner.png"
+import Contactbg from "@/app/images/about-us/banner-about.jpg"
 export const AboutUsHero = () => {
   return (
     <div className="relative h-[400px] bg-primary flex items-center justify-start pl-10" style={{ backgroundImage: `url(${Contactbg.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
