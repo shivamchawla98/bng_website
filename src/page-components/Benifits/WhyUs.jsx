@@ -11,7 +11,7 @@ import grid9 from "@/app/images/home/Strict-Selection-Process.png";
 
 import MarketingPRDetailImage from "@/app/images/benifits/Marketing-PR-detail.jpg";
 import Support247DetailImage from "@/app/images/benifits/24-7-Support-detail.jpg";
-import AnnualMeetingsDetailImage from "@/app/images/benifits/Annual-Meetings-detail.jpg";
+import AnnualMeetingsDetailImage from "@/app/images/benifits/24-7-Support-detail.jpg";
 import TradeDirectoryDetailImage from "@/app/images/benifits/Trade-Directory-detail.jpg";
 import AdvanceToolsDetailImage from "@/app/images/benifits/Advanced-Tools-detail.jpg";
 import RealTimeChatDetailImage from "@/app/images/benifits/Real-timechat-detail.jpg";

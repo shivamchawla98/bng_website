@@ -37,7 +37,7 @@ const newsData = [
 
 const News = () => {
   return (
-    <section className="py-14 md:min-h-[600px] bg-primaryBg relative">
+    <section className="py-14 md:min-h-[600px] h-[800px] bg-primaryBg relative">
       <div
         className="absolute top-0 left-8 w-[200px] h-[200px] rounded-full"
         style={{

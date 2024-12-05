@@ -22,7 +22,7 @@ module.exports = {
       },
       backgroundImage: { 
         // 'custom-nav-gradient': 'linear-gradient(to bottom, #27293B, rgb(230, 235, 244))',
-        'cstm-bg-rad-grad-memb-benfts': 'radial-gradient(circle, #6853DB 20%, rgba(58, 16, 120, var(--tw-bg-opacity)) 90%)',
+        'cstm-bg-rad-grad-memb-benfts': 'radial-gradient(circle, #6853DB 80%, rgba(58, 16, 120, var(--tw-bg-opacity)) 20%)',
        },
     },
   },

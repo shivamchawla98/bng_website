@@ -11,6 +11,15 @@ import ClaimCenterImage from "@/app/images/benifits/Claim-Center-detail.jpg";
 import AcknowledgmentInsigniasImage from "@/app/images/benifits/Acknowledgement-Insegnia-detail.jpg";
 import Image from "next/image";
 
+import MembersAreaVector from "@/app/images/home/MembersArea.svg";
+import GlobalReachVector from "@/app/images/home/GlobalReach.svg";
+import BusinessXchangeVector from "@/app/images/home/BusinessXchange.svg";
+import TrustedPartnersVector from "@/app/images/home/TrustedPartners.svg";
+import PaymentProtectionVector from "@/app/images/home/PaymentProtection.svg";
+import PaymentMonitoringVector from "@/app/images/home/PaymentMonitoring.webp";
+import ClaimCenterVector from "@/app/images/home/ClaimCenter.svg";
+import FreightXchangeVector from "@/app/images/home/FreightXchange.png";
+
 function OurCoreValues() {
   // Refs for scrolling
   const membersAreaRef = useRef(null);
@@ -238,46 +247,55 @@ function OurCoreValues() {
           title="Members Area"
           description="An intuitive, user-friendly member portal designed to streamline networking, providing a centralized space for all your business connections and collaboration needs."
           onClick={() => handleScrollToSection(membersAreaRef)}
+          logo={MembersAreaVector}
         />
         <FeatureCard
           title="Global Reach"
           description="Connect with reliable partners worldwide and access a growing community that meets all your logistics and supply chain requirements."
           onClick={() => handleScrollToSection(globalReachRef)}
+          logo={GlobalReachVector}
         />
         <FeatureCard
           title="Business Xchange"
           description="Access the Business Center, a dedicated area for finding active business leads and sharing opportunities directly with clients in your network."
           onClick={() => handleScrollToSection(businessXchangeRef)}
+          logo={BusinessXchangeVector}
         />
         <FeatureCard
           title="Freight Xchange"
           description="Showcase your freight rates and services to the global trade community via BNG Logistics & B2B Portals, boosting your visibility and increasing business opportunities."
           onClick={() => handleScrollToSection(freightXchangeRef)}
+          logo={FreightXchangeVector}
         />
         <FeatureCard
           title="Trusted Partners"
           description="Membership is granted exclusively to companies with solid reputations, verified through a three-year track record and two business references."
           onClick={() => handleScrollToSection(trustedPartnersRef)}
+          logo={TrustedPartnersVector}
         />
         <FeatureCard
           title="Payment Protection"
           description="The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment.."
           onClick={() => handleScrollToSection(paymentProtectionRef)}
+          logo={PaymentProtectionVector}
         />
         <FeatureCard
           title="Payment Monitoring"
           description="A state-of-the-art system that automatically tracks receivables and payables, keeping all transactions organized and up-to-date.."
           onClick={() => handleScrollToSection(paymentMonitoringRef)}
+          logo={PaymentMonitoringVector}
         />
         <FeatureCard
           title="Claim Center"
           description="A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts."
           onClick={() => handleScrollToSection(claimCenterRef)}
+          logo={ClaimCenterVector}
         />
         <FeatureCard
           title="Acknowledgment Insignias"
           description="BNG’s acknowledgment insignias elevate your profile, showcasing your credibility, payment reliability, and activity level. These badges highlight your professionalism and build trust."
           onClick={() => handleScrollToSection(acknowledgmentInsigniasRef)}
+          logo={ClaimCenterVector}
         />
       </div>
       {/* Detailed Sections */}

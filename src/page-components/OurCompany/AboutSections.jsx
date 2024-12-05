@@ -4,6 +4,15 @@ import about2 from "@/app/images/about-us/About-us-image-2.jpg";
 import OurVisionImage from "@/app/images/about-us/Vision.png";
 import OurMissionImage from "@/app/images/about-us/Mission.png";
 import { FeatureCard } from "./FeatureCard";
+
+import MembersAreaVector from "@/app/images/home/MembersArea.svg";
+import GlobalReachVector from "@/app/images/home/GlobalReach.svg";
+import BusinessXchangeVector from "@/app/images/home/BusinessXchange.svg";
+import TrustedPartnersVector from "@/app/images/home/TrustedPartners.svg";
+import PaymentProtectionVector from "@/app/images/home/PaymentProtection.svg";
+import PaymentMonitoringVector from "@/app/images/home/PaymentMonitoring.webp";
+import ClaimCenterVector from "@/app/images/home/ClaimCenter.svg";
+import FreightXchangeVector from "@/app/images/home/FreightXchange.png";
 const AboutSection = () => {
   return (
     <>
@@ -29,7 +38,7 @@ const AboutSection = () => {
             // Alternative fallback
           }}></div>
         <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto  ">
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12 ">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12 py-16 ">
             <div className="relative flex justify-center items-center">
               <div className="hidden lg:block absolute left-16 bottom-12 h-[350px] w-[400px] border-[#6853DB] border-2 rounded-md"></div>
               <Image
@@ -84,13 +93,13 @@ const AboutSection = () => {
         </div>
       </section>
 
-      <section className="pt-16 w-[100%] mx-auto px-4 bg-primaryBg items-center">
+      <section className="pt-16 w-[100%] mx-auto px-4 bg-primaryBg items-center mb-12">
         <div className="relative">
           <h2 className="text-[40px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
             Our Core Values
           </h2>
           <h2
-            className="absolute text-center top-[-30px] md:left-[30%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            className="absolute text-center top-[-30px] md:left-[30%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2 min-w-[max-content]"
             aria-hidden="true">
             Our Core Values
           </h2>
@@ -99,30 +108,36 @@ const AboutSection = () => {
           <FeatureCard
             title="Global Collaboration"
             description="Connecting logistics professionals worldwide to foster strong, reliable partnerships that drive growth and mutual success across borders."
+            logo={GlobalReachVector}
           />
           <FeatureCard
             title="Integrity & Trust"
             description="Upholding rigorous standards in member vetting, ensuring trustworthy relationships and a secure, credible network for dependable business interactions."
+            logo={TrustedPartnersVector}
           />
           <FeatureCard
             title="Innovation & Technology"
             description="Leveraging advanced tools and technology to streamline operations, enhance communication, and provide valuable insights for informed decision-making."
+            logo={BusinessXchangeVector}
           />
           <FeatureCard
             title="Customer-Centric Support"
             description="Providing 24/7 customer support and regional assistance, dedicated to ensuring seamless service and immediate help whenever needed."
+            logo={ClaimCenterVector}
           />
           <FeatureCard
             title="Transparency & Accountability"
             description="Offering real-time monitoring, performance tracking, and payment protection for clear, accountable, and secure business operations."
+            logo={PaymentProtectionVector}
           />
           <FeatureCard
             title="Growth & Opportunity"
             description="Empowering members with resources like marketing support, a trade directory, and live networking opportunities to fuel continuous growth and success."
+            logo={PaymentMonitoringVector}
           />
         </div>
       </section>
-      <section className="py-24 bg-primaryBg relative">
+      <section className="py-24 bg-primaryBg relative mb-2">
         <div
           className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
           style={{
@@ -143,8 +158,8 @@ const AboutSection = () => {
             filter: "blur(110px)",
             // Alternative fallback
           }}></div>
-        <div className="w-full max-w-7xl px-4 mx-auto md:px-5 lg:px-5 ">
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
+        <div className="w-full max-w-7xl px-4 mx-auto md:px-5 lg:px-5 mb-12">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 py-16">
             <div className="relative flex justify-center items-center">
               <div className="hidden lg:block absolute left-16 bottom-12 h-[350px] w-[400px] border-[#6853DB] border-2 rounded-md"></div>
               <Image
@@ -160,7 +175,7 @@ const AboutSection = () => {
                   Our Vision
                 </h2>
                 <h2
-                  className="absolute top-[-20px] left-0 text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+                  className="absolute top-[-20px] left-0 text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2 min-w-[max-content]"
                   aria-hidden="true">
                   Our Vision
                 </h2>
@@ -181,7 +196,7 @@ const AboutSection = () => {
           </div>
 
           {/* Fourth section */}
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-12">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 py-16">
             <div className="relative flex justify-center items-center lg:order-2">
               <div className="hidden lg:block absolute right-16 bottom-12 h-[350px] w-[400px] border-[#6853DB] border-2 rounded-md"></div>
               <Image
@@ -197,7 +212,7 @@ const AboutSection = () => {
                   Our Mission
                 </h2>
                 <h2
-                  className="absolute top-[-20px] left-0 text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+                  className="absolute top-[-20px] left-0 text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2 min-w-[max-content]"
                   aria-hidden="true">
                   Our Mission
                 </h2>

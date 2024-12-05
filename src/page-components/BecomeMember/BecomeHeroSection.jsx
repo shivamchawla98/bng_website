@@ -1,6 +1,7 @@
 import React from "react";
 import { CheckCircle2 } from "lucide-react";
-import Contactbg from "@/app/images/becomeBg2.jpg";
+import Contactbg from "@/app/images/benifits/Benefits-Page-Banner-1.jpg"
+
 const BecomeHeroSection = () => {
   return (
     <div
@@ -30,24 +31,27 @@ const BecomeHeroSection = () => {
           <div className="flex ">
             <div>
               <h2 className="text-xl font-semibold mb-2 text-[#27293B]">
-                Logistics Network
+                Global Logistics
                 <br />
-                Membership
+                Connection
               </h2>
               <p className="text-gray-600 mb-4 max-w-[280px] text-[18px]">
-                Become part of our community of freight forwarders to start
-                exchanging business
+                Join our vibrant community of freight forwarders and unlock opportunities to exchange business and grow together
               </p>
+              <br />
 
-              <div className="mb-6">
-                <span className="text-[58px] font-extrabold text-[#000]">
-                  $999
+              <div className="mb-6 relative">
+                <span className="absolute bottom-full left-0 text-gray-600 tex-[16px] text-sm mb-[-5px]">Starting at</span>
+                <div className="flex items-end">
+                <span className="text-[58px] font-extrabold text-[#000] leading-none text-[#6853DB]">
+                  $199
                 </span>
-                <span className="text-gray-600">/year</span>
+                <span className="text-gray-600 mb-1">/ year</span>
+                </div>
               </div>
-              <button className="bg-primary rounded-lg text-white px-6 py-3 hover:bg-gradient-to-tr from-[#6853DB] to-[#6853DB] flex items-center">
+              {/* <button className="bg-primary rounded-lg text-white px-6 py-3 hover:bg-gradient-to-tr from-[#6853DB] to-[#6853DB] flex items-center">
                 Become a Member
-              </button>
+              </button> */}
             </div>
 
             <div>
