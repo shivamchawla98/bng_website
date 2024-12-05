@@ -18,10 +18,10 @@ function page() {
       {/* <section className="bg-white py-12">
         <TeamSection />
       </section> */}
+      <TestimonialSlider />
       <section className="bg-secondryBg py-12 md:px-[112px]">
         <LatestMembers />
       </section>
-      <TestimonialSlider />
       <section className="bg-primaryBg py-14 px-4 relative">
         <div
           className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"

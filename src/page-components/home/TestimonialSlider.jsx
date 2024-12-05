@@ -54,9 +54,11 @@ const testimonials = [
     image: "/api/placeholder/40/40",
   },
 ];
+
 const partnerLogos = [
   LOGO1, LOGO2, LOGO3, LOGO4, LOGO5, LOGO6, LOGO7, LOGO8, LOGO9, LOGO10, LOGO11, LOGO12
 ];
+
 const TestimonialSlider = () => {
   const settings = {
     dots: false,
@@ -121,12 +123,12 @@ const TestimonialSlider = () => {
 
             <div className="relative w-full max-w-[800px]">
               <h2 className="text-[40px] font-bold text-gray-900 mb-16 text-left mt-10 relative z-10">
-                Members Accredited
+                Members Accreditation
               </h2>
               <h2
                 className="absolute text-left top-2 left-0 text-[80px] w-full font-bold text-[#27293B] opacity-[3%] leading-none z-2"
                 aria-hidden="true">
-                Members Accredited
+                Members Accreditation
               </h2>
             </div>
           </div>

@@ -15,6 +15,9 @@ return(
   <AboutUs />
   <MemberBenefits />
   <TestimonialSlider />
+  <section className="bg-secondryBg py-12 md:px-[112px]">
+    <LatestMembers />
+  </section>
   <WorldWideReach />
   <Solutions />
   <Conference />
