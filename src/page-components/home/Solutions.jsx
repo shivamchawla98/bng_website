@@ -146,6 +146,14 @@ const Solutions = () => {
             aria-hidden="true">
             Why Us?
           </h2>
+          <div className="flex w-[100%] justify-center ">
+          <p className="text-center text-[18px] w-[80%] text-gray-600">
+            With BNG, receive comprehensive marketing support, 24/7 assistance,
+            and participate in live industry events. Access a global trade
+            directory, advanced tools, and real-time communication features to
+            drive meaningful connections and business growth.
+          </p>
+        </div>
         </div>
 
         {/* Grid with 3 columns */}
