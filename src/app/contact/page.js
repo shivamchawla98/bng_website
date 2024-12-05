@@ -4,9 +4,9 @@ import { FAQ } from "@/components/Faq";
 import { QuoteForm } from '@/page-components/Contact/QuoteForm';
 import { SocialMedia } from '@/page-components/Contact/SocialMedia';
 import ContactUsMap from '@/page-components/Contact/ContactUsMap';
-import MapComponent from '../../page-components/contact/MapComponent';
-import ContactCards from '../../page-components/contact/ContactCards';
-import BusinessLocations from '../../page-components/contact/BusinessLocations';
+import MapComponent from '@//page-components/contact/MapComponent';
+import ContactCards from '@/page-components/contact/ContactCards';
+import BusinessLocations from '@/page-components/contact/BusinessLocations';
 
 const ContactPage = () => {
   return (

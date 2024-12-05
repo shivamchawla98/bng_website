@@ -7,6 +7,7 @@ import WorldWideReach from "@/page-components/home/WorldWideReach";
 import Solutions from "@/page-components/home/Solutions";
 import News from "@/page-components/home/News";
 import Conference from "@/page-components/home/Conferance";
+import LatestMembers from "@/page-components/OurCompany/LatestMembers";
 
 export default function Home() {
 return(
