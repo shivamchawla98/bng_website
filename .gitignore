@@ -18,6 +18,8 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+# Environment Variables
+
 # Ignore the coverage directory
 coverage/
 
@@ -34,7 +36,7 @@ build/
 .idea/
 *.swp
 
-# Ignore lock mnjjiles (depending on your package manager, you can include one of these)
+# Ignore lock files (depending on your package manager, you can include one of these)
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
