@@ -18,14 +18,15 @@ const ContactPage = () => {
           {/* <ContactUsMap /> */}
           <SocialMedia />
         </div>
+        </div>
 
-        <section className="py-16 bg-gray-50 ">
-        <div className="container mx-auto px-4 ">
+        <section className="min-h-80 bg-gray-50 ">
+        <div className="mx-auto">
           <MapComponent address="1600 Amphitheatre Parkway, Mountain View, CA" />
           </div>
           </section>
 
-        <section className="py-16 bg-primaryBg relative">
+        <section className="py-16 relative">
           {/* <div
             className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
             style={{
@@ -48,7 +49,6 @@ const ContactPage = () => {
         </section>
         <FAQ />
       </div>
-    </div>
   );
 };
 

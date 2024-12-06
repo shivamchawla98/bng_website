@@ -19,37 +19,37 @@ import LOGO12 from "@/app/images/logos/members-credited/duns.png";
 const testimonials = [
   {
     name: "Ms. Rekha",
-    email: "Manager Network  & Inside Sales",
+    email: "FORCE LOGISTIC PVT LTD",
     text: "Since joining BNG, we've gained access to reliable partners in regions we previously struggled to penetrate. It’s been a game-changer!",
     image: "/api/placeholder/40/40",
   },
   {
     name: "Mr. Gurbeer Singh Sethi",
-    email: "Director",
+    email: "RADIUS LOGISTICS PRIVATE LIMITED",
     text: "The connections we’ve made through BNG have directly resulted in new business opportunities and stronger customer service across our operations.",
     image: "/api/placeholder/40/40",
   },
   {
     name: "Mr. Munish Kumar Bindlish",
-    email: "Director",
+    email: "FORA GROUPS PRIVATE LIMITED",
     text: "BNG has been instrumental in helping us expand internationally. The network’s support and collaboration are simply outstanding.",
     image: "/api/placeholder/40/40",
   },
   {
     name: "Mr. JASON KLINE",
-    email: "Managing Director",
+    email: "J.B.KLINE & CO. PTY. LTD",
     text: "What sets BNG apart is the genuine community feel. Everyone is eager to help and share valuable insights.",
     image: "/api/placeholder/40/40",
   },
   {
     name: "Mr. Axel Damian Alvarez",
-    email: "General Manager",
+    email: "OCEAN SHIPPING",
     text: "Partnering through BNG has streamlined our processes and introduced us to trustworthy agents we now work with regularly.",
     image: "/api/placeholder/40/40",
   },
   {
     name: "Ms. Sabrina",
-    email: "CEO",
+    email: "SUPER LINK LOGISTICS LIMITED",
     text: "The events and tools BNG provides are unmatched—our team feels more connected and equipped to handle global challenges.",
     image: "/api/placeholder/40/40",
   },

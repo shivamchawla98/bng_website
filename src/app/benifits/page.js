@@ -24,9 +24,9 @@ function page() {
   return (
     <div className='bg-primaryBg'>
       <BenifitsHero />
-      <BenifitsSecondSection />
-      <StatsCounter/>
+      {/* <BenifitsSecondSection /> */}
       <OurCoreValues />
+      <StatsCounter/>
       <WhyUs />
       {/* <BenifitsThirdSection />
 

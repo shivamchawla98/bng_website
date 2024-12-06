@@ -41,7 +41,7 @@ function Header() {
             About us
           </Link>
           <Link
-            href="/conferance"
+            href="#"
             className="font-medium hover:text-primary text-[18px]">
             Conference
           </Link>

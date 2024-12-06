@@ -104,9 +104,7 @@ const PricingTable = () => {
       isPopular: true,
       features: {
         basic: [
-          "UNLIMITED SEARCHES FOR FELLOW MEMBERS",
-          "REAL TIME CHAT TOOL",
-          "DEDICATED MEMBERSHIP PROFILE",
+          "All in Basic",
         ],
         team: "5 USERS PER COMPANY",
         business: "(POST 5 ENQUIRY MONTHLY) (BID FOR 5 ENQUIRY MONTHLY)",
@@ -119,9 +117,7 @@ const PricingTable = () => {
       icon: Globe,
       features: {
         basic: [
-          "UNLIMITED SEARCHES FOR FELLOW MEMBERS",
-          "REAL TIME CHAT TOOL",
-          "DEDICATED MEMBERSHIP PROFILE",
+          "All in Premium",
         ],
         team: "UNLIMITED",
         business: "UNLIMITED",
@@ -138,7 +134,7 @@ const PricingTable = () => {
   ];
 
   return (
-    <div className="min-h-screen relative bg-gradient-to-b max-w-5xl mx-auto from-primary to-purple-600 py-20 rounded-md">
+    <div className="min-h-screen relative bg-gradient-to-b max-w-6xl mx-auto from-primary to-purple-600 py-20 rounded-md">
       <Image
         src={character}
         alt="pricing-bg"
@@ -164,7 +160,7 @@ const PricingTable = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {tiers.map((tier) => (
             <PricingCard key={tier.tier} {...tier} />
           ))}
