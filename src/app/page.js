@@ -15,7 +15,6 @@ return(
   <div className=" w-screen">
   <HeroSection />
   <AboutUs />
-  <SecuritySteps />
   <MemberBenefits />
   <TestimonialSlider />
   <section className="bg-secondryBg py-12 md:px-[112px]">
@@ -23,6 +22,7 @@ return(
   </section>
   <WorldWideReach />
   <Solutions />
+  <SecuritySteps />
   <Conference />
   <News />
   </div>
