@@ -29,7 +29,7 @@ const Conference = () => {
 
           {/* Right Column - Content (60%) */}
           <div className="w-full md:w-[60%] text-left transform transition-all duration-700 translate-y-0 hover:translate-y-[-8px]">
-            <h2 className="text-[44px] font-extrabold text-white mb-6 leading-tight">
+            <h2 className="text-[44px] font-extrabold text-white mb-4 leading-tight">
               Conference
             </h2>
             <p className={`text-[18px] text-white/90 leading-relaxed mb-8 ${styles.slideUp}`}>

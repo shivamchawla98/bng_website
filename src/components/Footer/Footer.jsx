@@ -8,7 +8,7 @@ import linkedin from "@/app/images/linkedin.svg";
 const Footer = () => {
   return (
     <footer
-      className=" text-gray-900 relative shadow-md"
+      className="text-gray-900 relative shadow-md"
       style={{
         background:
           "linear-gradient(180deg, #EFF6FF 100%,#E6EBF4  100%, #D186EB 100%)",
@@ -20,9 +20,9 @@ const Footer = () => {
           zIndex: 1,
           filter: "blur(60.8px)",
         }}></div>
-      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div className="md:flex  md:justify-between ] ">
-          <div className="mt-6 md:mb-2 ">
+      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-10">
+        <div className="md:flex md:justify-between gap-8">
+          <div className="mt-6 md:mb-2 md:w-1/4">
             <SocialLinks />
             <div className="mt-10">
               <h3 className="text-2xl text-wrap font-bold max-w-[250px]">
@@ -34,7 +34,7 @@ const Footer = () => {
                   className="rounded-lg p-2 bg-white border-primary"
                   placeholder="Enter your email"
                 />
-                <button className=" p-2  py-[12px] ml-2  bg-gradient-to-tr from-[#6853DB] to-[#6853DB] border-white rounded-r-lg">
+                <button className="p-2 py-[12px] ml-2 bg-gradient-to-tr from-[#6853DB] to-[#6853DB] border-white rounded-r-lg">
                   <svg
                     width="23"
                     height="16"
@@ -50,53 +50,44 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 lg:gap-12 mt-8 md:mt-0 md:w-3/4">
             <FooterSection
               title="ABOUT US"
               links={[
-                { href: "#", label: "BNG Media" },
-                { href: "#", label: "BNG Shield" },
-                { href: "#", label: "BNG Vendors" },
+                { href: "#", label: "FAQ's" },
+                { href: "#", label: "What We Do" },
+                { href: "#", label: "Our Values" },
+                { href: "#", label: "Our Visions" },
+                { href: "#", label: "Our Mission" },
               ]}
             />
             <FooterSection
               title="SERVICES"
               links={[
-                { href: "#", label: "Industry News" },
-                { href: "#", label: "Network News" },
-                { href: "#", label: "Photo Gallery" },
-                { href: "#", label: "BNG TV" },
+                { href: "#", label: "BNG Vendors" },
+                { href: "#", label: "BNG Cargo Shield" },
+                { href: "#", label: "BNG Tech & Media" },
+                { href: "#", label: "BNG B2B Marketplace" },
               ]}
             />
             <FooterSection
-              title="News & Media"
+              title="Tools"
               links={[
-                { href: "#", label: "Industry News" },
-                { href: "#", label: "Network News" },
-                { href: "#", label: "Photo Gallery" },
-                { href: "#", label: "BNG TV" },
-              ]}
-            />
-            <FooterSection
-              title="Extra"
-              links={[
-                { href: "#", label: "Pricing" },
                 { href: "#", label: "Freight Xchange" },
                 { href: "#", label: "Business Xchange" },
+                { href: "#", label: "Improters Directory" },
                 { href: "#", label: "Exporters Directory" },
-                { href: "#", label: "Importers Directory" },
-                { href: "#", label: "B2B Market" },
               ]}
             />
             <FooterSection
               title="Recourses"
               links={[
-                { href: "#", label: "Shipping Containers" },
-                { href: "#", label: "Aircraft ULD’s" },
-                { href: "#", label: "CBM Calculator" },
-                { href: "#", label: "Cargo Tracking" },
                 { href: "#", label: "Incoterms" },
                 { href: "#", label: "DGR Classes" },
+                { href: "#", label: "Aircraft ULD's" },
+                { href: "#", label: "Cargo Tracking" },
+                { href: "#", label: "CBM Calculator" },
+                { href: "#", label: "Shipping Containers" },
               ]}
             />
           </div>
@@ -117,14 +108,13 @@ const Footer = () => {
 };
 
 const FooterSection = ({ title, links }) => (
-  <div>
-    
-    <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase border-b-[2px]">
+  <div className="w-full">
+    <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase pb-1 border-b-[2px]">
       {title}
     </h2>
     <ul className="text-gray-600 font-medium">
       {links.map((link, index) => (
-        <li key={index} className="mb-4 ">
+        <li key={index} className="mb-4">
           <a href={link.href} className="hover:underline">
             {link.label}
           </a>
@@ -136,7 +126,7 @@ const FooterSection = ({ title, links }) => (
 
 const SocialLinks = () => (
   <div className="flex mt-4 sm:mt-0 gap-2">
-    {socialMediaLinks.map((social, index) => (
+    {socialMediaLinks.map((social) => (
       <a
         key={social.name}
         href={social.href}

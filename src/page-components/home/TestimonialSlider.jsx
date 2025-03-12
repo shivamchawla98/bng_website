@@ -56,7 +56,8 @@ const testimonials = [
 ];
 
 const partnerLogos = [
-  LOGO1, LOGO2, LOGO3, LOGO4, LOGO5, LOGO6, LOGO7, LOGO8, LOGO9, LOGO10, LOGO11, LOGO12
+  LOGO1, LOGO2, LOGO3, LOGO4, LOGO5, LOGO6, LOGO7, LOGO8,
+   LOGO9, LOGO10, LOGO11, LOGO12
 ];
 
 const TestimonialSlider = () => {
@@ -113,8 +114,8 @@ const TestimonialSlider = () => {
                   key={index}
                   src={logo}
                   alt={`Partner ${index + 1}`}
-                  width={140}
-                  height={80}
+                  width={100}
+                  height={60}
                   className="object-scale-down w-[120px] h-[80px]"
                 />
               ))}
@@ -122,9 +123,12 @@ const TestimonialSlider = () => {
 
 
             <div className="relative w-full max-w-[800px]">
-              <h2 className="text-[40px] font-bold text-gray-900 mb-16 text-left mt-10 relative z-10">
+              <h2 className="text-[40px] font-bold text-gray-900  text-left my-4 relative z-10">
                 Members Accreditation
               </h2>
+              <p className="text-sm text-justify text-gray-500">
+              Our partners are selected for their strong local presence and established expertise in cargo operations, ensuring reliability. They undergo thorough screenings for service quality, compliance, and financial stability, which guarantees that we collaborate with only the best in the industry.
+              </p>
               <h2
                 className="absolute text-left top-2 left-0 text-[80px] w-full font-bold text-[#27293B] opacity-[3%] leading-none z-2"
                 aria-hidden="true">

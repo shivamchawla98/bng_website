@@ -2,19 +2,19 @@
 "use client"
 import React from "react";
 import Image from "next/image";
-import rightImg from "@/app/images/home/Logistic2.png";
+import rightImg from "../../../public/ourStory.png";
 import { useRouter } from "next/navigation";
 function AboutUs() {
   const router = useRouter()
   return (
     <div className=" bg-secondryBg px-4 md:px-[112px]  flex flex-col md:flex-row items-center justify-center gap-16 ">
-      <div className="md:w-[400px] relative">
+      <div className="md:w-[500px] relative">
         <Image
           src={rightImg}
           alt="Export Import Containers"
           layout="responsive"
-          width={300}
-          height={200}
+          width={600}
+          height={300}
           className="rounded-lg w-100"
         />
       </div>
@@ -29,11 +29,11 @@ function AboutUs() {
             Our Story
           </h2>
         </div>
-        <p className="text-gray-600 mb-4 text-[18px]">
+        <p className="text-gray-600 mb-4 text-[18px] text-justify">
           Built by a team with over 20 years of expertise in logistics and supply chain management. BNG Group has emerged as a resilient leader in both robust network solutions and B2B relationship-building
           Following nearly three years of in-depth market research and analysis, we launched a network with unique features that empower members to forge strong global partnerships.
         </p>
-        <p className="text-gray-600 mb-6 text-[18px]">
+        <p className="text-gray-600 text-justify mb-6 text-[18px]">
           Join us and gain exclusive access to one of the industry’s largest Exporters/Importers Data Banks—sourced and maintained by BNG Group—designed to support successful, data-driven connections across the globe.
         </p>
         <button onClick={() => router.push("/our-company")} className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent transition-all duraton-300 bg-primary transform hover:translate-x-2" >

@@ -6,11 +6,14 @@ import PricingTable from "@/page-components/BecomeMember/Pricing";
 import WhyUs from "@/page-components/BecomeMember/WhyUs";
 import MemberBenefits from "@/page-components/home/MemberBenifits";
 import TestimonialSlider from "@/page-components/home/TestimonialSlider";
+import ExistingMemberRibbon from "@/page-components/BecomeMember/Ribbon";
+import MembershipForm from "@/page-components/BecomeMember/LeadForm";
 export default function BecomeAMember() {
   return (
     <div>
       <BecomeHeroSection />
-
+<ExistingMemberRibbon />
+<MembershipForm />
       <section className="py-16 bg-primaryBg ">
         <div className="container mx-auto px-4 ">
           <PricingTable />

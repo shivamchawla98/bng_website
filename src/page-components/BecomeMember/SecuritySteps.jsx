@@ -5,6 +5,10 @@ import icon1 from '@/app/images/icon1.svg';
 import fb from '@/app/images/fb.svg';
 import linkedin from '@/app/images/linkedin.svg';
 import utube from '@/app/images/utube.svg';
+import shield from '../../../public/encrypted.png';
+import reference from '../../../public/reference.png';
+import finance from '../../../public/financial.png';
+import approval from '../../../public/approval.png';
 
 const SecuritySteps = () => {
   const steps = [
@@ -12,25 +16,25 @@ const SecuritySteps = () => {
       number: '01',
       title: 'Strict Selection',
       description: 'Top to bottom examination of every application by specialists. In the event that an organization is live with us implies it has gone through with severe determination process',
-      icon: icon1
+      icon: shield
     },
     {
       number: '02',
       title: 'Reference Checks',
       description: 'We connect with confided in contacts for bits of knowledge on your organization before go live with your profile.',
-      icon: fb
+      icon: reference
     },
     {
       number: '03',
       title: 'Financial Checks',
       description: "A strong trust scan of each members profile to ensure it's risk free and good fit. Each approved members profile audited with D-U-N-S as well.",
-      icon: linkedin
+      icon: finance
     },
     {
       number: '04',
       title: 'Approval & Conclusion',
       description: 'A final report for decision making of your application approval to onboard you to the new year of business networking.',
-      icon: utube
+      icon: approval
     }
   ];
 
@@ -38,7 +42,7 @@ const SecuritySteps = () => {
     <div className="w-full  mx-auto px-12 py-12 bg-secondryBg">
       {/* Header */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-extrabold mb-2 text-primary">Multilayer Validation Steps</h2>
+        <h2 className="text-4xl font-extrabold mb-4 text-primary">Multilayer Validation Steps</h2>
 
         <p className="text-gray-600 tracking-widest text-sm">
           WE FOLLOW STRONG DUE DILIGENCE PROCESS
@@ -55,7 +59,7 @@ const SecuritySteps = () => {
         {steps.map((step, index) => (
           <div key={step.number} className="relative flex flex-col items-center text-center mx-4 transition-transform transform hover:scale-105 duration-300">
             {/* Icon for Step */}
-            <div className="w-32 h-32 flex items-center justify-center mb-6 relative z-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg">
+            <div className="w-32 h-32 flex items-center justify-center mb-6 relative z-10 bg-gradient-to-r from-blue-300 to-purple-200 rounded-full shadow-lg">
               <img src={step.icon.src} alt={step.title} className="w-20 h-20 opacity-80" />
             </div>
             

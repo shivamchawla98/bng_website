@@ -91,9 +91,9 @@ function Header() {
 
         {/* Desktop Buttons */}
         <div className="flex align-items-center">
-          <button className="text-primary rounded-lg font-bold px-6 py-3 cursor-pointer flex items-center hover:text-primary text-[18px] ">
+          <a href="https://app.bnglogisticsnetwork.com/" className="text-primary rounded-lg font-bold px-6 py-3 cursor-pointer flex items-center hover:text-primary text-[18px] ">
             Login
-          </button>
+          </a>
           <div className="hidden md:flex space-x-4">
             <button
               onClick={() => router.push("/become-a-member")}
