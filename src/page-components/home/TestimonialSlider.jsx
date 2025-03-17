@@ -24,31 +24,31 @@ const testimonials = [
     image: "/api/placeholder/40/40",
   },
   {
-    name: "Mr. Gurbeer Singh Sethi",
+    name: "Gurbeer Singh Sethi",
     email: "RADIUS LOGISTICS PRIVATE LIMITED",
     text: "The connections we’ve made through BNG have directly resulted in new business opportunities and stronger customer service across our operations.",
     image: "/api/placeholder/40/40",
   },
   {
-    name: "Mr. Munish Kumar Bindlish",
+    name: "Munish Kumar Bindlish",
     email: "FORA GROUPS PRIVATE LIMITED",
     text: "BNG has been instrumental in helping us expand internationally. The network’s support and collaboration are simply outstanding.",
     image: "/api/placeholder/40/40",
   },
   {
-    name: "Mr. JASON KLINE",
+    name: "JASON KLINE",
     email: "J.B.KLINE & CO. PTY. LTD",
     text: "What sets BNG apart is the genuine community feel. Everyone is eager to help and share valuable insights.",
     image: "/api/placeholder/40/40",
   },
   {
-    name: "Mr. Axel Damian Alvarez",
+    name: "Axel Damian Alvarez",
     email: "OCEAN SHIPPING",
     text: "Partnering through BNG has streamlined our processes and introduced us to trustworthy agents we now work with regularly.",
     image: "/api/placeholder/40/40",
   },
   {
-    name: "Ms. Sabrina",
+    name: "Sabrina",
     email: "SUPER LINK LOGISTICS LIMITED",
     text: "The events and tools BNG provides are unmatched—our team feels more connected and equipped to handle global challenges.",
     image: "/api/placeholder/40/40",
@@ -108,7 +108,7 @@ const TestimonialSlider = () => {
         <div className="flex flex-col lg:flex-row  items-center justify-center w-full gap-8 translate-y-[20px] md:translate-x-[150px]">
           {/* Image Section */}
           <div className="w-full lg:w-1/2 relative h-[400px] flex flex-col items-start justify-center mt-[10rem]">
-            <div className="flex flex-wrap gap-8 m-12">
+            <div className="grid grid-cols-4 gap-4 md:gap-8 m-2 md:m-12">
               {partnerLogos.map((logo, index) => (
                 <Image
                   key={index}
@@ -123,7 +123,7 @@ const TestimonialSlider = () => {
 
 
             <div className="relative w-full max-w-[800px]">
-              <h2 className="text-[40px] font-bold text-gray-900  text-left my-4 relative z-10">
+              <h2 className="text-[40px] font-bold text-gray-900 text-center  md:text-left my-4 relative z-10">
                 Members Accreditation
               </h2>
               <p className="text-sm text-justify text-gray-500">
@@ -154,7 +154,7 @@ const TestimonialSlider = () => {
                 <div key={index} className="p-4">
                   <div className="bg-white shadow-lg rounded-xl p-6 max-w-[300px]">
                     <div className="space-y-6">
-                      <p className="text-gray-600 text-[18px]">
+                      <p className="text-gray-500 text-sm">
                         {testimonial.text}
                       </p>
                       <div className="flex items-center gap-4">
@@ -164,10 +164,10 @@ const TestimonialSlider = () => {
                           className="w-10 h-10 rounded-full"
                         />
                         <div>
-                          <h4 className="font-semibold text-gray-900">
+                          <h4 className="font-medium text-gray-900">
                             {testimonial.name}
                           </h4>
-                          <p className="text-gray-600 text-[18px]">
+                          <p className="text-gray-600 text-sm">
                             {testimonial.email}
                           </p>
                         </div>

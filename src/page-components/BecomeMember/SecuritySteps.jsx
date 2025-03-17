@@ -42,9 +42,9 @@ const SecuritySteps = () => {
     <div className="w-full  mx-auto px-12 py-12 bg-secondryBg">
       {/* Header */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-extrabold mb-4 text-primary">Multilayer Validation Steps</h2>
+        <h2 className="text-4xl font-extrabold mb-4 text-primary">Multilayer Validation</h2>
 
-        <p className="text-gray-600 tracking-widest text-sm">
+        <p className="text-gray-500 tracking-widest text-sm">
           WE FOLLOW STRONG DUE DILIGENCE PROCESS
         </p>
       </div>
@@ -59,7 +59,7 @@ const SecuritySteps = () => {
         {steps.map((step, index) => (
           <div key={step.number} className="relative flex flex-col items-center text-center mx-4 transition-transform transform hover:scale-105 duration-300">
             {/* Icon for Step */}
-            <div className="w-32 h-32 flex items-center justify-center mb-6 relative z-10 bg-gradient-to-r from-blue-300 to-purple-200 rounded-full shadow-lg">
+            <div className="w-32 h-32 flex items-center justify-center mb-6 relative z-10 bg-gradient-to-r from-purple-200 to-[#6853DB] rounded-full shadow-lg">
               <img src={step.icon.src} alt={step.title} className="w-20 h-20 opacity-80" />
             </div>
             

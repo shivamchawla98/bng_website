@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import LOGO from "@/app/images/logos/Logistic3.png";
+import LOGO from "../../../public/BNG Logo 1.png";
 import Image from "next/image";
 
 function Header() {
@@ -24,7 +24,7 @@ function Header() {
       <div className="container mx-auto flex justify-between items-center text-[#27293B]">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold">
-          <Image src={LOGO} alt="logo" width={100} className="w-full"/>
+          <Image src={LOGO} alt="logo" width={140} height={120} className="w-full"/>
         </Link>
 
         {/* Desktop Navigation */}
@@ -91,13 +91,13 @@ function Header() {
 
         {/* Desktop Buttons */}
         <div className="flex align-items-center">
-          <a href="https://app.bnglogisticsnetwork.com/" className="text-primary rounded-lg font-bold px-6 py-3 cursor-pointer flex items-center hover:text-primary text-[18px] ">
+          <a href="https://app.bnglogisticsnetwork.com/" className="text-primary cursor-pointer rounded-lg font-bold px-6 py-3  flex items-center hover:text-primary text-[16px] ">
             Login
           </a>
           <div className="hidden md:flex space-x-4">
             <button
               onClick={() => router.push("/become-a-member")}
-              className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary transition-all duration-300 transform hover:translate-x-2">
+              className="group bg-gradient-to-tr  from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary transition-all duration-300 transform hover:translate-x-2">
               Become a Member
             </button>
           </div>

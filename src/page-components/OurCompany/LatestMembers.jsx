@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import FORALOGO from "@/app/images/logos/latest-members/FORA-LOGO.png";
 import FORCELOGO from "@/app/images/logos/latest-members/force.png";
 import JBKLINELOGO from "@/app/images/logos/latest-members/JBK-Line.png";
@@ -10,6 +10,8 @@ import SUPERLINKLOGO from "@/app/images/logos/latest-members/superlink.png";
 
 function LatestMembers() {
   const logos = [FORALOGO, FORCELOGO, JBKLINELOGO, OCEANSHIPPINGLOGO, RADIUSLOGISTICSLOGO, SUPERLINKLOGO];
+  const [isHovering, setIsHovering] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
     <section style={styles.section}>
@@ -20,16 +22,36 @@ function LatestMembers() {
         </h2>
       </div>
       <div style={styles.logoSlider}>
-        <div style={styles.logoSlideTrack}>
+        <div 
+          style={{
+            ...styles.logoSlideTrack,
+            animationPlayState: isHovering ? 'paused' : 'running'
+          }}
+        >
           {[...logos, ...logos].map((logo, index) => (
-            <div key={index} style={styles.logoSlide}>
+            <div 
+              key={index} 
+              style={styles.logoSlide}
+              onMouseEnter={() => {
+                setIsHovering(true);
+                setHoveredIndex(index);
+              }}
+              onMouseLeave={() => {
+                setIsHovering(false);
+                setHoveredIndex(null);
+              }}
+            >
               <div style={styles.logoContainer}>
                 <Image
                   src={logo}
-                  alt={`Member logo ${index + 1}`}
+                  alt={`Member logo ${index % logos.length + 1}`}
                   width={150}
                   height={75}
-                  style={styles.grayscaleLogo}
+                  style={{
+                    ...styles.logo,
+                    filter: hoveredIndex === index ? 'none' : 'grayscale(100%)',
+                    transition: 'filter 0.3s ease'
+                  }}
                 />
               </div>
             </div>
@@ -97,11 +119,12 @@ const styles = {
   logoSlideTrack: {
     display: "flex",
     animation: "scroll 20s linear infinite",
-    width: "calc(150px * ${logos.length * 2})", // Double the width for seamless looping
+    width: "calc(150px * 12)", // Double the width for 6 logos repeated twice
   },
   logoSlide: {
     flex: "0 0 auto",
     margin: "0 20px",
+    cursor: "pointer",
   },
   logoContainer: {
     display: "flex",
@@ -110,8 +133,7 @@ const styles = {
     width: "150px",
     height: "75px",
   },
-  grayscaleLogo: {
-    filter: "grayscale(100%)",
+  logo: {
     width: "100%",
     height: "100%",
     objectFit: "contain",

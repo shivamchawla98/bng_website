@@ -55,10 +55,10 @@ const Footer = () => {
               title="ABOUT US"
               links={[
                 { href: "#", label: "FAQ's" },
-                { href: "#", label: "What We Do" },
                 { href: "#", label: "Our Values" },
                 { href: "#", label: "Our Visions" },
                 { href: "#", label: "Our Mission" },
+                { href: "#", label: "What We Do" },
               ]}
             />
             <FooterSection
@@ -94,13 +94,26 @@ const Footer = () => {
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm sm:text-center text-gray-900">
+          <p className="text-sm sm:text-center text-gray-900">
+          2024
+           <a href="https://google.com/" className="hover:underline">BNG</a>
+            Logistics Network. © All Rights Reserved.
             2024{" "}
-            <a href="https://google.com/" className="hover:underline">
-              BNG
-            </a>
-            . All Rights Reserved.
-          </span>
+            
+          </p>
+          <nav className="flex justify-center items-center py-4 text-gray-900 text-sm">
+      <a href="/privacy-policy" className="hover:text-gray-900 transition-colors">
+        Privacy Policy
+      </a>
+      <span className="mx-2">|</span>
+      <a href="/terms-of-use" className="hover:text-gray-900 transition-colors">
+        Terms of Use
+      </a>
+      <span className="mx-2">|</span>
+      <a href="/contact" className="hover:text-gray-900 transition-colors">
+        Reach Us
+      </a>
+    </nav>
         </div>
       </div>
     </footer>

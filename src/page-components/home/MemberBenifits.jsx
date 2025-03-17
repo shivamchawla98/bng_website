@@ -13,7 +13,9 @@ import PaymentProtectionVector from "@/app/images/home/PaymentProtection.svg";
 import PaymentMonitoringVector from "@/app/images/home/PaymentMonitoring.webp";
 import ClaimCenterVector from "@/app/images/home/ClaimCenter.svg";
 import FreightXchangeVector from "@/app/images/home/FreightXchange.png";
-import ship from "@/app/images/home/Benifits-Blue-Ship.png";
+import AcknowledgementVector from "../../../public/acknowledgement.png";
+// import ship from "@/app/images/home/Benifits-Blue-Ship.png";
+import ship from '../../../public/ship.png'
 
 function MemberBenefits() {
   const [scrollY, setScrollY] = useState(0);
@@ -152,7 +154,7 @@ function MemberBenefits() {
       title: "Acknowledgement Insignias",
       description:
         "A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts.",
-      image: ClaimCenterVector,
+      image: AcknowledgementVector,
     },
   ];
 
@@ -194,7 +196,7 @@ function MemberBenefits() {
                 key={index}
                 className="flex flex-col p-4 justify-center align-middle">
                 <div className="top-0 w-[400px] justify-center flex flex-col items-center align-middle">
-                  <div className="w-44 h-44 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer">
+                  <div className=" w-44 h-44 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer">
                     <Image
                       src={benefit.image}
                       alt="Member Benefits"
@@ -202,14 +204,14 @@ function MemberBenefits() {
                       className="object-contain md:block hidden relative transition-transform duration-300 group-hover:scale-110"
                     />
                     <div className="text-white text-center mt-2 transition-all duration-300 group-hover:translate-y-1">
-                      <div className="font-semibold text-[14px] group-hover:text-opacity-90">
+                      <div className="font-medium text-base group-hover:text-opacity-90">
                         {benefit.title}
                       </div>
                     </div>
                   </div>
 
                   <div class="flex items-center justify-center h-44">
-                    <p className="text-gray-600 text-[18px] text-left">
+                    <p className="text-gray-500 text-base text-left">
                       {benefit.description}
                     </p>
                   </div>
@@ -220,9 +222,15 @@ function MemberBenefits() {
           <div className="relative" style={{ minHeight: '800px' }}>
             {/* Dotted Line */}
             <div
-              className="border-[2.5px] border-dotted  border-gray-600 absolute left-1/2 -translate-x-1/2"
-              style={{ height: '100%', top: '0', bottom: '0' }}
-            />
+  className="border-[1.5px] border-dashed border-gray-600 absolute left-1/2 -translate-x-1/2"
+  style={{
+    height: '100%',
+    top: '0',
+    bottom: '0',
+    borderStyle: 'dashed',
+    borderImage: 'repeating-linear-gradient(to bottom, black, black 10px, transparent 10px, transparent 20px) 1',
+  }}
+/>
 
             {/* Ship Container */}
             <div
@@ -235,7 +243,7 @@ function MemberBenefits() {
                 zIndex: 1000
               }}
             >
-              <div className="w-[260px] h-[260px] relative">
+              <div className="w-[260px] h-[260px] rotate-90 relative">
                 <Image
                   src={ship}
                   alt="Ship"
@@ -253,7 +261,7 @@ function MemberBenefits() {
                 className="flex flex-col p-4 justify-center align-middle">
                 <div className="top-0 w-[400px] justify-center flex flex-col items-center align-middle">
                   <div class="flex items-center justify-center h-44">
-                    <p className="text-gray-600 text-[18px] text-left">
+                    <p className="text-gray-500 text-base lg:ml-4 text-left">
                       {benefit.description}
                     </p>
                   </div>
@@ -265,7 +273,7 @@ function MemberBenefits() {
                       className="object-contain md:block hidden relative transition-transform duration-300 group-hover:scale-110"
                     />
                     <div className="text-white text-center mt-2 transition-all duration-300 group-hover:translate-y-1">
-                      <div className="font-semibold text-[14px] group-hover:text-opacity-90">
+                      <div className="font-medium text-base group-hover:text-opacity-90">
                         {benefit.title}
                       </div>
                     </div>

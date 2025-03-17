@@ -53,7 +53,7 @@ const HeroSection = () => {
             <span className="text-primary"> forwarders </span>
             daily
           </h1>
-          <p className="text-gray-600 mb-8 text-[18px]">
+          <p className="text-gray-600 mb-8 text-base">
             Experience the next generation of forwarder networks. Tired of
             investing in multiple networks with minimal returns? Discover a
             fresh approach to partnership here!
@@ -113,10 +113,10 @@ const HeroSection = () => {
               transition: 'all 0.3s ease-out'
             }}>
             <div className="flex items-center space-x-2">
-              <div className="bg-purple-100 p-2 rounded-full">
+              <div className="bg-purple-100 p-1 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-purple-600"
+                  className="h-5 w-5 text-purple-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor">
@@ -128,7 +128,7 @@ const HeroSection = () => {
                   />
                 </svg>
               </div>
-              <span className="font-semibold text-[#27293B]">
+              <span className="font-medium text-sm text-[#27293B]">
                 215+ Ports and Airports
               </span>
             </div>
@@ -140,7 +140,7 @@ const HeroSection = () => {
               transition: 'all 0.3s ease-out'
             }}>
             <div className="flex items-center space-x-2">
-              <div className="bg-purple-100 p-2 rounded-full">
+              <div className="bg-purple-100 p-1 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6 text-purple-600"
@@ -155,7 +155,7 @@ const HeroSection = () => {
                   />
                 </svg>
               </div>
-              <span className="font-semibold text-[#27293B]">
+              <span className="font-medium text-sm text-[#27293B]">
                 85% Active Members
               </span>
             </div>
@@ -167,10 +167,10 @@ const HeroSection = () => {
               transition: 'all 0.3s ease-out'
             }}>
             <div className="flex items-center space-x-2">
-              <div className="bg-purple-100 p-2 rounded-full">
+              <div className="bg-purple-100 p-1 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-purple-600"
+                  className="h-5 w-5 text-purple-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor">
@@ -182,7 +182,7 @@ const HeroSection = () => {
                   />
                 </svg>
               </div>
-              <span className="font-semibold text-[#27293B]">
+              <span className="font-medium text-sm text-[#27293B]">
                 20+ Years of Experience
               </span>
             </div>
@@ -194,10 +194,10 @@ const HeroSection = () => {
               transition: 'all 0.3s ease-out'
             }}>
             <div className="flex items-center space-x-2">
-              <div className="bg-purple-100 p-2 rounded-full">
+              <div className="bg-purple-100 p-1 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-purple-600"
+                  className="h-5 w-5 text-purple-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor">
@@ -209,7 +209,7 @@ const HeroSection = () => {
                   />
                 </svg>
               </div>
-              <span className="font-semibold text-[#27293B]">
+              <span className="font-medium text-sm text-[#27293B]">
                 150+ Countries
               </span>
             </div>
