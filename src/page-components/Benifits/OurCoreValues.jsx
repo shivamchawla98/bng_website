@@ -1,14 +1,14 @@
 import React, { useRef } from "react";
 import { FeatureCard } from "../OurCompany/FeatureCard";
-import MembersAreaImage from "@/app/images/benifits/Members-Area-detail.jpg";
-import GlobalReachImage from "@/app/images/benifits/Global-Reach-detail.jpg";
-import BusinessXchangeImage from "@/app/images/benifits/Business-Xchange-detail.jpg";
-import FreightXchangeImage from "@/app/images/benifits/Freight-Xchange-detail.jpg";
-import TrustedPartnersImage from "@/app/images/benifits/Trusted-Partners-detail.jpg";
-import PaymentProtectionImage from "@/app/images/benifits/Payment-Protection-detail.jpg";
-import PaymentMonitoringImage from "@/app/images/benifits/Payment-Monitoring-detail.jpg";
-import ClaimCenterImage from "@/app/images/benifits/Claim-Center-detail.jpg";
-import AcknowledgmentInsigniasImage from "@/app/images/benifits/Acknowledgement-Insegnia-detail.jpg";
+import MembersAreaImage from "../../../public/members_benefit/Member Area.png";
+import GlobalReachImage from "../../../public/members_benefit/Global Reach.png";
+import BusinessXchangeImage from "../../../public/members_benefit/Business Xchange.png";
+import FreightXchangeImage from "../../../public/members_benefit/Freight Xchange.png";
+import TrustedPartnersImage from "../../../public/members_benefit/Trusted Partners.png";
+import PaymentProtectionImage from "../../../public/members_benefit/Payment Protection.png";
+import PaymentMonitoringImage from "../../../public/members_benefit/Payment Monitoring.png";
+import ClaimCenterImage from "../../../public/members_benefit/Claim Center.png";
+import AcknowledgmentInsigniasImage from "../../../public/members_benefit/Acknowledgment Insignias.png";
 import Image from "next/image";
 
 import MembersAreaVector from "@/app/images/home/MembersArea.svg";

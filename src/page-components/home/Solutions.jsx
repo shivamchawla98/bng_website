@@ -1,13 +1,13 @@
 import Image from "next/image";
-import grid1 from "@/app/images/home/Marketing-PR.png";
-import grid2 from "@/app/images/home/24-7-Support.png";
-import grid3 from "@/app/images/home/Annual-Meetings.png";
-import grid4 from "@/app/images/home/Trade-Directory.png";
-import grid5 from "@/app/images/home/Advance-Tools.jpg";
-import grid6 from "@/app/images/home/Real-Time-Chat.png";
-import grid7 from "@/app/images/home/Live-Talk.png";
-import grid8 from "@/app/images/home/Industry-Surveys.png";
-import grid9 from "@/app/images/home/Strict-Selection-Process.png";
+import grid1 from "../../../public/why_us/Marketing & PR.png";
+import grid2 from "../../../public/why_us/support 247.png";
+import grid3 from "../../../public/why_us/Annual Meetings.png";
+import grid4 from "../../../public/why_us/Trade directory.png";
+import grid5 from "../../../public/why_us/Advanced Tools.png";
+import grid6 from "../../../public/why_us/Real-Time Chat.png";
+import grid7 from "../../../public/why_us/Live Talk.png"; 
+import grid8 from "../../../public/why_us/Industry Surveys.png"; 
+import grid9 from "../../../public/why_us/Strict Selection Process.png";
 
 import logo1 from "@/app/images/logos/why-us/PR.png";
 import logo2 from "@/app/images/logos/why-us/24-7.png";

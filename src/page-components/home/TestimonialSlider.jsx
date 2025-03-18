@@ -4,18 +4,19 @@ import Slider from "react-slick";
 import Image from "next/image";
 import Partner from "@/app/images/partners.jpg";
 import Vector from "@/app/images/Vector5.svg";
-import LOGO1 from "@/app/images/logos/members-credited/AEO.png";
-import LOGO2 from "@/app/images/logos/members-credited/CTPAT.png";
-import LOGO3 from "@/app/images/logos/members-credited/FIATA.png";
-import LOGO4 from "@/app/images/logos/members-credited/IATA-ANIMALS.png";
-import LOGO5 from "@/app/images/logos/members-credited/IATA-CEIV-FRESH.png";
-import LOGO6 from "@/app/images/logos/members-credited/IATA-CEIV-PHARMA.png";
-import LOGO7 from "@/app/images/logos/members-credited/IATA-LITHIUM.png";
-import LOGO8 from "@/app/images/logos/members-credited/IATA.png";
-import LOGO9 from "@/app/images/logos/members-credited/ICC.png";
-import LOGO10 from "@/app/images/logos/members-credited/ISO.png";
-import LOGO11 from "@/app/images/logos/members-credited/NVOCC.png";
-import LOGO12 from "@/app/images/logos/members-credited/duns.png";
+import LOGO1 from "../../../public/MEMBER'S ACCREDIATIONS/MEMBERS ACCREDIATIONS-01.png";
+import LOGO2 from "../../../public/MEMBER'S ACCREDIATIONS/MEMBERS ACCREDIATIONS-02.png";
+import LOGO3 from "../../../public/MEMBER'S ACCREDIATIONS/MEMBERS ACCREDIATIONS-03.png";
+import LOGO4 from "../../../public/MEMBER'S ACCREDIATIONS/MEMBERS ACCREDIATIONS-04.png";
+import LOGO5 from "../../../public/MEMBER'S ACCREDIATIONS/MEMBERS ACCREDIATIONS-05.png";
+import LOGO6 from "../../../public/MEMBER'S ACCREDIATIONS/MEMBERS ACCREDIATIONS-06.png";
+import LOGO7 from "../../../public/MEMBER'S ACCREDIATIONS/MEMBERS ACCREDIATIONS-07.png";
+import LOGO8 from "../../../public/MEMBER'S ACCREDIATIONS/MEMBERS ACCREDIATIONS-08.png";
+import LOGO9 from "../../../public/MEMBER'S ACCREDIATIONS/MEMBERS ACCREDIATIONS-09.png";
+import LOGO10 from "../../../public/MEMBER'S ACCREDIATIONS/MEMBERS ACCREDIATIONS-10.png";
+import LOGO11 from "../../../public/MEMBER'S ACCREDIATIONS/MEMBERS ACCREDIATIONS-11.png";
+import LOGO12 from "../../../public/MEMBER'S ACCREDIATIONS/MEMBERS ACCREDIATIONS-12.png";
+
 const testimonials = [
   {
     name: "Ms. Rekha",
@@ -114,8 +115,8 @@ const TestimonialSlider = () => {
                   key={index}
                   src={logo}
                   alt={`Partner ${index + 1}`}
-                  width={100}
-                  height={60}
+                  width={120}
+                  height={80}
                   className="object-scale-down w-[120px] h-[80px]"
                 />
               ))}

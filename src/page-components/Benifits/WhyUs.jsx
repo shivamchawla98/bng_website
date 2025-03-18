@@ -9,15 +9,15 @@ import grid7 from "@/app/images/home/Live-Talk.png";
 import grid8 from "@/app/images/home/Industry-Surveys.png";
 import grid9 from "@/app/images/home/Strict-Selection-Process.png";
 
-import MarketingPRDetailImage from "@/app/images/benifits/Marketing-PR-detail.jpg";
-import Support247DetailImage from "@/app/images/benifits/24-7-Support-detail.jpg";
-import AnnualMeetingsDetailImage from "@/app/images/benifits/24-7-Support-detail.jpg";
-import TradeDirectoryDetailImage from "@/app/images/benifits/Trade-Directory-detail.jpg";
-import AdvanceToolsDetailImage from "@/app/images/benifits/Advanced-Tools-detail.jpg";
-import RealTimeChatDetailImage from "@/app/images/benifits/Real-timechat-detail.jpg";
-import LiveTalkDetailImage from "@/app/images/benifits/Live-Talk-detail.png";
-import IndustrySureveysDetailImage from "@/app/images/benifits/Industry-Surveys-detail.jpg";
-import StrictSelectionProcessDetailImage from "@/app/images/benifits/Strict-Selection-Process-detail.jpg";
+import MarketingPRDetailImage from "../../../public/why_us/Marketing & PR.png";
+import Support247DetailImage from "../../../public/why_us/support 247.png";
+import AnnualMeetingsDetailImage from "../../../public/why_us/Annual Meetings.png";
+import TradeDirectoryDetailImage from "../../../public/why_us/Trade directory.png";
+import AdvanceToolsDetailImage from "../../../public/why_us/Advanced Tools.png";
+import RealTimeChatDetailImage from "../../../public/why_us/Real-Time Chat.png";
+import LiveTalkDetailImage from "../../../public/why_us/Live Talk.png"; 
+import IndustrySureveysDetailImage from "../../../public/why_us/Industry Surveys.png"; 
+import StrictSelectionProcessDetailImage from "../../../public/why_us/Strict Selection Process.png";
 
 import logo1 from "@/app/images/logos/why-us/PR.png";
 import logo2 from "@/app/images/logos/why-us/24-7.png";
