@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
+import { Home, Rocket, Globe } from 'lucide-react';
 
 const ModalMembershipForm = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
@@ -7,7 +8,8 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
     lastName: '',
     companyName: '',
     companyEmail: '',
-    mobileNumber: ''
+    mobileNumber: '',
+    membershipTier: 'tier-basic' // Default selection
   });
   
   const [loading, setLoading] = useState(false);
@@ -79,7 +81,8 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
       lastName: '',
       companyName: '',
       companyEmail: '',
-      mobileNumber: ''
+      mobileNumber: '',
+      membershipTier: 'tier-basic'
     });
     setSubmitted(false);
   };
@@ -97,6 +100,81 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
     }
   };
   
+  const tiers = [
+    {
+      name: 'Basic',
+      id: 'tier-basic',
+      priceMonthly: '$199',
+      mostPopular: false,
+      icon: Home,
+      color: 'bg-blue-500',
+      description: 'Essential global shipping membership with basic features'
+    },
+    {
+      name: 'Premium',
+      id: 'tier-premium',
+      priceMonthly: '$499',
+      mostPopular: true,
+      icon: Rocket,
+      color: 'bg-purple-600',
+      description: 'Enhanced benefits with more access and better business tools'
+    },
+    {
+      name: 'ELITE',
+      id: 'tier-elite',
+      priceMonthly: '$1999',
+      mostPopular: false,
+      icon: Globe,
+      color: 'bg-indigo-800',
+      description: 'Unlimited access with premium features and maximum visibility'
+    }
+  ];
+  
+  const sections = [
+    {
+      name: 'Basic Features',
+      features: [
+        { name: 'UNLIMITED SEARCHES FOR FELLOW MEMBERS', tiers: { Basic: true, Premium: true, ELITE: true } },
+        { name: 'REALTIME CHAT', tiers: { Basic: true, Premium: true, ELITE: true } },
+        { name: 'DEDICATED MEMBERSHIP PROFILE', tiers: { Basic: true, Premium: true, ELITE: true } },
+        { name: 'CERTIFICATE OF MEMBERSHIP', tiers: { Basic: true, Premium: true, ELITE: true } },
+        { name: 'MEMBERSHIP BADGE', tiers: { Basic: true, Premium: true, ELITE: true } },
+      ],
+    },
+    {
+      name: 'Team & Management',
+      features: [
+        { name: 'TEAM MEMBERS / USERS (Same Country / Same Company)', tiers: { Basic: '2 USERS', Premium: '6 USERS', ELITE: 'UNLIMITED' } },
+        { name: 'BRANCH OFFICES (Same Country / Same Company)', tiers: { Basic: 'H1Q + 1 BRANCH', Premium: 'H1Q + 2 BRANCH', ELITE: 'UNLIMITED' } },
+      ],
+    },
+    {
+      name: 'Business Tools',
+      features: [
+        { name: 'BUSINESS XCHANGE (Enquiries)', tiers: { Basic: '1 ENQUIRY', Premium: '2 ENQUIRIES', ELITE: 'UNLIMITED' } },
+        { name: 'FREIGHT VIEWER (Promotional Posts)', tiers: { Basic: '1 POST', Premium: '5 POSTS', ELITE: 'UNLIMITED' } },
+        { name: 'PR AND MARKETING', tiers: { Basic: '1 POST PER MONTH', Premium: '4 POSTS PER MONTH', ELITE: '16 POSTS PER MONTH' } },
+        { name: 'BE ON TOP SEARCH RESULTS', tiers: { Basic: false, Premium: false, ELITE: true } },
+      ],
+    }
+  ];
+  
+  // Function to get features for a specific tier
+  const getKeyFeaturesForTier = (tierName) => {
+    const features = [];
+    sections.forEach(section => {
+      section.features.forEach(feature => {
+        const value = feature.tiers[tierName];
+        if (value === true) {
+          features.push(feature.name);
+        } else if (value !== false && value !== undefined) {
+          features.push(`${feature.name}: ${value}`);
+        }
+      });
+    });
+    return features.slice(0, 5); // Return only top 5 features for display
+  };
+  
   if (!isOpen) return null;
   
   return (
@@ -109,9 +187,9 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
     >
       <div 
         ref={modalRef}
-        className="bg-white rounded-xl shadow-2xl w-full max-w-xl max-h-[90vh] overflow-y-auto animate-fadeIn"
+        className="bg-white rounded-xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto animate-fadeIn"
       >
-        <div className="sticky top-0 bg-white px-6 py-4 border-b flex justify-between items-center">
+        <div className="sticky top-0 bg-white px-6 py-4 border-b flex justify-between items-center z-10">
           <h2 id="modal-title" className="text-2xl font-bold text-indigo-800">Become a BNG Member</h2>
           <button 
             onClick={onClose} 
@@ -134,8 +212,13 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-2">Application Submitted!</h3>
-              <p className="text-gray-600 mb-6">Thank you for your interest in BNG membership. Our team will review your application and contact you shortly.</p>
-              <div className="flex gap-4 justify-center">
+              <p className="text-gray-600 mb-2">Thank you for your interest in BNG membership.</p>
+              <p className="text-gray-600 mb-6">
+                You've selected the <span className="font-semibold">
+                  {tiers.find(tier => tier.id === formData.membershipTier)?.name}
+                </span> tier. Our team will review your application and contact you shortly.
+              </p>
+              <div className="flex gap-4 justify-center flex-wrap">
                 <button 
                   className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-md transition duration-300"
                   onClick={() => resetForm()}
@@ -155,6 +238,69 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
               <p className="text-gray-600 mb-6 text-center">Fill out the form below to apply for BNG membership and unlock exclusive global freight benefits.</p>
               
               <form onSubmit={handleSubmit}>
+                {/* Membership Tier Selection */}
+                <div className="mb-6">
+                  <label className="block text-gray-700 font-medium mb-3">Select Membership Tier *</label>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {tiers.map((tier) => {
+                      // Get icon component for the tier
+                      const IconComponent = tier.icon;
+                      return (
+                        <div key={tier.id} className="relative">
+                          <input
+                            type="radio"
+                            id={tier.id}
+                            name="membershipTier"
+                            value={tier.id}
+                            checked={formData.membershipTier === tier.id}
+                            onChange={handleChange}
+                            className="peer sr-only"
+                            required
+                          />
+                          <label
+                            htmlFor={tier.id}
+                            className={`block h-full border-2 rounded-lg p-4 cursor-pointer transition-all hover:shadow-md peer-checked:border-indigo-500 peer-checked:ring-2 peer-checked:ring-indigo-500 peer-checked:ring-opacity-50 ${tier.mostPopular ? 'border-indigo-300 bg-indigo-50' : ''}`}
+                          >
+                            <div className="flex items-center justify-between mb-2">
+                              <div className={`${tier.color} text-white font-semibold py-1 px-3 rounded-full text-sm inline-block`}>
+                                {tier.name}
+                              </div>
+                              {tier.mostPopular && (
+                                <span className="bg-yellow-400 text-yellow-800 text-xs px-2 py-1 rounded-full">Popular</span>
+                              )}
+                            </div>
+                            <div className="flex items-center mb-2">
+                              <IconComponent className="h-5 w-5 mr-2 text-indigo-600" />
+                              <p className="font-bold text-gray-900">{tier.priceMonthly}</p>
+                              <span className="text-gray-500 text-sm ml-1">/month</span>
+                            </div>
+                            <p className="text-sm text-gray-600 mb-3">{tier.description}</p>
+                            <ul className="text-xs text-gray-500 space-y-1">
+                              {getKeyFeaturesForTier(tier.name).map((feature, index) => (
+                                <li key={index} className="flex items-start">
+                                  <svg className="h-3.5 w-3.5 text-green-500 mr-1.5 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                  </svg>
+                                  {feature}
+                                </li>
+                              ))}
+                            </ul>
+                          </label>
+                          <div className="absolute top-2 right-2 opacity-0 peer-checked:opacity-100 transition-opacity">
+                            <svg className="h-5 w-5 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+                
+                <div className="border-t border-gray-200 pt-6 mt-6">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Contact Information</h3>
+                </div>
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
                   <div>
                     <label htmlFor="firstName" className="block text-gray-700 font-medium mb-1.5">First Name *</label>
@@ -273,6 +419,5 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
     </div>
   );
 };
-
 
 export { ModalMembershipForm };

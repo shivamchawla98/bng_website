@@ -13,16 +13,16 @@ export default function BecomeAMember() {
     <div>
       <BecomeHeroSection />
 <ExistingMemberRibbon />
-<MembershipForm />
+{/* <MembershipForm /> */}
       <section className="py-16 bg-primaryBg ">
         <div className="container mx-auto px-4 ">
           <PricingTable />
         </div>
       </section>
 
-      <WhyUs />
+      {/* <WhyUs />
       <MemberBenefits />
-      <TestimonialSlider />
+      <TestimonialSlider /> */}
       {/* <SecuritySteps /> */}
 
       <section className="py-16 bg-primaryBg relative">
