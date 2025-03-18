@@ -41,9 +41,13 @@ const SecuritySteps = () => {
   return (
     <div className="w-full  mx-auto px-12 py-12 bg-secondryBg">
       {/* Header */}
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-extrabold mb-4 text-primary">Multilayer Validation</h2>
-
+      <div className="relative text-center mb-16">
+        <h2 className="text-[40px] font-bold  text-[#27293B] text-center mb-2 relative z-10">Multilayer Validation</h2>
+        <h2
+            className="absolute text-center top-[-30px] md:left-[20%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            aria-hidden="true">
+            Multilayer Validation
+          </h2>
         <p className="text-gray-500 tracking-widest text-sm">
           WE FOLLOW STRONG DUE DILIGENCE PROCESS
         </p>

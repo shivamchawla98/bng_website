@@ -5,6 +5,7 @@ import { Phone } from "lucide-react";
 import Image from "next/image";
 import bg from "@/app/images/home/Ellipse2.png";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 const HeroSection = () => {
   const router = useRouter();
   const [scrollY, setScrollY] = useState(0);
@@ -59,7 +60,9 @@ const HeroSection = () => {
             fresh approach to partnership here!
           </p>
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-            <button      onClick={() => router.push("/become-a-member")}  className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary transition-all duration-300 group transform hover:translate-x-2"
+            <Link
+            href="https://app.bnglogisticsnetwork.com/login"
+             className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary transition-all duration-300 group transform hover:translate-x-2"
             >
               Become a Member
               <svg
@@ -75,7 +78,7 @@ const HeroSection = () => {
                   d="M14 5l7 7m0 0l-7 7m7-7H3"
                 />
               </svg>
-            </button>
+            </Link>
 
             {/* <button className="bg-white w-max text-[#27293B] px-6 py-3 flex items-center border border-gray-200 rounded-full">
               Talk to Sales
