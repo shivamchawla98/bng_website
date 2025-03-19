@@ -20,7 +20,7 @@ const Footer = () => {
           zIndex: 1,
           filter: "blur(60.8px)",
         }}></div>
-      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-10">
+      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:pt-10 lg:pb-0">
         <div className="md:flex md:justify-between gap-8">
           <div className="mt-6 md:mb-2 md:w-1/4">
             <SocialLinks />
@@ -92,13 +92,13 @@ const Footer = () => {
             />
           </div>
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+        <hr className="my-2 border-gray-200 sm:mx-auto lg:my-2" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <p className="text-sm sm:text-center text-gray-900">
-          2024
+          2025 {" "}
            <a href="https://google.com/" className="hover:underline">BNG</a>
             Logistics Network. © All Rights Reserved.
-            2024{" "}
+            2025{" "}
             
           </p>
           <nav className="flex justify-center items-center py-4 text-gray-900 text-sm">
