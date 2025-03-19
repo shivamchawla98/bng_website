@@ -1,8 +1,8 @@
 import Image from "next/image";
-import about1 from "@/app/images/about-us/About-us-image-1.jpg";
-import about2 from "@/app/images/about-us/About-us-image-2.jpg";
-import OurVisionImage from "@/app/images/about-us/Vision.png";
-import OurMissionImage from "@/app/images/about-us/Mission.png";
+import about1 from "../../../public/about/about us - 1.png";
+import about2 from "../../../public/about/about us - 2.png";
+import OurVisionImage from "../../../public/about/vision.png";
+import OurMissionImage from "../../../public/about/mission.png";
 import { FeatureCard } from "./FeatureCard";
 
 import MembersAreaVector from "@/app/images/home/MembersArea.svg";

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import FORALOGO from "../../../public/LOGO_MEMBERS/1.png";
 import FORCELOGO from "../../../public/LOGO_MEMBERS/2.png";
 import JBKLINELOGO from "../../../public/LOGO_MEMBERS/3.png";
-import OCEANSHIPPINGLOGO from "../../../public/LOGO_MEMBERS/4.jpeg";
+import OCEANSHIPPINGLOGO from "../../../public/LOGO_MEMBERS/4.png";
 import RADIUSLOGISTICSLOGO from "../../../public/LOGO_MEMBERS/5.png";
 import SUPERLINKLOGO from "../../../public/LOGO_MEMBERS/6.png";
 import logo7 from "../../../public/LOGO_MEMBERS/7.png";
