@@ -14,17 +14,17 @@ const [isModalOpen, setIsModalOpen] = useState(false);
           onClose={() => setIsModalOpen(false)}
         />
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
-        <div className="text-center md:text-left mb-4 md:mb-0">
-          <h3 className="text-indigo-800 font-semibold text-lg mb-1">Already a BNG member?</h3>
-          <p className="text-indigo-600 text-sm">Access your exclusive benefits and global freight services by logging into your account.</p>
+        <div className="text-center md:text-left mb-4 md:mb-0 w-4/5">
+          <h3 className="text-indigo-800 font-semibold text-lg mb-1">Exclusive Membership Opportunity – Limited Time Only!</h3>
+          <p className="text-indigo-600 text-sm">We are currently accepting invite-only members for the next 30 days! Secure your 1-year free membership trial by filling out the application form to receive your exclusive invitation code.</p>
         </div>
         <button
 
 onClick={() => setIsModalOpen(true)}
-          className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-md transition duration-300"
+          className="bg-indigo-600 hover:bg-indigo-700 w-52 text-white font-medium py-2 px-6 rounded-md transition duration-300"
         
         >
-          Member Login
+          Get Invitation Code
         </button>
       </div>
     </div>

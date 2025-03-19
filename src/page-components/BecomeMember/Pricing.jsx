@@ -83,14 +83,15 @@ export default function Example() {
   return (
     <div className="">
       <div className="mx-auto max-w-7xl ">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-base font-semibold text-indigo-600">Pricing</h2>
-          <p className="mt-2 text-2xl font-semibold  text-gray-900 sm:text-[55px]">
-            Get started with Global Freight
+        <div className="mx-auto max-w-5xl text-center">
+        
+          <p className="text-[40px] font-bold  text-gray-700 relative z-10">
+          Join the Global Freight Network Today
+          description
           </p>
         </div>
-        <p className="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-gray-600 sm:text-xl">
-          No credit card required. Get Started.
+        <p className="mx-auto mt-2 max-w-2xl text-center text-base font-medium text-gray-600 sm:text-lg">
+        Choose the perfect membership plan to connect, collaborate, and grow with top logistics professionals worldwide.
         </p>
 
         {/* xs to lg */}

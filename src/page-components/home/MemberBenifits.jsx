@@ -63,9 +63,9 @@ function MemberBenefits() {
     },
     {
       title: "Acknowledgement Insignias",
-      // description:
-      //   "A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts.",
-      image: ClaimCenterVector,
+      description:
+        "Stand out with insignias displayed on your profile. Highlighting your credibility, payment status, and activity level, building trust and confidence among fellow members.",
+      image: AcknowledgementVector,
     },
   ];
 
@@ -153,7 +153,7 @@ function MemberBenefits() {
     {
       title: "Acknowledgement Insignias",
       description:
-        "A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts.",
+        "Stand out with insignias displayed on your profile. Highlighting your credibility, payment status, and activity level, building trust and confidence among fellow members.",
       image: AcknowledgementVector,
     },
   ];

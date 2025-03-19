@@ -44,12 +44,12 @@ function OurCoreValues() {
 
   // Paragraph content for each section
   const membersAreaContent = (
-    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] text-justify leading-relaxed lg:text-start">
       BNG’s Member Area is a powerful, user-friendly platform for logistics professionals. It offers real-time dashboards to track progress, monitor key data, and enhance productivity. With features designed for transparency and efficiency, members can make faster decisions, streamline communication, and optimize networking. This centralized space provides everything you need to boost your business presence, increase sales, and save valuable time—all in one seamless and secure environment.
     </p>
   );
   const membersAreaContentTwo = (
-    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] text-justify leading-relaxed  lg:text-start">
       The Member Area provides multiple benefits, including time savings,
       enhanced productivity, and real-time monitoring for fast decision-making.
       Members can track progress, measure performance, and communicate more
@@ -63,12 +63,12 @@ function OurCoreValues() {
   );
 
   const globalReachContent = (
-    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-justify lg:text-start">
       Expand your business globally with BNG’s trusted network. Our Global Reach initiative connects you with reliable, vetted partners while boosting visibility and creating lasting, profitable opportunities. Since our launch, we’ve welcomed hundreds of members from the freight and logistics industry, with more joining daily. With a rigorous approval process and a growing community, BNG ensures meaningful connections and business opportunities in an increasingly competitive global market.
     </p>
   );
   const globalReachContentTwo = (
-    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-justify lg:text-start">
       Since our inception, BNG has received enthusiastic support from the
       freight, logistics, and trade industries worldwide. Within just 18 days,
       we welcomed over 300 new members, with a projected total of 800 by the end
@@ -81,12 +81,12 @@ function OurCoreValues() {
     </p>
   );
   const businessXchangeContent = (
-    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-justify lg:text-start">
       BNG’s Business Centre is a digital hub where members can find business leads, post inquiries, and participate in live bids with no geographic limitations. This innovative tool connects you with exporters, importers, and manufacturers worldwide, enabling seamless collaboration and revenue growth. Members can efficiently promote services, submit quotations, and increase visibility, driving more meaningful and profitable connections within a dynamic, global marketplace.
     </p>
   );
   const businessXchangeContentTwo = (
-    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-justify lg:text-start">
       This unique feature enables members to engage in a live bidding process
       without geographic limitations, providing opportunities to increase
       visibility, post requests, and send quotations directly to relevant
@@ -99,12 +99,12 @@ function OurCoreValues() {
     </p>
   );
   const freightXchangeContent = (
-    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-justify lg:text-start">
       Showcase your freight rates and services to the global trade community with BNG’s Freight Market. This feature enhances visibility and helps attract clients by prioritizing competitive rates. Members can stand out in the logistics network by promoting their best offers, increasing exposure, and securing more business opportunities. Freight Market empowers you to boost sales and establish a strong market presence in today’s highly competitive logistics environment.
     </p>
   );
   const freightXchangeContentTwo = (
-    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-justify lg:text-start">
       This feature is designed to help members attract new business by
       increasing their exposure within the global logistics network. The
       platform prioritizes competitive rates, enabling members to gain an edge
@@ -116,12 +116,12 @@ function OurCoreValues() {
     </p>
   );
   const trustedPartnersContent = (
-    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-justify lg:text-start">
       BNG ensures every member meets rigorous standards of trustworthiness through a thorough vetting process. Legal, trade, and financial checks ensure only credible businesses join our community. Members must demonstrate a solid reputation with proven trade references and a three-year operational history. This process guarantees reliability and professionalism, creating a network built on mutual trust. Joining BNG means collaborating with credible partners committed to maintaining the highest standards in the logistics industry.
     </p>
   );
   const trustedPartnersContentTwo = (
-    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-justify lg:text-start">
       To join BNG, applicants must have a proven record of credibility,
       demonstrated by a three-year business history and two trade references.
       The admission process involves multiple steps to confirm trustworthiness:
@@ -135,12 +135,12 @@ function OurCoreValues() {
   );
 
   const paymentProtectionContent = (
-    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-justify lg:text-start">
       BNG’s Payment Protection Framework (PPF) safeguards members with coverage of up to $50,000 for elite memberships. This system ensures smooth, secure transactions and reduces financial risks. Members benefit from automated tools, such as overdue invoice monitoring and resolution centers, that enhance transparency and financial confidence. The PPF provides a trusted safety net, ensuring you can conduct business confidently and focus on building stronger partnerships without payment concerns.
     </p>
   );
   const paymentProtectionContentTwo = (
-    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-justify lg:text-start">
       Our advanced, digital framework allows members to operate in a secure
       environment, equipped to mitigate financial uncertainties. Each member’s
       dedicated dashboard contains the full terms and conditions of the PPF,
@@ -154,12 +154,12 @@ function OurCoreValues() {
   );
 
   const paymentMonitoringContent = (
-    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-justify lg:text-start">
       Simplify your financial operations with BNG’s automated payment monitoring tools. Members can track receivables and payables, set reminders, and manage invoices effortlessly. This real-time framework eliminates manual follow-ups, ensuring transactions stay organized and on schedule. By offering transparency and efficiency, BNG’s payment monitoring system helps you stay in control of your finances, allowing you to focus on growing your business while ensuring payment accuracy and stability.
     </p>
   );
   const paymentMonitoringContentTwo = (
-    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-justify lg:text-start">
       This comprehensive framework reduces the need for manual follow-ups,
       helping members save time and stay organized with their financial
       operations. The system’s automated reminders and real-time updates ensure
@@ -172,13 +172,13 @@ function OurCoreValues() {
   );
 
   const claimCenterContent = (
-    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-justify lg:text-start">
       BNG’s Claim Center provides a fully digital system to file and track claims, resolving conflicts quickly and transparently. This tool ensures efficient resolution of disputes, helping members maintain smooth operations. By offering real-time updates and a user-friendly interface, the Claim Center ensures 100% satisfaction in conflict management. BNG is dedicated to fostering a trusted, fair environment where disputes are resolved professionally, allowing members to focus on business growth without interruptions.
     </p>
   );
 
   const claimCenterContentTwo = (
-    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-justify lg:text-start">
       Our Claim Center is designed for efficiency, guaranteeing members an
       expedited process for addressing disputes. By filing claims digitally,
       members can ensure that each case is addressed accurately, and the network
@@ -192,17 +192,17 @@ function OurCoreValues() {
   );
   
   const acknowledgmentInsigniasContent = (
-    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-justify lg:text-start">
       BNG’s acknowledgment insignias elevate your profile, showcasing your credibility, payment reliability, and activity level. These badges highlight your professionalism and build trust among fellow members. By offering a clear visual of key performance metrics, insignias make it easy for others to identify you as a dependable partner. This recognition strengthens your reputation, fosters meaningful connections, and opens the door to new business opportunities, ensuring you stand out within the global logistics network.
     </p>
   );
 
   const acknowledgmentInsigniasContentTwo = (
-    <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+    <p className="text-gray-600 text-[18px] leading-relaxed text-justify lg:text-start">
     </p>
   );
   return (
-    <section className="py-14 w-full mx-auto px-4 bg-primaryBg text-center flex flex-col justify-center align-middle relative">
+    <section className="py-14 w-full mx-auto px-4 bg-primaryBg text-justify flex flex-col justify-center align-middle relative">
       <div
         className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
         style={{
@@ -233,9 +233,9 @@ function OurCoreValues() {
           zIndex: 1,
           filter: "blur(50px)",
         }}></div>
-      <h2 className="text-[55px] font-bold text-[#27293B]">Member Benefits</h2>
-      <div className="flex w-full justify-center">
-        <p className="text-center w-[80%] text-gray-900">
+      <h2 className="text-[40px] font-bold mb-4 text-gray-700 relative z-10 text-center">Member Benefits</h2>
+      <div className="flex w-full justify-center text-center">
+        <p className="text-justify  text-gray-900">
           Gain access to a secure, digitalized platform with global connections,
           exclusive data resources, 24/7 support, and advanced tools.
         </p>

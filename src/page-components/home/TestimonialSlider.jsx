@@ -16,43 +16,48 @@ import LOGO9 from "../../../public/MEMBER'S ACCREDIATIONS/MEMBERS ACCREDIATIONS-
 import LOGO10 from "../../../public/MEMBER'S ACCREDIATIONS/MEMBERS ACCREDIATIONS-10.png";
 import LOGO11 from "../../../public/MEMBER'S ACCREDIATIONS/MEMBERS ACCREDIATIONS-11.png";
 import LOGO12 from "../../../public/MEMBER'S ACCREDIATIONS/MEMBERS ACCREDIATIONS-12.png";
+import rekha from "../../../public/testimonials/REKHA.png";
+import gurbeer from "../../../public/testimonials/Gurbeer.png";
+import sudarshan from "../../../public/testimonials/sudershan sharma.png";
+
+console.log("rekha : ",rekha);
 
 const testimonials = [
   {
     name: "Ms. Rekha",
     email: "FORCE LOGISTIC PVT LTD",
     text: "Since joining BNG, we've gained access to reliable partners in regions we previously struggled to penetrate. It’s been a game-changer!",
-    image: "/api/placeholder/40/40",
+    imageUrl: rekha,
   },
   {
     name: "Gurbeer Singh Sethi",
     email: "RADIUS LOGISTICS PRIVATE LIMITED",
     text: "The connections we’ve made through BNG have directly resulted in new business opportunities and stronger customer service across our operations.",
-    image: "/api/placeholder/40/40",
+    imageUrl: gurbeer,
   },
   {
     name: "Munish Kumar Bindlish",
     email: "FORA GROUPS PRIVATE LIMITED",
     text: "BNG has been instrumental in helping us expand internationally. The network’s support and collaboration are simply outstanding.",
-    image: "/api/placeholder/40/40",
+    imageUrl: "/api/placeholder/40/40",
   },
-  {
-    name: "JASON KLINE",
-    email: "J.B.KLINE & CO. PTY. LTD",
-    text: "What sets BNG apart is the genuine community feel. Everyone is eager to help and share valuable insights.",
-    image: "/api/placeholder/40/40",
-  },
-  {
-    name: "Axel Damian Alvarez",
-    email: "OCEAN SHIPPING",
-    text: "Partnering through BNG has streamlined our processes and introduced us to trustworthy agents we now work with regularly.",
-    image: "/api/placeholder/40/40",
-  },
+  // {
+  //   name: "JASON KLINE",
+  //   email: "J.B.KLINE & CO. PTY. LTD",
+  //   text: "What sets BNG apart is the genuine community feel. Everyone is eager to help and share valuable insights.",
+  //   image: "/api/placeholder/40/40",
+  // },
+  // {
+  //   name: "Axel Damian Alvarez",
+  //   email: "OCEAN SHIPPING",
+  //   text: "Partnering through BNG has streamlined our processes and introduced us to trustworthy agents we now work with regularly.",
+  //   image: "/api/placeholder/40/40",
+  // },
   {
     name: "Sabrina",
     email: "SUPER LINK LOGISTICS LIMITED",
     text: "The events and tools BNG provides are unmatched—our team feels more connected and equipped to handle global challenges.",
-    image: "/api/placeholder/40/40",
+    imageUrl: sudarshan,
   },
 ];
 
@@ -72,7 +77,7 @@ const TestimonialSlider = () => {
     autoplaySpeed: 3000,
     vertical: true,
     verticalSwiping: true,
-    pauseOnHover: true,
+    pauseOnHover: false,
     arrows: false,
   };
 
@@ -108,16 +113,15 @@ const TestimonialSlider = () => {
         {/* Flex Container for Image and Slider */}
         <div className="flex flex-col lg:flex-row  items-center justify-center w-full gap-8 translate-y-[20px] md:translate-x-[150px]">
           {/* Image Section */}
-          <div className="w-full lg:w-1/2 relative h-[400px] flex flex-col items-start justify-center mt-[10rem]">
-            <div className="grid grid-cols-4 gap-4 md:gap-8 m-2 md:m-12">
+          <div className="w-full  lg:w-1/2 relative h-[400px] flex flex-col items-start justify-center mt-[8rem]">
+            <div className="grid grid-cols-4 gap-4 md:gap-4 m-2 md:mx-0 md:mt-12">
               {partnerLogos.map((logo, index) => (
                 <Image
                   key={index}
                   src={logo}
                   alt={`Partner ${index + 1}`}
-                  width={120}
-                  height={80}
-                  className="object-scale-down w-[120px] h-[80px]"
+                  
+                  className=" w-[110px] h-[110px]"
                 />
               ))}
             </div>
@@ -159,9 +163,11 @@ const TestimonialSlider = () => {
                         {testimonial.text}
                       </p>
                       <div className="flex items-center gap-4">
-                        <img
-                          src={testimonial.image}
+                        <Image
+                          src={testimonial.imageUrl}
                           alt={testimonial.name}
+                          width={20}
+                          height={20}
                           className="w-10 h-10 rounded-full"
                         />
                         <div>

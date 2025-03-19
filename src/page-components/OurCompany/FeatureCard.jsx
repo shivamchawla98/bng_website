@@ -11,6 +11,6 @@ export const FeatureCard = ({ title, description, onClick, logo }) => (
     }}>
     <Image src={logo} width={70} className="bg-cstm-bg-rad-grad-memb-benfts p-4 rounded-lg" />
     <h3 className="text-xl text-[#27293B] font-semibold mt-2">{title}</h3>
-    <p className="text-gray-600 m-0 text-[18px]">{description}</p>
+    <p className="text-gray-600  m-0 text-[18px]">{description}</p>
   </button>
 );
