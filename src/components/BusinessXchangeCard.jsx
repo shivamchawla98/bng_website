@@ -2,7 +2,7 @@ import React from 'react';
 import { FlagIcon } from 'react-flag-kit';
 import { FaShip } from 'react-icons/fa';
 
-function BusinessXchangeCard({ data }) {
+function BusinessXchangeCard({ data, isCurrent }) {
   const { originCountry, originPort, destinationCountry, destinationPort, type, packaging, commodity } = data;
 
   const countryCodes = {
@@ -21,7 +21,7 @@ function BusinessXchangeCard({ data }) {
   };
 
   return (
-    <div className="bg-white shadow-md rounded-lg p-4 mb-4 flex items-center justify-between text-gray-600">
+    <div className={`bg-white shadow-md rounded-lg p-4 mb-4 flex items-center justify-between text-gray-600 ${!isCurrent ? 'filter blur-sm' : ''}`}>
       <div className="flex items-center space-x-4">
         <div className="flex items-center">
           <FlagIcon code={countryCodes[originCountry]} size={32} className="mr-2" />

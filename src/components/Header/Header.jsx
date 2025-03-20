@@ -57,7 +57,7 @@ function Header() {
             <button
               className="font-medium hover:text-primary text-[18px] focus:outline-none flex items-center gap-1"
               onClick={toggleDropdown}>
-              Specialties
+              Business Tools 
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className={`h-4 w-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`}
@@ -151,7 +151,7 @@ function Header() {
             <button
               className="text-[#27293B] hover:text-primary text-[18px] py-2 flex items-center gap-1"
               onClick={toggleDropdown}>
-              Specialties
+              Business Tools 
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className={`h-4 w-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`}

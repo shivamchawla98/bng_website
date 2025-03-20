@@ -1,9 +1,8 @@
 import React from 'react';
 import { FlagIcon } from 'react-flag-kit';
-import { FaShip } from 'react-icons/fa';
-import { FaAnchor } from 'react-icons/fa';
+import { FaShip, FaAnchor } from 'react-icons/fa';
 
-function FreightXchangeCard({ data }) {
+function FreightXchangeCard({ data, isCurrent }) {
   const { originCountry, originPort, destinationCountry, destinationPort, type, packaging, commodity, containerSize, duration, status } = data;
 
   const countryCodes = {
@@ -22,7 +21,7 @@ function FreightXchangeCard({ data }) {
   };
 
   return (
-    <div className="bg-white shadow-md rounded-lg p-4 mb-4 flex items-center justify-between text-gray-600 relative">
+    <div className={`bg-white shadow-md rounded-lg p-4 mb-4 flex items-center justify-between text-gray-600 relative ${!isCurrent ? 'filter blur-sm' : ''}`}>
       <div className="absolute left-0 top-0 h-full w-1 bg-blue-500"></div>
       <div className="flex items-center space-x-4">
         <div className="flex items-center">
