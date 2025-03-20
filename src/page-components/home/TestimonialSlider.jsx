@@ -16,7 +16,7 @@ import LOGO9 from "../../../public/MEMBER'S ACCREDIATIONS/MEMBERS ACCREDIATIONS-
 import LOGO10 from "../../../public/MEMBER'S ACCREDIATIONS/MEMBERS ACCREDIATIONS-10.png";
 import LOGO11 from "../../../public/MEMBER'S ACCREDIATIONS/MEMBERS ACCREDIATIONS-11.png";
 import LOGO12 from "../../../public/MEMBER'S ACCREDIATIONS/MEMBERS ACCREDIATIONS-12.png";
-import rekha from "../../../public/testimonials/REKHA.png";
+import rekha from "../../../public/testimonials/REKHA.jpeg";
 import gurbeer from "../../../public/testimonials/Gurbeer.png";
 import sudarshan from "../../../public/testimonials/sudershan sharma.png";
 import Sabrina from "../../../public/testimonials/SABRINA.png";
