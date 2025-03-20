@@ -19,6 +19,7 @@ import LOGO12 from "../../../public/MEMBER'S ACCREDIATIONS/MEMBERS ACCREDIATIONS
 import rekha from "../../../public/testimonials/REKHA.png";
 import gurbeer from "../../../public/testimonials/Gurbeer.png";
 import sudarshan from "../../../public/testimonials/sudershan sharma.png";
+import Sabrina from "../../../public/testimonials/SABRINA.png";
 
 console.log("rekha : ",rekha);
 
@@ -36,10 +37,10 @@ const testimonials = [
     imageUrl: gurbeer,
   },
   {
-    name: "Munish Kumar Bindlish",
-    email: "FORA GROUPS PRIVATE LIMITED",
+    name: "Sudershan Sharma",
+    email: "UNIQUE LOGISTICS INDIA PVT LTD.",
     text: "BNG has been instrumental in helping us expand internationally. The network’s support and collaboration are simply outstanding.",
-    imageUrl: "/api/placeholder/40/40",
+    imageUrl: sudarshan,
   },
   // {
   //   name: "JASON KLINE",
@@ -57,7 +58,7 @@ const testimonials = [
     name: "Sabrina",
     email: "SUPER LINK LOGISTICS LIMITED",
     text: "The events and tools BNG provides are unmatched—our team feels more connected and equipped to handle global challenges.",
-    imageUrl: sudarshan,
+    imageUrl: Sabrina,
   },
 ];
 
