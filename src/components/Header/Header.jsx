@@ -23,8 +23,8 @@ function Header() {
     <nav className="text-[#27293b] p-4 w-full bg-gradient-to-tr from-primaryBg to-secondryBg sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center text-[#27293B]">
         {/* Logo */}
-        <Link href="/" className="text-xl font-bold">
-          <Image src={LOGO} alt="logo" width={140} height={120} className="w-full"/>
+        <Link href="/" className="">
+          <Image src={LOGO} alt="logo" width={200} height={190} className="w-full"/>
         </Link>
 
         {/* Desktop Navigation */}

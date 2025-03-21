@@ -9,7 +9,7 @@ function MemberBenefits() {
     {
       title: "Members Area",
       description:
-        "An intuitive, user-friendly member portal designed to streamline networking, providing a centralized space for all your business connections and collaboration needs.",
+        "The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment",
     },
     {
       title: "Global Reach",
@@ -32,7 +32,7 @@ function MemberBenefits() {
     {
       title: "Payment Protection",
       description:
-        "The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment",
+        "An intuitive, user-friendly member portal designed to streamline networking, providing a centralized space for all your business connections and collaboration needs.",
     },
     {
       title: "Payment Monitoring",

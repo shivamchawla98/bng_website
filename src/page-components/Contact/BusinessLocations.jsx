@@ -14,8 +14,8 @@ const BusinessLocations = () => {
           {locations.map((location, index) => (
             <div key={index} className="flex flex-col items-center text-center">
               {/* <h4 className="text-sm font-semibold text-gray-400">{location.subheading}</h4> */}
-              <h2 className="text-2xl font-bold mb-2">{location.heading}</h2>
-              <p className="text-gray-300 mb-4">{location.subheading}</p>
+              <h2 className="text-2xl font-bold mb-2">{location.subheading}</h2>
+              {/* <p className="text-gray-300 mb-4">{location.subheading}</p> */}
               <div className="grid grid-cols-1 gap-2">
                 {location.addresses.map((address, idx) => (
                   <p key={idx} className="text-gray-200">{address}</p>

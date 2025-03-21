@@ -40,7 +40,7 @@ function MemberBenefits() {
     {
       title: "Members Area",
       description:
-        "An intuitive, user-friendly member portal designed to streamline networking, providing a centralized space for all your business connections and collaboration needs.",
+        "The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment",
       image: MembersAreaVector,
     },
     {
@@ -66,25 +66,26 @@ function MemberBenefits() {
   const benefitsTwo = [
     {
       title: "Payment Protection",
-      description:
-        "The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment",
+      description: "An intuitive, user-friendly member portal designed to streamline networking, providing a centralized space for all your business connections and collaboration needs."
+        ,
       image: PaymentProtectionVector,
     },
     {
       title: "Payment Monitoring",
-      description:
-        "Connect with reliable partners worldwide and access a growing community that meets all your logistics and supply chain requirements.",
+      description: "Connect with reliable partners worldwide and access a growing community that meets all your logistics and supply chain requirements."
+        ,
       image: PaymentMonitoringVector,
     },
     {
       title: "Claim Center",
       description:
-        "A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts.",
+        "Membership is granted exclusively to companies with solid reputations, verified through a three-year track record and two business references.",
       image: ClaimCenterVector,
     },
     {
       title: "Freight Xchange",
-      description: "Membership is granted exclusively to companies with solid reputations, verified through a three-year track record and two business references.",
+      description:
+        "Membership is granted exclusively to companies with solid reputations, verified through a three-year track record and two business references.",
       image: FreightXchangeVector,
     },
   ];
@@ -104,7 +105,7 @@ function MemberBenefits() {
     {
       title: "Payment Monitoring",
       description:
-        "Connect with reliable partners worldwide and access a growing community that meets all your logistics and supply chain requirements.",
+        "A state-of-the-art system that automatically tracks receivables and payables, keeping all transactions organized and up-to-date.",
       image: PaymentMonitoringVector,
     },
     {
@@ -134,10 +135,12 @@ function MemberBenefits() {
     {
       title: "Freight Xchange",
       description:
-        "Membership is granted exclusively to companies with solid reputations, verified through a three-year track record and two business references.",
+        "Showcase your freight rates and services to the global trade community via BNG Logistics & B2B Portals, boosting your visibility and increasing business opportunities.",
       image: FreightXchangeVector,
     },
   ];
+
+
 
 
 

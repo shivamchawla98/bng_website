@@ -1,6 +1,9 @@
+'use client'
 import { Fragment } from 'react'
 import { CheckIcon, MinusIcon } from 'lucide-react'
 import { Home, Rocket, Globe } from 'lucide-react'
+import InviteModal from '../Contact/modal'
+import { useState } from 'react'
 
 const tiers = [
   { 
@@ -80,8 +83,17 @@ function classNames(...classes) {
 }
 
 export default function Example() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <div className="">
+      <InviteModal
+       isOpen={isModalOpen} 
+       onClose={closeModal} 
+      />
       <div className="mx-auto max-w-7xl ">
         <div className="mx-auto max-w-5xl text-center">
         
@@ -116,8 +128,9 @@ export default function Example() {
                   <span className="text-4xl font-semibold">{tier.priceMonthly}</span>
                   <span className="text-sm font-semibold">/month</span>
                 </p>
-                <a
-                  href={tier.href}
+                <button
+               
+                  onClick={openModal}
                   aria-describedby={tier.id}
                   className={classNames(
                     tier.mostPopular
@@ -127,7 +140,7 @@ export default function Example() {
                   )}
                 >
                   Buy plan
-                </a>
+                </button>
                 <ul role="list" className="mt-10 space-y-4 text-sm text-gray-900">
                   {sections.map((section) => (
                     <li key={section.name}>
@@ -204,8 +217,8 @@ export default function Example() {
                         <span className="text-4xl font-semibold">{tier.priceMonthly}</span>
                         <span className="text-sm font-semibold">/month</span>
                       </div>
-                      <a
-                        href={tier.href}
+                      <button
+                        onClick={openModal}
                         className={classNames(
                           tier.mostPopular
                             ? 'bg-indigo-600 text-white hover:bg-indigo-500'
@@ -214,7 +227,7 @@ export default function Example() {
                         )}
                       >
                         Buy plan
-                      </a>
+                      </button>
                     </td>
                   ))}
                 </tr>
