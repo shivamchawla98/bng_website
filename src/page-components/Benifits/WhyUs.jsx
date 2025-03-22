@@ -28,6 +28,7 @@ import logo6 from "@/app/images/logos/why-us/real-time-chat.png";
 import logo7 from "@/app/images/logos/why-us/Live-talk.png";
 import logo8 from "@/app/images/logos/why-us/survey.png";
 import logo9 from "@/app/images/logos/why-us/survey.png";
+import shield from "../../../public/why_us/shield.png";
 
 import about1 from "@/app/images/abou1.png";
 import about2 from "@/app/images/about2.png";
@@ -157,7 +158,7 @@ const solutionsData2 = [
       "BNG ensures that only reliable and trustworthy companies join the network through a rigorous selection process.",
     description2: "BNG ensures that only reliable and trustworthy companies join the network through a rigorous selection process. Applications undergo credit checks, legal verifications, and trade reference reviews. This thorough process guarantees that all members meet high standards of professionalism, credibility, and reliability. By maintaining a strict selection process, BNG fosters a trusted community where members can collaborate confidently, build valuable partnerships, and grow their businesses within a secure and credible network.",
     heightClass: "h-56 lg:h-64 xl:h-auto",
-    logo: logo9,
+    logo: shield,
   },
 ];
 const solutionsData = [

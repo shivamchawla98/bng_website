@@ -46,7 +46,7 @@ function MemberBenefits() {
     {
       title: "Global Reach",
       description:
-        "Connect with reliable partners worldwide and access a growing community that meets all your logistics and supply chain requirements.",
+        "A state-of-the-art system that automatically tracks receivables and payables, keeping all transactions organized and up-to-date..",
       image: GlobalReachVector,
     },
     {
@@ -58,9 +58,14 @@ function MemberBenefits() {
     {
       title: "Trusted Partners",
       description:
-        "Membership is granted exclusively to companies with solid reputations, verified through a three-year track record and two business references.",
+        "Showcase your freight rates and services to the global trade community via BNG Logistics & B2B Portals, boosting your visibility and increasing business opportunities.",
       image: TrustedPartnersVector,
     },
+    {
+      title: "Acknowledgment Insignias",
+      description:"",
+      image: AcknowledgementVector,
+    }
   ];
 
   const benefitsTwo = [
@@ -79,7 +84,7 @@ function MemberBenefits() {
     {
       title: "Claim Center",
       description:
-        "Membership is granted exclusively to companies with solid reputations, verified through a three-year track record and two business references.",
+        "Access the Business Center, a dedicated area for finding active business leads and sharing opportunities directly with clients in your network.",
       image: ClaimCenterVector,
     },
     {
@@ -88,12 +93,16 @@ function MemberBenefits() {
         "Membership is granted exclusively to companies with solid reputations, verified through a three-year track record and two business references.",
       image: FreightXchangeVector,
     },
+    {
+      description:
+      "Stand out with insignias displayed on your profile. Highlighting your credibility, payment status, and activity level, building trust and confidence among fellow members.",
+    }
   ];
   const mobileBenefits = [
     {
       title: "Trusted Partners",
       description:
-        "Membership is granted exclusively to companies with solid reputations, verified through a three-year track record and two business references.",
+        "Showcase your freight rates and services to the global trade community via BNG Logistics & B2B Portals, boosting your visibility and increasing business opportunities.",
       image: TrustedPartnersVector,
     },
     {
@@ -137,6 +146,12 @@ function MemberBenefits() {
       description:
         "Showcase your freight rates and services to the global trade community via BNG Logistics & B2B Portals, boosting your visibility and increasing business opportunities.",
       image: FreightXchangeVector,
+    },
+    {
+      title: "Acknowledgment Insignias",
+      description:
+         "Stand out with insignias displayed on your profile. Highlighting your credibility, payment status, and activity level, building trust and confidence among fellow members.",
+      image: AcknowledgementVector
     },
   ];
 
@@ -208,13 +223,13 @@ function MemberBenefits() {
           <div className="relative" style={{ minHeight: '800px' }}>
             {/* Dotted Line */}
             <div
-  className="border-[1.5px] border-dashed border-gray-600 absolute left-1/2 -translate-x-1/2"
+  className="border-[3px] border-dashed border-sky-600 absolute left-1/2 -translate-x-1/2"
   style={{
     height: '100%',
     top: '0',
     bottom: '0',
     borderStyle: 'dashed',
-    borderImage: 'repeating-linear-gradient(to bottom, black, black 10px, transparent 10px, transparent 20px) 1',
+    borderImage: 'repeating-linear-gradient(to bottom, #17a9b8, DodgerBlue 16px, transparent 10px, transparent 20px) 1',
   }}
 />
 

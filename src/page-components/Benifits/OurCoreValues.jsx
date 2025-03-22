@@ -19,6 +19,8 @@ import PaymentProtectionVector from "@/app/images/home/PaymentProtection.svg";
 import PaymentMonitoringVector from "@/app/images/home/PaymentMonitoring.webp";
 import ClaimCenterVector from "@/app/images/home/ClaimCenter.svg";
 import FreightXchangeVector from "@/app/images/home/FreightXchange.png";
+import AcknowledgementVector from "../../../public/acknowledgement.png";
+
 
 function OurCoreValues() {
   // Refs for scrolling
@@ -293,9 +295,9 @@ function OurCoreValues() {
         />
         <FeatureCard
           title="Acknowledgment Insignias"
-          description="BNG’s acknowledgment insignias elevate your profile, showcasing your credibility, payment reliability, and activity level. These badges highlight your professionalism and build trust."
+          description="Stand out with insignias displayed on your profile. Highlighting your credibility, payment status, and activity level, building trust and confidence among fellow members."
           onClick={() => handleScrollToSection(acknowledgmentInsigniasRef)}
-          logo={ClaimCenterVector}
+          logo={AcknowledgementVector}
         />
       </div>
       {/* Detailed Sections */}

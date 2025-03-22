@@ -18,6 +18,7 @@ import logo6 from "@/app/images/logos/why-us/real-time-chat.png";
 import logo7 from "@/app/images/logos/why-us/Live-talk.png";
 import logo8 from "@/app/images/logos/why-us/survey.png";
 import logo9 from "@/app/images/logos/why-us/survey.png";
+import shield from "../../../public/why_us/shield.png";
 
 import Background from "@/app/images/home/WhyUs-Background.webp"; // Using the ship image from your structure
 
@@ -120,7 +121,7 @@ const solutionsData = [
       "BNG ensures that only reliable and trustworthy companies join the network through a rigorous selection process.",
     description2: "Secure storage facilities and management.",
     heightClass: "h-80 lg:h-96",
-    logo: logo8,
+    logo: shield,
   },
 ];
 
