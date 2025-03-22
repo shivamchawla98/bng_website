@@ -29,11 +29,11 @@ function AboutUs() {
             Our Story
           </h2>
         </div>
-        <p className="text-gray-500 mb-4 text-base text-justify">
+        <p className="text-sm text-gray-500 tracking-widest mb-4 text-justify">
           Built by a team with over 20 years of expertise in logistics and supply chain management. BNG Group has emerged as a resilient leader in both robust network solutions and B2B relationship-building
           Following nearly three years of in-depth market research and analysis, we launched a network with unique features that empower members to forge strong global partnerships.
         </p>
-        <p className="text-gray-500 text-justify mb-6 text-base">
+        <p className="text-sm text-gray-500 tracking-widest text-justify mb-6 ">
           Join us and gain exclusive access to one of the industry’s largest Exporters/Importers Data Banks—sourced and maintained by BNG Group—designed to support successful, data-driven connections across the globe.
         </p>
         <button onClick={() => router.push("/our-company")} className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent transition-all duraton-300 bg-primary transform hover:translate-x-2" >

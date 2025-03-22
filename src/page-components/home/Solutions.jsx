@@ -148,7 +148,7 @@ const Solutions = () => {
             Why Us?
           </h2>
           <div className="flex w-[100%] justify-center ">
-          <p className=" text-[18px] text-center mb-10 w-[80%] text-gray-600">
+          <p className=" text-sm text-gray-500 tracking-widest text-center mb-10 w-[80%] ">
             With BNG, receive comprehensive marketing support, 24/7 assistance,
             and participate in live industry events. Access a global trade
             directory, advanced tools, and real-time communication features to

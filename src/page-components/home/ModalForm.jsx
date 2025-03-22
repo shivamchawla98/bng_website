@@ -62,18 +62,28 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    
-    // Here you would typically add your Google Sheets integration
+  
     try {
-      // Simulating API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setSubmitted(true);
+      const response =    await fetch("https://script.google.com/macros/s/AKfycbyqOQQK11PLo4CUPnBsx05QKEHP4l30dwLWnZ_Mstp-3Eg711RUDKT0Izw19xMNfEzCtQ/exec", {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+        mode: 'no-cors'
+      });
+  
+      const result = await response.json();
+      if (result.status === 'success') {
+        setSubmitted(true);
+      } else {
+        console.error("Error:", result.message);
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
     } finally {
       setLoading(false);
     }
   };
+  
   
   const resetForm = () => {
     setFormData({
