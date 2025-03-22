@@ -18,7 +18,7 @@ const tiers = [
     name: 'Premium', 
     id: 'tier-premium', 
     href: '#', 
-    priceMonthly: '$499', 
+    priceMonthly: '$699', 
     mostPopular: true,
     icon: Rocket
   },

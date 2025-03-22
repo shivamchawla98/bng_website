@@ -25,7 +25,7 @@ const InviteModal = ({ isOpen, onClose }) => {
 
   return (
     <div 
-      className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 backdrop-blur-sm transition-opacity"
+      className="fixed inset-0 bg-gray-600 bg-opacity-50 z-50 flex items-center justify-center p-4 backdrop-blur-sm transition-opacity"
       onClick={onClose}
     >
       <div 
@@ -33,7 +33,7 @@ const InviteModal = ({ isOpen, onClose }) => {
         onClick={handleContentClick}
       >
         {/* Modal header */}
-        <div className="bg-indigo-600 rounded-t-lg p-4 text-white">
+        <div className="bg-gradient-to-tr  from-[#6853DB] to-[#6853DB] rounded-t-lg p-4 text-white">
           <h3 className="text-xl font-medium">Membership Notice</h3>
           <button
             onClick={onClose}
@@ -50,7 +50,7 @@ const InviteModal = ({ isOpen, onClose }) => {
         <div className="p-6">
           <div className="mb-6 text-center">
             <div className="mx-auto w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 bg-gradient-to-tr  from-[#6853DB] to-[#6853DB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
             </div>
@@ -66,7 +66,7 @@ const InviteModal = ({ isOpen, onClose }) => {
           <div className="mt-6">
             <button
               onClick={onClose}
-              className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors"
+              className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-tr  from-[#6853DB] to-[#6853DB] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors"
             >
               I understand
             </button>
