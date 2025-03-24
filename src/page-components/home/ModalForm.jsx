@@ -14,6 +14,7 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
   
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(null);
   const modalRef = useRef(null);
   
   // Focus trap for accessibility
@@ -62,28 +63,35 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setError(null);
   
     try {
-      const response =    await fetch("https://script.google.com/macros/s/AKfycbyqOQQK11PLo4CUPnBsx05QKEHP4l30dwLWnZ_Mstp-3Eg711RUDKT0Izw19xMNfEzCtQ/exec", {
+      // Updated to use the new API endpoint
+      const response = await fetch("/api/send-email", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-        mode: 'no-cors'
+        body: JSON.stringify({
+          ...formData,
+          // Convert tier-basic to Basic, tier-premium to Premium, etc.
+          membershipTier: formData.membershipTier.replace('tier-', '')
+        })
       });
   
       const result = await response.json();
-      if (result.status === 'success') {
+      
+      if (response.ok) {
         setSubmitted(true);
       } else {
-        console.error("Error:", result.message);
+        setError(result.error || 'An error occurred while submitting the form');
+        console.error("Error:", result.error);
       }
     } catch (error) {
+      setError('Network error: Could not connect to the server');
       console.error("Error submitting form:", error);
     } finally {
       setLoading(false);
     }
   };
-  
   
   const resetForm = () => {
     setFormData({
@@ -95,6 +103,7 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
       membershipTier: 'tier-basic'
     });
     setSubmitted(false);
+    setError(null);
   };
   
   // To handle tab key navigation for accessibility
@@ -228,6 +237,9 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
                   {tiers.find(tier => tier.id === formData.membershipTier)?.name}
                 </span> tier. Our team will review your application and contact you shortly.
               </p>
+              <p className="text-gray-600 mb-6">
+                A confirmation email has been sent to your email address <span className="font-semibold">{formData.companyEmail}</span>.
+              </p>
               <div className="flex gap-4 justify-center flex-wrap">
                 <button 
                   className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-md transition duration-300"
@@ -246,6 +258,13 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
           ) : (
             <>
               <p className="text-gray-600 mb-6 text-center">Fill out the form below to apply for BNG membership and unlock exclusive global freight benefits.</p>
+              
+              {error && (
+                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4" role="alert">
+                  <strong className="font-bold">Error:</strong>
+                  <span className="block sm:inline"> {error}</span>
+                </div>
+              )}
               
               <form onSubmit={handleSubmit}>
                 {/* Membership Tier Selection */}
