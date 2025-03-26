@@ -50,12 +50,7 @@ const MembershipForm = () => {
           </div>
           <h2 className="text-2xl font-bold text-gray-800 mb-2">Application Submitted!</h2>
           <p className="text-gray-600 mb-6">Thank you for your interest in BNG membership. Our team will review your application and contact you shortly.</p>
-          <button 
-            className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-md transition duration-300"
-            onClick={() => setSubmitted(false)}
-          >
-            Submit Another Application
-          </button>
+         
         </div>
       </div>
     );

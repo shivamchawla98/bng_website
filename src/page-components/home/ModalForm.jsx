@@ -241,12 +241,7 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
                 A confirmation email has been sent to your email address <span className="font-semibold">{formData.companyEmail}</span>.
               </p>
               <div className="flex gap-4 justify-center flex-wrap">
-                <button 
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-md transition duration-300"
-                  onClick={() => resetForm()}
-                >
-                  Submit Another Application
-                </button>
+         
                 <button 
                   className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-6 rounded-md transition duration-300"
                   onClick={onClose}
