@@ -5,7 +5,7 @@ export const FeatureCard = ({ title, description, onClick }) => (
   <button
     className="flex flex-col items-center p-6 text-center cursor-pointer"
     onClick={() => {
-      console.log(`Clicked on ${title}`);
+     
       onClick && onClick(); // Check if onClick exists and call it
     }}>
     <img src="/images/Appearance.svg" width={70} alt="Feature Icon" />

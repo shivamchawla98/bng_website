@@ -6,7 +6,7 @@ export const FeatureCard = ({ title, description, onClick, logo }) => (
   <button
     className="flex flex-col items-center p-6 text-center cursor-pointer hover:transform: scaleY(1.25) duration-300"
     onClick={() => {
-      console.log(`Clicked on ${title}`);
+     
       onClick && onClick(); // Check if onClick exists and call it
     }}>
     <Image src={logo} width={70} className="bg-cstm-bg-rad-grad-memb-benfts p-4 rounded-lg" />

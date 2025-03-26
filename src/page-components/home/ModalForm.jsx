@@ -67,7 +67,7 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
   
     try {
       // Updated to use the new API endpoint
-      const response = await fetch("/api/send-email", {
+      const response = await fetch(`/api/send-email`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -382,7 +382,7 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
                     value={formData.companyEmail}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200"
+                    className="w-full text-gray-700 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200"
                     placeholder="Enter your work email address"
                     aria-required="true"
                   />
