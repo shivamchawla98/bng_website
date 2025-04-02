@@ -63,7 +63,7 @@ const MembershipForm = () => {
         <p className="text-gray-600 mb-8 text-center">Fill out the form below to apply for BNG membership and unlock exclusive global freight benefits.</p>
         
         <form onSubmit={handleSubmit}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div className="grid grid-cols-1 text-gray-600 md:grid-cols-2 gap-6 mb-6">
             <div>
               <label htmlFor="firstName" className="block text-gray-700 font-medium mb-2">First Name *</label>
               <input
