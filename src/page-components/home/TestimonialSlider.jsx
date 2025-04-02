@@ -21,7 +21,6 @@ import gurbeer from "../../../public/testimonials/Gurbeer.png";
 import sudarshan from "../../../public/testimonials/sudershan sharma.png";
 import Sabrina from "../../../public/testimonials/SABRINA.png";
 
-console.log("rekha : ",rekha);
 
 const testimonials = [
   {

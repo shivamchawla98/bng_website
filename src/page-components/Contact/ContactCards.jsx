@@ -3,7 +3,7 @@ import React from 'react';
 const contacts = [
   { type: 'Support', text: 'Get help with our services', email: 'support@bnglogisticsnetwork.com' },
   { type: 'Sales', text: 'Inquire about our products', email: 'sales@bnglogisticsnetwork.com' },
-  { type: 'Phone', text: 'Reach us by phone', ph: '(+91)-72-4077-4077' }
+  { type: 'Phone', text: 'Reach us by phone', ph: '(+91) 72 4077 4077' }
 ];
 
 const ContactCards = () => {

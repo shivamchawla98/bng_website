@@ -80,6 +80,8 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
       const result = await response.json();
       
       if (response.ok) {
+        console.log("Success:", result);
+        
         setSubmitted(true);
       } else {
         setError(result.error || 'An error occurred while submitting the form');
@@ -121,8 +123,8 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
   
   const tiers = [
     {
-      name: 'Basic',
-      id: 'tier-basic',
+      name: 'Standard',
+      id: 'tier-standard',
       priceMonthly: '$199',
       mostPopular: false,
       icon: Home,
@@ -132,7 +134,7 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
     {
       name: 'Premium',
       id: 'tier-premium',
-      priceMonthly: '$499',
+      priceMonthly: '$699',
       mostPopular: true,
       icon: Rocket,
       color: 'bg-purple-600',
@@ -153,27 +155,27 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
     {
       name: 'Basic Features',
       features: [
-        { name: 'UNLIMITED SEARCHES FOR FELLOW MEMBERS', tiers: { Basic: true, Premium: true, ELITE: true } },
-        { name: 'REALTIME CHAT', tiers: { Basic: true, Premium: true, ELITE: true } },
-        { name: 'DEDICATED MEMBERSHIP PROFILE', tiers: { Basic: true, Premium: true, ELITE: true } },
-        { name: 'CERTIFICATE OF MEMBERSHIP', tiers: { Basic: true, Premium: true, ELITE: true } },
-        { name: 'MEMBERSHIP BADGE', tiers: { Basic: true, Premium: true, ELITE: true } },
+        { name: 'UNLIMITED SEARCHES FOR FELLOW MEMBERS', tiers: { Standard: true, Premium: true, ELITE: true } },
+        { name: 'REALTIME CHAT', tiers: { Standard: true, Premium: true, ELITE: true } },
+        { name: 'DEDICATED MEMBERSHIP PROFILE', tiers: { Standard: true, Premium: true, ELITE: true } },
+        { name: 'CERTIFICATE OF MEMBERSHIP', tiers: { Standard: true, Premium: true, ELITE: true } },
+        { name: 'MEMBERSHIP BADGE', tiers: { Standard: true, Premium: true, ELITE: true } },
       ],
     },
     {
       name: 'Team & Management',
       features: [
-        { name: 'TEAM MEMBERS / USERS (Same Country / Same Company)', tiers: { Basic: '2 USERS', Premium: '6 USERS', ELITE: 'UNLIMITED' } },
-        { name: 'BRANCH OFFICES (Same Country / Same Company)', tiers: { Basic: 'H1Q + 1 BRANCH', Premium: 'H1Q + 2 BRANCH', ELITE: 'UNLIMITED' } },
+        { name: 'TEAM MEMBERS / USERS (Same Country / Same Company)', tiers: { Standard: '2 USERS', Premium: '6 USERS', ELITE: 'UNLIMITED' } },
+        { name: 'BRANCH OFFICES (Same Country / Same Company)', tiers: { Standard: 'H1Q + 1 BRANCH', Premium: 'H1Q + 2 BRANCH', ELITE: 'UNLIMITED' } },
       ],
     },
     {
       name: 'Business Tools',
       features: [
-        { name: 'BUSINESS XCHANGE (Enquiries)', tiers: { Basic: '1 ENQUIRY', Premium: '2 ENQUIRIES', ELITE: 'UNLIMITED' } },
-        { name: 'FREIGHT VIEWER (Promotional Posts)', tiers: { Basic: '1 POST', Premium: '5 POSTS', ELITE: 'UNLIMITED' } },
-        { name: 'PR AND MARKETING', tiers: { Basic: '1 POST PER MONTH', Premium: '4 POSTS PER MONTH', ELITE: '16 POSTS PER MONTH' } },
-        { name: 'BE ON TOP SEARCH RESULTS', tiers: { Basic: false, Premium: false, ELITE: true } },
+        { name: 'BUSINESS XCHANGE (Enquiries)', tiers: { Standard: '1 ENQUIRY', Premium: '2 ENQUIRIES', ELITE: 'UNLIMITED' } },
+        { name: 'FREIGHT VIEWER (Promotional Posts)', tiers: { Standard: '1 POST', Premium: '5 POSTS', ELITE: 'UNLIMITED' } },
+        { name: 'PR AND MARKETING', tiers: { Standard: '1 POST PER MONTH', Premium: '4 POSTS PER MONTH', ELITE: '16 POSTS PER MONTH' } },
+        { name: 'BE ON TOP SEARCH RESULTS', tiers: { Standard: false, Premium: false, ELITE: true } },
       ],
     }
   ];
@@ -289,9 +291,9 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
                               <div className={`${tier.color} text-white font-semibold py-1 px-3 rounded-full text-sm inline-block`}>
                                 {tier.name}
                               </div>
-                              {tier.mostPopular && (
+                              {/* {tier.mostPopular && (
                                 <span className="bg-yellow-400 text-yellow-800 text-xs px-2 py-1 rounded-full">Popular</span>
-                              )}
+                              )} */}
                             </div>
                             <div className="flex items-center mb-2">
                               <IconComponent className="h-5 w-5 mr-2 text-indigo-600" />

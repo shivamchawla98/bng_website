@@ -7,8 +7,8 @@ import { useState } from 'react'
 
 const tiers = [
   { 
-    name: 'Basic', 
-    id: 'tier-basic', 
+    name: 'Standard', 
+    id: 'tier-standard', 
     href: '#', 
     priceMonthly: '$199', 
     mostPopular: false,
@@ -34,7 +34,7 @@ const tiers = [
 
 const sections = [
   {
-    name: 'Basic Features',
+    name: 'Standard Features',
     features: [
       { name: 'UNLIMITED SEARCHES FOR FELLOW MEMBERS', tiers: { Basic: true, Premium: true, ELITE: true } },
       { name: 'REALTIME CHAT', tiers: { Basic: true, Premium: true, ELITE: true } },

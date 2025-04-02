@@ -61,7 +61,7 @@ const ContactUsMap = () => {
       <div className="container mx-auto py-10 text-center">
         <p>Support: support@bnlogisticsnetwork.com</p>
         <p>Sales: sales@bnlogisticsnetwork.com</p>
-        <p>Phone: (+91)-72-4077-4077</p>
+        <p>Phone: (+91) 72 4077 4077</p>
       </div>
     </div>
   );
