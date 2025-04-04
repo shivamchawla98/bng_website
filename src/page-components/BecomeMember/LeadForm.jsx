@@ -27,12 +27,30 @@ const MembershipForm = () => {
     
     // Here you would typically add your Google Sheets integration
     // For example using fetch to post to your API endpoint that handles the Google Sheets update
-    
     try {
-      // Simulating API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setSubmitted(true);
+      // Updated to use the new API endpoint
+      const response = await fetch(`/api/send-email`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...formData,
+          // Convert tier-basic to Basic, tier-premium to Premium, etc.
+          membershipTier: formData.membershipTier.replace('tier-', '')
+        })
+      });
+  
+      const result = await response.json();
+      
+      if (response.ok) {
+        console.log("Success:", result);
+        
+        setSubmitted(true);
+      } else {
+        setError(result.error || 'An error occurred while submitting the form');
+        console.error("Error:", result.error);
+      }
     } catch (error) {
+      setError('Network error: Could not connect to the server');
       console.error("Error submitting form:", error);
     } finally {
       setLoading(false);

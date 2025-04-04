@@ -79,14 +79,14 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
   
       const result = await response.json();
       
-      if (response.ok) {
+      // if (response.ok) {
         console.log("Success:", result);
         
         setSubmitted(true);
-      } else {
-        setError(result.error || 'An error occurred while submitting the form');
-        console.error("Error:", result.error);
-      }
+      // } else {
+      //   setError(result.error || 'An error occurred while submitting the form');
+      //   console.error("Error:", result.error);
+      // }
     } catch (error) {
       setError('Network error: Could not connect to the server');
       console.error("Error submitting form:", error);
