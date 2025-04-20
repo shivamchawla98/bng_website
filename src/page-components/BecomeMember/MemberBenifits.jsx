@@ -142,7 +142,7 @@ function MemberBenefits() {
                   </div>
                 </div>
               </div>
-              <p className="text-gray-600 text-[18px] text-left mt-4  text-[18px]">
+              <p className="text-gray-600 text-[18px] text-left mt-4  ">
                 {benefit.description}
               </p>
             </div>

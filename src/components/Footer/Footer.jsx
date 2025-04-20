@@ -3,6 +3,7 @@ import Image from "next/image";
 import twitter from "@/app/images/twitter.svg";
 import fb from "@/app/images/fb.svg";
 import utube from "@/app/images/utube.svg";
+import { FaInstagram } from "react-icons/fa";
 import linkedin from "@/app/images/linkedin.svg";
 
 const Footer = () => {
@@ -82,9 +83,9 @@ const Footer = () => {
             <FooterSection
               title="Recourses"
               links={[
-                { href: "#", label: "Incoterms" },
-                { href: "#", label: "DGR Classes" },
-                { href: "#", label: "Aircraft ULD's" },
+                { href: "/incoterms", label: "Incoterms" },
+                { href: "/dgr", label: "DGR Classes" },
+                { href: "/uld", label: "Aircraft ULDs" },
                 { href: "#", label: "Cargo Tracking" },
                 { href: "#", label: "CBM Calculator" },
                 { href: "#", label: "Shipping Containers" },
@@ -142,12 +143,14 @@ const SocialLinks = () => (
     {socialMediaLinks.map((social) => (
       <a
         key={social.name}
+        target="_blank"
         href={social.href}
         className="text-gray-600 hover:text-gray-900 transition-all duration-300 ease-in-out transform hover:scale-110"
       >
         <Image 
           src={social.image} 
           alt={social.name} 
+          
           width={30} 
           height={50}
           className="transition-transform duration-300 ease-in-out"
@@ -161,22 +164,27 @@ const SocialLinks = () => (
 const socialMediaLinks = [
   {
     name: "Facebook page",
-    href: "#/",
+    href: "https://www.facebook.com/NetworkBNG/",
     image: fb,
   },
   {
-    name: "Discord community",
-    href: "#",
+    name: "Linkedin page",
+    href: "linkedin.com/company/networkbng",
     image: linkedin,
   },
   {
-    name: "Twitter page",
-    href: "#",
+    name: "X page",
+    href: "https://x.com/NetworkBNG/",
     image: twitter,
   },
+  //   {
+  //   name: "Instagram page",
+  //   href: "https://www.instagram.com/NetworkBNG/",
+  //   image: <FaInstagram className="text-gray-600 hover:text-gray-900 transition-all duration-300 ease-in-out transform hover:scale-110" />,
+  // },
   {
     name: "YouTube",
-    href: "#",
+    href: "https://www.youtube.com/@networkbng",
     image: utube,
   },
 ];

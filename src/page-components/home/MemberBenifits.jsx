@@ -211,7 +211,7 @@ function MemberBenefits() {
                     </div>
                   </div>
 
-                  <div class="flex items-center justify-center h-44">
+                  <div className="flex items-center justify-center h-44">
                     <p className="text-gray-500 text-base text-left">
                       {benefit.description}
                     </p>
@@ -223,13 +223,13 @@ function MemberBenefits() {
           <div className="relative" style={{ minHeight: '800px' }}>
             {/* Dotted Line */}
             <div
-  className="border-[3px] border-dashed border-sky-600 absolute left-1/2 -translate-x-1/2"
+  className="border-[3px] border-dashed border-sky-900 absolute left-1/2 -translate-x-1/2"
   style={{
     height: '100%',
     top: '0',
     bottom: '0',
     borderStyle: 'dashed',
-    borderImage: 'repeating-linear-gradient(to bottom, #17a9b8, DodgerBlue 16px, transparent 10px, transparent 20px) 1',
+    borderImage: 'repeating-linear-gradient(to bottom , #6853DB, #6853DB 16px, transparent 10px, transparent 20px) 1',
   }}
 />
 
@@ -261,7 +261,7 @@ function MemberBenefits() {
                 key={index}
                 className="flex flex-col p-4 justify-center align-middle">
                 <div className="top-0 w-[400px] justify-center flex flex-col items-center align-middle">
-                  <div class="flex items-center justify-center h-44">
+                  <div className="flex items-center justify-center h-44">
                     <p className="text-gray-500 text-base lg:ml-4 text-left">
                       {benefit.description}
                     </p>

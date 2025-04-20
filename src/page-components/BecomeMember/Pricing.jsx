@@ -1,9 +1,10 @@
 'use client'
 import { Fragment } from 'react'
-import { CheckIcon, MinusIcon } from 'lucide-react'
-import { Home, Rocket, Globe } from 'lucide-react'
+import { CheckIcon, MinusIcon, InfoIcon } from 'lucide-react'
+import { Home, Rocket, Crown, StarsIcon, Star } from 'lucide-react'
 import InviteModal from '../Contact/modal'
 import { useState } from 'react'
+// import standardIcon from '../../../public/standard.webp'
 
 const tiers = [
   { 
@@ -12,7 +13,7 @@ const tiers = [
     href: '#', 
     priceMonthly: '$199', 
     mostPopular: false,
-    icon: Home
+    icon: Star
   },
   { 
     name: 'Premium', 
@@ -20,7 +21,7 @@ const tiers = [
     href: '#', 
     priceMonthly: '$699', 
     mostPopular: true,
-    icon: Rocket
+    icon: StarsIcon
   },
   { 
     name: 'ELITE', 
@@ -28,7 +29,7 @@ const tiers = [
     href: '#', 
     priceMonthly: '$1999', 
     mostPopular: false,
-    icon: Globe
+    icon: Crown
   },
 ]
 
@@ -36,44 +37,56 @@ const sections = [
   {
     name: 'Standard Features',
     features: [
-      { name: 'UNLIMITED SEARCHES FOR FELLOW MEMBERS', tiers: { Basic: true, Premium: true, ELITE: true } },
-      { name: 'REALTIME CHAT', tiers: { Basic: true, Premium: true, ELITE: true } },
-      { name: 'DEDICATED MEMBERSHIP PROFILE', tiers: { Basic: true, Premium: true, ELITE: true } },
-      { name: 'CERTIFICATE OF MEMBERSHIP', tiers: { Basic: true, Premium: true, ELITE: true } },
-      { name: 'MEMBERSHIP BADGE', tiers: { Basic: true, Premium: true, ELITE: true } },
+      { name: 'UNLIMITED SEARCHES FOR FELLOW MEMBERS', tiers: { Standard: true, Premium: true, ELITE: true } },
+      { name: 'REALTIME CHAT', tiers: { Standard: true, Premium: true, ELITE: true } },
+      { name: 'DEDICATED MEMBERSHIP PROFILE', tiers: { Standard: true, Premium: true, ELITE: true } },
+      { name: 'CERTIFICATE OF MEMBERSHIP', tiers: { Standard: true, Premium: true, ELITE: true } },
+      { name: 'MEMBERSHIP BADGE', tiers: { Standard: true, Premium: true, ELITE: true } },
     ],
   },
   {
-    name: 'Team & Management',
+    name: 'Team Management & Offices',
     features: [
-      { name: 'TEAM MEMBERS / USERS (Same Country / Same Company)', tiers: { Basic: '2 USERS', Premium: '6 USERS', ELITE: 'UNLIMITED' } },
-      { name: 'BRANCH OFFICES (Same Country / Same Company)', tiers: { Basic: 'H1Q + 1 BRANCH', Premium: 'H1Q + 2 BRANCH', ELITE: 'UNLIMITED' } },
+      { name: 'TEAM MEMBERS / USERS (Same Country / Same Company)', tiers: { Standard: '1 USERS', Premium: '6 USERS', ELITE: 'UNLIMITED' } },
+      { name: 'BRANCH OFFICES (Same Country / Same Company)', tiers: { Standard: '', Premium: '1HQ + 2 BRANCH (After that $499 branch)', ELITE: '1HQ + 4 BRANCH (After that $499 branch)' } },
     ],
   },
   {
     name: 'Business Tools',
     features: [
-      { name: 'BUSINESS XCHANGE (Enquiries)', tiers: { Basic: '1 ENQUIRY', Premium: '2 ENQUIRIES', ELITE: 'UNLIMITED' } },
-      { name: 'FREIGHT VIEWER (Promotional Posts)', tiers: { Basic: '1 POST', Premium: '5 POSTS', ELITE: 'UNLIMITED' } },
-      { name: 'PR AND MARKETING', tiers: { Basic: '1 POST PER MONTH', Premium: '4 POSTS PER MONTH', ELITE: '16 POSTS PER MONTH' } },
-      { name: 'BE ON TOP SEARCH RESULTS', tiers: { Basic: false, Premium: false, ELITE: true } },
+      { 
+        name: 'BUSINESS XCHANGE (Monthly Post/Bid)', 
+        tiers: { Standard: '2 ENQUIRY', Premium: '10 ENQUIRIES', ELITE: 'UNLIMITED' },
+        tooltip: 'A ROBUST SYSTEM WITH FREIGHT ENQUIRIES FROM GLOBAL TRADE COMMUNITY / POST YOUR ENQUIRY / QUOTE FOR ENQUIRES'
+      },
+      { 
+        name: 'FREIGHT XCHANGE (Monthly post of your promotional freight rates)', 
+        tiers: { Standard: '5 POST', Premium: '10 POSTS', ELITE: 'UNLIMITED' },
+        tooltip: 'A ROBUST SYSTEM GIVES YOU OPPORTUNITY TO GROW YOUR VISIBILITY BY POSTING YOUR FREIGHT RATES'
+      },
+      { 
+        name: 'PR AND MARKETING', 
+        tiers: { Standard: '', Premium: '4 POSTS PER MONTH', ELITE: '16 POSTS PER MONTH' },
+        tooltip: 'CREATE YOUR VISIBILITY TO GLOBAL TRADE & EXIM MARKET'
+      },
+      { name: 'BE ON TOP SEARCH RESULTS', tiers: { Standard: false, Premium: false, ELITE: true } },
     ],
   },
   {
     name: 'Premium Features',
     features: [
-      { name: 'PAYMENT PROTECTION FRAMEWORK', tiers: { Basic: false, Premium: false, ELITE: true } },
-      { name: 'REALTIME TRACKING OF CARGO / SHIPMENTS', tiers: { Basic: false, Premium: false, ELITE: true } },
-      { name: 'PARTNERSHIP MANAGEMENT', tiers: { Basic: false, Premium: false, ELITE: true } },
+      { name: 'PAYMENT PROTECTION FRAMEWORK', tiers: { Standard: false, Premium: "Up to $10000 Payment Protection", ELITE: "Up to $50000 Payment Protection" } },
+      { name: 'REALTIME TRACKING OF CARGO / SHIPMENTS', tiers: { Standard: false, Premium: false, ELITE: true } },
+      { name: 'PARTNERSHIP MANAGEMENT', tiers: { Standard: false, Premium: false, ELITE: true } },
     ],
   },
   {
     name: 'Preferences and Discounts',
     features: [
-      { name: 'DISCOUNT ON CONFERENCE FEES', tiers: { Basic: false, Premium: false, ELITE: true } },
-      { name: 'DISCOUNT ON SPONSERSHIP PACKAGES', tiers: { Basic: false, Premium: false, ELITE: true } },
-      { name: 'VIRTUAL CONFERENCE ACCESS - FREE', tiers: { Basic: true, Premium: true, ELITE: true } },
-      { name: 'SPECIAL DISCOUNT ON CARGO INSURANCES', tiers: { Basic: true, Premium: true, ELITE: true } },
+      { name: 'DISCOUNT ON CONFERENCE FEES', tiers: { Standard: false, Premium: false, ELITE: "5% life time" } },
+      { name: 'DISCOUNT ON SPONSERSHIP PACKAGES', tiers: { Standard: false, Premium: false, ELITE: "15% life time" } },
+      { name: 'VIRTUAL CONFERENCE ACCESS - FREE', tiers: { Standard: true, Premium: true, ELITE: true } },
+      { name: 'SPECIAL DISCOUNT ON CARGO INSURANCES', tiers: { Standard: true, Premium: true, ELITE: true } },
     ],
   },
 ]
@@ -82,34 +95,44 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+// Tooltip Component
+function Tooltip({ content }) {
+  return (
+    <div className="relative group">
+      <InfoIcon className="h-4 w-4 text-gray-500 cursor-pointer" />
+      <div className="absolute left-6 bottom-full mb-2 hidden group-hover:block w-64 p-2 text-sm text-white bg-gray-800 rounded-md shadow-lg z-10">
+        {content}
+      </div>
+    </div>
+  )
+}
+
 export default function Example() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false)
   
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const openModal = () => setIsModalOpen(true)
+  const closeModal = () => setIsModalOpen(false)
 
   return (
     <div className="">
       <InviteModal
-       isOpen={isModalOpen} 
-       onClose={closeModal} 
+        isOpen={isModalOpen} 
+        onClose={closeModal} 
       />
-      <div className="mx-auto max-w-7xl ">
+      <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-5xl text-center">
-        
-          <p className="text-[40px] font-bold  text-gray-700 relative z-10">
-          Join the Global Freight Network Today
-          description
+          <p className="text-[40px] font-bold text-gray-700 relative z-10">
+            Join the Global Freight Network Today
           </p>
         </div>
         <p className="mx-auto mt-2 max-w-2xl text-center text-base font-medium text-gray-600 sm:text-lg">
-        Choose the perfect membership plan to connect, collaborate, and grow with top logistics professionals worldwide.
+          Choose the perfect membership plan to connect, collaborate, and grow with top logistics professionals worldwide.
         </p>
 
         {/* xs to lg */}
         <div className="mx-auto mt-12 max-w-md space-y-8 sm:mt-16 lg:hidden">
           {tiers.map((tier) => {
-            const Icon = tier.icon;
+            const Icon = tier.icon
             return (
               <section
                 key={tier.id}
@@ -119,7 +142,11 @@ export default function Example() {
                 )}
               >
                 <div className="mb-4">
-                  <Icon className="h-8 w-8 text-indigo-600" />
+                {typeof tier.icon === 'string' || tier.id === 'tier-standard' ? (
+  <img src={tier.icon} alt={tier.name} className="h-8 w-8 text-indigo-600" />
+) : (
+  <tier.icon className="h-8 w-8 text-indigo-600" />
+)}
                 </div>
                 <h3 id={tier.id} className="text-sm font-semibold text-gray-900">
                   {tier.name}
@@ -129,17 +156,16 @@ export default function Example() {
                   <span className="text-sm font-semibold">/month</span>
                 </p>
                 <button
-               
                   onClick={openModal}
                   aria-describedby={tier.id}
                   className={classNames(
                     tier.mostPopular
-                      ? 'bg-indigo-600 text-white hover:bg-indigo-500'
+                      ? 'bg-gradient-to-tr  from-[#6853DB] to-[#6853DB] text-white hover:bg-indigo-500'
                       : 'text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300',
-                    'mt-8 block rounded-md px-3 py-2 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600',
+                    'mt-8 bg-gradient-to-tr  from-[#6853DB] to-[#6853DB] block rounded-md px-3 py-2 text-center text-sm  font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600',
                   )}
                 >
-                  Buy plan
+                  Buy Now
                 </button>
                 <ul role="list" className="mt-10 space-y-4 text-sm text-gray-900">
                   {sections.map((section) => (
@@ -148,10 +174,11 @@ export default function Example() {
                       <ul role="list" className="space-y-4">
                         {section.features.map((feature) =>
                           feature.tiers[tier.name] ? (
-                            <li key={feature.name} className="flex gap-x-3">
+                            <li key={feature.name} className="flex gap-x-3 items-center">
                               <CheckIcon className="h-5 w-5 flex-none text-indigo-600" />
-                              <span>
-                                {feature.name}{' '}
+                              <span className="flex items-center gap-x-2">
+                                {feature.name}
+                                {feature.tooltip && <Tooltip content={feature.tooltip} />}
                                 {typeof feature.tiers[tier.name] === 'string' ? (
                                   <span className="text-sm text-gray-500">({feature.tiers[tier.name]})</span>
                                 ) : null}
@@ -164,7 +191,7 @@ export default function Example() {
                   ))}
                 </ul>
               </section>
-            );
+            )
           })}
         </div>
 
@@ -194,7 +221,7 @@ export default function Example() {
                 <tr>
                   <td />
                   {tiers.map((tier) => {
-                    const Icon = tier.icon;
+                    const Icon = tier.icon
                     return (
                       <th key={tier.id} scope="col" className="px-6 pt-6 xl:px-8 xl:pt-8">
                         <div className="mb-4">
@@ -202,7 +229,7 @@ export default function Example() {
                         </div>
                         <div className="text-sm font-semibold text-gray-900">{tier.name}</div>
                       </th>
-                    );
+                    )
                   })}
                 </tr>
               </thead>
@@ -215,7 +242,7 @@ export default function Example() {
                     <td key={tier.id} className="px-6 pt-2 xl:px-8">
                       <div className="flex items-baseline gap-x-1 text-gray-900">
                         <span className="text-4xl font-semibold">{tier.priceMonthly}</span>
-                        <span className="text-sm font-semibold">/month</span>
+                        <span className="text-sm font-semibold">/Year</span>
                       </div>
                       <button
                         onClick={openModal}
@@ -239,7 +266,7 @@ export default function Example() {
                         colSpan={4}
                         className={classNames(
                           sectionIdx === 0 ? 'pt-8' : 'pt-16',
-                          'pb-4 text-sm font-semibold text-gray-900',
+                          'pb-4 font-semibold text-lg text-gray-900',
                         )}
                       >
                         {section.name}
@@ -249,7 +276,10 @@ export default function Example() {
                     {section.features.map((feature) => (
                       <tr key={feature.name}>
                         <th scope="row" className="py-4 text-sm font-normal text-gray-900">
-                          {feature.name}
+                          <div className="flex items-center gap-x-2">
+                            {feature.name}
+                            {feature.tooltip && <Tooltip content={feature.tooltip} />}
+                          </div>
                           <div className="absolute inset-x-8 mt-4 h-px bg-gray-900/5" />
                         </th>
                         {tiers.map((tier) => (
@@ -263,7 +293,6 @@ export default function Example() {
                                 ) : (
                                   <MinusIcon className="mx-auto h-5 w-5 text-gray-400" />
                                 )}
-
                                 <span className="sr-only">
                                   {feature.tiers[tier.name] === true ? 'Included' : 'Not included'} in {tier.name}
                                 </span>

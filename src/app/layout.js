@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import Cta from "@/components/Cta";
+import ClientApolloProvider from "./ClientApolloProvider";
+import { GoogleTagManager } from '@next/third-parties/google'
 
 export const metadata = {
   title: "BNG Logistics Network",
@@ -20,9 +22,15 @@ export default function RootLayout({ children }) {
         />
         <meta name="robots" content="noindex,nofollow" />
       </Head>
+        <GoogleTagManager gtmId="GTM-5PGZMFJ6" />
       <body className="antialiased bg-[#E6EBF4] overflow-x-hidden">
         <Header />
+        <ClientApolloProvider>
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=YourIdGoesHere"
+height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe></noscript>
         {children}
+
+        </ClientApolloProvider>
         <Cta />
         <Footer />
       </body>
