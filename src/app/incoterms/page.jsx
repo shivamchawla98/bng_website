@@ -215,7 +215,7 @@ export default function IncotermsPage() {
       <li>
         <a 
           href="#introduction" 
-          className="flex items-center px-3 py-2 rounded hover:bg-gray-100 transition text-gray-700 hover:text-indigo-600"
+          className="flex items-center px-3 py-2 rounded hover:bg-gray-100 transition text-gray-700 hover:text-indigo-300"
           onClick={(e) => {
             document.querySelectorAll('aside a').forEach(el => el.classList.remove('bg-gradient-to-tr', 'from-[#6853DB]', 'to-[#6853DB]', 'text-white'));
             e.currentTarget.classList.add('bg-gradient-to-tr', 'from-[#6853DB]', 'to-[#6853DB]', 'text-white');
@@ -227,7 +227,7 @@ export default function IncotermsPage() {
       <li>
         <a 
           href="#history" 
-          className="flex items-center px-3 py-2 rounded hover:bg-gray-100 transition text-gray-700 hover:text-indigo-600"
+          className="flex items-center px-3 py-2 rounded hover:bg-gray-100 transition text-gray-700 hover:text-indigo-300"
           onClick={(e) => {
             document.querySelectorAll('aside a').forEach(el => el.classList.remove('bg-gradient-to-tr', 'from-[#6853DB]', 'to-[#6853DB]', 'text-white'));
             e.currentTarget.classList.add('bg-gradient-to-tr', 'from-[#6853DB]', 'to-[#6853DB]', 'text-white');
@@ -239,7 +239,7 @@ export default function IncotermsPage() {
       <li>
         <a 
           href="#why" 
-          className="flex items-center px-3 py-2 rounded hover:bg-gray-100 transition text-gray-700 hover:text-indigo-600"
+          className="flex items-center px-3 py-2 rounded hover:bg-gray-100 transition text-gray-700 hover:text-indigo-300"
           onClick={(e) => {
             document.querySelectorAll('aside a').forEach(el => el.classList.remove('bg-gradient-to-tr', 'from-[#6853DB]', 'to-[#6853DB]', 'text-white'));
             e.currentTarget.classList.add('bg-gradient-to-tr', 'from-[#6853DB]', 'to-[#6853DB]', 'text-white');
@@ -251,7 +251,7 @@ export default function IncotermsPage() {
       <li>
         <a 
           href="#points" 
-          className="flex items-center px-3 py-2 rounded hover:bg-gray-100 transition text-gray-700 hover:text-indigo-600"
+          className="flex items-center px-3 py-2 rounded hover:bg-gray-100 transition text-gray-700 hover:text-indigo-300"
           onClick={(e) => {
             document.querySelectorAll('aside a').forEach(el => el.classList.remove('bg-gradient-to-tr', 'from-[#6853DB]', 'to-[#6853DB]', 'text-white'));
             e.currentTarget.classList.add('bg-gradient-to-tr', 'from-[#6853DB]', 'to-[#6853DB]', 'text-white');
@@ -263,7 +263,7 @@ export default function IncotermsPage() {
       <li>
         <a 
           href="#changes" 
-          className="flex items-center px-3 py-2 rounded hover:bg-gray-100 transition text-gray-700 hover:text-indigo-600"
+          className="flex items-center px-3 py-2 rounded hover:bg-gray-100 transition text-gray-700 hover:text-indigo-300"
           onClick={(e) => {
             document.querySelectorAll('aside a').forEach(el => el.classList.remove('bg-gradient-to-tr', 'from-[#6853DB]', 'to-[#6853DB]', 'text-white'));
             e.currentTarget.classList.add('bg-gradient-to-tr', 'from-[#6853DB]', 'to-[#6853DB]', 'text-white');
@@ -275,7 +275,7 @@ export default function IncotermsPage() {
       <li>
         <a 
           href="#chart" 
-          className="flex items-center px-3 py-2 rounded hover:bg-gray-100 transition text-gray-700 hover:text-indigo-600"
+          className="flex items-center px-3 py-2 rounded hover:bg-gray-100 transition text-gray-700 hover:text-indigo-300"
           onClick={(e) => {
             document.querySelectorAll('aside a').forEach(el => el.classList.remove('bg-gradient-to-tr', 'from-[#6853DB]', 'to-[#6853DB]', 'text-white'));
             e.currentTarget.classList.add('bg-gradient-to-tr', 'from-[#6853DB]', 'to-[#6853DB]', 'text-white');
@@ -292,7 +292,7 @@ export default function IncotermsPage() {
             <li key={term.code}>
               <a 
                 href={`#${term.code.toLowerCase()}`} 
-                className="flex items-center px-3 py-1.5 text-sm rounded hover:bg-gray-100 transition text-gray-700 hover:text-indigo-600"
+                className="flex items-center px-3 py-1.5 text-sm rounded hover:bg-gray-100 transition text-gray-700 hover:text-indigo-300"
                 onClick={(e) => {
                   document.querySelectorAll('aside a').forEach(el => el.classList.remove('bg-gradient-to-tr', 'from-[#6853DB]', 'to-[#6853DB]', 'text-white'));
                   e.currentTarget.classList.add('bg-gradient-to-tr', 'from-[#6853DB]', 'to-[#6853DB]', 'text-white');

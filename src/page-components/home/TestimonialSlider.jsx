@@ -129,7 +129,7 @@ const TestimonialSlider = () => {
 
             <div className="relative w-full max-w-[800px]">
               <h2 className="text-[40px] font-bold text-gray-900 text-center  md:text-left my-4 relative z-10">
-                Members Accreditation
+              Accredited Excellence 
               </h2>
               <p className="text-sm text-justify text-gray-500">
               Our partners are selected for their strong local presence and established expertise in cargo operations, ensuring reliability. They undergo thorough screenings for service quality, compliance, and financial stability, which guarantees that we collaborate with only the best in the industry.
@@ -137,7 +137,7 @@ const TestimonialSlider = () => {
               <h2
                 className="absolute text-left top-2 left-0 text-[80px] w-full font-bold text-[#27293B] opacity-[3%] leading-none z-2"
                 aria-hidden="true">
-                Members Accreditation
+                Accredited Excellence 
               </h2>
             </div>
           </div>

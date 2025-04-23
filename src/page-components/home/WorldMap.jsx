@@ -16,7 +16,7 @@ const Tooltip = dynamic(() => import('react-tooltip').then((mod) => mod.Tooltip)
 
 // GraphQL query
 const SEARCH_COMPANIES_QUERY = gql`
-  query SearchCompanies(
+  query PublicSearchCompanies(
     $certifications: [String!]
     $city: String
     $country: String
@@ -25,7 +25,7 @@ const SEARCH_COMPANIES_QUERY = gql`
     $services: [String!]
     $state: String
   ) {
-    searchCompanies(
+    publicSearchCompanies(
       certifications: $certifications
       city: $city
       country: $country
@@ -319,7 +319,7 @@ const WorldMap = () => {
           width: 100%;
           max-width: 1200px;
           text-align: center;
-          margin-bottom: 32px;
+   
         }
 
         .title-main {
@@ -356,6 +356,7 @@ const WorldMap = () => {
           border: 1px solid transparent;
         //   border-image: linear-gradient(to right, #6853db, #7b66e3) 1;
           position: relative;
+          top: -40px;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
           overflow: hidden;
 
@@ -368,7 +369,7 @@ const WorldMap = () => {
         }
 
         .tooltip-content {
-          padding: 10px 12px;
+          // padding: 10px 12px;
           background: #ffffff;
           border-radius: 8px;
           font-size: 14px;

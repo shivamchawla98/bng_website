@@ -86,8 +86,8 @@ const Footer = () => {
                 { href: "/incoterms", label: "Incoterms" },
                 { href: "/dgr", label: "DGR Classes" },
                 { href: "/uld", label: "Aircraft ULDs" },
-                { href: "#", label: "Cargo Tracking" },
-                { href: "#", label: "CBM Calculator" },
+                // { href: "#", label: "Cargo Tracking" },
+                // { href: "#", label: "CBM Calculator" },
                 { href: "#", label: "Shipping Containers" },
               ]}
             />

@@ -138,7 +138,7 @@ function OurCoreValues() {
 
   const paymentProtectionContent = (
     <p className="text-gray-600 text-[18px] leading-relaxed text-justify lg:text-start">
-      BNG’s Payment Protection Framework (PPF) safeguards members with coverage of up to $50,000 for elite memberships. This system ensures smooth, secure transactions and reduces financial risks. Members benefit from automated tools, such as overdue invoice monitoring and resolution centers, that enhance transparency and financial confidence. The PPF provides a trusted safety net, ensuring you can conduct business confidently and focus on building stronger partnerships without payment concerns.
+      BNG’s Payment Protection Framework (PPF) safeguards members with coverage of up to $50,000 for elite memberships and $20,000 for premium memberships. This system ensures smooth, secure transactions and reduces financial risks. Members benefit from automated tools, such as overdue invoice monitoring and resolution centers, that enhance transparency and financial confidence. The PPF provides a trusted safety net, ensuring you can conduct business confidently and focus on building stronger partnerships without payment concerns.
     </p>
   );
   const paymentProtectionContentTwo = (
