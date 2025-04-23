@@ -130,8 +130,8 @@ const WorldMap = () => {
     console.log('Data:', data, 'Error:', error, 'Loading:', loading);
     let companies = [];
 
-    if (!error && data && data.searchCompanies) {
-      companies = data.searchCompanies || [];
+    if (!error && data && data.publicSearchCompanies) {
+      companies = data.publicSearchCompanies || [];
       console.log('Using API data:', companies);
     } else {
       companies = mockCompanies;
