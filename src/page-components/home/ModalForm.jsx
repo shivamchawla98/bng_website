@@ -9,7 +9,7 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
     companyName: '',
     companyEmail: '',
     mobileNumber: '',
-    membershipTier: 'tier-basic' // Default selection
+    membershipTier: 'tier-premium' // Default selection
   });
   
   const [loading, setLoading] = useState(false);

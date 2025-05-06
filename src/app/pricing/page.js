@@ -12,7 +12,7 @@ export default function BecomeAMember() {
   return (
     <div>
       <BecomeHeroSection />
-<ExistingMemberRibbon />
+{/* <ExistingMemberRibbon /> */}
 {/* <MembershipForm /> */}
       <section className="py-16 bg-primaryBg ">
         <div className="container mx-auto px-4 ">

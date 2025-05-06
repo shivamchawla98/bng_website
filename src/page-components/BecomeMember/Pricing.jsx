@@ -3,6 +3,7 @@ import { Fragment, useState } from 'react'
 import { CheckIcon, MinusIcon, InfoIcon, ChevronDownIcon } from 'lucide-react'
 import { Star, StarsIcon, Crown } from 'lucide-react'
 import InviteModal from '../Contact/modal'
+import { ModalMembershipForm } from '@/page-components/home/ModalForm';
 
 const tiers = [
   {
@@ -151,7 +152,10 @@ export default function Pricing() {
 
   return (
     <div className="">
-      <InviteModal isOpen={isModalOpen} onClose={closeModal} />
+        <ModalMembershipForm 
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-5xl text-center">
           <p className="text-[40px] font-bold text-gray-700 relative z-10">

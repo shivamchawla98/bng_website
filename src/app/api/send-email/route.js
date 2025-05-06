@@ -103,7 +103,7 @@ export async function POST(req) {
 
     // Send confirmation email to the user
     const userMailOptions = {
-      from: `"BNG Membership" <${process.env.EMAIL_USER}>`,
+      from: `"BNG Membership" <connect@bnglogisticsnetwork.com>`,
       to: companyEmail,
       subject: 'Membership Application Received',
       html: generateUserEmailTemplate(firstName, lastName, companyName, membershipTier),
@@ -111,8 +111,8 @@ export async function POST(req) {
 
     // Send application details to the admin
     const adminMailOptions = {
-      from: `"BNG Membership" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_USER, // Admin Email
+      from: `"BNG Membership" <connect@bnglogisticsnetwork.com>`,
+      to: 'connect@bnglogisticsnetwork.com', // Admin Email
       subject: 'New Membership Application',
       html: generateAdminEmailTemplate(firstName, lastName, companyName, companyEmail, mobileNumber, membershipTier),
     };
