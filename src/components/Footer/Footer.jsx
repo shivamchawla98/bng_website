@@ -169,7 +169,7 @@ const socialMediaLinks = [
   },
   {
     name: "Linkedin page",
-    href: "linkedin.com/company/networkbng",
+    href: "https://www.linkedin.com/company/networkbng/",
     image: linkedin,
   },
   {
