@@ -1,6 +1,8 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
-import { Home, Rocket, Globe } from 'lucide-react';
+import { Star, StarsIcon, Crown } from 'lucide-react';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css'; // Import default styles for react-phone-input-2
 
 const ModalMembershipForm = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
@@ -60,33 +62,33 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
     });
   };
   
+  // Special handler for phone input
+  const handlePhoneChange = (value) => {
+    setFormData({
+      ...formData,
+      mobileNumber: value
+    });
+  };
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
   
     try {
-      // Updated to use the new API endpoint
       const response = await fetch(`/api/send-email`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...formData,
-          // Convert tier-basic to Basic, tier-premium to Premium, etc.
           membershipTier: formData.membershipTier.replace('tier-', '')
         })
       });
   
       const result = await response.json();
       
-      // if (response.ok) {
-        console.log("Success:", result);
-        
-        setSubmitted(true);
-      // } else {
-      //   setError(result.error || 'An error occurred while submitting the form');
-      //   console.error("Error:", result.error);
-      // }
+      console.log("Success:", result);
+      setSubmitted(true);
     } catch (error) {
       setError('Network error: Could not connect to the server');
       console.error("Error submitting form:", error);
@@ -102,7 +104,7 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
       companyName: '',
       companyEmail: '',
       mobileNumber: '',
-      membershipTier: 'tier-basic'
+      membershipTier: 'tier-premium'
     });
     setSubmitted(false);
     setError(null);
@@ -127,17 +129,23 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
       id: 'tier-standard',
       priceMonthly: '$199',
       mostPopular: false,
-      icon: Home,
-      color: 'bg-blue-500',
+      icon: Star,
+      color: 'bg-green-500',
+      textColor: 'text-green-600',
+      borderColor: 'border-green-300',
+      bgColor: 'bg-green-50',
       description: 'Essential global shipping membership with basic features'
     },
     {
       name: 'Premium',
       id: 'tier-premium',
       priceMonthly: '$699',
-      mostPopular: true,
-      icon: Rocket,
-      color: 'bg-purple-600',
+      mostPopular: false,
+      icon: StarsIcon,
+      color: 'bg-indigo-600',
+      textColor: 'text-indigo-600',
+      borderColor: 'border-indigo-300',
+      bgColor: 'bg-indigo-50',
       description: 'Enhanced benefits with more access and better business tools'
     },
     {
@@ -145,8 +153,11 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
       id: 'tier-elite',
       priceMonthly: '$1999',
       mostPopular: false,
-      icon: Globe,
-      color: 'bg-indigo-800',
+      icon: Crown,
+      color: 'bg-red-800',
+      textColor: 'text-red-800',
+      borderColor: 'border-red-300',
+      bgColor: 'bg-red-50',
       description: 'Unlimited access with premium features and maximum visibility'
     }
   ];
@@ -193,10 +204,26 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
         }
       });
     });
-    return features.slice(0, 5); // Return only top 5 features for display
+    return features.slice(0, 5);
+  };
+  
+  // Get color theme based on selected tier
+  const getSelectedTierTheme = () => {
+    const selectedTier = tiers.find(tier => tier.id === formData.membershipTier);
+    if (!selectedTier) return { bg: 'bg-indigo-600', hover: 'hover:bg-indigo-700' };
+    
+    if (selectedTier.name === 'Standard') {
+      return { bg: 'bg-green-600', hover: 'hover:bg-green-700' };
+    } else if (selectedTier.name === 'Premium') {
+      return { bg: 'bg-indigo-600', hover: 'hover:bg-indigo-700' };
+    } else {
+      return { bg: 'bg-red-800', hover: 'hover:bg-red-900' };
+    }
   };
   
   if (!isOpen) return null;
+  
+  const selectedTheme = getSelectedTierTheme();
   
   return (
     <div 
@@ -211,7 +238,7 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
         className="bg-white rounded-xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto animate-fadeIn"
       >
         <div className="sticky top-0 bg-white px-6 py-4 border-b flex justify-between items-center z-10">
-          <h2 id="modal-title" className="text-2xl font-bold text-indigo-800">Become a BNG Member</h2>
+          <h2 id="modal-title" className="text-2xl font-bold text-gray-800">Become a BNG Member</h2>
           <button 
             onClick={onClose} 
             ref={lastFocusableElement}
@@ -227,8 +254,8 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
         <div className="px-6 py-5">
           {submitted ? (
             <div className="text-center py-8">
-              <div className="text-green-600 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className={`${selectedTheme.bg} text-white rounded-full p-3 inline-block mb-4`}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
@@ -243,7 +270,12 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
                 A confirmation email has been sent to your email address <span className="font-semibold">{formData.companyEmail}</span>.
               </p>
               <div className="flex gap-4 justify-center flex-wrap">
-         
+                <button 
+                  className={`${selectedTheme.bg} ${selectedTheme.hover} text-white font-medium py-2 px-6 rounded-md transition duration-300`}
+                  onClick={() => resetForm()}
+                >
+                  Submit Another Application
+                </button>
                 <button 
                   className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-6 rounded-md transition duration-300"
                   onClick={onClose}
@@ -269,8 +301,8 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
                   <label className="block text-gray-700 font-medium mb-3">Select Membership Tier *</label>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {tiers.map((tier) => {
-                      // Get icon component for the tier
                       const IconComponent = tier.icon;
+                      const isSelected = formData.membershipTier === tier.id;
                       return (
                         <div key={tier.id} className="relative">
                           <input
@@ -278,25 +310,27 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
                             id={tier.id}
                             name="membershipTier"
                             value={tier.id}
-                            checked={formData.membershipTier === tier.id}
+                            checked={isSelected}
                             onChange={handleChange}
                             className="peer sr-only"
                             required
                           />
                           <label
                             htmlFor={tier.id}
-                            className={`block h-full border-2 rounded-lg p-4 cursor-pointer transition-all hover:shadow-md peer-checked:border-indigo-500 peer-checked:ring-2 peer-checked:ring-indigo-500 peer-checked:ring-opacity-50 ${tier.mostPopular ? 'border-indigo-300 bg-indigo-50' : ''}`}
+                            className={`block h-full border-2 rounded-lg p-4 cursor-pointer transition-all hover:shadow-md 
+                            ${isSelected ? `border-${tier.color.split('-')[1]}-500 ring-2 ring-${tier.color.split('-')[1]}-500 ring-opacity-50` : ''}
+                            ${tier.mostPopular ? `${tier.borderColor} ${tier.bgColor}` : 'border-gray-200'}`}
                           >
                             <div className="flex items-center justify-between mb-2">
                               <div className={`${tier.color} text-white font-semibold py-1 px-3 rounded-full text-sm inline-block`}>
                                 {tier.name}
                               </div>
-                              {/* {tier.mostPopular && (
+                              {tier.mostPopular && (
                                 <span className="bg-yellow-400 text-yellow-800 text-xs px-2 py-1 rounded-full">Popular</span>
-                              )} */}
+                              )}
                             </div>
                             <div className="flex items-center mb-2">
-                              <IconComponent className="h-5 w-5 mr-2 text-indigo-600" />
+                              <IconComponent className={`h-5 w-5 mr-2 ${tier.textColor}`} />
                               <p className="font-bold text-gray-900">{tier.priceMonthly}</p>
                               <span className="text-gray-500 text-sm ml-1">/month</span>
                             </div>
@@ -304,7 +338,7 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
                             <ul className="text-xs text-gray-500 space-y-1">
                               {getKeyFeaturesForTier(tier.name).map((feature, index) => (
                                 <li key={index} className="flex items-start">
-                                  <svg className="h-3.5 w-3.5 text-green-500 mr-1.5 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <svg className={`h-3.5 w-3.5 ${tier.textColor} mr-1.5 mt-0.5`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                   </svg>
                                   {feature}
@@ -312,8 +346,8 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
                               ))}
                             </ul>
                           </label>
-                          <div className="absolute top-2 right-2 opacity-0 peer-checked:opacity-100 transition-opacity">
-                            <svg className="h-5 w-5 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <div className={`absolute top-2 right-2 opacity-0 peer-checked:opacity-100 transition-opacity ${tier.textColor}`}>
+                            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                           </div>
@@ -337,7 +371,7 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
                       value={formData.firstName}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2.5 border text-gray-600 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200"
+                      className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200"
                       placeholder="Enter your first name"
                       ref={firstFocusableElement}
                       aria-required="true"
@@ -353,7 +387,7 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
                       value={formData.lastName}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2.5 border text-gray-600 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200"
+                      className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200"
                       placeholder="Enter your last name"
                       aria-required="true"
                     />
@@ -369,7 +403,7 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
                     value={formData.companyName}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2.5 border text-gray-600 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200"
                     placeholder="Enter your company name"
                     aria-required="true"
                   />
@@ -384,7 +418,7 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
                     value={formData.companyEmail}
                     onChange={handleChange}
                     required
-                    className="w-full text-gray-700 px-4 text-gray-600 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200"
                     placeholder="Enter your work email address"
                     aria-required="true"
                   />
@@ -392,16 +426,27 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
                 
                 <div className="mb-6">
                   <label htmlFor="mobileNumber" className="block text-gray-700 font-medium mb-1.5">Mobile Number *</label>
-                  <input
-                    type="tel"
-                    id="mobileNumber"
-                    name="mobileNumber"
+                  <PhoneInput
+                    country={'us'}
                     value={formData.mobileNumber}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2.5 border text-gray-600 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200"
+                    onChange={handlePhoneChange}
+                    inputProps={{
+                      id: 'mobileNumber',
+                      name: 'mobileNumber',
+                      required: true,
+                      'aria-required': 'true',
+                    }}
+                    containerClass="w-full"
+                    inputClass="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 text-gray-900 placeholder-gray-400"
+                    buttonClass="border border-gray-300 rounded-l-lg bg-white px-3 py-2.5"
+                    dropdownClass="bg-white shadow-lg rounded-lg border border-gray-200 max-h-60 overflow-y-auto"
+                    searchClass="px-3 py-2 text-sm border-b border-gray-200 sticky top-0 bg-white"
+                    enableSearch={true}
+                    disableSearchIcon={false}
+                    searchPlaceholder="Search country..."
+                    autoFormat={true}
+                    countryCodeEditable={false}
                     placeholder="Enter your mobile number"
-                    aria-required="true"
                   />
                 </div>
                 
@@ -409,7 +454,7 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-5 rounded-lg transition duration-300 flex-grow focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-70"
+                    className={`${selectedTheme.bg} ${selectedTheme.hover} text-white font-bold py-2.5 px-5 rounded-lg transition duration-300 flex-grow focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${selectedTheme.bg.split('-')[1]}-500 disabled:opacity-70`}
                   >
                     {loading ? (
                       <span className="flex items-center justify-center">
