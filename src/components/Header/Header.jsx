@@ -27,67 +27,68 @@ function Header() {
           <Image src={LOGO} alt="logo" width={200} height={190} className="w-full"/>
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-4 items-center">
-          {/* <Link href="/" className="font-medium hover:text-primary text-[18px]">
-            Home
-          </Link> */}
-          <Link href="/benifits" className="font-medium hover:text-primary text-[18px]">
-            Benefits
-          </Link>
-          <Link
-            href="/our-company"
-            className="font-medium hover:text-primary text-[18px]">
-            About us
-          </Link>
-          <Link
-            href="/pricing"
-            className="font-medium hover:text-primary text-[18px]">
-            Pricing
-          </Link>
-          <Link href="/contact" className="font-medium hover:text-primary text-[18px]">
-            Contact Us
-          </Link>
+{/* Desktop Navigation */}
+<div className="hidden md:flex space-x-8 items-center">
+  {/* <Link href="/" className="font-semibold hover:text-primary text-[18px]">
+    Home
+  </Link> */}
+  <Link href="/benifits" className="font-semibold hover:text-primary text-[18px]">
+    Benefits
+  </Link>
+  <Link
+    href="/our-company"
+    className="font-semibold hover:text-primary text-[18px]">
+    About us
+  </Link>
+  <Link
+    href="/pricing"
+    className="font-semibold hover:text-primary text-[18px]">
+    Pricing
+  </Link>
+  <Link href="/contact" className="font-semibold hover:text-primary text-[18px]">
+    Contact Us
+  </Link>
 
-          {/* Specialties Dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setIsDropdownOpen(true)}
-            onMouseLeave={() => setIsDropdownOpen(false)}>
-            <button
-              className="font-medium hover:text-primary text-[18px] focus:outline-none flex items-center gap-1"
-              onClick={toggleDropdown}>
-              Business Tools 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className={`h-4 w-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            {isDropdownOpen && (
-              <div className="absolute top-full left-0 bg-white shadow-lg rounded-lg p-4 space-y-2 w-48 z-50">
-                <Link
-                  href="/freight-xchange"
-                  className="block text-gray-700 hover:text-primary text-[18px]">
-                  Freight Xchange
-                </Link>
-                <Link
-                  href="/business-xchange"
-                  className="block text-gray-700 hover:text-primary text-[18px]">
-                  Business Xchange
-                </Link>
-              </div>
-            )}
-          </div>
-        </div>
+  {/* Specialties Dropdown */}
+  <div
+    className="relative"
+    onMouseEnter={() => setIsDropdownOpen(true)}
+    onMouseLeave={() => setIsDropdownOpen(false)}>
+    <button
+      className="font-semibold hover:text-primary text-[18px] focus:outline-none flex items-center gap-1"
+      onClick={toggleDropdown}>
+      Business Tools 
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className={`h-4 w-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`}
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M19 9l-7 7-7-7"
+        />
+      </svg>
+    </button>
+    {isDropdownOpen && (
+      <div className="absolute top-full left-0 bg-white shadow-lg rounded-lg p-4 space-y-2 w-48 z-50">
+        <Link
+          href="/freight-xchange"
+          className="block text-gray-700 hover:text-primary text-[18px] font-semibold">
+          Freight Xchange
+        </Link>
+        <Link
+          href="/business-xchange"
+          className="block text-gray-700 hover:text-primary text-[18px] font-semibold">
+          Business Xchange
+        </Link>
+      </div>
+    )}
+  </div>
+</div>
+
 
         {/* Desktop Buttons */}
         <div className="flex align-items-center">

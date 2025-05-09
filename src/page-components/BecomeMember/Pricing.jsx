@@ -75,7 +75,7 @@ const sections = [
     ],
   },
   {
-    name: 'Premium Features',
+    name: 'PAYMENT PROTECTION FRAMEWORK',
     features: [
       {
         name: 'PAYMENT PROTECTION FRAMEWORK ( Overdue Invoice Rankings - Strict Background Check - Payment Resolution Center - Global Warning List )',
