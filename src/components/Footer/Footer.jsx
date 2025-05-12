@@ -52,7 +52,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 lg:gap-12 mt-8 md:mt-0 md:w-3/4">
-            <FooterSection
+            {/* <FooterSection
               title="ABOUT US"
               links={[
                 { href: "#", label: "FAQ's" },
@@ -61,8 +61,8 @@ const Footer = () => {
                 { href: "#", label: "Our Mission" },
                 { href: "#", label: "What We Do" },
               ]}
-            />
-            <FooterSection
+            /> */}
+            {/* <FooterSection
               title="SERVICES"
               links={[
                 { href: "#", label: "BNG Vendors" },
@@ -70,14 +70,14 @@ const Footer = () => {
                 { href: "#", label: "BNG Tech & Media" },
                 { href: "#", label: "BNG B2B Marketplace" },
               ]}
-            />
+            /> */}
             <FooterSection
               title="Tools"
               links={[
-                { href: "#", label: "Freight Xchange" },
-                { href: "#", label: "Business Xchange" },
-                { href: "#", label: "Improters Directory" },
-                { href: "#", label: "Exporters Directory" },
+                { href: "/freight-xchange", label: "Freight Xchange" },
+                { href: "/business-xchange", label: "Business Xchange" },
+                // { href: "#", label: "Improters Directory" },
+                // { href: "#", label: "Exporters Directory" },
               ]}
             />
             <FooterSection

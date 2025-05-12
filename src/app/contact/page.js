@@ -22,7 +22,7 @@ const ContactPage = () => {
 
         <section className="min-h-80 bg-gray-50 ">
         <div className="mx-auto">
-          <MapComponent address="1600 Amphitheatre Parkway, Mountain View, CA" />
+          <MapComponent address="Rasoolpur Nawada, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309" />
           </div>
           </section>
 

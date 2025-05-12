@@ -7,7 +7,7 @@ const SplitScreenCTA = () => {
   return (
     <div className="grid md:grid-cols-2 h-[600px]  bg-primaryBg">
       {/* Conference Section */}
-      <Link href="/conference" className="relative group overflow-hidden">
+      <Link href="/freight-xchange" className="relative group overflow-hidden">
         <div className="absolute inset-0 bg-blue-900/60 group-hover:bg-blue-900/70 transition-colors z-10" />
         <Image
           src={FXVisit}
@@ -41,7 +41,7 @@ const SplitScreenCTA = () => {
       </Link>
 
       {/* Member Portal Section */}
-      <Link href="/member-portal" className="relative group overflow-hidden">
+      <Link href="/business-xchange" className="relative group overflow-hidden">
         <div className="absolute inset-0 bg-red-900/60 group-hover:bg-red-900/70 transition-colors z-10" />
         <Image
           src={BXVisit}

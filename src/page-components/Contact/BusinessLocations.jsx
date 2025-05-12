@@ -1,7 +1,7 @@
 import React from 'react';
 
 const locations = [
-  { subheading: 'India Office', heading: 'Main Office', caption: 'The heart of our operations', addresses: ['IT PARK  NOIDA 201309, INDIA '] },
+  { subheading: 'India Office', heading: 'Main Office', caption: 'The heart of our operations', addresses: ['C-321, 3RD FLOOR, PLOT B-8, IT PARK, SECTOR 62 NOIDA 201309, UTTAR PRADESH, INDIA'] },
   { subheading: 'USA Office', heading: 'Regional Office', caption: 'Serving the local community', addresses: ['1151 Walker Rd Ste 100 Dover Kent 19904'] },
   { subheading: 'Canada Office', heading: 'Regional Office', caption: 'Serving the local community', addresses: ['12 Linden Dr, Cambridge N3H5L5'] }
 ];
