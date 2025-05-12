@@ -32,20 +32,20 @@ function Header() {
   {/* <Link href="/" className="font-semibold hover:text-primary text-[18px]">
     Home
   </Link> */}
-  <Link href="/benifits" className="font-semibold hover:text-primary text-[18px]">
+  <Link href="/benifits" className="font-medium hover:text-primary text-[18px]">
     Benefits
   </Link>
   <Link
     href="/our-company"
-    className="font-semibold hover:text-primary text-[18px]">
+    className="font-medium hover:text-primary text-[18px]">
     About us
   </Link>
   <Link
     href="/pricing"
-    className="font-semibold hover:text-primary text-[18px]">
+    className=" font-medium hover:text-primary text-[18px]">
     Pricing
   </Link>
-  <Link href="/contact" className="font-semibold hover:text-primary text-[18px]">
+  <Link href="/contact" className="font-medium hover:text-primary text-[18px]">
     Contact Us
   </Link>
 
@@ -55,7 +55,7 @@ function Header() {
     onMouseEnter={() => setIsDropdownOpen(true)}
     onMouseLeave={() => setIsDropdownOpen(false)}>
     <button
-      className="font-semibold hover:text-primary text-[18px] focus:outline-none flex items-center gap-1"
+      className="font-medium hover:text-primary text-[18px] focus:outline-none flex items-center gap-1"
       onClick={toggleDropdown}>
       Business Tools 
       <svg
@@ -76,12 +76,12 @@ function Header() {
       <div className="absolute top-full left-0 bg-white shadow-lg rounded-lg p-4 space-y-2 w-48 z-50">
         <Link
           href="/freight-xchange"
-          className="block text-gray-700 hover:text-primary text-[18px] font-semibold">
+          className="block text-gray-700 hover:text-primary text-[18px] font-medium">
           Freight Xchange
         </Link>
         <Link
           href="/business-xchange"
-          className="block text-gray-700 hover:text-primary text-[18px] font-semibold">
+          className="block text-gray-700 hover:text-primary text-[18px] font-medium">
           Business Xchange
         </Link>
       </div>
