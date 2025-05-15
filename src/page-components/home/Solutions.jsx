@@ -139,7 +139,7 @@ const Solutions = () => {
       </div> */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="relative">
-          <h2 className="text-[60px] font-bold  text-[#27293B] text-center mb-2 relative z-10">
+          <h2 className="text-[40px] font-bold  text-[#27293B] text-center mb-2 relative z-10">
             Why Us?
           </h2>
           <h2

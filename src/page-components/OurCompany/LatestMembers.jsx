@@ -22,7 +22,7 @@ function LatestMembers() {
   return (
     <section style={styles.section}>
       <div style={styles.headingContainer}>
-        <h2 style={styles.heading}>Latest <span className="text-[#46349a]">Members</span> </h2>
+        <h2 style={styles.heading}>Latest Members</h2>
         <h2 style={styles.headingBackground} aria-hidden="true">
           Latest Members
         </h2>
@@ -55,7 +55,7 @@ function LatestMembers() {
                   height={75}
                   style={{
                     ...styles.logo,
-                    // filter: hoveredIndex === index ? 'none' : 'grayscale(100%)',
+                    filter: hoveredIndex === index ? 'none' : 'grayscale(100%)',
                     transition: 'filter 0.3s ease'
                   }}
                 />
@@ -96,7 +96,7 @@ const styles = {
     position: "relative",
   },
   heading: {
-    fontSize: "60px",
+    fontSize: "40px",
     fontWeight: "bold",
     color: "#27293B",
     textAlign: "center",

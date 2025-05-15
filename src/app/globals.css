@@ -2,11 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-lato: 'Lato', sans-serif; /* Define Lato as default */
-  --font-paytone-one: 'Paytone One', sans-serif; /* Keep Paytone One if used */
+
+  /* Define Plus Jakarta Sans as default */
+  --font-plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,7 +23,9 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-lato); /* Use Lato */
+
+  /* Default font set to Plus Jakarta Sans */
+  font-family: var(--font-plus-jakarta-sans);
 }
 
 @layer utilities {
@@ -27,7 +33,8 @@ body {
     text-wrap: balance;
   }
 
+  /* Optional Utility for Paytone One font */
   .font-paytone-one {
-    font-family: var(--font-paytone-one); /* Utility for Paytone One */
+    font-family: 'Paytone One', sans-serif;
   }
 }

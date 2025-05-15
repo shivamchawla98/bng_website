@@ -10,20 +10,13 @@ const Conference = () => {
     <section 
       className="relative w-screen py-20 overflow-hidden"
       style={{
-        backgroundImage: `url(${ConferenceImage.src})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-      }}
-    >
-      {/* Purple Tint Overlay */}
-      <div className="absolute inset-0 bg-[#46349a]/80 backdrop-blur-[2px]"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+        background: "#6853DB"
+      }}>
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex flex-col md:flex-row items-center gap-8">
           {/* Left Column - Image (40%) */}
-          <div className="w-full md:w-[500px] relative transform transition-all duration-700 hover:scale-105">
-            <div className="relative w-[480px] h-96 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+          <div className="w-full md:w-[40%] relative transform transition-all duration-700 hover:scale-105">
+            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
               <Image
                 src={ConferenceImage}
                 alt="Conference"
@@ -36,11 +29,11 @@ const Conference = () => {
 
           {/* Right Column - Content (60%) */}
           <div className="w-full md:w-[60%] text-left transform transition-all duration-700 translate-y-0 hover:translate-y-[-8px]">
-            <h2 className="text-[60px] font-bold text-white mb-4 leading-tight">
+            <h2 className="text-[44px] font-bold text-white mb-4 leading-tight">
               Conference
             </h2>
             <p className={`text-[18px] text-white/90 leading-relaxed mb-8 ${styles.slideUp}`}>
-              Be part of an inspiring conference where industry leaders unveil insights and dive into the latest logistics and supply chain trends. Network with top professionals, gain valuable knowledge, and elevate your expertise—don’t miss out!
+            Be part of an inspiring conference where industry leaders unveil insights and dive into the latest logistics and supply chain trends. Network with top professionals, gain valuable knowledge, and elevate your expertise—don’t miss out!
             </p>
             <button className="bg-white/10 text-white px-8 py-4 flex items-center border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-300 group transform hover:translate-x-2">
               Register Now

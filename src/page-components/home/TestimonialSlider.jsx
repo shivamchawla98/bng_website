@@ -128,8 +128,8 @@ const TestimonialSlider = () => {
 
 
             <div className="relative w-full max-w-[800px]">
-              <h2 className="text-[60px] font-bold text-gray-900 text-center  md:text-left my-4 relative z-10">
-              Accredited <span className="text-[#46349a]"> Excellence </span> 
+              <h2 className="text-[40px] font-bold text-gray-900 text-center  md:text-left my-4 relative z-10">
+              Accredited Excellence 
               </h2>
               <p className="text-sm text-justify text-gray-500">
               Our partners are selected for their strong local presence and established expertise in cargo operations, ensuring reliability. They undergo thorough screenings for service quality, compliance, and financial stability, which guarantees that we collaborate with only the best in the industry.
@@ -145,8 +145,8 @@ const TestimonialSlider = () => {
           {/* Slider Section */}
           <div className=" lg:w-1/2 max-h-[500px] ">
             <div className="relative ]">
-              <h2 className="text-[60px] font-bold text-gray-900 mb-16 text-left mt-10 relative z-10">
-                Testim<span className="text-[#46349a]">onials</span>
+              <h2 className="text-[40px] font-bold text-gray-900 mb-16 text-left mt-10 relative z-10">
+                Testimonials
               </h2>
               <h2
                 className="absolute hidden md:block max-w-[3vw] text-left top-[-30px] left-0 text-[80px] md:w-full font-bold text-[#27293B] opacity-[3%] leading-none z-2"

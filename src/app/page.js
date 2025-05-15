@@ -10,7 +10,6 @@ import Conference from "@/page-components/home/Conferance";
 import LatestMembers from "@/page-components/OurCompany/LatestMembers";
 import SecuritySteps from "@/page-components/BecomeMember/SecuritySteps";
 import WorldMap from "@/page-components/home/WorldMap";
-import StatsWidget from "@/page-components/home/CredNumbers";
 
 export default function Home() {
 return(
@@ -18,7 +17,6 @@ return(
   <div className=" w-screen">
   <HeroSection />
   <AboutUs />
-  <StatsWidget />
   <MemberBenefits />
   <TestimonialSlider />
   <section className="bg-secondryBg py-28 md:px-[112px]">
@@ -26,7 +24,7 @@ return(
   </section>
   {/* <WorldWideReach /> */}
   <WorldMap />
-  {/* <Solutions /> */}
+  <Solutions />
   <SecuritySteps />
   <Conference />
   <News />

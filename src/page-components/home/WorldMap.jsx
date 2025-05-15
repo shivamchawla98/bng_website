@@ -186,7 +186,7 @@ const WorldMap = () => {
     return (
       <section className="world-map-section">
         <div className="title-container">
-          <h2 className="title-main">Worldwide <span className="text-[#46349a]">Reach</span> </h2>
+          <h2 className="title-main">Worldwide Reach</h2>
           <h2 className="title-background" aria-hidden="true">
             Worldwide Reach
           </h2>
@@ -200,7 +200,7 @@ const WorldMap = () => {
     return (
       <section className="world-map-section">
         <div className="title-container">
-          <h2 className="title-main ">Worldwide <span className="text-[#46349a]">Reach</span> </h2>
+          <h2 className="title-main">Worldwide Reach</h2>
           <h2 className="title-background" aria-hidden="true">
             Worldwide Reach
           </h2>
@@ -213,7 +213,7 @@ const WorldMap = () => {
   return (
     <section className="world-map-section">
       <div className="title-container">
-        <h2 className="title-main">Worldwide <span className="text-[#46349a]">Reach</span></h2>
+        <h2 className="title-main">Worldwide Reach</h2>
         <h2 className="title-background" aria-hidden="true">
           Worldwide Reach
         </h2>
@@ -323,7 +323,7 @@ const WorldMap = () => {
         }
 
         .title-main {
-          font-size: 60px;
+          font-size: 40px;
           font-weight: bold;
           color: #27293b;
           margin: 0;
