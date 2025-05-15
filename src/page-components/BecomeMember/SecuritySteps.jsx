@@ -42,26 +42,26 @@ const SecuritySteps = () => {
     <div className="w-full  mx-auto px-12 py-12 bg-secondryBg">
       {/* Header */}
       <div className="relative text-center mb-16">
-        <h2 className="text-[40px] font-bold  text-[#27293B] text-center mb-2 relative z-10">Multilayer Validation</h2>
+        <h2 className="text-[60px] font-bold  text-[#27293B] text-center mb-2 relative z-10">Multilayer <span className="text-[#46349a]">Validation</span> </h2>
         <h2
-            className="absolute text-center top-[-30px] md:left-[20%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            className="absolute text-center top-[-30px] md:left-[30%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
             aria-hidden="true">
             Multilayer Validation
           </h2>
-        <p className="text-gray-500 tracking-widest text-sm">
-          WE FOLLOW STRONG DUE DILIGENCE PROCESS
+        <p className="text-gray-500 tracking-widest text-base">
+          We Follow Strong Due Diligence Process
         </p>
       </div>
 
       {/* Steps Grid with Intertwined Flow */}
       <div className="relative flex justify-center items-center">
         {/* Intertwined Curvy Flow (visible only on lg screens) */}
-        <svg className="absolute hidden lg:block w-full h-full z-0" xmlns="http://www.w3.org/2000/svg">
+        <svg className="absolute  hidden lg:block w-[1200px] h-full z-0" xmlns="http://www.w3.org/2000/svg">
           <path d="M0,80 C200,150 400,50 600,80 C800,110 1000,10 1200,80" stroke="#D186EB" strokeWidth="4" fill="none" opacity="0.3" />
         </svg>
 
         {steps.map((step, index) => (
-          <div key={step.number} className="relative flex flex-col items-center text-center mx-4 transition-transform transform hover:scale-105 duration-300">
+          <div key={step.number} className="relative w-[360px] flex flex-col items-center text-center mx-4 transition-transform transform hover:scale-105 duration-300">
             {/* Icon for Step */}
             <div className="w-32 h-32 flex items-center justify-center mb-6 relative z-10 bg-gradient-to-r from-purple-200 to-[#6853DB] rounded-full shadow-lg">
               <img src={step.icon.src} alt={step.title} className="w-20 h-20 opacity-80" />

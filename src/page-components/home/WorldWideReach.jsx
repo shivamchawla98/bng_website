@@ -20,7 +20,7 @@ function WorldWideReach() {
 
   return (
     <section
-      className="md:px-[112px] items-center   w-full bg-primaryBg flex flex-col gap-10 py-14"
+      className="md:px-[112px] items-center   w-full bg-[#d9dcec] flex flex-col gap-10 py-14"
       style={{
         backgroundImage: `url(${backgroundImage.src})`,
         backgroundSize: "cover",

@@ -16,6 +16,7 @@ import FreightXchangeVector from "@/app/images/home/FreightXchange.png";
 import AcknowledgementVector from "../../../public/acknowledgement.png";
 // import ship from "@/app/images/home/Benifits-Blue-Ship.png";
 import ship from '../../../public/ship.png'
+import background from "@/app/images/home/member_benefits_background.png"
 
 function MemberBenefits() {
   const [scrollY, setScrollY] = useState(0);
@@ -181,8 +182,8 @@ function MemberBenefits() {
           Member Benefits
         </h2> */}
         <div className="relative">
-          <h2 className="text-[40px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
-            Member Benefits
+          <h2 className="text-[60px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
+            Member <span className="text-[#46349a]">Benefits</span> 
           </h2>
           <h2
             className="absolute text-center top-[-30px] md:left-[30%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
@@ -197,7 +198,13 @@ function MemberBenefits() {
                 key={index}
                 className="flex flex-col p-4 justify-center align-middle">
                 <div className="top-0 w-[400px] justify-center flex flex-col items-center align-middle">
-                  <div className=" w-44 h-44 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer">
+                  <div
+                      style={{
+                        backgroundImage: `url(${background.src})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                      }}
+                  className=" w-44 h-44 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer">
                     <Image
                       src={benefit.image}
                       alt="Member Benefits"
@@ -212,7 +219,7 @@ function MemberBenefits() {
                   </div>
 
                   <div className="flex items-center justify-center h-44">
-                    <p className="text-gray-500 text-base text-left">
+                    <p className="text-gray-500 text-[14px] text-left">
                       {benefit.description}
                     </p>
                   </div>
@@ -223,7 +230,7 @@ function MemberBenefits() {
           <div className="relative" style={{ minHeight: '800px' }}>
             {/* Dotted Line */}
             <div
-  className="border-[3px] border-dashed border-sky-900 absolute left-1/2 -translate-x-1/2"
+  className="border-[1px] border-dashed border-sky-900 absolute left-1/2 -translate-x-1/2"
   style={{
     height: '100%',
     top: '0',
@@ -262,11 +269,17 @@ function MemberBenefits() {
                 className="flex flex-col p-4 justify-center align-middle">
                 <div className="top-0 w-[400px] justify-center flex flex-col items-center align-middle">
                   <div className="flex items-center justify-center h-44">
-                    <p className="text-gray-500 text-base lg:ml-4 text-left">
+                    <p className="text-gray-500 text-[14px] lg:ml-4 text-left">
                       {benefit.description}
                     </p>
                   </div>
-                  {benefit.image && benefit.title && <div className="w-44 h-44 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer">
+                  {benefit.image && benefit.title && <div
+                    style={{
+                      backgroundImage: `url(${background.src})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                    }}
+                  className="w-44 h-44 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer">
                     <Image
                       src={benefit.image}
                       alt="Member Benefits"
