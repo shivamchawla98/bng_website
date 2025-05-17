@@ -108,14 +108,14 @@ const TestimonialSlider = () => {
       </div> */}
 
       {/* Content Container */}
-      <div className="relative mx-auto lg:h-screen px-4 sm:px-6 lg:px-8 py-14 w-full flex  items-center justify-center">
+      <div className="relative mx-auto  px-4 sm:px-6 lg:px-8 py-14 w-full flex  items-center justify-center">
         {/* Title */}
 
         {/* Flex Container for Image and Slider */}
         <div className="flex flex-col lg:flex-row  items-center justify-center w-full gap-8 translate-y-[20px] md:translate-x-[150px]">
           {/* Image Section */}
-          <div className="w-full  lg:w-1/2  relative h-[500px] flex flex-col items-start justify-center mt-[8rem]">
-            <div className="grid grid-cols-4 gap-4 md:gap-12 m-2 md:mx-0 md:mt-12">
+          <div className="w-full  lg:w-1/2  relative h-[500px] lg:h-[900px] flex flex-col items-start justify-center mt-[8rem]">
+            <div className="grid grid-cols-4 gap-4 md:gap-12 m-2 md:mx-0 md:my-12">
               {partnerLogos.map((logo, index) => (
                 <Image
                   key={index}
@@ -132,11 +132,11 @@ const TestimonialSlider = () => {
               <h2 className="text-[55px] font-bold text-gray-900 text-center  md:text-left my-4 relative z-10">
               Accredited <span className="text-primary">Excellence  </span> 
               </h2>
-              <p className="text-sm text-justify text-gray-500">
+              <p className="text-base text-justify text-gray-500">
               Our partners are selected for their strong local presence and established expertise in cargo operations, ensuring reliability. They undergo thorough screenings for service quality, compliance, and financial stability, which guarantees that we collaborate with only the best in the industry.
               </p>
               <h2
-                className="absolute text-left top-2 left-0 text-[80px] w-full font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+                className="absolute text-left -top-10 -left-[120px] text-[80px] w-full font-bold text-[#27293B] opacity-[3%] leading-none z-2"
                 aria-hidden="true">
                 Accredited Excellence 
               </h2>

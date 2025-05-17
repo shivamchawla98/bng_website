@@ -3,7 +3,7 @@ import grid1 from "../../../public/why_us/Marketing & PR.png";
 import grid2 from "../../../public/why_us/support 247.png";
 import grid3 from "../../../public/why_us/Annual Meetings.png";
 import grid4 from "../../../public/why_us/Trade directory.png";
-import grid5 from "../../../public/why_us/Advanced Tools.png";
+import grid5 from "../../../public/why_us/Advanced Tools.jpg";
 import grid6 from "../../../public/why_us/Real-Time Chat.png";
 import grid7 from "../../../public/why_us/Live Talk.png"; 
 import grid8 from "../../../public/why_us/Industry Surveys.png"; 
@@ -79,17 +79,17 @@ const solutionsData = [
     heightClass: "h-80 lg:h-96",
     logo: logo5,
   },
-  {
-    id: 6,
-    src: grid6,
-    alt: "Solution 6",
-    heading: "Real-Time Chat",
-    description1:
-      "Enjoy seamless, real-time chat functionality that enables fast, synchronized communication, enhancing networking efficiency.",
-    description2: "Tailored logistics solutions for your needs.",
-    heightClass: "h-48 lg:h-56",
-    logo: logo6,
-  },
+  // {
+  //   id: 6,
+  //   src: grid6,
+  //   alt: "Solution 6",
+  //   heading: "Real-Time Chat",
+  //   description1:
+  //     "Enjoy seamless, real-time chat functionality that enables fast, synchronized communication, enhancing networking efficiency.",
+  //   description2: "Tailored logistics solutions for your needs.",
+  //   heightClass: "h-48 lg:h-56",
+  //   logo: logo6,
+  // },
   {
     id: 7,
     src: grid7,
@@ -159,7 +159,7 @@ const Solutions = () => {
 
         {/* Grid with 3 columns */}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {solutionsData.map(({ id, src, alt, heading, description1, logo }) => (
             <div
               key={id}

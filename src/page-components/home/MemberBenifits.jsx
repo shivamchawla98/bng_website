@@ -171,13 +171,13 @@ function MemberBenefits() {
           filter: "blur(110px)",
         }}
         ></div>
-      <div
-        className="absolute bottom-[10%] left-8 w-[400px] h-[300px] rounded-full"
+      {/* <div
+        className="absolute -bottom-[10%]  left-8 w-[400px] h-[300px] rounded-full"
         style={{
-          background: "linear-gradient(180deg, #97b6f6 10%, #97b6f6 90%)",
+          background: "linear-gradient(35deg, #97b6f6 10%, #97b6f6 90%)",
           zIndex: 1,
-          filter: "blur(60.8px)",
-        }}></div>
+          filter: "blur(90.8px)",
+        }}></div> */}
       <div ref={sectionRef} className="flex flex-col justify-center w-[100%] px-4 overflow-x-hidden py-14">
         {/* <h2 className="text-[55px] text-[#27293B] font-bold text-center mb-12">
           Member Benefits
@@ -199,7 +199,7 @@ function MemberBenefits() {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="flex flex-col p-4 justify-center align-middle">
+                className="flex flex-col p-4 justify-center mt-10 align-middle">
                 <div
                 
                 className="top-0 w-[400px] justify-center flex flex-col items-center align-middle">
@@ -219,7 +219,7 @@ function MemberBenefits() {
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-center h-44">
+                  <div className="flex items-center mt-10 justify-center h-44">
                     <p className="text-gray-500 text-lg text-left">
                       {benefit.description}
                     </p>
@@ -267,9 +267,9 @@ function MemberBenefits() {
             {benefitsTwo?.map((benefit, index) => (
               <div
                 key={index}
-                className="flex flex-col p-4 justify-center align-middle">
+                className="flex flex-col p-4 mt-10 justify-center align-middle">
                 <div className="top-0 w-[400px] justify-center flex flex-col items-center align-middle">
-                  <div className="flex items-center justify-center h-44">
+                  <div className="flex items-center mb-10 justify-center h-44">
                     <p className="text-gray-500 text-lg lg:ml-4 text-left">
                       {benefit.description}
                     </p>
