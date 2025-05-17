@@ -26,7 +26,7 @@ const HeroSection = () => {
         className="absolute top-10 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
         style={{
           background:
-            "linear-gradient(180deg, #D186EB 16%, #4D7DB5 46.86%, #D186EB 67%)",
+            "linear-gradient(-145deg, #6853DB 16%, #6853DB 40.86%, #97b6f6 30%)",
 
           zIndex: 1,
           filter: "blur(50px)",
@@ -39,7 +39,7 @@ const HeroSection = () => {
         className="absolute top-1/2 right-12 transform translate-x-1/2 -translate-y-1/2 md:w-[160px] h-[70%] rounded-full"
         style={{
           background:
-            "linear-gradient(180deg, #D186EB 16%, #4D7DB5 46.86%, #D186EB 67%)",
+            "linear-gradient(-145deg, #6853DB 16%, #6853DB 40.86%, #97b6f6 30%)",
           zIndex: 1,
           filter: "blur(110px)",
         }}></div>
@@ -47,15 +47,18 @@ const HeroSection = () => {
       {/* Hero Section */}
       <div className="container py-6 mx-auto px-4 flex flex-col lg:flex-row items-center relative z-10">
         <div className="lg:w-1/2 mb-8 lg:mb-0">
-          <h1 className="text-[55px] font-bold mb-4 text-[#27293B]">
-            Connect and
-            <span className="text-primary"> collaborate</span> with
-            <span className="text-primary"> forwarders </span>
+          <h1 className="text-[55px]  mb-4 text-[#27293B]">
+            <span className="text-[70px] font-bold">
+
+            Connect &
+            </span>
+            <span className="text-[#5216ab] font-bold text-[70px]"> Collaborate</span><br></br> with
+            <span className="text-[#5216ab]"> Forwarders </span>
             daily
           </h1>
           <p className="text-gray-600 mb-8 text-base">
             Experience the next generation of forwarder networks. Tired of
-            investing in multiple networks with minimal returns? <span className="text-base font-semibold">
+            investing in multiple networks with minimal returns? <span className="text-[20px]  font-semibold">
             Discover a
             fresh approach to partnership here!
               </span>
@@ -132,7 +135,7 @@ const HeroSection = () => {
                   />
                 </svg>
               </div>
-              <span className="font-medium text-sm text-[#27293B]">
+              <span className="font-semibold text-sm text-[#27293B]">
                 200+ Cities
               </span>
             </div>
@@ -159,7 +162,7 @@ const HeroSection = () => {
                   />
                 </svg>
               </div>
-              <span className="font-medium text-sm text-[#27293B]">
+              <span className="font-semibold text-sm text-[#27293B]">
                 210+ Offices
               </span>
             </div>
@@ -186,7 +189,7 @@ const HeroSection = () => {
                   />
                 </svg>
               </div>
-              <span className="font-medium text-sm text-[#27293B]">
+              <span className=" font-semibold text-sm text-[#27293B]">
                 100+ Members
               </span>
             </div>
@@ -213,7 +216,7 @@ const HeroSection = () => {
                   />
                 </svg>
               </div>
-              <span className="font-medium text-sm text-[#27293B]">
+              <span className="font-semibold text-sm text-[#27293B]">
                 30+ Countries
               </span>
             </div>
