@@ -114,7 +114,7 @@ const TestimonialSlider = () => {
         {/* Flex Container for Image and Slider */}
         <div className="flex flex-col lg:flex-row  items-center justify-center w-full gap-8 translate-y-[20px] md:translate-x-[150px]">
           {/* Image Section */}
-          <div className="w-full  lg:w-1/2  relative h-[500px] lg:h-[900px] flex flex-col items-start justify-center mt-[8rem]">
+          <div className="w-full  lg:w-1/2  relative h-[500px] lg:h-[600px] flex flex-col items-start justify-center mt-[8rem]">
             <div className="grid grid-cols-4 gap-4 md:gap-12 m-2 md:mx-0 md:my-12">
               {partnerLogos.map((logo, index) => (
                 <Image
@@ -144,7 +144,7 @@ const TestimonialSlider = () => {
           </div>
 
           {/* Slider Section */}
-          <div className=" lg:w-1/2 max-h-[500px] ">
+          <div className=" lg:w-1/2 h-auto ">
             <div className="relative ]">
               <h2 className="text-[55px] font-bold text-primary mb-16 text-left mt-10 relative z-10">
                 Testimonials

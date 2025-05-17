@@ -39,7 +39,7 @@ const SecuritySteps = () => {
   ];
 
   return (
-    <div className="w-full  mx-auto px-12 py-12 bg-secondryBg">
+    <div className="w-full  mx-auto px-12 py-12  bg-secondryBg">
       {/* Header */}
       <div className="relative text-center mb-16">
         <h2 className="text-[55px] font-bold  text-[#27293B] text-center mb-2 relative z-10">Multilayer <span className="text-primary">Validation </span></h2>
@@ -48,17 +48,15 @@ const SecuritySteps = () => {
             aria-hidden="true">
             Multilayer Validation
           </h2>
-        <p className="text-gray-500 tracking-widest text-sm">
-          WE FOLLOW STRONG DUE DILIGENCE PROCESS
-        </p>
+      
       </div>
 
       {/* Steps Grid with Intertwined Flow */}
-      <div className="relative flex justify-center items-center">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {/* Intertwined Curvy Flow (visible only on lg screens) */}
-        <svg className="absolute hidden lg:block w-full h-full z-0" xmlns="http://www.w3.org/2000/svg">
+        {/* <svg className="absolute hidden lg:block w-full h-full z-0" xmlns="http://www.w3.org/2000/svg">
           <path d="M0,80 C200,150 400,50 600,80 C800,110 1000,10 1200,80" stroke="#D186EB" strokeWidth="4" fill="none" opacity="0.3" />
-        </svg>
+        </svg> */}
 
         {steps.map((step, index) => (
           <div key={step.number} className="relative flex flex-col items-center text-center mx-4 transition-transform transform hover:scale-105 duration-300">
