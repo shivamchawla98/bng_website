@@ -1,25 +1,24 @@
 import Image from "next/image";
-import grid1 from "@/app/images/home/Marketing-PR.png";
-import grid2 from "@/app/images/home/24-7-Support.png";
-import grid3 from "@/app/images/home/Annual-Meetings.png";
-import grid4 from "@/app/images/home/Trade-Directory.png";
-import grid5 from "@/app/images/home/Advance-Tools.jpg";
-import grid6 from "@/app/images/home/Real-Time-Chat.png";
-import grid7 from "@/app/images/home/Live-Talk.png";
-import grid8 from "@/app/images/home/Industry-Surveys.png";
-import grid9 from "@/app/images/home/Strict-Selection-Process.png";
+import grid1 from "../../../public/why_us/Marketing & PR.png";
+import grid2 from "../../../public/why_us/support 247.png";
+import grid3 from "../../../public/why_us/Annual Meetings.png";
+import grid4 from "../../../public/why_us/Trade directory.png";
+import grid5 from "../../../public/why_us/Advanced Tools.jpg";
+import grid6 from "../../../public/why_us/Real-Time Chat.png";
+import grid7 from "../../../public/why_us/Live Talk.png"; 
+import grid8 from "../../../public/why_us/Industry Surveys.png"; 
+import grid9 from "../../../public/why_us/Strict Selection Process.png";
 
-import logo1 from "@/app/images/logos/why-us/PR.png";
-import logo2 from "@/app/images/logos/why-us/24-7.png";
-import logo3 from "@/app/images/logos/why-us/Meetings.png";
-import logo4 from "@/app/images/logos/why-us/Trade-Directory.png";
-import logo5 from "@/app/images/logos/why-us/Advanced-Tool.png";
-import logo6 from "@/app/images/logos/why-us/real-time-chat.png";
-import logo7 from "@/app/images/logos/why-us/Live-talk.png";
-import logo8 from "@/app/images/logos/why-us/survey.png";
-import shield from "../../../public/why_us/shield.png";
-
-
+import logo1 from "@/app/images/logos/why-us/PR.svg";
+import logo2 from "@/app/images/logos/why-us/24-7.svg";
+import logo3 from "@/app/images/logos/why-us/Meetings.svg";
+import logo4 from "@/app/images/logos/why-us/Trade-Directory.svg";
+import logo5 from "@/app/images/logos/why-us/Advanced-Tool.svg";
+// import logo6 from "@/app/images/logos/why-us/real-time-chat.svg";
+import logo7 from "@/app/images/logos/why-us/Live-talk.svg";
+import logo8 from "@/app/images/logos/why-us/survey.svg";
+import logo9 from "@/app/images/logos/why-us/survey.svg";
+import selection from "@/app/images/logos/why-us/sellection_process.svg";
 
 import Background from "@/app/images/home/WhyUs-Background.webp"; // Using the ship image from your structure
 
@@ -80,17 +79,17 @@ const solutionsData = [
     heightClass: "h-80 lg:h-96",
     logo: logo5,
   },
-  {
-    id: 6,
-    src: grid6,
-    alt: "Solution 6",
-    heading: "Real-Time Chat",
-    description1:
-      "Enjoy seamless, real-time chat functionality that enables fast, synchronized communication, enhancing networking efficiency.",
-    description2: "Tailored logistics solutions for your needs.",
-    heightClass: "h-48 lg:h-56",
-    logo: logo6,
-  },
+  // {
+  //   id: 6,
+  //   src: grid6,
+  //   alt: "Solution 6",
+  //   heading: "Real-Time Chat",
+  //   description1:
+  //     "Enjoy seamless, real-time chat functionality that enables fast, synchronized communication, enhancing networking efficiency.",
+  //   description2: "Tailored logistics solutions for your needs.",
+  //   heightClass: "h-48 lg:h-56",
+  //   logo: logo6,
+  // },
   {
     id: 7,
     src: grid7,
@@ -122,7 +121,7 @@ const solutionsData = [
       "BNG ensures that only reliable and trustworthy companies join the network through a rigorous selection process.",
     description2: "Secure storage facilities and management.",
     heightClass: "h-80 lg:h-96",
-    logo: shield,
+    logo: selection,
   },
 ];
 
@@ -138,9 +137,9 @@ const Solutions = () => {
           className="opacity-80"
         />
       </div> */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-8xl lg:mx-24 mx-auto px-4 sm:px-6 lg:px-8 lg:my-8 relative z-10">
         <div className="relative">
-        <h2  className="text-[55px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
+        <h2  className="text-[55px] font-bold  text-[#27293B] text-center mb-8 relative z-10">
             Why <span className="text-primary">Us?</span> 
           </h2>
           <h2
@@ -149,18 +148,18 @@ const Solutions = () => {
             Why Us?
           </h2>
           <div className="flex w-[100%] justify-center ">
-          <p className="text-center text-[18px] w-[80%] text-gray-600">
+          {/* <p className=" text-sm text-gray-500 tracking-widest text-center mb-10 w-[80%] ">
             With BNG, receive comprehensive marketing support, 24/7 assistance,
             and participate in live industry events. Access a global trade
             directory, advanced tools, and real-time communication features to
             drive meaningful connections and business growth.
-          </p>
+          </p> */}
         </div>
         </div>
 
         {/* Grid with 3 columns */}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {solutionsData.map(({ id, src, alt, heading, description1, logo }) => (
             <div
               key={id}
@@ -175,18 +174,28 @@ const Solutions = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
               <div className="absolute inset-0 flex flex-col justify-between p-6 text-white">
-                <Image
-                  src={logo}
-                  alt="Logo"
-                  width={60}
-                  height={60}
-                  className="self-start bg-white p-2 rounded-full"
+                <div
+                  // src={logo}
+                  // alt="Logo"
+                  // width={60}
+                  // height={60}
+                  className="self-start  p-2 rounded-full"
                 />
                 <div className="transform transition-all duration-300 translate-y-8 group-hover:translate-y-0">
-                  <h3 className="text-xl font-bold mb-2">
+                  <div className="flex items-center justify-start gap-2 mb-4">
+                    <Image
+                      src={logo}
+                      alt="Logo"
+                      width={46}
+                      height={46}
+                      className="self-start   rounded-full"
+                    />
+                        <h3 className="text-2xl font-bold ">
                     {heading}
                   </h3>
-                  <p className="text-sm max-h-0 group-hover:max-h-40 overflow-hidden transition-all duration-300">
+                  </div>
+              
+                  <p className="text-base max-h-0  font-bold group-hover:max-h-40 overflow-hidden transition-all duration-300">
                     {description1}
                   </p>
                 </div>

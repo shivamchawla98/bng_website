@@ -5,17 +5,17 @@ import icon1 from '@/app/images/icon1.svg';
 import fb from '@/app/images/fb.svg';
 import linkedin from '@/app/images/linkedin.svg';
 import utube from '@/app/images/utube.svg';
-import shield from '../../../public/encrypted.png';
-import reference from '../../../public/reference.png';
-import finance from '../../../public/financial.png';
-import approval from '../../../public/approval.png';
+import shield from '../../../public/multilayervalidation/Strict_Selection.svg';
+import reference from '../../../public/multilayervalidation/Reference Checks.svg';
+import finance from '../../../public/multilayervalidation/Financial Checks.svg';
+import approval from '../../../public/multilayervalidation/Approval & Conclusion.svg';
 
 const SecuritySteps = () => {
   const steps = [
     {
       number: '01',
       title: 'Strict Selection',
-      description: 'Top to bottom examination of every application by specialists. In the event that an organization is live with us implies it has gone through with severe determination process',
+      description: 'Thorough examination of every application by specialists. Registered organization is live with us implies it has gone through with severe determination process',
       icon: shield
     },
     {
@@ -61,7 +61,9 @@ const SecuritySteps = () => {
         {steps.map((step, index) => (
           <div key={step.number} className="relative flex flex-col items-center text-center mx-4 transition-transform transform hover:scale-105 duration-300">
             {/* Icon for Step */}
-            <div className="w-32 h-32 flex items-center justify-center mb-6 relative z-10 bg-gradient-to-r from-purple-200 to-[#6853DB] rounded-full shadow-lg">
+            <div 
+       style={{ backgroundImage: 'linear-gradient(150deg,  #5316aa , #7159fb)' }}
+            className="w-32 h-32 flex items-center justify-center mb-6 relative z-10  rounded-full shadow-lg">
               <img src={step.icon.src} alt={step.title} className="w-20 h-20 opacity-80" />
             </div>
             
