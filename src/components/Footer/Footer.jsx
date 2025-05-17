@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import twitter from "@/app/images/twitter.svg";
-import fb from "@/app/images/fb.svg";
-import utube from "@/app/images/utube.svg";
-import { FaInstagram } from "react-icons/fa";
-import linkedin from "@/app/images/linkedin.svg";
+import twitter from "../../../public/socialmediaicon/X.png";
+import fb from "../../../public/socialmediaicon/fb.png";
+import utube from "../../../public/socialmediaicon/Youtube.png";
+import  Insta  from "../../../public/socialmediaicon/insta_01.png";
+import linkedin from "../../../public/socialmediaicon/linkedin.png";
 
 const Footer = () => {
   return (
@@ -27,7 +27,7 @@ const Footer = () => {
             <SocialLinks />
             <div className="mt-10">
               <h3 className="text-2xl text-wrap font-bold max-w-[250px]">
-                Subscribe to our newsletters now!
+                <span className="text-3xl">Subscribe to our </span> newsletter now!
               </h3>
               <div className="mt-6 border-b-[0.9px] w-max bg-white rounded-full">
                 <input
@@ -52,7 +52,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 lg:gap-12 mt-8 md:mt-0 md:w-3/4">
-            {/* <FooterSection
+            <FooterSection
               title="ABOUT US"
               links={[
                 { href: "#", label: "FAQ's" },
@@ -61,8 +61,8 @@ const Footer = () => {
                 { href: "#", label: "Our Mission" },
                 { href: "#", label: "What We Do" },
               ]}
-            /> */}
-            {/* <FooterSection
+            />
+            <FooterSection
               title="SERVICES"
               links={[
                 { href: "#", label: "BNG Vendors" },
@@ -70,14 +70,14 @@ const Footer = () => {
                 { href: "#", label: "BNG Tech & Media" },
                 { href: "#", label: "BNG B2B Marketplace" },
               ]}
-            /> */}
+            />
             <FooterSection
               title="Tools"
               links={[
                 { href: "/freight-xchange", label: "Freight Xchange" },
                 { href: "/business-xchange", label: "Business Xchange" },
-                // { href: "#", label: "Improters Directory" },
-                // { href: "#", label: "Exporters Directory" },
+                { href: "#", label: "Improters Directory" },
+                { href: "#", label: "Exporters Directory" },
               ]}
             />
             <FooterSection
@@ -151,8 +151,8 @@ const SocialLinks = () => (
           src={social.image} 
           alt={social.name} 
           
-          width={30} 
-          height={50}
+          width={40} 
+          height={40}
           className="transition-transform duration-300 ease-in-out"
         />
         <span className="sr-only">{social.name}</span>
@@ -177,11 +177,11 @@ const socialMediaLinks = [
     href: "https://x.com/NetworkBNG/",
     image: twitter,
   },
-  //   {
-  //   name: "Instagram page",
-  //   href: "https://www.instagram.com/NetworkBNG/",
-  //   image: <FaInstagram className="text-gray-600 hover:text-gray-900 transition-all duration-300 ease-in-out transform hover:scale-110" />,
-  // },
+    {
+    name: "Instagram page",
+    href: "https://www.instagram.com/NetworkBNG/",
+    image: Insta,
+  },
   {
     name: "YouTube",
     href: "https://www.youtube.com/@networkbng",

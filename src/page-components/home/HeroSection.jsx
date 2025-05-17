@@ -5,6 +5,10 @@ import Image from "next/image";
 import bg from "@/app/images/home/Ellipse2.png";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import office from '../../../public/herosectionicon/offices.png';
+import cities from '../../../public/herosectionicon/cities.png';
+import member from '../../../public/herosectionicon/member.png';
+import country from '../../../public/herosectionicon/contries.png';
 const HeroSection = () => {
   const router = useRouter();
   const [scrollY, setScrollY] = useState(0);
@@ -121,19 +125,12 @@ const HeroSection = () => {
             }}>
             <div className="flex items-center space-x-2">
               <div className="bg-purple-100 p-1 rounded-full">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-purple-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 21h18M3 7v1a3 3 0 003 3h12a3 3 0 003-3V7m-18 0V6a3 3 0 013-3h12a3 3 0 013 3v1M3 7l9-4 9 4"
-                  />
-                </svg>
+                <Image
+                  src={cities}
+                  alt="cities Icon"
+                  className="h-6 w-6 text-purple-600"
+                />
+           
               </div>
               <span className="font-semibold text-sm text-[#27293B]">
                 200+ Cities
@@ -148,19 +145,11 @@ const HeroSection = () => {
             }}>
             <div className="flex items-center space-x-2">
               <div className="bg-purple-100 p-1 rounded-full">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
+              <Image
+                  src={office}
+                  alt="cities Icon"
                   className="h-6 w-6 text-purple-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
+                />
               </div>
               <span className="font-semibold text-sm text-[#27293B]">
                 210+ Offices
@@ -175,19 +164,11 @@ const HeroSection = () => {
             }}>
             <div className="flex items-center space-x-2">
               <div className="bg-purple-100 p-1 rounded-full">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-purple-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+              <Image
+                  src={member}
+                  alt="cities Icon"
+                  className="h-6 w-6 text-purple-600"
+                />
               </div>
               <span className=" font-semibold text-sm text-[#27293B]">
                 100+ Members
@@ -202,19 +183,11 @@ const HeroSection = () => {
             }}>
             <div className="flex items-center space-x-2">
               <div className="bg-purple-100 p-1 rounded-full">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-purple-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+              <Image
+                  src={country}
+                  alt="cities Icon"
+                  className="h-6 w-6 text-purple-600"
+                />
               </div>
               <span className="font-semibold text-sm text-[#27293B]">
                 30+ Countries
