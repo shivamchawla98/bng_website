@@ -14,11 +14,13 @@ import WorldMap from "@/page-components/home/WorldMap";
 export default function Home() {
 return(
   
-  <div className=" w-screen">
+  <div className=" w-screen ">
   <HeroSection />
   <AboutUs />
   <MemberBenefits />
   <TestimonialSlider />
+
+ 
   <section className="bg-secondryBg py-28 md:px-[112px]">
     <LatestMembers />
   </section>

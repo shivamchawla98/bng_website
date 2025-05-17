@@ -6,7 +6,8 @@ import { useState } from 'react';
 function Cta() {
     const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-<div className="bg-gradient-to-tr  from-[#6853DB] to-[#6853DB] text-white py-16">
+<div 
+className="bg-gradient-to-tr  from-[#6853DB] to-[#6853DB] text-white py-16">
         <ModalMembershipForm 
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}

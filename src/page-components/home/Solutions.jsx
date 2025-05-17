@@ -143,7 +143,7 @@ const Solutions = () => {
             Why <span className="text-primary">Us?</span> 
           </h2>
           <h2
-            className="absolute text-center top-[-30px] md:left-[35%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            className="absolute text-center top-[-30px] md:left-[40%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
             aria-hidden="true">
             Why Us?
           </h2>

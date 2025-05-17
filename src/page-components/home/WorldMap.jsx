@@ -214,7 +214,7 @@ const WorldMap = () => {
     <section className="world-map-section">
       <div className="title-container">
       <h2  className="text-[55px] font-bold  text-[#27293B] text-center my-10 relative z-10">Worldwide <span className="text-primary">Reach</span> </h2>
-        <h2 className="absolute text-center top-[-25px] md:left-[23%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2" aria-hidden="true">
+        <h2 className="absolute text-center -top-[3px] md:left-[23%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2" aria-hidden="true">
           Worldwide Reach
         </h2>
       </div>

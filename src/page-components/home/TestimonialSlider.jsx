@@ -83,7 +83,7 @@ const TestimonialSlider = () => {
 
   return (
     <section
-      className="relative bg-secondryBg bg-gradient-to-b from-purple-50 to-white"
+      className="relative    bg-secondryBg bg-gradient-to-b from-purple-50 to-white"
       style={{
         backgroundImage: `url(${Vector.src})`,
         backgroundRepeat: "no-repeat",
@@ -186,6 +186,11 @@ const TestimonialSlider = () => {
               ))}
             </Slider>
           </div>
+        </div>
+        <div> 
+          <div className="absolute bg-rose-400 -bottom-40 right-0 w h-[200px] rounded-full">
+            </div>
+
         </div>
       </div>
 

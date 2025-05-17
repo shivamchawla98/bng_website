@@ -189,7 +189,7 @@ function MemberBenefits() {
               </span>
           </h2>
           <h2
-            className="absolute text-center -top-[36px] md:left-[35%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            className="absolute text-center -top-[36px] md:left-[31%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
             aria-hidden="true">
             Member Benefits
           </h2>

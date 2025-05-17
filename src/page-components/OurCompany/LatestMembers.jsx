@@ -107,7 +107,7 @@ const styles = {
   headingBackground: {
     position: "absolute",
     textAlign: "center",
-    top: "-30px",
+    top: "-50px",
     left: "30%",
     fontSize: "80px",
     fontWeight: "bold",
