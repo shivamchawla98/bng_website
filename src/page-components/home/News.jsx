@@ -47,8 +47,8 @@ const News = () => {
         }}></div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="relative">
-          <h2 className="text-[40px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
-            Latest News
+          <h2 className="text-[55px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
+            Latest <span className="text-[#6853DB]">News</span>
           </h2>
           <h2
             className="absolute text-center top-[-60px] md:top-[-30px] md:left-[32%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"

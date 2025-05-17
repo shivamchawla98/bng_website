@@ -181,11 +181,14 @@ function MemberBenefits() {
           Member Benefits
         </h2> */}
         <div className="relative">
-          <h2 className="text-[40px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
-            Member Benefits
+          <h2 className="text-[55px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
+            Member <span className="text-[#6853DB]"> 
+            Benefits
+              </span>
           </h2>
           <h2
-            className="absolute text-center top-[-30px] md:left-[30%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            className="absolute text-center top-[-30
+            px] md:left-[30%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
             aria-hidden="true">
             Member Benefits
           </h2>

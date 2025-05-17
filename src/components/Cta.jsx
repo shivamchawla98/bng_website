@@ -12,7 +12,7 @@ function Cta() {
           onClose={() => setIsModalOpen(false)}
         />
   <div className="container text-gray-200 mx-auto text-center">
-    <h2 className="text-3xl text-gray-200 md:text-4xl font-bold">
+    <h2 className="text-3xl text-gray-200 md:text-5xl font-bold">
       Request a <span className="text-white">Consultation</span>
     </h2>
     <p className="mt-4 text-lg md:text-xl">

@@ -98,7 +98,7 @@ function Header() {
           <div className="hidden md:flex space-x-4">
             <Link
               href="https://app.bnglogisticsnetwork.com/register"
-              className="group bg-gradient-to-tr  from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary transition-all duration-300 transform hover:translate-x-2">
+              className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent transition-all duraton-300 bg-primary transform hover:translate-x-2">
               Become a Member
             </Link>
           </div>
@@ -184,7 +184,7 @@ function Header() {
           </div>
 
           <div className="flex flex-col space-y-3 pt-4 border-t">
-            <Link href="https://app.bnglogisticsnetwork.com/register" className="bg-primary rounded-lg text-white px-6 py-3 hover:bg-gradient-to-tr from-[#6853DB] to-[#6853DB] flex items-center justify-center hover:to-transparent transition-all duration-300 group hover:translate-x-2">
+            <Link href="https://app.bnglogisticsnetwork.com/register" className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent transition-all duraton-300 bg-primary transform hover:translate-x-2">
               Become a Member
             </Link>
           </div>

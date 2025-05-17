@@ -128,8 +128,8 @@ const TestimonialSlider = () => {
 
 
             <div className="relative w-full max-w-[800px]">
-              <h2 className="text-[40px] font-bold text-gray-900 text-center  md:text-left my-4 relative z-10">
-              Accredited Excellence 
+              <h2 className="text-[55px] font-bold text-gray-900 text-center  md:text-left my-4 relative z-10">
+              Accredited <span className="text-[#6853DB]">Excellence  </span> 
               </h2>
               <p className="text-sm text-justify text-gray-500">
               Our partners are selected for their strong local presence and established expertise in cargo operations, ensuring reliability. They undergo thorough screenings for service quality, compliance, and financial stability, which guarantees that we collaborate with only the best in the industry.

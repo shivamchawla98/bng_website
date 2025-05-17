@@ -27,9 +27,9 @@ function WorldWideReach() {
         backgroundRepeat: "no-repeat",
       }}>
       <div className="relative w-full f;ex justify-center ">
-        <h2 className="text-[40px] font-bold text-gray-900 mb-16 text-center mt-10 relative z-10">
-          Worldwide Reach
-        </h2>
+      <h2  className="text-[55px] font-bold  text-[#27293B] text-center mb-12 relative z-10">Worldwide <span className="text-[#6853DB]">Reach</span> </h2>
+     
+
         <h2
           className="absolute  left-0 text-left top-[0px] md:left-[25%] text-[80px] md:w-full font-bold text-[#27293B] opacity-[3%] leading-none z-2"
           aria-hidden="true">

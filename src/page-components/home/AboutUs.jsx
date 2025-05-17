@@ -20,20 +20,20 @@ function AboutUs() {
       </div>
       <div className="md:w-1/2 md:pr-10 mb-8 md:mb-0 md:ml-10 mt-10 md:mt-0 py-14 ">
         <div className="relative">
-          <h2 className="text-[40px] font-bold mb-4 text-gray-700 relative z-10">
-            Our Story
+          <h2 className="text-[55px] font-bold mb-4 text-gray-700 relative z-10">
+            Our <span className="text-[#6853DB]">Story</span>
           </h2>
           <h2
-            className="absolute top-[-20px] left-0 text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            className="absolute -top-[40px] left-0 text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
             aria-hidden="true">
             Our Story
           </h2>
         </div>
-        <p className="text-sm text-gray-500 tracking-widest mb-4 text-justify">
+        <p className="text-sm text-gray-500  mb-4 ">
           Built by a team with over 20 years of expertise in logistics and supply chain management. BNG Group has emerged as a resilient leader in both robust network solutions and B2B relationship-building
           Following nearly three years of in-depth market research and analysis, we launched a network with unique features that empower members to forge strong global partnerships.
         </p>
-        <p className="text-sm text-gray-500 tracking-widest text-justify mb-6 ">
+        <p className="text-sm text-gray-500   mb-6 ">
           Join us and gain exclusive access to one of the industry’s largest Exporters/Importers Data Banks—sourced and maintained by BNG Group—designed to support successful, data-driven connections across the globe.
         </p>
         <button onClick={() => router.push("/our-company")} className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent transition-all duraton-300 bg-primary transform hover:translate-x-2" >

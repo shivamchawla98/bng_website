@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { Phone } from "lucide-react";
 import Image from "next/image";
 import bg from "@/app/images/home/Ellipse2.png";
 import { useRouter } from "next/navigation";
@@ -56,13 +55,15 @@ const HeroSection = () => {
           </h1>
           <p className="text-gray-600 mb-8 text-base">
             Experience the next generation of forwarder networks. Tired of
-            investing in multiple networks with minimal returns? Discover a
+            investing in multiple networks with minimal returns? <span className="text-base font-semibold">
+            Discover a
             fresh approach to partnership here!
+              </span>
           </p>
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
             <Link
             href="https://app.bnglogisticsnetwork.com/login"
-             className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary transition-all duration-300 group transform hover:translate-x-2"
+             className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent transition-all duraton-300 bg-primary transform hover:translate-x-2"
             >
               Become a Member
               <svg
@@ -132,7 +133,7 @@ const HeroSection = () => {
                 </svg>
               </div>
               <span className="font-medium text-sm text-[#27293B]">
-                215+ Ports and Airports
+                200+ Cities
               </span>
             </div>
           </div>
@@ -159,7 +160,7 @@ const HeroSection = () => {
                 </svg>
               </div>
               <span className="font-medium text-sm text-[#27293B]">
-                85% Active Members
+                210+ Offices
               </span>
             </div>
           </div>
@@ -186,7 +187,7 @@ const HeroSection = () => {
                 </svg>
               </div>
               <span className="font-medium text-sm text-[#27293B]">
-                20+ Years of Experience
+                100+ Members
               </span>
             </div>
           </div>
@@ -213,7 +214,7 @@ const HeroSection = () => {
                 </svg>
               </div>
               <span className="font-medium text-sm text-[#27293B]">
-                150+ Countries
+                30+ Countries
               </span>
             </div>
           </div>
