@@ -94,9 +94,10 @@ const TestimonialSlider = () => {
       <div
         className="absolute bottom-16 left-8 w-[200px] h-[200px] rounded-full"
         style={{
-          background: "linear-gradient(180deg, #D186EB 10%, #D186EB 90%)",
-
-          filter: "blur(100.8px)",
+          background:
+            "linear-gradient(-145deg, #6853DB 16%, #6853DB 40.86%, #97b6f6 30%)",
+          zIndex: 1,
+          filter: "blur(110px)",
         }}></div>
       {/* Curved Background */}
       {/* <div className="absolute inset-0 h-[20%] bg-purple-50">
@@ -107,7 +108,7 @@ const TestimonialSlider = () => {
       </div> */}
 
       {/* Content Container */}
-      <div className="relative mx-auto px-4 sm:px-6 lg:px-8 py-14 w-full flex  items-center justify-center">
+      <div className="relative mx-auto lg:h-screen px-4 sm:px-6 lg:px-8 py-14 w-full flex  items-center justify-center">
         {/* Title */}
 
         {/* Flex Container for Image and Slider */}
@@ -145,11 +146,11 @@ const TestimonialSlider = () => {
           {/* Slider Section */}
           <div className=" lg:w-1/2 max-h-[500px] ">
             <div className="relative ]">
-              <h2 className="text-[40px] font-bold text-gray-900 mb-16 text-left mt-10 relative z-10">
+              <h2 className="text-[55px] font-bold text-primary mb-16 text-left mt-10 relative z-10">
                 Testimonials
               </h2>
               <h2
-                className="absolute hidden md:block max-w-[3vw] text-left top-[-30px] left-0 text-[80px] md:w-full font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+                className="absolute hidden md:block max-w-[3vw] text-left top-[-43px] -left-[60px] text-[80px] md:w-full font-bold text-[#27293B] opacity-[3%] leading-none z-2"
                 aria-hidden="true">
                 Testimonials
               </h2>
@@ -157,7 +158,7 @@ const TestimonialSlider = () => {
             <Slider {...settings}>
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="p-4">
-                  <div className="bg-white shadow-lg rounded-xl p-6 max-w-[300px]">
+                  <div className="bg-white shadow-lg rounded-xl p-6 max-w-[450px]">
                     <div className="space-y-6">
                       <p className="text-gray-500 text-sm">
                         {testimonial.text}

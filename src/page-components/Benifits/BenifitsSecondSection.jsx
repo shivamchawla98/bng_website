@@ -23,10 +23,11 @@ function BenifitsSecondSection() {
         className="absolute top-10 right-12 transform translate-x-1/2 -translate-y-1/2 md:w-[160px] h-[20%] rounded-full"
         style={{
           background:
-            "linear-gradient(180deg, #D186EB 100%, #D186EB 100.86%, #D186EB 100%)",
+            "linear-gradient(-145deg, #6853DB 16%, #6853DB 40.86%, #97b6f6 30%)",
           zIndex: 1,
-          filter: "blur(50px)",
-        }}></div>
+          filter: "blur(110px)",
+        }}
+        ></div>
 
       <div className="container mx-auto px-8 md:px-16 flex flex-col md:flex-row items-center justify-between">
         {/* left side */}

@@ -165,14 +165,16 @@ function MemberBenefits() {
       <div
         className="absolute top-16 right-0 w-[200px] h-[200px] rounded-full"
         style={{
-          background: "linear-gradient(180deg, #4D7DB5 10%, #D186EB 90%)",
+          background:
+            "linear-gradient(-145deg, #6853DB 16%, #6853DB 40.86%, #97b6f6 30%)",
           zIndex: 1,
-          filter: "blur(60.8px)",
-        }}></div>
+          filter: "blur(110px)",
+        }}
+        ></div>
       <div
-        className="absolute bottom-[10%] left-8 w-[200px] h-[200px] rounded-full"
+        className="absolute bottom-[10%] left-8 w-[400px] h-[300px] rounded-full"
         style={{
-          background: "linear-gradient(180deg, #D186EB 10%, #D186EB 90%)",
+          background: "linear-gradient(180deg, #97b6f6 10%, #97b6f6 90%)",
           zIndex: 1,
           filter: "blur(60.8px)",
         }}></div>
@@ -187,8 +189,7 @@ function MemberBenefits() {
               </span>
           </h2>
           <h2
-            className="absolute text-center top-[-30
-            px] md:left-[30%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            className="absolute text-center -top-[36px] md:left-[35%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
             aria-hidden="true">
             Member Benefits
           </h2>
@@ -203,7 +204,8 @@ function MemberBenefits() {
                 
                 className="top-0 w-[400px] justify-center flex flex-col items-center align-middle">
                   <div 
-                  className=" w-44 h-44 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer">
+                  style={{ backgroundImage: 'linear-gradient(150deg,  #5316aa , #7159fb)' }}
+                  className=" w-44 h-44 lg:w-48 lg:h-48    rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer">
                     <Image
                       src={benefit.image}
                       alt="Member Benefits"
@@ -211,14 +213,14 @@ function MemberBenefits() {
                       className="object-contain md:block hidden relative transition-transform duration-300 group-hover:scale-110"
                     />
                     <div className="text-white text-center mt-2 transition-all duration-300 group-hover:translate-y-1">
-                      <div className="font-medium text-base group-hover:text-opacity-90">
+                      <div className="font-medium p-2 text-base group-hover:text-opacity-90">
                         {benefit.title}
                       </div>
                     </div>
                   </div>
 
                   <div className="flex items-center justify-center h-44">
-                    <p className="text-gray-500 text-base text-left">
+                    <p className="text-gray-500 text-lg text-left">
                       {benefit.description}
                     </p>
                   </div>
@@ -243,14 +245,14 @@ function MemberBenefits() {
             <div
               className="absolute"
               style={{
-                left: 'calc(50% - 130px)',
+                left: 'calc(50% - 150px)',
                 top: '-20px',
                 transform: `translateY(${scrollY}px)`,
                 transition: 'transform 0.1s ease-out',
                 zIndex: 1000
               }}
             >
-              <div className="w-[260px] h-[260px] rotate-90 relative">
+              <div className="w-[300px] h-[300px] rotate-90 relative">
                 <Image
                   src={ship}
                   alt="Ship"
@@ -268,11 +270,13 @@ function MemberBenefits() {
                 className="flex flex-col p-4 justify-center align-middle">
                 <div className="top-0 w-[400px] justify-center flex flex-col items-center align-middle">
                   <div className="flex items-center justify-center h-44">
-                    <p className="text-gray-500 text-base lg:ml-4 text-left">
+                    <p className="text-gray-500 text-lg lg:ml-4 text-left">
                       {benefit.description}
                     </p>
                   </div>
-                  {benefit.image && benefit.title && <div className="w-44 h-44 bg-cstm-bg-rad-grad-memb-benfts rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer">
+                  {benefit.image && benefit.title && <div
+                  style={{ backgroundImage: 'linear-gradient(150deg,  #5316aa , #7159fb)' }}
+                  className="w-44 h-44 lg:w-48 lg:h-48  rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer">
                     <Image
                       src={benefit.image}
                       alt="Member Benefits"
@@ -280,7 +284,7 @@ function MemberBenefits() {
                       className="object-contain md:block hidden relative transition-transform duration-300 group-hover:scale-110"
                     />
                     <div className="text-white text-center mt-2 transition-all duration-300 group-hover:translate-y-1">
-                      <div className="font-medium text-base group-hover:text-opacity-90">
+                      <div className="font-medium p-2 text-base group-hover:text-opacity-90">
                         {benefit.title}
                       </div>
                     </div>
@@ -294,19 +298,21 @@ function MemberBenefits() {
         <div className="relative md:hidden md:h-[600px] top-10 w-max mx-auto flex flex-col justify-center items-center">
           {mobileBenefits.map((benefit, index) => (
             <div key={index} className="w-[400px] flex flex-col items-center">
-              <div className="w-32 h-32 bg-primary rounded-full flex flex-col items-center justify-center">
+              <div 
+              
+              className="w-32 h-32 bg-primary   rounded-full flex flex-col items-center justify-center">
                 <Image
                   src={handShake}
                   alt="Member Benefits"
                   className="object-contain md:block hidden relative"
                 />
                 <div className="text-white text-center mt-2">
-                  <div className="font-semibold text-[14px]">
+                  <div className="font-semibold text-[16px]">
                     {benefit.title}
                   </div>
                 </div>
               </div>
-              <p className="text-gray-600 text-sm text-left mt-4 text-[18px]">
+              <p className="text-gray-600  text-left mt-4 text-[20px]">
                 {benefit.description}
               </p>
             </div>
