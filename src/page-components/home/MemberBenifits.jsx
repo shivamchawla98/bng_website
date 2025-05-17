@@ -182,7 +182,7 @@ function MemberBenefits() {
         </h2> */}
         <div className="relative">
           <h2 className="text-[55px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
-            Member <span className="text-[#6853DB]"> 
+            Member <span className="text-primary"> 
             Benefits
               </span>
           </h2>

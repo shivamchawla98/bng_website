@@ -22,7 +22,7 @@ function LatestMembers() {
   return (
     <section style={styles.section}>
       <div style={styles.headingContainer}>
-        <h2  className="text-[55px] font-bold  text-[#27293B] text-center mb-12 relative z-10">Latest <span className="text-[#6853DB]">Members</span></h2>
+        <h2  className="text-[55px] font-bold  text-[#27293B] text-center mb-12 relative z-10">Latest <span className="text-primary">Members</span></h2>
         <h2 style={styles.headingBackground} aria-hidden="true">
           Latest Members
         </h2>

@@ -21,7 +21,7 @@ function AboutUs() {
       <div className="md:w-1/2 md:pr-10 mb-8 md:mb-0 md:ml-10 mt-10 md:mt-0 py-14 ">
         <div className="relative">
           <h2 className="text-[55px] font-bold mb-4 text-gray-700 relative z-10">
-            Our <span className="text-[#6853DB]">Story</span>
+            Our <span className="text-primary">Story</span>
           </h2>
           <h2
             className="absolute -top-[40px] left-0 text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"

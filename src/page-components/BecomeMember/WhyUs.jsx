@@ -141,7 +141,7 @@ const Solutions = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="relative">
         <h2  className="text-[55px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
-            Why <span className="text-[#6853DB]">Us?</span> 
+            Why <span className="text-primary">Us?</span> 
           </h2>
           <h2
             className="absolute text-center top-[-30px] md:left-[35%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
