@@ -5,10 +5,10 @@ import icon1 from '@/app/images/icon1.svg';
 import fb from '@/app/images/fb.svg';
 import linkedin from '@/app/images/linkedin.svg';
 import utube from '@/app/images/utube.svg';
-import shield from '../../../public/multilayervalidation/Strict_Selection.svg';
-import reference from '../../../public/multilayervalidation/Reference Checks.svg';
-import finance from '../../../public/multilayervalidation/Financial Checks.svg';
-import approval from '../../../public/multilayervalidation/Approval & Conclusion.svg';
+import shield from '../../../public/multilayervalidation/Strict_Selection.png';
+import reference from '../../../public/multilayervalidation/Reference-Checks.png';
+import finance from '../../../public/multilayervalidation/Financial-Checks.png';
+import approval from '../../../public/multilayervalidation/Approval-&-Conclusion.png';
 
 const SecuritySteps = () => {
   const steps = [
@@ -44,7 +44,7 @@ const SecuritySteps = () => {
       <div className="relative text-center mb-16">
         <h2 className="text-[55px] font-bold  text-[#27293B] text-center mb-2 relative z-10">Multilayer <span className="text-primary">Validation </span></h2>
         <h2
-            className="absolute text-center top-[-30px] md:left-[30%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            className="absolute text-center top-[-30px] md:left-[26%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
             aria-hidden="true">
             Multilayer Validation
           </h2>
@@ -62,8 +62,8 @@ const SecuritySteps = () => {
           <div key={step.number} className="relative flex flex-col items-center text-center mx-4 transition-transform transform hover:scale-105 duration-300">
             {/* Icon for Step */}
             <div 
-       style={{ backgroundImage: 'linear-gradient(150deg,  #5316aa , #7159fb)' }}
-            className="w-32 h-32 flex items-center justify-center mb-6 relative z-10  rounded-full shadow-lg">
+      //  style={{ backgroundImage: 'linear-gradient(150deg,  #5316aa , #7159fb)' }}
+            className="w-32 h-32 flex items-center justify-center mb-6 relative z-10  rounded-full shadow">
               <img src={step.icon.src} alt={step.title} className="w-20 h-20 opacity-80" />
             </div>
             

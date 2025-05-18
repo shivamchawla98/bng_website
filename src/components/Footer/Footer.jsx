@@ -122,13 +122,13 @@ const Footer = () => {
 };
 
 const FooterSection = ({ title, links }) => (
-  <div className="w-full">
-    <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase pb-1 border-b-[2px]">
+  <div className="w-full ">
+    <h2 className="mb-6 pl-8 text-sm font-semibold text-gray-900 uppercase pb-1 border-b-[2px]">
       {title}
     </h2>
-    <ul className="text-gray-600 font-medium">
+    <ul className="text-gray-600  pl-8 font-medium">
       {links.map((link, index) => (
-        <li key={index} className="mb-4">
+        <li key={index} className="mb-3">
           <a href={link.href} className="hover:underline">
             {link.label}
           </a>

@@ -171,13 +171,14 @@ function MemberBenefits() {
           filter: "blur(110px)",
         }}
         ></div>
-      {/* <div
-        className="absolute -bottom-[10%]  left-8 w-[400px] h-[300px] rounded-full"
+      <div
+        className="absolute   bottom-44  left-8 w-[300px] h-[300px] rounded-full"
         style={{
-          background: "linear-gradient(35deg, #97b6f6 10%, #97b6f6 90%)",
+          background:
+            "linear-gradient(-145deg, #6853DB 16%, #6853DB 40.86%, #97b6f6 30%)",
           zIndex: 1,
-          filter: "blur(90.8px)",
-        }}></div> */}
+          filter: "blur(110px)",
+        }}></div>
       <div ref={sectionRef} className="flex flex-col justify-center w-[100%] px-4 overflow-x-hidden py-14">
         {/* <h2 className="text-[55px] text-[#27293B] font-bold text-center mb-12">
           Member Benefits
@@ -203,24 +204,25 @@ function MemberBenefits() {
                 <div
                 
                 className="top-0 w-[400px] justify-center flex flex-col items-center align-middle">
-                  <div 
-                  style={{ 
-                    background: 'radial-gradient(circle at 70% 30%, #8A6EFF 0%, #6853DB 50%, #5316aa 100%)',
-                    boxShadow: '0 10px 25px rgba(104, 83, 219, 0.3), inset 0 -5px 10px rgba(0, 0, 0, 0.1), inset 0 5px 10px rgba(255, 255, 255, 0.2)'
-                  }}
-                  className="w-44 h-44 lg:w-48 lg:h-48 rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer">
-                    <Image
-                      src={benefit.image}
-                      alt="Member Benefits"
-                      height={50}
-                      className="object-contain md:block hidden relative transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className="text-white text-center mt-2 transition-all duration-300 group-hover:translate-y-1">
-                      <div className="font-medium p-2 text-base group-hover:text-opacity-90">
-                        {benefit.title}
-                      </div>
-                    </div>
-                  </div>
+             <div 
+  style={{ 
+    background: 'radial-gradient(circle at 70% 30%, rgba(255,255,255,0.4) 0%, #5a3fd1 30%, #4a36b0 60%, #3452a1 100%)',
+    boxShadow: '0 10px 25px rgba(104, 83, 219, 0.3), inset 0 -5px 10px rgba(0, 0, 0, 0.2), inset 0 5px 10px rgba(255, 255, 255, 0.2)'
+  }}
+  className="w-44 h-44 lg:w-48 lg:h-48 rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer"
+>
+  <Image
+    src={benefit.image}
+    alt="Member Benefits"
+    height={50}
+    className="object-contain md:block hidden relative transition-transform duration-300 group-hover:scale-110"
+  />
+  <div className="text-white text-center mt-2 transition-all duration-300 group-hover:translate-y-1">
+    <div className="font-medium p-2 text-base group-hover:text-opacity-90">
+      {benefit.title}
+    </div>
+  </div>
+</div>
 
                   <div className="flex items-center mt-10 justify-center h-44">
                     <p className="text-gray-500 text-lg text-left">
