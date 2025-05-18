@@ -166,7 +166,7 @@ function MemberBenefits() {
         className="absolute top-16 right-0 w-[200px] h-[200px] rounded-full"
         style={{
           background:
-            "linear-gradient(-145deg, #6853DB 16%, #6853DB 40.86%, #97b6f6 30%)",
+            "radial-gradient(circle at 30% 30%, #97b6f6 0%, #6853DB 45%, #5844B4 100%)",
           zIndex: 1,
           filter: "blur(110px)",
         }}
@@ -204,8 +204,11 @@ function MemberBenefits() {
                 
                 className="top-0 w-[400px] justify-center flex flex-col items-center align-middle">
                   <div 
-                  style={{ backgroundImage: 'linear-gradient(150deg,  #5316aa , #7159fb)' }}
-                  className=" w-44 h-44 lg:w-48 lg:h-48    rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer">
+                  style={{ 
+                    background: 'radial-gradient(circle at 70% 30%, #8A6EFF 0%, #6853DB 50%, #5316aa 100%)',
+                    boxShadow: '0 10px 25px rgba(104, 83, 219, 0.3), inset 0 -5px 10px rgba(0, 0, 0, 0.1), inset 0 5px 10px rgba(255, 255, 255, 0.2)'
+                  }}
+                  className="w-44 h-44 lg:w-48 lg:h-48 rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer">
                     <Image
                       src={benefit.image}
                       alt="Member Benefits"
@@ -275,8 +278,11 @@ function MemberBenefits() {
                     </p>
                   </div>
                   {benefit.image && benefit.title && <div
-                  style={{ backgroundImage: 'linear-gradient(150deg,  #5316aa , #7159fb)' }}
-                  className="w-44 h-44 lg:w-48 lg:h-48  rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer">
+                  style={{ 
+                    background: 'radial-gradient(circle at 70% 30%, #8A6EFF 0%, #6853DB 50%, #5316aa 100%)',
+                    boxShadow: '0 10px 25px rgba(104, 83, 219, 0.3), inset 0 -5px 10px rgba(0, 0, 0, 0.1), inset 0 5px 10px rgba(255, 255, 255, 0.2)'
+                  }}
+                  className="w-44 h-44 lg:w-48 lg:h-48 rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer">
                     <Image
                       src={benefit.image}
                       alt="Member Benefits"
@@ -300,7 +306,11 @@ function MemberBenefits() {
             <div key={index} className="w-[400px] flex flex-col items-center">
               <div 
               
-              className="w-32 h-32 bg-primary   rounded-full flex flex-col items-center justify-center">
+              style={{ 
+                background: 'radial-gradient(circle at 70% 30%, #8A6EFF 0%, #6853DB 50%, #5316aa 100%)',
+                boxShadow: '0 10px 25px rgba(104, 83, 219, 0.3), inset 0 -5px 10px rgba(0, 0, 0, 0.1), inset 0 5px 10px rgba(255, 255, 255, 0.2)'
+              }}
+              className="w-32 h-32 rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-105">
                 <Image
                   src={handShake}
                   alt="Member Benefits"
