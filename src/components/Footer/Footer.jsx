@@ -5,14 +5,15 @@ import fb from "../../../public/socialmediaicon/fb.png";
 import utube from "../../../public/socialmediaicon/Youtube.png";
 import Insta from "../../../public/socialmediaicon/insta_01.png";
 import linkedin from "../../../public/socialmediaicon/linkedin.png";
-import backgroundImage from "../../../public/footer_bg.png"; // Ensure this path is correct
+import backgroundImage from '../../../public/footer_bg.png';
+
 
 const Footer = () => {
   return (
     <footer
       className="text-gray-900 relative shadow-md"
       style={{
-        backgroundImage: `url(${backgroundImage.src})`, // Use url() with the image source
+        backgroundImage: backgroundImage.src, // Logistics-themed background (cargo ship)
         backgroundSize: "cover",
         backgroundPosition: "center",
         position: "relative",
@@ -23,12 +24,12 @@ const Footer = () => {
         className="absolute inset-0"
         style={{
           backdropFilter: "blur(8px)", // Blur effect for the background image
-          background: "rgba(239, 246, 255, 0.7)", // Semi-transparent overlay
+          background: "rgba(239, 246, 255, 0.7)", // Semi-transparent overlay (matches your gradient theme)
           zIndex: 1,
         }}
       ></div>
 
-      {/* Decorative blurred circle */}
+      {/* Existing decorative blurred circle */}
       <div
         className="absolute bottom-0 right-0 w-[200px] h-[200px] rounded-full"
         style={{
