@@ -1,98 +1,9 @@
 'use client'
-import { Fragment, useState } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import { CheckIcon, MinusIcon, InfoIcon, ChevronDownIcon } from 'lucide-react'
 import { Star, StarsIcon, Crown } from 'lucide-react'
 import InviteModal from '../Contact/modal'
 import { ModalMembershipForm } from '@/page-components/home/ModalForm';
-
-const tiers = [
-  {
-    name: 'Standard',
-    id: 'tier-standard',
-    href: '#',
-    priceYearly: '$199', // Original one-year price
-    priceValue: 199, // Numeric for calculations
-    mostPopular: false,
-    icon: Star,
-  },
-  {
-    name: 'Premium',
-    id: 'tier-premium',
-    href: '#',
-    priceYearly: '$699',
-    priceValue: 699,
-    mostPopular: true,
-    icon: StarsIcon,
-  },
-  {
-    name: 'ELITE',
-    id: 'tier-elite',
-    href: '#',
-    priceYearly: '$1999',
-    priceValue: 1999,
-    mostPopular: false,
-    icon: Crown,
-  },
-]
-
-const sections = [
-  {
-    name: 'Standard Features',
-    features: [
-      { name: 'UNLIMITED SEARCHES FOR FELLOW MEMBERS', tiers: { Standard: true, Premium: true, ELITE: true } },
-      { name: 'REALTIME CHAT', tiers: { Standard: true, Premium: true, ELITE: true } },
-      { name: 'DEDICATED MEMBERSHIP PROFILE', tiers: { Standard: true, Premium: true, ELITE: true } },
-      { name: 'CERTIFICATE OF MEMBERSHIP', tiers: { Standard: true, Premium: true, ELITE: true } },
-      { name: 'MEMBERSHIP BADGE', tiers: { Standard: true, Premium: true, ELITE: true } },
-    ],
-  },
-  {
-    name: 'Team Management & Offices',
-    features: [
-      { name: 'TEAM MEMBERS / USERS (Same Country / Within Company)', tiers: { Standard: '1 USERS', Premium: '6 USERS', ELITE: 'UNLIMITED' } },
-      { name: 'BRANCH OFFICES (Same Country / Within Company)', tiers: { Standard: '', Premium: '1HQ + 3 BRANCH (After that $499 branch)', ELITE: '1HQ + 9 BRANCH (After that $499 branch)' } },
-    ],
-  },
-  {
-    name: 'Business Tools',
-    features: [
-      {
-        name: 'BUSINESS XCHANGE (Monthly Post/Bid)',
-        tiers: { Standard: '2 ENQUIRY', Premium: '15 ENQUIRIES', ELITE: 'UNLIMITED' },
-        tooltip: 'A ROBUST SYSTEM WITH FREIGHT ENQUIRIES FROM GLOBAL TRADE COMMUNITY / POST YOUR ENQUIRY / QUOTE FOR ENQUIRES',
-      },
-      {
-        name: 'FREIGHT XCHANGE (Monthly post of your promotional freight rates)',
-        tiers: { Standard: '2 POST', Premium: '15 POSTS', ELITE: 'UNLIMITED' },
-        tooltip: 'A ROBUST SYSTEM GIVES YOU OPPORTUNITY TO GROW YOUR VISIBILITY BY POSTING YOUR FREIGHT RATES',
-      },
-      {
-        name: 'PR AND MARKETING',
-        tiers: { Standard: '', Premium: '4 POSTS PER MONTH', ELITE: '15 POSTS PER MONTH' },
-        tooltip: 'CREATE YOUR VISIBILITY TO GLOBAL TRADE & EXIM MARKET',
-      },
-      { name: 'BE ON TOP SEARCH RESULTS', tiers: { Standard: false, Premium: false, ELITE: true } },
-    ],
-  },
-  {
-    name: 'PAYMENT PROTECTION FRAMEWORK',
-    features: [
-      {
-        name: 'PAYMENT PROTECTION FRAMEWORK ( Overdue Invoice Rankings - Strict Background Check - Payment Resolution Center - Global Warning List )',
-        tiers: { Standard: false, Premium: 'Up to $20,000 Payment Protection', ELITE: 'Up to $50,000 Payment Protection' },
-      },
-    ],
-  },
-  {
-    name: 'Preferences and Discounts',
-    features: [
-      { name: 'DISCOUNT ON CONFERENCE FEES', tiers: { Standard: false, Premium: false, ELITE: '5% life time' } },
-      { name: 'DISCOUNT ON SPONSERSHIP PACKAGES', tiers: { Standard: false, Premium: false, ELITE: '15% life time' } },
-      { name: 'VIRTUAL CONFERENCE ACCESS - FREE', tiers: { Standard: true, Premium: true, ELITE: true } },
-      { name: 'SPECIAL DISCOUNT ON CARGO INSURANCES', tiers: { Standard: true, Premium: true, ELITE: true } },
-    ],
-  },
-]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -111,43 +22,204 @@ function Tooltip({ content }) {
 }
 
 export default function Pricing() {
+  // State for modal
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedDurations, setSelectedDurations] = useState({
     'tier-standard': 1,
     'tier-premium': 1,
     'tier-elite': 1,
   })
-  const [dropdownOpen, setDropdownOpen] = useState({
+  const [openDropdowns, setOpenDropdowns] = useState({
     'tier-standard': false,
     'tier-premium': false,
     'tier-elite': false,
   })
+  // State for currency selection (USD or INR)
+  const [currency, setCurrency] = useState('USD');
+  // State for exchange rate
+  const [exchangeRate, setExchangeRate] = useState(83);
+  const [isLoading, setIsLoading] = useState(false);
+  
+  // Fetch exchange rate from API
+  useEffect(() => {
+    const fetchExchangeRate = async () => {
+      try {
+        setIsLoading(true);
+        // Using a free currency conversion API
+        const response = await fetch('https://open.er-api.com/v6/latest/USD');
+        const data = await response.json();
+        if (data && data.rates && data.rates.INR) {
+          setExchangeRate(data.rates.INR);
+        }
+      } catch (error) {
+        console.error('Error fetching exchange rate:', error);
+        // Fall back to default rate if API fails
+        setExchangeRate(83);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchExchangeRate();
+  }, []);
 
   const openModal = () => setIsModalOpen(true)
   const closeModal = () => setIsModalOpen(false)
 
+  // Define tiers
+  const tiers = [
+    {
+      name: 'Standard',
+      id: 'tier-standard',
+      href: '#',
+      priceYearly: '$199', // Original one-year price
+      priceValue: 199, // Numeric for calculations
+      mostPopular: false,
+      icon: Star,
+    },
+    {
+      name: 'Premium',
+      id: 'tier-premium',
+      href: '#',
+      priceYearly: '$699',
+      priceValue: 699,
+      mostPopular: true,
+      icon: StarsIcon,
+    },
+    {
+      name: 'ELITE',
+      id: 'tier-elite',
+      href: '#',
+      priceYearly: '$1999',
+      priceValue: 1999,
+      mostPopular: false,
+      icon: Crown,
+    },
+  ]
+
+  // Define sections with dynamic currency values
+  const sections = [
+    {
+      name: 'Standard Features',
+      features: [
+        { name: 'UNLIMITED SEARCHES FOR FELLOW MEMBERS', tiers: { Standard: true, Premium: true, ELITE: true } },
+        { name: 'REALTIME CHAT', tiers: { Standard: true, Premium: true, ELITE: true } },
+        { name: 'DEDICATED MEMBERSHIP PROFILE', tiers: { Standard: true, Premium: true, ELITE: true } },
+        { name: 'CERTIFICATE OF MEMBERSHIP', tiers: { Standard: true, Premium: true, ELITE: true } },
+        { name: 'MEMBERSHIP BADGE', tiers: { Standard: true, Premium: true, ELITE: true } },
+      ],
+    },
+    {
+      name: 'Team Management & Offices',
+      features: [
+        { name: 'TEAM MEMBERS / USERS (Same Country / Within Company)', tiers: { Standard: '1 USERS', Premium: '6 USERS', ELITE: 'UNLIMITED' } },
+        { 
+          name: 'BRANCH OFFICES (Same Country / Within Company)', 
+          tiers: { 
+            Standard: '', 
+            Premium: '1HQ + 3 BRANCH (After that $499 branch)', 
+            ELITE: '1HQ + 9 BRANCH (After that $499 branch)' 
+          } 
+        },
+      ],
+    },
+    {
+      name: 'Business Tools',
+      features: [
+        {
+          name: 'BUSINESS XCHANGE (Monthly Post/Bid)',
+          tiers: { Standard: '2 ENQUIRY', Premium: '15 ENQUIRIES', ELITE: 'UNLIMITED' },
+          tooltip: 'A ROBUST SYSTEM WITH FREIGHT ENQUIRIES FROM GLOBAL TRADE COMMUNITY / POST YOUR ENQUIRY / QUOTE FOR ENQUIRES',
+        },
+        {
+          name: 'FREIGHT XCHANGE (Monthly post of your promotional freight rates)',
+          tiers: { Standard: '2 POST', Premium: '15 POSTS', ELITE: 'UNLIMITED' },
+          tooltip: 'A ROBUST SYSTEM GIVES YOU OPPORTUNITY TO GROW YOUR VISIBILITY BY POSTING YOUR FREIGHT RATES',
+        },
+        {
+          name: 'PR AND MARKETING',
+          tiers: { Standard: '', Premium: '4 POSTS PER MONTH', ELITE: '15 POSTS PER MONTH' },
+          tooltip: 'CREATE YOUR VISIBILITY TO GLOBAL TRADE & EXIM MARKET',
+        },
+        { name: 'BE ON TOP SEARCH RESULTS', tiers: { Standard: false, Premium: false, ELITE: true } },
+      ],
+    },
+    {
+      name: 'PAYMENT PROTECTION FRAMEWORK',
+      features: [
+        {
+          name: 'PAYMENT PROTECTION FRAMEWORK ( Overdue Invoice Rankings - Strict Background Check - Payment Resolution Center - Global Warning List )',
+          tiers: { 
+            Standard: false, 
+            Premium: 'Up to $20,000 Payment Protection', 
+            ELITE: 'Up to $50,000 Payment Protection' 
+          },
+        },
+      ],
+    },
+    {
+      name: 'Preferences and Discounts',
+      features: [
+        { name: 'DISCOUNT ON CONFERENCE FEES', tiers: { Standard: false, Premium: false, ELITE: '5% life time' } },
+        { name: 'DISCOUNT ON SPONSERSHIP PACKAGES', tiers: { Standard: false, Premium: false, ELITE: '15% life time' } },
+        { name: 'VIRTUAL CONFERENCE ACCESS - FREE', tiers: { Standard: true, Premium: true, ELITE: true } },
+        { name: 'SPECIAL DISCOUNT ON CARGO INSURANCES', tiers: { Standard: true, Premium: true, ELITE: true } },
+      ],
+    },
+  ]
+
   const durations = [
     { years: 1, label: '1 Year' },
-    { years: 2, label: '2 Years' },
     { years: 3, label: '3 Years' },
   ]
 
+  // Function to format price text with correct currency symbol
+  const formatPriceText = (amount) => {
+    if (currency === 'USD') {
+      return `$${amount.toLocaleString()}`;
+    } else {
+      const inrAmount = Math.round(amount * exchangeRate);
+      return `₹${inrAmount.toLocaleString()}`;
+    }
+  }
+
+  // Function to get dynamic branch office text
+  const getBranchText = (baseText, branchCost) => {
+    const baseParts = baseText.split('$');
+    if (baseParts.length < 2) return baseText;
+    
+    const formattedCost = currency === 'USD' ? `$${branchCost}` : `₹${Math.round(branchCost * exchangeRate).toLocaleString()}`;
+    return `${baseParts[0]}${formattedCost} branch)`;
+  }
+
+  // Function to get payment protection text
+  const getProtectionText = (amount) => {
+    return `Up to ${formatPriceText(amount)} Payment Protection`;
+  }
+
   // Calculate price based on selected duration for a tier
-  const getPrice = (tier, duration) => {
-    if (duration === 1) return tier.priceYearly
-    const totalPrice = tier.priceValue * duration
-    return `$${totalPrice.toLocaleString()}`
+  const getPrice = (tier) => {
+    const years = selectedDurations[tier.id] || 1;
+    const basePrice = tier.priceValue * years;
+    
+    if (currency === 'USD') {
+      return `$${basePrice.toLocaleString()}`;
+    } else {
+      // Convert to INR and format
+      const inrPrice = Math.round(basePrice * exchangeRate);
+      return `₹${inrPrice.toLocaleString()}`;
+    }
   }
 
   // Handle duration selection for a specific tier
   const handleDurationChange = (tierId, years) => {
     setSelectedDurations((prev) => ({ ...prev, [tierId]: years }))
-    setDropdownOpen((prev) => ({ ...prev, [tierId]: false }))
+    setOpenDropdowns((prev) => ({ ...prev, [tierId]: false }))
   }
 
   // Toggle dropdown for a specific tier
   const toggleDropdown = (tierId) => {
-    setDropdownOpen((prev) => ({ ...prev, [tierId]: !prev[tierId] }))
+    setOpenDropdowns((prev) => ({ ...prev, [tierId]: !prev[tierId] }))
   }
 
   return (
@@ -157,6 +229,30 @@ export default function Pricing() {
           onClose={() => setIsModalOpen(false)}
         />
       <div className="mx-auto max-w-7xl">
+        {/* Currency Toggle */}
+        <div className="flex justify-end mb-4 mr-4">
+          <div className="inline-flex rounded-md shadow-sm">
+            <button
+              type="button"
+              onClick={() => setCurrency('USD')}
+              className={`px-4 py-2 text-sm font-medium rounded-l-md ${currency === 'USD' 
+                ? 'bg-gradient-to-tr from-[#6853DB] to-[#6853DB] text-white' 
+                : 'text-[#6853DB] ring-1 ring-inset ring-[#6853DB]/20 hover:ring-[#6853DB]/30'}`}
+            >
+              USD
+            </button>
+            <button
+              type="button"
+              onClick={() => setCurrency('INR')}
+              className={`px-4 py-2 text-sm font-medium rounded-r-md ${currency === 'INR' 
+                ? 'bg-gradient-to-tr from-[#6853DB] to-[#6853DB] text-white' 
+                : 'text-[#6853DB] ring-1 ring-inset ring-[#6853DB]/20 hover:ring-[#6853DB]/30'}`}
+            >
+              INR {isLoading && '...'}
+            </button>
+          </div>
+        </div>
+        
         <div className="mx-auto max-w-5xl text-center">
           <p className="text-[40px] font-bold text-gray-700 relative z-10">
             Join the Global Freight Network Today
@@ -183,7 +279,7 @@ export default function Pricing() {
                 </h3>
               </div>
               <p className="mt-2 flex items-baseline gap-x-1 text-gray-900">
-                <span className="text-4xl font-semibold">{getPrice(tier, selectedDurations[tier.id])}</span>
+                <span className="text-4xl font-semibold">{getPrice(tier)}</span>
                 <span className="text-sm font-semibold text-gray-900">
                   /{selectedDurations[tier.id]} {selectedDurations[tier.id] === 1 ? 'year' : 'years'}
                 </span>
@@ -197,7 +293,7 @@ export default function Pricing() {
                   {durations.find((d) => d.years === selectedDurations[tier.id]).label}
                   <ChevronDownIcon className="ml-2 h-4 w-4" />
                 </button>
-                {dropdownOpen[tier.id] && (
+                {openDropdowns[tier.id] && (
                   <div className="absolute z-10 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
                     <div className="py-1">
                       {durations.map((duration) => (
@@ -295,7 +391,7 @@ export default function Pricing() {
                   {tiers.map((tier) => (
                     <td key={tier.id} className="px-6 pt-2 xl:px-8">
                       <div className="altar de precios text-gray-900">
-                        <span className="text-4xl font-semibold">{getPrice(tier, selectedDurations[tier.id])}</span>
+                        <span className="text-4xl font-semibold">{getPrice(tier)}</span>
                         <span className="text-sm font-semibold">
                           /{selectedDurations[tier.id]} {selectedDurations[tier.id] === 1 ? 'year' : 'years'}
                         </span>
@@ -309,7 +405,7 @@ export default function Pricing() {
                           {durations.find((d) => d.years === selectedDurations[tier.id]).label}
                           <ChevronDownIcon className="ml-2 h-4 w-4" />
                         </button>
-                        {dropdownOpen[tier.id] && (
+                        {openDropdowns[tier.id] && (
                           <div className="absolute z-10 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
                             <div className="py-1">
                               {durations.map((duration) => (
@@ -366,7 +462,14 @@ export default function Pricing() {
                         {tiers.map((tier) => (
                           <td key={tier.id} className="px-6 py-4 xl:px-8">
                             {typeof feature.tiers[tier.name] === 'string' ? (
-                              <div className="text-center text-sm text-gray-500">{feature.tiers[tier.name]}</div>
+                              <div className="text-center text-sm text-gray-500">
+                                {feature.name.includes('BRANCH OFFICES') && feature.tiers[tier.name].includes('After that $') ? 
+                                  getBranchText(feature.tiers[tier.name], 499) : 
+                                  feature.name.includes('PAYMENT PROTECTION') && feature.tiers[tier.name].includes('Up to $') ?
+                                  (tier.name === 'Premium' ? getProtectionText(20000) : getProtectionText(50000)) :
+                                  feature.tiers[tier.name]
+                                }
+                              </div>
                             ) : (
                               <>
                                 {feature.tiers[tier.name] === true ? (
