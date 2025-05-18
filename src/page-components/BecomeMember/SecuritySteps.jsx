@@ -63,8 +63,8 @@ const SecuritySteps = () => {
             {/* Icon for Step */}
             <div 
       //  style={{ backgroundImage: 'linear-gradient(150deg,  #5316aa , #7159fb)' }}
-            className="w-32 h-32 flex items-center justify-center mb-6 relative z-10  rounded-full shadow">
-              <img src={step.icon.src} alt={step.title} className="w-20 h-20 opacity-80" />
+            className="w-32 h-32 flex items-center justify-center mb-6 relative z-10  ">
+              <img src={step.icon.src} alt={step.title} className=" w-24 h-24  opacity-80" />
             </div>
             
             {/* Transparent Step Title */}

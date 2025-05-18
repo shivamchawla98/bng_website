@@ -204,11 +204,14 @@ function MemberBenefits() {
                 <div
                 
                 className="top-0 w-[400px] justify-center flex flex-col items-center align-middle">
-             <div 
-  style={{ 
-    background: 'radial-gradient(circle at 70% 30%, rgba(255,255,255,0.4) 0%, #5a3fd1 30%, #4a36b0 60%, #3452a1 100%)',
-    boxShadow: '0 10px 25px rgba(104, 83, 219, 0.3), inset 0 -5px 10px rgba(0, 0, 0, 0.2), inset 0 5px 10px rgba(255, 255, 255, 0.2)'
-  }}
+ <div 
+// style={{ 
+//   backgroundImage: 'radial-gradient(circle at center, #7b61ff 0%, #5e3bc4 50%, #3a1d7e 100%)' 
+// }}
+style={{
+  background: 'radial-gradient(circle at 70% 30%, #7b61ff 0%, #5e3bc4 50%, #5316aa 100%)',
+  boxShadow: '0 10px 25px rgba(104, 83, 219, 0.3), inset 0 -5px 10px rgba(0, 0, 0, 0.1), inset 0 5px 10px rgba(255, 255, 255, 0.2)'
+}}
   className="w-44 h-44 lg:w-48 lg:h-48 rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer"
 >
   <Image
@@ -280,10 +283,10 @@ function MemberBenefits() {
                     </p>
                   </div>
                   {benefit.image && benefit.title && <div
-                  style={{ 
-                    background: 'radial-gradient(circle at 70% 30%, #8A6EFF 0%, #6853DB 50%, #5316aa 100%)',
-                    boxShadow: '0 10px 25px rgba(104, 83, 219, 0.3), inset 0 -5px 10px rgba(0, 0, 0, 0.1), inset 0 5px 10px rgba(255, 255, 255, 0.2)'
-                  }}
+             style={{
+              background: 'radial-gradient(circle at 70% 30%, #7b61ff 0%, #5e3bc4 50%, #5316aa 100%)',
+              boxShadow: '0 10px 25px rgba(104, 83, 219, 0.3), inset 0 -5px 10px rgba(0, 0, 0, 0.1), inset 0 5px 10px rgba(255, 255, 255, 0.2)'
+            }}
                   className="w-44 h-44 lg:w-48 lg:h-48 rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-3 group cursor-pointer">
                     <Image
                       src={benefit.image}
