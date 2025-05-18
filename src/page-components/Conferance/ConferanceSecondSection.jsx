@@ -2,7 +2,6 @@
 
 import React from "react";
 import about1 from "@/app/images/abou1.png";
-import about2 from "@/app/images/about2.png";
 import Image from "next/image";
 function ConferanceSecondSection() {
   return (

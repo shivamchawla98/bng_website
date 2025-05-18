@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import ConferenceImage from "@/app/images/conferacegrid1.png";
 import styles from './Conference.module.css';
-import conferenceBg from '../../../public/Conference.webp'
+import conferenceBg from '../../../public/conference.webp'
 
 const Conference = () => {
   return (
