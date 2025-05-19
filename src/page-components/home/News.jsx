@@ -2,6 +2,7 @@ import Image from "next/image";
 import newsImg1 from "@/app/images/home/News-The-Future-of-Logistics.png";
 import newsImg2 from "@/app/images/home/News-BNG-Welcomes-100-New-Members-in-Record-Time.png";
 import newsImg3 from "@/app/images/home/News-Global-Freight-Trends.png";
+import newsImg4 from "@/app/images/home/news4.jpg";
 
 const newsData = [
   {
@@ -35,7 +36,7 @@ const newsData = [
   },
   {
     id: 4,
-    src: newsImg3,
+    src: newsImg4,
     alt: "News Item 3",
     title: "BNG Expands Strategic Partnerships to Strengthen Global Trade Lanes",
     description:

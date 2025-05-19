@@ -70,7 +70,7 @@ function Header() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8 items-center">
           <Link
-            href="/benefits"
+            href="/benifits"
             className="font-medium hover:text-primary text-[18px]"
           >
             Benefits
