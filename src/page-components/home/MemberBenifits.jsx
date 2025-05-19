@@ -15,7 +15,7 @@ import ClaimCenterVector from "../../../public/members_benefit/Claim_Center.png"
 import FreightXchangeVector from "../../../public/members_benefit/Freight-Xchange.png";
 import AcknowledgementVector from "../../../public/members_benefit/Acknowledgment-Insignias.png";
 import ocean from '../../../public/members_benefit/ocean.jpg';
-import ship from "../../../public/Ship.png";
+import ship from "../../../public/ship.png";
 
 
 function MemberBenefits() {
