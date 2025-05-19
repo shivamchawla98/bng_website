@@ -10,18 +10,20 @@ import Conference from "@/page-components/home/Conferance";
 import LatestMembers from "@/page-components/OurCompany/LatestMembers";
 import SecuritySteps from "@/page-components/BecomeMember/SecuritySteps";
 import WorldMap from "@/page-components/home/WorldMap";
+import Widget from "@/page-components/home/Widget";
 
 export default function Home() {
 return(
   
   <div className=" w-screen ">
   <HeroSection />
+  <Widget />
   <AboutUs />
   <MemberBenefits />
   <TestimonialSlider />
 
  
-  <section className="bg-secondryBg py-28 md:px-[112px]">
+  <section className="bg-secondryBg pb-28 md:px-[112px]">
     <LatestMembers />
   </section>
   {/* <WorldWideReach /> */}

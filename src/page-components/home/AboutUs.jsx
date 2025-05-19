@@ -18,9 +18,9 @@ function AboutUs() {
           className="rounded-lg "
         />
       </div>
-      <div className="md:w-1/2 md:pr-10 mb-8 md:mb-0 md:ml-10 mt-10 md:mt-0 py-14 ">
+      <div className="md:w-1/2 md:pr-0 mb-8 md:mb-0 md:pl-0 mt-10 md:mt-0 py-14 ">
         <div className="relative">
-          <h2 className="text-[55px] font-bold mb-4 text-gray-700 relative z-10">
+          <h2 className="text-[55px] font-bold mb-3 text-gray-700 relative z-10">
             Our <span className="text-[#5216ab]">Story</span>
           </h2>
           <h2

@@ -116,7 +116,7 @@ const solutionsData = [
     id: 9,
     src: grid9,
     alt: "Solution 5",
-    heading: "Strict Selection Process",
+    heading: "Strict Selection",
     description1:
       "BNG ensures that only reliable and trustworthy companies join the network through a rigorous selection process.",
     description2: "Secure storage facilities and management.",

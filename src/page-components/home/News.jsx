@@ -31,7 +31,17 @@ const newsData = [
     description:
       "Get insights into shifting global trade patterns, rising fuel costs, and how businesses can stay resilient in a dynamic market.",
     link: "#",
-    top: "4rem", // This will push the third card down by 30px
+    // top: "2rem", // This will push the third card down by 30px
+  },
+  {
+    id: 4,
+    src: newsImg3,
+    alt: "News Item 3",
+    title: "BNG Expands Strategic Partnerships to Strengthen Global Trade Lanes",
+    description:
+      "BNG strengthens global trade by expanding strategic partnerships, enhancing route access, and creating new growth opportunities for network members worldwide.",
+    link: "#",
+    top: "2rem", // This will push the third card down by 30px
   },
 ];
 
@@ -45,7 +55,7 @@ const News = () => {
 
           filter: "blur(100.8px)",
         }}></div>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="relative">
           <h2 className="text-[55px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
             Latest <span className="text-primary">News</span>
@@ -57,7 +67,7 @@ const News = () => {
           </h2>
         </div>
         {/* Grid with 3 columns for news cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1 ">
           {newsData.map(({ id, src, alt, title, description, link, top }) => (
             <div
               key={id}
@@ -76,7 +86,7 @@ const News = () => {
               <div className="p-4">
                 <h3 className="text-[#27293B] font-semibold mb-2">{title}</h3>
                 <p className="text-gray-600 mb-4 text-[18px]">{description}</p>
-                <a href={link} className="text-blue-500 hover:underline">
+                <a href={link} className="text-indigo-500 hover:underline">
                   View More
                 </a>
               </div>

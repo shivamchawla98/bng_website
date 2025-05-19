@@ -110,6 +110,7 @@ const HeroSection = () => {
           <Image
             src={bg} // The imported image
             alt="Background Image"
+            className="lg:ml-20"
             priority={true} // Optimizes loading for the hero image
             style={{
               transform: `translateX(${Math.min(scrollY * 0.2, 100)}px)`,
@@ -117,7 +118,7 @@ const HeroSection = () => {
             }}
           />
           {/* Info Cards */}
-          <div className="absolute bottom-10 left-0 bg-white p-3 rounded-lg shadow-md z-20"
+          {/* <div className="absolute bottom-10 left-0 bg-white p-3 rounded-lg shadow-md z-20"
             style={{
               transform: `translateY(${Math.min(scrollY * 0.1, 20)}px) rotate(${Math.min(scrollY * 0.05, 5)}deg) scale(${1 + Math.min(scrollY * 0.001, 0.1)})`,
               opacity: Math.max(1 - scrollY * 0.002, 0.7),
@@ -193,7 +194,7 @@ const HeroSection = () => {
                 30+ Countries
               </span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
