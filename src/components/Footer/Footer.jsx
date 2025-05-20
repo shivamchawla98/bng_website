@@ -6,6 +6,7 @@ import utube from "../../../public/socialmediaicon/Youtube.png";
 import Insta from "../../../public/socialmediaicon/insta_01.png";
 import linkedin from "../../../public/socialmediaicon/linkedin.png";
 import bgImage from '../../../public/footer/footer_bg.png';
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -112,20 +113,20 @@ const Footer = () => {
       </div>
         <div className="sm:flex h-9 lg:px-56 bg-white sm:items-center sm:justify-between">
           <p className="text-sm sm:text-center text-gray-900">
-            2025 |<a href="https://google.com/" className="hover:underline"> </a>© All Rights Reserved. |  BNG Logistics Network.
+            2025 |<a href="#" className="hover:underline"> </a>© All Rights Reserved |  BNG Logistics Network
           </p>
-          <nav className="flex justify-center items-center py-4 text-gray-900 text-sm">
-            <a href="/privacy-policy" className="hover:text-gray-900 transition-colors">
+          <nav className="flex justify-center items-center py-4 z-40 text-gray-900 text-sm">
+            <Link href="/privacy-policy" className="hover:text-gray-900 transition-colors">
               Privacy Policy
-            </a>
+            </Link>
             <span className="mx-2">|</span>
-            <a href="/terms-of-use" className="hover:text-gray-900 transition-colors">
+            <Link href="/terms-of-use" className="hover:text-gray-900 transition-colors">
               Terms of Use
-            </a>
+            </Link>
             <span className="mx-2">|</span>
-            <a href="/contact" className="hover:text-gray-900 transition-colors">
+            <Link href="/contact" className="hover:text-gray-900 transition-colors">
               Reach Us
-            </a>
+            </Link>
           </nav>
         </div>
     </footer>

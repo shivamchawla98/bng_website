@@ -61,14 +61,15 @@ const partnerLogos = [
 const TestimonialSlider = () => {
   return (
     <section
-      className="relative -top-40 bg-secondryBg bg-gradient-to-b from-purple-50 to-white"
+      className="relative -top-44 z-30 bg-secondryBg bg-gradient-to-b from-purple-50 to-white"
       style={{
         backgroundImage: `url(${Vector.src})`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "top center",
         backgroundSize: "cover",
         backgroundColor: "rgba(0, 0, 0, 0)",
-      }}>
+      }}
+      >
       <div
         className="absolute bottom-16 left-8 w-[200px] h-[200px] rounded-full"
         style={{
@@ -165,7 +166,7 @@ const TestimonialSlider = () => {
           </div>
         </div>
         <div>
-          <div className="absolute bg-gradient-to-r from-[#eef6ff] to-[#eef6ff] -bottom-40 right-0 w-full h-[200px] -z-10"></div>
+          <div className="absolute  bg-gradient-to-r from-[#eef6ff] to-[#eef6ff] -bottom-44 right-0 w-full h-[300px] -z-40"></div>
         </div>
       </div>
 
