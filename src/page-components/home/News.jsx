@@ -62,7 +62,7 @@ const News = () => {
             Latest <span className="text-primary">News</span>
           </h2>
           <h2
-            className="absolute text-center top-[-60px] md:top-[-30px] md:left-[30%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            className="absolute text-center top-[-60px] md:top-[-30px] md:left-[37%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
             aria-hidden="true">
             Latest News
           </h2>

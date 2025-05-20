@@ -1,23 +1,23 @@
 import Image from "next/image";
-import about1 from "../../../public/about/about us - 1.png";
-import about2 from "../../../public/about/about us - 2.png";
-import OurVisionImage from "../../../public/about/vision.png";
-import OurMissionImage from "../../../public/about/mission.png";
+import about1 from "../../../public/about/about_01.jpg";
+import about2 from "../../../public/about/About_02.jpg";
+import OurVisionImage from "../../../public/about/vission.jpg";
+import OurMissionImage from "../../../public/about/mission.jpg";
 import { FeatureCard } from "./FeatureCard";
 
-import MembersAreaVector from "@/app/images/home/MembersArea.svg";
-import GlobalReachVector from "@/app/images/home/GlobalReach.svg";
-import BusinessXchangeVector from "@/app/images/home/BusinessXchange.svg";
-import TrustedPartnersVector from "@/app/images/home/TrustedPartners.svg";
-import PaymentProtectionVector from "@/app/images/home/PaymentProtection.svg";
-import PaymentMonitoringVector from "@/app/images/home/PaymentMonitoring.webp";
-import ClaimCenterVector from "@/app/images/home/ClaimCenter.svg";
-import FreightXchangeVector from "@/app/images/home/FreightXchange.png";
+// import MembersAreaVector from "../../../public/about/MembersArea.svg";
+import GlobalReachVector from "../../../public/about/Global-Collaboration.png";
+import IntigirityTrustVector from "../../../public/about/Integrity-&-Trust.png";
+import InnovationVector from "../../../public/about/Innovation-&-Technology.png";
+import CustomerCentericVector from "../../../public/about/Customer-Centric-Support.png";
+import TransparencyAccountabilityVector from "../../../public/about/Transparency-&-Accountability.png";
+import GrowthOppurtinityVector from "../../../public/about/Growth-&-Opportunity.png";
+// import FreightXchangeVector from "../../../public/about/FreightXchange.png";
 const AboutSection = () => {
   return (
     <>
       <section className="pt-24 bg-primaryBg relative">
-        <div
+        {/* <div
           className="absolute bottom-0 right-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
           style={{
             background:
@@ -36,21 +36,21 @@ const AboutSection = () => {
             zIndex: 1,
             filter: "blur(110px)",
             // Alternative fallback
-          }}></div>
+          }}></div> */}
         <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto  ">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12 py-16 ">
             <div className="relative flex justify-center items-center">
-              <div className="hidden lg:block absolute left-16 bottom-12 h-[350px] w-[400px] border-[#6853DB] border-2 rounded-md"></div>
+              <div className="hidden lg:block absolute left-16 bottom-12 h-[350px] w-[400px]   rounded-md"></div>
               <Image
-                className="rounded-xl object-cover z-10"
+                className="rounded-xl shadow-2xl shadow-slate-700 object-cover z-10"
                 src={about1}
                 height={350}
                 alt="About Us Image 1"
               />
             </div>
             <div className="flex flex-col justify-center items-center lg:items-start gap-8">
-              <h2 className="text-gray-900 text-4xl font-extrabold leading-normal text-center lg:text-start">
-                Building Global Connections in Logistics
+              <h2 className="text-gray-900 text-4xl font-medium leading-normal text-center lg:text-start">
+                Building <span className="font-medium text-primary">Global Connections </span>  in Logistics
               </h2>
               <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
                 BNG Logistics Network is a global platform built to unite
@@ -68,9 +68,9 @@ const AboutSection = () => {
           </div>
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12 py-10">
             <div className="relative flex justify-center items-center lg:order-2">
-              <div className="hidden lg:block absolute right-16 bottom-12 h-[350px] w-[400px] border-[#6853DB] border-2 rounded-md"></div>
+              <div className="hidden lg:block absolute right-16 bottom-12 h-[350px] w-[400px]   rounded-md"></div>
               <Image
-                className="rounded-xl object-cover z-10"
+                className="rounded-xl shadow-2xl shadow-slate-700 object-cover z-10"
                 src={about2}
                 height={350}
                 alt="About Us Image 2"
@@ -95,13 +95,13 @@ const AboutSection = () => {
 
       <section className="pt-16 w-[100%] mx-auto px-4 bg-primaryBg items-center mb-12">
         <div className="relative">
-          <h2 className="text-[40px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
-            Our Core Values
+          <h2 className="text-[55px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
+            Core <span className="text-primary">Values</span> 
           </h2>
           <h2
-            className="absolute text-center top-[-30px] md:left-[30%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2 min-w-[max-content]"
+            className="absolute text-center top-[-30px] md:left-[37%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2 min-w-[max-content]"
             aria-hidden="true">
-            Our Core Values
+            Core Values
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
@@ -113,32 +113,32 @@ const AboutSection = () => {
           <FeatureCard
             title="Integrity & Trust"
             description="Upholding rigorous standards in member vetting, ensuring trustworthy relationships and a secure, credible network for dependable business interactions."
-            logo={TrustedPartnersVector}
+            logo={IntigirityTrustVector}
           />
           <FeatureCard
             title="Innovation & Technology"
             description="Leveraging advanced tools and technology to streamline operations, enhance communication, and provide valuable insights for informed decision-making."
-            logo={BusinessXchangeVector}
+            logo={InnovationVector}
           />
           <FeatureCard
             title="Customer-Centric Support"
             description="Providing 24/7 customer support and regional assistance, dedicated to ensuring seamless service and immediate help whenever needed."
-            logo={ClaimCenterVector}
+            logo={CustomerCentericVector}
           />
           <FeatureCard
             title="Transparency & Accountability"
             description="Offering real-time monitoring, performance tracking, and payment protection for clear, accountable, and secure business operations."
-            logo={PaymentProtectionVector}
+            logo={TransparencyAccountabilityVector}
           />
           <FeatureCard
             title="Growth & Opportunity"
             description="Empowering members with resources like marketing support, a trade directory, and live networking opportunities to fuel continuous growth and success."
-            logo={PaymentMonitoringVector}
+            logo={GrowthOppurtinityVector}
           />
         </div>
       </section>
       <section className="py-24 bg-primaryBg relative mb-2">
-        <div
+        {/* <div
           className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
           style={{
             background:
@@ -157,13 +157,13 @@ const AboutSection = () => {
             zIndex: 1,
             filter: "blur(110px)",
             // Alternative fallback
-          }}></div>
+          }}></div> */}
         <div className="w-full max-w-7xl px-4 mx-auto md:px-5 lg:px-5 mb-12">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 py-16">
             <div className="relative flex justify-center items-center">
-              <div className="hidden lg:block absolute left-16 bottom-12 h-[350px] w-[400px] border-[#6853DB] border-2 rounded-md"></div>
+              <div className="hidden lg:block absolute left-16 bottom-12 h-[350px] w-[400px]  rounded-md"></div>
               <Image
-                className="rounded-xl object-cover z-10"
+                className="  rounded-xl shadow-2xl shadow-slate-700 object-cover z-10"
                 src={OurVisionImage}
                 height={350}
                 alt="Why Us Image"
@@ -171,8 +171,8 @@ const AboutSection = () => {
             </div>
             <div className="flex flex-col justify-center items-center lg:items-start gap-8">
               <div className="relative">
-                <h2 className="text-[40px] font-bold mb-4 text-[#27293B] relative z-10">
-                  Our Vision
+                <h2 className="text-gray-900 text-4xl font-medium leading-normal text-center lg:text-start">
+                  Our <span className="text-primary">Vision</span> 
                 </h2>
                 <h2
                   className="absolute top-[-20px] left-0 text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2 min-w-[max-content]"
@@ -198,9 +198,9 @@ const AboutSection = () => {
           {/* Fourth section */}
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 py-16">
             <div className="relative flex justify-center items-center lg:order-2">
-              <div className="hidden lg:block absolute right-16 bottom-12 h-[350px] w-[400px] border-[#6853DB] border-2 rounded-md"></div>
+              <div className="hidden lg:block absolute right-16 bottom-12 h-[350px] w-[400px]  rounded-md"></div>
               <Image
-                className="rounded-xl object-cover z-10"
+                className="rounded-xl shadow-2xl shadow-slate-700 object-cover z-10"
                 src={OurMissionImage}
                 height={350}
                 alt="Vision Image"
@@ -208,8 +208,8 @@ const AboutSection = () => {
             </div>
             <div className="flex flex-col justify-center items-center lg:items-start gap-8">
               <div className="relative">
-                <h2 className="text-[40px] font-bold mb-4 text-[#27293B] relative z-10">
-                  Our Mission
+                <h2 className="text-gray-900 text-4xl font-medium leading-normal text-center lg:text-start">
+                  Our <span className="text-primary">Mission</span> 
                 </h2>
                 <h2
                   className="absolute top-[-20px] left-0 text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2 min-w-[max-content]"

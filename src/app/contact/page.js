@@ -7,22 +7,26 @@ import ContactUsMap from '@/page-components/Contact/ContactUsMap';
 import MapComponent from '@//page-components/Contact/MapComponent';
 import ContactCards from '@/page-components/Contact/ContactCards';
 import BusinessLocations from '@/page-components/Contact/BusinessLocations';
+import Form from '@/page-components/Contact/Form';
+import LocationCard from '@/page-components/Contact/LocationCard';
 
 const ContactPage = () => {
   return (
-    <div className="min-h-screen bg-primaryBg">
+    <div className="min-h-screen bg-white">
       <ContactHero />
-      <div className="container mx-auto px-4 py-12 -mt-20 relative z-10">
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <QuoteForm />
+      <div className="container mx-auto px-4  pt-12 -mb-4 relative z-10">
+        <div className="grid md:grid-cols-1 gap-8 mb-16">
+          <Form />
+          {/* <QuoteForm /> */}
           {/* <ContactUsMap /> */}
-          <SocialMedia />
+          {/* <SocialMedia /> */}
         </div>
         </div>
 
         <section className="min-h-80 bg-gray-50 ">
         <div className="mx-auto">
-          <MapComponent address="Rasoolpur Nawada, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309" />
+          <LocationCard />
+          {/* <MapComponent address="Rasoolpur Nawada, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309" /> */}
           </div>
           </section>
 
@@ -36,18 +40,15 @@ const ContactPage = () => {
           ></div> */}
           <ContactCards />
           </section>
-
+{/* 
         <section className="py-16 bg-secondryBg relative">
-          {/* <div
-            className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
-            style={{
-              background:
-                "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
-            }}
-          ></div> */}
+        
           <BusinessLocations />
-        </section>
+        </section> */}
+        <section className="bg-primaryBg py-16">
+    
         <FAQ />
+          </section>
       </div>
   );
 };

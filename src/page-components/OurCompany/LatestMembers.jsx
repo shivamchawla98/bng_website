@@ -20,7 +20,7 @@ function LatestMembers() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <section style={styles.section}>
+    <section className="" style={styles.section}>
       <div style={styles.headingContainer}>
         <h2  className="text-[55px] font-bold   text-[#27293B] text-center mb-20 relative z-10">Latest <span className="text-primary">Members</span></h2>
         <h2 style={styles.headingBackground} aria-hidden="true">
@@ -106,8 +106,8 @@ const styles = {
   headingBackground: {
     position: "absolute",
     textAlign: "center",
-    top: "-50px",
-    left: "30%",
+    top: "-40px",
+    left: "32%",
     fontSize: "80px",
     fontWeight: "bold",
     color: "#27293B",

@@ -111,7 +111,7 @@ const TestimonialSlider = () => {
                 Testimonials
               </h2>
               <h2
-                className="absolute hidden md:block max-w-[3vw] text-left top-[-43px] -left-[60px] text-[80px] md:w-full font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+                className="absolute hidden md:block max-w-[3vw] text-left top-[-43px] -left-[77px] text-[80px] md:w-full font-bold text-[#27293B] opacity-[3%] leading-none z-2"
                 aria-hidden="true">
                 Testimonials
               </h2>

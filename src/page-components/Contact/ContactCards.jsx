@@ -1,23 +1,83 @@
-import React from 'react';
 
-const contacts = [
-  { type: 'Support', text: 'Get help with our services', email: 'support@bnglogisticsnetwork.com' },
-  { type: 'Sales', text: 'Inquire about our products', email: 'sales@bnglogisticsnetwork.com' },
-  { type: 'Phone', text: 'Reach us by phone', ph: '(+91) 72 4077 4077' }
-];
+import { FaWhatsapp, FaPhone } from "react-icons/fa"
+import { IoMail } from "react-icons/io5";
 
-const ContactCards = () => {
+
+export default function ContactCard() {
   return (
-    <div className="flex flex-col md:flex-row justify-around items-center py-8">
-      {contacts.map((contact, index) => (
-        <div key={index} className="flex flex-col items-center text-center p-4">
-          <h3 className="text-lg font-bold text-black">{contact.type}</h3>
-          <p className="text-gray-600">{contact.text}</p>
-          <a href={`${contact.email ? `mailto:${contact.email}` : `tel:${contact.ph}`}`} className="text-blue-500">{contact.email ? contact.email : contact.ph}</a>
-        </div>
-      ))}
-    </div>
-  );
-};
+    <div className="bg-white py-8 sm:pb-16">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl divide-y divide-gray-100 lg:mx-0 lg:max-w-none">
+      
+           
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 lg:col-span-3 lg:gap-8">
+              <div className="rounded-2xl bg-gray-100 p-10">
+                <div className="flex justify-start items-center gap-x-4">
+<FaWhatsapp className="h-8 w-8 text-primary" />
+                <h3 className="text-2xl font-semibold text-gray-900">WhatsApp</h3>
+                </div>
+                <dl className="mt-3 space-y-1 text-sm/6 text-gray-600">
+                  <div>
+                    <dt className="sr-only">whatsapp</dt>
+                    {/* <dd>
+                      <a href="mailto:membership@bnglogisticsnetwork.com" className="font-semibold text-base text-indigo-600">
+                        membership@bnglogisticsnetwork.com
+                      </a>
+                    </dd> */}
+                  </div>
+                  <div className="mt-1 text-lg">
+                    <dt className="sr-only">Phone number</dt>
+                    <dd>+91 72 4077 4077</dd>
+                  </div>
+                </dl>
+              </div>
+         
+              <div className="rounded-2xl bg-gray-100 p-10">
+                <div className="flex justify-start items-center gap-x-4">
+<FaPhone className="h-7 w-7 text-primary" />
+                <h3 className="text-2xl font-semibold text-gray-900">Phone</h3>
+                </div>
+                <dl className="mt-3 space-y-1 text-sm/6 text-gray-600">
+                  <div>
+                    <dt className="sr-only">phone</dt>
+                    {/* <dd>
+                      <a href="mailto:membership@bnglogisticsnetwork.com" className="font-semibold text-base text-indigo-600">
+                        membership@bnglogisticsnetwork.com
+                      </a>
+                    </dd> */}
+                  </div>
+                  <div className="mt-1 text-lg">
+                    <dt className="sr-only">Phone number</dt>
+                    <dd>+91 72 4077 4077</dd>
+                  </div>
+                </dl>
+              </div>
 
-export default ContactCards;
+              <div className="rounded-2xl bg-gray-100 p-10">
+                <div className="flex justify-start items-center gap-x-4">
+<IoMail className="h-8 w-8 text-primary" />
+                <h3 className="text-2xl font-semibold text-gray-900">Email</h3>
+                </div>
+                <dl className="mt-3 space-y-1 text-sm/6 text-gray-600">
+                  <div>
+                    <dt className="sr-only">email</dt>
+                    {/* <dd>
+                      <a href="mailto:membership@bnglogisticsnetwork.com">
+                        membership@bnglogisticsnetwork.com
+                      </a>
+                    </dd> */}
+                  </div>
+                  <div className="mt-1 text-lg">
+                    <dt className="sr-only">Phone number</dt>
+                    <dd><a href="mailto:membership@bnglogisticsnetwork.com">membership@bnglogisticsnetwork.com</a></dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+     
+    
+        </div>
+      </div>
+    </div>
+  )
+}

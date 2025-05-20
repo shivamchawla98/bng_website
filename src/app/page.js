@@ -16,7 +16,7 @@ import Widget from "@/page-components/home/Widget";
 export default function Home() {
 return(
   
-  <div className=" w-screen ">
+  <div className="  w-screen ">
   <HeroSection />
   <Widget />
   <AboutUs />
@@ -24,7 +24,7 @@ return(
   <TestimonialSlider />
 
  
-  <section className="bg-secondryBg pb-28 md:px-[112px]">
+  <section className="bg-secondryBg pb-28 md:px-[80px] ">
     <LatestMembers />
   </section>
   {/* <WorldWideReach /> */}

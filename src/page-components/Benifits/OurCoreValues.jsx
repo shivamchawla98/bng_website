@@ -205,7 +205,7 @@ function OurCoreValues() {
   );
   return (
     <section className="py-14 w-full mx-auto px-4 bg-primaryBg text-justify flex flex-col justify-center align-middle relative">
-      <div
+      {/* <div
         className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
         style={{
           background:
@@ -214,9 +214,9 @@ function OurCoreValues() {
           zIndex: 1,
           filter: "blur(110px)",
           // Alternative fallback
-        }}></div>
+        }}></div> */}
 
-      <div
+      {/* <div
         className="absolute top-[50%] left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
         style={{
           background:
@@ -225,7 +225,7 @@ function OurCoreValues() {
           zIndex: 1,
           filter: "blur(110px)",
           // Alternative fallback
-        }}></div>
+        }}></div> */}
       {/* Right-middle Patch */}
       {/* <div
         className="absolute top-[4%] right-[80px] transform translate-x-1/2 -translate-y-1/2 md:w-[160px] h-[5%] rounded-full"
@@ -239,7 +239,7 @@ function OurCoreValues() {
             Member <span className="text-primary">Benefits</span>
           </h2>      
           <h2
-            className="absolute text-center top-[26px] md:left-[31%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            className="absolute text-center top-[38px] md:left-[32%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
             aria-hidden="true"
           >
             Member Benefits
@@ -309,7 +309,7 @@ function OurCoreValues() {
         />
       </div>
       {/* Detailed Sections */}
-      <div className="mt-20">
+      <div className="mt-10">
       {[
         {
           ref: membersAreaRef,
@@ -366,65 +366,66 @@ function OurCoreValues() {
           img: AcknowledgmentInsigniasImage,
         },
       ].map(({ ref, content, contentTwo, img }, index) => (
-        <section className="bg-primaryBg py-12 " key={index}>
-          <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
-            {/* First Row */}
-            <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
-              <div
-                className={`relative flex justify-center items-center ${index % 2 !== 0 ? "lg:order-2" : ""
-                  }`}>
-                <div
-                  className={`hidden lg:block absolute  ${index % 2 === 0 ? "left-16 top-12" : "right-16  bottom-10"
-                    }  h-[350px] w-[400px] border-[#6853DB] border-2  rounded-md`}></div>
-                <Image
-                  className="rounded-xl object-cover z-10"
-                  src={img}
-                  height={350}
-                  alt={`About Us Image ${index + 1}`}
-                />
-              </div>
-              <div
-                className="flex flex-col justify-center items-center lg:items-start gap-8"
-                ref={ref}>
-                <h2 className="text-3xl font-bold text-[#27293B]">{`  ${[
-                    "Members Area",
-                    "Global Reach",
-                    "Business Xchange",
-                    "Freight Xchange",
-                    "Trusted Partners",
-                    "Payment Protection",
-                    "Payment Monitoring",
-                    "Claim Center",
-                    "Acknowledgment Insignias",
-                  ][index]
-                  }`}</h2>
-                <p className="text-[#27293B] text-[18px]">{content}</p>
-              </div>
-            </div>
+        <></>
+        // <section className="bg-primaryBg py-12 " key={index}>
+        //   <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
+        //     {/* First Row */}
+        //     <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
+        //       <div
+        //         className={`relative flex justify-center items-center ${index % 2 !== 0 ? "lg:order-2" : ""
+        //           }`}>
+        //         <div
+        //           className={`hidden lg:block absolute  ${index % 2 === 0 ? "left-16 top-12" : "right-16  bottom-10"
+        //             }  h-[350px] w-[400px] border-[#6853DB] border-2  rounded-md`}></div>
+        //         <Image
+        //           className="rounded-xl object-cover z-10"
+        //           src={img}
+        //           height={350}
+        //           alt={`About Us Image ${index + 1}`}
+        //         />
+        //       </div>
+        //       <div
+        //         className="flex flex-col justify-center items-center lg:items-start gap-8"
+        //         ref={ref}>
+        //         <h2 className="text-3xl font-bold text-[#27293B]">{`  ${[
+        //             "Members Area",
+        //             "Global Reach",
+        //             "Business Xchange",
+        //             "Freight Xchange",
+        //             "Trusted Partners",
+        //             "Payment Protection",
+        //             "Payment Monitoring",
+        //             "Claim Center",
+        //             "Acknowledgment Insignias",
+        //           ][index]
+        //           }`}</h2>
+        //         <p className="text-[#27293B] text-[18px]">{content}</p>
+        //       </div>
+        //     </div>
 
-            {/* Second Row */}
-            {/* <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
-              <div
-                className={`relative flex justify-center items-center ${
-                  index % 2 === 0 ? "lg:order-2" : ""
-                }`}>
-                <div
-                  className={`hidden lg:block absolute ${
-                    index % 2 === 0 ? "right-16" : "left-16"
-                  } bottom-12 h-[350px] w-[400px] border-primary border-2 rounded-md`}></div>
-                <Image
-                  className="rounded-xl object-cover z-10"
-                  src={index % 2 === 0 ? about2 : about1}
-                  height={350}
-                  alt={`About Us Image ${index + 2}`}
-                />
-              </div>
-              <div className="flex flex-col justify-center items-center lg:items-start gap-8">
-                <p className="text-[#27293B]">{contentTwo}</p>
-              </div>
-            </div> */}
-          </div>
-        </section>
+        //     {/* Second Row */}
+        //     {/* <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
+        //       <div
+        //         className={`relative flex justify-center items-center ${
+        //           index % 2 === 0 ? "lg:order-2" : ""
+        //         }`}>
+        //         <div
+        //           className={`hidden lg:block absolute ${
+        //             index % 2 === 0 ? "right-16" : "left-16"
+        //           } bottom-12 h-[350px] w-[400px] border-primary border-2 rounded-md`}></div>
+        //         <Image
+        //           className="rounded-xl object-cover z-10"
+        //           src={index % 2 === 0 ? about2 : about1}
+        //           height={350}
+        //           alt={`About Us Image ${index + 2}`}
+        //         />
+        //       </div>
+        //       <div className="flex flex-col justify-center items-center lg:items-start gap-8">
+        //         <p className="text-[#27293B]">{contentTwo}</p>
+        //       </div>
+        //     </div> */}
+        //   </div>
+        // </section>
       ))}
 
       </div>

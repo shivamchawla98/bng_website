@@ -172,7 +172,7 @@ function MemberBenefits() {
       {/* Background Overlay */}
       <div
         className="absolute inset-0 bg-white"
-        style={{ opacity: 0.85, zIndex: 1 }}
+        style={{ opacity: 0.88, zIndex: 1 }}
       />
 
       {/* Content Container */}
@@ -196,7 +196,7 @@ function MemberBenefits() {
             Member <span className="text-primary">Benefits</span>
           </h2>
           <h2
-            className="absolute text-center -top-[36px] md:left-[31%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            className="absolute text-center -top-[36px] md:left-[32%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
             aria-hidden="true"
           >
             Member Benefits

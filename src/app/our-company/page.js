@@ -23,7 +23,7 @@ function page() {
         <LatestMembers />
       </section>
       <section className="bg-primaryBg py-14 px-4 relative">
-        <div
+        {/* <div
           className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
           style={{
             background:
@@ -32,13 +32,13 @@ function page() {
             zIndex: 1,
             filter: "blur(110px)",
             // Alternative fallback
-          }}></div>
+          }}></div> */}
         <FAQ />
       </section>
 
-      <section className="b px-4 md:px-[112px]">
+      {/* <section className="b px-4 md:px-[112px]">
         <QuoteForm />
-      </section>
+      </section> */}
     </div>
   );
 }
