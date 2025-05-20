@@ -172,7 +172,7 @@ function MemberBenefits() {
       {/* Background Overlay */}
       <div
         className="absolute inset-0 bg-white"
-        style={{ opacity: 0.75, zIndex: 1 }}
+        style={{ opacity: 0.85, zIndex: 1 }}
       />
 
       {/* Content Container */}

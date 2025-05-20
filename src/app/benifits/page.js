@@ -10,6 +10,7 @@ import SplitScreenCTA from '@/page-components/Benifits/SplitScreenCTA'
 import OurCoreValues from '@/page-components/Benifits/OurCoreValues'
 import WhyUs from '@/page-components/Benifits/WhyUs'
 import SecuritySteps from '@/page-components/BecomeMember/SecuritySteps'
+import Widget from '@/page-components/Benifits/Widget'
 /**
  * The benefits page.
  *
@@ -26,7 +27,8 @@ function page() {
       <BenifitsHero />
       {/* <BenifitsSecondSection /> */}
       <OurCoreValues />
-      <StatsCounter/>
+      <Widget />
+      {/* <StatsCounter/> */}
       <WhyUs />
       {/* <BenifitsThirdSection />
 

@@ -87,8 +87,8 @@ const styles = {
     paddingTop: "4rem",
     width: "100%",
     margin: "0 auto",
-    paddingLeft: "1rem",
-    paddingRight: "1rem",
+    // paddingLeft: "0rem",
+    // paddingRight: "0rem",
     marginBottom: "1rem",
   },
   headingContainer: {
@@ -124,11 +124,11 @@ const styles = {
   logoSlideTrack: {
     display: "flex",
     animation: "scroll 20s linear infinite",
-    width: "calc(150px * 12)", // Double the width for 6 logos repeated twice
+    width: "calc(150px * 20)", // Double the width for 6 logos repeated twice
   },
   logoSlide: {
     flex: "0 0 auto",
-    margin: "0 20px",
+    // margin: "0 0px",
     cursor: "pointer",
   },
   logoContainer: {

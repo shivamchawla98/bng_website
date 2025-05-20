@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { FeatureCard } from "../OurCompany/FeatureCard";
-import MembersAreaImage from "../../../public/members_benefit/Member Area.png";
+import MembersAreaImage from "../../../public/members_benefit/Benefits/Members Area.jpg";
 import GlobalReachImage from "../../../public/members_benefit/Global Reach.png";
 import BusinessXchangeImage from "../../../public/members_benefit/Business Xchange.png";
 import FreightXchangeImage from "../../../public/members_benefit/Freight Xchange.png";
@@ -11,15 +11,15 @@ import ClaimCenterImage from "../../../public/members_benefit/Claim Center.png";
 import AcknowledgmentInsigniasImage from "../../../public/members_benefit/Acknowledgment Insignias.png";
 import Image from "next/image";
 
-import MembersAreaVector from "@/app/images/home/MembersArea.svg";
-import GlobalReachVector from "@/app/images/home/GlobalReach.svg";
-import BusinessXchangeVector from "@/app/images/home/BusinessXchange.svg";
-import TrustedPartnersVector from "@/app/images/home/TrustedPartners.svg";
-import PaymentProtectionVector from "@/app/images/home/PaymentProtection.svg";
-import PaymentMonitoringVector from "@/app/images/home/PaymentMonitoring.webp";
-import ClaimCenterVector from "@/app/images/home/ClaimCenter.svg";
-import FreightXchangeVector from "@/app/images/home/FreightXchange.png";
-import AcknowledgementVector from "../../../public/acknowledgement.png";
+import MembersAreaVector from "@/app/images/home/Member_Area.png";
+import GlobalReachVector from "@/app/images/home/Global-Reach.png";
+import BusinessXchangeVector from "@/app/images/home/Business-Xchange.png";
+import TrustedPartnersVector from "@/app/images/home/Trusted-Partners.png";
+import PaymentProtectionVector from "@/app/images/home/Payment-Protection.png";
+import PaymentMonitoringVector from "@/app/images/home/Payment-Monitoring.png";
+import ClaimCenterVector from "@/app/images/home/Claim_Center.png";
+import FreightXchangeVector from "@/app/images/home/Freight-Xchange.png";
+import AcknowledgementVector from "@/app/images//home/Acknowledgment-Insignias.png";
 
 
 function OurCoreValues() {
@@ -227,20 +227,28 @@ function OurCoreValues() {
           // Alternative fallback
         }}></div>
       {/* Right-middle Patch */}
-      <div
+      {/* <div
         className="absolute top-[4%] right-[80px] transform translate-x-1/2 -translate-y-1/2 md:w-[160px] h-[5%] rounded-full"
         style={{
           background:
             "linear-gradient(180deg, #D186EB 100%, #D186EB 100.86%, #D186EB 100%)",
           zIndex: 1,
           filter: "blur(50px)",
-        }}></div>
-      <h2 className="text-[40px] font-bold mb-4 text-gray-700 relative z-10 text-center">Member Benefits</h2>
+        }}></div> */}
+  <h2 className="text-[55px] font-bold text-[#27293B] text-center mb-1 mt-6">
+            Member <span className="text-primary">Benefits</span>
+          </h2>      
+          <h2
+            className="absolute text-center top-[26px] md:left-[31%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            aria-hidden="true"
+          >
+            Member Benefits
+          </h2>
       <div className="flex w-full justify-center text-center">
-        <p className="text-justify  text-gray-900">
+        {/* <p className="text-justify  text-gray-900">
           Gain access to a secure, digitalized platform with global connections,
           exclusive data resources, 24/7 support, and advanced tools.
-        </p>
+        </p> */}
       </div>
 
       {/* Feature Cards */}
@@ -301,6 +309,7 @@ function OurCoreValues() {
         />
       </div>
       {/* Detailed Sections */}
+      <div className="mt-20">
       {[
         {
           ref: membersAreaRef,
@@ -357,7 +366,7 @@ function OurCoreValues() {
           img: AcknowledgmentInsigniasImage,
         },
       ].map(({ ref, content, contentTwo, img }, index) => (
-        <section className="bg-primaryBg py-12" key={index}>
+        <section className="bg-primaryBg py-12 " key={index}>
           <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
             {/* First Row */}
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12">
@@ -366,7 +375,7 @@ function OurCoreValues() {
                   }`}>
                 <div
                   className={`hidden lg:block absolute  ${index % 2 === 0 ? "left-16 top-12" : "right-16  bottom-10"
-                    }  h-[350px] w-[400px] border-[#6853DB] border-2 rounded-md`}></div>
+                    }  h-[350px] w-[400px] border-[#6853DB] border-2  rounded-md`}></div>
                 <Image
                   className="rounded-xl object-cover z-10"
                   src={img}
@@ -417,6 +426,8 @@ function OurCoreValues() {
           </div>
         </section>
       ))}
+
+      </div>
     </section>
   );
 }

@@ -298,12 +298,13 @@ const WorldMap = () => {
       <style jsx>{`
         .world-map-section {
           width: 100%;
-          max-width: 1440px;
+          max-width: 1440px; 
           margin: 0 auto;
           padding: 40px 24px;
           display: flex;
           flex-direction: column;
           align-items: center;
+          background-color: #f8fafc;
           background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
           background-image: ${backgroundImage.src ? `url(${backgroundImage.src})` : 'none'};
           background-size: cover;

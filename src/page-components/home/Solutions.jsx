@@ -1,12 +1,17 @@
+"use client";
+import React, { useState, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import Image from "next/image";
+import "swiper/css";
+
 import grid1 from "../../../public/why_us/Marketing & PR.png";
 import grid2 from "../../../public/why_us/support 247.png";
 import grid3 from "../../../public/why_us/Annual Meetings.png";
 import grid4 from "../../../public/why_us/Trade directory.png";
 import grid5 from "../../../public/why_us/Advanced Tools.jpg";
-import grid6 from "../../../public/why_us/Real-Time Chat.png";
-import grid7 from "../../../public/why_us/Live Talk.png"; 
-import grid8 from "../../../public/why_us/Industry Surveys.png"; 
+import grid7 from "../../../public/why_us/Live Talk.png";
+import grid8 from "../../../public/why_us/Industry Surveys.png";
 import grid9 from "../../../public/why_us/Strict Selection Process.png";
 
 import logo1 from "@/app/images/logos/why-us/PR.svg";
@@ -14,198 +19,148 @@ import logo2 from "@/app/images/logos/why-us/24-7.svg";
 import logo3 from "@/app/images/logos/why-us/Meetings.svg";
 import logo4 from "@/app/images/logos/why-us/Trade-Directory.svg";
 import logo5 from "@/app/images/logos/why-us/Advanced-Tool.svg";
-// import logo6 from "@/app/images/logos/why-us/real-time-chat.svg";
 import logo7 from "@/app/images/logos/why-us/Live-talk.svg";
 import logo8 from "@/app/images/logos/why-us/survey.svg";
-import logo9 from "@/app/images/logos/why-us/survey.svg";
 import selection from "@/app/images/logos/why-us/sellection_process.svg";
 
-import Background from "@/app/images/home/WhyUs-Background.webp"; // Using the ship image from your structure
-
-
-const solutionsData = [
+const slides = [
   {
-    id: 1,
-    src: grid1,
-    alt: "Solution 1",
-    heading: "Marketing & PR",
-    description1:
-      "Expand your business visibility not only within the network but also on a global B2B portal—all included at no extra cost..",
-
-    heightClass: "h-56 lg:h-64 xl:h-auto",
+    title: "Marketing & PR",
+    image: grid1,
+    text: "Expand your business visibility not only within the network but also on a global B2B portal—all included at no extra cost..",
     logo: logo1,
   },
   {
-    id: 2,
-    src: grid2,
-    alt: "Solution 2",
-    heading: "24/7 Support",
-    description1:
-      "Our dedicated support team is available 24/7, 365 days a year. Reach out anytime—by call, message, or email—wherever you are in the world.",
-
-    heightClass: "h-48 lg:h-56",
+    title: "24/7 Support",
+    image: grid2,
+    text: "Our dedicated support team is available 24/7, 365 days a year. Reach out anytime—by call, message, or email—wherever you are in the world.",
     logo: logo2,
   },
   {
-    id: 3,
-    src: grid3,
-    alt: "Solution 3",
-    heading: "Annual Meetings",
-    description1:
-      "Attend our grand symposium to meet partners and clients in person, fostering strong connections and increasing your visibility within the industry.",
-    description2: "Efficient land transportation solutions.",
-    heightClass: "h-64 lg:h-72",
+    title: "Annual Meetings",
+    image: grid3,
+    text: "Attend our grand symposium to meet partners and clients in person, fostering strong connections and increasing your visibility within the industry.",
     logo: logo3,
   },
   {
-    id: 4,
-    src: grid4,
-    alt: "Solution 4",
-    heading: "Trade Directory",
-    description1:
-      "Access a fully digital directory of global exporters, importers, and logistics professionals, connecting you instantly with key players worldwide.",
-    description2: "Cost-effective and reliable rail transport.",
-    heightClass: "h-64 lg:h-72",
+    title: "Trade Directory",
+    image: grid4,
+    text: "Access a fully digital directory of global exporters, importers, and logistics professionals, connecting you instantly with key players worldwide.",
     logo: logo4,
   },
   {
-    id: 5,
-    src: grid5,
-    alt: "Solution 5",
-    heading: "Advanced Tools",
-    description1:
-      "Our technology-centered platform provides essential tools in one place, maximizing the benefits of your membership.",
-    description2: "Secure storage facilities and management.",
-    heightClass: "h-80 lg:h-96",
+    title: "Advanced Tools",
+    image: grid5,
+    text: "Our technology-centered platform provides essential tools in one place, maximizing the benefits of your membership.",
     logo: logo5,
   },
-  // {
-  //   id: 6,
-  //   src: grid6,
-  //   alt: "Solution 6",
-  //   heading: "Real-Time Chat",
-  //   description1:
-  //     "Enjoy seamless, real-time chat functionality that enables fast, synchronized communication, enhancing networking efficiency.",
-  //   description2: "Tailored logistics solutions for your needs.",
-  //   heightClass: "h-48 lg:h-56",
-  //   logo: logo6,
-  // },
   {
-    id: 7,
-    src: grid7,
-    alt: "Solution 4",
-    heading: "Live Talk",
-    description1:
-      "Engage in virtual meetings on a platform that connects you to thousands of industry professionals worldwide, 24/7. Network, collaborate, and grow your business with ease.",
-
-    heightClass: "h-64 lg:h-72",
+    title: "Live Talk",
+    image: grid7,
+    text: "Engage in virtual meetings on a platform that connects you to thousands of industry professionals worldwide, 24/7. Network, collaborate, and grow your business with ease.",
     logo: logo7,
   },
   {
-    id: 8,
-    src: grid8,
-    alt: "Solution 5",
-    heading: "Industry Surveys",
-    description1:
-      "Receive valuable insights from network surveys that keep you informed about market trends and industry benchmarks, helping you stay competitive and informed.",
-    description2: "Secure storage facilities and management.",
-    heightClass: "h-80 lg:h-96",
+    title: "Industry Surveys",
+    image: grid8,
+    text: "Receive valuable insights from network surveys that keep you informed about market trends and industry benchmarks, helping you stay competitive and informed.",
     logo: logo8,
   },
   {
-    id: 9,
-    src: grid9,
-    alt: "Solution 5",
-    heading: "Strict Selection",
-    description1:
-      "BNG ensures that only reliable and trustworthy companies join the network through a rigorous selection process.",
-    description2: "Secure storage facilities and management.",
-    heightClass: "h-80 lg:h-96",
+    title: "Strict Selection",
+    image: grid9,
+    text: "BNG ensures that only reliable and trustworthy companies join the network through a rigorous selection process.",
     logo: selection,
   },
 ];
 
-const Solutions = () => {
+export default function TwigOfferSlider() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const swiperRef = useRef(null);
+
+  const handleSidebarClick = (index) => {
+    setActiveIndex(index);
+    swiperRef.current?.slideTo(index);
+  };
+
   return (
-    <section className="py-14 relative overflow-hidden">
-      {/* <div className="absolute inset-0 z-0">
-        <Image
-          src={Background}
-          alt="Ship background"
-          layout="fill"
-          objectFit="cover"
-          className="opacity-80"
-        />
-      </div> */}
-      <div className="max-w-8xl lg:mx-24 mx-auto px-4 sm:px-6 lg:px-8 lg:my-8 relative z-10">
-        <div className="relative">
-        <h2  className="text-[55px] font-bold  text-[#27293B] text-center mb-8 relative z-10">
-            Why <span className="text-primary">Us?</span> 
+    <section className="bg-secondryBg mt-8 py-14 relative">
+      <div className="container mx-auto px-4">
+        <div className="mb-10 text-center">
+        <h2 className="text-[55px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
+            Why <span className="text-primary">Us ?</span>
           </h2>
           <h2
-            className="absolute text-center top-[-30px] md:left-[40%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            className="absolute text-center top-[-60px] md:-top-[6px] md:left-[40%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
             aria-hidden="true">
-            Why Us?
+            Why Us ?
           </h2>
-          <div className="flex w-[100%] justify-center ">
-          {/* <p className=" text-sm text-gray-500 tracking-widest text-center mb-10 w-[80%] ">
-            With BNG, receive comprehensive marketing support, 24/7 assistance,
-            and participate in live industry events. Access a global trade
-            directory, advanced tools, and real-time communication features to
-            drive meaningful connections and business growth.
-          </p> */}
-        </div>
+    
         </div>
 
-        {/* Grid with 3 columns */}
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {solutionsData.map(({ id, src, alt, heading, description1, logo }) => (
-            <div
-              key={id}
-              className="relative aspect-square overflow-hidden group rounded-lg shadow-lg cursor-pointer"
-            >
-              <Image
-                src={src}
-                alt={alt}
-                layout="fill"
-                objectFit="cover"
-                className="transition-transform duration-300 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
-              <div className="absolute inset-0 flex flex-col justify-between p-6 text-white">
-                <div
-                  // src={logo}
-                  // alt="Logo"
-                  // width={60}
-                  // height={60}
-                  className="self-start  p-2 rounded-full"
-                />
-                <div className="transform transition-all duration-300 translate-y-8 group-hover:translate-y-0">
-                  <div className="flex items-center justify-start gap-2 mb-4">
-                    <Image
-                      src={logo}
-                      alt="Logo"
-                      width={46}
-                      height={46}
-                      className="self-start   rounded-full"
-                    />
-                        <h3 className="text-2xl font-bold ">
-                    {heading}
-                  </h3>
-                  </div>
-              
-                  <p className="text-base max-h-0  font-bold group-hover:max-h-40 overflow-hidden transition-all duration-300">
-                    {description1}
-                  </p>
-                </div>
+        <div className="flex flex-col lg:flex-row shadow-slate-700 shadow-2xl rounded-lg">
+          {/* Sidebar Navigation */}
+          <div className="lg:w-3/12 ">
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                onClick={() => handleSidebarClick(index)}
+                className={`cursor-pointer p-6  rounded-tl-lg rounded-bl-lg text-2xl border-b-2 transition-all duration-200 hover:bg-[#EFF6FF]  font-bold ${
+                  activeIndex === index
+                    ? "bg-[#f0ebf3] border-[#5216ab] text-[#5216ab]"
+                    : "bg-white text-gray-800 border-gray-300"
+                }`}
+              >
+                {slide.title}
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* Swiper Slider */}
+          <div className="lg:w-9/12">
+            <Swiper
+              modules={[Autoplay]}
+              autoplay={{ delay: 6000, disableOnInteraction: false }}
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
+              onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+              spaceBetween={30}
+              slidesPerView={1}
+              className="w-full h-full"
+            >
+              {slides.map((slide, idx) => (
+                <SwiperSlide key={idx}>
+                  <div className="relative h-[400px] md:h-[650px] w-full rounded-tr-lg rounded-br-lg overflow-hidden">
+                    <Image
+                      src={slide.image}
+                      alt={slide.title}
+                      fill
+                      priority
+                      className="object-cover object-center"
+                    />
+                    <div className="absolute inset-0 bg-black/30 z-10"></div>
+                    <div className="absolute bottom-0 p-6 text-white w-full z-20">
+                      <div className="flex items-center gap-3 mb-3">
+                        <Image
+                          src={slide.logo}
+                          alt="logo"
+                         sizes={6}
+                          className=" w-20 h-20 rounded-tr-lg rounded-br-lg  p-1"
+                        />
+                        <h3 className="text-2xl font-semibold text-white">
+                          {slide.title}
+                        </h3>
+                      </div>
+                      <p className="text-base font-semibold text-white max-w-xl">
+                        {slide.text}
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default Solutions;
+}
