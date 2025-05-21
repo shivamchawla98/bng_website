@@ -11,6 +11,7 @@ import LatestMembers from "@/page-components/OurCompany/LatestMembers";
 import SecuritySteps from "@/page-components/BecomeMember/SecuritySteps";
 import WorldMap from "@/page-components/home/WorldMap";
 import Widget from "@/page-components/home/Widget";
+import SplitScreenCTA from "@/page-components/Benifits/SplitScreenCTA";
 // import ExperimentalMap from "@/page-components/home/ExperimentalMap";
 
 export default function Home() {
@@ -34,6 +35,7 @@ return(
   <SecuritySteps />
   <Conference />
   <News />
+  <SplitScreenCTA />
   </div>
 )
 }

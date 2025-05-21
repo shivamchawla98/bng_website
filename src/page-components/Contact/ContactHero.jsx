@@ -5,10 +5,11 @@ export const ContactHero = () => {
 
       <div className="flex flex-col">
         <h3 className="text-5xl  font-light mb-4  text-white relative z-10">
-        About Us
+        Contact Us
         </h3>
         <h2 className="text-[52px] font-bold text-white relative z-10">
-        Redefining <span className="font-light">Global</span>  Logistics Networking
+        Questions? Opportunities? <span className="font-light">We’re Here</span>.
+  
         </h2>
       </div>
     </div>

@@ -8,6 +8,8 @@ import AboutSection from "@/page-components/OurCompany/AboutSections";
 import { AboutUsHero } from "@/page-components/OurCompany/AboutUsHero";
 import { FAQ } from "@/components/Faq";
 import TestimonialSlider from "@/page-components/home/TestimonialSlider";
+import faqBackgroundImage from '../../../public/contact_us/FAQ_Image.jpg';
+import SplitScreenCTA from "@/page-components/Benifits/SplitScreenCTA";
 
 function page() {
   return (
@@ -22,7 +24,10 @@ function page() {
       <section className="bg-secondryBg py-12 md:px-[112px]">
         <LatestMembers />
       </section>
-      <section className="bg-primaryBg py-14 px-4 relative">
+      <section 
+          style={{ backgroundImage: `url(${faqBackgroundImage.src})` }}
+              className="bg-primaryBg py-16"
+     >
         {/* <div
           className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
           style={{
@@ -35,7 +40,7 @@ function page() {
           }}></div> */}
         <FAQ />
       </section>
-
+      <SplitScreenCTA />
       {/* <section className="b px-4 md:px-[112px]">
         <QuoteForm />
       </section> */}

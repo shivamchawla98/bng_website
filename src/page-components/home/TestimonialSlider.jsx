@@ -70,14 +70,14 @@ const TestimonialSlider = () => {
         backgroundColor: "rgba(0, 0, 0, 0)",
       }}
       >
-      <div
+      {/* <div
         className="absolute bottom-16 left-8 w-[200px] h-[200px] rounded-full"
         style={{
           background:
             "linear-gradient(-145deg, #6853DB 16%, #6853DB 40.86%, #97b6f6 30%)",
           zIndex: 1,
           filter: "blur(110px)",
-        }}></div>
+        }}></div> */}
       <div className="relative mx-auto px-4 sm:px-6 lg:px-8 py-14 w-full flex items-center justify-center">
         <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-8 translate-y-[20px] md:translate-x-[150px]">
           <div className="w-full lg:w-1/2 relative h-[500px] lg:h-[600px] flex flex-col items-start justify-center mt-[10rem]">
@@ -87,7 +87,7 @@ const TestimonialSlider = () => {
                   key={index}
                   src={logo}
                   alt={`Partner ${index + 1}`}
-                  className="w-[135px] h-[135px]"
+                  className="w-[135px] h-[135px] hover:border-2 hover:border-gray-300 rounded-full transition duration-300 ease-in-out"
                 />
               ))}
             </div>
@@ -107,7 +107,7 @@ const TestimonialSlider = () => {
           </div>
           <div className="lg:w-1/2 h-auto">
             <div className="relative">
-              <h2 className="text-[55px] font-bold text-primary mb-20 text-left mt-10 relative z-10">
+              <h2 className="text-[55px] font-bold text-primary mb-10 text-left mt-10 relative z-10">
                 Testimonials
               </h2>
               <h2
@@ -135,7 +135,7 @@ const TestimonialSlider = () => {
               {testimonials.map((testimonial, index) => (
                 <SwiperSlide key={index}>
                <div className="p-8 absolute -left-4 mt-11">
-  <div className="bg-gradient-to-br from-white to-purple-100 shadow-lg rounded-xl pb-10 pt-10 pl-8 pr-8 max-w-[430px] lg:max-w-[590px]">
+  <div className="bg-gradient-to-br from-sky-50 to-sky-50 shadow-lg rounded-xl pb-10 pt-10 pl-8 pr-8 max-w-[430px] lg:max-w-[590px]">
     <div className="space-y-6">
       <p className="text-gray-500 text-[26px]">
         <strong>“ </strong> {testimonial.text} <strong>„</strong>

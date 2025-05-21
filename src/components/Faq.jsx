@@ -1,3 +1,5 @@
+
+
 export const FAQ = () => {
   const faqs = [
     {
@@ -35,23 +37,33 @@ export const FAQ = () => {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto  mt-4 mb-12">
-      <h2 className="text-[55px] font-bold text-center text-[#27293B] mb-8">
-        Frequently Asked Questions
-      </h2>
-      <div className="space-y-4">
-        {faqs.map((faq) => (
-          <details
-            key={faq.question}
-            className="bg-white text-[#27293B] rounded-lg shadow-lg overflow-hidden">
-            <summary className="px-6 py-4 cursor-pointer hover:bg-gray-50">
-              {faq.question}
-            </summary>
-            <div className="px-6 py-4 bg-gray-50">
-              <p className="text-gray-600 whitespace-pre-line text-[18px]">{faq.answer}</p>
-            </div>
-          </details>
-        ))}
+    <div
+      className="max-w-5xl mx-auto mt-4 mb-12 relative bg-cover bg-center bg-no-repeat"
+    
+    >
+      {/* Tinted Overlay with Gradient */}
+      
+      
+      {/* FAQ Content */}
+      <div className="relative z-10 p-6">
+        <h2 className="text-[55px] font-bold text-center text-[#27293B] mb-8 drop-shadow-md">
+          Frequently Asked <span className="text-primary">Questions</span> 
+        </h2>
+        <div className="space-y-4">
+          {faqs.map((faq) => (
+            <details
+              key={faq.question}
+              className="bg-white text-[#27293B] rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl"
+            >
+              <summary className="px-6 py-4 cursor-pointer hover:bg-gray-50 font-semibold">
+                {faq.question}
+              </summary>
+              <div className="px-6 py-4 bg-gray-50">
+                <p className="text-gray-600 whitespace-pre-line text-[18px]">{faq.answer}</p>
+              </div>
+            </details>
+          ))}
+        </div>
       </div>
     </div>
   );

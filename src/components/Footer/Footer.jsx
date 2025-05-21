@@ -135,7 +135,7 @@ const Footer = () => {
 
 const FooterSection = ({ title, links }) => (
   <div className="w-full">
-    <h2 className="mb-6  text-sm font-semibold text-gray-900 uppercase pb-1 border-b-[2px]">
+    <h2 className="mb-6  text-base font-semibold text-gray-900 uppercase pb-1 border-b-[2px]">
       {title}
     </h2>
     <div className="text-gray-800    font-light ">
@@ -162,8 +162,8 @@ const SocialLinks = () => (
         <Image
           src={social.image}
           alt={social.name}
-          width={40}
-          height={40}
+          width={36}
+          height={36}
           className="transition-transform duration-300 ease-in-out"
         />
         <span className="sr-only">{social.name}</span>

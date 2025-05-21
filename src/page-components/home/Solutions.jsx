@@ -5,7 +5,7 @@ import { Autoplay } from "swiper/modules";
 import Image from "next/image";
 import "swiper/css";
 
-import grid1 from "../../../public/why_us/Marketing & PR.png";
+import grid1 from "../../../public/why_us/Marketing & PR.jpg";
 import grid2 from "../../../public/why_us/support 247.jpg";
 import grid3 from "../../../public/why_us/Annual_Meeting.jpg";
 import grid4 from "../../../public/why_us/Trade_Directory.jpg";
@@ -21,56 +21,75 @@ import logo4 from "../../../public/why_us/logo/04_trade_directory.png";
 import logo5 from "../../../public/why_us/logo/05_advance-tools.png";
 import logo7 from "../../../public/why_us/logo/06_Live_talk.png";
 import logo8 from "../../../public/why_us/logo/07_industry_survey.png";
+
+import graylogo1 from "../../../public/why_us/refortesting/01_marketing_gray.png";
+import graylogo2 from "../../../public/why_us/refortesting/02_24x7_gray.png";
+import graylogo3 from "../../../public/why_us/refortesting/03_annual_meeting_grays.png";
+import graylogo4 from "../../../public/why_us/refortesting/04_trade_directory_gray.png";
+import graylogo5 from "../../../public/why_us/refortesting/05_advance-tools_gray.png";
+import graylogo7 from "../../../public/why_us/refortesting/06_Live_talk_gray.png";
+import graylogo8 from "../../../public/why_us/refortesting/07_industry_survey_gray.png";
+import grayselection from "../../../public/why_us/refortesting/08_sellection_process_gray.png";
+
 import selection from "../../../public/why_us/logo/08_sellection_process.png";
+import testImage from "../../../public/conference.webp";
 
 const slides = [
   {
     title: "Marketing & PR",
-    image: grid1,
+    image: testImage,
     text: "Expand your business visibility not only within the network but also on a global B2B portal—all included at no extra cost.",
     logo: logo1,
+    activeLogo: graylogo1,
   },
   {
     title: "24/7 Support",
     image: grid2,
     text: "Our dedicated support team is available 24/7, 365 days a year. Reach out anytime—by call, message, or email—wherever you are in the world.",
     logo: logo2,
+    activeLogo: graylogo2,
   },
   {
     title: "Annual Meetings",
     image: grid3,
     text: "Attend our grand symposium to meet partners and clients in person, fostering strong connections and increasing your visibility within the industry.",
     logo: logo3,
+    activeLogo: graylogo3,
   },
   {
     title: "Trade Directory",
     image: grid4,
     text: "Access a fully digital directory of global exporters, importers, and logistics professionals, connecting you instantly with key players worldwide.",
     logo: logo4,
+    activeLogo: graylogo4,
   },
   {
     title: "Advanced Tools",
     image: grid5,
     text: "Our technology-centered platform provides essential tools in one place, maximizing the benefits of your membership.",
     logo: logo5,
+    activeLogo: graylogo5,
   },
   {
     title: "Live Talk",
     image: grid7,
     text: "Engage in virtual meetings on a platform that connects you to thousands of industry professionals worldwide, 24/7. Network, collaborate, and grow your business with ease.",
     logo: logo7,
+    activeLogo: graylogo7,
   },
   {
     title: "Industry Surveys",
     image: grid8,
     text: "Receive valuable insights from network surveys that keep you informed about market trends and industry benchmarks, helping you stay competitive and informed.",
     logo: logo8,
+    activeLogo: graylogo8,
   },
   {
     title: "Strict Selection Process",
     image: grid9,
     text: "BNG ensures that only reliable and trustworthy companies join the network through a rigorous selection process.",
     logo: selection,
+    activeLogo: grayselection,
   },
 ];
 
@@ -105,15 +124,35 @@ export default function TwigOfferSlider() {
               <div
                 key={index}
                 onClick={() => handleSidebarClick(index)}
-                className={`cursor-pointer p-5  text-xl border-b-2 transition-all duration-200 hover:bg-[#EFF6FF] font-medium ${
+                className={`cursor-pointer p-2.5  flex justify-start items-center text-xl border-b-2 transition-all duration-200 hover:bg-[#EFF6FF] font-medium ${
                   index === 0
                     ? "rounded-tl-lg  " : index === slides.length - 1 ? "rounded-bl-lg " : "rounded-tr-none rounded-br-none"
                 } ${
                   activeIndex === index
-                    ? "bg-[#EFF6FF] border-[#89bcff] text-[#5216ab]"
-                    : "bg-white text-gray-800 border-gray-300"
+                    ? "bg-[#EFF6FF] border-primary text-[#5216ab]"
+                    : "bg-white text-gray-700 border-gray-300"
                 }`}
               >
+                {
+                  activeIndex === index ? (
+
+                    <Image
+                    src={slide.logo}
+                    alt="logo"
+                    sizes={8}
+                    className="  w-12 h-12 mr-5 rounded-tr-lg rounded-br-lg  p-1"
+                  />
+               
+                  ) : (
+                    <Image
+                    src={slide.activeLogo}
+                    alt="logo"
+                    sizes={8}
+                    className="  w-12 h-12 mr-5 rounded-tr-lg rounded-br-lg  p-1"
+                  />
+                  )
+                }
+                    
                 {slide.title}
               </div>
             ))}
@@ -133,15 +172,21 @@ export default function TwigOfferSlider() {
               {slides.map((slide, idx) => (
                 <SwiperSlide key={idx}>
                   <div className="relative h-[400px] md:h-[558px] w-full rounded-tr-lg rounded-br-lg overflow-hidden">
-                    <Image
-                      src={slide.image}
-                      alt={slide.title}
-                      fill
-                      priority
-                      className="object-cover object-center"
-                    />
+                  <div className="relative w-full h-full">
+  <Image
+    src={slide.image}
+    alt={slide.title}
+    fill
+    priority
+    className="object-cover object-center"
+  />
+  <div
+    className="absolute bottom-0  bg-gradient-to-t from-white/100 via-white/90 to-transparent left-0 right-0 h-[80%] pointer-events-none"
+
+  />
+</div>
                     <div className="absolute inset-0  z-10"></div>
-                    <div className="absolute  bottom-0 p-6 text-white w-full z-20">
+                    <div className="absolute  bottom-4 p-6 text-white w-full z-20">
                       <div className="flex items-center gap-3 mb-3">
                         <Image
                           src={slide.logo}
@@ -153,7 +198,7 @@ export default function TwigOfferSlider() {
                           {slide.title}
                         </h3>
                       </div>
-                      <p className="text-2xl font-semibold text-gray-400 max-w-xl">
+                      <p className="text-xl font-medium text-gray-400 max-w-xl">
                         {slide.text}
                       </p>
                     </div>

@@ -9,6 +9,7 @@ import ContactCards from '@/page-components/Contact/ContactCards';
 import BusinessLocations from '@/page-components/Contact/BusinessLocations';
 import Form from '@/page-components/Contact/Form';
 import LocationCard from '@/page-components/Contact/LocationCard';
+import faqBackgroundImage from '../../../public/contact_us/FAQ_Image.jpg';
 
 const ContactPage = () => {
   return (
@@ -18,7 +19,7 @@ const ContactPage = () => {
         <div className="grid md:grid-cols-1 gap-8 mb-16">
           <Form />
           {/* <QuoteForm /> */}
-          {/* <ContactUsMap /> */}
+          {/* <ContactUsMap /> */} 
           {/* <SocialMedia /> */}
         </div>
         </div>
@@ -45,8 +46,10 @@ const ContactPage = () => {
         
           <BusinessLocations />
         </section> */}
-        <section className="bg-primaryBg py-16">
-    
+        <section
+          style={{ backgroundImage: `url(${faqBackgroundImage.src})` }}
+        className="bg-primaryBg py-16">
+     
         <FAQ />
           </section>
       </div>

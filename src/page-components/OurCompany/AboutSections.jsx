@@ -1,7 +1,7 @@
 import Image from "next/image";
 import about1 from "../../../public/about/about_01.jpg";
 import about2 from "../../../public/about/About_02.jpg";
-import OurVisionImage from "../../../public/about/vission.jpg";
+import OurVisionImage from "../../../public/about/vision.jpg";
 import OurMissionImage from "../../../public/about/mission.jpg";
 import { FeatureCard } from "./FeatureCard";
 
@@ -38,17 +38,17 @@ const AboutSection = () => {
             // Alternative fallback
           }}></div> */}
         <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto  ">
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12 py-16 ">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-12  pt-16 pb-14 ">
             <div className="relative flex justify-center items-center">
               <div className="hidden lg:block absolute left-16 bottom-12 h-[350px] w-[400px]   rounded-md"></div>
               <Image
-                className="rounded-xl shadow-2xl shadow-slate-700 object-cover z-10"
+                className="rounded-xl transform transition-transform duration-500 hover:scale-110 shadow-2xl shadow-slate-700 object-cover z-10"
                 src={about1}
                 height={350}
                 alt="About Us Image 1"
               />
             </div>
-            <div className="flex flex-col justify-center items-center lg:items-start gap-8">
+            <div className="flex flex-col justify-start items-center lg:items-start gap-8">
               <h2 className="text-gray-900 text-4xl font-medium leading-normal text-center lg:text-start">
                 Building <span className="font-medium text-primary">Global Connections </span>  in Logistics
               </h2>
@@ -70,13 +70,13 @@ const AboutSection = () => {
             <div className="relative flex justify-center items-center lg:order-2">
               <div className="hidden lg:block absolute right-16 bottom-12 h-[350px] w-[400px]   rounded-md"></div>
               <Image
-                className="rounded-xl shadow-2xl shadow-slate-700 object-cover z-10"
+                className="rounded-xl shadow-2xl transform transition-transform duration-500 hover:scale-110 shadow-slate-700 object-cover z-10"
                 src={about2}
                 height={350}
                 alt="About Us Image 2"
               />
             </div>
-            <div className="flex flex-col justify-center items-center lg:items-start gap-8">
+            <div className="flex flex-col justify-start items-center lg:items-start gap-8">
               <p className="text-gray-600  leading-relaxed text-center text-[18px] lg:text-start">
                 Members of BNG benefit from around-the-clock customer support,
                 an extensive trade directory, and free promotional services that
@@ -163,7 +163,7 @@ const AboutSection = () => {
             <div className="relative flex justify-center items-center">
               <div className="hidden lg:block absolute left-16 bottom-12 h-[350px] w-[400px]  rounded-md"></div>
               <Image
-                className="  rounded-xl shadow-2xl shadow-slate-700 object-cover z-10"
+                className=" transform transition-transform duration-500 hover:scale-110 rounded-xl shadow-2xl shadow-slate-700 object-cover z-10"
                 src={OurVisionImage}
                 height={350}
                 alt="Why Us Image"
@@ -200,7 +200,7 @@ const AboutSection = () => {
             <div className="relative flex justify-center items-center lg:order-2">
               <div className="hidden lg:block absolute right-16 bottom-12 h-[350px] w-[400px]  rounded-md"></div>
               <Image
-                className="rounded-xl shadow-2xl shadow-slate-700 object-cover z-10"
+                className="rounded-xl transform transition-transform duration-500 hover:scale-110 shadow-2xl shadow-slate-700 object-cover z-10"
                 src={OurMissionImage}
                 height={350}
                 alt="Vision Image"

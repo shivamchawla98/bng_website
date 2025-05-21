@@ -25,8 +25,7 @@ export default function Widget() {
           <div
             key={item.id}
             className="relative overflow-hidden cursor-pointer
-    transform transition-transform duration-500 ease-in-out
-    hover:rotate-[-3deg] hover:skew-y-1 hover:-translate-y-2 hover:scale-105  rounded-lg bg-white px-4 py-4 shadow sm:px-4 "
+transition-transform transform hover:scale-105 duration-300 rounded-lg bg-white px-4 py-4 shadow sm:px-4 "
           >
             <dt>
               <div className="absolute rounded-md ml-4  p-1">

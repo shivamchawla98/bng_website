@@ -7,7 +7,7 @@ const SplitScreenCTA = () => {
   return (
     <div className="grid md:grid-cols-2 h-[600px]  bg-primaryBg">
       {/* Conference Section */}
-      <Link href="/freight-xchange" className="relative group overflow-hidden">
+      <Link href="/business-xchange" className="relative group overflow-hidden">
         <div className="absolute inset-0 bg-blue-900/60 group-hover:bg-blue-900/70 transition-colors z-10" />
         <Image
           src={FXVisit}
@@ -19,7 +19,7 @@ const SplitScreenCTA = () => {
         />
         <div className="relative z-20 h-full flex flex-col justify-center items-center text-center p-8">
           <div className="flex items-center gap-2 mb-4">
-            <h2 className="text-4xl font-bold text-white">Promote Your Freight Like Never Before</h2>
+          <h2 className="text-4xl font-bold text-white">Business Xchange</h2>
             <svg
               className="w-6 h-6 text-white transform group-hover:translate-x-1 transition-transform"
               fill="none"
@@ -34,14 +34,14 @@ const SplitScreenCTA = () => {
               />
             </svg>
           </div>
-          <p className="text-lg text-white/90 max-w-md">
-            Showcase competitive rates and services to a global audience
+          <p className="text-[24px] font-bold text-white/90  max-w-lg">
+          Offering members verified, high-quality global freight leads to drive real, scalable business.
           </p>
         </div>
       </Link>
 
       {/* Member Portal Section */}
-      <Link href="/business-xchange" className="relative group overflow-hidden">
+      <Link href="/freight-xchange" className="relative group overflow-hidden">
         <div className="absolute inset-0 bg-red-900/60 group-hover:bg-red-900/70 transition-colors z-10" />
         <Image
           src={BXVisit}
@@ -53,7 +53,8 @@ const SplitScreenCTA = () => {
         />
         <div className="relative z-20 h-full flex flex-col justify-center items-center text-center p-8">
           <div className="flex items-center gap-2 mb-4">
-            <h2 className="text-4xl font-bold text-white">Discover Global Business Leads</h2>
+            
+            <h2 className="text-4xl font-bold text-white">Freight Xchange</h2>
             <svg
               className="w-6 h-6 text-white transform group-hover:translate-x-1 transition-transform"
               fill="none"
@@ -68,8 +69,9 @@ const SplitScreenCTA = () => {
               />
             </svg>
           </div>
-          <p className="text-[18px] text-white/90 max-w-md">
-            Find active leads and expand your network worldwide
+          <p className="text-[24px] font-bold text-white/90  max-w-lg">
+
+          enabling forwarders to showcase and share their freight rates with fellow members.
           </p>
         </div>
       </Link>

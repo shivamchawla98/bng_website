@@ -124,18 +124,20 @@ function Header() {
             </button>
             {isDropdownOpen && (
               <div className="absolute top-full left-0 bg-white shadow-lg rounded-lg p-4 space-y-2 w-48 z-50">
+                    <Link
+                  href="/business-xchange"
+                  className="block text-gray-700 hover:text-primary text-[18px] font-medium"
+                >
+                  Business Xchange
+                </Link>
+             
                 <Link
                   href="/freight-xchange"
                   className="block text-gray-700 hover:text-primary text-[18px] font-medium"
                 >
                   Freight Xchange
                 </Link>
-                <Link
-                  href="/business-xchange"
-                  className="block text-gray-700 hover:text-primary text-[18px] font-medium"
-                >
-                  Business Xchange
-                </Link>
+         
               </div>
             )}
           </div>
@@ -237,18 +239,19 @@ function Header() {
             </button>
             {isDropdownOpen && (
               <div className="pl-4 space-y-2">
+                     <Link
+                  href="/business-xchange"
+                  className="text-gray-700 hover:text-primary text-[18px] py-1 block"
+                >
+                  Business Xchange
+                </Link>
                 <Link
                   href="/freight-xchange"
                   className="text-gray-700 hover:text-primary text-[18px] py-1 block"
                 >
                   Freight Xchange
                 </Link>
-                <Link
-                  href="/business-xchange"
-                  className="text-gray-700 hover:text-primary text-[18px] py-1 block"
-                >
-                  Business Xchange
-                </Link>
+           
               </div>
             )}
           </div>

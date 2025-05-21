@@ -1,7 +1,7 @@
 'use client'
 import { Fragment, useState, useEffect } from 'react'
 import { CheckIcon, MinusIcon, InfoIcon, ChevronDownIcon } from 'lucide-react'
-import { Star, StarsIcon, Crown } from 'lucide-react'
+import { TrophyIcon, StarsIcon, Crown, } from 'lucide-react'
 import InviteModal from '../Contact/modal'
 import { ModalMembershipForm } from '@/page-components/home/ModalForm';
 
@@ -25,14 +25,14 @@ export default function Pricing() {
   // State for modal
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedDurations, setSelectedDurations] = useState({
-    'tier-standard': 1,
-    'tier-premium': 1,
-    'tier-elite': 1,
+    'tier-Standard': 1,
+    'tier-Premium': 1,
+    'tier-Elite': 1,
   })
   const [openDropdowns, setOpenDropdowns] = useState({
-    'tier-standard': false,
-    'tier-premium': false,
-    'tier-elite': false,
+    'tier-Standard': false,
+    'tier-Premium': false,
+    'tier-Elite': false,
   })
   // State for currency selection (USD or INR)
   const [currency, setCurrency] = useState('USD');
@@ -70,25 +70,25 @@ export default function Pricing() {
   const tiers = [
     {
       name: 'Standard',
-      id: 'tier-standard',
+      id: 'tier-Standard',
       href: '#',
       priceYearly: '$199', // Original one-year price
       priceValue: 199, // Numeric for calculations
       mostPopular: false,
-      icon: Star,
+      icon: TrophyIcon,
     },
     {
       name: 'Premium',
-      id: 'tier-premium',
+      id: 'tier-Premium',
       href: '#',
       priceYearly: '$699',
       priceValue: 699,
-      mostPopular: true,
+      mostPopular: false,
       icon: StarsIcon,
     },
     {
-      name: 'ELITE',
-      id: 'tier-elite',
+      name: 'Elite',
+      id: 'tier-Elite',
       href: '#',
       priceYearly: '$1999',
       priceValue: 1999,
@@ -100,26 +100,26 @@ export default function Pricing() {
   // Define sections with dynamic currency values
   const sections = [
     {
-      name: 'Standard Features',
+      name: 'Basic Features',
       features: [
-        { name: 'UNLIMITED SEARCHES FOR FELLOW MEMBERS', tiers: { Standard: true, Premium: true, ELITE: true } },
-        { name: 'REALTIME CHAT', tiers: { Standard: true, Premium: true, ELITE: true } },
-        { name: 'DEDICATED MEMBERSHIP PROFILE', tiers: { Standard: true, Premium: true, ELITE: true } },
-        { name: 'CERTIFICATE OF MEMBERSHIP', tiers: { Standard: true, Premium: true, ELITE: true } },
-        { name: 'MEMBERSHIP BADGE', tiers: { Standard: true, Premium: true, ELITE: true } },
+        { name: 'Unlimited Searches For Fellow Members', tiers: { Standard: true, Premium: true, Elite: true } },
+        { name: 'Realtime Chat', tiers: { Standard: true, Premium: true, Elite: true } },
+        { name: 'Dedicated Membership Profile', tiers: { Standard: true, Premium: true, Elite: true } },
+        { name: 'Certificate Of Membership', tiers: { Standard: true, Premium: true, Elite: true } },
+        { name: 'Membership Badge', tiers: { Standard: true, Premium: true, Elite: true } },
       ],
     },
     {
       name: 'Team Management & Offices',
       features: [
-        { name: 'TEAM MEMBERS / USERS (Same Country / Within Company)', tiers: { Standard: '1 USERS', Premium: '6 USERS', ELITE: 'UNLIMITED' } },
-        { 
-          name: 'BRANCH OFFICES (Same Country / Within Company)', 
-          tiers: { 
-            Standard: '', 
-            Premium: '1HQ + 3 BRANCH (After that $499 branch)', 
-            ELITE: '1HQ + 9 BRANCH (After that $499 branch)' 
-          } 
+        { name: 'Team Members / Users (Same Country / Within Company)', tiers: { Standard: '1 Users', Premium: '6 Users', Elite: 'Unlimited' } },
+        {
+          name: 'Branch Offices (Same Country / Within Company)',
+          tiers: {
+            Standard: '',
+            Premium: '1HQ + 3 Branch (After That $499 Branch)',
+            Elite: '1HQ + 9 Branch (After That $499 Branch)',
+          },
         },
       ],
     },
@@ -127,49 +127,52 @@ export default function Pricing() {
       name: 'Business Tools',
       features: [
         {
-          name: 'BUSINESS XCHANGE (Monthly Post/Bid)',
-          tiers: { Standard: '2 ENQUIRY', Premium: '15 ENQUIRIES', ELITE: 'UNLIMITED' },
-          tooltip: 'A ROBUST SYSTEM WITH FREIGHT ENQUIRIES FROM GLOBAL TRADE COMMUNITY / POST YOUR ENQUIRY / QUOTE FOR ENQUIRES',
+          name: 'Business Xchange (Monthly Post/Bid)',
+          tiers: { Standard: '2 Enquiry', Premium: '15 Enquiries', Elite: 'Unlimited' },
+          tooltip: 'A robust system with freight enquiries from global trade community / post your enquiry / quote for enquires',
         },
         {
-          name: 'FREIGHT XCHANGE (Monthly post of your promotional freight rates)',
-          tiers: { Standard: '2 POST', Premium: '15 POSTS', ELITE: 'UNLIMITED' },
-          tooltip: 'A ROBUST SYSTEM GIVES YOU OPPORTUNITY TO GROW YOUR VISIBILITY BY POSTING YOUR FREIGHT RATES',
+          name: 'Freight Xchange (Monthly Post Of Your Promotional Freight Rates)',
+          tiers: { Standard: '2 Post', Premium: '15 Posts', Elite: 'Unlimited' },
+          tooltip: 'A robust system gives you opportunity to grow your visibility by posting your freight rates',
         },
         {
-          name: 'PR AND MARKETING',
-          tiers: { Standard: '', Premium: '4 POSTS PER MONTH', ELITE: '15 POSTS PER MONTH' },
-          tooltip: 'CREATE YOUR VISIBILITY TO GLOBAL TRADE & EXIM MARKET',
+          name: 'Pr And Marketing',
+          tiers: { Standard: '', Premium: '4 Posts Per Month', Elite: '15 Posts Per Month' },
+          tooltip: 'Create your visibility to global trade & exim market',
         },
-        { name: 'BE ON TOP SEARCH RESULTS', tiers: { Standard: false, Premium: false, ELITE: true } },
+        { name: 'Be On Top Search Results', tiers: { Standard: false, Premium: false, Elite: true } },
       ],
     },
     {
-      name: 'PAYMENT PROTECTION FRAMEWORK',
+      name: 'Payment Protection Framework',
       features: [
         {
-          name: 'PAYMENT PROTECTION FRAMEWORK ( Overdue Invoice Rankings - Strict Background Check - Payment Resolution Center - Global Warning List )',
-          tiers: { 
-            Standard: false, 
-            Premium: 'Up to $20,000 Payment Protection', 
-            ELITE: 'Up to $50,000 Payment Protection' 
+          name: 'Payment Protection Framework (Overdue Invoice Rankings - Strict Background Check - Payment Resolution Center - Global Warning List)',
+          tiers: {
+            Standard: false,
+            Premium: 'Up To $20,000 Payment Protection',
+            Elite: 'Up To $50,000 Payment Protection',
           },
         },
       ],
     },
     {
-      name: 'Preferences and Discounts',
+      name: 'Preferences And Discounts',
       features: [
-        { name: 'DISCOUNT ON CONFERENCE FEES', tiers: { Standard: false, Premium: false, ELITE: '5% life time' } },
-        { name: 'DISCOUNT ON SPONSERSHIP PACKAGES', tiers: { Standard: false, Premium: false, ELITE: '15% life time' } },
-        { name: 'VIRTUAL CONFERENCE ACCESS - FREE', tiers: { Standard: true, Premium: true, ELITE: true } },
-        { name: 'SPECIAL DISCOUNT ON CARGO INSURANCES', tiers: { Standard: true, Premium: true, ELITE: true } },
+        { name: 'Discount On Conference Fees', tiers: { Standard: false, Premium: false, Elite: '5% Life Time' } },
+        { name: 'Discount On Sponsorship Packages', tiers: { Standard: false, Premium: false, Elite: '15% Life Time' } },
+        { name: 'Virtual Conference Access - Free', tiers: { Standard: true, Premium: true, Elite: true } },
+        { name: 'Special Discount On Cargo Insurances', tiers: { Standard: true, Premium: true, Elite: true } },
       ],
     },
-  ]
+  ];
+  
+  
 
   const durations = [
     { years: 1, label: '1 Year' },
+    { years: 2, label: '2 Year' },
     { years: 3, label: '3 Years' },
   ]
 
@@ -254,8 +257,8 @@ export default function Pricing() {
         </div>
         
         <div className="mx-auto max-w-5xl text-center">
-          <p className="text-[40px] font-bold text-gray-700 relative z-10">
-            Join the Global Freight Network Today
+          <p className="text-[55px] font-bold text-gray-700 relative z-10">
+            Join the Global <span className='text-primary'>Freight Network Today</span> 
           </p>
         </div>
         <p className="mx-auto mt-2 max-w-2xl text-center text-base font-medium text-gray-600 sm:text-lg">
@@ -274,7 +277,7 @@ export default function Pricing() {
             >
               <div className="flex items-center mb-4">
                 <tier.icon className="h-8 w-8 text-indigo-600" />
-                <h3 id={tier.id} className="ml-3 text-sm font-semibold text-gray-900">
+                <h3 id={tier.id} className="ml-3 text-lg font-semibold text-gray-900">
                   {tier.name}
                 </h3>
               </div>
@@ -315,8 +318,8 @@ export default function Pricing() {
                 className={classNames(
                   tier.mostPopular
                     ? 'bg-gradient-to-tr from-[#6853DB] to-[#6853DB] text-white hover:bg-gradient-to-tr hover:from-[#5844B4] hover:to-[#5844B4]'
-                    : 'text-[#6853DB] ring-1 ring-inset ring-[#6853DB]/20 hover:ring-[#6853DB]/30',
-                  'mt-6 block rounded-md px-4 py-3 text-center text-base font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6853DB] w-full'
+                    : 'text-[#6853DB] ring-1 ring-inset  ring-[#6853DB]/20 hover:ring-[#6853DB]/30',
+                  'mt-6 z-40 block rounded-md px-4 py-3 hover:bg-primary hover:scale-105 text-center text-base font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6853DB] w-full'
                 )}
               >
                 Buy Now
@@ -375,9 +378,9 @@ export default function Pricing() {
                   <td />
                   {tiers.map((tier) => (
                     <th key={tier.id} scope="col" className="px-6 pt-6 xl:px-8 xl:pt-8">
-                      <div className="flex items-center mb-4">
-                        <tier.icon className="h-8 w-8 text-[#6853DB]" />
-                        <div className="ml-3 text-sm font-semibold text-gray-900">{tier.name}</div>
+                      <div className="flex justify-center w-full items-center mb-4">
+                        <tier.icon className="h-10 w-10 text-[#6853DB]" />
+                        <div className="ml-3 text-3xl font-semibold text-gray-900">{tier.name}</div>
                       </div>
                     </th>
                   ))}
@@ -390,11 +393,11 @@ export default function Pricing() {
                   </th>
                   {tiers.map((tier) => (
                     <td key={tier.id} className="px-6 pt-2 xl:px-8">
-                      <div className="altar de precios text-gray-900">
+                      <div className="altar de precios flex justify-center items-center text-gray-900">
                         <span className="text-4xl font-semibold">{getPrice(tier)}</span>
-                        <span className="text-sm font-semibold">
+                        {/* <span className="text-sm font-semibold">
                           /{selectedDurations[tier.id]} {selectedDurations[tier.id] === 1 ? 'year' : 'years'}
-                        </span>
+                        </span> */}
                       </div>
                       {/* Individual Duration Dropdown */}
                       <div className="mt-4 relative inline-block text-left w-full">
@@ -427,7 +430,7 @@ export default function Pricing() {
                           tier.mostPopular
                             ? 'bg-gradient-to-tr from-[#6853DB] to-[#6853DB] text-white hover:bg-gradient-to-tr hover:from-[#5844B4] hover:to-[#5844B4]'
                             : 'text-[#6853DB] ring-1 ring-inset ring-[#6853DB]/20 hover:ring-[#6853DB]/30',
-                          'mt-6 block rounded-md px-4 py-3 text-center text-base font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6853DB] w-full'
+                          'mt-6 block rounded-md hover:bg-gradient-to-tr from-[#6853DB] to-[#6853DB]  hover:scale-105 hover:text-white px-4 py-3 text-center text-base font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6853DB] w-full'
                         )}
                       >
                         Buy Now
@@ -443,7 +446,7 @@ export default function Pricing() {
                         colSpan={4}
                         className={classNames(
                           sectionIdx === 0 ? 'pt-8' : 'pt-16',
-                          'pb-4 font-semibold text-lg text-gray-900'
+                          'pb-4 font-semibold text-lg text-primary'
                         )}
                       >
                         {section.name}

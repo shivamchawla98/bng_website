@@ -11,7 +11,7 @@ export default function ContactCard() {
       
            
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 lg:col-span-3 lg:gap-8">
-              <div className="rounded-2xl bg-gray-100 p-10">
+              <div className="rounded-2xl bg-gradient-to-r from-white to-gray-100 shadow-lg transition-transform transform hover:scale-105 duration-300 p-10">
                 <div className="flex justify-start items-center gap-x-4">
 <FaWhatsapp className="h-8 w-8 text-primary" />
                 <h3 className="text-2xl font-semibold text-gray-900">WhatsApp</h3>
@@ -32,7 +32,7 @@ export default function ContactCard() {
                 </dl>
               </div>
          
-              <div className="rounded-2xl bg-gray-100 p-10">
+              <div className="rounded-2xl bg-gradient-to-r from-white to-gray-100 transition-transform transform hover:scale-105 duration-300 shadow-lg p-10">
                 <div className="flex justify-start items-center gap-x-4">
 <FaPhone className="h-7 w-7 text-primary" />
                 <h3 className="text-2xl font-semibold text-gray-900">Phone</h3>
@@ -53,7 +53,7 @@ export default function ContactCard() {
                 </dl>
               </div>
 
-              <div className="rounded-2xl bg-gray-100 p-10">
+              <div className="rounded-2xl bg-gradient-to-r from-white to-gray-100 shadow-lg transition-transform transform hover:scale-105 duration-300 p-10">
                 <div className="flex justify-start items-center gap-x-4">
 <IoMail className="h-8 w-8 text-primary" />
                 <h3 className="text-2xl font-semibold text-gray-900">Email</h3>

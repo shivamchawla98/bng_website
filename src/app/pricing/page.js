@@ -1,5 +1,6 @@
 import { FAQ } from "@/components/Faq";
 import BecomeHeroSection from "@/page-components/BecomeMember/BecomeHeroSection";
+import faqBackgroundImage from '../../../public/contact_us/FAQ_Image.jpg';
 
 import PricingTable from "@/page-components/BecomeMember/Pricing";
 // import SecuritySteps from "@/page-components/BecomeMember/SecuritySteps";
@@ -8,13 +9,14 @@ import MemberBenefits from "@/page-components/home/MemberBenifits";
 import TestimonialSlider from "@/page-components/home/TestimonialSlider";
 import ExistingMemberRibbon from "@/page-components/BecomeMember/Ribbon";
 import MembershipForm from "@/page-components/BecomeMember/LeadForm";
+import SplitScreenCTA from "@/page-components/Benifits/SplitScreenCTA";
 export default function BecomeAMember() {
   return (
     <div>
       <BecomeHeroSection />
 {/* <ExistingMemberRibbon /> */}
 {/* <MembershipForm /> */}
-      <section className="py-16 bg-primaryBg ">
+      <section className="py-16 bg-white ">
         <div className="container mx-auto px-4 ">
           <PricingTable />
         </div>
@@ -25,8 +27,10 @@ export default function BecomeAMember() {
       <TestimonialSlider /> */}
       {/* <SecuritySteps /> */}
 
-      <section className="py-16 bg-primaryBg relative">
-        <div
+      <section
+            style={{ backgroundImage: `url(${faqBackgroundImage.src})` }}
+      className="py-16 bg-primaryBg relative">
+        {/* <div
           className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
           style={{
             background:
@@ -35,11 +39,12 @@ export default function BecomeAMember() {
             zIndex: 1,
             filter: "blur(110px)",
             // Alternative fallback
-          }}></div>
-        <div className="container mx-auto px-4">
+          }}></div> */}
+
           <FAQ />
-        </div>
+  
       </section>
+      <SplitScreenCTA/>
     </div>
   );
 }
