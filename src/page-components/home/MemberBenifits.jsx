@@ -105,7 +105,7 @@ function MemberBenefits() {
     {
       title: "Trusted Partners",
       description:
-        "The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment",
+        "The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment.",
       image: TrustedPartnersVector,
     },
     {
@@ -160,7 +160,7 @@ function MemberBenefits() {
 
   return (
     <div
-      className="relative w-[100%] overflow-x-hidden"
+      className="relative w-full overflow-x-hidden"
       style={{
         backgroundImage: `url(${ocean.src})`,
         backgroundSize: "cover",
@@ -178,11 +178,11 @@ function MemberBenefits() {
       {/* Content Container */}
       <div
         ref={sectionRef}
-        className="relative z-10 flex flex-col justify-center w-[100%] px-4 overflow-x-hidden py-14"
+        className="relative z-10 flex flex-col justify-center w-full px-4 sm:px-6 md:px-8 py-10 md:py-14"
       >
         {/* Top-right Patch */}
         <div
-          className="absolute top-16 right-0 w-[200px] h-[200px] rounded-full"
+          className="absolute top-16 right-0 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] rounded-full"
           style={{
             background:
               "radial-gradient(circle at 30% 30%, #97b6f6 0%, #6853DB 45%, #5844B4 100%)",
@@ -191,19 +191,20 @@ function MemberBenefits() {
           }}
         ></div>
 
-        <div className="relative">
-          <h2 className="text-[55px] font-bold text-[#27293B] text-center mb-12">
+        <div className="relative text-center">
+          <h2 className="text-4xl sm:text-5xl md:text-[55px] font-bold text-[#27293B] mb-8 md:mb-12">
             Member <span className="text-primary">Benefits</span>
           </h2>
           <h2
-            className="absolute text-center -top-[36px] md:left-[32%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            className="absolute top-[-20px] sm:top-[-30px] md:top-[-36px] left-0 md:left-[32%] text-center w-full text-5xl sm:text-6xl md:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
             aria-hidden="true"
           >
             Member Benefits
           </h2>
         </div>
 
-        <div className="hidden h-max md:flex flex-row space-x-6 justify-center w-[100%] overflow-x-hidden align-middle">
+        {/* Desktop View */}
+        <div className="hidden md:flex flex-row space-x-6 justify-center w-full overflow-x-hidden">
           <div className="h-max flex flex-col justify-center overflow-x-hidden align-middle">
             {benefits.map((benefit, index) => (
               <div
@@ -270,7 +271,6 @@ function MemberBenefits() {
                   style={{ objectFit: "contain" }}
                   priority
                 />
-          
               </div>
             </div>
           </div>
@@ -288,7 +288,6 @@ function MemberBenefits() {
                         {benefit.title}
                       </div>
                     </div>
-            
                     <p className="text-gray-500 pl-6 text-lg text-left">
                       {benefit.description}
                     </p>
@@ -311,36 +310,48 @@ function MemberBenefits() {
           </div>
         </div>
 
-        <div className="relative md:hidden md:h-[600px] top-10 w-max mx-auto flex flex-col justify-center items-center">
+        {/* Mobile and Tablet View */}
+        <div className="md:hidden flex flex-col items-center gap-6 sm:gap-8 px-2 sm:px-4">
           {mobileBenefits.map((benefit, index) => (
-            <div key={index} className="w-[400px] flex flex-col items-center">
-              <div
-                style={{
-                  background:
-                    "radial-gradient(circle at 70% 30%, #8A6EFF 0%, #6853DB 50%, #5316aa 100%)",
-                  boxShadow:
-                    "0 10px 25px rgba(104, 83, 219, 0.3), inset 0 -5px 10px rgba(0, 0, 0, 0.1), inset 0 5px 10px rgba(255, 255, 255, 0.2)",
-                }}
-                className="w-32 h-32 rounded-full flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-105"
-              >
+            <div
+              key={index}
+              className="w-full max-w-[350px] sm:max-w-[500px] bg-white rounded-2xl shadow-lg p-4 sm:p-6 flex flex-col items-center transform transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
+              style={{
+                animation: `fadeInUp 0.5s ease-out ${index * 0.1}s both`,
+              }}
+            >
+              <div className="w-24 h-24 sm:w-32 sm:h-32 relative mb-4">
                 <Image
-                  src={handShake}
-                  alt="Member Benefits"
-                  className="object-contain md:block hidden relative"
+                  src={benefit.image}
+                  alt={benefit.title}
+                  fill
+                  className="object-contain"
                 />
-                <div className="text-white text-center mt-2">
-                  <div className="font-semibold text-[16px]">
-                    {benefit.title}
-                  </div>
-                </div>
               </div>
-              <p className="text-gray-600 text-left mt-4 text-[20px]">
+              <h3 className="text-lg sm:text-xl font-semibold text-primary mb-2 text-center">
+                {benefit.title}
+              </h3>
+              <p className="text-gray-600 text-sm sm:text-base text-center">
                 {benefit.description}
               </p>
             </div>
           ))}
         </div>
       </div>
+
+      {/* CSS Animation for Mobile/Tablet Cards */}
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </div>
   );
 }

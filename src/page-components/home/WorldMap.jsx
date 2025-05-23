@@ -105,6 +105,11 @@ const WorldMap = () => {
   const [hoveredCountry, setHoveredCountry] = useState(null);
   const [members, setMembers] = useState([]);
   const [isMounted, setIsMounted] = useState(false);
+  const [mapConfig, setMapConfig] = useState({
+    scale: 100,
+    center: [0, 10],
+  });
+
 
   useEffect(() => {
     setIsMounted(true);
@@ -175,6 +180,21 @@ const WorldMap = () => {
     []
   );
 
+  useEffect(() => {
+    const updateMapConfig = () => {
+      const width = window.innerWidth;
+      if (width < 640) {
+        setMapConfig({ scale: 110, center: [0, 60] });
+      } else {
+        setMapConfig({ scale: 100, center: [0, 10] });
+      }
+    };
+
+    updateMapConfig();
+    window.addEventListener('resize', updateMapConfig);
+    return () => window.removeEventListener('resize', updateMapConfig);
+  }, []);
+
   const getFillColor = (companyCount) => {
     if (companyCount >= 6) return '#6853DB';
     if (companyCount === 5) return '#7B66E3';
@@ -213,8 +233,13 @@ const WorldMap = () => {
   return (
     <section className="world-map-section">
       <div className="title-container">
-      <h2  className="text-[55px] font-bold  text-[#27293B] text-center my-10 relative z-10">Worldwide <span className="text-primary">Reach</span> </h2>
-        <h2 className="absolute text-center -top-[3px] md:left-[23%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2" aria-hidden="true">
+      <h2 className="text-3xl sm:text-4xl lg:text-[55px] mt-8 font-bold text-[#27293B] text-center mb-8 sm:mb-10 lg:mb-12 relative z-10">
+          Worldwide <span className="text-primary">Reach</span>
+        </h2>
+        <h2
+          className="absolute text-center top-[-20px] sm:top-[-24px] lg:-top-[17px] left-0 lg:left-[1%] w-full text-5xl sm:text-6xl lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+          aria-hidden="true"
+        >
           Worldwide Reach
         </h2>
       </div>
@@ -223,8 +248,8 @@ const WorldMap = () => {
         <ComposableMap
           projection="geoMercator"
           projectionConfig={{
-            scale: 100,
-            center: [0, 30],
+            scale: mapConfig.scale,
+            center: mapConfig.center,
           }}
           className="map"
         >

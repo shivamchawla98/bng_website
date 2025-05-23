@@ -103,63 +103,63 @@ export default function TwigOfferSlider() {
   };
 
   return (
-    <section className="bg-secondryBg mt-8 py-14 lg:py-24 relative">
-      <div className="container mx-auto px-4">
-        <div className="mb-10 text-center">
-        <h2 className="text-[55px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
+    <section className="bg-secondryBg mt-8 py-8 sm:py-14 lg:py-24 relative">
+      <div className="container relative mx-auto px-4">
+        <div className="mb-6 sm:mb-10 text-center">
+          <h2 className="text-4xl sm:text-5xl lg:text-[55px] font-bold text-[#27293B] mb-6 sm:mb-12 relative z-10">
             Why <span className="text-primary">Us ?</span>
           </h2>
           <h2
-            className="absolute text-center top-[-60px] md:top-[60px] md:left-[41%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
-            aria-hidden="true">
+            className="absolute text-center top-[-20px] left-24 sm:top-[-10px] md:-top-[50px] md:left-[40%] text-[50px] sm:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            aria-hidden="true"
+          >
             Why Us ?
           </h2>
-    
         </div>
 
-        <div className="flex flex-col w-full mx-auto bg-transparent lg:w-10/12 lg:flex-row shadow-slate-700 shadow-2xl rounded-lg">
+        <div className="flex  flex-col-reverse w-full mx-auto bg-transparent lg:w-10/12 lg:flex-row shadow-slate-700 shadow-2xl rounded-lg">
           {/* Sidebar Navigation */}
-          <div className="lg:w-1/3  ">
+          <div className="lg:w-1/3">
             {slides.map((slide, index) => (
               <div
                 key={index}
                 onClick={() => handleSidebarClick(index)}
-                className={`cursor-pointer p-2.5  flex justify-start items-center text-xl border-b-2 transition-all duration-200 hover:bg-[#EFF6FF] font-medium ${
+                className={`cursor-pointer p-2 sm:p-2.5 flex justify-start items-center text-base sm:text-lg lg:text-xl border-b-2 transition-all duration-200 hover:bg-[#EFF6FF] font-medium ${
                   index === 0
-                    ? "rounded-tl-lg  " : index === slides.length - 1 ? "rounded-bl-lg " : "rounded-tr-none rounded-br-none"
+                    ? "rounded-tl-lg"
+                    : index === slides.length - 1
+                    ? "rounded-bl-lg lg:rounded-bl-lg"
+                    : "rounded-tr-none rounded-br-none"
                 } ${
                   activeIndex === index
                     ? "bg-[#EFF6FF] border-primary text-[#5216ab]"
                     : "bg-white text-gray-700 border-gray-300"
                 }`}
               >
-                {
-                  activeIndex === index ? (
-
-                    <Image
+                {activeIndex === index ? (
+                  <Image
                     src={slide.logo}
                     alt="logo"
-                    sizes={8}
-                    className="  w-12 h-12 mr-5 rounded-tr-lg rounded-br-lg  p-1"
+                    width={48}
+                    height={48}
+                    className="w-10 h-10 sm:w-12 sm:h-12 mr-3 sm:mr-5 p-1"
                   />
-               
-                  ) : (
-                    <Image
+                ) : (
+                  <Image
                     src={slide.activeLogo}
                     alt="logo"
-                    sizes={8}
-                    className="  w-12 h-12 mr-5 rounded-tr-lg rounded-br-lg  p-1"
+                    width={48}
+                    height={48}
+                    className="w-10 h-10 sm:w-12 sm:h-12 mr-3 sm:mr-5 p-1"
                   />
-                  )
-                }
-                    
+                )}
                 {slide.title}
               </div>
             ))}
           </div>
 
           {/* Swiper Slider */}
-          <div className="lg:w-2/3">
+          <div className="lg:w-2/3 mt-4 lg:mt-0">
             <Swiper
               modules={[Autoplay]}
               autoplay={{ delay: 6000, disableOnInteraction: false }}
@@ -171,34 +171,32 @@ export default function TwigOfferSlider() {
             >
               {slides.map((slide, idx) => (
                 <SwiperSlide key={idx}>
-                  <div className="relative h-[400px] md:h-[558px] w-full rounded-tr-lg rounded-br-lg overflow-hidden">
-                  <div className="relative w-full h-full">
-  <Image
-    src={slide.image}
-    alt={slide.title}
-    fill
-    priority
-    className="object-cover object-center"
-  />
-  <div
-    className="absolute bottom-0  bg-gradient-to-t from-white/100 via-white/90 to-transparent left-0 right-0 h-[80%] pointer-events-none"
-
-  />
-</div>
-                    <div className="absolute inset-0  z-10"></div>
-                    <div className="absolute  bottom-4 p-6 text-white w-full z-20">
-                      <div className="flex items-center gap-3 mb-3">
+                  <div className="relative h-[300px] sm:h-[400px] lg:h-[558px] w-full rounded-tr-lg rounded-br-lg overflow-hidden">
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={slide.image}
+                        alt={slide.title}
+                        fill
+                        priority
+                        className="object-cover object-center"
+                      />
+                      <div className="absolute bottom-0 bg-gradient-to-t from-white/100 via-white/90 to-transparent left-0 right-0 h-[80%] pointer-events-none" />
+                    </div>
+                    <div className="absolute inset-0 z-10"></div>
+                    <div className="absolute bottom-4 p-4 sm:p-6 text-white w-full z-20">
+                      <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
                         <Image
                           src={slide.logo}
                           alt="logo"
-                         sizes={8}
-                          className="  w-24 h-24 rounded-tr-lg rounded-br-lg  p-1"
+                          width={64}
+                          height={64}
+                          className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 p-1"
                         />
-                        <h3 className="text-3xl text-primary font-semibold ">
+                        <h3 className="text-xl sm:text-2xl lg:text-3xl text-primary font-semibold">
                           {slide.title}
                         </h3>
                       </div>
-                      <p className="text-xl font-medium text-gray-400 max-w-xl">
+                      <p className="text-base sm:text-lg lg:text-xl font-medium text-gray-400 max-w-md sm:max-w-lg lg:max-w-xl">
                         {slide.text}
                       </p>
                     </div>

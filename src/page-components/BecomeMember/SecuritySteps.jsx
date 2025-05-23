@@ -1,10 +1,6 @@
 "use client";
 
 import React from 'react';
-import icon1 from '@/app/images/icon1.svg';
-import fb from '@/app/images/fb.svg';
-import linkedin from '@/app/images/linkedin.svg';
-import utube from '@/app/images/utube.svg';
 import shield from '../../../public/multilayervalidation/Strict_Selection.png';
 import reference from '../../../public/multilayervalidation/Reference-Checks.png';
 import finance from '../../../public/multilayervalidation/Financial-Checks.png';
@@ -39,42 +35,42 @@ const SecuritySteps = () => {
   ];
 
   return (
-    <div className="w-full  mx-auto px-12 py-16  bg-secondryBg">
+    <div className="w-full mx-auto px-4 sm:px-6 lg:px-12 py-24 sm:py-12 lg:py-16 bg-secondryBg">
       {/* Header */}
-      <div className="relative text-center mb-16">
-        <h2 className="text-[55px] font-bold  text-[#27293B] text-center mb-2 relative z-10">Multilayer <span className="text-primary">Validation </span></h2>
+      <div className="relative text-center mb-8 sm:mb-12 lg:mb-16">
+        <h2 className="text-3xl sm:text-4xl lg:text-[55px] font-bold text-[#27293B] mb-2 relative z-10">
+          Multilayer <span className="text-primary">Validation</span>
+        </h2>
         <h2
-            className="absolute text-center top-[-30px] md:left-[26%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
-            aria-hidden="true">
-            Multilayer Validation
-          </h2>
-      
+          className="absolute top-[-20px] sm:top-[-25px] lg:top-[-30px] left-0 w-full text-center text-4xl sm:text-5xl lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+          aria-hidden="true"
+        >
+          Multilayer Validation
+        </h2>
       </div>
 
-      {/* Steps Grid with Intertwined Flow */}
-      <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-        {/* Intertwined Curvy Flow (visible only on lg screens) */}
-        {/* <svg className="absolute hidden lg:block w-full h-full z-0" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,80 C200,150 400,50 600,80 C800,110 1000,10 1200,80" stroke="#D186EB" strokeWidth="4" fill="none" opacity="0.3" />
-        </svg> */}
+      {/* Steps Grid */}
+      <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+     
 
         {steps.map((step, index) => (
-          <div key={step.number} className="relative flex flex-col items-center text-center mx-4 transition-transform transform hover:scale-105 duration-300">
+          <div
+            key={step.number}
+            className="relative flex flex-col items-center text-center transition-transform transform hover:scale-105 duration-300 p-4"
+          >
             {/* Icon for Step */}
-            <div 
-      //  style={{ backgroundImage: 'linear-gradient(150deg,  #5316aa , #7159fb)' }}
-            className="w-32 h-32 flex items-center justify-center mb-6 relative z-10  ">
-              <img src={step.icon.src} alt={step.title} className=" w-24 h-24  opacity-80" />
+            <div className="w-20 sm:w-24 lg:w-32 h-20 sm:h-24 lg:h-32 flex items-center justify-center mb-4 sm:mb-6 relative z-10">
+              <img src={step.icon.src} alt={step.title} className="w-16 sm:w-20 lg:w-24 h-16 sm:h-20 lg:h-24 opacity-80" />
             </div>
-            
+
             {/* Transparent Step Title */}
-            <div className="bg-white bg-opacity-30 w-full py-4 px-2 rounded-lg">
-              <h4 className="text-xl font-semibold text-primary mb-2">{step.title}</h4>
+            <div className="bg-white bg-opacity-30 w-full py-3 sm:py-4 px-2 rounded-lg">
+              <h4 className="text-lg sm:text-xl font-semibold text-primary mb-2">{step.title}</h4>
             </div>
-            
+
             {/* Description Card */}
-            <div className="bg-gradient-to-r from-white to-gray-100 shadow-lg min-h-[200px] rounded-lg p-6 w-full transition-opacity duration-300 hover:opacity-90">
-              <p className="text-gray-600 text-[18px] leading-relaxed">
+            <div className="bg-gradient-to-r from-white h-40 to-gray-100 shadow-lg rounded-lg p-4 sm:p-6 w-full transition-opacity duration-300 hover:opacity-90">
+              <p className="text-gray-600 text-sm sm:text-base lg:text-[18px] leading-relaxed">
                 {step.description}
               </p>
             </div>

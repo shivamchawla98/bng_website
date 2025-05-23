@@ -18,7 +18,7 @@ function classNames(...classes) {
 
 export default function Widget() {
   return (
-    <div className='max-w-7xl relative mx-auto '>
+    <div className='max-w-7xl hidden lg:block relative mx-auto '>
 
       <dl className="mt-5 absolute opacity-75  -left-28 -top-[100px] grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((item) => (
