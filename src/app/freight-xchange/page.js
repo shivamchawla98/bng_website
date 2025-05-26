@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Head from 'next/head'; // Import Head from next/head
 import FreightXchangeCard from '@/components/FreightXchangeCard';
 import { FreightXchangeHero } from '@/page-components/FreightXchange/FreightXchangeHero';
 import Image from 'next/image';
@@ -55,9 +56,18 @@ const freightXchangeData = [
   }
 ];
 
+export const metadata = {
+  title: 'Freight Xchange | Share & Find Cargo Opportunities',
+  description: 'Post and discover freight opportunities with verified logistics members on BNG’s Freight Xchange. Secure, efficient, and transparent cargo solutions.',
+  // robots: 'noindex, nofollow', // Moved from <Head>
+};
+
 export default function FreightXchangePage() {
   return (
     <>
+      {/* Add meta title and description */}
+   
+
       <FreightXchangeHero />
       <div className="flex flex-col md:flex-row p-8">
         <div className="flex-1 p-6 bg-white shadow-lg rounded-lg mr-4">

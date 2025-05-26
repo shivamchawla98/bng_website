@@ -55,7 +55,7 @@ function LatestMembers() {
           Latest <span className="text-primary">Members</span>
         </h2>
         <h2
-          className="absolute top-[-20px] sm:top-[-24px] lg:top-[-40px] left-0 lg:left-[32%] text-center w-full text-5xl sm:text-6xl lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+          className="absolute top-[-20px] sm:top-[-24px] lg:top-[-40px] left-0 lg:left-[0%] text-center w-full text-5xl sm:text-6xl lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
           aria-hidden="true"
         >
           Latest Members

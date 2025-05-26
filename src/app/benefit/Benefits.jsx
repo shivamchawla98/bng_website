@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react'
+import Head from 'next/head' // Import Head from next/head
 import { BenifitsHero } from '@/page-components/Benifits/BenifitsHero'
 import BenifitsSecondSection from '@/page-components/Benifits/BenifitsSecondSection'
 import BenifitsThirdSection from '@/page-components/Benifits/BenifitsThirdSection'
@@ -16,28 +17,38 @@ import Widget from '@/page-components/Benifits/Widget'
  *
  * This page shows the benefits of joining BNG. It consists of a hero section,
  * a second section explaining the benefits, a stats counter, a section explaining
- * our c  ore values, a section explaining why you should join BNG, and a split
+ * our core values, a section explaining why you should join BNG, and a split
  * screen CTA.
  *
  * @return {React.ReactElement} The benefits page.
  */
-function page() {
-  return (
-    <div className='bg-primaryBg'>
-      <BenifitsHero />
-      {/* <BenifitsSecondSection /> */}
-      <OurCoreValues />
-      <Widget />
-      {/* <StatsCounter/> */}
-      <WhyUs />
-      {/* <BenifitsThirdSection />
 
-      <MemberBenefits/> */}
-    
- 
-      <SplitScreenCTA/>
-    </div>
+
+function Benefits() {
+  return (
+    <>
+      {/* Add meta title and description */}
+      <Head>
+        {/* <title></title>
+        <meta
+          name="description"
+          content=""
+        /> */}
+      </Head>
+
+      <div className='bg-primaryBg'>
+        <BenifitsHero />
+        {/* <BenifitsSecondSection /> */}
+        <OurCoreValues />
+        <Widget />
+        {/* <StatsCounter/> */}
+        <WhyUs />
+        {/* <BenifitsThirdSection />
+        <MemberBenefits/> */}
+        <SplitScreenCTA/>
+      </div>
+    </>
   )
 }
 
-export default page
+export default Benefits

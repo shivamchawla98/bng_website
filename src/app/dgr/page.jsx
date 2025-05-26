@@ -1,6 +1,7 @@
 'use client'
 import { FaRadiation, FaFire, FaSkullCrossbones, FaFlask, FaExclamationTriangle, FaGasPump, FaBoxOpen, FaShieldAlt, FaGlobe, FaHistory, FaBuilding, FaTags, FaPlane, FaShip, FaTruck, FaTrain, FaWater } from 'react-icons/fa';
 import { MdScience, MdLocalHospital, MdSecurity, MdWarning } from 'react-icons/md';
+import Head from 'next/head';
 
 export default function DGRPage() {
   const hazardClasses = [
@@ -111,6 +112,15 @@ export default function DGRPage() {
   ];
 
   return (
+<>
+    <Head>
+    <title>DGR Guidelines for Logistics | BNG Network</title>
+    <meta
+      name="description"
+      content="Access essential DGR resources for safe, compliant transportation of dangerous goods. Stay updated with global logistics regulations via BNG."
+    />
+  </Head>
+
     <div className="flex flex-col md:flex-row min-h-screen">
       {/* Sidebar Navigation */}
       <aside className="w-full md:w-[256px] pb-6 bg-white p-4 md:fixed md:top-14 md:h-screen z-10 border-r border-gray-200">
@@ -599,5 +609,7 @@ export default function DGRPage() {
         </section>
       </main>
     </div>
+
+</>
   );
 }

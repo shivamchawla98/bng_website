@@ -14,11 +14,7 @@ const lato = Lato({
   display: 'swap',
 });
 
-export const metadata = {
-  title: 'BNG Logistics Network',
-  description: 'Connect and collaborate with forwarders daily',
-  // robots: 'noindex, nofollow', // Moved from <Head>
-};
+
 
 export default function RootLayout({ children }) {
   return (

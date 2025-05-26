@@ -73,10 +73,10 @@ const Footer = () => {
             <FooterSection
               title="ABOUT US"
               links={[
-                { href: "#", label: "FAQ's" },
-                { href: "#", label: "Our Values" },
-                { href: "#", label: "Our Visions" },
-                { href: "#", label: "Our Mission" },
+                { href: "/about-us/#faq", label: "FAQ's" },
+                { href: "/about-us/#values", label: "Our Values" },
+                { href: "/about-us/#vision", label: "Our Visions" },
+                { href: "/about-us/#mission", label: "Our Mission" },
                 { href: "#", label: "What We Do" },
               ]}
             />
@@ -141,9 +141,9 @@ const FooterSection = ({ title, links }) => (
     <div className="text-gray-800    font-light ">
       {links.map((link, index) => (
         <li key={index} className="mb-2 list-none">
-          <a href={link.href} className="hover:text-primary">
+          <Link href={link.href} className="hover:text-primary">
             {link.label}
-          </a>
+          </Link>
         </li>
       ))}
     </div>

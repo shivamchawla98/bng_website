@@ -1,3 +1,4 @@
+import Head from "next/head"; // Import Head from next/head
 import HeroSection from "@/page-components/home/HeroSection";
 import Image from "next/image";
 import AboutUs from "@/page-components/home/AboutUs";
@@ -14,28 +15,36 @@ import Widget from "@/page-components/home/Widget";
 import SplitScreenCTA from "@/page-components/Benifits/SplitScreenCTA";
 // import ExperimentalMap from "@/page-components/home/ExperimentalMap";
 
-export default function Home() {
-return(
-  
-  <div className="  w-screen ">
-  <HeroSection />
-  <Widget />
-  <AboutUs />
-  <MemberBenefits />
-  <TestimonialSlider />
+export const metadata = {
+  title: 'Global Logistics Network | Freight Forwarders & Industry Leaders',
+  description: 'Join BNG Logistics Network — a trusted global platform connecting logistics professionals and freight forwarders for growth, collaboration, and technology-driven solutions.',
+  // robots: 'noindex, nofollow', // Moved from <Head>
+};
 
- 
-  <section className="bg-secondryBg pb-28 md:px-[80px] ">
-    <LatestMembers />
-  </section>
-  {/* <WorldWideReach /> */}
-  {/* <ExperimentalMap /> */}
-  <WorldMap />
-  <Solutions />
-  <SecuritySteps />
-  <Conference />
-  <News />
-  <SplitScreenCTA />
-  </div>
-)
+export default function Home() {
+  return (
+    <>
+      {/* Add meta title and description */}
+
+
+      <div className="w-screen">
+        <HeroSection />
+        <Widget />
+        <AboutUs />
+        <MemberBenefits />
+        <TestimonialSlider />
+        <section className="bg-secondryBg pb-28 md:px-[80px]">
+          <LatestMembers />
+        </section>
+        {/* <WorldWideReach /> */}
+        {/* <ExperimentalMap /> */}
+        <WorldMap />
+        <Solutions />
+        <SecuritySteps />
+        <Conference />
+        <News />
+        <SplitScreenCTA />
+      </div>
+    </>
+  );
 }

@@ -77,10 +77,13 @@ const AboutSection = () => {
 
       <section className="pt-16 w-full max-w-[100vw] mx-auto px-4 bg-primaryBg items-center mb-12 overflow-x-hidden">
         <div className="relative">
-          <h2 className="text-4xl sm:text-5xl font-bold text-[#27293B] text-center mb-10 sm:mb-12 relative z-10">
+          <h2
+          id="values"
+          className="text-4xl sm:text-5xl font-bold text-[#27293B] text-center mb-10 sm:mb-12 relative z-10">
             Core <span className="text-primary">Values</span>
           </h2>
           <h2
+
             className="absolute text-center top-[-20px] sm:top-[-25px] left-1/2 transform -translate-x-1/2 text-[60px] sm:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2 min-w-[max-content]"
             aria-hidden="true"
           >
@@ -133,9 +136,13 @@ const AboutSection = () => {
                 alt="Why Us Image"
               />
             </div>
-            <div className="flex flex-col justify-center items-center lg:items-start gap-6 sm:gap-8">
+            <div
+            id="vision"
+            className="flex flex-col justify-center items-center lg:items-start gap-6 sm:gap-8">
               <div className="relative">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 text-gray-700 relative z-10 text-center lg:text-start">
+                <h2
+                
+                className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 text-gray-700 relative z-10 text-center lg:text-start">
                   Our <span className="text-[#5216ab]">Vision</span>
                 </h2>
                 <h2
@@ -170,9 +177,13 @@ const AboutSection = () => {
                 alt="Vision Image"
               />
             </div>
-            <div className="flex flex-col justify-center items-center lg:items-start gap-6 sm:gap-8">
+            <div
+            id="mission"
+            className="flex flex-col justify-center items-center lg:items-start gap-6 sm:gap-8">
               <div className="relative">
-                <h2 className="text-gray-900 text-3xl sm:text-4xl font-medium leading-normal text-center lg:text-start">
+                <h2
+                
+                className="text-gray-900 text-3xl sm:text-4xl font-medium leading-normal text-center lg:text-start">
                   Our <span className="text-primary">Mission</span>
                 </h2>
                 <h2
