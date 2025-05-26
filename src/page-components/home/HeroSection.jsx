@@ -103,7 +103,7 @@ const HeroSection = () => {
             }}
           />
           {/* Info Cards */}
-          <div className="block lg:hidden">
+          {/* <div className="block lg:hidden">
             <div className="absolute bottom-10 left-0 bg-white p-3 rounded-lg shadow-md z-20"
               style={{
                 transform: `translateY(${Math.min(scrollY * 0.1, 20)}px) rotate(${Math.min(scrollY * 0.05, 5)}deg) scale(${1 + Math.min(scrollY * 0.001, 0.1)})`,
@@ -180,7 +180,7 @@ const HeroSection = () => {
                 </span>
               </div>
             </div> 
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
