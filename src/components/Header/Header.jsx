@@ -24,15 +24,13 @@ function Header() {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  // Check if a nav item is active
-  const isActive = (href) => {
-    return pathname === href;
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setIsDropdownOpen(false);
   };
 
-  // Check if a dropdown item is active
-  const isDropdownActive = (href) => {
-    return pathname === href;
-  };
+  const isActive = (href) => pathname === href;
+  const isDropdownActive = (href) => pathname === href;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,87 +73,38 @@ function Header() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8 items-center">
-          <Link
-            href="/benifits"
-            className={`font-medium hover:text-primary text-[18px] ${
-              isActive("/benifits") ? "text-primary font-bold" : ""
-            }`}
-          >
+          <Link href="/benefit" className={`font-medium hover:text-primary text-[18px] ${isActive("/benefit") ? "text-primary font-bold" : ""}`}>
             Benefits
           </Link>
-          <Link
-            href="/our-company"
-            className={`font-medium hover:text-primary text-[18px] ${
-              isActive("/our-company") ? "text-primary font-bold" : ""
-            }`}
-          >
+          <Link href="/about-us" className={`font-medium hover:text-primary text-[18px] ${isActive("/about-us") ? "text-primary font-bold" : ""}`}>
             About us
           </Link>
-          <Link
-            href="/pricing"
-            className={`font-medium hover:text-primary text-[18px] ${
-              isActive("/pricing") ? "text-primary font-bold" : ""
-            }`}
-          >
+          <Link href="/pricing" className={`font-medium hover:text-primary text-[18px] ${isActive("/pricing") ? "text-primary font-bold" : ""}`}>
             Pricing
           </Link>
-          <Link
-            href="/contact"
-            className={`font-medium hover:text-primary text-[18px] ${
-              isActive("/contact") ? "text-primary font-bold" : ""
-            }`}
-          >
+          <Link href="/contact" className={`font-medium hover:text-primary text-[18px] ${isActive("/contact") ? "text-primary font-bold" : ""}`}>
             Contact Us
           </Link>
 
           {/* Specialties Dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setIsDropdownOpen(true)}
-            onMouseLeave={() => setIsDropdownOpen(false)}
-          >
+          <div className="relative" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
             <button
               className={`font-medium hover:text-primary text-[18px] focus:outline-none flex items-center gap-1 ${
-                isDropdownActive("/business-xchange") || isDropdownActive("/freight-xchange")
-                  ? "text-primary font-bold"
-                  : ""
+                isDropdownActive("/business-xchange") || isDropdownActive("/freight-xchange") ? "text-primary font-bold" : ""
               }`}
               onClick={toggleDropdown}
             >
               Business Tools
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className={`h-4 w-4 transition-transform duration-200 ${
-                  isDropdownOpen ? "rotate-180" : ""
-                }`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
+              <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4 transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
             {isDropdownOpen && (
               <div className="absolute top-full left-0 bg-white shadow-lg rounded-lg p-4 space-y-2 w-48 z-50">
-                <Link
-                  href="/business-xchange"
-                  className={`block hover:text-primary text-[18px] font-medium ${
-                    isDropdownActive("/business-xchange") ? "text-primary font-bold" : "text-gray-700"
-                  }`}
-                >
+                <Link href="/business-xchange" className={`block hover:text-primary text-[18px] font-medium ${isDropdownActive("/business-xchange") ? "text-primary font-bold" : "text-gray-700"}`}>
                   Business Xchange
                 </Link>
-                <Link
-                  href="/freight-xchange"
-                  className={`block hover:text-primary text-[18px] font-medium ${
-                    isDropdownActive("/freight-xchange") ? "text-primary font-bold" : "text-gray-700"
-                  }`}
-                >
+                <Link href="/freight-xchange" className={`block hover:text-primary text-[18px] font-medium ${isDropdownActive("/freight-xchange") ? "text-primary font-bold" : "text-gray-700"}`}>
                   Freight Xchange
                 </Link>
               </div>
@@ -182,64 +131,27 @@ function Header() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-[#27293B]"
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? (
-            <X size={24} className="text-gray-600" />
-          ) : (
-            <Menu size={24} className="text-gray-600" />
-          )}
+        <button className="md:hidden text-[#27293B]" onClick={toggleMenu} aria-label="Toggle menu">
+          {isMenuOpen ? <X size={24} className="text-gray-600" /> : <Menu size={24} className="text-gray-600" />}
         </button>
       </div>
 
       {/* Mobile Menu */}
-      <div
-        className={`${
-          isMenuOpen ? "flex" : "hidden"
-        } md:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-50 flex-col w-full`}
-      >
+      <div className={`${isMenuOpen ? "flex" : "hidden"} md:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-50 flex-col w-full`}>
         <div className="flex flex-col p-4 space-y-4">
-          <Link
-            href="/"
-            className={`hover:text-primary text-[18px] py-2 ${
-              isActive("/") ? "text-primary font-bold" : "text-[#27293B]"
-            }`}
-          >
+          <Link href="/" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/") ? "text-primary font-bold" : "text-[#27293B]"}`}>
             Home
           </Link>
-          <Link
-            href="/benifits"
-            className={`hover:text-primary text-[18px] py-2 ${
-              isActive("/benifits") ? "text-primary font-bold" : "text-gray-700"
-            }`}
-          >
+          <Link href="/benefit" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/benefit") ? "text-primary font-bold" : "text-gray-700"}`}>
             Benefits
           </Link>
-          <Link
-            href="/our-company"
-            className={`hover:text-primary text-[18px] py-2 ${
-              isActive("/our-company") ? "text-primary font-bold" : "text-gray-700"
-            }`}
-          >
+          <Link href="/about-us" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/about-us") ? "text-primary font-bold" : "text-gray-700"}`}>
             About us
           </Link>
-          <Link
-            href="/pricing"
-            className={`hover:text-primary text-[18px] py-2 ${
-              isActive("/pricing") ? "text-primary font-bold" : "text-gray-700"
-            }`}
-          >
+          <Link href="/pricing" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/pricing") ? "text-primary font-bold" : "text-gray-700"}`}>
             Pricing
           </Link>
-          <Link
-            href="/contact"
-            className={`hover:text-primary text-[18px] py-2 ${
-              isActive("/contact") ? "text-primary font-bold" : "text-gray-700"
-            }`}
-          >
+          <Link href="/contact" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/contact") ? "text-primary font-bold" : "text-gray-700"}`}>
             Contact Us
           </Link>
 
@@ -247,46 +159,21 @@ function Header() {
           <div>
             <button
               className={`hover:text-primary text-[18px] py-2 flex items-center gap-1 ${
-                isDropdownActive("/business-xchange") || isDropdownActive("/freight-xchange")
-                  ? "text-primary font-bold"
-                  : "text-[#27293B]"
+                isDropdownActive("/business-xchange") || isDropdownActive("/freight-xchange") ? "text-primary font-bold" : "text-[#27293B]"
               }`}
               onClick={toggleDropdown}
             >
               Business Tools
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className={`h-4 w-4 transition-transform duration-200 ${
-                  isDropdownOpen ? "rotate-180" : ""
-                }`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
+              <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4 transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
             {isDropdownOpen && (
               <div className="pl-4 space-y-2">
-                <Link
-                  href="/business-xchange"
-                  className={`hover:text-primary text-[18px] py-1 block ${
-                    isDropdownActive("/business-xchange") ? "text-primary font-bold" : "text-gray-700"
-                  }`}
-                >
+                <Link href="/business-xchange" onClick={closeMenu} className={`hover:text-primary text-[18px] py-1 block ${isDropdownActive("/business-xchange") ? "text-primary font-bold" : "text-gray-700"}`}>
                   Business Xchange
                 </Link>
-                <Link
-                  href="/freight-xchange"
-                  className={`hover:text-primary text-[18px] py-1 block ${
-                    isDropdownActive("/freight-xchange") ? "text-primary font-bold" : "text-gray-700"
-                  }`}
-                >
+                <Link href="/freight-xchange" onClick={closeMenu} className={`hover:text-primary text-[18px] py-1 block ${isDropdownActive("/freight-xchange") ? "text-primary font-bold" : "text-gray-700"}`}>
                   Freight Xchange
                 </Link>
               </div>
@@ -296,6 +183,7 @@ function Header() {
           <div className="flex flex-col space-y-3 pt-4 border-t">
             <Link
               href="https://app.bnglogisticsnetwork.com/register"
+              onClick={closeMenu}
               className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent transition-all duration-300 bg-primary transform hover:translate-x-2"
             >
               Become a Member

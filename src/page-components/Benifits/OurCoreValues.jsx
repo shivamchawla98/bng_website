@@ -235,15 +235,17 @@ function OurCoreValues() {
           zIndex: 1,
           filter: "blur(50px)",
         }}></div> */}
-  <h2 className="text-[55px] font-bold text-[#27293B] text-center mb-1 mt-6">
-            Member <span className="text-primary">Benefits</span>
-          </h2>      
-          <h2
-            className="absolute text-center top-[38px] md:left-[32%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
-            aria-hidden="true"
-          >
-            Member Benefits
-          </h2>
+
+<h2 className="text-3xl sm:text-4xl md:text-[55px] font-bold text-[#27293B] text-center mb-1 mt-4 sm:mt-6">
+        Member <span className="text-primary">Benefits</span>
+      </h2>
+      <h2
+        className="absolute text-center top-[30px] sm:top-[34px] md:top-[38px] left-0 right-0 mx-auto text-[40px] sm:text-[40px] md:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+        aria-hidden="true"
+      >
+        Member Benefits
+      </h2>
+
       <div className="flex w-full justify-center text-center">
         {/* <p className="text-justify  text-gray-900">
           Gain access to a secure, digitalized platform with global connections,

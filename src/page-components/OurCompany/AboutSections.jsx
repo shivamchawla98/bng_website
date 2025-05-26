@@ -4,55 +4,37 @@ import about2 from "../../../public/about/About_02.jpg";
 import OurVisionImage from "../../../public/about/vision.jpg";
 import OurMissionImage from "../../../public/about/mission.jpg";
 import { FeatureCard } from "./FeatureCard";
-
-// import MembersAreaVector from "../../../public/about/MembersArea.svg";
 import GlobalReachVector from "../../../public/about/Global-Collaboration.png";
 import IntigirityTrustVector from "../../../public/about/Integrity-&-Trust.png";
 import InnovationVector from "../../../public/about/Innovation-&-Technology.png";
 import CustomerCentericVector from "../../../public/about/Customer-Centric-Support.png";
 import TransparencyAccountabilityVector from "../../../public/about/Transparency-&-Accountability.png";
 import GrowthOppurtinityVector from "../../../public/about/Growth-&-Opportunity.png";
-// import FreightXchangeVector from "../../../public/about/FreightXchange.png";
+
 const AboutSection = () => {
   return (
     <>
-      <section className="pt-24 bg-primaryBg relative">
-        {/* <div
-          className="absolute bottom-0 right-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
-          style={{
-            background:
-              "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
-
-            zIndex: 1,
-            filter: "blur(110px)",
-            // Alternative fallback
-          }}></div>
-        <div
-          className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
-          style={{
-            background:
-              "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
-
-            zIndex: 1,
-            filter: "blur(110px)",
-            // Alternative fallback
-          }}></div> */}
-        <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto  ">
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-12  pt-16 pb-14 ">
+      <section className="pt-24 bg-primaryBg relative overflow-x-hidden">
+        <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 sm:gap-12 pt-16 pb-14">
             <div className="relative flex justify-center items-center">
-              <div className="hidden lg:block absolute left-16 bottom-12 h-[350px] w-[400px]   rounded-md"></div>
+              <div className="hidden lg:block absolute left-8 sm:left-12 lg:left-16 bottom-12 h-[300px] sm:h-[350px] w-[90%] sm:w-[400px] rounded-md"></div>
               <Image
-                className="rounded-xl transform transition-transform duration-500 hover:scale-110 shadow-2xl shadow-slate-700 object-cover z-10"
+                className="rounded-xl transform transition-transform duration-500 hover:scale-105 sm:hover:scale-110 shadow-2xl shadow-slate-700 object-cover z-10 w-full max-w-[90%] sm:max-w-[400px]"
                 src={about1}
                 height={350}
                 alt="About Us Image 1"
               />
             </div>
-            <div className="flex flex-col justify-start items-center lg:items-start gap-8">
-              <h2 className="text-gray-900 text-4xl font-medium leading-normal text-center lg:text-start">
-                Building <span className="font-medium text-primary">Global Connections </span>  in Logistics
+            <div className="flex flex-col justify-start items-center lg:items-start gap-6 sm:gap-8">
+              <h2 className="text-gray-900 text-3xl sm:text-4xl font-medium leading-normal text-center lg:text-start">
+                Building{" "}
+                <span className="font-medium text-primary">
+                  Global Connections{" "}
+                </span>{" "}
+                in Logistics
               </h2>
-              <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+              <p className="text-gray-600 text-base sm:text-[18px] leading-relaxed text-center lg:text-start px-2 sm:px-0">
                 BNG Logistics Network is a global platform built to unite
                 logistics professionals, freight forwarders, and industry
                 leaders in an environment optimized for growth and
@@ -66,18 +48,18 @@ const AboutSection = () => {
               </p>
             </div>
           </div>
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mb-12 py-10">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 sm:gap-12 mb-12 py-10">
             <div className="relative flex justify-center items-center lg:order-2">
-              <div className="hidden lg:block absolute right-16 bottom-12 h-[350px] w-[400px]   rounded-md"></div>
+              <div className="hidden lg:block absolute right-8 sm:right-12 lg:right-16 bottom-12 h-[300px] sm:h-[350px] w-[90%] sm:w-[400px] rounded-md"></div>
               <Image
-                className="rounded-xl shadow-2xl transform transition-transform duration-500 hover:scale-110 shadow-slate-700 object-cover z-10"
+                className="rounded-xl shadow-2xl transform transition-transform duration-500 hover:scale-105 sm:hover:scale-110 shadow-slate-700 object-cover z-10 w-full max-w-[90%] sm:max-w-[400px]"
                 src={about2}
                 height={350}
                 alt="About Us Image 2"
               />
             </div>
-            <div className="flex flex-col justify-start items-center lg:items-start gap-8">
-              <p className="text-gray-600  leading-relaxed text-center text-[18px] lg:text-start">
+            <div className="flex flex-col justify-start items-center lg:items-start gap-6 sm:gap-8">
+              <p className="text-gray-600 text-base sm:text-[18px] leading-relaxed text-center lg:text-start px-2 sm:px-0">
                 Members of BNG benefit from around-the-clock customer support,
                 an extensive trade directory, and free promotional services that
                 increase their visibility in the global market. Through
@@ -93,18 +75,19 @@ const AboutSection = () => {
         </div>
       </section>
 
-      <section className="pt-16 w-[100%] mx-auto px-4 bg-primaryBg items-center mb-12">
+      <section className="pt-16 w-full max-w-[100vw] mx-auto px-4 bg-primaryBg items-center mb-12 overflow-x-hidden">
         <div className="relative">
-          <h2 className="text-[55px] font-bold  text-[#27293B] text-center mb-12 relative z-10">
-            Core <span className="text-primary">Values</span> 
+          <h2 className="text-4xl sm:text-5xl font-bold text-[#27293B] text-center mb-10 sm:mb-12 relative z-10">
+            Core <span className="text-primary">Values</span>
           </h2>
           <h2
-            className="absolute text-center top-[-30px] md:left-[37%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2 min-w-[max-content]"
-            aria-hidden="true">
+            className="absolute text-center top-[-20px] sm:top-[-25px] left-1/2 transform -translate-x-1/2 text-[60px] sm:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2 min-w-[max-content]"
+            aria-hidden="true"
+          >
             Core Values
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mt-8 sm:mt-10">
           <FeatureCard
             title="Global Collaboration"
             description="Connecting logistics professionals worldwide to foster strong, reliable partnerships that drive growth and mutual success across borders."
@@ -137,50 +120,32 @@ const AboutSection = () => {
           />
         </div>
       </section>
-      <section className="py-24 bg-primaryBg relative mb-2">
-        {/* <div
-          className="absolute bottom-0 left-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
-          style={{
-            background:
-              "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
 
-            zIndex: 1,
-            filter: "blur(110px)",
-            // Alternative fallback
-          }}></div>
-        <div
-          className="absolute top-0 right-0 md:w-[200px] blur-2xl h-[200px] rounded-full"
-          style={{
-            background:
-              "linear-gradient(180deg, #D186EB 16%, #D186EB 46.86%, #D186EB 67%)",
-
-            zIndex: 1,
-            filter: "blur(110px)",
-            // Alternative fallback
-          }}></div> */}
+      <section className="py-24 bg-primaryBg relative mb-2 overflow-x-hidden">
         <div className="w-full max-w-7xl px-4 mx-auto md:px-5 lg:px-5 mb-12">
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 py-16">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 sm:gap-12 py-16">
             <div className="relative flex justify-center items-center">
-              <div className="hidden lg:block absolute left-16 bottom-12 h-[350px] w-[400px]  rounded-md"></div>
+              <div className="hidden lg:block absolute left-8 sm:left-12 lg:left-16 bottom-12 h-[300px] sm:h-[350px] w-[90%] sm:w-[400px] rounded-md"></div>
               <Image
-                className=" transform transition-transform duration-500 hover:scale-110 rounded-xl shadow-2xl shadow-slate-700 object-cover z-10"
+                className="transform transition-transform duration-500 hover:scale-105 sm:hover:scale-110 rounded-xl shadow-2xl shadow-slate-700 object-cover z-10 w-full max-w-[90%] sm:max-w-[400px]"
                 src={OurVisionImage}
                 height={350}
                 alt="Why Us Image"
               />
             </div>
-            <div className="flex flex-col justify-center items-center lg:items-start gap-8">
+            <div className="flex flex-col justify-center items-center lg:items-start gap-6 sm:gap-8">
               <div className="relative">
-                <h2 className="text-gray-900 text-4xl font-medium leading-normal text-center lg:text-start">
-                  Our <span className="text-primary">Vision</span> 
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 text-gray-700 relative z-10 text-center lg:text-start">
+                  Our <span className="text-[#5216ab]">Vision</span>
                 </h2>
                 <h2
-                  className="absolute top-[-20px] left-0 text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2 min-w-[max-content]"
-                  aria-hidden="true">
+                  className="absolute -top-[15px] sm:-top-[20px] md:-top-[30px] left-1/2 lg:left-0 transform lg:transform-none -translate-x-1/2 text-[50px] sm:text-[60px] md:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+                  aria-hidden="true"
+                >
                   Our Vision
                 </h2>
               </div>
-              <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+              <p className="text-gray-600 text-base sm:text-[18px] leading-relaxed text-center lg:text-start px-2 sm:px-0">
                 Our vision at BNG Logistics Network is to be the premier global
                 platform where logistics professionals seamlessly connect,
                 collaborate, and innovate to drive industry excellence. We
@@ -195,29 +160,29 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* Fourth section */}
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 py-16">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 sm:gap-12 py-16">
             <div className="relative flex justify-center items-center lg:order-2">
-              <div className="hidden lg:block absolute right-16 bottom-12 h-[350px] w-[400px]  rounded-md"></div>
+              <div className="hidden lg:block absolute right-8 sm:right-12 lg:right-16 bottom-12 h-[300px] sm:h-[350px] w-[90%] sm:w-[400px] rounded-md"></div>
               <Image
-                className="rounded-xl transform transition-transform duration-500 hover:scale-110 shadow-2xl shadow-slate-700 object-cover z-10"
+                className="rounded-xl transform transition-transform duration-500 hover:scale-105 sm:hover:scale-110 shadow-2xl shadow-slate-700 object-cover z-10 w-full max-w-[90%] sm:max-w-[400px]"
                 src={OurMissionImage}
                 height={350}
                 alt="Vision Image"
               />
             </div>
-            <div className="flex flex-col justify-center items-center lg:items-start gap-8">
+            <div className="flex flex-col justify-center items-center lg:items-start gap-6 sm:gap-8">
               <div className="relative">
-                <h2 className="text-gray-900 text-4xl font-medium leading-normal text-center lg:text-start">
-                  Our <span className="text-primary">Mission</span> 
+                <h2 className="text-gray-900 text-3xl sm:text-4xl font-medium leading-normal text-center lg:text-start">
+                  Our <span className="text-primary">Mission</span>
                 </h2>
                 <h2
-                  className="absolute top-[-20px] left-0 text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2 min-w-[max-content]"
-                  aria-hidden="true">
+                  className="absolute top-[-15px] sm:top-[-20px] left-1/2 lg:left-0 transform lg:transform-none -translate-x-1/2 text-[60px] sm:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2 min-w-[max-content]"
+                  aria-hidden="true"
+                >
                   Our Mission
                 </h2>
               </div>
-              <p className="text-gray-600 text-[18px] leading-relaxed text-center lg:text-start">
+              <p className="text-gray-600 text-base sm:text-[18px] leading-relaxed text-center lg:text-start px-2 sm:px-0">
                 Our mission is to provide logistics professionals worldwide with
                 a secure, digitalized environment that enhances connectivity,
                 maximizes business potential, and fosters enduring partnerships.
@@ -230,34 +195,6 @@ const AboutSection = () => {
               </p>
             </div>
           </div>
-          {/* <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mt-16">
-            <div className="relative flex justify-center items-center">
-              <div className="hidden lg:block absolute left-16 bottom-12 h-[350px] w-[400px] border-primary border-2 rounded-md"></div>
-              <Image
-                className="rounded-xl object-cover z-10"
-                src={about1}
-                height={350}
-                alt="Why Us Image"
-              />
-            </div>
-            <div className="flex flex-col justify-center items-center lg:items-start gap-8">
-              <h2 className="text-gray-900 text-4xl font-extrabold leading-normal text-center lg:text-start">
-                Our Mission
-              </h2>
-              <p className="text-gray-600 text-base leading-relaxed text-center lg:text-start">
-                We believe that the key to success lies in understanding our
-                clients' unique needs. Our customer-first approach ensures that
-                every interaction, from the initial consultation to project
-                delivery, is seamless and efficient. We prioritize open
-                communication, transparency, and collaboration, ensuring that
-                each project exceeds expectations. By fostering strong
-                relationships, we’ve created a loyal clientele who trusts us to
-                handle their most challenging ventures. Your success is our
-                priority, and we strive to be your partner in achieving
-                greatness.
-              </p>
-            </div>
-          </div> */}
         </div>
       </section>
     </>

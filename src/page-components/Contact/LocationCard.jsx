@@ -25,37 +25,42 @@ const people = [
     role: "Branch Office",
     location: "Rasoolpur Nawada, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
     imageUrl: indiaImg.src,
-     bio: "321, Tower C, Noida One IT Park, Sector 62 Noida 201309, (U.P.) India",
+    bio: "321, Tower C, Noida One IT Park, Sector 62 Noida 201309, (U.P.) India",
   },
-  // More people...
 ];
 
 export default function LocationCard() {
   return (
-    <div className=" py-24 md:py-20 lg:px-24">
-      <div className="mx-auto grid max-w-8xl ">
+    <div className="py-24 md:py-20 lg:px-24">
+      <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         <ul role="list" className="divide-y divide-gray-200 w-full">
           {people.map((person) => (
-            <div className=" grid grid-cols-1  shadow-xl shadow-slate-500  rounded-lg first:pt-0  my-16  xl:grid-cols-5">
-              <div className=" col-span-full  xl:col-span-3">
-                <MapComponent  address={people.location} />
+            <div 
+              key={person.name}
+              className="grid grid-cols-1 shadow-xl shadow-slate-500 rounded-lg my-16 xl:grid-cols-5"
+            >
+              <div className="col-span-full xl:col-span-3">
+                <MapComponent address={person.location} />
               </div>
 
               <li
-                key={person.name}
-                className="flex  flex-col gap-10  first:pt-0 last:pb-0 sm:flex-row col-span-2"
+                className="flex flex-col gap-6 p-4 sm:gap-10 sm:flex-row sm:p-6 xl:col-span-2"
               >
                 <img
-                  alt=""
+                  alt={person.name}
                   src={person.imageUrl}
-                  className="aspect-[4/5] h-96 w-64  flex-none  object-cover"
+                  className="aspect-[4/5] h-96 w-64 sm:h-96 sm:w-64 flex-none object-cover rounded-md"
                 />
-                <div className="max-w-xl mt-10 pr-2 relative flex-auto">
-                  <h3 className="text-4xl font-semibold tracking-tight text-primary">
+                <div className="max-w-xl mt-6 sm:mt-10 pr-2 flex-auto">
+                  <h3 className="text-2xl sm:text-3xl xl:text-4xl font-semibold tracking-tight text-primary">
                     {person.name}
                   </h3>
-                  <p className="text-xl text-gray-600">{person.role}</p>
-                  <p className="mt-6 text-2xl text-gray-600">{person.bio}</p>
+                  <p className="text-base sm:text-lg xl:text-xl text-gray-600 mt-2">
+                    {person.role}
+                  </p>
+                  <p className="mt-4 text-base sm:text-lg xl:text-2xl text-gray-600">
+                    {person.bio}
+                  </p>
                 </div>
               </li>
             </div>

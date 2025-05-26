@@ -1,7 +1,7 @@
 'use client'
 import { Fragment, useState, useEffect } from 'react'
-import { CheckIcon, MinusIcon, InfoIcon, ChevronDownIcon } from 'lucide-react'
-import { TrophyIcon, StarsIcon, Crown, } from 'lucide-react'
+import { CheckIcon, MinusIcon, InfoIcon, ChevronDownIcon, ChevronUpIcon } from 'lucide-react'
+import { TrophyIcon, StarsIcon, Crown } from 'lucide-react'
 import InviteModal from '../Contact/modal'
 import { ModalMembershipForm } from '@/page-components/home/ModalForm';
 
@@ -39,13 +39,14 @@ export default function Pricing() {
   // State for exchange rate
   const [exchangeRate, setExchangeRate] = useState(83);
   const [isLoading, setIsLoading] = useState(false);
-  
+  // State for collapsible sections in mobile view
+  const [openSections, setOpenSections] = useState({});
+
   // Fetch exchange rate from API
   useEffect(() => {
     const fetchExchangeRate = async () => {
       try {
         setIsLoading(true);
-        // Using a free currency conversion API
         const response = await fetch('https://open.er-api.com/v6/latest/USD');
         const data = await response.json();
         if (data && data.rates && data.rates.INR) {
@@ -53,7 +54,6 @@ export default function Pricing() {
         }
       } catch (error) {
         console.error('Error fetching exchange rate:', error);
-        // Fall back to default rate if API fails
         setExchangeRate(83);
       } finally {
         setIsLoading(false);
@@ -72,8 +72,8 @@ export default function Pricing() {
       name: 'Standard',
       id: 'tier-Standard',
       href: '#',
-      priceYearly: '$199', // Original one-year price
-      priceValue: 199, // Numeric for calculations
+      priceYearly: '$199',
+      priceValue: 199,
       mostPopular: false,
       icon: TrophyIcon,
     },
@@ -167,8 +167,6 @@ export default function Pricing() {
       ],
     },
   ];
-  
-  
 
   const durations = [
     { years: 1, label: '1 Year' },
@@ -208,7 +206,6 @@ export default function Pricing() {
     if (currency === 'USD') {
       return `$${basePrice.toLocaleString()}`;
     } else {
-      // Convert to INR and format
       const inrPrice = Math.round(basePrice * exchangeRate);
       return `₹${inrPrice.toLocaleString()}`;
     }
@@ -225,15 +222,20 @@ export default function Pricing() {
     setOpenDropdowns((prev) => ({ ...prev, [tierId]: !prev[tierId] }))
   }
 
+  // Toggle section collapse for mobile view
+  const toggleSection = (sectionName) => {
+    setOpenSections((prev) => ({ ...prev, [sectionName]: !prev[sectionName] }));
+  };
+
   return (
     <div className="">
-        <ModalMembershipForm 
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-        />
-      <div className="mx-auto max-w-7xl">
+      <ModalMembershipForm 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Currency Toggle */}
-        <div className="flex justify-end mb-4 mr-4">
+        <div className="flex justify-end mb-4">
           <div className="inline-flex rounded-md shadow-sm">
             <button
               type="button"
@@ -257,7 +259,7 @@ export default function Pricing() {
         </div>
         
         <div className="mx-auto max-w-5xl text-center">
-          <p className="text-[55px] font-bold text-gray-700 relative z-10">
+          <p className="text-[40px] sm:text-[55px] font-bold text-gray-700 relative z-10">
             Join the Global <span className='text-primary'>Freight Network Today</span> 
           </p>
         </div>
@@ -265,93 +267,109 @@ export default function Pricing() {
           Choose the perfect membership plan to connect, collaborate, and grow with top logistics professionals worldwide.
         </p>
 
-        {/* xs to lg */}
-        <div className="mx-auto mt-12 max-w-md space-y-8 sm:mt-16 lg:hidden">
-          {tiers.map((tier) => (
-            <section
-              key={tier.id}
-              className={classNames(
-                tier.mostPopular ? 'rounded-xl bg-gray-400/5 ring-1 ring-inset ring-gray-200' : '',
-                'p-8'
-              )}
-            >
-              <div className="flex items-center mb-4">
-                <tier.icon className="h-8 w-8 text-indigo-600" />
-                <h3 id={tier.id} className="ml-3 text-lg font-semibold text-gray-900">
-                  {tier.name}
-                </h3>
-              </div>
-              <p className="mt-2 flex items-baseline gap-x-1 text-gray-900">
-                <span className="text-4xl font-semibold">{getPrice(tier)}</span>
-                <span className="text-sm font-semibold text-gray-900">
-                  /{selectedDurations[tier.id]} {selectedDurations[tier.id] === 1 ? 'year' : 'years'}
-                </span>
-              </p>
-              {/* Individual Duration Dropdown */}
-              <div className="mt-4 relative inline-block text-left w-full">
-                <button
-                  onClick={() => toggleDropdown(tier.id)}
-                  className="inline-flex items-center justify-center rounded-md bg-gradient-to-tr from-[#6853DB] to-[#6853DB] px-3 py-1.5 text-sm font-medium text-white shadow-sm hover:bg-gradient-to-tr hover:from-[#5844B4] hover:to-[#5844B4] focus:outline-none focus:ring-2 focus:ring-[#6853DB] focus:ring-offset-2 w-full"
+        {/* Mobile View (xs to lg) */}
+        <div className="mt-12 sm:mt-16 lg:hidden">
+          <div className="relative overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+            <div className="flex space-x-4 px-4 pb-4 min-w-[300px]">
+              {tiers.map((tier) => (
+                <div
+                  key={tier.id}
+                  className="snap-start w-[280px] sm:w-[320px] flex-shrink-0 bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl border border-gray-200"
                 >
-                  {durations.find((d) => d.years === selectedDurations[tier.id]).label}
-                  <ChevronDownIcon className="ml-2 h-4 w-4" />
-                </button>
-                {openDropdowns[tier.id] && (
-                  <div className="absolute z-10 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-                    <div className="py-1">
-                      {durations.map((duration) => (
-                        <button
-                          key={duration.years}
-                          onClick={() => handleDurationChange(tier.id, duration.years)}
-                          className="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-[#6853DB]/10 hover:text-[#6853DB] text-left"
-                        >
-                          {duration.label}
-                        </button>
-                      ))}
+                  {/* Sticky Tier Header */}
+                  <div className="sticky top-0 bg-white z-10 pb-4 border-b border-gray-100">
+                    <div className="flex items-center mb-4">
+                      <tier.icon className="h-8 w-8 text-indigo-600" />
+                      <h3 className="ml-3 text-lg font-semibold text-gray-900">{tier.name}</h3>
                     </div>
-                  </div>
-                )}
-              </div>
-              <button
-                onClick={openModal}
-                aria-describedby={tier.id}
-                className={classNames(
-                  tier.mostPopular
-                    ? 'bg-gradient-to-tr from-[#6853DB] to-[#6853DB] text-white hover:bg-gradient-to-tr hover:from-[#5844B4] hover:to-[#5844B4]'
-                    : 'text-[#6853DB] ring-1 ring-inset  ring-[#6853DB]/20 hover:ring-[#6853DB]/30',
-                  'mt-6 z-40 block rounded-md px-4 py-3 hover:bg-primary hover:scale-105 text-center text-base font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6853DB] w-full'
-                )}
-              >
-                Buy Now
-              </button>
-              <ul role="list" className="mt-10 space-y-4 text-sm text-gray-900">
-                {sections.map((section) => (
-                  <li key={section.name}>
-                    <h4 className="font-semibold text-gray-900 mb-2">{section.name}</h4>
-                    <ul role="list" className="space-y-4">
-                      {section.features.map((feature) =>
-                        feature.tiers[tier.name] ? (
-                          <li key={feature.name} className="flex gap-x-3 items-center">
-                            <CheckIcon className="h-5 w-5 flex-none text-[#6853DB]" />
-                            <span className="flex items-center gap-x-2">
-                              {feature.name}
-                              {feature.tooltip && <Tooltip content={feature.tooltip} />}
-                              {typeof feature.tiers[tier.name] === 'string' ? (
-                                <span className="text-sm text-gray-500">({feature.tiers[tier.name]})</span>
-                              ) : null}
-                            </span>
-                          </li>
-                        ) : null
+                    <p className="flex items-baseline gap-x-1 text-gray-900">
+                      <span className="text-3xl sm:text-4xl font-semibold">{getPrice(tier)}</span>
+                      <span className="text-sm font-semibold text-gray-900">
+                        /{selectedDurations[tier.id]} {selectedDurations[tier.id] === 1 ? 'year' : 'years'}
+                      </span>
+                    </p>
+                    {/* Duration Dropdown */}
+                    <div className="mt-4 relative">
+                      <button
+                        onClick={() => toggleDropdown(tier.id)}
+                        className="inline-flex items-center justify-center rounded-md bg-gradient-to-tr from-[#6853DB] to-[#6853DB] px-3 py-2 text-sm font-medium text-white shadow-sm hover:bg-gradient-to-tr hover:from-[#5844B4] hover:to-[#5844B4] focus:outline-none focus:ring-2 focus:ring-[#6853DB] focus:ring-offset-2 w-full"
+                      >
+                        {durations.find((d) => d.years === selectedDurations[tier.id]).label}
+                        <ChevronDownIcon className="ml-2 h-4 w-4" />
+                      </button>
+                      {openDropdowns[tier.id] && (
+                        <div className="absolute z-20 mt-2 w-full rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+                          <div className="py-1">
+                            {durations.map((duration) => (
+                              <button
+                                key={duration.years}
+                                onClick={() => handleDurationChange(tier.id, duration.years)}
+                                className="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-[#6853DB]/10 hover:text-[#6853DB] text-left"
+                              >
+                                {duration.label}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
                       )}
-                    </ul>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          ))}
+                    </div>
+                    <button
+                      onClick={openModal}
+                      className="mt-4 block rounded-md bg-gradient-to-tr from-[#6853DB] to-[#6853DB] px-4 py-3 text-center text-base font-semibold text-white hover:bg-gradient-to-tr hover:from-[#5844B4] hover:to-[#5844B4] hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#6853DB] focus:ring-offset-2 w-full transition-transform duration-200"
+                    >
+                      Buy Now
+                    </button>
+                  </div>
+                  {/* Features */}
+                  <div className="mt-6 space-y-4">
+                    {sections.map((section) => (
+                      <div key={section.name}>
+                        <button
+                          onClick={() => toggleSection(section.name)}
+                          className="w-full flex justify-between items-center text-left font-semibold text-gray-900 mb-2"
+                        >
+                          {section.name}
+                          {openSections[section.name] ? (
+                            <ChevronUpIcon className="h-5 w-5 text-[#6853DB]" />
+                          ) : (
+                            <ChevronDownIcon className="h-5 w-5 text-[#6853DB]" />
+                          )}
+                        </button>
+                        {openSections[section.name] && (
+                          <ul role="list" className="space-y-3">
+                            {section.features.map((feature) =>
+                              feature.tiers[tier.name] ? (
+                                <li key={feature.name} className="flex gap-x-3 items-center">
+                                  <CheckIcon className="h-5 w-5 flex-none text-[#6853DB]" />
+                                  <span className="flex items-center gap-x-2 text-sm text-gray-900">
+                                    {feature.name}
+                                    {feature.tooltip && <Tooltip content={feature.tooltip} />}
+                                    {typeof feature.tiers[tier.name] === 'string' ? (
+                                      <span className="text-sm text-gray-500">
+                                        {feature.name.includes('BRANCH OFFICES') && feature.tiers[tier.name].includes('After that $') ? 
+                                          getBranchText(feature.tiers[tier.name], 499) : 
+                                          feature.name.includes('PAYMENT PROTECTION') && feature.tiers[tier.name].includes('Up to $') ?
+                                          (tier.name === 'Premium' ? getProtectionText(20000) : getProtectionText(50000)) :
+                                          feature.tiers[tier.name]
+                                        }
+                                      </span>
+                                    ) : null}
+                                  </span>
+                                </li>
+                              ) : null
+                            )}
+                          </ul>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
-        {/* lg+ */}
+        {/* Desktop View (lg+) */}
         <div className="isolate mt-20 hidden lg:block">
           <div className="relative -mx-8">
             {tiers.some((tier) => tier.mostPopular) ? (
@@ -395,11 +413,7 @@ export default function Pricing() {
                     <td key={tier.id} className="px-6 pt-2 xl:px-8">
                       <div className="altar de precios flex justify-center items-center text-gray-900">
                         <span className="text-4xl font-semibold">{getPrice(tier)}</span>
-                        {/* <span className="text-sm font-semibold">
-                          /{selectedDurations[tier.id]} {selectedDurations[tier.id] === 1 ? 'year' : 'years'}
-                        </span> */}
                       </div>
-                      {/* Individual Duration Dropdown */}
                       <div className="mt-4 relative inline-block text-left w-full">
                         <button
                           onClick={() => toggleDropdown(tier.id)}
@@ -430,7 +444,7 @@ export default function Pricing() {
                           tier.mostPopular
                             ? 'bg-gradient-to-tr from-[#6853DB] to-[#6853DB] text-white hover:bg-gradient-to-tr hover:from-[#5844B4] hover:to-[#5844B4]'
                             : 'text-[#6853DB] ring-1 ring-inset ring-[#6853DB]/20 hover:ring-[#6853DB]/30',
-                          'mt-6 block rounded-md hover:bg-gradient-to-tr from-[#6853DB] to-[#6853DB]  hover:scale-105 hover:text-white px-4 py-3 text-center text-base font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6853DB] w-full'
+                          'mt-6 block rounded-md hover:bg-gradient-to-tr from-[#6853DB] to-[#6853DB] hover:scale-105 hover:text-white px-4 py-3 text-center text-base font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6853DB] w-full'
                         )}
                       >
                         Buy Now

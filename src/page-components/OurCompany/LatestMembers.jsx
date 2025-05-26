@@ -29,7 +29,7 @@ import logo21 from "../../../public/LOGO_MEMBERS/21.png";
 import logo24 from "../../../public/LOGO_MEMBERS/24.png";
 import logo25 from "../../../public/LOGO_MEMBERS/25.png";
 import logo26 from "../../../public/LOGO_MEMBERS/26.png";
-import logo27 from "../../../public/LOGO_MEMBERS/27.png";
+
 import logo28 from "../../../public/LOGO_MEMBERS/27.png";
 import logo29 from "../../../public/LOGO_MEMBERS/29.png";
 import logo30 from "../../../public/LOGO_MEMBERS/30.png";
@@ -38,7 +38,7 @@ function LatestMembers() {
   const logos = [
     logo1, logo2, logo3, logo5, logo6, logo8, logo9, logo10, logo11, logo12,
     logo13, logo14, logo15, logo16, logo17, logo18, logo19, logo20, logo21, logo24,
-    logo25, logo26, logo27, logo28, logo29, logo30
+    logo25, logo26, logo28, logo29, logo30
   ];
   const [isHovering, setIsHovering] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);

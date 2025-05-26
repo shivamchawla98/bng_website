@@ -46,7 +46,7 @@ export const FAQ = () => {
       
       {/* FAQ Content */}
       <div className="relative z-10 p-6">
-        <h2 className="text-[55px] font-bold text-center text-[#27293B] mb-8 drop-shadow-md">
+      <h2 className="text-4xl mb-10  sm:text-4xl md:text-[55px] font-bold text-[#27293B] text-center  md:mt-6">
           Frequently Asked <span className="text-primary">Questions</span> 
         </h2>
         <div className="space-y-4">
