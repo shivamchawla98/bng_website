@@ -77,7 +77,7 @@ const Footer = () => {
                 { href: "/about-us/#values", label: "Our Values" },
                 { href: "/about-us/#vision", label: "Our Visions" },
                 { href: "/about-us/#mission", label: "Our Mission" },
-                { href: "#", label: "What We Do" },
+                // { href: "#", label: "What We Do" },
               ]}
             />
             <FooterSection
@@ -94,7 +94,7 @@ const Footer = () => {
               links={[
                 { href: "/freight-xchange", label: "Freight Xchange" },
                 { href: "/business-xchange", label: "Business Xchange" },
-                { href: "#", label: "Improters Directory" },
+                // { href: "#", label: "Improters Directory" },
                 { href: "#", label: "Exporters Directory" },
               ]}
             />
