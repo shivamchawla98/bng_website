@@ -27,14 +27,7 @@ import Widget from '@/page-components/Benifits/Widget'
 function Benefits() {
   return (
     <>
-      {/* Add meta title and description */}
-      <Head>
-        {/* <title></title>
-        <meta
-          name="description"
-          content=""
-        /> */}
-      </Head>
+ 
 
       <div className='bg-primaryBg'>
         <BenifitsHero />

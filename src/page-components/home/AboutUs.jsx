@@ -23,11 +23,11 @@ function AboutUs() {
       {/* Text Content Section */}
       <div className="w-full md:w-1/2 mb-8 md:mb-0 mt-6 md:mt-0">
         <div className="relative">
-          <h2 className="text-4xl sm:text-5xl md:text-[55px] font-bold mb-3 text-gray-700 relative z-10">
+          <h2 className="text-4xl sm:text-4xl md:text-[55px] font-bold mb-3 text-gray-700 relative z-10">
             Our <span className="text-[#5216ab]">Story</span>
           </h2>
           <h2
-            className="absolute -top-[20px] sm:-top-[30px] md:-top-[40px] -left-4 sm:-left-8 md:-left-16 text-5xl sm:text-6xl md:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+            className="absolute -top-[34px] sm:-top-[40px] md:-top-[40px] left-1 sm:-left-8 md:-left-16 text-6xl  md:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
             aria-hidden="true"
           >
             Our Story
@@ -43,7 +43,7 @@ function AboutUs() {
           As a member, you gain exclusive access to one of the largest and most accurate Exporters/Importers Data Banks in the industry—curated and maintained by BNG—to support data-driven success across every market you serve.
         </p>
         <button
-          onClick={() => router.push("/our-company")}
+          onClick={() => router.push("/about-us")}
           className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-4 sm:px-6 py-2 sm:py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent transition-all duration-300 transform hover:translate-x-2 w-fit"
         >
           Know more

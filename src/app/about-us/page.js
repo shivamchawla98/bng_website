@@ -23,13 +23,7 @@ function page() {
   return (
     <>
       {/* Add meta title and description */}
-      <Head>
-        <title>About BNG Logistics Network | Global Logistics Community</title>
-        <meta
-          name="description"
-          content="Learn about BNG Logistics Network — a secure, digital platform uniting vetted logistics experts and freight forwarders worldwide for better business."
-        />
-      </Head>
+
 
       <div className="bg-primaryBg py-0">
         <AboutUsHero />

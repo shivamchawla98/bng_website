@@ -88,14 +88,14 @@ const TestimonialSlider = () => {
             ))}
           </div>
           <div className="relative w-full max-w-[800px] mt-6 sm:mt-8 lg:mt-0">
-            <h2 className="text-3xl sm:text-4xl lg:text-[55px] font-bold text-gray-900 text-center lg:text-left my-4 relative z-10">
+            <h2 className="text-4xl lg:text-[55px] font-bold text-gray-900 text-center lg:text-left my-4 relative z-10">
               Accredited <span className="text-primary">Excellence</span>
             </h2>
             <p className="text-sm sm:text-base lg:text-base text-justify text-gray-500">
               Our partners are selected for their strong local presence and established expertise in cargo operations, ensuring reliability. They undergo thorough screenings for service quality, compliance, and financial stability, which guarantees that we collaborate with only the best in the industry.
             </p>
             <h2
-              className="absolute text-center lg:text-left -top-6 sm:-top-8 lg:-top-10 -left-4 sm:-left-8 lg:-left-[120px] text-5xl sm:text-6xl lg:text-[80px] w-full font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+              className="absolute text-center lg:text-left -top-6 sm:-top-8 lg:-top-10 -left-4 sm:-left-8 lg:-left-[120px] text-5xl lg:text-[80px] w-full font-bold text-[#27293B] opacity-[3%] leading-none z-0"
               aria-hidden="true"
             >
               Accredited Excellence
@@ -106,11 +106,11 @@ const TestimonialSlider = () => {
         {/* Testimonial Slider Section */}
         <div className="w-full lg:w-1/2 h-auto">
           <div className="relative">
-            <h2 className="text-3xl sm:text-4xl lg:text-[55px] font-bold text-primary mb-6 sm:mb-8 lg:mb-10 text-center lg:text-left relative z-10">
+            <h2 className="text-4xl mt-12 sm:text-4xl lg:text-[55px] font-bold text-primary mb-6 sm:mb-8 lg:mb-10 text-center lg:text-left relative z-10">
               Testimonials
             </h2>
             <h2
-              className="absolute text-center lg:text-left top-[-20px] sm:top-[-24px] lg:top-[-43px] -left-4 sm:-left-8 lg:-left-[77px] text-5xl sm:text-6xl lg:text-[80px] w-full font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+              className="absolute text-center lg:text-left top-[-34px]  lg:top-[-43px] -left-4 sm:-left-8 lg:-left-[77px] text-5xl sm:text-6xl lg:text-[80px] w-full font-bold text-[#27293B] opacity-[3%] leading-none z-0"
               aria-hidden="true"
             >
               Testimonials

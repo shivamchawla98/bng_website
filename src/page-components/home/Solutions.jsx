@@ -105,12 +105,12 @@ export default function TwigOfferSlider() {
   return (
     <section className="bg-secondryBg mt-8 py-8 sm:py-14 lg:py-24 relative">
       <div className="container relative mx-auto px-4">
-        <div className="mb-6 sm:mb-10 text-center">
+        <div className="mb-6 relative sm:mb-10 text-center">
           <h2 className="text-4xl sm:text-5xl lg:text-[55px] font-bold text-[#27293B] mb-6 sm:mb-12 relative z-10">
             Why <span className="text-primary">Us ?</span>
           </h2>
           <h2
-            className="absolute text-center top-[-20px] left-24 sm:top-[-10px] md:-top-[50px] md:left-[40%] text-[50px] sm:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            className="absolute text-center top-[-34px]  left-24  md:-top-[50px] md:left-[40%] text-[50px] sm:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
             aria-hidden="true"
           >
             Why Us ?

@@ -236,11 +236,11 @@ function OurCoreValues() {
           filter: "blur(50px)",
         }}></div> */}
 
-<h2 className="text-3xl sm:text-4xl md:text-[55px] font-bold text-[#27293B] text-center mb-1 mt-4 sm:mt-6">
+<h2 className="text-4xl md:text-[55px] font-bold text-[#27293B] text-center mb-1 mt-4 sm:mt-6">
         Member <span className="text-primary">Benefits</span>
       </h2>
       <h2
-        className="absolute text-center top-[30px] sm:top-[34px] md:top-[38px] left-0 right-0 mx-auto text-[40px] sm:text-[40px] md:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+        className="absolute text-5xl text-center top-[38px] sm:top-[34px] md:top-[38px] left-0 right-0 mx-auto text-[40px] md:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
         aria-hidden="true"
       >
         Member Benefits

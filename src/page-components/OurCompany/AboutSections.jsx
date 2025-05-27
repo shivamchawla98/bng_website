@@ -14,7 +14,7 @@ import GrowthOppurtinityVector from "../../../public/about/Growth-&-Opportunity.
 const AboutSection = () => {
   return (
     <>
-      <section className="pt-24 bg-primaryBg relative overflow-x-hidden">
+      <section className="lg:pt-24 bg-primaryBg relative overflow-x-hidden">
         <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 sm:gap-12 pt-16 pb-14">
             <div className="relative flex justify-center items-center">
@@ -75,7 +75,7 @@ const AboutSection = () => {
         </div>
       </section>
 
-      <section className="pt-16 w-full max-w-[100vw] mx-auto px-4 bg-primaryBg items-center mb-12 overflow-x-hidden">
+      <section className="pt-8 lg:pt-16 w-full max-w-[100vw] mx-auto px-4 bg-primaryBg items-center mb-12 overflow-x-hidden">
         <div className="relative">
           <h2
           id="values"
@@ -84,7 +84,7 @@ const AboutSection = () => {
           </h2>
           <h2
 
-            className="absolute text-center top-[-20px] sm:top-[-25px] left-1/2 transform -translate-x-1/2 text-[60px] sm:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2 min-w-[max-content]"
+            className="absolute text-center top-[-40px] lg:top-[-25px] left-1/2 transform -translate-x-1/2 text-[60px] sm:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2 min-w-[max-content]"
             aria-hidden="true"
           >
             Core Values
@@ -124,7 +124,7 @@ const AboutSection = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-primaryBg relative mb-2 overflow-x-hidden">
+      <section className=" py-10  lg:py-24 bg-primaryBg relative mb-2 overflow-x-hidden">
         <div className="w-full max-w-7xl px-4 mx-auto md:px-5 lg:px-5 mb-12">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 sm:gap-12 py-16">
             <div className="relative flex justify-center items-center">
@@ -142,7 +142,7 @@ const AboutSection = () => {
               <div className="relative">
                 <h2
                 
-                className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 text-gray-700 relative z-10 text-center lg:text-start">
+                className="text-4xl md:text-5xl font-bold mb-3 text-gray-700 relative z-10 text-center lg:text-start">
                   Our <span className="text-[#5216ab]">Vision</span>
                 </h2>
                 <h2
@@ -183,11 +183,11 @@ const AboutSection = () => {
               <div className="relative">
                 <h2
                 
-                className="text-gray-900 text-3xl sm:text-4xl font-medium leading-normal text-center lg:text-start">
+                className="text-4xl md:text-5xl pt-5 lg:pt-0 font-bold mb-3 text-gray-700 relative z-10 text-center lg:text-start">
                   Our <span className="text-primary">Mission</span>
                 </h2>
                 <h2
-                  className="absolute top-[-15px] sm:top-[-20px] left-1/2 lg:left-0 transform lg:transform-none -translate-x-1/2 text-[60px] sm:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2 min-w-[max-content]"
+                  className="absolute top-[-15px] sm:top-[-20px] left-1/2 lg:left-0 transform lg:transform-none -translate-x-1/2 text-5xl lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2 min-w-[max-content]"
                   aria-hidden="true"
                 >
                   Our Mission

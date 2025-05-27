@@ -51,11 +51,11 @@ function LatestMembers() {
   return (
     <section className="w-full mx-auto py-8 sm:py-10 lg:py-14" style={styles.section}>
       <div style={styles.headingContainer}>
-        <h2 className="text-3xl sm:text-4xl lg:text-[55px] font-bold text-[#27293B] text-center mb-8 sm:mb-12 lg:mb-20 relative z-10">
+        <h2 className="text-4xl lg:text-[55px] font-bold text-[#27293B] text-center mb-8 sm:mb-12 lg:mb-20 relative z-10">
           Latest <span className="text-primary">Members</span>
         </h2>
         <h2
-          className="absolute top-[-20px] sm:top-[-24px] lg:top-[-40px] left-0 lg:left-[0%] text-center w-full text-5xl sm:text-6xl lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+          className="absolute top-[-34px] lg:top-[-40px] left-0 lg:left-[0%] text-center w-full text-5xl sm:text-6xl lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
           aria-hidden="true"
         >
           Latest Members

@@ -37,19 +37,19 @@ export default function LocationCard() {
           {people.map((person) => (
             <div 
               key={person.name}
-              className="grid grid-cols-1 shadow-xl shadow-slate-500 rounded-lg my-16 xl:grid-cols-5"
+              className="flex my-8   flex-wrap-reverse lg:flex-nowrap justify-center items-center shadow-xl shadow-slate-500 rounded-lg "
             >
-              <div className="col-span-full xl:col-span-3">
+              <div className="w-full p-4 lg:p-0 lg:w-2/3 xl:col-span-3">
                 <MapComponent address={person.location} />
               </div>
 
               <li
-                className="flex flex-col gap-6 p-4 sm:gap-10 sm:flex-row sm:p-6 xl:col-span-2"
+                className="flex w-full lg:w-1/3 flex-col p-4 lg:p-0   sm:gap-10 sm:flex-row sm:py-6"
               >
                 <img
                   alt={person.name}
                   src={person.imageUrl}
-                  className="aspect-[4/5] h-96 w-64 sm:h-96 sm:w-64 flex-none object-cover rounded-md"
+                  className="aspect-[4/5] w-full lg:h-96 lg:w-64 flex-none object-cover rounded-md"
                 />
                 <div className="max-w-xl mt-6 sm:mt-10 pr-2 flex-auto">
                   <h3 className="text-2xl sm:text-3xl xl:text-4xl font-semibold tracking-tight text-primary">

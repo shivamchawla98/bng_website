@@ -14,7 +14,7 @@ function Tooltip({ content }) {
   return (
     <div className="relative group">
       <InfoIcon className="h-4 w-4 text-gray-500 cursor-pointer" />
-      <div className="absolute left-6 bottom-full mb-2 hidden group-hover:block w-64 p-2 text-sm text-white bg-gray-800 rounded-md shadow-lg z-10">
+      <div className="absolute left-6 bottom-full mb-2 hidden group-hover:block w-44 lg:w-64 p-2 text-xs lg:text-sm text-white bg-gray-800 rounded-md shadow-lg z-10">
         {content}
       </div>
     </div>
@@ -235,7 +235,15 @@ export default function Pricing() {
       />
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Currency Toggle */}
-        <div className="flex justify-end mb-4">
+        <div className="mx-auto max-w-5xl text-center">
+          <p className="text-[40px] sm:text-[55px] font-bold text-gray-700 relative z-10">
+            Join the Global <span className='text-primary'>Freight Network Today</span> 
+          </p>
+        </div>
+        <p className="mx-auto mt-2 max-w-2xl text-center text-base font-medium text-gray-600 sm:text-lg">
+          Choose the perfect membership plan to connect, collaborate, and grow with top logistics professionals worldwide.
+        </p>
+        <div className="flex justify-end my-4">
           <div className="inline-flex rounded-md shadow-sm">
             <button
               type="button"
@@ -257,16 +265,6 @@ export default function Pricing() {
             </button>
           </div>
         </div>
-        
-        <div className="mx-auto max-w-5xl text-center">
-          <p className="text-[40px] sm:text-[55px] font-bold text-gray-700 relative z-10">
-            Join the Global <span className='text-primary'>Freight Network Today</span> 
-          </p>
-        </div>
-        <p className="mx-auto mt-2 max-w-2xl text-center text-base font-medium text-gray-600 sm:text-lg">
-          Choose the perfect membership plan to connect, collaborate, and grow with top logistics professionals worldwide.
-        </p>
-
         {/* Mobile View (xs to lg) */}
         <div className="mt-12 sm:mt-16 lg:hidden">
           <div className="relative overflow-x-auto snap-x snap-mandatory scrollbar-hide">
@@ -278,15 +276,12 @@ export default function Pricing() {
                 >
                   {/* Sticky Tier Header */}
                   <div className="sticky top-0 bg-white z-10 pb-4 border-b border-gray-100">
-                    <div className="flex items-center mb-4">
-                      <tier.icon className="h-8 w-8 text-indigo-600" />
-                      <h3 className="ml-3 text-lg font-semibold text-gray-900">{tier.name}</h3>
+                    <div className="flex justify-center items-center mb-4">
+                      <tier.icon className="h-10 w-10 text-indigo-600" />
+                      <h3 className="ml-3 text-2xl font-bold text-gray-900">{tier.name}</h3>
                     </div>
-                    <p className="flex items-baseline gap-x-1 text-gray-900">
+                    <p className="flex items-baseline gap-x-1 justify-center text-gray-900">
                       <span className="text-3xl sm:text-4xl font-semibold">{getPrice(tier)}</span>
-                      <span className="text-sm font-semibold text-gray-900">
-                        /{selectedDurations[tier.id]} {selectedDurations[tier.id] === 1 ? 'year' : 'years'}
-                      </span>
                     </p>
                     {/* Duration Dropdown */}
                     <div className="mt-4 relative">
@@ -337,27 +332,39 @@ export default function Pricing() {
                         </button>
                         {openSections[section.name] && (
                           <ul role="list" className="space-y-3">
-                            {section.features.map((feature) =>
-                              feature.tiers[tier.name] ? (
-                                <li key={feature.name} className="flex gap-x-3 items-center">
-                                  <CheckIcon className="h-5 w-5 flex-none text-[#6853DB]" />
-                                  <span className="flex items-center gap-x-2 text-sm text-gray-900">
-                                    {feature.name}
-                                    {feature.tooltip && <Tooltip content={feature.tooltip} />}
-                                    {typeof feature.tiers[tier.name] === 'string' ? (
-                                      <span className="text-sm text-gray-500">
-                                        {feature.name.includes('BRANCH OFFICES') && feature.tiers[tier.name].includes('After that $') ? 
-                                          getBranchText(feature.tiers[tier.name], 499) : 
-                                          feature.name.includes('PAYMENT PROTECTION') && feature.tiers[tier.name].includes('Up to $') ?
-                                          (tier.name === 'Premium' ? getProtectionText(20000) : getProtectionText(50000)) :
-                                          feature.tiers[tier.name]
-                                        }
-                                      </span>
-                                    ) : null}
-                                  </span>
-                                </li>
-                              ) : null
-                            )}
+                            {section.features.map((feature) => (
+                              <li key={feature.name} className="flex gap-x-3 items-center">
+                                {feature.tiers[tier.name] ? (
+                                  <>
+                                    <CheckIcon className="h-5 w-5 flex-none text-[#6853DB]" />
+                                    <p className="flex flex-wrap items-center gap-x-2 text-sm text-gray-900">
+                                      {feature.name}
+                                      <div className='flex items-center gap-x-1'>
+                                        {feature.tooltip && <Tooltip content={feature.tooltip} />}
+                                        {typeof feature.tiers[tier.name] === 'string' ? (
+                                          <p className="text-sm text-gray-500">
+                                            {feature.name.includes('BRANCH OFFICES') && feature.tiers[tier.name].includes('After that $') ? 
+                                              getBranchText(feature.tiers[tier.name], 499) : 
+                                              feature.name.includes('PAYMENT PROTECTION') && feature.tiers[tier.name].includes('Up to $') ?
+                                              (tier.name === 'Premium' ? getProtectionText(20000) : getProtectionText(50000)) :
+                                              feature.tiers[tier.name]
+                                            }
+                                          </p>
+                                        ) : null}
+                                      </div>
+                                    </p>
+                                  </>
+                                ) : (
+                                  <>
+                                    <MinusIcon className="h-5 w-5 flex-none text-gray-400" />
+                                    <p className="flex flex-wrap items-center gap-x-2 text-sm text-gray-500">
+                                      {feature.name}
+                                      <span className="text-sm text-gray-400">N/A</span>
+                                    </p>
+                                  </>
+                                )}
+                              </li>
+                            ))}
                           </ul>
                         )}
                       </div>

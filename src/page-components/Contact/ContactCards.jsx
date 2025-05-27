@@ -27,7 +27,7 @@ export default function ContactCard() {
                   </div>
                   <div className="mt-1 text-lg">
                     <dt className="sr-only">Phone number</dt>
-                    <dd>+91 72 4077 4077</dd>
+                    <a target="_blank" href="https://wa.me/+917240774077">+91 72 4077 4077</a>
                   </div>
                 </dl>
               </div>

@@ -111,8 +111,8 @@ const Footer = () => {
         </div>
         <hr className="my-2 border-gray-200 sm:mx-auto lg:my-2" />
       </div>
-        <div className="sm:flex h-9 lg:px-56 bg-white sm:items-center sm:justify-between">
-          <p className="text-sm sm:text-center text-gray-900">
+        <div className="sm:flex py-2 lg:px-56 bg-white sm:items-center sm:justify-between">
+          <p className="text-sm text-center text-gray-900">
             2025 |<a href="#" className="hover:underline"> </a>© All Rights Reserved |  BNG Logistics Network
           </p>
           <nav className="flex justify-center items-center py-4 z-40 text-gray-900 text-sm">

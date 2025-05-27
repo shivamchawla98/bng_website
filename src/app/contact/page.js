@@ -22,14 +22,7 @@ export const metadata = {
 const ContactPage = () => {
   return (
     <>
-      {/* Add meta title and description */}
-      <Head>
-        {/* <title>Contact Us | BNG Logistics Network</title>
-        <meta
-          name="description"
-          content="Get in touch with BNG Logistics Network for membership inquiries, partnerships, or support. We’re here to help logistics professionals worldwide."
-        /> */}
-      </Head>
+ \
 
       <div className="min-h-screen bg-white">
         <ContactHero />

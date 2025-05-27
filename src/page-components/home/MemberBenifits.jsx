@@ -19,7 +19,10 @@ import ship from "../../../public/ship.png";
 
 function MemberBenefits() {
   const [scrollY, setScrollY] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const sectionRef = useRef(null);
+  const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -158,6 +161,35 @@ function MemberBenefits() {
     },
   ];
 
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % mobileBenefits.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + mobileBenefits.length) % mobileBenefits.length);
+  };
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current && touchEndX.current) {
+      const deltaX = touchStartX.current - touchEndX.current;
+      if (deltaX > 50) {
+        nextSlide();
+      } else if (deltaX < -50) {
+        prevSlide();
+      }
+    }
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
   return (
     <div
       className="relative w-full overflow-x-hidden"
@@ -196,7 +228,7 @@ function MemberBenefits() {
             Member <span className="text-primary">Benefits</span>
           </h2>
           <h2
-            className="absolute top-[-20px] sm:top-[-30px] md:top-[-36px] left-0 md:left-[32%] text-center w-full text-5xl sm:text-6xl md:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+            className="absolute top-[-34px] md:top-[-36px] left-0 md:left-[32%] text-center w-full text-5xl  md:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
             aria-hidden="true"
           >
             Member Benefits
@@ -310,48 +342,117 @@ function MemberBenefits() {
           </div>
         </div>
 
-        {/* Mobile and Tablet View */}
-        <div className="md:hidden flex flex-col items-center gap-6 sm:gap-8 px-2 sm:px-4">
-          {mobileBenefits.map((benefit, index) => (
+        {/* Mobile and Tablet View - Slider */}
+        <div
+          className="md:hidden flex flex-col items-center px-2 sm:px-4 relative"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          <div className="relative w-full max-w-[350px] sm:max-w-[500px] overflow-hidden">
             <div
-              key={index}
-              className="w-full max-w-[350px] sm:max-w-[500px] bg-white rounded-2xl shadow-lg p-4 sm:p-6 flex flex-col items-center transform transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
-              style={{
-                animation: `fadeInUp 0.5s ease-out ${index * 0.1}s both`,
-              }}
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-              <div className="w-24 h-24 sm:w-32 sm:h-32 relative mb-4">
-                <Image
-                  src={benefit.image}
-                  alt={benefit.title}
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <h3 className="text-lg sm:text-xl font-semibold text-primary mb-2 text-center">
-                {benefit.title}
-              </h3>
-              <p className="text-gray-600 text-sm sm:text-base text-center">
-                {benefit.description}
-              </p>
+              {mobileBenefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className="min-w-full bg-white rounded-2xl shadow-lg p-4 sm:p-6 flex flex-col items-center"
+                >
+                  <div className="w-24 h-24 sm:w-32 sm:h-32 relative mb-4">
+                    <Image
+                      src={benefit.image}
+                      alt={benefit.title}
+                      fill
+                      className="object-contain transform transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-primary mb-2 text-center">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm sm:text-base text-center">
+                    {benefit.description}
+                  </p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
 
-      {/* CSS Animation for Mobile/Tablet Cards */}
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
+          {/* Navigation Arrows */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-primary text-white rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center shadow-md hover:bg-opacity-90 transition-all duration-300"
+            aria-label="Previous slide"
+          >
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-primary text-white rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center shadow-md hover:bg-opacity-90 transition-all duration-300"
+            aria-label="Next slide"
+          >
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+
+          {/* Dots Navigation */}
+          <div className="flex justify-center gap-2 mt-4">
+            {mobileBenefits.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                  currentSlide === index ? "bg-primary scale-125" : "bg-gray-300"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* CSS for Slider Animations */}
+        <style jsx>{`
+          .min-w-full {
+            animation: slideIn 0.5s ease-out;
           }
-          to {
-            opacity: 1;
-            transform: translateY(0);
+
+          @keyframes slideIn {
+            from {
+              opacity: 0;
+              transform: translateX(50px);
+            }
+            to {
+              opacity: 1;
+              transform: translateX(0);
+            }
           }
-        }
-      `}</style>
+        `}</style>
+      </div>
     </div>
   );
 }

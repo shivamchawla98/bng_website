@@ -61,7 +61,7 @@ function Header() {
         style={bgStyle}
       ></div>
       <div className="container mx-auto flex justify-between items-center text-[#27293B] relative">
-        <Link href="/" className="">
+        <Link href="/" className="w-52 lg:w-80 ">
           <Image
             src={LOGO}
             alt="logo"

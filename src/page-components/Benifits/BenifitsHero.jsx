@@ -12,9 +12,9 @@ export const BenifitsHero = () => {
     >
       <div className="flex flex-col">
         <h3
-          className="text-3xl sm:text-3xl md:text-5xl font-light mb-4 text-white relative z-10"
+          className="text-2xl sm:text-2xl md:text-5xl font-light mb-4 text-white relative z-10"
         >
-          Benefits
+          BNG Benefits
         </h3>
         <h2
           className="text-3xl sm:text-4xl md:text-[52px] font-bold text-white relative z-10"

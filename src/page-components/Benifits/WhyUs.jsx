@@ -139,11 +139,11 @@ const Solutions = () => {
       </div> */}
       <div className="max-w-8xl lg:mx-24 mx-auto px-4 sm:px-6 lg:px-8 lg:my-8 relative z-10">
         <div className="relative">
-        <h2  className="text-[55px] font-bold  text-[#27293B] text-center mb-16 relative z-10">
+        <h2  className="text-4xl lg:text-[55px] font-bold  text-[#27293B] text-center mb-16 relative z-10">
             Why <span className="text-primary">Us?</span> 
           </h2>
           <h2
-            className="absolute text-center top-[-30px] md:left-[40%] text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            className="absolute text-center text-5xl top-[-30px] left-[26%] md:left-[40%] lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
             aria-hidden="true">
             Why Us?
           </h2>

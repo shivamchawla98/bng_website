@@ -232,12 +232,12 @@ const WorldMap = () => {
 
   return (
     <section className="world-map-section">
-      <div className="title-container">
-      <h2 className="text-3xl sm:text-4xl lg:text-[55px] mt-8 font-bold text-[#27293B] text-center mb-8 sm:mb-10 lg:mb-12 relative z-10">
+      <div className="title-container relative">
+      <h2 className="text-4xl lg:text-[55px] mt-8  font-bold text-[#27293B] text-center mb-8 sm:mb-10 lg:mb-12 relative z-10">
           Worldwide <span className="text-primary">Reach</span>
         </h2>
         <h2
-          className="absolute text-center top-[-20px] sm:top-[-24px] lg:-top-[17px] left-0 lg:left-[1%] w-full text-5xl sm:text-6xl lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+          className="absolute text-center -top-[8px] lg:-top-[17px] left-0 lg:left-[1%] w-full text-5xl  lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
           aria-hidden="true"
         >
           Worldwide Reach

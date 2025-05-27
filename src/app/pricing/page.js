@@ -21,10 +21,7 @@ export const metadata = {
 export default function BecomeAMember() {
   return (
     <>
-      {/* Add meta title and description */}
-      <Head>
     
-      </Head>
 
       <div>
         <BecomeHeroSection />

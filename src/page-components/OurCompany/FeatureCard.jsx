@@ -9,7 +9,7 @@ export const FeatureCard = ({ title, description, onClick, logo }) => (
      
       onClick && onClick(); // Check if onClick exists and call it
     }}>
-    <Image className="transition-transform transform hover:scale-110 duration-300" src={logo} width={150} />
+    <Image className="transition-transform transform hover:scale-110 duration-300" src={logo} width={120} />
     <h3 className="text-xl  font-semibold mt-2 cursor-text text-primary">{title}</h3>
     <p className="text-gray-600  m-0 cursor-text text-[18px]">{description}</p>
   </button>

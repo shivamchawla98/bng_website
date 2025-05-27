@@ -38,11 +38,11 @@ const SecuritySteps = () => {
     <div className="w-full mx-auto px-4 sm:px-6 lg:px-12 py-24 sm:py-12 lg:py-16 bg-secondryBg">
       {/* Header */}
       <div className="relative text-center mb-8 sm:mb-12 lg:mb-16">
-        <h2 className="text-3xl sm:text-4xl lg:text-[55px] font-bold text-[#27293B] mb-2 relative z-10">
+        <h2 className="text-4xl lg:text-[55px] font-bold text-[#27293B] mb-2 relative z-10">
           Multilayer <span className="text-primary">Validation</span>
         </h2>
         <h2
-          className="absolute top-[-20px] sm:top-[-25px] lg:top-[-30px] left-0 w-full text-center text-4xl sm:text-5xl lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+          className="absolute top-[-28px] sm:top-[-25px] lg:top-[-59px] left-0 w-full text-center text-5xl lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
           aria-hidden="true"
         >
           Multilayer Validation
