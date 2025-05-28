@@ -4,6 +4,7 @@ import { CheckIcon, MinusIcon, InfoIcon, ChevronDownIcon, ChevronUpIcon, GiftIco
 import { TrophyIcon, StarsIcon, Crown } from 'lucide-react'
 import InviteModal from '../Contact/modal'
 import iota from '../../../public/members_benefit/iota.png'
+import { BsFillInfoCircleFill } from "react-icons/bs";
 import { ModalMembershipForm } from '@/page-components/home/ModalForm';
 import Image from 'next/image'
 
@@ -15,7 +16,8 @@ function classNames(...classes) {
 function Tooltip({ content }) {
   return (
     <div className="relative group">
-      <Image src={iota} sizes='3' className="h-3 w-2  text-gray-500 cursor-pointer" />
+      <BsFillInfoCircleFill className="h-4 w-4 text-primary cursor-pointer" />
+      {/* <Image src={iota} sizes='3' className="h-3 w-2  text-gray-500 cursor-pointer" /> */}
       <div className="absolute left-6 bottom-full mb-2 hidden group-hover:block w-44 lg:w-64 p-2 text-xs lg:text-sm text-white bg-gray-800 rounded-md shadow-lg z-10">
         {content}
       </div>
@@ -119,8 +121,8 @@ export default function Pricing() {
         { name: 'Unlimited Searches For Fellow Members', tiers: { Trial: true, Standard: true, Premium: true, Elite: true } },
         { name: 'Realtime Chat', tiers: { Trial: true, Standard: true, Premium: true, Elite: true } },
         { name: 'Dedicated Membership Profile', tiers: { Trial: true, Standard: true, Premium: true, Elite: true } },
-        { name: 'Certificate Of Membership', tiers: { Trial: true, Standard: true, Premium: true, Elite: true } },
-        { name: 'Membership Badge', tiers: { Trial: true, Standard: true, Premium: true, Elite: true } },
+        { name: 'Certificate Of Membership', tiers: { Trial: false, Standard: true, Premium: true, Elite: true } },
+        { name: 'Membership Badge', tiers: { Trial: false, Standard: true, Premium: true, Elite: true } },
       ],
     },
     {
@@ -178,8 +180,8 @@ export default function Pricing() {
       features: [
         { name: 'Discount On Conference Fees', tiers: { Trial: false, Standard: false, Premium: false, Elite: '5% Life Time' } },
         { name: 'Discount On Sponsorship Packages', tiers: { Trial: false, Standard: false, Premium: false, Elite: '15% Life Time' } },
-        { name: 'Virtual Conference Access - Free', tiers: { Trial: true, Standard: true, Premium: true, Elite: true } },
-        { name: 'Special Discount On Cargo Insurances', tiers: { Trial: true, Standard: true, Premium: true, Elite: true } },
+        { name: 'Virtual Conference Access - Free', tiers: { Trial: false, Standard: true, Premium: true, Elite: true } },
+        { name: 'Special Discount On Cargo Insurances', tiers: { Trial: false, Standard: true, Premium: true, Elite: true } },
       ],
     },
   ];
@@ -216,7 +218,7 @@ export default function Pricing() {
 
   // Calculate price based on selected duration for a tier
   const getPrice = (tier) => {
-    if (tier.id === 'tier-Free') return 'Free';
+   
     
     const years = selectedDurations[tier.id] || 1;
     const basePrice = tier.priceValue * years;
@@ -300,9 +302,9 @@ export default function Pricing() {
                     </div>
                     <p className="flex items-baseline gap-x-1 justify-center text-gray-900">
                       <span className="text-3xl sm:text-4xl font-semibold">{getPrice(tier)}</span>
-                      {tier.id === 'tier-Free' && (
+                      {/* {tier.id === 'tier-Free' && (
                         <span className="text-sm font-normal text-gray-500 ml-1">for 30 days</span>
-                      )}
+                      )} */}
                     </p>
                     {/* Duration Dropdown - Hidden for Free tier */}
                     {tier.id !== 'tier-Free' ? (
@@ -331,9 +333,16 @@ export default function Pricing() {
                         )}
                       </div>
                     ) : (
-                      <div className="mt-4 text-center text-sm text-gray-500">
-                        No credit card required
-                      </div>
+                      <div className="mt-4 relative">
+                      <button
+                        onClick={() => toggleDropdown(tier.id)}
+                        className="inline-flex items-center justify-center rounded-md bg-gradient-to-tr from-[#6853DB] to-[#6853DB] px-3 py-2 text-sm font-medium text-white shadow-sm hover:bg-gradient-to-tr hover:from-[#5844B4] hover:to-[#5844B4] focus:outline-none focus:ring-2 focus:ring-[#6853DB] focus:ring-offset-2 w-full"
+                      >
+                        30 Days
+                     
+                      </button>
+                   
+                    </div>
                     )}
                     <button
                       onClick={openModal}
@@ -455,9 +464,9 @@ export default function Pricing() {
                     <td key={tier.id} className="px-6 pt-2 xl:px-8">
                       <div className="altar de precios flex justify-center items-center text-gray-900">
                         <span className="text-4xl font-semibold">{getPrice(tier)}</span>
-                        {tier.id === 'tier-Free' && (
+                        {/* {tier.id === 'tier-Free' && (
                           <span className="text-sm font-normal text-gray-500 ml-1">for 30 days</span>
-                        )}
+                        )} */}
                       </div>
                       {/* Duration Dropdown - Hidden for Free tier */}
                       {tier.id !== 'tier-Free' ? (
@@ -486,9 +495,16 @@ export default function Pricing() {
                           )}
                         </div>
                       ) : (
-                        <div className="mt-4 text-center text-sm text-gray-500">
-                          No credit card required
-                        </div>
+                        <div className="mt-4 relative inline-block text-left w-full">
+                        <button
+                          onClick={() => toggleDropdown(tier.id)}
+                          className="inline-flex items-center justify-center rounded-md bg-gradient-to-tr from-[#6853DB] to-[#6853DB] px-3 py-1.5 text-sm font-medium text-white shadow-sm hover:bg-gradient-to-tr hover:from-[#5844B4] hover:to-[#5844B4] focus:outline-none focus:ring-2 focus:ring-[#6853DB] focus:ring-offset-2 w-full"
+                        >
+                          30 Days
+       
+                        </button>
+                    
+                      </div>
                       )}
                       <button
                         onClick={openModal}

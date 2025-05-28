@@ -106,12 +106,12 @@ const TestimonialSlider = () => {
                 Testimonials
               </h2>
               <h2
-                className="absolute hidden lg:block max-w-[3vw] text-left top-[-43px] -left-[77px] lg:-top-[56px] lg:left-[15%] text-[80px] md:w-full font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+                className="absolute text-2xl  lg:block max-w-[3vw] text-left top-[-43px] -left-[77px] lg:-top-[56px] lg:left-[15%] text-[80px] md:w-full font-bold text-[#27293B] opacity-[3%] leading-none z-2"
                 aria-hidden="true">
                 Testimonials
               </h2>
             </div>
-            <div className="px-4 lg:px-0 lg:mr-28" >
+            <div className="px-2 lg:p-4 lg:px-0 lg:mr-28" >
               <Swiper
                 modules={[Autoplay, EffectFade]}
                 direction="vertical"
@@ -130,10 +130,10 @@ const TestimonialSlider = () => {
               >
                 {testimonials.map((testimonial, index) => (
                   <SwiperSlide key={index}>
-                    <div className="p-1 lg:p-8 relative lg:-left-4 mt-4 lg:mt-11">
+                    <div className="p-1 lg:p-8 relative lg:-left-4 my-8 lg:my-11">
                       <div className="bg-gradient-to-br from-sky-50 to-sky-50 shadow-lg rounded-xl pb-6 pt-6 pl-6 pr-6 lg:pb-10 lg:pt-10 lg:pl-8 lg:pr-8 w-full lg:max-w-[590px]">
                         <div className="space-y-4 lg:space-y-6">
-                          <p className="text-gray-500 text-lg md:text-xl lg:text-[26px]">
+                          <p className="text-gray-500 text-base md:text-xl lg:text-[26px]">
                             <strong>“ </strong> {testimonial.text} <strong>„</strong>
                           </p>
                           <div className="flex items-center gap-4">
@@ -142,6 +142,8 @@ const TestimonialSlider = () => {
                               alt={testimonial.name}
                               width={25}
                               height={25}
+                              
+                              objectFit="cover"
                               className="w-16 h-16 lg:w-20 lg:h-20 rounded-full mt-12 lg:mt-20"
                             />
                             <div className="mt-6 lg:mt-20">

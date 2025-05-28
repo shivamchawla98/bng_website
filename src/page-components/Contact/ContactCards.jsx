@@ -6,7 +6,7 @@ import { IoMail } from "react-icons/io5";
 export default function ContactCard() {
   return (
     <div className="bg-white py-8 sm:pb-16">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-2 lg:px-8">
         <div className="mx-auto max-w-2xl divide-y divide-gray-100 lg:mx-0 lg:max-w-none">
       
            

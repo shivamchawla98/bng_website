@@ -32,7 +32,7 @@ const people = [
 export default function LocationCard() {
   return (
     <div className="py-24 md:py-20 lg:px-24">
-      <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-8xl  lg:px-8">
         <ul role="list" className="divide-y divide-gray-200 w-full">
           {people.map((person) => (
             <div 
@@ -49,7 +49,7 @@ export default function LocationCard() {
                 <img
                   alt={person.name}
                   src={person.imageUrl}
-                  className="aspect-[4/5] w-full lg:h-96 lg:w-64 flex-none object-cover rounded-md lg:rounded-tr-lg lg:rounded-br-lg lg:rounded-tl-none lg:rouuneded-bl-none"
+                  className="aspect-[4/5] w-full lg:h-96 lg:w-64 flex-none object-cover rounded-md lg:rounded-r-lg lg:rounded-l-none"
                 />
                 <div className="max-w-xl mt-6 sm:mt-10 pr-2 flex-auto">
                   <h3 className="text-2xl sm:text-3xl xl:text-4xl font-semibold tracking-tight text-primary">

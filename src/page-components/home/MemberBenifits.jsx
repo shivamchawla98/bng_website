@@ -244,7 +244,7 @@ function MemberBenefits() {
         className="relative z-10 flex flex-col justify-center w-full px-4 sm:px-6 md:px-8 py-10 md:py-14"
       >
         {/* Top-right Patch */}
-        <div
+        {/* <div
           className="absolute top-16 right-0 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] rounded-full"
           style={{
             background:
@@ -252,7 +252,7 @@ function MemberBenefits() {
             zIndex: 2,
             filter: "blur(110px)",
           }}
-        ></div>
+        ></div> */}
 
         <div className="relative text-center">
           <h2 className="text-4xl sm:text-5xl md:text-[55px] font-bold text-[#27293B] mb-8 md:mb-12">
@@ -390,7 +390,7 @@ function MemberBenefits() {
               {mobileBenefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="min-w-full bg-white rounded-2xl shadow-lg p-4 sm:p-6 flex flex-col items-center"
+                  className="min-w-full bg-white rounded-2xl p-4 sm:p-6 flex flex-col items-center"
                 >
                   <div className="w-24 h-24 sm:w-32 sm:h-32 relative mb-4">
                     <Image
