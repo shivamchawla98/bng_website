@@ -15,7 +15,7 @@ function classNames(...classes) {
 function Tooltip({ content }) {
   return (
     <div className="relative group">
-      <Image src={iota} className="h-2 w-2 text-gray-500 cursor-pointer" />
+      <Image src={iota} sizes='3' className="h-3 w-2  text-gray-500 cursor-pointer" />
       <div className="absolute left-6 bottom-full mb-2 hidden group-hover:block w-44 lg:w-64 p-2 text-xs lg:text-sm text-white bg-gray-800 rounded-md shadow-lg z-10">
         {content}
       </div>

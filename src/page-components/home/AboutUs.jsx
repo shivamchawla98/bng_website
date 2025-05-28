@@ -9,13 +9,13 @@ function AboutUs() {
   return (
     <div className="bg-secondryBg px-4 sm:px-6 md:px-[112px] flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 py-10 md:py-14">
       {/* Image Section */}
-      <div className="w-full md:w-[600px] relative">
+      <div className="w-full md:w-[900px] relative">
         <Image
           src={rightImg}
           alt="Export Import Containers"
           layout="responsive"
           width={600}
-          height={300}
+          // height={300}
           className="rounded-lg object-cover"
         />
       </div>
