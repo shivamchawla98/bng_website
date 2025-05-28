@@ -23,7 +23,7 @@ function AboutUs() {
       {/* Text Content Section */}
       <div className="w-full md:w-1/2 mb-8 md:mb-0 mt-6 md:mt-0">
         <div className="relative">
-          <h2 className="text-4xl sm:text-4xl md:text-[55px] font-bold mb-3 text-gray-700 relative z-10">
+          <h2 className="text-4xl sm:text-4xl md:text-[55px] font-bold mb-3 lg:mb-8 text-gray-700 relative z-10">
             Our <span className="text-[#5216ab]">Story</span>
           </h2>
           <h2
