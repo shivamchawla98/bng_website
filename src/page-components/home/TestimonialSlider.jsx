@@ -61,7 +61,7 @@ const partnerLogos = [
 const TestimonialSlider = () => {
   return (
     <section
-      className="relative -top-10 lg:-top-44 z-30 bg-secondryBg bg-gradient-to-b from-purple-50 to-white"
+      className="relative -top-10 lg:-top-44 z-30 overfl bg-secondryBg bg-gradient-to-b from-purple-50 to-white"
       style={{
         backgroundImage: `url(${Vector.src})`,
         backgroundRepeat: "no-repeat",
@@ -85,7 +85,7 @@ const TestimonialSlider = () => {
               ))}
             </div>
             <div className="relative w-full max-w-[800px] mt-8 lg:mt-0">
-              <h2 className="text-3xl md:text-4xl lg:text-[55px] font-bold lg:mb-8 text-gray-900 text-center lg:text-left my-4 relative z-10">
+              <h2 className="text-4xl lg:text-[55px] font-bold lg:mb-8 text-gray-900 text-center lg:text-left my-4 relative z-10">
                 Accredited <span className="text-primary">Excellence</span>
               </h2>
               <p className="text-sm md:text-base text-justify text-gray-500 px-4 lg:px-0">
@@ -100,14 +100,15 @@ const TestimonialSlider = () => {
           </div>
 
           {/* Testimonials Section */}
-          <div className="w-full lg:w-1/2 h-auto mt-8 lg:mt-0">
-            <div className="relative px-4 lg:px-0">
-              <h2 className="text-3xl md:text-4xl lg:text-[55px] lg:mr-36 font-bold text-primary mb-6 lg:mb-10 text-center  mt-4 lg:mt-10 relative z-10">
+          <div className="w-full relative lg:w-1/2 h-auto mt-8 lg:mt-0">
+            <div className="relative  px-4  flex justify-center  lg:w-full   mx-auto lg:px-0">
+              <h2 className="text-4xl lg:text-[55px]  font-bold lg:mb-8 text-primary text-center lg:mr-[160px] lg:text-center my-4 relative z-10">
                 Testimonials
               </h2>
               <h2
-                className="absolute text-2xl  lg:block max-w-[3vw] text-left top-[-43px] -left-[77px] lg:-top-[56px] lg:left-[15%] text-[80px] md:w-full font-bold text-[#27293B] opacity-[3%] leading-none z-2"
-                aria-hidden="true">
+            className="absolute hidden lg:block -top-[34px] sm:-top-[40px] md:-top-[56px] left-1 sm:-left-8 md:left-[08%] text-6xl  md:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+            aria-hidden="true"
+          >
                 Testimonials
               </h2>
             </div>

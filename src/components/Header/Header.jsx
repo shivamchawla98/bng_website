@@ -73,18 +73,18 @@ function Header() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8 items-center">
-          <Link href="/benefit" className={`font-medium hover:text-primary text-[18px] ${isActive("/benefit") ? "text-primary font-bold" : ""}`}>
+          <a href="/benefit" className={`font-medium hover:text-primary text-[18px] ${isActive("/benefit") ? "text-primary font-bold" : ""}`}>
             Benefits
-          </Link>
-          <Link href="/about-us" className={`font-medium hover:text-primary text-[18px] ${isActive("/about-us") ? "text-primary font-bold" : ""}`}>
+          </a>
+          <a href="/about-us" className={`font-medium hover:text-primary text-[18px] ${isActive("/about-us") ? "text-primary font-bold" : ""}`}>
             About us
-          </Link>
-          <Link href="/pricing" className={`font-medium hover:text-primary text-[18px] ${isActive("/pricing") ? "text-primary font-bold" : ""}`}>
+          </a>
+          <a href="/pricing" className={`font-medium hover:text-primary text-[18px] ${isActive("/pricing") ? "text-primary font-bold" : ""}`}>
             Pricing
-          </Link>
-          <Link href="/contact" className={`font-medium hover:text-primary text-[18px] ${isActive("/contact") ? "text-primary font-bold" : ""}`}>
+          </a>
+          <a href="/contact" className={`font-medium hover:text-primary text-[18px] ${isActive("/contact") ? "text-primary font-bold" : ""}`}>
             Contact Us
-          </Link>
+          </a>
 
           {/* Specialties Dropdown */}
           <div className="relative" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
@@ -139,21 +139,21 @@ function Header() {
       {/* Mobile Menu */}
       <div className={`${isMenuOpen ? "flex" : "hidden"} md:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-50 flex-col w-full`}>
         <div className="flex flex-col p-4 space-y-4">
-          <Link href="/" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/") ? "text-primary font-bold" : "text-[#27293B]"}`}>
+          <a href="/" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/") ? "text-primary font-bold" : "text-[#27293B]"}`}>
             Home
-          </Link>
-          <Link href="/benefit" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/benefit") ? "text-primary font-bold" : "text-gray-700"}`}>
+          </a>
+          <a href="/benefit" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/benefit") ? "text-primary font-bold" : "text-gray-700"}`}>
             Benefits
-          </Link>
-          <Link href="/about-us" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/about-us") ? "text-primary font-bold" : "text-gray-700"}`}>
+          </a>
+          <a href="/about-us" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/about-us") ? "text-primary font-bold" : "text-gray-700"}`}>
             About us
-          </Link>
-          <Link href="/pricing" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/pricing") ? "text-primary font-bold" : "text-gray-700"}`}>
+          </a>
+          <a href="/pricing" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/pricing") ? "text-primary font-bold" : "text-gray-700"}`}>
             Pricing
-          </Link>
-          <Link href="/contact" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/contact") ? "text-primary font-bold" : "text-gray-700"}`}>
+          </a>
+          <a href="/contact" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/contact") ? "text-primary font-bold" : "text-gray-700"}`}>
             Contact Us
-          </Link>
+          </a>
 
           {/* Specialties Dropdown for Mobile */}
           <div>

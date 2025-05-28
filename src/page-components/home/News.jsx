@@ -87,7 +87,7 @@ const News = () => {
           </h2>
       
           <h2
-            className="absolute text-center top-[-40px] lg:top-[-59px] left-1/2 transform -translate-x-1/2 text-5xl md:text-8xl font-bold text-[#27293B] opacity-[3%] leading-none z-0 select-none"
+            className="absolute w-full  text-center top-[-40px] lg:top-[-59px] left-1/2 transform -translate-x-1/2 text-5xl md:text-8xl font-bold text-[#27293B] opacity-[3%] leading-none z-0 select-none"
             aria-hidden="true"
           >
             Latest News
