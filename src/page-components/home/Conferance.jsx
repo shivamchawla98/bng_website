@@ -46,10 +46,10 @@ const Conference = () => {
             <h2 className="text-[55px] font-bold text-white mb-4 leading-tight">
               Conference
             </h2>
-            <p className={`text-[18px] font-bold text-white/90 leading-relaxed mb-8 ${styles.slideUp}`}>
+            <p className={`text-[18px] pr-4 lg:pr-0 font-bold text-white/90 leading-relaxed mb-8 ${styles.slideUp}`}>
               Be part of an inspiring conference where industry leaders unveil insights and dive into the latest logistics and supply chain trends. Network with top professionals, gain valuable knowledge, and elevate your expertise—don’t miss out!
             </p>
-            <button className="bg-white/10 text-white border-[3px] px-8 py-4 flex items-center  border-white/60 hover:border-white/60 rounded-lg hover:bg-[#5216ab] transition-all duration-300 group transform hover:translate-x-2">
+            <button className="bg-white/10 text-white border-[3px] px-8 py-4 flex items-center  border-white/60 hover:border-white rounded-lg hover:bg-[#5216ab] transition-all duration-300 group transform hover:translate-x-2">
               Register Now
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -113,7 +113,7 @@ function Header() {
         </div>
 
         {/* Desktop Buttons */}
-        <div className="flex items-center">
+        <div className="hidden lg:flex  items-center">
           <a
             href="https://app.bnglogisticsnetwork.com/"
             className="text-primary cursor-pointer rounded-lg font-bold px-6 py-3 flex items-center hover:text-primary text-[18px]"
@@ -180,7 +180,13 @@ function Header() {
             )}
           </div>
 
-          <div className="flex flex-col space-y-3 pt-4 border-t">
+          <div className="flex justify-between items-center space-y-3 pt-4 border-t">
+          <Link
+            href="https://app.bnglogisticsnetwork.com/"
+            className="text-primary cursor-pointer rounded-lg  font-bold px-6 py-3 flex items-center hover:text-primary text-[18px]"
+          >
+            Login
+          </Link>
             <Link
               href="https://app.bnglogisticsnetwork.com/register"
               onClick={closeMenu}

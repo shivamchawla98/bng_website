@@ -110,7 +110,7 @@ export default function TwigOfferSlider() {
             Why <span className="text-primary">Us ?</span>
           </h2>
           <h2
-            className="absolute text-center top-[-34px]  left-24  md:-top-[50px] md:left-[40%] text-[50px] sm:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
+            className="absolute text-center top-[-34px]  left-20  md:-top-[50px] md:left-[40%] text-[50px] sm:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
             aria-hidden="true"
           >
             Why Us ?
@@ -196,7 +196,7 @@ export default function TwigOfferSlider() {
                           {slide.title}
                         </h3>
                       </div>
-                      <p className="text-base sm:text-lg lg:text-xl font-medium text-gray-400 max-w-md sm:max-w-lg lg:max-w-xl">
+                      <p className="text-sm lg:text-xl font-medium text-gray-400 max-w-md sm:max-w-lg lg:max-w-xl">
                         {slide.text}
                       </p>
                     </div>

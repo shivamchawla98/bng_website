@@ -20,9 +20,11 @@ import ship from "../../../public/ship.png";
 function MemberBenefits() {
   const [scrollY, setScrollY] = useState(0);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const sectionRef = useRef(null);
   const touchStartX = useRef(null);
   const touchEndX = useRef(null);
+  const autoScrollRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,6 +42,25 @@ function MemberBenefits() {
     handleScroll(); // Initial calculation
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Auto-scroll effect for mobile slider
+  useEffect(() => {
+    const startAutoScroll = () => {
+      autoScrollRef.current = setInterval(() => {
+        if (!isPaused) {
+          setCurrentSlide((prev) => (prev + 1) % mobileBenefits.length);
+        }
+      }, 3000); // Change slide every 3 seconds
+    };
+
+    startAutoScroll();
+
+    return () => {
+      if (autoScrollRef.current) {
+        clearInterval(autoScrollRef.current);
+      }
+    };
+  }, [isPaused]);
 
   const benefits = [
     {
@@ -171,6 +192,7 @@ function MemberBenefits() {
 
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
+    setIsPaused(true); // Pause auto-scroll on touch
   };
 
   const handleTouchMove = (e) => {
@@ -188,6 +210,15 @@ function MemberBenefits() {
     }
     touchStartX.current = null;
     touchEndX.current = null;
+    setTimeout(() => setIsPaused(false), 1500); // Resume auto-scroll after 1.5 seconds
+  };
+
+  const handleMouseEnter = () => {
+    setIsPaused(true); // Pause auto-scroll on hover
+  };
+
+  const handleMouseLeave = () => {
+    setIsPaused(false); // Resume auto-scroll when mouse leaves
   };
 
   return (
@@ -228,7 +259,7 @@ function MemberBenefits() {
             Member <span className="text-primary">Benefits</span>
           </h2>
           <h2
-            className="absolute top-[-34px] md:top-[-36px] left-0 md:left-[32%] text-center w-full text-5xl  md:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+            className="absolute top-[-34px] md:top-[-36px] left-0 lg:-left-[1%] text-center w-full text-5xl  md:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
             aria-hidden="true"
           >
             Member Benefits
@@ -348,6 +379,8 @@ function MemberBenefits() {
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           <div className="relative w-full max-w-[350px] sm:max-w-[500px] overflow-hidden">
             <div
@@ -377,48 +410,6 @@ function MemberBenefits() {
               ))}
             </div>
           </div>
-
-          {/* Navigation Arrows */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-primary text-white rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center shadow-md hover:bg-opacity-90 transition-all duration-300"
-            aria-label="Previous slide"
-          >
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-primary text-white rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center shadow-md hover:bg-opacity-90 transition-all duration-300"
-            aria-label="Next slide"
-          >
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
 
           {/* Dots Navigation */}
           <div className="flex justify-center gap-2 mt-4">

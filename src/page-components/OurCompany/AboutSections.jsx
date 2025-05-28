@@ -1,8 +1,8 @@
 import Image from "next/image";
 import about1 from "../../../public/about/about_01.jpg";
 import about2 from "../../../public/about/About_02.jpg";
-import OurVisionImage from "../../../public/about/vision.jpg";
-import OurMissionImage from "../../../public/about/mission.jpg";
+import OurVisionImage from "../../../public/about/Vision_.jpg";
+import OurMissionImage from "../../../public/about/mission_.jpg";
 import { FeatureCard } from "./FeatureCard";
 import GlobalReachVector from "../../../public/about/Global-Collaboration.png";
 import IntigirityTrustVector from "../../../public/about/Integrity-&-Trust.png";
@@ -84,7 +84,7 @@ const AboutSection = () => {
           </h2>
           <h2
 
-            className="absolute text-center top-[-40px] lg:top-[-25px] left-1/2 transform -translate-x-1/2 text-[60px] sm:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2 min-w-[max-content]"
+            className="absolute top-[-34px] md:top-[-36px] left-0 lg:-left-[1%] text-center w-full text-5xl  md:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
             aria-hidden="true"
           >
             Core Values

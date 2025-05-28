@@ -1,9 +1,11 @@
 'use client'
 import { Fragment, useState, useEffect } from 'react'
-import { CheckIcon, MinusIcon, InfoIcon, ChevronDownIcon, ChevronUpIcon } from 'lucide-react'
+import { CheckIcon, MinusIcon, InfoIcon, ChevronDownIcon, ChevronUpIcon, GiftIcon } from 'lucide-react'
 import { TrophyIcon, StarsIcon, Crown } from 'lucide-react'
 import InviteModal from '../Contact/modal'
+import iota from '../../../public/members_benefit/iota.png'
 import { ModalMembershipForm } from '@/page-components/home/ModalForm';
+import Image from 'next/image'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -13,7 +15,7 @@ function classNames(...classes) {
 function Tooltip({ content }) {
   return (
     <div className="relative group">
-      <InfoIcon className="h-4 w-4 text-gray-500 cursor-pointer" />
+      <Image src={iota} className="h-2 w-2 text-gray-500 cursor-pointer" />
       <div className="absolute left-6 bottom-full mb-2 hidden group-hover:block w-44 lg:w-64 p-2 text-xs lg:text-sm text-white bg-gray-800 rounded-md shadow-lg z-10">
         {content}
       </div>
@@ -25,11 +27,13 @@ export default function Pricing() {
   // State for modal
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedDurations, setSelectedDurations] = useState({
+    'tier-Free': 1,
     'tier-Standard': 1,
     'tier-Premium': 1,
     'tier-Elite': 1,
   })
   const [openDropdowns, setOpenDropdowns] = useState({
+    'tier-Free': false,
     'tier-Standard': false,
     'tier-Premium': false,
     'tier-Elite': false,
@@ -66,8 +70,18 @@ export default function Pricing() {
   const openModal = () => setIsModalOpen(true)
   const closeModal = () => setIsModalOpen(false)
 
-  // Define tiers
+  // Define tiers - Free tier remains unchanged
   const tiers = [
+    {
+      name: 'Trial',
+      id: 'tier-Free',
+      href: '#',
+      priceYearly: '$0',
+      priceValue: 0,
+      mostPopular: false,
+      icon: GiftIcon,
+      durationText: '30 Days',
+    },
     {
       name: 'Standard',
       id: 'tier-Standard',
@@ -97,25 +111,26 @@ export default function Pricing() {
     },
   ]
 
-  // Define sections with dynamic currency values
+  // Define sections with Free tier features matching Elite tier
   const sections = [
     {
       name: 'Basic Features',
       features: [
-        { name: 'Unlimited Searches For Fellow Members', tiers: { Standard: true, Premium: true, Elite: true } },
-        { name: 'Realtime Chat', tiers: { Standard: true, Premium: true, Elite: true } },
-        { name: 'Dedicated Membership Profile', tiers: { Standard: true, Premium: true, Elite: true } },
-        { name: 'Certificate Of Membership', tiers: { Standard: true, Premium: true, Elite: true } },
-        { name: 'Membership Badge', tiers: { Standard: true, Premium: true, Elite: true } },
+        { name: 'Unlimited Searches For Fellow Members', tiers: { Trial: true, Standard: true, Premium: true, Elite: true } },
+        { name: 'Realtime Chat', tiers: { Trial: true, Standard: true, Premium: true, Elite: true } },
+        { name: 'Dedicated Membership Profile', tiers: { Trial: true, Standard: true, Premium: true, Elite: true } },
+        { name: 'Certificate Of Membership', tiers: { Trial: true, Standard: true, Premium: true, Elite: true } },
+        { name: 'Membership Badge', tiers: { Trial: true, Standard: true, Premium: true, Elite: true } },
       ],
     },
     {
       name: 'Team Management & Offices',
       features: [
-        { name: 'Team Members / Users (Same Country / Within Company)', tiers: { Standard: '1 Users', Premium: '6 Users', Elite: 'Unlimited' } },
+        { name: 'Team Members / Users (Same Country / Within Company)', tiers: { Trial: 'Unlimited', Standard: '1 Users', Premium: '6 Users', Elite: 'Unlimited' } },
         {
           name: 'Branch Offices (Same Country / Within Company)',
           tiers: {
+            Trial: '1HQ + 9 Branch (After That $499 Branch)',
             Standard: '',
             Premium: '1HQ + 3 Branch (After That $499 Branch)',
             Elite: '1HQ + 9 Branch (After That $499 Branch)',
@@ -128,20 +143,20 @@ export default function Pricing() {
       features: [
         {
           name: 'Business Xchange (Monthly Post/Bid)',
-          tiers: { Standard: '2 Enquiry', Premium: '15 Enquiries', Elite: 'Unlimited' },
+          tiers: { Trial: 'Unlimited', Standard: '2 Enquiry', Premium: '15 Enquiries', Elite: 'Unlimited' },
           tooltip: 'A robust system with freight enquiries from global trade community / post your enquiry / quote for enquires',
         },
         {
           name: 'Freight Xchange (Monthly Post Of Your Promotional Freight Rates)',
-          tiers: { Standard: '2 Post', Premium: '15 Posts', Elite: 'Unlimited' },
+          tiers: { Trial: 'Unlimited', Standard: '2 Post', Premium: '15 Posts', Elite: 'Unlimited' },
           tooltip: 'A robust system gives you opportunity to grow your visibility by posting your freight rates',
         },
         {
           name: 'Pr And Marketing',
-          tiers: { Standard: '', Premium: '4 Posts Per Month', Elite: '15 Posts Per Month' },
+          tiers: { Trial: '15 Posts Per Month', Standard: '', Premium: '4 Posts Per Month', Elite: '15 Posts Per Month' },
           tooltip: 'Create your visibility to global trade & exim market',
         },
-        { name: 'Be On Top Search Results', tiers: { Standard: false, Premium: false, Elite: true } },
+        { name: 'Be On Top Search Results', tiers: { Trial: true, Standard: false, Premium: false, Elite: true } },
       ],
     },
     {
@@ -150,6 +165,7 @@ export default function Pricing() {
         {
           name: 'Payment Protection Framework (Overdue Invoice Rankings - Strict Background Check - Payment Resolution Center - Global Warning List)',
           tiers: {
+            Trial: false,
             Standard: false,
             Premium: 'Up To $20,000 Payment Protection',
             Elite: 'Up To $50,000 Payment Protection',
@@ -160,10 +176,10 @@ export default function Pricing() {
     {
       name: 'Preferences And Discounts',
       features: [
-        { name: 'Discount On Conference Fees', tiers: { Standard: false, Premium: false, Elite: '5% Life Time' } },
-        { name: 'Discount On Sponsorship Packages', tiers: { Standard: false, Premium: false, Elite: '15% Life Time' } },
-        { name: 'Virtual Conference Access - Free', tiers: { Standard: true, Premium: true, Elite: true } },
-        { name: 'Special Discount On Cargo Insurances', tiers: { Standard: true, Premium: true, Elite: true } },
+        { name: 'Discount On Conference Fees', tiers: { Trial: false, Standard: false, Premium: false, Elite: '5% Life Time' } },
+        { name: 'Discount On Sponsorship Packages', tiers: { Trial: false, Standard: false, Premium: false, Elite: '15% Life Time' } },
+        { name: 'Virtual Conference Access - Free', tiers: { Trial: true, Standard: true, Premium: true, Elite: true } },
+        { name: 'Special Discount On Cargo Insurances', tiers: { Trial: true, Standard: true, Premium: true, Elite: true } },
       ],
     },
   ];
@@ -200,6 +216,8 @@ export default function Pricing() {
 
   // Calculate price based on selected duration for a tier
   const getPrice = (tier) => {
+    if (tier.id === 'tier-Free') return 'Free';
+    
     const years = selectedDurations[tier.id] || 1;
     const basePrice = tier.priceValue * years;
     
@@ -243,12 +261,12 @@ export default function Pricing() {
         <p className="mx-auto mt-2 max-w-2xl text-center text-base font-medium text-gray-600 sm:text-lg">
           Choose the perfect membership plan to connect, collaborate, and grow with top logistics professionals worldwide.
         </p>
-        <div className="flex justify-end my-4">
+        <div className="flex justify-center lg:justify-end my-4">
           <div className="inline-flex rounded-md shadow-sm">
             <button
               type="button"
               onClick={() => setCurrency('USD')}
-              className={`px-4 py-2 text-sm font-medium rounded-l-md ${currency === 'USD' 
+              className={`px-2 py-1 lg:px-4 lg:py-2 text-sm font-medium rounded-l-md ${currency === 'USD' 
                 ? 'bg-gradient-to-tr from-[#6853DB] to-[#6853DB] text-white' 
                 : 'text-[#6853DB] ring-1 ring-inset ring-[#6853DB]/20 hover:ring-[#6853DB]/30'}`}
             >
@@ -257,7 +275,7 @@ export default function Pricing() {
             <button
               type="button"
               onClick={() => setCurrency('INR')}
-              className={`px-4 py-2 text-sm font-medium rounded-r-md ${currency === 'INR' 
+              className={`px-2 py-1 lg:px-4 lg:py-2 text-sm font-medium rounded-r-md ${currency === 'INR' 
                 ? 'bg-gradient-to-tr from-[#6853DB] to-[#6853DB] text-white' 
                 : 'text-[#6853DB] ring-1 ring-inset ring-[#6853DB]/20 hover:ring-[#6853DB]/30'}`}
             >
@@ -282,37 +300,51 @@ export default function Pricing() {
                     </div>
                     <p className="flex items-baseline gap-x-1 justify-center text-gray-900">
                       <span className="text-3xl sm:text-4xl font-semibold">{getPrice(tier)}</span>
-                    </p>
-                    {/* Duration Dropdown */}
-                    <div className="mt-4 relative">
-                      <button
-                        onClick={() => toggleDropdown(tier.id)}
-                        className="inline-flex items-center justify-center rounded-md bg-gradient-to-tr from-[#6853DB] to-[#6853DB] px-3 py-2 text-sm font-medium text-white shadow-sm hover:bg-gradient-to-tr hover:from-[#5844B4] hover:to-[#5844B4] focus:outline-none focus:ring-2 focus:ring-[#6853DB] focus:ring-offset-2 w-full"
-                      >
-                        {durations.find((d) => d.years === selectedDurations[tier.id]).label}
-                        <ChevronDownIcon className="ml-2 h-4 w-4" />
-                      </button>
-                      {openDropdowns[tier.id] && (
-                        <div className="absolute z-20 mt-2 w-full rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-                          <div className="py-1">
-                            {durations.map((duration) => (
-                              <button
-                                key={duration.years}
-                                onClick={() => handleDurationChange(tier.id, duration.years)}
-                                className="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-[#6853DB]/10 hover:text-[#6853DB] text-left"
-                              >
-                                {duration.label}
-                              </button>
-                            ))}
-                          </div>
-                        </div>
+                      {tier.id === 'tier-Free' && (
+                        <span className="text-sm font-normal text-gray-500 ml-1">for 30 days</span>
                       )}
-                    </div>
+                    </p>
+                    {/* Duration Dropdown - Hidden for Free tier */}
+                    {tier.id !== 'tier-Free' ? (
+                      <div className="mt-4 relative">
+                        <button
+                          onClick={() => toggleDropdown(tier.id)}
+                          className="inline-flex items-center justify-center rounded-md bg-gradient-to-tr from-[#6853DB] to-[#6853DB] px-3 py-2 text-sm font-medium text-white shadow-sm hover:bg-gradient-to-tr hover:from-[#5844B4] hover:to-[#5844B4] focus:outline-none focus:ring-2 focus:ring-[#6853DB] focus:ring-offset-2 w-full"
+                        >
+                          {durations.find((d) => d.years === selectedDurations[tier.id]).label}
+                          <ChevronDownIcon className="ml-2 h-4 w-4" />
+                        </button>
+                        {openDropdowns[tier.id] && (
+                          <div className="absolute z-20 mt-2 w-full rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+                            <div className="py-1">
+                              {durations.map((duration) => (
+                                <button
+                                  key={duration.years}
+                                  onClick={() => handleDurationChange(tier.id, duration.years)}
+                                  className="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-[#6853DB]/10 hover:text-[#6853DB] text-left"
+                                >
+                                  {duration.label}
+                                </button>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <div className="mt-4 text-center text-sm text-gray-500">
+                        No credit card required
+                      </div>
+                    )}
                     <button
                       onClick={openModal}
-                      className="mt-4 block rounded-md bg-gradient-to-tr from-[#6853DB] to-[#6853DB] px-4 py-3 text-center text-base font-semibold text-white hover:bg-gradient-to-tr hover:from-[#5844B4] hover:to-[#5844B4] hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#6853DB] focus:ring-offset-2 w-full transition-transform duration-200"
+                      className={classNames(
+                        tier.id === 'tier-Free' 
+                          ? 'bg-gradient-to-tr from-[#6853DB] to-[#6853DB] hover:from-[#5844B4] hover:to-[#5844B4] text-white' 
+                          : 'bg-gradient-to-tr from-[#6853DB] to-[#6853DB] hover:from-[#5844B4] hover:to-[#5844B4] text-white',
+                        'mt-4 block rounded-md hover:scale-105 px-4 py-3 text-center text-base font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-full transition-transform duration-200'
+                      )}
                     >
-                      Buy Now
+                      {tier.id === 'tier-Free' ? 'Start Free Trial' : 'Buy Now'}
                     </button>
                   </div>
                   {/* Features */}
@@ -359,7 +391,9 @@ export default function Pricing() {
                                     <MinusIcon className="h-5 w-5 flex-none text-gray-400" />
                                     <p className="flex flex-wrap items-center gap-x-2 text-sm text-gray-500">
                                       {feature.name}
-                                      <span className="text-sm text-gray-400">N/A</span>
+                                      <span className="text-sm text-gray-400">
+                                        Not Available
+                                      </span>
                                     </p>
                                   </>
                                 )}
@@ -382,7 +416,7 @@ export default function Pricing() {
             {tiers.some((tier) => tier.mostPopular) ? (
               <div className="absolute inset-x-4 inset-y-0 -z-10 flex">
                 <div
-                  style={{ marginLeft: `${(tiers.findIndex((tier) => tier.mostPopular) + 1) * 25}%` }}
+                  style={{ marginLeft: `${tiers.findIndex((tier) => tier.mostPopular) * 25}%` }}
                   aria-hidden="true"
                   className="flex w-1/4 px-4"
                 >
@@ -397,6 +431,7 @@ export default function Pricing() {
                 <col className="w-1/4" />
                 <col className="w-1/4" />
                 <col className="w-1/4" />
+                <col className="w-1/4" />
               </colgroup>
               <thead>
                 <tr>
@@ -404,7 +439,7 @@ export default function Pricing() {
                   {tiers.map((tier) => (
                     <th key={tier.id} scope="col" className="px-6 pt-6 xl:px-8 xl:pt-8">
                       <div className="flex justify-center w-full items-center mb-4">
-                        <tier.icon className="h-10 w-10 text-[#6853DB]" />
+                        <tier.icon className={`h-10  w-10 text-[#6853DB]`} />
                         <div className="ml-3 text-3xl font-semibold text-gray-900">{tier.name}</div>
                       </div>
                     </th>
@@ -420,41 +455,53 @@ export default function Pricing() {
                     <td key={tier.id} className="px-6 pt-2 xl:px-8">
                       <div className="altar de precios flex justify-center items-center text-gray-900">
                         <span className="text-4xl font-semibold">{getPrice(tier)}</span>
-                      </div>
-                      <div className="mt-4 relative inline-block text-left w-full">
-                        <button
-                          onClick={() => toggleDropdown(tier.id)}
-                          className="inline-flex items-center justify-center rounded-md bg-gradient-to-tr from-[#6853DB] to-[#6853DB] px-3 py-1.5 text-sm font-medium text-white shadow-sm hover:bg-gradient-to-tr hover:from-[#5844B4] hover:to-[#5844B4] focus:outline-none focus:ring-2 focus:ring-[#6853DB] focus:ring-offset-2 w-full"
-                        >
-                          {durations.find((d) => d.years === selectedDurations[tier.id]).label}
-                          <ChevronDownIcon className="ml-2 h-4 w-4" />
-                        </button>
-                        {openDropdowns[tier.id] && (
-                          <div className="absolute z-10 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-                            <div className="py-1">
-                              {durations.map((duration) => (
-                                <button
-                                  key={duration.years}
-                                  onClick={() => handleDurationChange(tier.id, duration.years)}
-                                  className="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-[#6853DB]/10 hover:text-[#6853DB] text-left"
-                                >
-                                  {duration.label}
-                                </button>
-                              ))}
-                            </div>
-                          </div>
+                        {tier.id === 'tier-Free' && (
+                          <span className="text-sm font-normal text-gray-500 ml-1">for 30 days</span>
                         )}
                       </div>
+                      {/* Duration Dropdown - Hidden for Free tier */}
+                      {tier.id !== 'tier-Free' ? (
+                        <div className="mt-4 relative inline-block text-left w-full">
+                          <button
+                            onClick={() => toggleDropdown(tier.id)}
+                            className="inline-flex items-center justify-center rounded-md bg-gradient-to-tr from-[#6853DB] to-[#6853DB] px-3 py-1.5 text-sm font-medium text-white shadow-sm hover:bg-gradient-to-tr hover:from-[#5844B4] hover:to-[#5844B4] focus:outline-none focus:ring-2 focus:ring-[#6853DB] focus:ring-offset-2 w-full"
+                          >
+                            {durations.find((d) => d.years === selectedDurations[tier.id]).label}
+                            <ChevronDownIcon className="ml-2 h-4 w-4" />
+                          </button>
+                          {openDropdowns[tier.id] && (
+                            <div className="absolute z-10 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+                              <div className="py-1">
+                                {durations.map((duration) => (
+                                  <button
+                                    key={duration.years}
+                                    onClick={() => handleDurationChange(tier.id, duration.years)}
+                                    className="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-[#6853DB]/10 hover:text-[#6853DB] text-left"
+                                  >
+                                    {duration.label}
+                                  </button>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      ) : (
+                        <div className="mt-4 text-center text-sm text-gray-500">
+                          No credit card required
+                        </div>
+                      )}
                       <button
                         onClick={openModal}
                         className={classNames(
-                          tier.mostPopular
-                            ? 'bg-gradient-to-tr from-[#6853DB] to-[#6853DB] text-white hover:bg-gradient-to-tr hover:from-[#5844B4] hover:to-[#5844B4]'
-                            : 'text-[#6853DB] ring-1 ring-inset ring-[#6853DB]/20 hover:ring-[#6853DB]/30',
-                          'mt-6 block rounded-md hover:bg-gradient-to-tr from-[#6853DB] to-[#6853DB] hover:scale-105 hover:text-white px-4 py-3 text-center text-base font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6853DB] w-full'
+                          tier.id === 'tier-Free' 
+                            ? 'bg-gradient-to-tr from-[#6853DB] to-[#6853DB] text-white hover:bg-gradient-to-tr hover:from-[#5844B4] hover:to-[#5844B4]' 
+                            : tier.mostPopular
+                              ? 'bg-gradient-to-tr from-[#6853DB] to-[#6853DB] text-white hover:bg-gradient-to-tr hover:from-[#5844B4] hover:to-[#5844B4]'
+                              : 'text-[#6853DB] ring-1 ring-inset ring-[#6853DB]/20 hover:ring-[#6853DB]/30',
+                          'mt-6 block rounded-md hover:scale-105 px-4 py-3 text-center text-base font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-full transition-transform duration-200'
                         )}
                       >
-                        Buy Now
+                        {tier.id === 'tier-Free' ? 'Start Free Trial' : 'Buy Now'}
                       </button>
                     </td>
                   ))}
@@ -464,7 +511,7 @@ export default function Pricing() {
                     <tr>
                       <th
                         scope="colgroup"
-                        colSpan={4}
+                        colSpan={5}
                         className={classNames(
                           sectionIdx === 0 ? 'pt-8' : 'pt-16',
                           'pb-4 font-semibold text-lg text-primary'
@@ -497,7 +544,7 @@ export default function Pricing() {
                             ) : (
                               <>
                                 {feature.tiers[tier.name] === true ? (
-                                  <CheckIcon className="mx-auto h-5 w-5 text-[#6853DB]" />
+                                  <CheckIcon className={`mx-auto h-5 w-5 ${tier.id === 'tier-Free' ? 'text-[#6853DB]' : 'text-[#6853DB]'}`} />
                                 ) : (
                                   <MinusIcon className="mx-auto h-5 w-5 text-gray-400" />
                                 )}

@@ -82,7 +82,7 @@ const News = () => {
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header with Watermark */}
         <div className="relative mb-12 sm:mb-16">
-          <h2 className="text-4xl font-bold text-[#27293B] text-center mb-2 relative z-10">
+          <h2 className="text-4xl font-bold lg:text-[55px] text-[#27293B] text-center mb-2 relative z-10">
             Latest <span className="text-primary">News</span>
           </h2>
       
@@ -95,7 +95,7 @@ const News = () => {
         </div>
 
         {/* Enhanced Swiper Slider */}
-        <div className="relative px-10">
+        <div className="relative ">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={30}

@@ -9,7 +9,7 @@ const SplitScreenCTA = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 h-auto md:h-[600px] bg-primaryBg">
       {/* Business Xchange Section */}
       <Link href="/business-xchange" className="relative group overflow-hidden min-h-[300px] md:min-h-0">
-        <div className="absolute inset-0 bg-blue-900/60 group-hover:bg-blue-900/70 transition-colors z-10" />
+        <div className="absolute inset-0 bg-blue-900/60 lg:group-hover:bg-blue-900/70 transition-colors z-10" />
         <Image
           src={FXVisit}
           alt="Conference room setup"
@@ -43,7 +43,7 @@ const SplitScreenCTA = () => {
 
       {/* Freight Xchange Section */}
       <Link href="/freight-xchange" className="relative group overflow-hidden min-h-[300px] md:min-h-0">
-        <div className="absolute inset-0 bg-red-900/60 group-hover:bg-red-900/70 transition-colors z-10" />
+        <div className="absolute inset-0 bg-red-900/60 lg:group-hover:bg-red-900/70 transition-colors z-10" />
         <Image
           src={BXVisit}
           alt="Logistics truck"

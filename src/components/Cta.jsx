@@ -40,7 +40,7 @@ function Cta() {
   
     <button
       onClick={() => setIsModalOpen(true)}
-      className="bg-white/10 text-white border-[3px] mx-auto mt-4 px-8 py-4 flex items-center  border-white/60 hover:border-white/60 rounded-lg hover:bg-[#5216ab] transition-all duration-300 group transform hover:translate-x-2">
+      className="bg-white/10 text-white border-[3px] mx-auto mt-4 px-8 py-4 flex items-center  border-white/60 hover:border-white rounded-lg hover:bg-[#5216ab] transition-all duration-300 group transform hover:translate-x-2">
       Scheduled a Meeting
       <svg
                 xmlns="http://www.w3.org/2000/svg"
