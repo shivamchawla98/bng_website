@@ -251,7 +251,7 @@ export default function Pricing() {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <div className="mx-auto max-w-8xl px-4 sm:px-6">
         {/* Currency Toggle */}
         <div className="mx-auto max-w-5xl text-center">
           <p className="text-[40px] sm:text-[55px] font-bold text-gray-700 relative z-10">
