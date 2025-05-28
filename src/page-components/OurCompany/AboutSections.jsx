@@ -14,15 +14,15 @@ import GrowthOppurtinityVector from "../../../public/about/Growth-&-Opportunity.
 const AboutSection = () => {
   return (
     <>
-      <section className="lg:pt-24 bg-primaryBg relative overflow-x-hidden">
+      <section className="lg:pt-24 w-full bg-primaryBg relative overflow-x-hidden">
         <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 sm:gap-12 pt-16 pb-14">
             <div className="relative flex justify-center items-center">
-              <div className="hidden lg:block absolute left-8 sm:left-12 lg:left-16 bottom-12 h-[300px] sm:h-[350px] w-[90%] sm:w-[400px] rounded-md"></div>
+              <div className="hidden lg:block absolute left-8 sm:left-12 lg:left-16 bottom-12 h-[350px] sm:h-[400px] w-[90%] sm:w-[450px] rounded-md"></div>
               <Image
-                className="rounded-xl transform transition-transform duration-500 hover:scale-105 sm:hover:scale-110 shadow-2xl shadow-slate-700 object-cover z-10 w-full max-w-[90%] sm:max-w-[400px]"
+                className="rounded-xl transform transition-transform duration-500 hover:scale-105 sm:hover:scale-110 shadow-2xl shadow-slate-700 object-cover z-10 w-full max-w-[400px] lg:max-w-[90%]"
                 src={about1}
-                height={350}
+                height={450}
                 alt="About Us Image 1"
               />
             </div>
@@ -52,7 +52,7 @@ const AboutSection = () => {
             <div className="relative flex justify-center items-center lg:order-2">
               <div className="hidden lg:block absolute right-8 sm:right-12 lg:right-16 bottom-12 h-[300px] sm:h-[350px] w-[90%] sm:w-[400px] rounded-md"></div>
               <Image
-                className="rounded-xl shadow-2xl transform transition-transform duration-500 hover:scale-105 sm:hover:scale-110 shadow-slate-700 object-cover z-10 w-full max-w-[90%] sm:max-w-[400px]"
+                className="rounded-xl shadow-2xl transform transition-transform duration-500 hover:scale-105 sm:hover:scale-110 shadow-slate-700 object-cover z-10 w-full  lg:max-w-[90%]"
                 src={about2}
                 height={350}
                 alt="About Us Image 2"
@@ -130,7 +130,7 @@ const AboutSection = () => {
             <div className="relative flex justify-center items-center">
               <div className="hidden lg:block absolute left-8 sm:left-12 lg:left-16 bottom-12 h-[300px] sm:h-[350px] w-[90%] sm:w-[400px] rounded-md"></div>
               <Image
-                className="transform transition-transform duration-500 hover:scale-105 sm:hover:scale-110 rounded-xl shadow-2xl shadow-slate-700 object-cover z-10 w-full max-w-[90%] sm:max-w-[400px]"
+                className="rounded-xl shadow-2xl transform transition-transform duration-500 hover:scale-105 sm:hover:scale-110 shadow-slate-700 object-cover z-10 w-full  lg:max-w-[90%]"
                 src={OurVisionImage}
                 height={350}
                 alt="Why Us Image"
@@ -171,7 +171,7 @@ const AboutSection = () => {
             <div className="relative flex justify-center items-center lg:order-2">
               <div className="hidden lg:block absolute right-8 sm:right-12 lg:right-16 bottom-12 h-[300px] sm:h-[350px] w-[90%] sm:w-[400px] rounded-md"></div>
               <Image
-                className="rounded-xl transform transition-transform duration-500 hover:scale-105 sm:hover:scale-110 shadow-2xl shadow-slate-700 object-cover z-10 w-full max-w-[90%] sm:max-w-[400px]"
+                className="rounded-xl shadow-2xl transform transition-transform duration-500 hover:scale-105 sm:hover:scale-110 shadow-slate-700 object-cover z-10 w-full  lg:max-w-[90%]"
                 src={OurMissionImage}
                 height={350}
                 alt="Vision Image"

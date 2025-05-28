@@ -29,7 +29,10 @@ export default function Home() {
 
       <div className="w-screen">
         <HeroSection />
+        <div className="relative">
+
         <Widget />
+        </div>
         <AboutUs />
         <MemberBenefits />
         <TestimonialSlider />
