@@ -106,7 +106,7 @@ export default function TwigOfferSlider() {
     <section className="bg-secondryBg mt-8 py-8 sm:py-14 lg:py-24 relative">
       <div className="container relative mx-auto px-4">
         <div className="mb-6 relative sm:mb-10 text-center">
-          <h2 className="text-4xl sm:text-5xl lg:text-[55px] font-bold text-[#27293B] mb-6 sm:mb-12 relative z-10">
+          <h2 className="text-[40px] lg:text-[55px] font-bold text-[#27293B] mb-6 sm:mb-12 relative z-10">
             Why <span className="text-primary">Us ?</span>
           </h2>
           <h2

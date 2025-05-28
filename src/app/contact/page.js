@@ -26,7 +26,7 @@ const ContactPage = () => {
 
       <div className="min-h-screen bg-white">
         <ContactHero />
-        <div className="container mx-auto px-4 pt-12 -mb-4 relative z-10">
+        <div className="container mx-auto px-4 lg:pt-12 -mb-4 relative z-10">
           <div className="grid md:grid-cols-1 gap-8 mb-16">
             <Form />
             {/* <QuoteForm /> */}

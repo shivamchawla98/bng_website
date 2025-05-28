@@ -27,7 +27,7 @@ function AboutUs() {
             Our <span className="text-[#5216ab]">Story</span>
           </h2>
           <h2
-            className="absolute -top-[34px] sm:-top-[40px] md:-top-[40px] left-1 sm:-left-8 md:-left-16 text-6xl  md:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+            className="absolute -top-[34px] sm:-top-[40px] md:-top-[40px] left-1 sm:-left-8 md:-left-16 text-[40px]  md:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
             aria-hidden="true"
           >
             Our Story

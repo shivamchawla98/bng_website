@@ -243,7 +243,7 @@ function MemberBenefits() {
         ref={sectionRef}
         className="relative z-10 flex flex-col justify-center w-full px-4 sm:px-6 md:px-8 py-10 md:py-14"
       >
-        {/* Top-right Patch */}
+        {/* Top-right Patch */} 
         {/* <div
           className="absolute top-16 right-0 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] rounded-full"
           style={{
@@ -259,7 +259,7 @@ function MemberBenefits() {
             Member <span className="text-primary">Benefits</span>
           </h2>
           <h2
-            className="absolute top-[-34px] md:top-[-36px] left-0 lg:-left-[1%] text-center w-full text-5xl  md:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+            className="absolute top-[-34px] md:top-[-36px] left-0 lg:-left-[1%] text-center w-full text-[40px]  md:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
             aria-hidden="true"
           >
             Member Benefits

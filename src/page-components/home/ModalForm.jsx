@@ -332,7 +332,7 @@ const ModalMembershipForm = ({ isOpen, onClose }) => {
                             <div className="flex items-center mb-2">
                               <IconComponent className={`h-5 w-5 mr-2 ${tier.textColor}`} />
                               <p className="font-bold text-gray-900">{tier.priceMonthly}</p>
-                              <span className="text-gray-500 text-sm ml-1">/month</span>
+                              <span className="text-gray-500 text-sm ml-1">/Year</span>
                             </div>
                             <p className="text-sm text-gray-600 mb-3">{tier.description}</p>
                             <ul className="text-xs text-gray-500 space-y-1">

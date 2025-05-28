@@ -42,7 +42,7 @@ const SecuritySteps = () => {
           Multilayer <span className="text-primary">Validation</span>
         </h2>
         <h2
-          className="absolute top-[-28px] sm:top-[-25px] lg:top-[-59px] left-0 w-full text-center text-5xl lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+          className="absolute top-[-28px] sm:top-[-25px] lg:top-[-59px] left-0 w-full text-center text-[40px] lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
           aria-hidden="true"
         >
           Multilayer Validation

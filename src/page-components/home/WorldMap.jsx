@@ -237,7 +237,7 @@ const WorldMap = () => {
           Worldwide <span className="text-primary">Reach</span>
         </h2>
         <h2
-          className="absolute text-center -top-[8px] lg:-top-[17px] left-0 lg:left-[1%] w-full text-5xl  lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+          className="absolute text-center -top-[8px] lg:-top-[17px] left-0 lg:left-[1%] w-full text-[40px]  lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
           aria-hidden="true"
         >
           Worldwide Reach

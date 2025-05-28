@@ -146,7 +146,7 @@ const AboutSection = () => {
                   Our <span className="text-[#5216ab]">Vision</span>
                 </h2>
                 <h2
-                  className="absolute -top-[15px] sm:-top-[20px] md:-top-[30px] left-1/2 lg:left-0 transform lg:transform-none -translate-x-1/2 text-[50px] sm:text-[60px] md:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+                  className="absolute -top-[15px] sm:-top-[20px] md:-top-[30px] left-1/2 lg:left-0 transform lg:transform-none -translate-x-1/2 text-[60px] md:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
                   aria-hidden="true"
                 >
                   Our Vision
