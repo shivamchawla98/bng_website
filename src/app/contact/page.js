@@ -22,7 +22,7 @@ export const metadata = {
 const ContactPage = () => {
   return (
     <>
- \
+ 
 
       <div className="min-h-screen bg-white">
         <ContactHero />
