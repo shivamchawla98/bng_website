@@ -120,7 +120,7 @@ export default function BusinessXchangePage() {
               height={300}
               sizes="(max-width: 768px) 100vw, 33vw"
             />
-            <button className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-4 sm:px-6 py-2 sm:py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent transition-all duration-300 w-full sm:w-auto justify-center sm:justify-start text-sm sm:text-base">
+            {/* <button className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-4 sm:px-6 py-2 sm:py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent transition-all duration-300 w-full sm:w-auto justify-center sm:justify-start text-sm sm:text-base">
               Learn More
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -134,7 +134,7 @@ export default function BusinessXchangePage() {
                   clipRule="evenodd" 
                 />
               </svg>
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
