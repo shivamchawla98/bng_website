@@ -77,6 +77,8 @@ const Footer = () => {
                 { href: "/about-us/#values", label: "Our Values" },
                 { href: "/about-us/#vision", label: "Our Visions" },
                 { href: "/about-us/#mission", label: "Our Mission" },
+                { href: "/cancelation-refund", label: "Cancellation & Refund" },
+                { href: "/shipping-exchange", label: "Shipping and Exchange Policy" },
                 // { href: "#", label: "What We Do" },
               ]}
             />
