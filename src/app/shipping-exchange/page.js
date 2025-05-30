@@ -33,7 +33,7 @@ const page = () => {
           <p className="text-gray-800">
             For service-related assistance or support, please contact us at:
           </p>
-          <p className="font-medium">📧 <span className="font-semibold">support@bnglogisticsnetwork.com</span></p>
+          <p className="font-medium">📧 <span className="font-semibold text-gray-700">support@bnglogisticsnetwork.com</span></p>
         </section>
       </div>
     </div>
