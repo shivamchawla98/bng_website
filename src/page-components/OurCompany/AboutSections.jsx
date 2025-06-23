@@ -187,7 +187,7 @@ const AboutSection = () => {
                   Our <span className="text-primary">Mission</span>
                 </h2>
                 <h2
-                  className="absolute top-[-15px] sm:top-[-20px] left-1/2 lg:left-0 transform lg:transform-none -translate-x-1/2 text-5xl lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2 min-w-[max-content]"
+                  className="absolute top-[-15px] sm:top-[-20px] left-1/2 lg:left-0 transform lg:transform-none -translate-x-1/2 text-4xl lg:text-[65px] font-bold text-[#27293B] opacity-[3%] leading-none z-2 min-w-[max-content]"
                   aria-hidden="true"
                 >
                   Our Mission

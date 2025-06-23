@@ -132,7 +132,7 @@ export default function Pricing() {
         {
           name: 'Branch Offices (Same Country / Within Company)',
           tiers: {
-            Trial: '1HQ + 9 Branch (After That $499 Branch)',
+            Trial: '',
             Standard: '',
             Premium: '1HQ + 3 Branch (After That $499 Branch)',
             Elite: '1HQ + 9 Branch (After That $499 Branch)',
@@ -155,7 +155,7 @@ export default function Pricing() {
         },
         {
           name: 'Pr And Marketing',
-          tiers: { Trial: '15 Posts Per Month', Standard: '', Premium: '4 Posts Per Month', Elite: '15 Posts Per Month' },
+          tiers: { Trial: '', Standard: '', Premium: '4 Posts Per Month', Elite: '15 Posts Per Month' },
           tooltip: 'Create your visibility to global trade & exim market',
         },
         { name: 'Be On Top Search Results', tiers: { Trial: true, Standard: false, Premium: false, Elite: true } },
