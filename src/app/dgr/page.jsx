@@ -123,7 +123,7 @@ export default function DGRPage() {
 
     <div className="flex flex-col md:flex-row min-h-screen">
       {/* Sidebar Navigation */}
-      <aside className="w-full md:w-[256px] pb-6 bg-white p-4 md:fixed md:top-24  md:h-screen z-10 border-r border-gray-200">
+      <aside className="w-full md:w-[256px] pb-6 bg-white p-4 md:fixed md:top-[103px]  md:h-screen z-10 border-r border-gray-200">
         {/* Fixed Header */}
         <div className="mb-6 pt-4">
           <h1 className="text-lg font-bold flex items-center pl-4 text-gray-800">
