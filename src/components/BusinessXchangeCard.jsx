@@ -21,7 +21,7 @@ function BusinessXchangeCard({ data, isCurrent }) {
   };
 
   return (
-    <div className={`bg-white shadow-md rounded-lg p-3 sm:p-4 mb-3 sm:mb-4 flex flex-col sm:flex-row items-start sm:items-center justify-between text-gray-600 ${!isCurrent ? 'filter blur-sm' : ''}`}>
+    <div className={`bg-white shadow-md rounded-lg p-3 sm:p-4 mb-3 sm:mb-4 flex flex-col sm:flex-row items-start sm:items-center justify-between text-gray-600 `}>
       <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 w-full">
         <div className="flex items-center">
           <FlagIcon code={countryCodes[originCountry]} size={24} className="mr-2 sm:mr-2" />

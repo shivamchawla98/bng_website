@@ -23,9 +23,9 @@ export default function RootLayout({ children }) {
         {/* Only include necessary meta tags if needed; fonts are handled by next/font */}
       </head>
       <GoogleTagManager gtmId="GTM-5PGZMFJ6" />
+        <ClientApolloProvider>
       <body className="antialiased bg-[#E6EBF4] overflow-x-hidden">
         <Header />
-        <ClientApolloProvider>
           <noscript>
             <iframe
               src="https://www.googletagmanager.com/ns.html?id=GTM-5PGZMFJ6"
@@ -35,10 +35,10 @@ export default function RootLayout({ children }) {
             ></iframe>
           </noscript>
           {children}
-        </ClientApolloProvider>
         <Cta />
         <Footer />
       </body>
+        </ClientApolloProvider>
     </html>
   );
 }
