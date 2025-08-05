@@ -5,7 +5,7 @@ import Head from 'next/head' // Import Head from next/head
 import { BenifitsHero } from '@/page-components/Benifits/BenifitsHero'
 import BenifitsSecondSection from '@/page-components/Benifits/BenifitsSecondSection'
 import BenifitsThirdSection from '@/page-components/Benifits/BenifitsThirdSection'
-import MemberBenefits from '@/page-components/Benifits/MemberBenifits'
+import MemberBenifits from '@/page-components/Benifits/MemberBenifits'
 import StatsCounter from '@/page-components/Benifits/StatsCounter'
 import SplitScreenCTA from '@/page-components/Benifits/SplitScreenCTA'
 import OurCoreValues from '@/page-components/Benifits/OurCoreValues'
@@ -37,7 +37,7 @@ function Benefits() {
         {/* <StatsCounter/> */}
         <WhyUs />
         {/* <BenifitsThirdSection />
-        <MemberBenefits/> */}
+        <MemberBenifits/> */}
         <SplitScreenCTA/>
       </div>
     </>
