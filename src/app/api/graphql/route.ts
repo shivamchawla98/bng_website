@@ -2,16 +2,16 @@
 import { NextResponse } from 'next/server';
 
 export async function POST(request) {
-  console.log('Received POST request to /api/graphql', process.env.API_KEY);
-  console.log('API_KEY:', process.env.API_KEY); // Debug
+  console.log('Received POST request to /api/graphql', process.env.NEXT_PUBLIC_API_KEY);
+  console.log('API_KEY:', process.env.NEXT_PUBLIC_API_KEY); // Debug
   try {
     const body = await request.json();
-    const response = await fetch(process.env.GRAPHQL_URI, {
+    const response = await fetch(process.env.NEXT_PUBLIC_GRAPHQL_URI, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': process.env.API_KEY,
-        'x-api-access-email': process.env.API_ACCESS_EMAIL,
+        'x-api-key': process.env.NEXT_PUBLIC_API_KEY,
+        'x-api-access-email': process.env.NEXT_PUBLIC_API_ACCESS_EMAIL,
       },
       body: JSON.stringify(body),
     });
