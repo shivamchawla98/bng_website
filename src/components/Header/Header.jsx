@@ -127,7 +127,7 @@ function Header() {
             >
               Become a Member
             </Link>
-          </div>
+          </div> 
         </div>
 
         {/* Mobile Menu Button */}

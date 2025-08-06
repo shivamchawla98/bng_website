@@ -55,7 +55,7 @@ function BenifitsThirdSection() {
             </p>
           </div>
         </div>
-        <button  className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent transition-all duraton-300 bg-primary transform hover:translate-x-2">
+        <a href="https://app.bnglogisticsnetwork.com/register"  className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent transition-all duraton-300 bg-primary transform hover:translate-x-2">
           Become a member
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ function BenifitsThirdSection() {
               d="M14 5l7 7m0 0l-7 7m7-7H3"
             />
           </svg>
-        </button>
+        </a>
       </div>
     </div>
   );
