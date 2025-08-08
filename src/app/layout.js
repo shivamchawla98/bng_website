@@ -8,24 +8,28 @@ import { GoogleTagManager } from '@next/third-parties/google';
 
 // Configure Lato with desired weights, styles, and subset
 const lato = Lato({
-  weight: ['100', '300', '400', '700', '900'], // Fixed: string literals
+  weight: ['100', '300', '400', '700', '900'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
   display: 'swap',
 });
 
-
-
 export default function RootLayout({ children }) {
+  // Check if we're in staging environment
+  const isStaging = process.env.NEXT_PUBLIC_ENVIRONMENT === 'staging';
+
   return (
     <html lang="en" className={lato.className}>
       <head>
-        {/* Only include necessary meta tags if needed; fonts are handled by next/font */}
+        {/* ADD THE NO-INDEX, NO-FOLLOW HERE */}
+        {isStaging && (
+          <meta name="robots" content="noindex, nofollow" />
+        )}
       </head>
       <GoogleTagManager gtmId="GTM-5PGZMFJ6" />
-        <ClientApolloProvider>
-      <body className="antialiased bg-[#E6EBF4] overflow-x-hidden">
-        <Header />
+      <ClientApolloProvider>
+        <body className="antialiased bg-[#E6EBF4] overflow-x-hidden">
+          <Header />
           <noscript>
             <iframe
               src="https://www.googletagmanager.com/ns.html?id=GTM-5PGZMFJ6"
@@ -35,10 +39,10 @@ export default function RootLayout({ children }) {
             ></iframe>
           </noscript>
           {children}
-        <Cta />
-        <Footer />
-      </body>
-        </ClientApolloProvider>
+          <Cta />
+          <Footer />
+        </body>
+      </ClientApolloProvider>
     </html>
   );
 }
