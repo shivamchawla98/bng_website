@@ -7,6 +7,8 @@ import { ArrowRight } from 'lucide-react';
 import { FlagIcon } from 'react-flag-kit';
 import { motion } from 'framer-motion';
 import getCountryCode from '../../../utils/getCountryCode';
+import businessExchangeImg from '../images/benifits/BusinessXchange_Header.jpg'
+
 
 // GraphQL Query for apiBusinessLeads
 const GET_BUSINESS_LEADS = gql`
@@ -170,7 +172,10 @@ console.log("countrycode :: ",getCountryCode(destinationPort.country));
           <span className="text-base text-gray-600">
             Posted: <span className="font-normal text-indigo-500">{new Date(createdAt).toLocaleDateString() || 'N/A'}</span>
           </span>
-          <div className="space-x-3">
+          <a
+          href='https://app.bnglogisticsnetwork.com/business/opportunities'
+          target='_blank'
+          className="space-x-3">
             <motion.button
               className="px-5 py-2 text-base bg-indigo-500 text-white rounded-lg hover:bg-indigo-700 transition-colors"
               whileHover={{ scale: 1.05 }}
@@ -178,7 +183,7 @@ console.log("countrycode :: ",getCountryCode(destinationPort.country));
             >
               Explore
             </motion.button>
-          </div>
+          </a>
         </div>
       </div>
     </motion.div>
@@ -191,12 +196,15 @@ const BusinessXchangeHero = () => {
     <div
       className="relative h-[300px] md:h-[400px] bg-primary flex items-center justify-start pl-10"
       style={{
-        backgroundImage: `url(/images/benifits/BusinessXchange_Header.jpg)`,
+        backgroundImage: `url(${businessExchangeImg.src})`, // Fixed: Added url() wrapper
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
-      <div className="flex flex-col">
+      {/* Add indigo tint overlay */}
+      <div className="absolute inset-0 bg-indigo-500/50"></div>
+      
+      <div className="flex flex-col relative z-10">
         <h3 className="text-3xl sm:text-3xl md:text-5xl font-light mb-4 text-white relative z-10">
           Business Xchange
         </h3>
@@ -207,6 +215,7 @@ const BusinessXchangeHero = () => {
     </div>
   );
 };
+
 
 // Main Page Component
 export default function BusinessXchangePage() {
@@ -241,7 +250,7 @@ export default function BusinessXchangePage() {
 ))}
             </div>
           </div>
-          <div className="w-full md:w-1/3 p-4 sm:p-6 bg-white shadow-lg rounded-lg">
+          <div className="w-full md:w-1/3 p-4 max-h-96 sm:p-6 bg-white shadow-lg rounded-lg">
             <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-[#27293B]">
               About Business Xchange
             </h2>
