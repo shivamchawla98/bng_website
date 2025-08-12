@@ -8,6 +8,8 @@ import { FlagIcon } from 'react-flag-kit';
 import { motion } from 'framer-motion';
 import getCountryCode from '../../../utils/getCountryCode';
 import businessExchangeImg from '../images/benifits/BusinessXchange_Header.jpg'
+import newFreightImage from '@/app/images/home/Logistic2.png';
+import Image from 'next/image';
 
 
 // GraphQL Query for apiBusinessLeads
@@ -173,7 +175,7 @@ console.log("countrycode :: ",getCountryCode(destinationPort.country));
             Posted: <span className="font-normal text-indigo-500">{new Date(createdAt).toLocaleDateString() || 'N/A'}</span>
           </span>
           <a
-          href='https://app.bnglogisticsnetwork.com/business/opportunities'
+          href={`https://app.bnglogisticsnetwork.com/business/opportunities#${uniqueId}`}
           target='_blank'
           className="space-x-3">
             <motion.button
@@ -245,12 +247,12 @@ export default function BusinessXchangePage() {
       <div className="w-8 h-8 border-4 border-t-indigo-500 border-gray-200 rounded-full animate-spin"></div>
     </div>)}
               {error && <p>Error: {error.message}. Displaying mock data.</p>}
-              {leads.slice(0, 3).map((lead) => (
+              {leads.map((lead) => (
   <BusinessXchangeCard key={lead.id} data={lead} />
 ))}
             </div>
           </div>
-          <div className="w-full md:w-1/3 p-4 max-h-96 sm:p-6 bg-white shadow-lg rounded-lg">
+          <div className="w-full md:w-1/3 p-4  sm:p-6 bg-white shadow-lg rounded-lg">
             <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-[#27293B]">
               About Business Xchange
             </h2>
@@ -262,6 +264,8 @@ export default function BusinessXchangePage() {
               <li>Global reach and local expertise</li>
               <li>Customizable service packages</li>
             </ul>
+            <Image src={newFreightImage} alt="Freight Xchange" className="w-full h-auto rounded-lg mb-6" />
+            {/* <Image src={businessImage.src} alt="Business Xchange" className="w-full h-auto rounded-lg shadow-md" /> */}
           </div>
         </div>
       </div>
