@@ -34,8 +34,18 @@ import logo28 from "../../../public/LOGO_MEMBERS/27.png";
 import logo29 from "../../../public/LOGO_MEMBERS/29.png";
 import logo30 from "../../../public/LOGO_MEMBERS/30.png";
 
+import logo31 from "../../../public/LOGO_MEMBERS/31.png";
+import logo32 from "../../../public/LOGO_MEMBERS/32.png";
+import logo33 from "../../../public/LOGO_MEMBERS/33.png";
+import logo34 from "../../../public/LOGO_MEMBERS/34.png";
+
+import logo35 from "../../../public/LOGO_MEMBERS/35.png";
+import logo36 from "../../../public/LOGO_MEMBERS/36.png";
+import logo37 from "../../../public/LOGO_MEMBERS/37.png";
+
 function LatestMembers() {
   const logos = [
+    logo31, logo32, logo33, logo34, logo35, logo36, logo37,
     logo1, logo2, logo3, logo5, logo6, logo8, logo9, logo10, logo11, logo12,
     logo13, logo14, logo15, logo16, logo17, logo18, logo19, logo20, logo21, logo24,
     logo25, logo26, logo28, logo29, logo30
