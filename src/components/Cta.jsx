@@ -38,8 +38,11 @@ function Cta() {
       See how <span className='font-bold'>BNG</span>  can work for you
     </p>
   
-    <button
-      onClick={() => setIsModalOpen(true)}
+    <a
+    href='https://calendly.com/membership-bnglogisticsnetwork'
+      target="_blank"
+      rel="noopener noreferrer"
+      // onClick={() => setIsModalOpen(true)}
       className="bg-white/10 text-white border-[3px] mx-auto mt-4 px-8 py-4 flex items-center  border-white/60 hover:border-white rounded-lg hover:bg-[#5216ab] transition-all duration-300 group transform hover:translate-x-2">
       Scheduled a Meeting
       <svg
@@ -55,7 +58,7 @@ function Cta() {
                   d="M14 5l7 7m0 0l-7 7m7-7H3"
                 />
               </svg>
-    </button>
+    </a>
   </div>
 </div>
   )
