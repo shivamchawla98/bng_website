@@ -128,13 +128,13 @@ export default function Pricing() {
     {
       name: 'Team Management & Offices',
       features: [
-        { name: 'Team Members / Users (Same Country / Within Company)', tiers: { Trial: 'Unlimited', Standard: '1 Users', Premium: '6 Users', Elite: 'Unlimited' } },
+        { name: 'Team Members / Users (Same Country / Within Company)', tiers: { Trial: 'Unlimited', Standard: '1 Users', Premium: '4 Users', Elite: 'Unlimited' } },
         {
           name: 'Branch Offices (Same Country / Within Company)',
           tiers: {
             Trial: '',
             Standard: '',
-            Premium: '1HQ + 3 Branch (After That $499 Branch)',
+            Premium: '1HQ + 2 Branch (After That $499 Branch)',
             Elite: '1HQ + 9 Branch (After That $499 Branch)',
           },
         },
@@ -145,17 +145,17 @@ export default function Pricing() {
       features: [
         {
           name: 'Business Xchange (Monthly Post/Bid)',
-          tiers: { Trial: 'Unlimited', Standard: '2 Enquiry', Premium: '15 Enquiries', Elite: 'Unlimited' },
+          tiers: { Trial: 'Unlimited', Standard: '2 Enquiry', Premium: '5 Enquiries', Elite: 'Unlimited' },
           tooltip: 'A robust system with freight enquiries from global trade community / post your enquiry / quote for enquires',
         },
         {
           name: 'Freight Xchange (Monthly Post Of Your Promotional Freight Rates)',
-          tiers: { Trial: 'Unlimited', Standard: '2 Post', Premium: '15 Posts', Elite: 'Unlimited' },
+          tiers: { Trial: 'Unlimited', Standard: '2 Post', Premium: '5 Posts', Elite: 'Unlimited' },
           tooltip: 'A robust system gives you opportunity to grow your visibility by posting your freight rates',
         },
         {
           name: 'Pr And Marketing',
-          tiers: { Trial: '', Standard: '', Premium: '4 Posts Per Month', Elite: '15 Posts Per Month' },
+          tiers: { Trial: '', Standard: '', Premium: '2 Posts Per Month', Elite: '15 Posts Per Month' },
           tooltip: 'Create your visibility to global trade & exim market',
         },
         { name: 'Be On Top Search Results', tiers: { Trial: true, Standard: false, Premium: false, Elite: true } },
@@ -169,7 +169,7 @@ export default function Pricing() {
           tiers: {
             Trial: false,
             Standard: false,
-            Premium: 'Up To $20,000 Payment Protection',
+            Premium: 'Up To $10,000 Payment Protection',
             Elite: 'Up To $50,000 Payment Protection',
           },
         },
