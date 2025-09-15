@@ -224,13 +224,13 @@ export default function BusinessXchangePage() {
   const { loading, error, data } = useQuery(GET_BUSINESS_LEADS, {
     variables: {
       filters: {
-        statuses: ['OPEN'],
+        statuses: ['OPEN', 'EXPIRED', 'ACCEPTED', 'QUOTATION_STARTED'],
       },
     },
   });
 
   // Use mock data if API fails
-  const leads = error ? mockData.apiBusinessLeads : data?.apiBusinessLeads || [];
+  const leads =  data?.apiBusinessLeads || [];
 
   return (
     <>
@@ -247,7 +247,7 @@ export default function BusinessXchangePage() {
       <div className="w-8 h-8 border-4 border-t-indigo-500 border-gray-200 rounded-full animate-spin"></div>
     </div>)}
               {error && <p>Error: {error.message}. Displaying mock data.</p>}
-              {leads.map((lead) => (
+              {leads?.map((lead) => (
   <BusinessXchangeCard key={lead.id} data={lead} />
 ))}
             </div>
