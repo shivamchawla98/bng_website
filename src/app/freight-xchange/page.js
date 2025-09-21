@@ -88,8 +88,9 @@ export default function FreightXchangePage() {
   // FIX: Changed from data?.freightLeads to data?.apiFreightLeads
   const freightLeads = data?.apiFreightLeads || [];
   
+  // FIX: Create a shallow copy before sorting to avoid immutable array error
   const limitedFreightLeads = useMemo(() => {
-    return freightLeads
+    return [...freightLeads] // Create a copy first to avoid "read-only property" error
       .sort((a, b) => {
         const dateA = new Date(a.createdAt).getTime();
         const dateB = new Date(b.createdAt).getTime();
