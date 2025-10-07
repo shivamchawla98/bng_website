@@ -74,16 +74,16 @@ export default function Pricing() {
 
   // Define tiers - Free tier remains unchanged
   const tiers = [
-    {
-      name: 'Trial',
-      id: 'tier-Free',
-      href: '#',
-      priceYearly: '$0',
-      priceValue: 0,
-      mostPopular: false,
-      icon: GiftIcon,
-      durationText: '30 Days',
-    },
+    // {
+    //   name: 'Trial',
+    //   id: 'tier-Free',
+    //   href: '#',
+    //   priceYearly: '$0',
+    //   priceValue: 0,
+    //   mostPopular: false,
+    //   icon: GiftIcon,
+    //   durationText: '30 Days',
+    // },
     {
       name: 'Standard',
       id: 'tier-Standard',
@@ -440,7 +440,6 @@ export default function Pricing() {
                 <col className="w-1/4" />
                 <col className="w-1/4" />
                 <col className="w-1/4" />
-                <col className="w-1/4" />
               </colgroup>
               <thead>
                 <tr>
@@ -527,7 +526,7 @@ export default function Pricing() {
                     <tr>
                       <th
                         scope="colgroup"
-                        colSpan={5}
+                        colSpan={4}
                         className={classNames(
                           sectionIdx === 0 ? 'pt-8' : 'pt-16',
                           'pb-4 font-semibold text-lg text-primary'
