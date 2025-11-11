@@ -1,5 +1,9 @@
-
 User-agent: *
-Disallow: 
+Allow: /
+
 Disallow: /cgi-bin/
+
 Sitemap: https://bnglogisticsnetwork.com/sitemap.xml
+
+X-Robots-Tag: index, follow
+
