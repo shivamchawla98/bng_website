@@ -1,4 +1,3 @@
-
 'use client'
 import { FaPlane, FaBoxOpen, FaClipboardCheck, FaTags, FaShapes, FaPallet } from 'react-icons/fa';
 import { MdImportantDevices, MdSafetyDivider } from 'react-icons/md';

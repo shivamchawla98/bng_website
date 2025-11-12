@@ -1,5 +1,20 @@
 import React from 'react';
 
+export const metadata = {
+  title: 'Privacy Policy | BNG Logistics Network',
+  description: 'Read our privacy policy to understand how BNG Logistics Network collects, uses, and protects your personal and business information. GDPR compliant data protection.',
+  openGraph: {
+    title: 'Privacy Policy | BNG Logistics Network',
+    description: 'Read our privacy policy to understand how BNG Logistics Network collects, uses, and protects your personal and business information. GDPR compliant data protection.',
+    url: 'https://bnglogisticsnetwork.com/privacy-policy',
+    siteName: 'BNG Logistics Network',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://bnglogisticsnetwork.com/privacy-policy',
+  },
+};
+
 const Page = () => {
   return (
     <div className='m-8 max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md'>

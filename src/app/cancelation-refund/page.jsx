@@ -1,5 +1,20 @@
 import React from 'react';
 
+export const metadata = {
+  title: 'Cancellation & Refund Policy | BNG Logistics Network',
+  description: 'Review our cancellation and refund policy for BNG Logistics Network memberships. Learn about our 30-day free trial, annual subscriptions, and terms for freight forwarders.',
+  openGraph: {
+    title: 'Cancellation & Refund Policy | BNG Logistics Network',
+    description: 'Review our cancellation and refund policy for BNG Logistics Network memberships. Learn about our 30-day free trial, annual subscriptions, and terms for freight forwarders.',
+    url: 'https://bnglogisticsnetwork.com/cancelation-refund',
+    siteName: 'BNG Logistics Network',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://bnglogisticsnetwork.com/cancelation-refund',
+  },
+};
+
 const page = () => {
   return (
     <div className="max-w-6xl mx-auto p-6">

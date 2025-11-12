@@ -2,8 +2,18 @@ import React from 'react'
 import IncotermsPage from './Incoterms'
 
 export const metadata = {
-  title: 'Global Logistics Network | Freight Forwarders & Industry Leaders',
-  description: 'Join BNG Logistics Network — a trusted global platform connecting logistics professionals and freight forwarders for growth, collaboration, and technology-driven solutions.',
+  title: 'Incoterms Guide | International Trade Terms | BNG Logistics Network',
+  description: 'Complete guide to Incoterms for freight forwarders and logistics professionals. Understand international commercial terms, shipping responsibilities, and trade regulations.',
+  openGraph: {
+    title: 'Incoterms Guide | International Trade Terms | BNG Logistics Network',
+    description: 'Complete guide to Incoterms for freight forwarders and logistics professionals. Understand international commercial terms, shipping responsibilities, and trade regulations.',
+    url: 'https://bnglogisticsnetwork.com/incoterms',
+    siteName: 'BNG Logistics Network',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://bnglogisticsnetwork.com/incoterms',
+  },
 };
 
 const page = () => {

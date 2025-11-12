@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    async headers() {
+    async redirects() {
         return [
             {
-                source: '/(.*)'
-            }
+                source: '/benifits',
+                destination: '/benefit',
+                permanent: true, // 301 redirect
+            },
         ]
     }
 };

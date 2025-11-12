@@ -1,5 +1,20 @@
 import React from 'react';
 
+export const metadata = {
+  title: 'Shipping & Exchange Policy | BNG Logistics Network',
+  description: 'Learn about our digital service delivery policy. BNG Logistics Network provides online freight forwarding services with no physical shipping or exchanges.',
+  openGraph: {
+    title: 'Shipping & Exchange Policy | BNG Logistics Network',
+    description: 'Learn about our digital service delivery policy. BNG Logistics Network provides online freight forwarding services with no physical shipping or exchanges.',
+    url: 'https://bnglogisticsnetwork.com/shipping-exchange',
+    siteName: 'BNG Logistics Network',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://bnglogisticsnetwork.com/shipping-exchange',
+  },
+};
+
 const page = () => {
   return (
     <div className="max-w-6xl mx-auto p-6">
