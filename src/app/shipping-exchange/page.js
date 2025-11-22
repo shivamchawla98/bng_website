@@ -1,14 +1,30 @@
 import React from 'react';
+import { WebPageSchema } from '@/components/StructuredData';
 
 export const metadata = {
-  title: 'Shipping & Exchange Policy | BNG Logistics Network',
-  description: 'Learn about our digital service delivery policy. BNG Logistics Network provides online freight forwarding services with no physical shipping or exchanges.',
+  title: 'Shipping Exchange – Global Cargo & Logistics Marketplace',
+  description: 'Connect with worldwide carriers, freight forwarders, and logistics partners through BNG’s Shipping Exchange. Share cargo inquiries and find reliable shipping solutions globally.',
+  keywords: 'shipping exchange, global cargo marketplace, freight exchange, logistics partners worldwide',
   openGraph: {
-    title: 'Shipping & Exchange Policy | BNG Logistics Network',
-    description: 'Learn about our digital service delivery policy. BNG Logistics Network provides online freight forwarding services with no physical shipping or exchanges.',
+    title: 'Shipping Exchange – Global Cargo & Logistics Marketplace',
+    description: 'Connect with worldwide carriers and freight forwarders through BNG’s Shipping Exchange. Share cargo requirements and find reliable logistics partners globally.',
     url: 'https://bnglogisticsnetwork.com/shipping-exchange',
     siteName: 'BNG Logistics Network',
     type: 'website',
+    images: [
+      {
+        url: 'https://bnglogisticsnetwork.com/BNG%20Logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'BNG Logistics Network Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Shipping Exchange – Global Cargo & Logistics Marketplace',
+    description: 'Connect with worldwide carriers and freight forwarders through BNG’s Shipping Exchange. Share cargo requirements and find reliable logistics partners globally.',
+    images: ['https://bnglogisticsnetwork.com/BNG%20Logo.png'],
   },
   alternates: {
     canonical: 'https://bnglogisticsnetwork.com/shipping-exchange',
@@ -17,7 +33,14 @@ export const metadata = {
 
 const page = () => {
   return (
-    <div className="max-w-6xl mx-auto p-6">
+    <>
+      <WebPageSchema 
+        name="Shipping Exchange – Global Cargo & Logistics Marketplace"
+        url="https://bnglogisticsnetwork.com/shipping-exchange"
+        description="A global platform where carriers and freight forwarders exchange shipping requirements and find reliable logistics partners."
+        image="https://bnglogisticsnetwork.com/BNG%20Logo.png"
+      />
+      <div className="max-w-6xl mx-auto p-6">
       <h1 className="text-2xl font-bold mb-8 text-center">Shipping and Exchange Policy</h1>
 
       <div className="space-y-8">
@@ -52,6 +75,7 @@ const page = () => {
         </section>
       </div>
     </div>
+    </>
   );
 };
 

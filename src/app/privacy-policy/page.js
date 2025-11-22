@@ -1,14 +1,30 @@
 import React from 'react';
+import { PrivacyPolicySchema } from '@/components/StructuredData';
 
 export const metadata = {
-  title: 'Privacy Policy | BNG Logistics Network',
-  description: 'Read our privacy policy to understand how BNG Logistics Network collects, uses, and protects your personal and business information. GDPR compliant data protection.',
+  title: 'Privacy Policy – BNG Logistics Network',
+  description: 'Review the Privacy Policy of BNG Logistics Network outlining data protection, user privacy, and information handling across our global platform.',
+  keywords: 'privacy policy, data protection logistics, global platform compliance',
   openGraph: {
-    title: 'Privacy Policy | BNG Logistics Network',
-    description: 'Read our privacy policy to understand how BNG Logistics Network collects, uses, and protects your personal and business information. GDPR compliant data protection.',
+    title: 'Privacy Policy – BNG Logistics Network',
+    description: 'Review the Privacy Policy of BNG Logistics Network detailing how we collect, store, and protect user data across our global logistics platform.',
     url: 'https://bnglogisticsnetwork.com/privacy-policy',
     siteName: 'BNG Logistics Network',
-    type: 'website',
+    type: 'article',
+    images: [
+      {
+        url: 'https://bnglogisticsnetwork.com/BNG%20Logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'BNG Logistics Network Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Privacy Policy – BNG Logistics Network',
+    description: 'Review the Privacy Policy of BNG Logistics Network detailing how we collect, store, and protect user data across our global logistics platform.',
+    images: ['https://bnglogisticsnetwork.com/BNG%20Logo.png'],
   },
   alternates: {
     canonical: 'https://bnglogisticsnetwork.com/privacy-policy',
@@ -17,7 +33,9 @@ export const metadata = {
 
 const Page = () => {
   return (
-    <div className='m-8 max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md'>
+    <>
+      <PrivacyPolicySchema />
+      <div className='m-8 max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md'>
       {/* Main Heading */}
       <h1 className='text-3xl font-bold text-gray-800 mb-6 border-b-2 border-gray-200 pb-4'>
         Privacy Policy
@@ -578,6 +596,7 @@ const Page = () => {
         </ul>
       </section>
     </div>
+    </>
   );
 };
 

@@ -24,7 +24,44 @@ module.exports = {
         // 'custom-nav-gradient': 'linear-gradient(to bottom, #27293B, rgb(230, 235, 244))',
         'cstm-bg-rad-grad-memb-benfts': 'radial-gradient(circle, #6853DB 20%, rgba(58, 16, 120, var(--tw-bg-opacity)) 90%)',
        },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: 'none',
+            color: '#111827',
+            a: {
+              color: '#5216ab',
+              '&:hover': {
+                color: '#3d0f7f',
+              },
+            },
+            h1: {
+              color: '#111827',
+            },
+            h2: {
+              color: '#111827',
+            },
+            h3: {
+              color: '#111827',
+            },
+            h4: {
+              color: '#111827',
+            },
+            strong: {
+              color: '#111827',
+            },
+            code: {
+              color: '#111827',
+            },
+            blockquote: {
+              color: '#374151',
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };
