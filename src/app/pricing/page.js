@@ -1,5 +1,6 @@
 import Head from "next/head"; // Import Head from next/head
 import { FAQ } from "@/components/Faq";
+import { OfferCatalogSchema } from "@/components/StructuredData";
 import BecomeHeroSection from "@/page-components/BecomeMember/BecomeHeroSection";
 import faqBackgroundImage from '../../../public/contact_us/FAQ_Image.jpg';
 import PricingTable from "@/page-components/BecomeMember/Pricing";
@@ -13,16 +14,38 @@ import SplitScreenCTA from "@/page-components/Benifits/SplitScreenCTA";
 
 
 export const metadata = {
-  title: 'Membership Pricing | BNG Logistics Network',
-  description: 'Explore flexible pricing plans for logistics professionals and freight forwarders. Join BNG Logistics Network to access premium business growth tools.',
-  // robots: 'noindex, nofollow', // Moved from <Head>
+  title: 'Pricing – Join BNG Global Logistics Network',
+  description: 'Explore pricing plans for joining the BNG Logistics Network. Affordable memberships designed for freight forwarders worldwide.',
+  openGraph: {
+    title: 'Pricing – Join BNG Global Logistics Network',
+    description: 'Explore BNG’s affordable membership plans designed for freight forwarders and logistics companies seeking global networking and digital tools.',
+    url: 'https://bnglogisticsnetwork.com/pricing',
+    siteName: 'BNG Logistics Network',
+    type: 'website',
+    images: [
+      {
+        url: 'https://bnglogisticsnetwork.com/BNG%20Logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'BNG Logistics Network Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Pricing – Join BNG Global Logistics Network',
+    description: 'Explore BNG’s affordable membership plans designed for freight forwarders and logistics companies seeking global networking and digital tools.',
+    images: ['https://bnglogisticsnetwork.com/BNG%20Logo.png'],
+  },
+  alternates: {
+    canonical: 'https://bnglogisticsnetwork.com/pricing',
+  },
 };
 
 export default function BecomeAMember() {
   return (
     <>
-    
-
+      <OfferCatalogSchema />
       <div>
         <BecomeHeroSection />
         {/* <ExistingMemberRibbon /> */}

@@ -30,3 +30,37 @@ body {
     font-family: 'Paytone One', sans-serif;
   }
 }
+
+/* Blog Content Styling - Ensure visibility */
+.prose {
+  color: #111827 !important; /* gray-900 */
+}
+
+.prose p,
+.prose li,
+.prose td,
+.prose th,
+.prose span,
+.prose div {
+  color: #111827 !important; /* gray-900 */
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  color: #111827 !important; /* gray-900 */
+  font-weight: 700 !important;
+}
+
+.prose a {
+  color: #5216ab !important; /* primary color */
+}
+
+.prose strong,
+.prose b {
+  color: #111827 !important; /* gray-900 */
+  font-weight: 700 !important;
+}

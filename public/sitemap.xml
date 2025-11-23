@@ -9,73 +9,87 @@
 
 <url>
   <loc>https://bnglogisticsnetwork.com/</loc>
-  <lastmod>2025-06-12T18:02:54+00:00</lastmod>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://bnglogisticsnetwork.com/benefit</loc>
-  <lastmod>2025-06-12T18:02:54+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://bnglogisticsnetwork.com/about-us</loc>
-  <lastmod>2025-06-12T18:02:54+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://bnglogisticsnetwork.com/pricing</loc>
-  <lastmod>2025-06-12T18:02:54+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.95</priority>
 </url>
 <url>
   <loc>https://bnglogisticsnetwork.com/contact</loc>
-  <lastmod>2025-06-12T18:02:54+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
 </url>
 <url>
   <loc>https://bnglogisticsnetwork.com/business-xchange</loc>
-  <lastmod>2025-06-12T18:02:54+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
 </url>
 <url>
   <loc>https://bnglogisticsnetwork.com/freight-xchange</loc>
-  <lastmod>2025-06-12T18:02:54+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
 </url>
 <url>
   <loc>https://bnglogisticsnetwork.com/cancelation-refund</loc>
-  <lastmod>2025-06-12T18:02:54+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.60</priority>
 </url>
 <url>
   <loc>https://bnglogisticsnetwork.com/shipping-exchange</loc>
-  <lastmod>2025-06-12T18:02:54+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
 </url>
 <url>
   <loc>https://bnglogisticsnetwork.com/incoterms</loc>
-  <lastmod>2025-06-12T18:02:54+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://bnglogisticsnetwork.com/dgr</loc>
-  <lastmod>2025-06-12T18:02:54+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://bnglogisticsnetwork.com/uld</loc>
-  <lastmod>2025-06-12T18:02:54+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://bnglogisticsnetwork.com/privacy-policy</loc>
-  <lastmod>2025-06-12T18:02:54+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
 </url>
 <url>
   <loc>https://bnglogisticsnetwork.com/terms-of-use</loc>
-  <lastmod>2025-06-12T18:02:54+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
 </url>
 
 

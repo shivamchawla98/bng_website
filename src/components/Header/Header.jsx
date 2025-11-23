@@ -82,6 +82,9 @@ function Header() {
           <a href="/pricing" className={`font-medium hover:text-primary text-[18px] ${isActive("/pricing") ? "text-primary font-bold" : ""}`}>
             Pricing
           </a>
+          <a href="/blog" className={`font-medium hover:text-primary text-[18px] ${isActive("/blog") || pathname?.startsWith("/blog/") ? "text-primary font-bold" : ""}`}>
+            Blog
+          </a>
           <a href="/contact" className={`font-medium hover:text-primary text-[18px] ${isActive("/contact") ? "text-primary font-bold" : ""}`}>
             Contact Us
           </a>
@@ -150,6 +153,9 @@ function Header() {
           </a>
           <a href="/pricing" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/pricing") ? "text-primary font-bold" : "text-gray-700"}`}>
             Pricing
+          </a>
+          <a href="/blog" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/blog") || pathname?.startsWith("/blog/") ? "text-primary font-bold" : "text-gray-700"}`}>
+            Blog
           </a>
           <a href="/contact" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/contact") ? "text-primary font-bold" : "text-gray-700"}`}>
             Contact Us

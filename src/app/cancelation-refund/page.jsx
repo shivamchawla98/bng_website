@@ -1,8 +1,46 @@
 import React from 'react';
+import { WebPageSchema } from '@/components/StructuredData';
+
+export const metadata = {
+  title: 'Cancellation & Refund Policy – BNG Logistics Network',
+  description: 'Read BNG’s official cancellation and refund policy for memberships. Learn about eligibility, procedures, and guidelines for global logistics network users.',
+  keywords: 'logistics refund policy, membership cancellation, BNG refund guidelines, global logistics platform policy, membership terms, cancellation rules',
+  openGraph: {
+    title: 'Cancellation & Refund Policy – BNG Logistics Network',
+    description: 'Read BNG’s official cancellation and refund policy for memberships. Learn about eligibility, procedures, and guidelines for global logistics network users.',
+    url: 'https://bnglogisticsnetwork.com/cancelation-refund',
+    siteName: 'BNG Logistics Network',
+    type: 'article',
+    images: [
+      {
+        url: 'https://bnglogisticsnetwork.com/BNG%20Logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'BNG Logistics Network Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cancellation & Refund Policy – BNG Logistics Network',
+    description: 'Read BNG’s official cancellation and refund policy for memberships. Learn about eligibility, procedures, and guidelines for global logistics network users.',
+    images: ['https://bnglogisticsnetwork.com/BNG%20Logo.png'],
+  },
+  alternates: {
+    canonical: 'https://bnglogisticsnetwork.com/cancelation-refund',
+  },
+};
 
 const page = () => {
   return (
-    <div className="max-w-6xl mx-auto p-6">
+    <>
+      <WebPageSchema 
+        name="Cancellation & Refund Policy – BNG Logistics Network"
+        url="https://bnglogisticsnetwork.com/cancelation-refund"
+        description="Official cancellation and refund policy for BNG Logistics Network memberships, including eligibility and refund procedures."
+        image="https://bnglogisticsnetwork.com/BNG%20Logo.png"
+      />
+      <div className="max-w-6xl mx-auto p-6">
       <h1 className="text-2xl font-bold mb-8 text-center">Cancellation and Refund Policy</h1>
 
       <div className="space-y-8">
@@ -57,6 +95,7 @@ const page = () => {
         </section>
       </div>
     </div>
+    </>
   );
 };
 

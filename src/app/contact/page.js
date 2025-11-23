@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head'; // Import Head from next/head
 import { ContactHero } from '@/page-components/Contact/ContactHero';
+import { ContactPageSchema } from '@/components/StructuredData';
 import { FAQ } from "@/components/Faq";
 import { QuoteForm } from '@/page-components/Contact/QuoteForm';
 import { SocialMedia } from '@/page-components/Contact/SocialMedia';
@@ -14,16 +15,38 @@ import faqBackgroundImage from '../../../public/contact_us/FAQ_Image.jpg';
 
 
 export const metadata = {
-  title: 'Contact Us | BNG Logistics Network',
-  description: 'Get in touch with BNG Logistics Network for membership inquiries, partnerships, or support. We’re here to help logistics professionals worldwide.',
-  // robots: 'noindex, nofollow', // Moved from <Head>
+  title: 'Contact BNG Logistics Network – Global Support Team',
+  description: 'Get in touch with BNG’s global support team for membership inquiries, logistics partnerships, and platform assistance.',
+  openGraph: {
+    title: 'Contact BNG Logistics Network – Global Support Team',
+    description: 'Get in touch with BNG’s global support team for membership inquiries, logistics partnerships, and platform assistance.',
+    url: 'https://bnglogisticsnetwork.com/contact',
+    siteName: 'BNG Logistics Network',
+    type: 'website',
+    images: [
+      {
+        url: 'https://bnglogisticsnetwork.com/BNG%20Logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'BNG Logistics Network Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact BNG Logistics Network – Global Support Team',
+    description: 'Get in touch with BNG’s global support team for membership inquiries, logistics partnerships, and platform assistance.',
+    images: ['https://bnglogisticsnetwork.com/BNG%20Logo.png'],
+  },
+  alternates: {
+    canonical: 'https://bnglogisticsnetwork.com/contact',
+  },
 };
 
 const ContactPage = () => {
   return (
     <>
- 
-
+      <ContactPageSchema />
       <div className="min-h-screen bg-white">
         <ContactHero />
         <div className="container mx-auto px-4 lg:pt-12 -mb-4 relative z-10">

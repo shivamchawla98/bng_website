@@ -97,6 +97,7 @@ const Footer = () => {
             <FooterSection
               title="Resourses"
               links={[
+                { href: "/blog", label: "Blog" },
                 { href: "/incoterms", label: "Incoterms" },
                 { href: "/dgr", label: "DGR Classes" },
                 { href: "/uld", label: "Aircraft ULDs" },

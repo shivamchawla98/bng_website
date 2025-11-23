@@ -13,20 +13,44 @@ import SecuritySteps from "@/page-components/BecomeMember/SecuritySteps";
 import WorldMap from "@/page-components/home/WorldMap";
 import Widget from "@/page-components/home/Widget";
 import SplitScreenCTA from "@/page-components/Benifits/SplitScreenCTA";
+import { OrganizationSchema, WebSiteSchema } from "@/components/StructuredData";
 // import ExperimentalMap from "@/page-components/home/ExperimentalMap";
 
 export const metadata = {
-  title: 'Global Logistics Network | Freight Forwarders & Industry Leaders',
-  description: 'Join BNG Logistics Network — a trusted global platform connecting logistics professionals and freight forwarders for growth, collaboration, and technology-driven solutions.',
-  // robots: 'noindex, nofollow', // Moved from <Head>
+  title: 'BNG Logistics Network – Global Freight Forwarder & Logistics Community',
+  description: 'Join a trusted global logistics network connecting freight forwarders and supply-chain professionals. Collaborate, grow, and access secure digital tools worldwide.',
+  keywords: 'global logistics network, freight forwarder community, logistics partnerships, international logistics network, supply chain collaboration, freight platform',
+  openGraph: {
+    title: 'BNG Logistics Network – Global Freight Forwarder & Logistics Community',
+    description: 'Join a trusted global logistics network connecting freight forwarders and supply-chain professionals. Build verified partnerships, enhance communication, and grow your business worldwide.',
+    url: 'https://bnglogisticsnetwork.com/',
+    siteName: 'BNG Logistics Network',
+    type: 'website',
+    images: [
+      {
+        url: 'https://bnglogisticsnetwork.com/BNG%20Logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'BNG Logistics Network Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'BNG Logistics Network – Global Freight Forwarder & Logistics Community',
+    description: 'Join a trusted global logistics network connecting freight forwarders and supply-chain professionals. Build verified partnerships, enhance communication, and grow your business worldwide.',
+    images: ['https://bnglogisticsnetwork.com/BNG%20Logo.png'],
+  },
+  alternates: {
+    canonical: 'https://bnglogisticsnetwork.com/',
+  },
 };
 
 export default function Home() {
   return (
     <>
-      {/* Add meta title and description */}
-
-
+      <OrganizationSchema />
+      <WebSiteSchema />
       <div className="w-screen">
         <HeroSection />
         <div className="relative">

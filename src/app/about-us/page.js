@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head"; // Import Head from next/head
 import { CommonHeroSection } from "@/components/CommonHeroSection/CommonHeroSection";
+import { AboutPageSchema } from "@/components/StructuredData";
 import TeamSection from "@/page-components/OurCompany/OurTeam";
 import LatestMembers from "@/page-components/OurCompany/LatestMembers";
 import { QuoteForm } from "@/page-components/OurCompany/QuoteForm";
@@ -14,17 +15,38 @@ import SplitScreenCTA from "@/page-components/Benifits/SplitScreenCTA";
 
 
 export const metadata = {
-  title: 'About BNG Logistics Network | Global Logistics Community',
-  description: 'Learn about BNG Logistics Network — a secure, digital platform uniting vetted logistics experts and freight forwarders worldwide for better business.',
-  // robots: 'noindex, nofollow', // Moved from <Head>
+  title: 'About BNG Logistics Network – Global Freight Community',
+  description: 'Learn about BNG’s mission, vision, and commitment to building a trusted international logistics and freight forwarding community.',
+  openGraph: {
+    title: 'About BNG Logistics Network – Global Freight Community',
+    description: 'Learn about BNG’s mission, vision, and commitment to building a trusted global logistics network where freight forwarders connect, collaborate, and grow worldwide.',
+    url: 'https://bnglogisticsnetwork.com/about-us',
+    siteName: 'BNG Logistics Network',
+    type: 'website',
+    images: [
+      {
+        url: 'https://bnglogisticsnetwork.com/BNG%20Logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'BNG Logistics Network Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About BNG Logistics Network – Global Freight Community',
+    description: 'Learn about BNG’s mission, vision, and commitment to building a trusted global logistics network where freight forwarders connect, collaborate, and grow worldwide.',
+    images: ['https://bnglogisticsnetwork.com/BNG%20Logo.png'],
+  },
+  alternates: {
+    canonical: 'https://bnglogisticsnetwork.com/about-us',
+  },
 };
 
 function page() {
   return (
     <>
-      {/* Add meta title and description */}
-
-
+      <AboutPageSchema />
       <div className="bg-primaryBg py-0">
         <AboutUsHero />
         <AboutSection />
