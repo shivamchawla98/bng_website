@@ -6,54 +6,75 @@ import client from "@/lib/apolloClient";
 // Generate metadata for SEO
 export async function generateMetadata({ params }) {
   try {
+    //  important: await params
+    const { slug } = await params;
+
     const { data } = await client.query({
       query: GET_BLOG_BY_SLUG,
-      variables: { slug: params.slug },
+      variables: { slug },
     });
 
     const blog = data?.blogBySlug;
 
     if (!blog) {
       return {
-        title: 'Blog Post Not Found | BNG Logistics Network',
+        title: "Blog Post Not Found | BNG Logistics Network",
       };
     }
 
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3001";
+
     return {
-      title: blog.metaDescription || `${blog.title} | BNG Logistics Network Blog`,
+      title:
+        blog.metaTitle ||
+        blog.metaDescription ||
+        `${blog.title} | BNG Logistics Network Blog`,
       description: blog.metaDescription || blog.excerpt || blog.title,
       openGraph: {
         title: blog.ogTitle || blog.title,
         description: blog.ogDescription || blog.metaDescription || blog.excerpt,
-        type: 'article',
+        type: "article",
         publishedTime: blog.publishedAt,
         modifiedTime: blog.updatedAt,
-        images: blog.ogImage || blog.featuredImage ? [
-          {
-            url: blog.ogImage || blog.featuredImage,
-            alt: blog.featuredImageAlt || blog.title,
-          }
-        ] : [],
-        authors: ['BNG Logistics Network'],
+        images:
+          blog.ogImage || blog.featuredImage
+            ? [
+                {
+                  url: blog.ogImage || blog.featuredImage,
+                  alt: blog.featuredImageAlt || blog.title,
+                },
+              ]
+            : [],
+        authors: ["BNG Logistics Network"],
+        url: `${siteUrl}/blog/${blog.slug}`,
       },
       twitter: {
-        card: 'summary_large_image',
-        title: blog.title,
-        description: blog.metaDescription || blog.excerpt,
-        images: blog.featuredImage ? [blog.featuredImage] : [],
+        card: "summary_large_image",
+        title: blog.twitterTitle || blog.title,
+        description: blog.twitterDescription || blog.metaDescription || blog.excerpt,
+        images: blog.twitterImage
+          ? [blog.twitterImage]
+          : blog.featuredImage
+          ? [blog.featuredImage]
+          : [],
       },
       alternates: {
-        canonical: blog.canonicalUrl || `${process.env.NEXT_PUBLIC_SITE_URL}/blog/${blog.slug}`,
+        canonical:
+          blog.canonicalUrl || `${siteUrl}/blog/${blog.slug}`,
       },
     };
   } catch (error) {
-    console.error('Error generating metadata:', error);
+    console.error("Error generating metadata:", error);
     return {
-      title: 'Blog Post | BNG Logistics Network',
+      title: "Blog Post | BNG Logistics Network",
     };
   }
 }
 
-export default function BlogPostPage({ params }) {
-  return <BlogPostClient slug={params.slug} />;
+// Page component
+export default async function BlogPostPage({ params }) {
+  //  important: await params here too
+  const { slug } = await params;
+
+  return <BlogPostClient slug={slug} />;
 }
