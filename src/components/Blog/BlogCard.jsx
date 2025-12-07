@@ -124,7 +124,7 @@ const BlogCard = ({ blog }) => {
           <button
             type="button"
             onClick={handleNavigateToPost}
-            className="inline-flex items-center gap-2 rounded-full border border-primary px-4 py-2 text-sm font-semibold text-primary hover:bg-primary hover:text-white hover:shadow-md transition-all"
+            className="inline-flex items-center gap-2 rounded-lg  transform hover:translate-x-2 duration-300  px-4 py-2 text-md text-white bg-[#6853db] hover:bg-primary hover:shadow-md transition-all"
           >
             Continue Reading
             <ArrowRight className="w-4 h-4" />

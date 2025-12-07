@@ -37,6 +37,7 @@ const BlogPostClient = ({ slug }) => {
   });
 
   const blog = data?.blogBySlug;
+  console.log(blog);
 
   // Fetch related posts
   const { data: relatedData } = useQuery(GET_RELATED_BLOGS, {
@@ -166,10 +167,14 @@ const BlogPostClient = ({ slug }) => {
 
         {/* HEADER / BANNER WITH BREADCRUMBS & TITLE */}
         <BlogPageBanner
-          breadcrumbs={breadcrumbs}
+          backOnly={true}
+          date={formatDate(blog.publishedAt)}
           title={blog.title}
           subtitle={blog.excerpt}
+          authorName={blog.authorName}
+          authorTitle={blog.authorTitle}
         />
+
 
         {/* MAIN CONTENT */}
         <article className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
@@ -289,11 +294,11 @@ const BlogPostClient = ({ slug }) => {
                 <input
                   type="text"
                   placeholder="Add a comment..."
-                  className="flex-grow p-3 border text-gray-700 border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="flex-grow p-3 border text-gray-700 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                 />
                 <button
                   type="button"
-                  className="px-4 py-3 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors flex items-center gap-1"
+                  className="px-4 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all transform hover:translate-x-2 duration-300 flex items-center gap-1"
                 >
                   Send
                 </button>

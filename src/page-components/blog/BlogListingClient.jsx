@@ -193,7 +193,7 @@ const BlogListingClient = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
               {/* Sidebar on LEFT */}
               <aside className="lg:col-span-4">
-                <div className="bg-white rounded-xl shadow-md border border-primary/10 p-3 sticky top-32 ">
+                <div className="bg-white rounded-lg shadow-md border border-primary/10 p-3 sticky top-32 ">
                   <div className="flex flex-row gap-2">
                     <Newspaper color='black'/>
                   <h2 className="text-lg font-semibold text-gray-900 mb-3">

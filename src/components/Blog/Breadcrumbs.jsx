@@ -1,16 +1,34 @@
 "use client";
-
 import React from "react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ChevronRight, Home } from "lucide-react";
+import { ChevronRight, ChevronLeft, Home, ArrowBigLeft, ArrowLeft } from "lucide-react";
 
 /**
- * Breadcrumbs - clickable breadcrumb navigation
- * items: [{ label, href? }]
+ * Breadcrumbs - Supports both full breadcrumbs and back button mode
+ * @param {Object} props
+ * @param {Array} props.items - Array of breadcrumb items
+ * @param {boolean} props.backOnly - If true, shows only a back button
  */
-export default function Breadcrumbs({ items = [] }) {
+export default function Breadcrumbs({ items = [], backOnly = false }) {
   const router = useRouter();
+
+  if (backOnly) {
+    return (
+      <nav aria-label="Back" className="py-2">
+       <button
+        onClick={() => router.back()}
+        className="inline-flex items-center gap-2 text-sm text-white hover:text-gray-300 hover:-translate-x-1 transition-all duration-300 cursor-pointer focus:outline-none  rounded"
+      >
+        <div className="w-8 h-8 bg-primary/80 rounded-full flex items-center justify-center transform hover:-translate-x-1 transition-all duration-300">
+          <ArrowLeft className="w-4 h-4 stroke-white" />
+        </div>
+        Back
+      </button>
+
+
+      </nav>
+    );
+  }
 
   if (!items || items.length === 0) return null;
 
@@ -25,10 +43,8 @@ export default function Breadcrumbs({ items = [] }) {
       <ol className="flex items-center flex-wrap gap-2 text-sm">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
-
           return (
             <li key={index} className="flex items-center gap-2">
-              {/* Home icon for first item (clickable when href present) */}
               {index === 0 && item.href ? (
                 <button
                   onClick={() => handleNavigate(item.href)}
@@ -41,7 +57,6 @@ export default function Breadcrumbs({ items = [] }) {
                   <Home className="w-4 h-4" />
                 </span>
               ) : null}
-
               {isLast ? (
                 <span
                   aria-current="page"
