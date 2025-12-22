@@ -103,9 +103,9 @@ const Newsletter = ({ variant = "default" }) => {
 
   // Sidebar variant
   return (
-    <div className="bg-gradient-to-br from-primary/5 to-purple-50 rounded-xl shadow-md border border-primary/10 p-6 sticky top-24">
+    <div className="bg-white rounded-xl shadow-md border border-primary/10 p-6 sticky top-24">
       <div className="text-center mb-4">
-        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+        <div className="w-12 h-12  rounded-full flex items-center justify-center mx-auto mb-3">
           <Mail className="w-6 h-6 text-primary" />
         </div>
         <h3 className="text-xl font-bold text-gray-900 mb-2">
