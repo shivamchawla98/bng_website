@@ -73,6 +73,9 @@ function Header() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8 items-center">
+          <a href="https://conference.bnglogisticsnetwork.com" target="_blank" rel="noopener noreferrer" className="font-medium hover:text-primary text-[18px]">
+            Conference
+          </a>
           <a href="/benefit" className={`font-medium hover:text-primary text-[18px] ${isActive("/benefit") ? "text-primary font-bold" : ""}`}>
             Benefits
           </a>
@@ -144,6 +147,9 @@ function Header() {
         <div className="flex flex-col p-4 space-y-4">
           <a href="/" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/") ? "text-primary font-bold" : "text-[#27293B]"}`}>
             Home
+          </a>
+          <a href="https://conference.bnglogisticsnetwork.com" target="_blank" rel="noopener noreferrer" onClick={closeMenu} className="hover:text-primary text-[18px] py-2 text-gray-700">
+            Conference
           </a>
           <a href="/benefit" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/benefit") ? "text-primary font-bold" : "text-gray-700"}`}>
             Benefits

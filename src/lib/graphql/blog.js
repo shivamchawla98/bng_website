@@ -10,6 +10,8 @@ export const BLOG_FIELDS = gql`
     excerpt
     featuredImage
     featuredImageAlt
+    authorName
+    authorTitle
     status
     viewCount
     likeCount
@@ -71,6 +73,8 @@ export const GET_RELATED_BLOGS = gql`
       excerpt
       featuredImage
       featuredImageAlt
+      authorName
+      authorTitle
       publishedAt
       viewCount
       likeCount

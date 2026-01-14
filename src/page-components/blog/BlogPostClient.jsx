@@ -176,6 +176,18 @@ const BlogPostClient = ({ slug }) => {
                   </p>
                 )}
 
+                {/* Author & Date */}
+                {(blog.authorName || blog.authorTitle) && (
+                  <div className="mb-4 text-gray-600">
+                    <p className="text-base">
+                      By{' '}
+                      {blog.authorName && <span className="font-medium text-gray-900">{blog.authorName}</span>}
+                      {blog.authorName && blog.authorTitle && ', '}
+                      {blog.authorTitle && <span className="text-gray-600">{blog.authorTitle}</span>}
+                    </p>
+                  </div>
+                )}
+
                 {/* Meta Info */}
                 <div className="flex flex-wrap items-center gap-4 text-gray-600 text-sm pb-6 border-b border-gray-200">
                   <div className="flex items-center gap-2">
