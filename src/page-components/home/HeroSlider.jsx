@@ -36,25 +36,6 @@ const HeroSlider = () => {
 
   return (
     <div className="min-h-[59vh] relative overflow-hidden">
-      {/* Top-left Patch */}
-      <div
-        className="absolute top-10 left-0 w-[100px] h-[100px] md:w-[200px] md:h-[200px] blur-2xl rounded-full z-10"
-        style={{
-          background: "linear-gradient(-145deg, #6853DB 16%, #6853DB 40.86%, #97b6f6 30%)",
-          filter: "blur(50px)",
-          WebkitFilter: "blur(100px)",
-          backdropFilter: "blur(100px)",
-        }}
-      />
-
-      {/* Right-middle Patch */}
-      <div
-        className="absolute top-1/2 right-0 md:right-12 transform translate-x-1/2 -translate-y-1/2 w-[80px] h-[40%] md:w-[160px] md:h-[70%] rounded-full z-10"
-        style={{
-          background: "linear-gradient(-145deg, #6853DB 16%, #6853DB 40.86%, #97b6f6 30%)",
-          filter: "blur(110px)",
-        }}
-      />
 
       {/* Slide 1 - Conference Banner Style */}
       <div
@@ -164,7 +145,7 @@ const HeroSlider = () => {
             <div className="flex w-60 flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
               <Link
                 href="https://app.bnglogisticsnetwork.com/register"
-                className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-[#5216ab] hover:from-transparent transition-all duration-300 bg-primary transform hover:translate-x-2"
+                className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-[#5216ab] hover:from-transparent transition-all duraton-300 bg-primary transform hover:translate-x-2"
               >
                 Become a Member
                 <svg
@@ -197,24 +178,19 @@ const HeroSlider = () => {
             />
           </div>
         </div>
-
-        {/* Stats Widget - Only on slide 2 */}
-        <div className="relative">
-          <Widget />
-        </div>
       </div>
 
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all duration-300 hover:scale-110 pointer-events-auto"
         aria-label="Previous slide"
       >
         <ChevronLeft className="w-6 h-6 text-[#5216ab]" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all duration-300 hover:scale-110 pointer-events-auto"
         aria-label="Next slide"
       >
         <ChevronRight className="w-6 h-6 text-[#5216ab]" />

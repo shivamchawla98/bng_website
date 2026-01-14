@@ -11,6 +11,7 @@ import Conference from "@/page-components/home/Conferance";
 import LatestMembers from "@/page-components/OurCompany/LatestMembers";
 import SecuritySteps from "@/page-components/BecomeMember/SecuritySteps";
 import WorldMap from "@/page-components/home/WorldMap";
+import Widget from "@/page-components/home/Widget";
 import SplitScreenCTA from "@/page-components/Benifits/SplitScreenCTA";
 import { OrganizationSchema, WebSiteSchema } from "@/components/StructuredData";
 // import ExperimentalMap from "@/page-components/home/ExperimentalMap";
@@ -52,6 +53,9 @@ export default function Home() {
       <WebSiteSchema />
       <div className="w-screen">
         <HeroSlider />
+        <div className="relative">
+          <Widget />
+        </div>
         <AboutUs />
         <MemberBenefits />
         <TestimonialSlider />
