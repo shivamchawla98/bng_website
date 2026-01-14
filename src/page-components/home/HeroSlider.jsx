@@ -35,7 +35,28 @@ const HeroSlider = () => {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + 2) % 2);
 
   return (
-    <div className="min-h-[59vh] relative overflow-hidden">
+    <div className="min-h-[59vh] relative overflow-x-hidden">
+      {/* Top-left Patch - Made smaller for mobile */}
+      <div
+        className="absolute top-10 left-0 w-[100px] h-[100px] md:w-[200px] md:h-[200px] blur-2xl rounded-full"
+        style={{
+          background: "linear-gradient(-145deg, #6853DB 16%, #6853DB 40.86%, #97b6f6 30%)",
+          zIndex: 1,
+          filter: "blur(50px)",
+          WebkitFilter: "blur(100px)",
+          backdropFilter: "blur(100px)",
+        }}
+      />
+
+      {/* Right-middle Patch - Adjusted position and size for mobile */}
+      <div
+        className="absolute top-1/2 right-0 md:right-12 transform translate-x-1/2 -translate-y-1/2 w-[80px] h-[40%] md:w-[160px] md:h-[70%] rounded-full"
+        style={{
+          background: "linear-gradient(-145deg, #6853DB 16%, #6853DB 40.86%, #97b6f6 30%)",
+          zIndex: 1,
+          filter: "blur(110px)",
+        }}
+      />
 
       {/* Slide 1 - Conference Banner Style */}
       <div
