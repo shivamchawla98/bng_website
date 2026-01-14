@@ -193,8 +193,64 @@ const BlogPostClient = ({ slug }) => {
             </aside>
 
             {/* Main Content */}
-            <div className="lg:col-span-8 ">
-              
+            <div className="lg:col-span-8">
+              {/* Article Header */}
+              <header className="mb-8">
+                {/* Category */}
+                {blog.category && (
+                  <Link
+                    href={`/blog/category/${blog.category.slug}`}
+                    className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4 hover:bg-primary/20 transition-colors"
+                  >
+                    <Folder className="w-3 h-3 inline mr-1" />
+                    {blog.category.name}
+                  </Link>
+                )}
+
+                {/* Title */}
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                  {blog.title}
+                </h1>
+
+                {/* Excerpt */}
+                {blog.excerpt && (
+                  <p className="text-xl text-gray-600 mb-6 leading-relaxed">
+                    {blog.excerpt}
+                  </p>
+                )}
+
+                {/* Author & Date */}
+                {(blog.authorName || blog.authorTitle) && (
+                  <div className="mb-4 text-gray-600">
+                    <p className="text-base">
+                      By{' '}
+                      {blog.authorName && <span className="font-medium text-gray-900">{blog.authorName}</span>}
+                      {blog.authorName && blog.authorTitle && ', '}
+                      {blog.authorTitle && <span className="text-gray-600">{blog.authorTitle}</span>}
+                    </p>
+                  </div>
+                )}
+
+                {/* Meta Info */}
+                <div className="flex flex-wrap items-center gap-4 text-gray-600 text-sm pb-6 border-b border-gray-200">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4" />
+                    <time dateTime={blog.publishedAt}>{formatDate(blog.publishedAt)}</time>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Eye className="w-4 h-4" />
+                    <span>{blog.viewCount} views</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Heart className="w-4 h-4" />
+                    <span>{blog.likeCount} likes</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MessageSquare className="w-4 h-4" />
+                    <span>{blog.commentCount} comments</span>
+                  </div>
+                </div>
+              </header>
 
               {/* Featured Image */}
               {blog.featuredImage && (
