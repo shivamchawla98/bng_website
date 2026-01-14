@@ -1,5 +1,5 @@
 import Head from "next/head"; // Import Head from next/head
-import HeroSection from "@/page-components/home/HeroSection";
+import HeroSlider from "@/page-components/home/HeroSlider";
 import Image from "next/image";
 import AboutUs from "@/page-components/home/AboutUs";
 import MemberBenefits from "@/page-components/home/MemberBenifits";
@@ -11,7 +11,6 @@ import Conference from "@/page-components/home/Conferance";
 import LatestMembers from "@/page-components/OurCompany/LatestMembers";
 import SecuritySteps from "@/page-components/BecomeMember/SecuritySteps";
 import WorldMap from "@/page-components/home/WorldMap";
-import Widget from "@/page-components/home/Widget";
 import SplitScreenCTA from "@/page-components/Benifits/SplitScreenCTA";
 import { OrganizationSchema, WebSiteSchema } from "@/components/StructuredData";
 // import ExperimentalMap from "@/page-components/home/ExperimentalMap";
@@ -52,11 +51,7 @@ export default function Home() {
       <OrganizationSchema />
       <WebSiteSchema />
       <div className="w-screen">
-        <HeroSection />
-        <div className="relative">
-
-        <Widget />
-        </div>
+        <HeroSlider />
         <AboutUs />
         <MemberBenefits />
         <TestimonialSlider />
