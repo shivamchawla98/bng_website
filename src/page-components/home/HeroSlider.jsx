@@ -56,63 +56,79 @@ const HeroSlider = () => {
         }}
       />
 
-      {/* Slide 1 - Conference Style */}
+      {/* Slide 1 - Conference Banner Style */}
       <div
         className={`absolute inset-0 transition-all duration-1000 ${
           currentSlide === 0 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full"
         }`}
       >
-        <div className="container py-6 mx-auto px-4 flex flex-col lg:flex-row items-center relative z-20 h-full">
-          <div className="lg:w-1/2 mb-8 lg:mb-0">
-            <h1 className="text-[32px] sm:text-[40px] md:text-[55px] mb-4 text-[#27293B]">
-              <span className="text-[40px] sm:text-[50px] md:text-[70px] font-bold">
-                Global Freight
-              </span>
-              <br />
-              <span className="text-[#5216ab] font-bold text-[40px] sm:text-[50px] md:text-[70px]">
-                Forwarders Network
-              </span>
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <div 
+            className="w-full h-full bg-cover bg-center"
+            style={{
+              backgroundImage: "url('/Infini Pool26.webp')",
+              backgroundPosition: "center"
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/70 via-indigo-600/30 to-transparent"></div>
+        </div>
+
+        {/* Conference Content */}
+        <div className="container relative z-20 h-full py-12 mx-auto px-4 flex items-center">
+          <div className="text-white max-w-3xl">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-purple-300">
+                BNG
+              </span>{" "}
+              <span className="text-white">Global Convention</span>
             </h1>
-            <p className="text-gray-600 mb-6 text-sm sm:text-base">
-              Join the most trusted network of freight forwarders worldwide.{" "}
-              <span className="text-base sm:text-lg md:text-[20px] font-semibold">
-                Build partnerships, expand your reach, and grow your business globally.
+            
+            <div className="mb-4 inline-flex flex-col sm:flex-row items-start sm:items-center gap-4 px-4 py-3 border-l-4 border-white/80">
+              <div className="flex items-center gap-2 text-base sm:text-lg">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span>June 14<sup className="text-xs">th</sup> – June 17<sup className="text-xs">th</sup>, 2026</span>
+              </div>
+              <div className="flex items-center gap-2 font-bold text-base sm:text-lg">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>Royal Cliff Beach Hotel, Pattaya</span>
+              </div>
+            </div>
+
+            <p className="text-xl sm:text-2xl md:text-3xl mb-2 font-light italic">
+              <span>The Global </span>
+              <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-purple-300">
+                Freight Stage
               </span>
             </p>
-            <div className="flex w-60 flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+
+            <p className="text-sm sm:text-base text-gray-200 mb-6">
+              Powered by{" "}
+              <a href="https://www.bnglogisticsnetwork.com/" target="_blank" rel="noopener noreferrer" className="underline font-semibold hover:text-white">
+                BNG Logistics Network
+              </a>
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="https://app.bnglogisticsnetwork.com/register"
-                className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-[#5216ab] hover:from-transparent transition-all duration-300 bg-primary transform hover:translate-x-2"
+                href="https://conference.bnglogisticsnetwork.com/register"
+                className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 px-8 py-4 rounded-lg text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-xl text-center"
               >
-                Become a Member
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-2"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  />
-                </svg>
+                Register Now
               </Link>
+              <a
+                href="https://conference.bnglogisticsnetwork.com/download/BNG Global Convention 2026.pdf"
+                download
+                className="bg-white hover:bg-gray-100 px-8 py-4 rounded-lg text-gray-900 font-bold text-lg transition-all duration-300 hover:scale-105 shadow-xl text-center"
+              >
+                Download Brochure
+              </a>
             </div>
-          </div>
-          <div className="lg:w-1/2 relative">
-            <Image
-              src={bg}
-              alt="Global Network"
-              className="lg:ml-20"
-              priority={true}
-              style={{
-                transform: `translateX(${Math.min(scrollY * 0.2, 100)}px)`,
-                transition: "transform 0.3s ease-out",
-              }}
-            />
           </div>
         </div>
       </div>
