@@ -72,7 +72,7 @@ const TableOfContents = ({ content }) => {
   if (toc.length === 0) return null;
 
   return (
-    <div className="bg-gradient-to-br from-white to-primary/5 rounded-xl shadow-md border border-primary/10 p-6 sticky top-24">
+    <div className="bg-white rounded-xl shadow-md border border-primary/10 p-6 sticky top-32">
       <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200">
         <List className="w-5 h-5 text-primary" />
         <h3 className="text-lg font-bold text-gray-900">Table of Contents</h3>

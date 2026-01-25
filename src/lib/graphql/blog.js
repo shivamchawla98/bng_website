@@ -24,6 +24,8 @@ export const BLOG_FIELDS = gql`
     publishedAt
     createdAt
     updatedAt
+    authorName
+    authorTitle
     category {
       id
       name
