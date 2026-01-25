@@ -1,9 +1,10 @@
 import Head from "next/head"; // Import Head from next/head
 import HeroSlider from "@/page-components/home/HeroSlider";
 import Image from "next/image";
-import AboutUs from "@/page-components/home/AboutUs";
+import ExchangeSection from "@/page-components/home/ExchangeSection";
 import MemberBenefits from "@/page-components/home/MemberBenifits";
-import TestimonialSlider from "@/page-components/home/TestimonialSlider";
+import AccreditedExcellence from "@/page-components/home/AccreditedExcellence";
+import Testimonials from "@/page-components/home/Testimonials";
 import WorldWideReach from "@/page-components/home/WorldWideReach";
 import Solutions from "@/page-components/home/Solutions";
 import News from "@/page-components/home/News";
@@ -11,7 +12,7 @@ import Conference from "@/page-components/home/Conferance";
 import LatestMembers from "@/page-components/OurCompany/LatestMembers";
 import SecuritySteps from "@/page-components/BecomeMember/SecuritySteps";
 import WorldMap from "@/page-components/home/WorldMap";
-import Widget from "@/page-components/home/Widget";
+import StatsSection from "@/page-components/home/StatsSection";
 import SplitScreenCTA from "@/page-components/Benifits/SplitScreenCTA";
 import { OrganizationSchema, WebSiteSchema } from "@/components/StructuredData";
 // import ExperimentalMap from "@/page-components/home/ExperimentalMap";
@@ -53,18 +54,17 @@ export default function Home() {
       <WebSiteSchema />
       <div className="w-screen">
         <HeroSlider />
-        <div className="relative">
-          <Widget />
-        </div>
-        <AboutUs />
+        <ExchangeSection />
         <MemberBenefits />
-        <TestimonialSlider />
+        <Testimonials />
+        <AccreditedExcellence />
         <section className="bg-secondryBg pb-28 md:px-[80px]">
           <LatestMembers />
         </section>
         {/* <WorldWideReach /> */}
         {/* <ExperimentalMap /> */}
         <WorldMap />
+        <StatsSection />
         <Solutions />
         <SecuritySteps />
         <Conference />

@@ -15,7 +15,6 @@ function AboutUs() {
           alt="Export Import Containers"
           layout="responsive"
           width={600}
-          // height={300}
           className="rounded-lg object-cover"
         />
       </div>
@@ -37,7 +36,7 @@ function AboutUs() {
           With over 20 years of proven expertise in logistics and supply chain management, BNG Group was founded to transform the way industry professionals connect and grow. What began as a vision backed by nearly three years of in-depth market research has evolved into a powerful logistics network—purpose-built to foster global collaboration, streamline operations, and spark real business opportunities.
         </p>
         <p className="text-sm sm:text-base text-gray-500 mb-6">
-          BNG is more than a network; it’s a thriving hub where freight forwarders, logistics providers, and industry leaders come together to create meaningful, growth-focused partnerships. Our platform is designed to break barriers and build bridges—uniting businesses with tools, resources, and connections that matter.
+          BNG is more than a network; it's a thriving hub where freight forwarders, logistics providers, and industry leaders come together to create meaningful, growth-focused partnerships. Our platform is designed to break barriers and build bridges—uniting businesses with tools, resources, and connections that matter.
         </p>
         <p className="text-sm sm:text-base text-gray-500 mb-6">
           As a member, you gain exclusive access to one of the largest and most accurate Exporters/Importers Data Banks in the industry—curated and maintained by BNG—to support data-driven success across every market you serve.

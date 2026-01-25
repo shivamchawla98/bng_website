@@ -82,9 +82,9 @@ function Header() {
           <a href="/about-us" className={`font-medium hover:text-primary text-[18px] ${isActive("/about-us") ? "text-primary font-bold" : ""}`}>
             About us
           </a>
-          <a href="/pricing" className={`font-medium hover:text-primary text-[18px] ${isActive("/pricing") ? "text-primary font-bold" : ""}`}>
+          {/* <a href="/pricing" className={`font-medium hover:text-primary text-[18px] ${isActive("/pricing") ? "text-primary font-bold" : ""}`}>
             Pricing
-          </a>
+          </a> */}
           <a href="/blog" className={`font-medium hover:text-primary text-[18px] ${isActive("/blog") || pathname?.startsWith("/blog/") ? "text-primary font-bold" : ""}`}>
             Blog
           </a>

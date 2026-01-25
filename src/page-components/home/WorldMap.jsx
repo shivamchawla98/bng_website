@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { useQuery } from '@apollo/client';
 import Image from 'next/image';
+import { ZoomIn, ZoomOut, Search } from 'lucide-react';
 import backgroundImage from '@/app/images/OBJECTS.png';
 import { gql } from '@apollo/client';
 import 'react-tooltip/dist/react-tooltip.css';
@@ -12,6 +13,7 @@ import 'react-tooltip/dist/react-tooltip.css';
 const ComposableMap = dynamic(() => import('react-simple-maps').then((mod) => mod.ComposableMap), { ssr: false });
 const Geographies = dynamic(() => import('react-simple-maps').then((mod) => mod.Geographies), { ssr: false });
 const Geography = dynamic(() => import('react-simple-maps').then((mod) => mod.Geography), { ssr: false });
+const ZoomableGroup = dynamic(() => import('react-simple-maps').then((mod) => mod.ZoomableGroup), { ssr: false });
 const Tooltip = dynamic(() => import('react-tooltip').then((mod) => mod.Tooltip), { ssr: false });
 
 // GraphQL query
@@ -109,6 +111,7 @@ const WorldMap = () => {
     scale: 100,
     center: [0, 10],
   });
+  const [zoom, setZoom] = useState(100);
 
 
   useEffect(() => {
@@ -184,16 +187,29 @@ const WorldMap = () => {
     const updateMapConfig = () => {
       const width = window.innerWidth;
       if (width < 640) {
-        setMapConfig({ scale: 110, center: [0, 60] });
+        setMapConfig({ scale: zoom + 10, center: [0, 60] });
       } else {
-        setMapConfig({ scale: 100, center: [0, 10] });
+        setMapConfig({ scale: zoom, center: [0, 10] });
       }
     };
 
     updateMapConfig();
     window.addEventListener('resize', updateMapConfig);
     return () => window.removeEventListener('resize', updateMapConfig);
-  }, []);
+  }, [zoom]);
+
+  const handleZoomIn = () => {
+    setZoom(prev => Math.min(prev + 20, 200));
+  };
+
+  const handleZoomOut = () => {
+    setZoom(prev => Math.max(prev - 20, 60));
+  };
+
+  const handleSearch = () => {
+    // Placeholder for future slot availability search
+    console.log('Search for available membership slots');
+  };
 
   const getFillColor = (companyCount) => {
     if (companyCount >= 6) return '#6853DB';
@@ -245,6 +261,35 @@ const WorldMap = () => {
       </div>
 
       <div className="map-container">
+        {/* Zoom Controls */}
+        <div className="zoom-controls">
+          <button 
+            onClick={handleZoomOut}
+            className="zoom-btn"
+            aria-label="Zoom out"
+          >
+            <ZoomOut className="w-5 h-5" />
+          </button>
+          <button 
+            onClick={handleZoomIn}
+            className="zoom-btn"
+            aria-label="Zoom in"
+          >
+            <ZoomIn className="w-5 h-5" />
+          </button>
+        </div>
+
+        {/* Search Button */}
+        <div className="search-section">
+          <button 
+            onClick={handleSearch}
+            className="search-btn"
+          >
+            <span className="search-label">FIND A MEMBER</span>
+            <span className="search-prompt">Search for a specific member or country...</span>
+          </button>
+        </div>
+
         <ComposableMap
           projection="geoMercator"
           projectionConfig={{
@@ -252,8 +297,17 @@ const WorldMap = () => {
             center: mapConfig.center,
           }}
           className="map"
+          width={1200}
+          height={600}
         >
-          <Geographies geography={geoUrl}>
+          <ZoomableGroup
+            zoom={zoom / 100}
+            center={mapConfig.center}
+            onMoveEnd={({ coordinates }) => {
+              setMapConfig(prev => ({ ...prev, center: coordinates }));
+            }}
+          >
+            <Geographies geography={geoUrl}>
             {({ geographies }) =>
               geographies.map((geo) => {
                 const nameMap = {
@@ -301,7 +355,8 @@ const WorldMap = () => {
                 );
               })
             }
-          </Geographies>
+            </Geographies>
+          </ZoomableGroup>
         </ComposableMap>
 
         <Tooltip
@@ -322,10 +377,9 @@ const WorldMap = () => {
 
       <style jsx>{`
         .world-map-section {
-          width: 100%;
-          max-width: 1440px; 
-          margin: 0 auto;
-          padding: 40px 24px;
+          width: 100vw;
+          margin: 0;
+          padding: 40px 0;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -335,7 +389,6 @@ const WorldMap = () => {
           background-size: cover;
           background-repeat: no-repeat;
           min-height: 600px;
-          max-height: 900px;
           overflow: hidden;
           box-sizing: border-box;
         }
@@ -373,19 +426,90 @@ const WorldMap = () => {
         }
 
         .map-container {
-          width: 100%;
-          max-width: 1200px;
-          height: 690px;
-          border-radius: 16px;
-          padding: 0px;
-        //   background: #ffffff;
-          border: 1px solid transparent;
-        //   border-image: linear-gradient(to right, #6853db, #7b66e3) 1;
+          width: 100vw;
+          height: 600px;
+          padding: 0;
+          border: none;
           position: relative;
-          top: -40px;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          transition: transform 0.3s ease;
           overflow: hidden;
+          cursor: grab;
+        }
 
+        .map-container:active {
+          cursor: grabbing;
+        }
+
+        .zoom-controls {
+          position: absolute;
+          left: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          z-index: 10;
+        }
+
+        .zoom-btn {
+          width: 40px;
+          height: 40px;
+          background: #6853DB;
+          border: none;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          color: white;
+          transition: all 0.2s ease;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .zoom-btn:hover {
+          background: #5844B4;
+          transform: scale(1.05);
+        }
+
+        .search-section {
+          position: absolute;
+          bottom: 40px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 10;
+        }
+
+        .search-btn {
+          background: #6853DB;
+          border: none;
+          border-radius: 8px;
+          padding: 12px 24px;
+          cursor: pointer;
+          color: white;
+          transition: all 0.2s ease;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          min-width: 300px;
+        }
+
+        .search-btn:hover {
+          background: #5844B4;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+
+        .search-label {
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+        }
+
+        .search-prompt {
+          font-size: 11px;
+          opacity: 0.9;
+          margin-top: 2px;
         }
 
         .map {
