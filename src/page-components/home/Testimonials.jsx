@@ -59,7 +59,7 @@ const Testimonials = () => {
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Fixed Left Card */}
-          <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl p-8 flex flex-col justify-between">
+          <div className="bg-gradient-to-br from-[#6853DB] to-[#7B66E3] rounded-2xl p-8 flex flex-col justify-between min-h-[320px] lg:min-h-[400px]">
             {/* Avatar Group */}
             <div className="flex -space-x-3 mb-6">
               {testimonials.slice(0, 3).map((testimonial, idx) => (
@@ -109,11 +109,11 @@ const Testimonials = () => {
                   spaceBetween: 20,
                 },
               }}
-              className="testimonials-slider"
+              className="testimonials-slider h-full"
             >
               {testimonials.map((testimonial, index) => (
-                <SwiperSlide key={index}>
-                  <div className="bg-[#2a2f4a] rounded-2xl p-6 h-full flex flex-col">
+                <SwiperSlide key={index} className="h-auto">
+                  <div className="bg-[#27293B] rounded-2xl p-6 flex flex-col min-h-[320px] lg:min-h-[400px]">
                     {/* Star Rating */}
                     <div className="flex gap-1 mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
@@ -127,7 +127,7 @@ const Testimonials = () => {
                     </p>
 
                     {/* Author Info */}
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mt-auto">
                       <div className="flex items-center gap-3">
                         <Image
                           src={testimonial.imageUrl}
@@ -145,7 +145,7 @@ const Testimonials = () => {
                           </p>
                         </div>
                       </div>
-                      <Quote className="w-8 h-8 text-indigo-400/30" />
+                      <Quote className="w-8 h-8 text-[#6853DB]/30" />
                     </div>
                   </div>
                 </SwiperSlide>
