@@ -11,6 +11,7 @@ import News from "@/page-components/home/News";
 import Conference from "@/page-components/home/Conferance";
 import LatestMembers from "@/page-components/OurCompany/LatestMembers";
 import ConferenceOpportunities from "@/page-components/home/ConferenceOpportunities";
+import VendorPartners from "@/page-components/home/VendorPartners";
 import WorldMap from "@/page-components/home/WorldMap";
 import StatsSection from "@/page-components/home/StatsSection";
 import SplitScreenCTA from "@/page-components/Benifits/SplitScreenCTA";
@@ -69,6 +70,7 @@ export default function Home() {
         <ConferenceOpportunities />
         <Conference />
         <News />
+        <VendorPartners />
         <SplitScreenCTA />
       </div>
     </>
