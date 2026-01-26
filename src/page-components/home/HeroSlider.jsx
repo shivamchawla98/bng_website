@@ -35,7 +35,7 @@ const HeroSlider = () => {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + 2) % 2);
 
   return (
-    <div className="min-h-[59vh] relative overflow-x-hidden">
+    <div className="min-h-[74vh] relative overflow-x-hidden">
 
       {/* Slide 1 - Conference Banner Style */}
       <div
@@ -56,7 +56,7 @@ const HeroSlider = () => {
         </div>
 
         {/* Conference Content */}
-        <div className="container relative z-20 h-full py-12 mx-auto px-4 flex items-center">
+        <div className="container relative z-20 h-full py-12 md:py-16 lg:py-20 mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
           <div className="text-white max-w-3xl">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-purple-300">
@@ -120,7 +120,7 @@ const HeroSlider = () => {
           currentSlide === 1 ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full"
         }`}
       >
-        <div className="container py-6 mx-auto px-4 flex flex-col lg:flex-row items-center relative z-20 h-full">
+        <div className="container py-8 md:py-12 lg:py-16 mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center relative z-20 h-full">
           <div className="lg:w-1/2 mb-8 lg:mb-0">
             <h1 className="text-[32px] sm:text-[40px] md:text-[55px] mb-4 text-[#27293B]">
               <span className="text-[40px] sm:text-[50px] md:text-[70px] font-bold">

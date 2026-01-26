@@ -23,22 +23,22 @@ const AccreditedExcellence = () => {
   return (
     <section className="bg-gradient-to-b from-purple-50 to-white py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center">
-          {/* Logos Grid */}
-          <div className="grid grid-cols-3 md:grid-cols-4 gap-6 md:gap-8 lg:gap-12 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Logos Grid - Left Column */}
+          <div className="grid grid-cols-3 md:grid-cols-4 gap-6 md:gap-8">
             {partnerLogos.map((logo, index) => (
               <div key={index} className="flex items-center justify-center">
                 <Image
                   src={logo}
                   alt={`Accreditation ${index + 1}`}
-                  className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px] hover:scale-110 transition-transform duration-300 ease-in-out object-contain"
+                  className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] hover:scale-110 transition-transform duration-300 ease-in-out object-contain"
                 />
               </div>
             ))}
           </div>
 
-          {/* Content */}
-          <div className="relative w-full max-w-4xl text-center">
+          {/* Content - Right Column */}
+          <div className="relative">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
               Accredited <span className="text-primary">Excellence</span>
             </h2>

@@ -1,9 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { useQuery, gql } from '@apollo/client';
 import { ArrowRight, Plane, Ship, Package } from 'lucide-react';
-import { motion } from 'framer-motion';
 import getCountryCode from '../../../utils/getCountryCode';
 
 // GraphQL Queries
@@ -53,7 +52,6 @@ const GET_FREIGHT_LEADS = gql`
 `;
 
 const ExchangeSection = () => {
-  const [activeTab, setActiveTab] = useState('business');
 
   const { data: businessData, loading: businessLoading } = useQuery(GET_BUSINESS_LEADS, {
     variables: {
@@ -89,35 +87,14 @@ const ExchangeSection = () => {
           </p>
         </div>
 
-        {/* Tab Navigation */}
-        <div className="flex justify-center mb-8">
-          <div className="inline-flex rounded-lg border border-gray-200 bg-white p-1">
-            <button
-              onClick={() => setActiveTab('business')}
-              className={`px-6 py-3 rounded-md text-sm font-medium transition-all duration-200 ${
-                activeTab === 'business'
-                  ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-md'
-                  : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
+        {/* Two Column Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Business Exchange Column */}
+          <div className="bg-white rounded-2xl shadow-xl p-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+              <Package className="h-6 w-6 text-primary" />
               Business Exchange
-            </button>
-            <button
-              onClick={() => setActiveTab('freight')}
-              className={`px-6 py-3 rounded-md text-sm font-medium transition-all duration-200 ${
-                activeTab === 'freight'
-                  ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-md'
-                  : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              Freight Exchange
-            </button>
-          </div>
-        </div>
-
-        {/* Content Area */}
-        <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8">
-          {activeTab === 'business' ? (
+            </h3>
             <div className="space-y-4">
               {businessLoading ? (
                 <div className="flex justify-center py-12">
@@ -129,11 +106,9 @@ const ExchangeSection = () => {
                 </div>
               ) : (
                 businessLeads.map((lead) => (
-                  <motion.div
+                  <div
                     key={lead.id}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                    className="border border-gray-200 rounded-lg p-4"
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4 flex-1">
@@ -168,7 +143,7 @@ const ExchangeSection = () => {
                         View
                       </a>
                     </div>
-                  </motion.div>
+                  </div>
                 ))
               )}
               <div className="text-center mt-6">
@@ -176,12 +151,19 @@ const ExchangeSection = () => {
                   href="/business-xchange"
                   className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-medium"
                 >
-                  View All Business Opportunities
+                  View More
                   <ArrowRight className="h-4 w-4" />
                 </a>
               </div>
             </div>
-          ) : (
+          </div>
+
+          {/* Freight Exchange Column */}
+          <div className="bg-white rounded-2xl shadow-xl p-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+              <Ship className="h-6 w-6 text-primary" />
+              Freight Exchange
+            </h3>
             <div className="space-y-4">
               {freightLoading ? (
                 <div className="flex justify-center py-12">
@@ -193,11 +175,9 @@ const ExchangeSection = () => {
                 </div>
               ) : (
                 freightLeads.map((lead) => (
-                  <motion.div
+                  <div
                     key={lead.id}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                    className="border border-gray-200 rounded-lg p-4"
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4 flex-1">
@@ -234,7 +214,7 @@ const ExchangeSection = () => {
                         View
                       </a>
                     </div>
-                  </motion.div>
+                  </div>
                 ))
               )}
               <div className="text-center mt-6">
@@ -242,12 +222,12 @@ const ExchangeSection = () => {
                   href="/freight-xchange"
                   className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-medium"
                 >
-                  View All Freight Rates
+                  View More
                   <ArrowRight className="h-4 w-4" />
                 </a>
               </div>
             </div>
-          )}
+          </div>
         </div>
       </div>
     </section>

@@ -10,7 +10,7 @@ import Solutions from "@/page-components/home/Solutions";
 import News from "@/page-components/home/News";
 import Conference from "@/page-components/home/Conferance";
 import LatestMembers from "@/page-components/OurCompany/LatestMembers";
-import SecuritySteps from "@/page-components/BecomeMember/SecuritySteps";
+import ConferenceOpportunities from "@/page-components/home/ConferenceOpportunities";
 import WorldMap from "@/page-components/home/WorldMap";
 import StatsSection from "@/page-components/home/StatsSection";
 import SplitScreenCTA from "@/page-components/Benifits/SplitScreenCTA";
@@ -66,7 +66,7 @@ export default function Home() {
         <WorldMap />
         <StatsSection />
         <Solutions />
-        <SecuritySteps />
+        <ConferenceOpportunities />
         <Conference />
         <News />
         <SplitScreenCTA />

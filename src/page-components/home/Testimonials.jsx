@@ -79,15 +79,10 @@ const Testimonials = () => {
               <p className="text-white/90 text-sm mb-4">
                 Over 15,000+ Attendees Connected Worldwide
               </p>
-              <h3 className="text-white text-2xl lg:text-3xl font-bold mb-6">
+              <h3 className="text-white text-2xl lg:text-3xl font-bold">
                 Client Experience Speak For Themselves
               </h3>
             </div>
-
-            {/* Button */}
-            <button className="bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 backdrop-blur-sm border border-white/20">
-              View All Reviews
-            </button>
           </div>
 
           {/* Sliding Testimonial Cards */}
@@ -132,9 +127,9 @@ const Testimonials = () => {
                         <Image
                           src={testimonial.imageUrl}
                           alt={testimonial.name}
-                          width={40}
-                          height={40}
-                          className="rounded-full"
+                          width={56}
+                          height={56}
+                          className="rounded-full w-14 h-14 object-cover"
                         />
                         <div>
                           <h4 className="text-white font-semibold text-sm">
