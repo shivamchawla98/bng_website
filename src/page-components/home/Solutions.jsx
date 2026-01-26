@@ -5,14 +5,14 @@ import { Autoplay } from "swiper/modules";
 import Image from "next/image";
 import "swiper/css";
 
-import grid1 from "../../../public/why_us/Marketing & PR.jpg";
-import grid2 from "../../../public/why_us/support 247.jpg";
-import grid3 from "../../../public/why_us/Annual_Meeting.jpg";
-import grid4 from "../../../public/why_us/Trade_Directory.jpg";
-import grid5 from "../../../public/why_us/Advanced_Tools.jpg";
-import grid7 from "../../../public/why_us/Live_Talk.jpg";
-import grid8 from "../../../public/why_us/Industry_Survey.jpg";
-import grid9 from "../../../public/why_us/Strict_Selection.jpg";
+import grid1 from "../../../public/why_us/Built_for_the_Top_1.png";
+import grid2 from "../../../public/why_us/Real_Business_Not_Noise.png";
+import grid3 from "../../../public/why_us/Trust_First_Network.png";
+import grid4 from "../../../public/why_us/Quality_Over_Quantity.png";
+import grid5 from "../../../public/why_us/Powerful_Member_Visibility.png";
+import grid7 from "../../../public/why_us/Country_Level_Exclusivity.png";
+import grid8 from "../../../public/why_us/Human_Support_That_Delivers.png";
+import grid9 from "../../../public/why_us/Global_Collaboration_Not_Undercutting.png";
 
 import logo1 from "../../../public/why_us/logo/01_marketing.png";
 import logo2 from "../../../public/why_us/logo/02_24x7.png";
@@ -32,12 +32,11 @@ import graylogo8 from "../../../public/why_us/refortesting/07_industry_survey_gr
 import grayselection from "../../../public/why_us/refortesting/08_sellection_process_gray.png";
 
 import selection from "../../../public/why_us/logo/08_sellection_process.png";
-import testImage from "../../../public/conference.webp";
 
 const slides = [
   {
     title: "Built for the Top 1%",
-    image: testImage,
+    image: grid1,
     text: "BNG is intentionally selective. Limited members per country ensure serious partnerships, not overcrowded competition.",
     logo: logo1,
     activeLogo: graylogo1,

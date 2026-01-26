@@ -49,10 +49,11 @@ const HeroSlider = () => {
             className="w-full h-full bg-cover bg-center"
             style={{
               backgroundImage: "url('/conference-banner.webp')",
-              backgroundPosition: "center"
+              backgroundPosition: "center center"
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/70 via-indigo-600/30 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/80 via-indigo-700/40 to-indigo-600/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-indigo-900/50 via-transparent to-indigo-900/50"></div>
         </div>
 
         {/* Conference Content */}

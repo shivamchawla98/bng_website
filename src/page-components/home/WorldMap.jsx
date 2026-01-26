@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
 import { useQuery } from '@apollo/client';
 import Image from 'next/image';
-import { ZoomIn, ZoomOut, Search } from 'lucide-react';
+import { ZoomIn, ZoomOut, Search, ChevronUp, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
 import backgroundImage from '@/app/images/OBJECTS.png';
 import { gql } from '@apollo/client';
 import 'react-tooltip/dist/react-tooltip.css';
@@ -13,7 +13,6 @@ import 'react-tooltip/dist/react-tooltip.css';
 const ComposableMap = dynamic(() => import('react-simple-maps').then((mod) => mod.ComposableMap), { ssr: false });
 const Geographies = dynamic(() => import('react-simple-maps').then((mod) => mod.Geographies), { ssr: false });
 const Geography = dynamic(() => import('react-simple-maps').then((mod) => mod.Geography), { ssr: false });
-const ZoomableGroup = dynamic(() => import('react-simple-maps').then((mod) => mod.ZoomableGroup), { ssr: false });
 const Tooltip = dynamic(() => import('react-tooltip').then((mod) => mod.Tooltip), { ssr: false });
 
 // GraphQL query
@@ -112,6 +111,7 @@ const WorldMap = () => {
     center: [0, 10],
   });
   const [zoom, setZoom] = useState(100);
+  const mapContainerRef = useRef(null);
 
 
   useEffect(() => {
@@ -187,9 +187,9 @@ const WorldMap = () => {
     const updateMapConfig = () => {
       const width = window.innerWidth;
       if (width < 640) {
-        setMapConfig({ scale: zoom + 10, center: [0, 60] });
+        setMapConfig(prev => ({ ...prev, scale: zoom + 10 }));
       } else {
-        setMapConfig({ scale: zoom, center: [0, 10] });
+        setMapConfig(prev => ({ ...prev, scale: zoom }));
       }
     };
 
@@ -198,12 +198,104 @@ const WorldMap = () => {
     return () => window.removeEventListener('resize', updateMapConfig);
   }, [zoom]);
 
+  useEffect(() => {
+    const mapContainer = mapContainerRef.current;
+    if (!mapContainer) return;
+
+    let isDragging = false;
+
+    const preventScroll = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    };
+
+    const handleMouseDown = (e) => {
+      // Only prevent if clicking on SVG elements (not control buttons)
+      if (e.target.closest('.zoom-controls, .pan-controls, .search-section')) {
+        return; // Allow clicks on control buttons
+      }
+      isDragging = true;
+      e.preventDefault();
+      e.stopPropagation();
+    };
+
+    const handleMouseMove = (e) => {
+      if (isDragging) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      // Allow mousemove for tooltips when not dragging
+    };
+
+    const handleMouseUp = () => {
+      isDragging = false;
+    };
+
+    const preventTouch = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    };
+
+    // Prevent scroll/wheel zoom completely
+    mapContainer.addEventListener('wheel', preventScroll, { passive: false, capture: true });
+    mapContainer.addEventListener('mousewheel', preventScroll, { passive: false, capture: true });
+    mapContainer.addEventListener('DOMMouseScroll', preventScroll, { passive: false, capture: true });
+    
+    // Prevent drag interactions
+    mapContainer.addEventListener('mousedown', handleMouseDown, { capture: true });
+    mapContainer.addEventListener('mousemove', handleMouseMove, { capture: true });
+    mapContainer.addEventListener('mouseup', handleMouseUp, { capture: true });
+    mapContainer.addEventListener('mouseleave', handleMouseUp);
+    
+    // Prevent touch interactions completely
+    mapContainer.addEventListener('touchstart', preventTouch, { passive: false, capture: true });
+    mapContainer.addEventListener('touchmove', preventTouch, { passive: false, capture: true });
+    mapContainer.addEventListener('touchend', preventTouch, { passive: false, capture: true });
+    
+    // Prevent native drag
+    mapContainer.addEventListener('dragstart', preventScroll, { capture: true });
+    mapContainer.addEventListener('drag', preventScroll, { capture: true });
+
+    return () => {
+      mapContainer.removeEventListener('wheel', preventScroll, true);
+      mapContainer.removeEventListener('mousewheel', preventScroll, true);
+      mapContainer.removeEventListener('DOMMouseScroll', preventScroll, true);
+      mapContainer.removeEventListener('mousedown', handleMouseDown, true);
+      mapContainer.removeEventListener('mousemove', handleMouseMove, true);
+      mapContainer.removeEventListener('mouseup', handleMouseUp, true);
+      mapContainer.removeEventListener('mouseleave', handleMouseUp);
+      mapContainer.removeEventListener('touchstart', preventTouch, true);
+      mapContainer.removeEventListener('touchmove', preventTouch, true);
+      mapContainer.removeEventListener('touchend', preventTouch, true);
+      mapContainer.removeEventListener('dragstart', preventScroll, true);
+      mapContainer.removeEventListener('drag', preventScroll, true);
+    };
+  }, [isMounted]);
+
   const handleZoomIn = () => {
     setZoom(prev => Math.min(prev + 20, 200));
   };
 
   const handleZoomOut = () => {
     setZoom(prev => Math.max(prev - 20, 60));
+  };
+
+  const handlePanUp = () => {
+    setMapConfig(prev => ({ ...prev, center: [prev.center[0], prev.center[1] + 10] }));
+  };
+
+  const handlePanDown = () => {
+    setMapConfig(prev => ({ ...prev, center: [prev.center[0], prev.center[1] - 10] }));
+  };
+
+  const handlePanLeft = () => {
+    setMapConfig(prev => ({ ...prev, center: [prev.center[0] - 10, prev.center[1]] }));
+  };
+
+  const handlePanRight = () => {
+    setMapConfig(prev => ({ ...prev, center: [prev.center[0] + 10, prev.center[1]] }));
   };
 
   const handleSearch = () => {
@@ -260,7 +352,10 @@ const WorldMap = () => {
         </h2>
       </div>
 
-      <div className="map-container">
+      <div className="map-container" ref={mapContainerRef}>
+        {/* Interaction Blocking Overlay */}
+        <div className="map-overlay" />
+        
         {/* Zoom Controls */}
         <div className="zoom-controls">
           <button 
@@ -276,6 +371,40 @@ const WorldMap = () => {
             aria-label="Zoom in"
           >
             <ZoomIn className="w-5 h-5" />
+          </button>
+        </div>
+
+        {/* Pan Controls */}
+        <div className="pan-controls">
+          <button 
+            onClick={handlePanUp}
+            className="pan-btn pan-up"
+            aria-label="Pan up"
+          >
+            <ChevronUp className="w-5 h-5" />
+          </button>
+          <div className="pan-horizontal">
+            <button 
+              onClick={handlePanLeft}
+              className="pan-btn pan-left"
+              aria-label="Pan left"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button 
+              onClick={handlePanRight}
+              className="pan-btn pan-right"
+              aria-label="Pan right"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+          <button 
+            onClick={handlePanDown}
+            className="pan-btn pan-down"
+            aria-label="Pan down"
+          >
+            <ChevronDown className="w-5 h-5" />
           </button>
         </div>
 
@@ -299,14 +428,17 @@ const WorldMap = () => {
           className="map"
           width={1200}
           height={600}
+          onWheel={(e) => { e.preventDefault(); e.stopPropagation(); }}
+          onMouseDown={(e) => {
+            if (!e.target.closest('.zoom-controls, .pan-controls, .search-section')) {
+              e.preventDefault();
+              e.stopPropagation();
+            }
+          }}
+          onTouchStart={(e) => { e.preventDefault(); e.stopPropagation(); }}
+          onTouchMove={(e) => { e.preventDefault(); e.stopPropagation(); }}
+          style={{ pointerEvents: 'auto' }}
         >
-          <ZoomableGroup
-            zoom={zoom / 100}
-            center={mapConfig.center}
-            onMoveEnd={({ coordinates }) => {
-              setMapConfig(prev => ({ ...prev, center: coordinates }));
-            }}
-          >
             <Geographies geography={geoUrl}>
             {({ geographies }) =>
               geographies.map((geo) => {
@@ -356,7 +488,6 @@ const WorldMap = () => {
               })
             }
             </Geographies>
-          </ZoomableGroup>
         </ComposableMap>
 
         <Tooltip
@@ -433,11 +564,20 @@ const WorldMap = () => {
           position: relative;
           transition: transform 0.3s ease;
           overflow: hidden;
-          cursor: grab;
+          cursor: default;
+          touch-action: none;
+          -ms-touch-action: none;
+          overscroll-behavior: none;
         }
 
-        .map-container:active {
-          cursor: grabbing;
+        .map-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 5;
+          pointer-events: none;
         }
 
         .zoom-controls {
@@ -448,7 +588,8 @@ const WorldMap = () => {
           display: flex;
           flex-direction: column;
           gap: 8px;
-          z-index: 10;
+          z-index: 100;
+          pointer-events: auto;
         }
 
         .zoom-btn {
@@ -471,12 +612,51 @@ const WorldMap = () => {
           transform: scale(1.05);
         }
 
+        .pan-controls {
+          position: absolute;
+          right: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 4px;
+          z-index: 100;
+          pointer-events: auto;
+        }
+
+        .pan-horizontal {
+          display: flex;
+          gap: 4px;
+        }
+
+        .pan-btn {
+          width: 40px;
+          height: 40px;
+          background: #6853DB;
+          border: none;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          color: white;
+          transition: all 0.2s ease;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .pan-btn:hover {
+          background: #5844B4;
+          transform: scale(1.05);
+        }
+
         .search-section {
           position: absolute;
           bottom: 40px;
           left: 50%;
           transform: translateX(-50%);
-          z-index: 10;
+          z-index: 100;
+          pointer-events: auto;
         }
 
         .search-btn {
@@ -516,6 +696,28 @@ const WorldMap = () => {
           width: 100%;
           height: 100%;
           display: block;
+          user-select: none;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+        }
+
+        .map svg {
+          pointer-events: all;
+          user-drag: none;
+          -webkit-user-drag: none;
+          -moz-user-drag: none;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+
+        .map svg g {
+          pointer-events: all;
+        }
+
+        .map svg path {
+          pointer-events: all;
+          cursor: default !important;
         }
 
         .tooltip-content {
