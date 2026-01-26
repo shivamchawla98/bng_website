@@ -35,7 +35,7 @@ const HeroSlider = () => {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + 2) % 2);
 
   return (
-    <div className="min-h-[74vh] h-[74vh] relative overflow-hidden">
+    <div className="min-h-[85vh] h-[85vh] relative overflow-hidden">
 
       {/* Slide 1 - Conference Banner Style */}
       <div
@@ -46,14 +46,16 @@ const HeroSlider = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <div 
-            className="w-full h-full bg-cover bg-center"
+            className="w-full h-full bg-cover"
             style={{
-              backgroundImage: "url('/conference-banner.webp')",
-              backgroundPosition: "center center"
+              backgroundImage: "url('/conference-banner-style1.webp')",
+              backgroundPosition: "center 45%"
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/80 via-indigo-700/40 to-indigo-600/20"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-indigo-900/50 via-transparent to-indigo-900/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/70 via-indigo-600/20 to-transparent"></div>
+          <div className="absolute inset-0" style={{
+            background: 'linear-gradient(to bottom, rgba(67, 56, 202, 0.4) 0%, transparent 5%, transparent 95%, rgba(67, 56, 202, 0.4) 100%)'
+          }}></div>
         </div>
 
         {/* Conference Content */}

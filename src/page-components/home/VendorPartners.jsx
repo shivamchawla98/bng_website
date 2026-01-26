@@ -96,10 +96,10 @@ const VendorPartners = () => {
               className="group relative"
             >
               {/* Category Card */}
-              <div className={`flex flex-col bg-gradient-to-br ${category.gradient} backdrop-blur-sm rounded-2xl border ${category.borderColor} p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 min-h-[400px]`}>
+              <div className={`flex flex-col bg-gradient-to-br ${category.gradient} backdrop-blur-sm rounded-2xl border ${category.borderColor} px-6 py-4 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 min-h-[320px]`}>
                 {/* Category Title */}
-                <div className="mb-6 pb-4 border-b border-gray-200/50">
-                  <h3 className="text-lg font-bold text-gray-900 text-center">
+                <div className="mb-4 pb-3 border-b border-gray-200/50">
+                  <h3 className="text-xl font-semibold text-gray-900 text-center tracking-tight">
                     {category.title}
                   </h3>
                 </div>

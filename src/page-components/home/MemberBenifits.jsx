@@ -62,7 +62,7 @@ function MemberBenefits() {
     };
   }, [isPaused]);
 
-  const benefits = [
+  const allBenefits = [
     {
       title: "Country Exclusivity",
       description:
@@ -73,7 +73,7 @@ function MemberBenefits() {
       title: "Payment Protection",
       description:
         "Trade with confidence through payment protection coverage of up to USD 50,000, reducing financial risk and building trust across international partnerships.",
-      image: TrustedPartnersVector,
+      image: PaymentProtectionVector,
     },
     {
       title: "Freight Xchange",
@@ -88,13 +88,6 @@ function MemberBenefits() {
       image: BusinessXchangeVector,
     },
     {
-      description: "",
-      image: AcknowledgementVector,
-    },
-  ];
-
-  const benefitsTwo = [
-    {
       title: "Business Matchmaking",
       description:
         "Get intelligent partner recommendations highlighting forwarders actively seeking or expanding business in your country, helping you build meaningful and relevant global connections.",
@@ -104,7 +97,7 @@ function MemberBenefits() {
       title: "Virtual 1-to-1 Meetings",
       description:
         "Schedule private one-on-one meetings with fellow members at your convenience, enabling direct discussions, relationship building, and faster business alignment.",
-      image: PaymentProtectionVector,
+      image: TrustedPartnersVector,
     },
     {
       title: "Annual Conferences",
@@ -116,12 +109,13 @@ function MemberBenefits() {
       title: "Acknowledgement Insignia",
       description:
         "Earn an official BNG Elite insignia that recognises your credibility, status, and commitment—enhancing trust and authority across the global logistics community.",
-      image: ClaimCenterVector,
+      image: AcknowledgementVector,
     },
     {
       title: "Award-Winning Member Support",
       description:
         "Experience award-winning, five-star member support with dedicated relationship managers focused on helping you maximise platform usage and business opportunities.",
+      image: ClaimCenterVector,
     },
   ];
 
@@ -136,7 +130,7 @@ function MemberBenefits() {
       title: "Payment Protection",
       description:
         "Trade with confidence through payment protection coverage of up to USD 50,000, reducing financial risk and building trust across international partnerships.",
-      image: TrustedPartnersVector,
+      image: PaymentProtectionVector,
     },
     {
       title: "Freight Xchange",
@@ -160,7 +154,7 @@ function MemberBenefits() {
       title: "Virtual 1-to-1 Meetings",
       description:
         "Schedule private one-on-one meetings with fellow members at your convenience, enabling direct discussions, relationship building, and faster business alignment.",
-      image: PaymentProtectionVector,
+      image: TrustedPartnersVector,
     },
     {
       title: "Annual Conferences",
@@ -267,66 +261,30 @@ function MemberBenefits() {
         </div>
 
         {/* Desktop View */}
-        <div className="hidden md:flex flex-row space-x-6 justify-center w-full overflow-x-hidden">
-          <div className="h-max flex flex-col justify-center overflow-x-hidden align-middle">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="flex flex-col p-4 justify-center mt-10 align-middle"
-              >
-                <div className="top-0 w-[460px] justify-center flex flex-col items-center align-middle">
-                  <div
-                    className="w-44 h-44 lg:w-52 lg:h-52 flex flex-col items-center justify-start transform transition-all duration-300 hover:scale-110 hover:rotate-3 group cursor-pointer"
-                  >
-                    <Image
-                      src={benefit.image}
-                      alt="Member Benefits"
-                      height={480}
-                      className="object-contain md:block hidden relative transition-transform duration-300 group-hover:scale-110"
-                    />
-                  </div>
-
-                  <div className="flex flex-col h-44 mr-12 mt-10 items-center justify-center">
-                    <div className="text-gray-700 w-[450px] pl-6 text-start mt-2 transition-all duration-300 group-hover:translate-y-1">
-                      <div className="text-3xl text-primary mb-2 text-start w-full font-semibold group-hover:text-opacity-90">
-                        {benefit.title}
-                      </div>
-                    </div>
-                    <p className="text-gray-500 pl-6 text-lg text-left">
-                      {benefit.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="relative" style={{ minHeight: "800px" }}>
-            {/* Dotted Line */}
+        <div className="hidden md:flex flex-col items-center w-full overflow-x-hidden relative">
+          {/* Dotted Line with Ship */}
+          <div className="absolute left-1/2 -translate-x-1/2" style={{ top: 0, bottom: 0, width: "2px" }}>
             <div
-              className="border-[3px] border-dashed border-sky-900 absolute left-1/2 -translate-x-1/2"
+              className="border-[3px] border-dashed border-sky-900 absolute left-0"
               style={{
                 height: "100%",
-                top: "0",
-                bottom: "0",
                 borderStyle: "dashed",
                 borderImage:
-                  "repeating-linear-gradient(to bottom , oklch(86.9% 0.022 252.894), oklch(70.4% 0.04 256.788) 16px, transparent 10px, transparent 20px) 1",
+                  "repeating-linear-gradient(to bottom, oklch(86.9% 0.022 252.894), oklch(70.4% 0.04 256.788) 16px, transparent 10px, transparent 20px) 1",
               }}
             />
-
             {/* Ship Container */}
             <div
               className="absolute"
               style={{
-                left: "calc(50% - 192px)",
+                left: "-190px",
                 top: "-20px",
                 transform: `translateY(${scrollY}px)`,
                 transition: "transform 0.1s ease-out",
                 zIndex: 1000,
               }}
             >
-              <div className="w-[380px] h-[350px] rotate-0 relative">
+              <div className="w-[380px] h-[350px] relative">
                 <Image
                   src={ship}
                   alt="Ship"
@@ -338,38 +296,67 @@ function MemberBenefits() {
             </div>
           </div>
 
-          <div className="h-max flex flex-col justify-center align-middle">
-            {benefitsTwo?.map((benefit, index) => (
-              <div
-                key={index}
-                className="flex flex-col p-4 mt-10 justify-center align-middle"
-              >
-                <div className="top-0 w-[450px] justify-center flex flex-col items-center align-middle">
-                  <div className="flex flex-col h-44 ml-12 items-center mb-10 justify-center">
-                    <div className="text-gray-700 w-[450px] pl-6 text-start mt-2 transition-all duration-300 group-hover:translate-y-1">
-                      <div className="text-3xl text-primary mb-2 text-start w-full font-semibold group-hover:text-opacity-90">
-                        {benefit.title}
+          {/* Benefits Items */}
+          <div className="w-full max-w-6xl">
+            {allBenefits.map((benefit, index) => {
+              const isOdd = index % 2 === 0;
+              return (
+                <div
+                  key={index}
+                  className={`flex items-center justify-center gap-8 ${index > 0 ? 'mt-10' : ''}`}
+                >
+                  {isOdd ? (
+                    // Odd items: Icon LEFT, Text RIGHT
+                    <>
+                      <div className="w-1/2 flex justify-end pr-12">
+                        <div className="w-44 h-44 lg:w-52 lg:h-52 transform transition-all duration-300 hover:scale-110 hover:rotate-3 cursor-pointer">
+                          <Image
+                            src={benefit.image}
+                            alt={benefit.title}
+                            width={208}
+                            height={208}
+                            className="object-contain transition-transform duration-300"
+                          />
+                        </div>
                       </div>
-                    </div>
-                    <p className="text-gray-500 pl-6 text-lg text-left">
-                      {benefit.description}
-                    </p>
-                  </div>
-                  {benefit.image && benefit.title && (
-                    <div
-                      className="w-44 h-44 mt-3 lg:w-52 lg:h-52 flex flex-col items-center justify-center transform transition-all duration-300 hover:scale-110 hover:rotate-3 group cursor-pointer"
-                    >
-                      <Image
-                        src={benefit.image}
-                        alt="Member Benefits"
-                        height={480}
-                        className="object-contain md:block hidden relative transition-transform duration-300 group-hover:scale-110"
-                      />
-                    </div>
+                      <div className="w-1/2 pl-12">
+                        <h3 className="text-3xl text-primary font-semibold mb-3">
+                          {benefit.title}
+                        </h3>
+                        <p className="text-gray-500 text-lg">
+                          {benefit.description}
+                        </p>
+                      </div>
+                    </>
+                  ) : (
+                    // Even items: Text LEFT, Icon RIGHT
+                    <>
+                      <div className="w-1/2 flex justify-end pr-12 text-right">
+                        <div>
+                          <h3 className="text-3xl text-primary font-semibold mb-3">
+                            {benefit.title}
+                          </h3>
+                          <p className="text-gray-500 text-lg">
+                            {benefit.description}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="w-1/2 pl-12">
+                        <div className="w-44 h-44 lg:w-52 lg:h-52 transform transition-all duration-300 hover:scale-110 hover:rotate-3 cursor-pointer">
+                          <Image
+                            src={benefit.image}
+                            alt={benefit.title}
+                            width={208}
+                            height={208}
+                            className="object-contain transition-transform duration-300"
+                          />
+                        </div>
+                      </div>
+                    </>
                   )}
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 

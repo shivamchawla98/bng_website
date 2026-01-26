@@ -3,7 +3,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import Image from "next/image";
-import { Star, Quote } from "lucide-react";
+import { Star } from "lucide-react";
 import rekha from "../../../public/testimonials/REKHA.jpeg";
 import gurbeer from "../../../public/testimonials/Gurbeer.png";
 import sudarshan from "../../../public/testimonials/sudershan sharma.png";
@@ -20,6 +20,8 @@ const testimonials = [
     text: "Truly outstanding service! The team exceeded our expectations with their professionalism, creativity, and quick turnaround time. Highly recommended for anyone seeking quality and reliability.",
     imageUrl: rekha,
     rating: 5,
+    countryFlag: "🇮🇳",
+    country: "India"
   },
   {
     name: "Gurbeer Singh Sethi",
@@ -27,6 +29,8 @@ const testimonials = [
     text: "The connections we've made through BNG have directly resulted in new business opportunities and stronger customer service across our operations.",
     imageUrl: gurbeer,
     rating: 5,
+    countryFlag: "🇮🇳",
+    country: "India"
   },
   {
     name: "Sudershan Sharma",
@@ -34,6 +38,8 @@ const testimonials = [
     text: "BNG has been instrumental in helping us expand internationally. The network's support and collaboration are simply outstanding.",
     imageUrl: sudarshan,
     rating: 5,
+    countryFlag: "🇮🇳",
+    country: "India"
   },
   {
     name: "Sabrina",
@@ -41,6 +47,8 @@ const testimonials = [
     text: "The events and tools BNG provides are unmatched—our team feels more connected and equipped to handle global challenges.",
     imageUrl: Sabrina,
     rating: 5,
+    countryFlag: "🇬🇧",
+    country: "United Kingdom"
   },
 ];
 
@@ -140,7 +148,9 @@ const Testimonials = () => {
                           </p>
                         </div>
                       </div>
-                      <Quote className="w-8 h-8 text-[#6853DB]/30" />
+                      <div className="text-4xl" title={testimonial.country}>
+                        {testimonial.countryFlag}
+                      </div>
                     </div>
                   </div>
                 </SwiperSlide>
