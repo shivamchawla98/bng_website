@@ -64,28 +64,28 @@ function MemberBenefits() {
 
   const benefits = [
     {
-      title: "Global Reach",
+      title: "Country Exclusivity",
       description:
-        "Connect with reliable partners worldwide and access a growing community that meets all your logistics and supply chain requirements.",
+        "Strict country caps ensure exclusivity—maximum 5 Elite members per country and limited state-level representation in key markets like India, USA, and China.",
       image: MembersAreaVector,
-    },
-    {
-      title: "Freight Xchange",
-      description:
-        "Showcase your freight rates and services to the global trade community via B Versailles Logistics & B2B Portals, boosting your visibility and increasing business opportunities.",
-      image: BusinessXchangeVector,
     },
     {
       title: "Payment Protection",
       description:
-        "The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment",
+        "Trade with confidence through payment protection coverage of up to USD 50,000, reducing financial risk and building trust across international partnerships.",
       image: TrustedPartnersVector,
     },
     {
-      title: "Claim Center",
+      title: "Freight Xchange",
       description:
-        "A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts.",
-      image: PaymentMonitoringVector,
+        "Showcase your freight rates on key trade lanes and gain visibility among over one million global forwarders actively searching for competitive and reliable partners.",
+      image: FreightXchangeVector,
+    },
+    {
+      title: "Business Xchange",
+      description:
+        "Post verified shipment requirements, receive targeted responses, compare offers professionally, and choose partners based on capability, trust, and long-term collaboration.",
+      image: BusinessXchangeVector,
     },
     {
       description: "",
@@ -95,90 +95,90 @@ function MemberBenefits() {
 
   const benefitsTwo = [
     {
-      title: "Member Area",
+      title: "Business Matchmaking",
       description:
-        "Showcase your freight rates and services to the global trade community via BNG Logistics & B2B Portals, boosting your visibility and increasing business opportunities.",
+        "Get intelligent partner recommendations highlighting forwarders actively seeking or expanding business in your country, helping you build meaningful and relevant global connections.",
       image: GlobalReachVector,
     },
     {
-      title: "Business Xchange",
+      title: "Virtual 1-to-1 Meetings",
       description:
-        "Access the Business Center, a dedicated area for finding active business leads and sharing opportunities directly with clients in your network.",
-      image: FreightXchangeVector,
-    },
-    {
-      title: "Trusted Partners",
-      description:
-        "Showcase your freight rates and services to the global trade community via BNG Logistics & B2B Portals, boosting your visibility and increasing business opportunities.",
+        "Schedule private one-on-one meetings with fellow members at your convenience, enabling direct discussions, relationship building, and faster business alignment.",
       image: PaymentProtectionVector,
     },
     {
-      title: "Payment Monitoring",
+      title: "Annual Conferences",
       description:
-        "A state-of-the-art system that automatically tracks receivables and payables, keeping all transactions organized and up-to-date.",
+        "Strengthen relationships through exclusive annual physical conferences designed for high-value networking, deal-making, and long-term partnerships beyond digital interactions.",
+      image: PaymentMonitoringVector,
+    },
+    {
+      title: "Acknowledgement Insignia",
+      description:
+        "Earn an official BNG Elite insignia that recognises your credibility, status, and commitment—enhancing trust and authority across the global logistics community.",
       image: ClaimCenterVector,
     },
     {
-      title: "Acknowledgment Insignia",
+      title: "Award-Winning Member Support",
       description:
-        "Stand out with insignias displayed on your profile. Highlighting your credibility, payment status, and activity level, building trust and confidence among fellow members.",
+        "Experience award-winning, five-star member support with dedicated relationship managers focused on helping you maximise platform usage and business opportunities.",
     },
   ];
 
   const mobileBenefits = [
     {
-      title: "Trusted Partners",
+      title: "Country Exclusivity",
       description:
-        "The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment.",
-      image: TrustedPartnersVector,
+        "Strict country caps ensure exclusivity—maximum 5 Elite members per country and limited state-level representation in key markets like India, USA, and China.",
+      image: MembersAreaVector,
     },
     {
       title: "Payment Protection",
       description:
-        "The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment.",
-      image: PaymentProtectionVector,
-    },
-    {
-      title: "Payment Monitoring",
-      description:
-        "A state-of-the-art system that automatically tracks receivables and payables, keeping all transactions organized and up-to-date.",
-      image: PaymentMonitoringVector,
-    },
-    {
-      title: "Claim Center",
-      description:
-        "A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts.",
-      image: ClaimCenterVector,
-    },
-    {
-      title: "Members Area",
-      description:
-        "An intuitive, user-friendly member portal designed to streamline networking, providing a centralized space for all your business connections and collaboration needs.",
-      image: MembersAreaVector,
-    },
-    {
-      title: "Global Reach",
-      description:
-        "Connect with reliable partners worldwide and access a growing community that meets all your logistics and supply chain requirements.",
-      image: GlobalReachVector,
-    },
-    {
-      title: "Business Xchange",
-      description:
-        "Access the Business Center, a dedicated area for finding active business leads and sharing opportunities directly with clients in your network.",
-      image: BusinessXchangeVector,
+        "Trade with confidence through payment protection coverage of up to USD 50,000, reducing financial risk and building trust across international partnerships.",
+      image: TrustedPartnersVector,
     },
     {
       title: "Freight Xchange",
       description:
-        "Showcase your freight rates and services to the global trade community via BNG Logistics & B2B Portals, boosting your visibility and increasing business opportunities.",
+        "Showcase your freight rates on key trade lanes and gain visibility among over one million global forwarders actively searching for competitive and reliable partners.",
       image: FreightXchangeVector,
     },
     {
-      title: "Acknowledgment Insignias",
+      title: "Business Xchange",
       description:
-        "Stand out with insignias displayed on your profile. Highlighting your credibility, payment status, and activity level, building trust and confidence among fellow members.",
+        "Post verified shipment requirements, receive targeted responses, compare offers professionally, and choose partners based on capability, trust, and long-term collaboration.",
+      image: BusinessXchangeVector,
+    },
+    {
+      title: "Business Matchmaking",
+      description:
+        "Get intelligent partner recommendations highlighting forwarders actively seeking or expanding business in your country, helping you build meaningful and relevant global connections.",
+      image: GlobalReachVector,
+    },
+    {
+      title: "Virtual 1-to-1 Meetings",
+      description:
+        "Schedule private one-on-one meetings with fellow members at your convenience, enabling direct discussions, relationship building, and faster business alignment.",
+      image: PaymentProtectionVector,
+    },
+    {
+      title: "Annual Conferences",
+      description:
+        "Strengthen relationships through exclusive annual physical conferences designed for high-value networking, deal-making, and long-term partnerships beyond digital interactions.",
+      image: PaymentMonitoringVector,
+    },
+    {
+      title: "Acknowledgement Insignia",
+      description:
+        "Earn an official BNG Elite insignia that recognises your credibility, status, and commitment—enhancing trust and authority across the global logistics community.",
       image: AcknowledgementVector,
+    },
+    {
+      title: "Award-Winning Member Support",
+      description:
+        "Experience award-winning, five-star member support with dedicated relationship managers focused on helping you maximise platform usage and business opportunities.",
+      image: ClaimCenterVector,
     },
   ];
 

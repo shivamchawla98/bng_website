@@ -2,32 +2,32 @@
 
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-import Link from "next/link";
+import Image from "next/image";
 
 const PANELS = [
   {
-    title: "Attend the Conference",
+    title: "Strict Selection",
     subtitle:
-      "Connect with verified freight forwarders, build partnerships, and participate in high-value 1-to-1 meetings.",
-    img: "/ThreePanelHero/c-1.png",
-    cta: "Explore More",
-    link: "https://conference.bnglogisticsnetwork.com/conference-pass#passes",
+      "Thorough examination of every application by specialists. Registered organization is live with us implies it has gone through with severe determination process.",
+    img: "/multilayervalidation/Strict_Selection.png",
   },
   {
-    title: "Sponsor the Conference",
+    title: "Reference Checks",
     subtitle:
-      "Position your brand in front of decision-makers and gain premium visibility across the BNG global convention.",
-    img: "/ThreePanelHero/c-3.png",
-    cta: "Explore More",
-    link: "https://conference.bnglogisticsnetwork.com/conference-pass#sponsorships",
+      "We connect with confided in contacts for bits of knowledge on your organization before go live with your profile.",
+    img: "/multilayervalidation/Reference-Checks.png",
   },
   {
-    title: "Exhibit at the Conference",
+    title: "Financial Checks",
     subtitle:
-      "Showcase your services, meet qualified prospects, and engage directly with industry leaders.",
-    img: "/ThreePanelHero/c-2.png",
-    cta: "Exhibit with Us",
-    link: "https://conference.bnglogisticsnetwork.com/conference-pass#booth",
+      "A strong trust scan of each members profile to ensure it's risk free and good fit. Each approved members profile audited with D-U-N-S as well.",
+    img: "/multilayervalidation/Financial-Checks.png",
+  },
+  {
+    title: "Approval & Conclusion",
+    subtitle:
+      "A final report for decision making of your application approval to onboard you to the new year of business networking.",
+    img: "/multilayervalidation/Approval-&-Conclusion.png",
   },
 ];
 
@@ -41,13 +41,15 @@ export default function ConferenceOpportunities() {
   const animIdRef = useRef(0);
   const highlightRefs = useRef([]);
 
-  // Preload images
+  // Preload background images
   useEffect(() => {
     PANELS.forEach((p) => {
-      const img = new Image();
-      img.decoding = "async";
-      img.loading = "eager";
-      img.src = p.img;
+      if (typeof window !== 'undefined') {
+        const img = document.createElement('img');
+        img.decoding = "async";
+        img.loading = "eager";
+        img.src = p.img;
+      }
     });
   }, []);
 
@@ -184,11 +186,11 @@ export default function ConferenceOpportunities() {
 
       {/* Content grid */}
       <div className="relative w-full min-h-[70vh] md:min-h-[80vh]">
-        <div className="grid grid-cols-1 md:grid-cols-3 h-full w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-full w-full">
           {PANELS.map((p, idx) => (
             <div
               key={p.title}
-              className="tp-panel group relative flex min-h-[22vh] md:min-h-[80vh] cursor-pointer select-none"
+              className="tp-panel group relative flex min-h-[22vh] md:min-h-[70vh] lg:min-h-[80vh] cursor-pointer select-none"
               onPointerEnter={() => onEnter(idx)}
               onPointerLeave={() => onLeave(idx)}
               onFocus={() => onEnter(idx)}
@@ -211,38 +213,23 @@ export default function ConferenceOpportunities() {
               </div>
               <div className="mt-auto w-full p-6 md:p-8">
                 <div className="tp-text">
-                  <h3 className="mt-2 text-white text-2xl md:text-3xl font-semibold leading-tight">
+                  {/* Icon */}
+                  <div className="mb-4 flex justify-center md:justify-start">
+                    <div className="relative w-16 h-16 md:w-20 md:h-20">
+                      <Image
+                        src={p.img}
+                        alt={p.title}
+                        fill
+                        className="object-contain opacity-90"
+                      />
+                    </div>
+                  </div>
+                  <h3 className="mt-2 text-white text-xl md:text-2xl font-semibold leading-tight">
                     {p.title}
                   </h3>
-                  <p className="mt-2 text-white/85 text-sm md:text-base max-w-[40ch]">
+                  <p className="mt-3 text-white/85 text-sm md:text-base leading-relaxed">
                     {p.subtitle}
                   </p>
-                  <div className="mt-4">
-                    <Link
-                      href={p.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-md text-sm font-semibold transition-all duration-200 group"
-                    >
-                      <span>{p.cta}</span>
-                      <span className="h-4 w-4 inline-block transition-transform duration-200 group-hover:translate-x-1">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          className="h-4 w-4"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M5 12h14M12 5l7 7-7 7"
-                          />
-                        </svg>
-                      </span>
-                    </Link>
-                  </div>
                 </div>
               </div>
               <div className="md:hidden absolute bottom-0 left-0 right-0 h-px bg-white/20" />

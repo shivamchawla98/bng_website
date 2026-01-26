@@ -35,11 +35,11 @@ const HeroSlider = () => {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + 2) % 2);
 
   return (
-    <div className="min-h-[74vh] relative overflow-x-hidden">
+    <div className="min-h-[74vh] h-[74vh] relative overflow-hidden">
 
       {/* Slide 1 - Conference Banner Style */}
       <div
-        className={`absolute inset-0 transition-all duration-1000 ${
+        className={`absolute inset-0 transition-all duration-1000 overflow-hidden ${
           currentSlide === 0 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full"
         }`}
       >
@@ -48,7 +48,7 @@ const HeroSlider = () => {
           <div 
             className="w-full h-full bg-cover bg-center"
             style={{
-              backgroundImage: "url('/Infini Pool26.webp')",
+              backgroundImage: "url('/conference-banner.webp')",
               backgroundPosition: "center"
             }}
           />
@@ -116,7 +116,7 @@ const HeroSlider = () => {
 
       {/* Slide 2 - Original with Stats */}
       <div
-        className={`absolute inset-0 transition-all duration-1000 ${
+        className={`absolute inset-0 transition-all duration-1000 overflow-hidden ${
           currentSlide === 1 ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full"
         }`}
       >

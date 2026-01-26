@@ -49,9 +49,9 @@ const Testimonials = () => {
     <section className="relative bg-gradient-to-br from-[#1a1f3a] via-[#2d1f4a] to-[#1a1f3a] py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <p className="text-indigo-300 text-sm font-medium mb-2">• Testimonials</p>
-          <h2 className="text-3xl lg:text-4xl font-bold text-white">
+        <div className="text-center mb-10">
+          <p className="text-indigo-300 text-base font-medium mb-3">• Testimonials</p>
+          <h2 className="text-4xl lg:text-5xl font-bold text-white">
             What our customers say about their experience
           </h2>
         </div>
@@ -59,27 +59,27 @@ const Testimonials = () => {
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Fixed Left Card */}
-          <div className="bg-gradient-to-br from-[#6853DB] to-[#7B66E3] rounded-2xl p-8 flex flex-col justify-between min-h-[320px] lg:min-h-[400px]">
+          <div className="bg-gradient-to-br from-[#6853DB] to-[#7B66E3] rounded-2xl p-8 flex flex-col justify-between h-[400px]">
             {/* Avatar Group */}
-            <div className="flex -space-x-3 mb-6">
+            <div className="flex -space-x-4 mb-6">
               {testimonials.slice(0, 3).map((testimonial, idx) => (
-                <Image
-                  key={idx}
-                  src={testimonial.imageUrl}
-                  alt={testimonial.name}
-                  width={48}
-                  height={48}
-                  className="rounded-full border-4 border-white"
-                />
+                <div key={idx} className="relative w-16 h-16 rounded-full border-4 border-white overflow-hidden flex-shrink-0">
+                  <Image
+                    src={testimonial.imageUrl}
+                    alt={testimonial.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               ))}
             </div>
 
             {/* Text Content */}
             <div className="flex-1">
-              <p className="text-white/90 text-sm mb-4">
+              <p className="text-white/90 text-base lg:text-lg mb-4">
                 Over 15,000+ Attendees Connected Worldwide
               </p>
-              <h3 className="text-white text-2xl lg:text-3xl font-bold">
+              <h3 className="text-white text-3xl lg:text-4xl font-bold leading-tight">
                 Client Experience Speak For Themselves
               </h3>
             </div>
@@ -107,8 +107,8 @@ const Testimonials = () => {
               className="testimonials-slider h-full"
             >
               {testimonials.map((testimonial, index) => (
-                <SwiperSlide key={index} className="h-auto">
-                  <div className="bg-[#27293B] rounded-2xl p-6 flex flex-col min-h-[320px] lg:min-h-[400px]">
+                <SwiperSlide key={index} className="h-full">
+                  <div className="bg-[#27293B] rounded-2xl p-6 flex flex-col h-[400px]">
                     {/* Star Rating */}
                     <div className="flex gap-1 mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
@@ -117,7 +117,7 @@ const Testimonials = () => {
                     </div>
 
                     {/* Testimonial Text */}
-                    <p className="text-white/80 text-sm leading-relaxed mb-6 flex-1">
+                    <p className="text-white/80 text-base lg:text-lg leading-relaxed mb-6 flex-1">
                       "{testimonial.text}"
                     </p>
 
@@ -132,10 +132,10 @@ const Testimonials = () => {
                           className="rounded-full w-14 h-14 object-cover"
                         />
                         <div>
-                          <h4 className="text-white font-semibold text-sm">
+                          <h4 className="text-white font-semibold text-base">
                             {testimonial.name}
                           </h4>
-                          <p className="text-white/60 text-xs">
+                          <p className="text-white/60 text-sm">
                             {testimonial.title}
                           </p>
                         </div>

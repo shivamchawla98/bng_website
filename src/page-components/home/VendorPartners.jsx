@@ -3,6 +3,12 @@
 import React from "react";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
 
 const VendorPartners = () => {
   const categories = [
@@ -90,7 +96,7 @@ const VendorPartners = () => {
               className="group relative"
             >
               {/* Category Card */}
-              <div className={`h-full bg-gradient-to-br ${category.gradient} backdrop-blur-sm rounded-2xl border ${category.borderColor} p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2`}>
+              <div className={`flex flex-col bg-gradient-to-br ${category.gradient} backdrop-blur-sm rounded-2xl border ${category.borderColor} p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 min-h-[400px]`}>
                 {/* Category Title */}
                 <div className="mb-6 pb-4 border-b border-gray-200/50">
                   <h3 className="text-lg font-bold text-gray-900 text-center">
@@ -98,39 +104,54 @@ const VendorPartners = () => {
                   </h3>
                 </div>
 
-                {/* Logos Container */}
-                <div className="flex flex-col items-center gap-6">
-                  {category.logos.map((logo, logoIndex) => (
-                    <div
-                      key={logoIndex}
-                      className="w-full"
-                    >
-                      {/* Logo Card */}
-                      <div className="relative bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 group/logo">
-                        <div className="relative w-full h-24 flex items-center justify-center">
-                          <Image
-                            src={logo.src}
-                            alt={logo.alt}
-                            fill
-                            className="object-contain group-hover/logo:scale-105 transition-transform duration-300"
-                          />
+                {/* Logos Slider */}
+                <div className="w-full flex-1">
+                  <Swiper
+                    modules={[Autoplay, Pagination]}
+                    slidesPerView={1}
+                    spaceBetween={20}
+                    loop={category.logos.length > 1}
+                    autoplay={category.logos.length > 1 ? {
+                      delay: 3000,
+                      disableOnInteraction: false,
+                    } : false}
+                    pagination={{
+                      clickable: true,
+                      dynamicBullets: true,
+                    }}
+                    className="vendor-slider"
+                  >
+                    {category.logos.map((logo, logoIndex) => (
+                      <SwiperSlide key={logoIndex}>
+                        <div className="w-full pb-10">
+                          {/* Logo Card */}
+                          <div className="relative bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 group/logo">
+                            <div className="relative w-full h-32 flex items-center justify-center">
+                              <Image
+                                src={logo.src}
+                                alt={logo.alt}
+                                fill
+                                className="object-contain group-hover/logo:scale-105 transition-transform duration-300"
+                              />
+                            </div>
+                          </div>
+                          
+                          {/* Link if available */}
+                          {logo.link && (
+                            <a
+                              href={logo.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="mt-3 flex items-center justify-center gap-2 text-sm font-medium text-primary hover:text-purple-700 transition-colors group/link"
+                            >
+                              <span>Visit Website</span>
+                              <ExternalLink className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                            </a>
+                          )}
                         </div>
-                      </div>
-                      
-                      {/* Link if available */}
-                      {logo.link && (
-                        <a
-                          href={logo.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="mt-3 flex items-center justify-center gap-2 text-sm font-medium text-primary hover:text-purple-700 transition-colors group/link"
-                        >
-                          <span>Visit Website</span>
-                          <ExternalLink className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                        </a>
-                      )}
-                    </div>
-                  ))}
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
                 </div>
               </div>
 
