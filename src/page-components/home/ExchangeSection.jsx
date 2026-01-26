@@ -121,9 +121,9 @@ const ExchangeSection = () => {
                             alt="origin"
                             className="w-5 h-5 rounded-sm"
                           />
-                          <span>{lead.loadingPort?.unlocode || 'N/A'}</span>
+                          <span>{lead.loadingPort?.country || 'N/A'}</span>
                           <ArrowRight className="h-4 w-4 text-gray-400" />
-                          <span>{lead.destinationPort?.unlocode || 'N/A'}</span>
+                          <span>{lead.destinationPort?.country || 'N/A'}</span>
                           <img
                             src={`https://flagcdn.com/w20/${getCountryCode(lead.destinationPort?.country)}.png`}
                             alt="destination"
@@ -190,9 +190,9 @@ const ExchangeSection = () => {
                             alt="origin"
                             className="w-5 h-5 rounded-sm"
                           />
-                          <span>{lead.loadingPort?.unlocode || 'N/A'}</span>
+                          <span>{lead.loadingPort?.country || 'N/A'}</span>
                           <ArrowRight className="h-4 w-4 text-gray-400" />
-                          <span>{lead.destinationPort?.unlocode || 'N/A'}</span>
+                          <span>{lead.destinationPort?.country || 'N/A'}</span>
                           <img
                             src={`https://flagcdn.com/w20/${getCountryCode(lead.destinationPort?.country)}.png`}
                             alt="destination"
