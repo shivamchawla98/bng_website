@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { useQuery, gql } from '@apollo/client';
-import { ArrowRight, Plane, Ship, Package } from 'lucide-react';
-import getCountryCode from '../../../utils/getCountryCode';
+import React from "react";
+import { useQuery, gql } from "@apollo/client";
+import { ArrowRight, Plane, Ship, Package } from "lucide-react";
+import getCountryCode from "../../../utils/getCountryCode";
 
 // GraphQL Queries
 const GET_BUSINESS_LEADS = gql`
@@ -52,38 +52,49 @@ const GET_FREIGHT_LEADS = gql`
 `;
 
 const ExchangeSection = () => {
-
-  const { data: businessData, loading: businessLoading } = useQuery(GET_BUSINESS_LEADS, {
-    variables: {
-      filters: {
-        statuses: ['OPEN'],
+  const { data: businessData, loading: businessLoading } = useQuery(
+    GET_BUSINESS_LEADS,
+    {
+      variables: {
+        filters: {
+          statuses: ["OPEN"],
+        },
       },
     },
-  });
+  );
 
-  const { data: freightData, loading: freightLoading } = useQuery(GET_FREIGHT_LEADS, {
-    variables: {},
-  });
+  const { data: freightData, loading: freightLoading } = useQuery(
+    GET_FREIGHT_LEADS,
+    {
+      variables: {},
+    },
+  );
 
   const businessLeads = (businessData?.apiBusinessLeads || []).slice(0, 3);
   const freightLeads = (freightData?.apiFreightLeads || []).slice(0, 3);
 
   const getTransportIcon = (method) => {
-    if (method?.includes('AIR')) return <Plane className="h-5 w-5" />;
-    if (method?.includes('SEA')) return <Ship className="h-5 w-5" />;
+    if (method?.includes("AIR")) return <Plane className="h-5 w-5" />;
+    if (method?.includes("SEA")) return <Ship className="h-5 w-5" />;
     return <Package className="h-5 w-5" />;
   };
 
   return (
-    <section className="bg-gradient-to-b from-white to-gray-50 py-16">
+    <section className="bg-[#EFF6FF] py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Global <span className="text-primary">Exchange</span> Platform
+        <div className="text-center mb-12 relative">
+          <h2 className="text-4xl lg:text-[55px] font-bold text-gray-900 mb-4">
+            Active <span className="text-primary">  Opportunities </span> 
+          </h2>
+          <h2
+            className="absolute top-[-34px] lg:top-[-60px] left-0 lg:left-[0%] text-center w-full text-[40px]  lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+            aria-hidden="true"
+          >
+            Active Opportunities
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Real-time freight rates and business opportunities from our verified network
+            Explore live rates and shipment requirements from top 1% forwarders globally
           </p>
         </div>
 
@@ -93,7 +104,7 @@ const ExchangeSection = () => {
           <div className="bg-white rounded-2xl shadow-xl p-6">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
               <Package className="h-6 w-6 text-primary" />
-              Business Exchange
+              Business Xchange
             </h3>
             <div className="space-y-4">
               {businessLoading ? (
@@ -117,21 +128,25 @@ const ExchangeSection = () => {
                         </div>
                         <div className="flex items-center gap-2 text-sm font-medium">
                           <img
-                            src={`https://flagcdn.com/w20/${getCountryCode(lead.loadingPort?.country)}.png`}
+                            src={`https://flagcdn.com/w20/${getCountryCode(
+                              lead.loadingPort?.country,
+                            )}.png`}
                             alt="origin"
                             className="w-5 h-5 rounded-sm"
                           />
-                          <span>{lead.loadingPort?.country || 'N/A'}</span>
+                          <span>{lead.loadingPort?.country || "N/A"}</span>
                           <ArrowRight className="h-4 w-4 text-gray-400" />
-                          <span>{lead.destinationPort?.country || 'N/A'}</span>
+                          <span>{lead.destinationPort?.country || "N/A"}</span>
                           <img
-                            src={`https://flagcdn.com/w20/${getCountryCode(lead.destinationPort?.country)}.png`}
+                            src={`https://flagcdn.com/w20/${getCountryCode(
+                              lead.destinationPort?.country,
+                            )}.png`}
                             alt="destination"
                             className="w-5 h-5 rounded-sm"
                           />
                         </div>
                         <span className="text-sm text-gray-600">
-                          {lead.commodity || 'General Cargo'}
+                          {lead.commodity || "General Cargo"}
                         </span>
                       </div>
                       <a
@@ -162,7 +177,7 @@ const ExchangeSection = () => {
           <div className="bg-white rounded-2xl shadow-xl p-6">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
               <Ship className="h-6 w-6 text-primary" />
-              Freight Exchange
+              Freight Xchange
             </h3>
             <div className="space-y-4">
               {freightLoading ? (
@@ -186,15 +201,19 @@ const ExchangeSection = () => {
                         </div>
                         <div className="flex items-center gap-2 text-sm font-medium">
                           <img
-                            src={`https://flagcdn.com/w20/${getCountryCode(lead.loadingPort?.country)}.png`}
+                            src={`https://flagcdn.com/w20/${getCountryCode(
+                              lead.loadingPort?.country,
+                            )}.png`}
                             alt="origin"
                             className="w-5 h-5 rounded-sm"
                           />
-                          <span>{lead.loadingPort?.country || 'N/A'}</span>
+                          <span>{lead.loadingPort?.country || "N/A"}</span>
                           <ArrowRight className="h-4 w-4 text-gray-400" />
-                          <span>{lead.destinationPort?.country || 'N/A'}</span>
+                          <span>{lead.destinationPort?.country || "N/A"}</span>
                           <img
-                            src={`https://flagcdn.com/w20/${getCountryCode(lead.destinationPort?.country)}.png`}
+                            src={`https://flagcdn.com/w20/${getCountryCode(
+                              lead.destinationPort?.country,
+                            )}.png`}
                             alt="destination"
                             className="w-5 h-5 rounded-sm"
                           />

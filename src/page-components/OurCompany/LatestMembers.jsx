@@ -60,18 +60,21 @@ function LatestMembers() {
   };
 
   return (
-    <section className="w-full mx-auto py-8 sm:py-10 lg:py-14" style={styles.section}>
-      <div style={styles.headingContainer}>
-        <h2 className="text-4xl lg:text-[55px] font-bold text-[#27293B] text-center mb-8 sm:mb-12 lg:mb-20 relative z-10">
-          Latest <span className="text-primary">Members</span>
-        </h2>
-        <h2
-          className="absolute top-[-34px] lg:top-[-60px] left-0 lg:left-[0%] text-center w-full text-[40px]  lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
-          aria-hidden="true"
-        >
-          Latest Members
-        </h2>
-      </div>
+    <section className="w-full mx-auto py-16 lg:py-24" style={styles.section}>
+      <div className="text-center mb-12 relative">
+          <h2 className="text-4xl lg:text-[55px] font-bold text-gray-900 mb-4">
+            Latest <span className="text-primary">  Members </span> 
+          </h2>
+          <h2
+            className="absolute top-[-34px] lg:top-[-60px] left-0 lg:left-[0%] text-center w-full text-[40px]  lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+            aria-hidden="true"
+          >
+            Latest Members
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Recent additions to BNG’s elite global community
+          </p>
+        </div>
       <div style={styles.logoSlider}>
         <div
           style={{
