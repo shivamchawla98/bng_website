@@ -108,7 +108,7 @@ const WorldMap = () => {
   const [isMounted, setIsMounted] = useState(false);
   const [mapConfig, setMapConfig] = useState({
     scale: 100,
-    center: [0, 10],
+    center: [0, -10],
   });
   const [zoom, setZoom] = useState(100);
   const mapContainerRef = useRef(null);
@@ -339,25 +339,37 @@ const WorldMap = () => {
   }
 
   return (
-    <section className="world-map-section">
-      <div className="title-container relative">
-      <h2 className="text-4xl lg:text-[55px] mt-8  font-bold text-[#27293B] text-center mb-8 sm:mb-10 lg:mb-12 relative z-10">
-          Worldwide <span className="text-primary">Reach</span>
-        </h2>
-        <h2
-          className="absolute text-center -top-[8px] lg:-top-[17px] left-0 lg:left-[1%] w-full text-[40px]  lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
-          aria-hidden="true"
+    <section
+          className="world-map-section py-16 lg:py-24"
         >
-          Worldwide Reach
-        </h2>
-      </div>
 
-      <div className="map-container" ref={mapContainerRef}>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="text-center w-7xl mb-12 relative">
+    <h2 className="text-4xl lg:text-[55px] font-bold text-gray-900 mb-4">
+      Worldwide <span className="text-primary">Reach</span>
+    </h2>
+    <h2
+      className="absolute top-[-34px] lg:top-[-60px] left-1/2 transform -translate-x-1/2 text-center text-[40px] lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0 whitespace-nowrap"
+      aria-hidden="true"
+    >
+      Worldwide Reach
+    </h2>
+    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+      A global footprint of verified freight forwarders worldwide
+    </p>
+  </div>
+</div>
+
+
+
+
+      <div className="map-container " ref={mapContainerRef}
+      >
         {/* Interaction Blocking Overlay */}
         <div className="map-overlay" />
         
         {/* Zoom Controls */}
-        <div className="zoom-controls">
+        {/* <div className="zoom-controls">
           <button 
             onClick={handleZoomOut}
             className="zoom-btn"
@@ -372,10 +384,10 @@ const WorldMap = () => {
           >
             <ZoomIn className="w-5 h-5" />
           </button>
-        </div>
+        </div> */}
 
         {/* Pan Controls */}
-        <div className="pan-controls">
+        {/* <div className="pan-controls">
           <button 
             onClick={handlePanUp}
             className="pan-btn pan-up"
@@ -406,10 +418,10 @@ const WorldMap = () => {
           >
             <ChevronDown className="w-5 h-5" />
           </button>
-        </div>
+        </div> */}
 
         {/* Search Button */}
-        <div className="search-section">
+        {/* <div className="search-section">
           <button 
             onClick={handleSearch}
             className="search-btn"
@@ -417,7 +429,7 @@ const WorldMap = () => {
             <span className="search-label">FIND A MEMBER</span>
             <span className="search-prompt">Search for a specific member or country...</span>
           </button>
-        </div>
+        </div> */}
 
         <ComposableMap
           projection="geoMercator"
@@ -427,7 +439,7 @@ const WorldMap = () => {
           }}
           className="map"
           width={1200}
-          height={600}
+          height={700}
           onWheel={(e) => { e.preventDefault(); e.stopPropagation(); }}
           onMouseDown={(e) => {
             if (!e.target.closest('.zoom-controls, .pan-controls, .search-section')) {
@@ -510,7 +522,7 @@ const WorldMap = () => {
         .world-map-section {
           width: 100vw;
           margin: 0;
-          padding: 40px 0;
+          padding: 96px 96px;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -558,7 +570,7 @@ const WorldMap = () => {
 
         .map-container {
           width: 100vw;
-          height: 600px;
+          height: 700px;
           padding: 0;
           border: none;
           position: relative;
@@ -737,7 +749,7 @@ const WorldMap = () => {
 
         @media (max-width: 1024px) {
           .world-map-section {
-            padding: 32px 16px;
+            padding: 40px 32px;
             min-height: 500px;
             max-height: 700px;
           }
@@ -763,6 +775,7 @@ const WorldMap = () => {
           }
 
           .map-container {
+          
             height: 300px;
             padding: 16px;
           }

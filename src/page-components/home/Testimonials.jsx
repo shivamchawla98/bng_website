@@ -3,26 +3,26 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import Image from "next/image";
-import { Star } from "lucide-react";
+import { Star,Quote } from "lucide-react";
 import rekha from "../../../public/testimonials/REKHA.jpeg";
 import gurbeer from "../../../public/testimonials/Gurbeer.png";
 import sudarshan from "../../../public/testimonials/sudershan sharma.png";
 import Sabrina from "../../../public/testimonials/SABRINA.png";
+import eit from "../../../public/testimonials/8.png";
+import Alexandre from "../../../public/testimonials/Alexandre Levy, JOINTS LOGISTICS, BRAZIL.png";
+import Allie from "../../../public/testimonials/Allie Nichlos - Victoria Projects, USA.png";
+import Anne from "../../../public/testimonials/Anne Candela - ITALFREIGHT, FRANCE.png";
+import Karolina from "../../../public/testimonials/Karolina Zarebska , MAG, POLAND.png";
+import Radu from "../../../public/testimonials/Mr. Radu Stanciu - Global Go, USA Logistics.png";
+import Timo from "../../../public/testimonials/Timo Schrimpf, TS LOGISTIC, GERMANYS, GERMANY.png";
+import Virendra from "../../../public/testimonials/Virendra Kothari, GLOBE GROUND, INDIA.png";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 
 const testimonials = [
-  {
-    name: "Rekha",
-    title: "Force Logistics Pvt. Ltd.",
-    text: "Truly outstanding service! The team exceeded our expectations with their professionalism, creativity, and quick turnaround time. Highly recommended for anyone seeking quality and reliability.",
-    imageUrl: rekha,
-    rating: 5,
-    countryFlag: "🇮🇳",
-    country: "India"
-  },
+
   {
     name: "Gurbeer Singh Sethi",
     title: "Radius Logistics Pvt. Ltd.",
@@ -30,26 +30,82 @@ const testimonials = [
     imageUrl: gurbeer,
     rating: 5,
     countryFlag: "🇮🇳",
-    country: "India"
+    country: "India",
   },
-  {
-    name: "Sudershan Sharma",
-    title: "Unique Logistics India Pvt. Ltd.",
-    text: "BNG has been instrumental in helping us expand internationally. The network's support and collaboration are simply outstanding.",
-    imageUrl: sudarshan,
-    rating: 5,
-    countryFlag: "🇮🇳",
-    country: "India"
-  },
+
   {
     name: "Sabrina",
     title: "Super Link Logistics Ltd.",
     text: "The events and tools BNG provides are unmatched—our team feels more connected and equipped to handle global challenges.",
     imageUrl: Sabrina,
     rating: 5,
-    countryFlag: "🇬🇧",
-    country: "United Kingdom"
+    countryFlag: "🇨🇳",
+    country: "China",
   },
+  
+   {
+    name: "Alexandre",
+    title: "Joints Logistics",
+    text: "BNG created an environment where connections felt natural and genuine. From the booth to the after-parties, every interaction was warm, professional, and meaningful. Truly a network built on relationships.",
+    imageUrl: Alexandre,
+    countryFlag: "🇧🇷",
+    country: "Brazil",
+    rating: 5
+  },
+  {
+    name: "Allie",
+    title: "Victoria Projects Cargo",
+    text: "BNG helped us connect with reliable partners and access competitive freight solutions efficiently. The overall experience strengthened our confidence in building new global relationships.",
+    imageUrl: Allie,
+    countryFlag: "🇺🇸",
+    country: "USA",
+    rating: 5
+  },
+  {
+    name: "Anne",
+    title: "ItalFreight",
+    text: "What sets BNG apart is the support-driven approach. The team actively helps members find the right partners and facilitates meaningful connections beyond simple introductions.",
+    imageUrl: Anne,
+    countryFlag: "🇫🇷",
+    country: "France",
+    rating: 5
+  },
+  {
+    name: "Karolina",
+    title: "MAG",
+    text: "BNG made partner discovery simple and dependable. The team’s involvement during live requirements helped us build trust and move forward with confidence.",
+    imageUrl: Karolina,
+    countryFlag: "🇵🇱",
+    country: "Poland",
+    rating: 5
+  },
+  {
+    name: "Radu",
+    title: "Global Go Logistics LLC",
+    text: "BNG offers a structured yet personal way to connect with the right partners. Sharing requirements and engaging with fellow members has been smooth, transparent, and effective.",
+    imageUrl: Radu,
+    countryFlag: "🇺🇸",
+    country: "USA",
+    rating: 5
+  },
+  {
+    name: "Timo",
+    title: "TS Logistics GmbH",
+    text: "BNG stands out for the quality of people it brings together. The booth meetings and evening interactions helped build real trust. It’s not just networking—it’s relationship building.",
+    imageUrl: Timo,
+    countryFlag: "🇩🇪",
+    country: "Germany",
+    rating: 5
+  },
+  {
+    name: "Virendra",
+    title: "Globe Ground Shipping",
+    text: "The energy around BNG was exceptional. The team, the members, and the informal gatherings made networking effortless. It felt less like an exhibition and more like a trusted business circle.",
+    imageUrl: Virendra,
+    countryFlag: "🇮🇳",
+    country: "India",
+    rating: 5
+  }
 ];
 
 const Testimonials = () => {
@@ -57,40 +113,42 @@ const Testimonials = () => {
     <section className="relative bg-gradient-to-br from-[#1a1f3a] via-[#2d1f4a] to-[#1a1f3a] py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-10">
-          <p className="text-indigo-300 text-base font-medium mb-3">• Testimonials</p>
-          <h2 className="text-4xl lg:text-5xl font-bold text-white">
-            What our customers say about their experience
+        <div className="text-center mb-12 relative">
+          <h2 className="text-4xl lg:text-[55px] font-bold text-white mb-4">
+           What BNG <span className="text-[#907df3]">  Members say </span>
           </h2>
+          <h2
+            className="absolute top-[-34px] lg:top-[-60px] left-0 lg:left-[0%] text-center w-full text-[40px]  lg:text-[80px] font-bold text-[#ffffff] opacity-[5%] leading-none z-0"
+            aria-hidden="true"
+          >
+            What BNG Members say
+          </h2>
+          <p className="text-lg text-white max-w-2xl mx-auto">
+            Built on trust, proven by members
+          </p>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-12">
           {/* Fixed Left Card */}
           <div className="bg-gradient-to-br from-[#6853DB] to-[#7B66E3] rounded-2xl p-8 flex flex-col justify-between h-[400px]">
             {/* Avatar Group */}
-            <div className="flex -space-x-4 mb-6">
-              {testimonials.slice(0, 3).map((testimonial, idx) => (
-                <div key={idx} className="relative w-16 h-16 rounded-full border-4 border-white overflow-hidden flex-shrink-0">
-                  <Image
-                    src={testimonial.imageUrl}
-                    alt={testimonial.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-
+            
+          <Quote size='50'/>
             {/* Text Content */}
-            <div className="flex-1">
-              <p className="text-white/90 text-base lg:text-lg mb-4">
-                Over 15,000+ Attendees Connected Worldwide
-              </p>
-              <h3 className="text-white text-3xl lg:text-4xl font-bold leading-tight">
-                Client Experience Speak For Themselves
+            <div className="flex flex-col items-center">
+           
+              <h3 className="text-white text-xl lg:text-2xl font-bold leading-tight">
+                Chosen by the world’s top freight forwarders.
+                
               </h3>
+              <br/>
+                <h3 className="text-white text-xl lg:text-2xl font-bold leading-tight">
+                    Built on trust, results, and long-term partnerships.
+                  </h3>
+              
             </div>
+            <div className='flex w-full justify-end flex-row'><Quote size='50'/></div>
           </div>
 
           {/* Sliding Testimonial Cards */}
@@ -120,12 +178,15 @@ const Testimonials = () => {
                     {/* Star Rating */}
                     <div className="flex gap-1 mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                        <Star
+                          key={i}
+                          className="w-5 h-5 fill-yellow-400 text-yellow-400"
+                        />
                       ))}
                     </div>
 
                     {/* Testimonial Text */}
-                    <p className="text-white/80 text-base lg:text-lg leading-relaxed mb-6 flex-1">
+                    <p className="text-white/80 text-base lg:text-xl\ leading-relaxed mb-6 flex-1">
                       "{testimonial.text}"
                     </p>
 

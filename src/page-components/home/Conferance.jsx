@@ -1,41 +1,46 @@
-'use client';
+"use client";
 
 import React from "react";
 import Image from "next/image";
 import ConferenceImage from "@/app/images/conferacegrid1.png";
-import styles from './Conference.module.css';
-import conferenceBg from '../../../public/conference.webp'
+import styles from "./Conference.module.css";
+import conferenceBg from "../../../public/members_benefit/conference.png";
+import Link from "next/link";
+
 
 const Conference = () => {
   return (
-    <section 
-      className="relative w-screen py-20 overflow-hidden"
-      style={{
-        backgroundImage: `url(${ConferenceImage.src})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-      }}
+    <section
+      className="relative w-full py-16 lg:py-24 overflow-hidden bg-gradient-to-br from-[#1B1E3B] via-[#281F46] to-[#211F40]"
+      // style={{
+      //   backgroundImage: `url(${ConferenceImage.src})`,
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      //   backgroundAttachment: "fixed",
+      // }}
     >
       {/* Tint Overlay */}
-      <div 
+      <div
         className="absolute inset-0 "
         style={{
-          backgroundColor: 'rgba(104, 83, 219, 0.75)',
+          // backgroundColor: "rgba(104, 83, 219, 0.75)",
           zIndex: 1,
         }}
       />
-      
-      <div className="relative max-w-8xl mx-auto px-4 md:px-8" style={{ zIndex: 2 }}>
+
+      <div
+        className="relative max-w-8xl mx-auto px-4 md:px-8"
+        style={{ zIndex: 2 }}
+      >
         <div className="flex flex-col md:flex-row justify-center lg:px-24 items-center gap-8">
           {/* Left Column - Image (40%) */}
-          <div className="w-full md:w-[50%] relative flex justify-start items-center transform transition-all duration-700 hover:scale-105">
-            <div className="relative w-full h-80 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+          <div className="w-full md:w-[60%] relative flex justify-start items-center transform transition-all duration-700 hover:scale-105">
+            <div className="relative w-full h-[430px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
               <Image
                 src={conferenceBg}
                 alt="Conference"
                 fill
-                className="object-cover transform transition-transform duration-500 hover:scale-110"
+                className="object-cover transform transition-transform duration-500 "
                 priority
               />
             </div>
@@ -46,30 +51,29 @@ const Conference = () => {
             <h2 className="text-[55px] font-bold text-white mb-4 leading-tight">
               Conference
             </h2>
-            <p className={`text-[18px] pr-4 lg:pr-0 font-bold text-white/90 leading-relaxed mb-8 ${styles.slideUp}`}>
-              Be part of an inspiring conference where industry leaders unveil insights and dive into the latest logistics and supply chain trends. Network with top professionals, gain valuable knowledge, and elevate your expertise—don’t miss out!
-            </p>
-            <a 
-              href="https://conference.bnglogisticsnetwork.com/register"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white/10 text-white border-[3px] px-8 py-4 flex items-center  border-white/60 hover:border-white rounded-lg hover:bg-[#5216ab] transition-all duration-300 group transform hover:translate-x-2 w-fit"
+            <p
+              className={`text-[18px] pr-4 lg:pr-0 font-bold text-white/90 leading-relaxed mb-8 ${styles.slideUp}`}
             >
-              Register Now
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-2"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
-            </a>
+The BNG Global Conference takes place 14–17 June 2026 at Royal Cliff Beach Hotel, Pattaya Thailand, bringing elite freight forwarders together for high-value global collaboration.            </p>
+          <div className="flex flex-col sm:flex-row gap-2 mx-auto justify-start w-full">
+  <Link
+    href="https://conference.bnglogisticsnetwork.com/register"
+    className="w-full sm:w-auto bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 px-6 py-3 rounded-lg text-white font-bold text-base sm:text-lg transition-all duration-300 hover:scale-105 shadow-xl text-center"
+  >
+    Conference Registration
+  </Link>
+  <a
+    href="https://conference.bnglogisticsnetwork.com/download/BNG Global Convention 2026.pdf"
+    download
+    className="w-full sm:w-auto bg-white hover:bg-gray-100 px-6 py-3 rounded-lg text-gray-900 font-bold text-base sm:text-lg transition-all duration-300 hover:scale-105 shadow-xl text-center"
+  >
+    Download Brochure
+  </a>
+</div>
+
+
+
+
           </div>
         </div>
       </div>

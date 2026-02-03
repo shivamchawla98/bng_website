@@ -5,11 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import bg from "@/app/images/home/Ellipse2.png";
+import bg1 from "../../../public/hero/BANNER.png";
+import bg2 from "../../../public/hero/3.png";
 import Widget from "./Widget";
-import office from '../../../public/herosectionicon/offices.png';
-import cities from '../../../public/herosectionicon/cities.png';
-import member from '../../../public/herosectionicon/member.png';
-import country from '../../../public/herosectionicon/contries.png';
+import office from "../../../public/herosectionicon/offices.png";
+import cities from "../../../public/herosectionicon/cities.png";
+import member from "../../../public/herosectionicon/member.png";
+import country from "../../../public/herosectionicon/contries.png";
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -36,64 +38,104 @@ const HeroSlider = () => {
 
   return (
     <div className="min-h-[85vh] h-[85vh] relative overflow-hidden">
-
       {/* Slide 1 - Conference Banner Style */}
       <div
         className={`absolute inset-0 transition-all duration-1000 overflow-hidden ${
-          currentSlide === 0 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full"
+          currentSlide === 0
+            ? "opacity-100 translate-x-0"
+            : "opacity-0 translate-x-full"
         }`}
       >
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <div 
+          <div
             className="w-full h-full bg-cover"
             style={{
-              backgroundImage: "url('/conference-banner-style1.webp')",
-              backgroundPosition: "center 45%"
+              backgroundImage: "url('/hero/3.png')",
+
+              backgroundPosition: "center 45%",
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/70 via-indigo-600/20 to-transparent"></div>
-          <div className="absolute inset-0" style={{
-            background: 'linear-gradient(to bottom, rgba(67, 56, 202, 0.4) 0%, transparent 5%, transparent 95%, rgba(67, 56, 202, 0.4) 100%)'
-          }}></div>
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to bottom, rgba(67, 56, 202, 0.4) 0%, transparent 5%, transparent 95%, rgba(67, 56, 202, 0.4) 100%)",
+            }}
+          ></div>
         </div>
 
         {/* Conference Content */}
         <div className="container relative z-20 h-full py-12 md:py-16 lg:py-20 mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
           <div className="text-white max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-purple-300">
+            <h1 className="text-[30px] sm:text-[40px] md:text-[60px] font-bold mb-6 leading-tight">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
                 BNG
               </span>{" "}
               <span className="text-white">Global Convention</span>
             </h1>
-            
+
             <div className="mb-4 inline-flex flex-col sm:flex-row items-start sm:items-center gap-4 px-4 py-3 border-l-4 border-white/80">
               <div className="flex items-center gap-2 text-base sm:text-lg">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
                 </svg>
-                <span>June 14<sup className="text-xs">th</sup> – June 17<sup className="text-xs">th</sup>, 2026</span>
+                <span>
+                  June 14<sup className="text-xs">th</sup> – June 17
+                  <sup className="text-xs">th</sup>, 2026
+                </span>
               </div>
               <div className="flex items-center gap-2 font-bold text-base sm:text-lg">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
                 </svg>
                 <span>Royal Cliff Beach Hotel, Pattaya</span>
               </div>
             </div>
 
-            <p className="text-xl sm:text-2xl md:text-3xl mb-2 font-light italic">
+            <p className="text-xl sm:text-2xl md:text-3xl mb-2 font-light ">
               <span>The Global </span>
-              <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-purple-300">
-                Freight Stage
-              </span>
+             <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+  Freight Stage
+</span>
+
             </p>
 
             <p className="text-sm sm:text-base text-gray-200 mb-6">
               Powered by{" "}
-              <a href="https://www.bnglogisticsnetwork.com/" target="_blank" rel="noopener noreferrer" className="underline font-semibold hover:text-white">
+              <a
+                href="https://www.bnglogisticsnetwork.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline font-semibold hover:text-white"
+              >
                 BNG Logistics Network
               </a>
             </p>
@@ -120,35 +162,66 @@ const HeroSlider = () => {
       {/* Slide 2 - Original with Stats */}
       <div
         className={`absolute inset-0 transition-all duration-1000 overflow-hidden ${
-          currentSlide === 1 ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full"
+          currentSlide === 1
+            ? "opacity-100 translate-x-0"
+            : "opacity-0 -translate-x-full"
         }`}
       >
+<div
+  className="absolute inset-0 w-full h-full"
+  style={{
+    backgroundImage: `
+      linear-gradient(to bottom,
+        rgba(120, 110, 200, 0.6) 0%,
+        rgba(120, 110, 200, 0.4) 5%,
+        rgba(120, 110, 200, 0.2) 15%,
+        transparent 40%
+      ),
+      linear-gradient(to top,
+        rgba(120, 110, 200, 0.6) 0%,
+        rgba(120, 110, 200, 0.4) 5%,
+        rgba(120, 110, 200, 0.2) 15%,
+        transparent 40%
+      ),
+      url(${bg1.src})
+    `,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    zIndex: 0,
+  }}
+></div>
+
+
+
+
+        {/* Content and Globe Container (z-20) */}
         <div className="container py-8 md:py-12 lg:py-16 mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center relative z-20 h-full">
+          {/* Left side content */}
           <div className="lg:w-1/2 mb-8 lg:mb-0">
-            <h1 className="text-[32px] sm:text-[40px] md:text-[55px] mb-4 text-[#27293B]">
-              <span className="text-[40px] sm:text-[50px] md:text-[70px] font-bold">
-                Connect &
+            <h1 className="text-[28px] sm:text-[35px] md:text-[50px] mb-4 text-[#27293B]">
+              <span className="text-[30px] sm:text-[40px] md:text-[60px] font-bold">
+                Country
               </span>
-              <span className="text-[#5216ab] font-bold text-[40px] sm:text-[50px] md:text-[70px]">
+              <span className="text-[#5216ab] font-bold text-[30px] sm:text-[40px] md:text-[60px]">
                 {" "}
-                Collaborate
+                Exclusive Network
               </span>
               <br />
-              with
-              <span className="text-[#5216ab]"> Forwarders </span>
-              daily
+              Built for
+              <span className="text-[#5216ab]"> Top 1% </span>
+              
             </h1>
             <p className="text-gray-600 mb-6 text-sm sm:text-base">
-              Experience the next generation of forwarder networks. Tired of
-              investing in multiple networks with minimal returns?{" "}
-              <span className="text-base sm:text-lg md:text-[20px] font-semibold">
+              <span className="text-base sm:text-lg md:text-[20px] font-semibold">A network not for everyone</span>—built for elite freight forwarders who value country exclusivity, real business opportunities, payment protection, and long-term global partnerships.{" "}
+              {/* <span className="text-base sm:text-lg md:text-[20px] font-semibold">
                 Discover a fresh approach to partnership here!
-              </span>
+              </span> */}
             </p>
             <div className="flex w-60 flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
               <Link
                 href="https://app.bnglogisticsnetwork.com/register"
-                className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-[#5216ab] hover:from-transparent transition-all duraton-300 bg-primary transform hover:translate-x-2"
+                className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-[#5216ab] hover:from-transparent transition-all duration-300 bg-primary transform hover:translate-x-2"
               >
                 Become a Member
                 <svg
@@ -168,15 +241,18 @@ const HeroSlider = () => {
               </Link>
             </div>
           </div>
+
+          {/* Right side: Animated globe (z-30) */}
           <div className="lg:w-1/2 relative">
             <Image
               src={bg}
-              alt="Background Image"
-              className="lg:ml-20"
+              alt="Globe"
+              className="lg:ml-20 relative z-50"
               priority={true}
               style={{
                 transform: `translateX(${Math.min(scrollY * 0.2, 100)}px)`,
                 transition: "transform 0.3s ease-out",
+                zIndex:9999
               }}
             />
           </div>

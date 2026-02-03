@@ -1,10 +1,10 @@
-'use client';
-import { useQuery, gql } from '@apollo/client';
-import Image from 'next/image';
-import office from '../../../public/herosectionicon/offices.png';
-import cities from '../../../public/herosectionicon/cities.png';
-import member from '../../../public/herosectionicon/member.png';
-import country from '../../../public/herosectionicon/contries.png';
+"use client";
+import { useQuery, gql } from "@apollo/client";
+import Image from "next/image";
+import office from "../../../public/herosectionicon/offices.png";
+import cities from "../../../public/herosectionicon/cities.png";
+import member from "../../../public/herosectionicon/member.png";
+import country from "../../../public/herosectionicon/contries.png";
 
 const PUBLIC_SEARCH_COMPANIES = gql`
   query PublicSearchCompanies(
@@ -40,37 +40,38 @@ const PUBLIC_SEARCH_COMPANIES = gql`
 const mockData = {
   publicSearchCompanies: [
     {
-      id: '1',
-      companyName: 'Tech Corp',
-      legalName: 'Tech Corporation Inc.',
-      logo: '/logos/tech-corp.png',
+      id: "1",
+      companyName: "Tech Corp",
+      legalName: "Tech Corporation Inc.",
+      logo: "/logos/tech-corp.png",
       locations: [
-        { country: 'USA', city: 'New York' },
-        { country: 'USA', city: 'San Francisco' },
+        { country: "USA", city: "New York" },
+        { country: "USA", city: "San Francisco" },
       ],
     },
     {
-      id: '2',
-      companyName: 'Global Solutions',
-      legalName: 'Global Solutions Ltd.',
-      logo: '/logos/global-solutions.png',
+      id: "2",
+      companyName: "Global Solutions",
+      legalName: "Global Solutions Ltd.",
+      logo: "/logos/global-solutions.png",
       locations: [
-        { country: 'UK', city: 'London' },
-        { country: 'Canada', city: 'Toronto' },
-        { country: 'Canada', city: 'Vancouver' },
+        { country: "UK", city: "London" },
+        { country: "Canada", city: "Toronto" },
+        { country: "Canada", city: "Vancouver" },
       ],
     },
     {
-      id: '3',
-      companyName: 'Innovate LLC',
-      legalName: 'Innovate Limited Liability Company',
-      logo: '/logos/innovate-llc.png',
-      locations: [{ country: 'India', city: 'Bangalore' }],
+      id: "3",
+      companyName: "Innovate LLC",
+      legalName: "Innovate Limited Liability Company",
+      logo: "/logos/innovate-llc.png",
+      locations: [{ country: "India", city: "Bangalore" }],
     },
   ],
 };
 
 export default function StatsSection() {
+  // Section uses py-16 lg:py-24 for consistency
   const { data, loading, error } = useQuery(PUBLIC_SEARCH_COMPANIES, {
     variables: {
       certifications: null,
@@ -83,27 +84,32 @@ export default function StatsSection() {
     },
   });
 
-  if (error && process.env.NODE_ENV !== 'development') {
-    console.error('Error loading statistics:', error.message);
+  if (error && process.env.NODE_ENV !== "development") {
+    console.error("Error loading statistics:", error.message);
   }
 
   const fallbackStats = [
-    { id: 1, name: 'Members', stat: '100+', icon: member },
-    { id: 2, name: 'Countries', stat: '50+', icon: country },
-    { id: 3, name: 'Cities', stat: '200+', icon: cities },
-    { id: 4, name: 'Offices', stat: '300+', icon: office },
+    { id: 1, name: "Members", stat: "100+", icon: member },
+    { id: 2, name: "Countries", stat: "50+", icon: country },
+    { id: 3, name: "Cities", stat: "200+", icon: cities },
+    { id: 4, name: "Offices", stat: "300+", icon: office },
   ];
 
-  const effectiveData = process.env.NODE_ENV === 'development' ? mockData : data;
+  const effectiveData =
+    process.env.NODE_ENV === "development" ? mockData : data;
 
   let stats = [
-    { id: 1, name: 'Members', stat: '0', icon: member },
-    { id: 2, name: 'Countries', stat: '0', icon: country },
-    { id: 3, name: 'Cities', stat: '0', icon: cities },
-    { id: 4, name: 'Offices', stat: '0', icon: office },
+    { id: 1, name: "Members", stat: "0", icon: member },
+    { id: 2, name: "Countries", stat: "0", icon: country },
+    { id: 3, name: "Cities", stat: "0", icon: cities },
+    { id: 4, name: "Offices", stat: "0", icon: office },
   ];
 
-  if (effectiveData && effectiveData.publicSearchCompanies && effectiveData.publicSearchCompanies.length > 0) {
+  if (
+    effectiveData &&
+    effectiveData.publicSearchCompanies &&
+    effectiveData.publicSearchCompanies.length > 0
+  ) {
     const companies = effectiveData.publicSearchCompanies;
 
     const totalMembers = companies.length;
@@ -124,20 +130,23 @@ export default function StatsSection() {
     });
     const totalCities = citiesSet.size;
 
-    const totalOffices = companies.reduce((sum, company) => sum + company.locations.length, 0);
+    const totalOffices = companies.reduce(
+      (sum, company) => sum + company.locations.length,
+      0,
+    );
 
     stats = [
-      { id: 1, name: 'Members', stat: `${totalMembers}+`, icon: member },
-      { id: 2, name: 'Countries', stat: `${totalCountries}+`, icon: country },
-      { id: 3, name: 'Cities', stat: `${totalCities}+`, icon: cities },
-      { id: 4, name: 'Offices', stat: `${totalOffices}+`, icon: office },
+      { id: 1, name: "Members", stat: `${totalMembers}+`, icon: member },
+      { id: 2, name: "Countries", stat: `${totalCountries}+`, icon: country },
+      { id: 3, name: "Cities", stat: `${totalCities}+`, icon: cities },
+      { id: 4, name: "Offices", stat: `${totalOffices}+`, icon: office },
     ];
   } else if (!loading) {
     stats = fallbackStats;
   }
 
   const SkeletonLoader = () => (
-    <section className="bg-white py-12 md:py-16">
+    <section className="bg-white py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-4">
           {[...Array(4)].map((_, index) => (
@@ -161,12 +170,12 @@ export default function StatsSection() {
     </section>
   );
 
-  if (loading && process.env.NODE_ENV !== 'development') {
+  if (loading && process.env.NODE_ENV !== "development") {
     return <SkeletonLoader />;
   }
 
   return (
-    <section className="bg-white py-12 md:py-16">
+    <section className="bg-white py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-4">
           {stats.map((item) => (

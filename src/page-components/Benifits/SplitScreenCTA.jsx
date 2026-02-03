@@ -36,7 +36,7 @@ const SplitScreenCTA = () => {
             </svg>
           </div>
           <p className="text-base md:text-xl font-semibold text-white/90 max-w-lg">
-            Offering members verified, high-quality global freight leads to drive real, scalable business.
+Access 100% verified, genuine shipment enquiries from serious freight forwarders worldwide.
           </p>
         </div>
       </Link>
@@ -70,7 +70,7 @@ const SplitScreenCTA = () => {
             </svg>
           </div>
           <p className="text-base md:text-xl font-semibold text-white/90 max-w-lg">
-            Enabling forwarders to showcase and share their freight rates with fellow members.
+Global freight rate promotion to over 1 million trusted forwarders across key trade lanes.
           </p>
         </div>
       </Link>
