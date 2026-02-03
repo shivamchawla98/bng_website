@@ -4,8 +4,7 @@ import React from "react";
 import Image from "next/image";
 import ConferenceImage from "@/app/images/conferacegrid1.png";
 import styles from "./Conference.module.css";
-import conferenceBg from "../../../public/conference.webp";
-import { LucideDownload } from "lucide-react";
+import conferenceBg from "../../../public/members_benefit/conference.png";
 import Link from "next/link";
 
 
@@ -41,7 +40,7 @@ const Conference = () => {
                 src={conferenceBg}
                 alt="Conference"
                 fill
-                className="object-cover transform transition-transform duration-500 hover:scale-110"
+                className="object-cover transform transition-transform duration-500 "
                 priority
               />
             </div>
