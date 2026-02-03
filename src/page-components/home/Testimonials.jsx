@@ -39,8 +39,8 @@ const testimonials = [
     text: "The events and tools BNG provides are unmatched—our team feels more connected and equipped to handle global challenges.",
     imageUrl: Sabrina,
     rating: 5,
-    countryFlag: "🇬🇧",
-    country: "United Kingdom",
+    countryFlag: "🇨🇳",
+    country: "China",
   },
   
    {

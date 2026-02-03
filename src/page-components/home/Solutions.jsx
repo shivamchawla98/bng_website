@@ -36,14 +36,14 @@ import logo5 from "../../../public/why_us/logo/05_advance-tools.png";
 import logo7 from "../../../public/why_us/logo/06_Live_talk.png";
 import logo8 from "../../../public/why_us/logo/07_industry_survey.png";
 
-import graylogo1 from "../../../public/why_us/refortesting/01_marketing_gray.png";
-import graylogo2 from "../../../public/why_us/refortesting/02_24x7_gray.png";
-import graylogo3 from "../../../public/why_us/refortesting/03_annual_meeting_grays.png";
-import graylogo4 from "../../../public/why_us/refortesting/04_trade_directory_gray.png";
-import graylogo5 from "../../../public/why_us/refortesting/05_advance-tools_gray.png";
-import graylogo7 from "../../../public/why_us/refortesting/06_Live_talk_gray.png";
-import graylogo8 from "../../../public/why_us/refortesting/07_industry_survey_gray.png";
-import grayselection from "../../../public/why_us/refortesting/08_sellection_process_gray.png";
+import graylogo1 from "../../../public/why_us/logo/01_marketing.png";
+import graylogo2 from "../../../public/why_us/logo/02_24x7.png";
+import graylogo3 from "../../../public/why_us/logo/03_annual_meetings.png";
+import graylogo4 from "../../../public/why_us/logo/04_trade_directory.png";
+import graylogo5 from "../../../public/why_us/logo/05_advance-tools.png";
+import graylogo7 from "../../../public/why_us/logo/06_Live_talk.png";
+import graylogo8 from "../../../public/why_us/logo/07_industry_survey.png";
+import grayselection from "../../../public/why_us/logo/08_sellection_process.png";
 
 import selection from "../../../public/why_us/logo/08_sellection_process.png";
 

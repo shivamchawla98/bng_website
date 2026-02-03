@@ -11,7 +11,7 @@ import BusinessXchangeVector from "../../../public/members_benefit/Business-Xcha
 import TrustedPartnersVector from "../../../public/members_benefit/virtual meetings.png";
 import PaymentProtectionVector from "../../../public/members_benefit/Payment-Protection.png";
 import PaymentMonitoringVector from "../../../public/members_benefit/Payment-Monitoring.png";
-import ClaimCenterVector from "../../../public/members_benefit/award winning customer support.png";
+import ClaimCenterVector from "../../../public/members_benefit/Acknowledgement-insignia.png";
 import FreightXchangeVector from "../../../public/members_benefit/Freight-Xchange.png";
 import AcknowledgementVector from "../../../public/members_benefit/Acknowledgment-Insignias.png";
 import ocean from "../../../public/members_benefit/ocean.webp";

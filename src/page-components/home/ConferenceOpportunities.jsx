@@ -6,33 +6,29 @@ import Image from "next/image";
 
 const PANELS = [
   {
-    title: "Strict Selection",
-    subtitle:
-      "Thorough examination of every application by specialists. Registered organization is live with us implies it has gone through with severe determination process.",
-    img: "/multilayervalidation/Strict_Selection.png",
-    icon: "/i1.png",
+    "title": "Strict Selection",
+    "subtitle": "Thorough examination of every application by specialists. Registered organization is live with us implies it has gone through with severe determination process.",
+    "img": "/conference_opportunities/STRICT%20SELECTION.png",
+    "icon": "/i1.png"
   },
   {
-    title: "Reference Checks",
-    subtitle:
-      "We connect with confided in contacts for bits of knowledge on your organization before go live with your profile.",
-    img: "/multilayervalidation/Reference-Checks.png",
-    icon: "/i2.png",
+    "title": "Reference Checks",
+    "subtitle": "We connect with confided in contacts for bits of knowledge on your organization before go live with your profile.",
+    "img": "/conference_opportunities/REFERENCE%20CHECKS.png",
+    "icon": "/i2.png"
   },
   {
-    title: "Financial Checks",
-    subtitle:
-      "A strong trust scan of each members profile to ensure it's risk free and good fit. Each approved members profile audited with D-U-N-S as well.",
-    img: "/multilayervalidation/Financial-Checks.png",
-    icon: "/i3.png",
+    "title": "Financial Checks",
+    "subtitle": "A strong trust scan of each members profile to ensure it's risk free and good fit. Each approved members profile audited with D-U-N-S as well.",
+    "img": "/conference_opportunities/FINANCIAL%20CHECKS.png",
+    "icon": "/i3.png"
   },
   {
-    title: "Approval & Conclusion",
-    subtitle:
-      "A final report for decision making of your application approval to onboard you to the new year of business networking.",
-    img: "/multilayervalidation/Approval-&-Conclusion.png",
-    icon: "/i4.png",
-  },
+    "title": "Approval & Conclusion",
+    "subtitle": "A final report for decision making of your application approval to onboard you to the new year of business networking.",
+    "img": "/conference_opportunities/APPROVALS%20CONCLUSION.png",
+    "icon": "/i4.png"
+  }
 ];
 
 export default function ConferenceOpportunities() {
@@ -216,28 +212,29 @@ export default function ConferenceOpportunities() {
       <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white/10 to-transparent" />
     </div>
     <div className="mt-auto w-full p-6 md:p-8">
-      <div className="tp-text flex flex-col items-center text-start">
-        {/* Icon Container - Fixed Height */}
-        <div className="mb-4 h-20 w-full flex justify-start">
-          <div className="relative w-16 h-16 md:w-20 md:h-20">
-            <Image
-              src={p.icon}
-              alt={p.title}
-              fill
-              className="object-contain opacity-90"
-            />
-          </div>
-        </div>
-        {/* Title - Consistent Margin */}
-        <h3 className="mt-2 text-white text-xl md:text-2xl font-semibold leading-tight">
-          {p.title}
-        </h3>
-        {/* Subtitle - Consistent Margin and Padding */}
-        <p className="mt-3 text-white/85 text-sm md:text-base leading-relaxed px-2">
-          {p.subtitle}
-        </p>
+  <div className="tp-text flex flex-row items-center text-start">
+    {/* Icon Container - Reduced Size */}
+    <div className="w-12 h-12 md:w-14 md:h-14 flex-shrink-0 mr-3">
+      <div className="relative w-full h-full">
+        <Image
+          src={p.icon}
+          alt={p.title}
+          fill
+          className="object-contain opacity-90"
+        />
       </div>
     </div>
+    {/* Title - Left aligned, attached to icon with gap */}
+    <h3 className="text-white text-xl md:text-2xl font-semibold leading-tight">
+      {p.title}
+    </h3>
+  </div>
+  {/* Subtitle - Below both icon and title */}
+  <p className="mt-3 text-white/85 text-sm md:text-base leading-relaxed px-2">
+    {p.subtitle}
+  </p>
+</div>
+
     <div className="md:hidden absolute bottom-0 left-0 right-0 h-px bg-white/20" />
   </div>
 ))}

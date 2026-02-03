@@ -11,19 +11,19 @@ import Link from "next/link";
 const Conference = () => {
   return (
     <section
-      className="relative w-full py-16 lg:py-24 overflow-hidden"
-      style={{
-        backgroundImage: `url(${ConferenceImage.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-      }}
+      className="relative w-full py-16 lg:py-24 overflow-hidden bg-gradient-to-br from-[#1B1E3B] via-[#281F46] to-[#211F40]"
+      // style={{
+      //   backgroundImage: `url(${ConferenceImage.src})`,
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      //   backgroundAttachment: "fixed",
+      // }}
     >
       {/* Tint Overlay */}
       <div
         className="absolute inset-0 "
         style={{
-          backgroundColor: "rgba(104, 83, 219, 0.75)",
+          // backgroundColor: "rgba(104, 83, 219, 0.75)",
           zIndex: 1,
         }}
       />
@@ -34,8 +34,8 @@ const Conference = () => {
       >
         <div className="flex flex-col md:flex-row justify-center lg:px-24 items-center gap-8">
           {/* Left Column - Image (40%) */}
-          <div className="w-full md:w-[50%] relative flex justify-start items-center transform transition-all duration-700 hover:scale-105">
-            <div className="relative w-full h-80 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+          <div className="w-full md:w-[60%] relative flex justify-start items-center transform transition-all duration-700 hover:scale-105">
+            <div className="relative w-full h-[430px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
               <Image
                 src={conferenceBg}
                 alt="Conference"
@@ -54,8 +54,7 @@ const Conference = () => {
             <p
               className={`text-[18px] pr-4 lg:pr-0 font-bold text-white/90 leading-relaxed mb-8 ${styles.slideUp}`}
             >
-              An exclusive annual physical conference where elite freight forwarders meet, build trust, strengthen partnerships, and convert digital connections into meaningful, long-term global business relationships.
-            </p>
+The BNG Global Conference takes place 14–17 June 2026 at Royal Cliff Beach Hotel, Pattaya Thailand, bringing elite freight forwarders together for high-value global collaboration.            </p>
           <div className="flex flex-col sm:flex-row gap-2 mx-auto justify-start w-full">
   <Link
     href="https://conference.bnglogisticsnetwork.com/register"

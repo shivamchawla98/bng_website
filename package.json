@@ -11,8 +11,6 @@
   "dependencies": {
     "@apollo/client": "^3.13.8",
     "@next/third-parties": "^15.3.1",
-    "@react-three/drei": "^10.7.7",
-    "@react-three/fiber": "^9.5.0",
     "d3-scale": "^4.0.2",
     "framer-motion": "^12.12.1",
     "globe.gl": "^2.45.0",
