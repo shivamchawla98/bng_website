@@ -340,11 +340,11 @@ const WorldMap = () => {
 
   return (
     <section
-          className="world-map-section py-16 lg:py-24"
+          className="world-map-section pt-16 lg:pt-24"
         >
 
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-  <div className="text-center w-7xl mb-12 relative">
+  <div className="text-center w-7xl relative">
     <h2 className="text-4xl lg:text-[55px] font-bold text-gray-900 mb-4">
       Worldwide <span className="text-primary">Reach</span>
     </h2>
@@ -522,7 +522,8 @@ const WorldMap = () => {
         .world-map-section {
           width: 100vw;
           margin: 0;
-          padding: 96px 96px;
+          // padding: 96px 96px;
+          
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -571,6 +572,7 @@ const WorldMap = () => {
         .map-container {
           width: 100vw;
           height: 700px;
+          margin-top: -60px;
           padding: 0;
           border: none;
           position: relative;

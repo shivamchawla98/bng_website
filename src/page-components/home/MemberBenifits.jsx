@@ -240,7 +240,7 @@ function MemberBenefits() {
 
   return (
     <div
-      className="relative w-full overflow-x-hidden py-16 lg:py-24"
+      className="relative w-full overflow-x-hidden pt-16 lg:pt-24"
       style={{
         backgroundImage: `url(${ocean.src})`,
         backgroundSize: "cover",

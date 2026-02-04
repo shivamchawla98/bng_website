@@ -146,7 +146,7 @@ export default function StatsSection() {
   }
 
   const SkeletonLoader = () => (
-    <section className="bg-white py-16 lg:py-24">
+    <section className="bg-[#EFF6FF] py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-4">
           {[...Array(4)].map((_, index) => (
@@ -175,7 +175,7 @@ export default function StatsSection() {
   }
 
   return (
-    <section className="bg-white py-16 lg:py-24">
+    <section className="bg-[#EFF6FF] py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-4">
           {stats.map((item) => (
