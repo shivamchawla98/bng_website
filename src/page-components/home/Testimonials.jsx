@@ -113,6 +113,8 @@ const Testimonials = () => {
     <section className="relative bg-gradient-to-br from-[#1a1f3a] via-[#2d1f4a] to-[#1a1f3a] py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
+
+        
         <div className="text-center mb-12 relative">
           <h2 className="text-4xl lg:text-[55px] font-bold text-white mb-4">
            What BNG <span className="text-[#907df3]">  Members say </span>
@@ -134,7 +136,7 @@ const Testimonials = () => {
           <div className="bg-gradient-to-br from-[#6853DB] to-[#7B66E3] rounded-2xl p-8 flex flex-col justify-between h-[400px]">
             {/* Avatar Group */}
             
-          <Quote size='50'/>
+          <Quote color="white" size='50'/>
             {/* Text Content */}
             <div className="flex flex-col items-center">
            
@@ -148,7 +150,7 @@ const Testimonials = () => {
                   </h3>
               
             </div>
-            <div className='flex w-full justify-end flex-row'><Quote size='50'/></div>
+            <div className='flex w-full justify-end flex-row'><Quote color="white" size='50'/></div>
           </div>
 
           {/* Sliding Testimonial Cards */}

@@ -28,13 +28,14 @@ import c8 from "../../../public/why_us/why_us_new/8.png";
 const newFirstSlideImage =
   "https://i.pinimg.com/736x/55/a4/3f/55a43f1fc71273b7f5a02d702d286c42.jpg";
 
-import logo1 from "../../../public/why_us/logo/01_marketing.png";
-import logo2 from "../../../public/why_us/logo/02_24x7.png";
-import logo3 from "../../../public/why_us/logo/03_annual_meetings.png";
-import logo4 from "../../../public/why_us/logo/04_trade_directory.png";
-import logo5 from "../../../public/why_us/logo/05_advance-tools.png";
-import logo7 from "../../../public/why_us/logo/06_Live_talk.png";
-import logo8 from "../../../public/why_us/logo/07_industry_survey.png";
+import logo1 from "../../../public/why_us/logo/image_01.png";
+import logo2 from "../../../public/why_us/logo/image_02.png";
+import logo3 from "../../../public/why_us/logo/image_03.png";
+import logo4 from "../../../public/why_us/logo/image_04.png";
+import logo5 from "../../../public/why_us/logo/image_05.png";
+import logo7 from "../../../public/why_us/logo/image_06.png";
+import logo8 from "../../../public/why_us/logo/image_07.png";
+import logo9 from "../../../public/why_us/logo/image_08.png";
 
 import graylogo1 from "../../../public/why_us/logo/01_marketing.png";
 import graylogo2 from "../../../public/why_us/logo/02_24x7.png";
@@ -101,7 +102,7 @@ const slides = [
     title: "Global Collaboration",
     image: c8,
     text: "BNG is designed to promote cooperation, long-term partnerships, and trust—eliminating destructive price wars common in large networks.",
-    logo: selection,
+    logo: logo9,
     activeLogo: grayselection,
   },
 ];
@@ -116,7 +117,7 @@ export default function TwigOfferSlider() {
   };
 
   return (
-    <section className="bg-[#EFF6FF] py-16 lg:py-24 relative">
+    <section className="bg-[#EFF6FF] py-8 lg:py-24 relative">
       <div className="container relative mx-auto  px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 relative">
           <h2 className="text-4xl lg:text-[55px] font-bold text-gray-900 mb-4">

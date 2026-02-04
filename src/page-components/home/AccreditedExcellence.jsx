@@ -24,25 +24,24 @@ const partnerLogos = [
 
 const AccreditedExcellence = () => {
   return (
-    <section className="bg-gradient-to-b from-purple-50 to-white py-16 lg:py-24">
+    <section className="bg-[#EFF6FF] py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Centered Heading and Subheading */}
         <div className="text-center mb-16">
-          <div className="relative">
-        <h2 className="text-4xl lg:text-[55px] font-bold text-[#27293B] text-center mb-8 sm:mb-8 lg:mb-8 relative z-10">
-          Accredited <span className="text-primary">Excellence</span>
-        </h2>
-        <h2
-          className="absolute top-[-34px] lg:top-[-60px] left-0 lg:left-[0%] text-center w-full text-[40px]  lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
-          aria-hidden="true"
-        >
-          Accredited Excellence
-        </h2>
-      </div>
-          
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-12 relative">
+          <h2 className="text-4xl lg:text-[55px] font-bold text-gray-900 mb-4">
+            Accredited <span className="text-primary">  Excellence </span> 
+          </h2>
+          <h2
+            className="absolute top-[-34px] lg:top-[-60px] left-0 lg:left-[0%] text-center w-full text-[40px]  lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+            aria-hidden="true"
+          >
+            Accredited Excellence
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Members certified by globally recognised logistics and trade authorities
           </p>
+        </div>
         </div>
 
         {/* Logos and Features Grid */}
