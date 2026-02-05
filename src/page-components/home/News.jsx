@@ -62,7 +62,7 @@ const newsData = [
 
 const News = () => {
   return (
-    <section className="py-16 lg:py-24 bg-primaryBg relative overflow-hidden">
+    <section className="pt-16 lg:pt-24 pb-12 lg:pb-12  bg-primaryBg relative overflow-hidden">
       {/* Gradient Background Elements */}
       <div
         className="absolute top-0 left-8 w-[200px] h-[200px] rounded-full"
@@ -214,7 +214,7 @@ const News = () => {
           </button>
 
           {/* Pagination Dots */}
-          <div className="news-swiper-pagination mt-8 flex justify-center gap-1"></div>
+          <div className="news-swiper-pagination self-center ml-[45%]  mb-8 flex justify-center gap-1"></div>
         </div>
       </div>
 

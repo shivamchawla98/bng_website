@@ -3,7 +3,6 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
 import { useQuery } from '@apollo/client';
-import Image from 'next/image';
 import { ZoomIn, ZoomOut, Search, ChevronUp, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
 import backgroundImage from '@/app/images/OBJECTS.png';
 import { gql } from '@apollo/client';
@@ -107,12 +106,12 @@ const WorldMap = () => {
   const [members, setMembers] = useState([]);
   const [isMounted, setIsMounted] = useState(false);
   const [mapConfig, setMapConfig] = useState({
-    scale: 100,
-    center: [0, -10],
+    scale: 150, // Increased from 100 for better zoom
+    center: [0, 20], // Adjusted center to shift map up (removes Antarctica)
   });
-  const [zoom, setZoom] = useState(100);
+  const [zoom, setZoom] = useState(150); // Increased from 100
   const mapContainerRef = useRef(null);
-
+  const isInteractingRef = useRef(false);
 
   useEffect(() => {
     setIsMounted(true);
@@ -198,88 +197,70 @@ const WorldMap = () => {
     return () => window.removeEventListener('resize', updateMapConfig);
   }, [zoom]);
 
+  // Only prevent wheel events when actually interacting with the map
   useEffect(() => {
     const mapContainer = mapContainerRef.current;
     if (!mapContainer) return;
 
-    let isDragging = false;
-
-    const preventScroll = (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      return false;
+    const handleWheel = (e) => {
+      // Only prevent wheel zoom on the map itself
+      if (e.target.closest('svg')) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+      // Allow scroll wheel for other elements
     };
 
     const handleMouseDown = (e) => {
-      // Only prevent if clicking on SVG elements (not control buttons)
-      if (e.target.closest('.zoom-controls, .pan-controls, .search-section')) {
-        return; // Allow clicks on control buttons
+      // Only set interacting flag when clicking on map SVG
+      if (e.target.closest('svg')) {
+        isInteractingRef.current = true;
       }
-      isDragging = true;
-      e.preventDefault();
-      e.stopPropagation();
-    };
-
-    const handleMouseMove = (e) => {
-      if (isDragging) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-      // Allow mousemove for tooltips when not dragging
     };
 
     const handleMouseUp = () => {
-      isDragging = false;
+      isInteractingRef.current = false;
     };
 
-    const preventTouch = (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      return false;
+    const handleTouchStart = (e) => {
+      if (e.target.closest('svg')) {
+        e.stopPropagation(); // Only stop propagation for map SVG
+      }
     };
 
-    // Prevent scroll/wheel zoom completely
-    mapContainer.addEventListener('wheel', preventScroll, { passive: false, capture: true });
-    mapContainer.addEventListener('mousewheel', preventScroll, { passive: false, capture: true });
-    mapContainer.addEventListener('DOMMouseScroll', preventScroll, { passive: false, capture: true });
-    
-    // Prevent drag interactions
-    mapContainer.addEventListener('mousedown', handleMouseDown, { capture: true });
-    mapContainer.addEventListener('mousemove', handleMouseMove, { capture: true });
-    mapContainer.addEventListener('mouseup', handleMouseUp, { capture: true });
+    const handleTouchMove = (e) => {
+      if (e.target.closest('svg')) {
+        e.stopPropagation(); // Only stop propagation for map SVG
+      }
+    };
+
+    // Add event listeners with proper options
+    mapContainer.addEventListener('wheel', handleWheel, { passive: false });
+    mapContainer.addEventListener('mousedown', handleMouseDown);
+    mapContainer.addEventListener('mouseup', handleMouseUp);
     mapContainer.addEventListener('mouseleave', handleMouseUp);
-    
-    // Prevent touch interactions completely
-    mapContainer.addEventListener('touchstart', preventTouch, { passive: false, capture: true });
-    mapContainer.addEventListener('touchmove', preventTouch, { passive: false, capture: true });
-    mapContainer.addEventListener('touchend', preventTouch, { passive: false, capture: true });
-    
-    // Prevent native drag
-    mapContainer.addEventListener('dragstart', preventScroll, { capture: true });
-    mapContainer.addEventListener('drag', preventScroll, { capture: true });
+    mapContainer.addEventListener('touchstart', handleTouchStart, { passive: false });
+    mapContainer.addEventListener('touchmove', handleTouchMove, { passive: false });
 
     return () => {
-      mapContainer.removeEventListener('wheel', preventScroll, true);
-      mapContainer.removeEventListener('mousewheel', preventScroll, true);
-      mapContainer.removeEventListener('DOMMouseScroll', preventScroll, true);
-      mapContainer.removeEventListener('mousedown', handleMouseDown, true);
-      mapContainer.removeEventListener('mousemove', handleMouseMove, true);
-      mapContainer.removeEventListener('mouseup', handleMouseUp, true);
+      mapContainer.removeEventListener('wheel', handleWheel);
+      mapContainer.removeEventListener('mousedown', handleMouseDown);
+      mapContainer.removeEventListener('mouseup', handleMouseUp);
       mapContainer.removeEventListener('mouseleave', handleMouseUp);
-      mapContainer.removeEventListener('touchstart', preventTouch, true);
-      mapContainer.removeEventListener('touchmove', preventTouch, true);
-      mapContainer.removeEventListener('touchend', preventTouch, true);
-      mapContainer.removeEventListener('dragstart', preventScroll, true);
-      mapContainer.removeEventListener('drag', preventScroll, true);
+      mapContainer.removeEventListener('touchstart', handleTouchStart);
+      mapContainer.removeEventListener('touchmove', handleTouchMove);
     };
   }, [isMounted]);
 
   const handleZoomIn = () => {
-    setZoom(prev => Math.min(prev + 20, 200));
+    setZoom(prev => Math.min(prev + 20, 250));
+    setMapConfig(prev => ({ ...prev, scale: Math.min(prev.scale + 20, 250) }));
   };
 
   const handleZoomOut = () => {
-    setZoom(prev => Math.max(prev - 20, 60));
+    setZoom(prev => Math.max(prev - 20, 100));
+    setMapConfig(prev => ({ ...prev, scale: Math.max(prev.scale - 20, 100) }));
   };
 
   const handlePanUp = () => {
@@ -328,7 +309,9 @@ const WorldMap = () => {
     return (
       <section className="world-map-section">
         <div className="title-container">
-          <h2 className="title-main">Worldwide Reach</h2>
+          <h2 className="text-[55px] font-bold text-[#27293B] text-center mb-12 relative z-10">
+            Worldwide <span className="text-[#6853DB]">Reach</span>
+          </h2>
           <h2 className="title-background" aria-hidden="true">
             Worldwide Reach
           </h2>
@@ -339,98 +322,25 @@ const WorldMap = () => {
   }
 
   return (
-    <section
-          className="world-map-section pt-16 lg:pt-24"
-        >
-
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-  <div className="text-center w-7xl relative">
-    <h2 className="text-4xl lg:text-[55px] font-bold text-gray-900 mb-4">
-      Worldwide <span className="text-primary">Reach</span>
-    </h2>
-    <h2
-      className="absolute top-[-34px] lg:top-[-60px] left-1/2 transform -translate-x-1/2 text-center text-[40px] lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0 whitespace-nowrap"
-      aria-hidden="true"
-    >
-      Worldwide Reach
-    </h2>
-    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-      A global footprint of verified freight forwarders worldwide
-    </p>
-  </div>
-</div>
-
-
-
-
-      <div className="map-container " ref={mapContainerRef}
-      >
-        {/* Interaction Blocking Overlay */}
-        <div className="map-overlay" />
-        
-        {/* Zoom Controls */}
-        {/* <div className="zoom-controls">
-          <button 
-            onClick={handleZoomOut}
-            className="zoom-btn"
-            aria-label="Zoom out"
+    <section className="world-map-section pt-16 lg:pt-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center w-7xl relative">
+          <h2 className="text-4xl lg:text-[55px] font-bold text-gray-900 mb-4">
+            Worldwide <span className="text-primary">Reach</span>
+          </h2>
+          <h2
+            className="absolute top-[-34px] lg:top-[-60px] left-1/2 transform -translate-x-1/2 text-center text-[40px] lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0 whitespace-nowrap"
+            aria-hidden="true"
           >
-            <ZoomOut className="w-5 h-5" />
-          </button>
-          <button 
-            onClick={handleZoomIn}
-            className="zoom-btn"
-            aria-label="Zoom in"
-          >
-            <ZoomIn className="w-5 h-5" />
-          </button>
-        </div> */}
+            Worldwide Reach
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            A global footprint of verified freight forwarders worldwide
+          </p>
+        </div>
+      </div>
 
-        {/* Pan Controls */}
-        {/* <div className="pan-controls">
-          <button 
-            onClick={handlePanUp}
-            className="pan-btn pan-up"
-            aria-label="Pan up"
-          >
-            <ChevronUp className="w-5 h-5" />
-          </button>
-          <div className="pan-horizontal">
-            <button 
-              onClick={handlePanLeft}
-              className="pan-btn pan-left"
-              aria-label="Pan left"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <button 
-              onClick={handlePanRight}
-              className="pan-btn pan-right"
-              aria-label="Pan right"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </div>
-          <button 
-            onClick={handlePanDown}
-            className="pan-btn pan-down"
-            aria-label="Pan down"
-          >
-            <ChevronDown className="w-5 h-5" />
-          </button>
-        </div> */}
-
-        {/* Search Button */}
-        {/* <div className="search-section">
-          <button 
-            onClick={handleSearch}
-            className="search-btn"
-          >
-            <span className="search-label">FIND A MEMBER</span>
-            <span className="search-prompt">Search for a specific member or country...</span>
-          </button>
-        </div> */}
-
+      <div className="map-container" ref={mapContainerRef}>
         <ComposableMap
           projection="geoMercator"
           projectionConfig={{
@@ -440,18 +350,27 @@ const WorldMap = () => {
           className="map"
           width={1200}
           height={700}
-          onWheel={(e) => { e.preventDefault(); e.stopPropagation(); }}
+          onWheel={(e) => { 
+            e.preventDefault(); 
+            e.stopPropagation(); 
+          }}
           onMouseDown={(e) => {
             if (!e.target.closest('.zoom-controls, .pan-controls, .search-section')) {
               e.preventDefault();
               e.stopPropagation();
             }
           }}
-          onTouchStart={(e) => { e.preventDefault(); e.stopPropagation(); }}
-          onTouchMove={(e) => { e.preventDefault(); e.stopPropagation(); }}
+          onTouchStart={(e) => { 
+            e.preventDefault(); 
+            e.stopPropagation(); 
+          }}
+          onTouchMove={(e) => { 
+            e.preventDefault(); 
+            e.stopPropagation(); 
+          }}
           style={{ pointerEvents: 'auto' }}
         >
-            <Geographies geography={geoUrl}>
+          <Geographies geography={geoUrl}>
             {({ geographies }) =>
               geographies.map((geo) => {
                 const nameMap = {
@@ -499,7 +418,7 @@ const WorldMap = () => {
                 );
               })
             }
-            </Geographies>
+          </Geographies>
         </ComposableMap>
 
         <Tooltip
@@ -520,10 +439,8 @@ const WorldMap = () => {
 
       <style jsx>{`
         .world-map-section {
-          width: 100vw;
+          width: 100%;
           margin: 0;
-          // padding: 96px 96px;
-          
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -533,8 +450,9 @@ const WorldMap = () => {
           background-size: cover;
           background-repeat: no-repeat;
           min-height: 600px;
-          overflow: hidden;
+          overflow: visible;
           box-sizing: border-box;
+          padding-bottom: 0 !important; /* Remove bottom padding */
         }
 
         .title-container {
@@ -542,7 +460,6 @@ const WorldMap = () => {
           width: 100%;
           max-width: 1200px;
           text-align: center;
-   
         }
 
         .title-main {
@@ -570,28 +487,18 @@ const WorldMap = () => {
         }
 
         .map-container {
-          width: 100vw;
+          width: 100%;
+          max-width: 1200px;
           height: 700px;
-          margin-top: -60px;
+          margin: 0 auto;
           padding: 0;
           border: none;
           position: relative;
           transition: transform 0.3s ease;
-          overflow: hidden;
-          cursor: default;
-          touch-action: none;
-          -ms-touch-action: none;
-          overscroll-behavior: none;
-        }
-
-        .map-overlay {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: 5;
-          pointer-events: none;
+          overflow: visible;
+          touch-action: pan-y;
+          -webkit-overflow-scrolling: touch;
+          margin-bottom: 0 !important; /* Remove bottom margin */
         }
 
         .zoom-controls {
@@ -603,7 +510,6 @@ const WorldMap = () => {
           flex-direction: column;
           gap: 8px;
           z-index: 100;
-          pointer-events: auto;
         }
 
         .zoom-btn {
@@ -636,7 +542,6 @@ const WorldMap = () => {
           align-items: center;
           gap: 4px;
           z-index: 100;
-          pointer-events: auto;
         }
 
         .pan-horizontal {
@@ -670,7 +575,6 @@ const WorldMap = () => {
           left: 50%;
           transform: translateX(-50%);
           z-index: 100;
-          pointer-events: auto;
         }
 
         .search-btn {
@@ -714,6 +618,7 @@ const WorldMap = () => {
           -webkit-user-select: none;
           -moz-user-select: none;
           -ms-user-select: none;
+          touch-action: none;
         }
 
         .map svg {
@@ -725,22 +630,12 @@ const WorldMap = () => {
           -webkit-user-select: none;
         }
 
-        .map svg g {
-          pointer-events: all;
-        }
-
-        .map svg path {
-          pointer-events: all;
-          cursor: default !important;
-        }
-
         .tooltip-content {
-          // padding: 10px 12px;
+          padding: 10px 12px;
           background: #ffffff;
           border-radius: 8px;
           font-size: 14px;
           color: #27293b;
-        //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .loading-text {
@@ -751,35 +646,33 @@ const WorldMap = () => {
 
         @media (max-width: 1024px) {
           .world-map-section {
-            padding: 40px 32px;
+            padding: 40px 32px 0 32px !important; /* Ensure no bottom padding */
             min-height: 500px;
-            max-height: 700px;
           }
 
           .map-container {
-            height: 350px;
+            height: 500px;
+            margin-bottom: 0 !important;
           }
 
           .title-main {
             font-size: 32px;
           }
 
-          .:title-background {
+          .title-background {
             font-size: 64px;
           }
         }
 
         @media (max-width: 768px) {
           .world-map-section {
-            padding: 24px 16px;
+            padding: 24px 16px 0 16px !important; /* Ensure no bottom padding */
             min-height: 450px;
-            max-height: 600px;
           }
 
           .map-container {
-          
-            height: 300px;
-            padding: 16px;
+            height: 400px;
+            margin-bottom: 0 !important;
           }
 
           .title-main {
@@ -793,14 +686,13 @@ const WorldMap = () => {
 
         @media (max-width: 480px) {
           .world-map-section {
-            padding: 16px 12px;
+            padding: 16px 12px 0 12px !important; /* Ensure no bottom padding */
             min-height: 400px;
-            max-height: 500px;
           }
 
           .map-container {
-            height: 250px;
-            padding: 12px;
+            height: 300px;
+            margin-bottom: 0 !important;
           }
 
           .title-main {

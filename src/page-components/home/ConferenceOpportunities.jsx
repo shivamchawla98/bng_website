@@ -17,21 +17,21 @@ const PANELS = [
     subtitle:
       "We connect with confided in contacts for bits of knowledge on your organization before go live with your profile.",
     img: "/conference_opportunities/REFERENCE%20CHECKS.png",
-    icon: "/i2.png",
+    icon: "/conference_opportunities/Reference-Check_Icon.png",
   },
   {
     title: "Financial Checks",
     subtitle:
       "A strong trust scan of each members profile to ensure it's risk free and good fit. Each approved members profile audited with D-U-N-S as well.",
     img: "/conference_opportunities/FINANCIAL%20CHECKS.png",
-    icon: "/i3.png",
+    icon: "/conference_opportunities/Financial_Check_Icon.png",
   },
   {
     title: "Approval & Conclusion",
     subtitle:
       "A final report for decision making of your application approval to onboard you to the new year of business networking.",
     img: "/conference_opportunities/APPROVALS%20CONCLUSION.png",
-    icon: "/i4.png",
+    icon: "/conference_opportunities/Approval-&-Conclusion_Icon.png",
   },
 ];
 
