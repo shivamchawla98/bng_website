@@ -344,9 +344,10 @@ const WorldMap = () => {
         <ComposableMap
           projection="geoMercator"
           projectionConfig={{
-            scale: mapConfig.scale,
-            center: mapConfig.center,
-          }}
+    scale: mapConfig.scale,
+    center: [0, 30], // Shift the center northward
+    clipAngle: [30, -30, 90, -90], // Clip the southern polar region
+  }}
           className="map"
           width={1200}
           height={700}
