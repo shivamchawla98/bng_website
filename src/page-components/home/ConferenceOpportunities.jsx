@@ -9,7 +9,7 @@ const PANELS = [
     title: "Strict Selection",
     subtitle:
       "Thorough examination of every application by specialists. Registered organization is live with us implies it has gone through with severe determination process.",
-    img: "/conference_opportunities/STRICT%20SELECTION.jpeg",
+    img: "/conference_opportunities/Strict_Selection.png",
     icon: "/conference_opportunities/STRICT SELECTION_icon.png",
   },
   {

@@ -215,7 +215,7 @@ const HeroSlider = () => {
 
       {/* Slide 2 - Country Exclusive Network (Slide 1) */}
       <div
-        className={`absolute inset-0 transition-all duration-1000 ${
+        className={`absolute inset-0 lg:px-0 md:px-0 xl:px-0 px-4 transition-all duration-1000 ${
           getSlidePosition(1)
         }`}
         style={{
