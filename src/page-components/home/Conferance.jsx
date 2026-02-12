@@ -5,27 +5,28 @@ import Image from "next/image";
 import ConferenceImage from "@/app/images/conferacegrid1.png";
 import styles from "./Conference.module.css";
 import conferenceBg from "../../../public/members_benefit/conference.png";
+import conferenceBg1 from "../../../public/members_benefit/2.png";
 import Link from "next/link";
 
 const Conference = () => {
   return (
     <section
       className="relative w-full py-12 lg:py-16 h-128 overflow-hidden bg-gradient-to-br from-[#1B1E3B] via-[#281F46] to-[#211F40]"
-      // style={{
-      //   backgroundImage: `url(${ConferenceImage.src})`,
-      //   backgroundSize: "cover",
-      //   backgroundPosition: "center",
-      //   backgroundAttachment: "fixed",
-      // }}
+      style={{
+        backgroundImage: `url(${conferenceBg1.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
     >
       {/* Tint Overlay */}
-      <div
-        className="absolute inset-0 "
-        style={{
-          // backgroundColor: "rgba(104, 83, 219, 0.75)",
-          zIndex: 1,
-        }}
-      />
+ <div
+  className="absolute inset-0"
+  style={{
+    background: "linear-gradient(135deg, rgba(27,30,59,0.6), rgba(40,31,70,0.9), rgba(33,31,64,0.9))",
+    zIndex: 1,
+  }}
+/>
 
       <div
         className="relative max-w-8xl mx-auto px-4 md:px-8"
@@ -36,17 +37,20 @@ const Conference = () => {
           <div className="w-full md:w-[50%] relative flex justify-start items-center transform transition-all duration-700 hover:scale-105">
             <div className="relative w-full h-[300px] md:h-[350px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
               <Image
-                src={conferenceBg}
-                alt="Conference"
-                fill
-                className="object-contain transform transition-transform duration-500"
-                priority
-                sizes="(max-width: 768px) 100vw, 50vw"
-                style={{ 
-                  objectFit: 'cover',
-                  objectPosition: 'center'
-                }}
-              />
+  src={conferenceBg}
+  alt="Conference"
+  fill
+  className="object-contain transition-transform duration-500"
+  priority
+  sizes="(max-width: 768px) 100vw, 50vw"
+  style={{
+    objectFit: 'cover',
+    objectPosition: 'center',
+    transform: 'scale(1.01)',
+    transformOrigin: 'center',
+  }}
+/>
+
             </div>
           </div>
 
@@ -56,7 +60,7 @@ const Conference = () => {
               Conference
             </h2>
             <p
-              className={`text-base md:text-[18px] pr-4 lg:pr-0 font-bold text-white/90 leading-relaxed mb-6 ${styles.slideUp}`}
+              className={`text-base md:text-[18px] pr-4 lg:pr-0 text-white/90 leading-relaxed mb-6 ${styles.slideUp}`}
             >
               The BNG Global Conference takes place 14–17 June 2026 at Royal Cliff Beach Hotel, Pattaya Thailand, bringing elite freight forwarders together for high-value global collaboration.
             </p>

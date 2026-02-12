@@ -68,7 +68,7 @@ const VendorPartners = () => {
   ];
 
   return (
-    <section className="relative bg-gradient-to-b from-purple-50 to-white py-16 lg:py-24 overflow-hidden">
+    <section className="relative bg-[#EFF6FF] py-16 lg:py-24 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
 

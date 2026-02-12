@@ -66,7 +66,7 @@ function MemberBenefits() {
     {
       title: "Payment Protection",
       description:
-        "Trade with confidence through payment protection coverage of up to USD 50,000, reducing financial risk and building trust across international partnerships.",
+        "BNG safeguards members against payment risks with coverage of up to USD 50,000, ensuring confidence and financial security in international transactions.",
       
       image: MembersAreaVector
       
@@ -75,21 +75,21 @@ function MemberBenefits() {
     {
       title: "Business Xchange",
       description:
-        "Post verified shipment requirements, receive targeted responses, compare offers professionally, and choose partners based on capability, trust, and long-term collaboration.",
+        "Access 100% verified, genuine business queries — exclusively for top freight forwarders worldwide. No random leads. Only serious opportunities.",
       image: FreightXchangeVector,
     },
 
     {
       title: "Virtual 1-to-1 Meetings",
       description:
-        "Schedule private one-on-one meetings with fellow members at your convenience, enabling direct discussions, relationship building, and faster business alignment.",
+        "Curated business meetings with interested agents aligned with your priorities and preferred trade lanes. Structured networking that converts.",
       image: GlobalReachVector ,
     },
 
     {
       title: "Acknowledgement Insignia",
       description:
-        "Earn an official BNG Elite insignia that recognises your credibility, status, and commitment—enhancing trust and authority across the global logistics community.",
+        "A mark of trust, pride, and exclusivity within the global logistics community. Recognized as part of the world’s most premium forwarder network.",
       image: PaymentMonitoringVector,
     },
     
@@ -105,7 +105,7 @@ function MemberBenefits() {
     {
       title: "Country Exclusivity",
       description:
-        "Strict country caps ensure exclusivity—maximum 5 Elite members per country and limited state-level representation in key markets like India, USA, and China.",
+        "Strictly limited to 5 Elite members per country, with a cap of 4 Elite members per state/province in key markets such as India, China, and the USA.",
       image: PaymentProtectionVector,
       
     },
@@ -113,7 +113,7 @@ function MemberBenefits() {
     {
       title: "Freight Xchange",
       description:
-        "Showcase your freight rates on key trade lanes and gain visibility among over one million global forwarders actively searching for competitive and reliable partners.",
+        "Promote your freight rates globally to over 1 million freight forwarders with a single click. Maximum visibility. Targeted exposure. Real business reach.",
       
       image: BusinessXchangeVector,
     },
@@ -121,7 +121,7 @@ function MemberBenefits() {
     {
       title: "Business Matchmaking",
       description:
-        "Get intelligent partner recommendations highlighting forwarders actively seeking or expanding business in your country, helping you build meaningful and relevant global connections.",
+        "AI partner recommendations based on your selected trade lanes and strategic focus. Targeted expansion with confirmed, relevant partners.",
       
       image: TrustedPartnersVector,
     },
@@ -129,7 +129,7 @@ function MemberBenefits() {
     {
       title: "Annual Conferences",
       description:
-        "Strengthen relationships through exclusive annual physical conferences designed for high-value networking, deal-making, and long-term partnerships beyond digital interactions.",
+        "Hosted at premium, top-tier international properties, bringing together serious decision-makers for focused networking, collaboration, and deal-making.",
       
       image: AcknowledgementVector,
     },
@@ -137,7 +137,7 @@ function MemberBenefits() {
     {
       title: "Award-Winning Support",
       description:
-        "Experience award-winning, five-star member support with dedicated relationship managers focused on helping you maximise platform usage and business opportunities.",
+        "One dedicated Relationship Manager for every 15 members, ensuring smooth communication, proactive follow-ups, and structured collaboration.",
       
     },
   ];
