@@ -61,12 +61,15 @@ export default function Home() {
         <AccreditedExcellence />
         <section className="bg-secondryBg pb-28 md:px-[80px]">
           <LatestMembers />
+          
         </section>
+        <StatsSection />
         {/* <WorldWideReach /> */}
         {/* <ExperimentalMap /> */}
         <WorldMap />
-        <StatsSection />
         <Solutions />
+        
+        
         <ConferenceOpportunities />
         <Conference />
         <News />

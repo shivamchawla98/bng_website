@@ -109,7 +109,7 @@ function LatestMembers() {
           style={{
             ...styles.logoSlideTrack,
             animationPlayState: isHovering || isPaused ? "paused" : "running",
-            animationDuration: "40s", // Slower for mobile readability
+            animationDuration: "80s", // Slower for mobile readability
           }}
           onTouchStart={handleTouch}
         >

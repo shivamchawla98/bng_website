@@ -32,7 +32,7 @@ function Cta() {
   />
   <div className="container text-gray-200 mx-auto text-center relative z-10">
     <h2 className="text-3xl md:text-[60px] text-center text-gray-200 font-bold">
-      Request a <span className="text-[#ffe401]">Consultation</span>
+      Talk to a <span className="text-[#ffe401]">Membership Specialist</span>
     </h2>
     <p className="mt-8 text-lg md:text-3xl">
       See how <span className='font-bold'>BNG</span>  can work for you

@@ -24,6 +24,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-flag-kit": "^1.1.1",
+    "react-flagkit": "^2.0.4",
     "react-icons": "^5.4.0",
     "react-phone-input-2": "^2.15.1",
     "react-simple-maps": "^3.0.0",

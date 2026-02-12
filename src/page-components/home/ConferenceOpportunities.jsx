@@ -226,7 +226,27 @@ export default function ConferenceOpportunities() {
             backgroundColor: "rgba(0,0,0,0.25)",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" />
+
+        <div
+          className="absolute top-10 left-0 w-[100px] h-[100px] md:w-[200px] md:h-[200px] rounded-full"
+          style={{
+            background: "#6853DB",
+            zIndex: 1,
+            filter: "blur(70px)",
+            opacity: 0.7,
+            transform: "translateZ(0)",
+          }}
+        ></div>
+
+      {/* Right-middle Patch - Adjusted position and size for mobile */}
+      <div
+        className="absolute top-1/2 right-0 md:right-12 transform translate-x-1/2 -translate-y-1/2 w-[80px] h-[40%] md:w-[160px] md:h-[70%] rounded-full"
+        style={{
+          background: "linear-gradient(-145deg, #6853DB 16%, #6853DB 40.86%, #97b6f6 30%)",
+          zIndex: 1,
+          filter: "blur(110px)",
+        }}></div>
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" /> */}
         <div className="absolute inset-0 [background:radial-gradient(1200px_600px_at_50%_50%,transparent,rgba(0,0,0,0.35))]" />
       </div>
 

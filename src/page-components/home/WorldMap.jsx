@@ -334,7 +334,7 @@ const WorldMap = () => {
           >
             Worldwide Reach
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
             A global footprint of verified freight forwarders worldwide
           </p>
         </div>
@@ -344,8 +344,8 @@ const WorldMap = () => {
         <ComposableMap
           projection="geoMercator"
           projectionConfig={{
-    scale: mapConfig.scale,
-    center: [0, 30], // Shift the center northward
+    scale:170,
+    center: [0, 40], // Shift the center northward
     clipAngle: [30, -30, 90, -90], // Clip the southern polar region
   }}
           className="map"
