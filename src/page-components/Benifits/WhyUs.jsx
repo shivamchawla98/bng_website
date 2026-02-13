@@ -4,163 +4,113 @@ import grid2 from "../../../public/why_us/support 247.png";
 import grid3 from "../../../public/why_us/Annual Meetings.png";
 import grid4 from "../../../public/why_us/Trade directory.png";
 import grid5 from "../../../public/why_us/Advanced Tools.jpg";
-import grid6 from "../../../public/why_us/Real-Time Chat.png";
-import grid7 from "../../../public/why_us/Live Talk.png"; 
-import grid8 from "../../../public/why_us/Industry Surveys.png"; 
+import grid7 from "../../../public/why_us/Live Talk.png";
+import grid8 from "../../../public/why_us/Industry Surveys.png";
 import grid9 from "../../../public/why_us/Strict Selection Process.png";
 
-import logo1 from "@/app/images/logos/why-us/PR.svg";
-import logo2 from "@/app/images/logos/why-us/24-7.svg";
-import logo3 from "@/app/images/logos/why-us/Meetings.svg";
-import logo4 from "@/app/images/logos/why-us/Trade-Directory.svg";
-import logo5 from "@/app/images/logos/why-us/Advanced-Tool.svg";
-// import logo6 from "@/app/images/logos/why-us/real-time-chat.svg";
-import logo7 from "@/app/images/logos/why-us/Live-talk.svg";
-import logo8 from "@/app/images/logos/why-us/survey.svg";
-import logo9 from "@/app/images/logos/why-us/survey.svg";
-import selection from "@/app/images/logos/why-us/sellection_process.svg";
-
-import Background from "@/app/images/home/WhyUs-Background.webp"; // Using the ship image from your structure
-
+// Updated logo imports
+import graylogo1 from "../../../public/why_us/logo/01_marketing.png";
+import graylogo2 from "../../../public/why_us/logo/02_24x7.png";
+import graylogo3 from "../../../public/why_us/logo/03_annual_meetings.png";
+import graylogo4 from "../../../public/why_us/logo/04_trade_directory.png";
+import graylogo5 from "../../../public/why_us/logo/05_advance-tools.png";
+import graylogo7 from "../../../public/why_us/logo/06_Live_talk.png";
+import graylogo8 from "../../../public/why_us/logo/07_industry_survey.png";
+import grayselection from "../../../public/why_us/logo/08_sellection_process.png";
 
 const solutionsData = [
   {
     id: 1,
     src: grid1,
-    alt: "Solution 1",
-    heading: "Marketing & PR",
-    description1:
-      "Expand your business visibility not only within the network but also on a global B2B portal—all included at no extra cost..",
-
+    alt: "Built for the Top 1%",
+    heading: "Built for the Top 1%",
+    description1: "BNG is intentionally selective. Limited members per country ensure serious partnerships, not overcrowded competition.",
     heightClass: "h-56 lg:h-64 xl:h-auto",
-    logo: logo1,
+    logo: graylogo1,
   },
   {
     id: 2,
     src: grid2,
-    alt: "Solution 2",
-    heading: "24/7 Support",
-    description1:
-      "Our dedicated support team is available 24/7, 365 days a year. Reach out anytime—by call, message, or email—wherever you are in the world.",
-
+    alt: "Real Business, Not Noise",
+    heading: "Real Business, Not Noise",
+    description1: "Our proprietary Business Xchange and Freight Xchange connect members through structured shipment queries and published trade-lane rates—focused on conversions, not mass lead sharing.",
     heightClass: "h-48 lg:h-56",
-    logo: logo2,
+    logo: graylogo2,
   },
   {
     id: 3,
     src: grid3,
-    alt: "Solution 3",
-    heading: "Annual Meetings",
-    description1:
-      "Attend our grand symposium to meet partners and clients in person, fostering strong connections and increasing your visibility within the industry.",
-    description2: "Efficient land transportation solutions.",
+    alt: "Trust-First Network",
+    heading: "Trust-First Network",
+    description1: "Each Elite member benefits from USD 50,000 payment protection, creating confidence to trade and collaborate globally.",
     heightClass: "h-64 lg:h-72",
-    logo: logo3,
+    logo: graylogo3,
   },
   {
     id: 4,
     src: grid4,
-    alt: "Solution 4",
-    heading: "Trade Directory",
-    description1:
-      "Access a fully digital directory of global exporters, importers, and logistics professionals, connecting you instantly with key players worldwide.",
-    description2: "Cost-effective and reliable rail transport.",
+    alt: "Quality Over Quantity",
+    heading: "Quality Over Quantity",
+    description1: "Every member is vetted. No open access. No dilution. BNG grows with intent, protecting the value of every connection.",
     heightClass: "h-64 lg:h-72",
-    logo: logo4,
+    logo: graylogo4,
   },
   {
     id: 5,
     src: grid5,
-    alt: "Solution 5",
-    heading: "Advanced Tools",
-    description1:
-      "Our technology-centered platform provides essential tools in one place, maximizing the benefits of your membership.",
-    description2: "Secure storage facilities and management.",
+    alt: "Powerful Member Visibility",
+    heading: "Powerful Member Visibility",
+    description1: "Members get premium company profiles, prioritized directory placement, and visibility at global exhibitions—without extra cost.",
     heightClass: "h-80 lg:h-96",
-    logo: logo5,
+    logo: graylogo5,
   },
-  // {
-  //   id: 6,
-  //   src: grid6,
-  //   alt: "Solution 6",
-  //   heading: "Real-Time Chat",
-  //   description1:
-  //     "Enjoy seamless, real-time chat functionality that enables fast, synchronized communication, enhancing networking efficiency.",
-  //   description2: "Tailored logistics solutions for your needs.",
-  //   heightClass: "h-48 lg:h-56",
-  //   logo: logo6,
-  // },
+  {
+    id: 6,
+    src: grid7,
+    alt: "Country-Level Exclusivity",
+    heading: "Country-Level Exclusivity",
+    description1: "Limited representation per country ensures members aren't competing internally for the same business.",
+    heightClass: "h-64 lg:h-72",
+    logo: graylogo7,
+  },
   {
     id: 7,
-    src: grid7,
-    alt: "Solution 4",
-    heading: "Live Talk",
-    description1:
-      "Engage in virtual meetings on a platform that connects you to thousands of industry professionals worldwide, 24/7. Network, collaborate, and grow your business with ease.",
-
+    src: grid8,
+    alt: "Human Support That Delivers",
+    heading: "Human Support That Delivers",
+    description1: "Award-winning, 5-star member support with dedicated relationship managers—not automated ticket systems.",
     heightClass: "h-64 lg:h-72",
-    logo: logo7,
+    logo: graylogo8,
   },
   {
     id: 8,
-    src: grid8,
-    alt: "Solution 5",
-    heading: "Industry Surveys",
-    description1:
-      "Receive valuable insights from network surveys that keep you informed about market trends and industry benchmarks, helping you stay competitive and informed.",
-    description2: "Secure storage facilities and management.",
-    heightClass: "h-80 lg:h-96",
-    logo: logo8,
-  },
-  {
-    id: 9,
     src: grid9,
-    alt: "Solution 5",
-    heading: "Strict Selection Process",
-    description1:
-      "BNG ensures that only reliable and trustworthy companies join the network through a rigorous selection process.",
-    description2: "Secure storage facilities and management.",
+    alt: "Global Collaboration",
+    heading: "Global Collaboration",
+    description1: "BNG is designed to promote cooperation, long-term partnerships, and trust—eliminating destructive price wars common in large networks.",
     heightClass: "h-80 lg:h-96",
-    logo: selection,
+    logo: grayselection,
   },
 ];
 
 const Solutions = () => {
   return (
     <section className="py-14 relative overflow-hidden">
-      {/* <div className="absolute inset-0 z-0">
-        <Image
-          src={Background}
-          alt="Ship background"
-          layout="fill"
-          objectFit="cover"
-          className="opacity-80"
-        />
-      </div> */}
       <div className="max-w-8xl lg:mx-24 mx-auto px-4 sm:px-6 lg:px-8 lg:my-8 relative z-10">
         <div className="relative">
-        <h2  className="text-4xl lg:text-[55px] font-bold  text-[#27293B] text-center mb-16 relative z-10">
-            Why <span className="text-primary">Us?</span> 
+          <h2 className="text-4xl lg:text-[55px] font-bold text-[#27293B] text-center mb-16 relative z-10">
+            Why <span className="text-primary">Us?</span>
           </h2>
           <h2
             className="absolute text-center text-5xl top-[-30px] left-[26%] md:left-[40%] lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-2"
-            aria-hidden="true">
+            aria-hidden="true"
+          >
             Why Us?
           </h2>
-          <div className="flex w-[100%] justify-center ">
-          {/* <p className=" text-sm text-gray-500 tracking-widest text-center mb-10 w-[80%] ">
-            With BNG, receive comprehensive marketing support, 24/7 assistance,
-            and participate in live industry events. Access a global trade
-            directory, advanced tools, and real-time communication features to
-            drive meaningful connections and business growth.
-          </p> */}
         </div>
-        </div>
-
-        {/* Grid with 3 columns */}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {solutionsData.map(({ id, src, alt, heading, description1, logo }) => (
+          {solutionsData.map(({ id, src, alt, heading, description1, logo, heightClass }) => (
             <div
               key={id}
               className="relative aspect-square overflow-hidden group rounded-lg shadow-lg cursor-pointer"
@@ -174,13 +124,7 @@ const Solutions = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
               <div className="absolute inset-0 flex flex-col justify-between p-6 text-white">
-                <div
-                  // src={logo}
-                  // alt="Logo"
-                  // width={60}
-                  // height={60}
-                  className="self-start  p-2 rounded-full"
-                />
+                <div className="self-start p-2 rounded-full" />
                 <div className="transform transition-all duration-300 translate-y-8 group-hover:translate-y-0">
                   <div className="flex items-center justify-start gap-2 mb-4">
                     <Image
@@ -188,14 +132,11 @@ const Solutions = () => {
                       alt="Logo"
                       width={46}
                       height={46}
-                      className="self-start   rounded-full"
+                      className="self-start rounded-full"
                     />
-                        <h3 className="text-2xl font-bold ">
-                    {heading}
-                  </h3>
+                    <h3 className="text-2xl font-bold">{heading}</h3>
                   </div>
-              
-                  <p className="text-base max-h-0  font-bold group-hover:max-h-40 overflow-hidden transition-all duration-300">
+                  <p className="text-base max-h-0 font-bold group-hover:max-h-40 overflow-hidden transition-all duration-300">
                     {description1}
                   </p>
                 </div>
