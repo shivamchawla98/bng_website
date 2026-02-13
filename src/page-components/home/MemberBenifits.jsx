@@ -146,58 +146,59 @@ function MemberBenefits() {
     {
       title: "Country Exclusivity",
       description:
-        "Strict country caps ensure exclusivity—maximum 5 Elite members per country and limited state-level representation in key markets like India, USA, and China.",
+        "Strictly limited to 5 Elite members per country, with a cap of 4 Elite members per state/province in key markets such as India, China, and the USA. Ensures exclusivity and premium representation.",
       image: MembersAreaVector,
     },
     {
       title: "Payment Protection",
       description:
-        "Trade with confidence through payment protection coverage of up to USD 50,000, reducing financial risk and building trust across international partnerships.",
+        "BNG safeguards members against payment risks with coverage of up to USD 50,000, ensuring confidence and financial security in international transactions.",
       image: PaymentProtectionVector,
     },
     {
       title: "Freight Xchange",
       description:
-        "Showcase your freight rates on key trade lanes and gain visibility among over one million global forwarders actively searching for competitive and reliable partners.",
+        "Promote your freight rates globally to over 1 million freight forwarders with a single click. Gain maximum visibility, targeted exposure, and real business reach on key trade lanes.",
       image: FreightXchangeVector,
     },
     {
       title: "Business Xchange",
       description:
-        "Post verified shipment requirements, receive targeted responses, compare offers professionally, and choose partners based on capability, trust, and long-term collaboration.",
+        "Access 100% verified, genuine business queries exclusively for top freight forwarders worldwide. Post shipment requirements, receive targeted responses, and choose partners based on capability and trust.",
       image: BusinessXchangeVector,
     },
     {
       title: "Business Matchmaking",
       description:
-        "Get intelligent partner recommendations highlighting forwarders actively seeking or expanding business in your country, helping you build meaningful and relevant global connections.",
+        "AI-powered partner recommendations based on your selected trade lanes and strategic focus. Connect with forwarders actively seeking or expanding business in your country for meaningful global partnerships.",
       image: GlobalReachVector,
     },
     {
       title: "Virtual 1-to-1 Meetings",
       description:
-        "Schedule private one-on-one meetings with fellow members at your convenience, enabling direct discussions, relationship building, and faster business alignment.",
+        "Curated business meetings with interested agents aligned with your priorities and preferred trade lanes. Schedule private one-on-one meetings for direct discussions, relationship building, and faster business alignment.",
       image: TrustedPartnersVector,
     },
     {
       title: "Annual Conferences",
       description:
-        "Strengthen relationships through exclusive annual physical conferences designed for high-value networking, deal-making, and long-term partnerships beyond digital interactions.",
+        "Hosted at premium international properties, these conferences bring together serious decision-makers for focused networking, collaboration, and deal-making. Strengthen relationships beyond digital interactions.",
       image: PaymentMonitoringVector,
     },
     {
       title: "Acknowledgement Insignia",
       description:
-        "Earn an official BNG Elite insignia that recognises your credibility, status, and commitment—enhancing trust and authority across the global logistics community.",
+        "A mark of trust, pride, and exclusivity within the global logistics community. Earn an official BNG Elite insignia that recognizes your credibility, status, and commitment, enhancing trust and authority worldwide.",
       image: AcknowledgementVector,
     },
     {
       title: "Award-Winning Support",
       description:
-        "Experience award-winning, five-star member support with dedicated relationship managers focused on helping you maximise platform usage and business opportunities.",
+        "One dedicated Relationship Manager for every 15 members, ensuring smooth communication, proactive follow-ups, and structured collaboration. Experience award-winning, five-star member support.",
       image: ClaimCenterVector,
     },
-  ];
+];
+
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % mobileBenefits.length);

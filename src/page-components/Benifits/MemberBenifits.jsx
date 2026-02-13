@@ -7,6 +7,15 @@ import icon3 from "@/app/images/icon1.svg";
 import icon4 from "@/app/images/icon1.svg";
 import icon5 from "@/app/images/icon1.svg";
 import icon6 from "@/app/images/icon1.svg";
+import MembersAreaVector from "../../../public/members_benefit/Member_Area.png";
+import GlobalReachVector from "../../../public/members_benefit/Global-Reach.png";
+import BusinessXchangeVector from "../../../public/members_benefit/Business-Xchange.png";
+import TrustedPartnersVector from "../../../public/members_benefit/virtual meetings.png";
+import PaymentProtectionVector from "../../../public/members_benefit/Payment-Protection.png";
+import PaymentMonitoringVector from "../../../public/members_benefit/Payment-Monitoring.png";
+import ClaimCenterVector from "../../../public/members_benefit/Acknowledgement-insignia.png";
+import FreightXchangeVector from "../../../public/members_benefit/Freight-Xchange.png";
+import AcknowledgementVector from "../../../public/members_benefit/Acknowledgment-Insignias.png";
 import benifitBackground from "@/app/images/benef_uper.jpg";
 
 function MemberBenefits() {
