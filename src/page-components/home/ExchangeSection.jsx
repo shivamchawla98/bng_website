@@ -4,6 +4,10 @@ import React from "react";
 import { useQuery, gql } from "@apollo/client";
 import { ArrowRight, Plane, Ship, Package } from "lucide-react";
 import getCountryCode from "../../../utils/getCountryCode";
+import BusinessCards from "./BusinessCards";
+import FreightCards from "./FreightCards";
+import VerticalCarousel from "./VerticalCarousel";
+
 
 // GraphQL Queries
 const GET_BUSINESS_LEADS = gql`
@@ -85,10 +89,10 @@ const ExchangeSection = () => {
         {/* Section Header */}
         <div className="text-center mb-12 relative">
           <h2 className="text-4xl lg:text-[55px] font-bold text-gray-900 mb-4">
-            Active <span className="text-primary">  Opportunities </span> 
+            Active <span className="text-primary">Opportunities</span>
           </h2>
           <h2
-            className="absolute top-[-34px] lg:top-[-60px] left-0 lg:left-[0%] text-center w-full text-[40px]  lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+            className="absolute top-[-34px] lg:top-[-60px] left-0 lg:left-[0%] text-center w-full text-[40px] lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
             aria-hidden="true"
           >
             Active Opportunities
@@ -101,19 +105,24 @@ const ExchangeSection = () => {
         {/* Two Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Business Exchange Column */}
-          <div className="bg-white rounded-2xl shadow-xl p-6">
+          <div className="bg-white rounded-2xl shadow-xl p-6 h-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
               <Package className="h-6 w-6 text-primary" />
               Business Xchange
             </h3>
+
+            {/* Active Opportunities Cards */}
+<div className="mb-6 h-[300px] md:h-[400px]">
+              <VerticalCarousel>
+    <BusinessCards />
+  </VerticalCarousel>
+              
+            </div>
+
             <div className="space-y-4">
               {businessLoading ? (
                 <div className="flex justify-center py-12">
                   <div className="w-8 h-8 border-4 border-t-indigo-500 border-gray-200 rounded-full animate-spin"></div>
-                </div>
-              ) : businessLeads.length === 0 ? (
-                <div className="text-center py-12 text-gray-500">
-                  No business opportunities available
                 </div>
               ) : (
                 businessLeads.map((lead) => (
@@ -174,19 +183,22 @@ const ExchangeSection = () => {
           </div>
 
           {/* Freight Exchange Column */}
-          <div className="bg-white rounded-2xl shadow-xl p-6">
+          <div className="bg-white rounded-2xl shadow-xl p-6 h-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
               <Ship className="h-6 w-6 text-primary" />
               Freight Xchange
             </h3>
+
+            {/* Active Opportunities Cards */}
+            <div className="mb-6 h-[300px] md:h-[400px]">
+  <VerticalCarousel>
+    <FreightCards />
+  </VerticalCarousel>
+</div>
             <div className="space-y-4">
               {freightLoading ? (
                 <div className="flex justify-center py-12">
                   <div className="w-8 h-8 border-4 border-t-indigo-500 border-gray-200 rounded-full animate-spin"></div>
-                </div>
-              ) : freightLeads.length === 0 ? (
-                <div className="text-center py-12 text-gray-500">
-                  No freight rates available
                 </div>
               ) : (
                 freightLeads.map((lead) => (
