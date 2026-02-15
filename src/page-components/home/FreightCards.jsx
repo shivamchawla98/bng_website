@@ -22,13 +22,31 @@ const FreightCards = ({ leads = [] }) => {
     return method;
   };
 
-  const getContainerSize = (containerType) => {
+  const formatContainerType = (containerType) => {
     if (!containerType) return null;
     
-    if (containerType.includes("20")) return "20'";
-    if (containerType.includes("40")) return "40'";
-    if (containerType.includes("45")) return "45'";
-    return null;
+    // Map enum keys to display values
+    const containerMap = {
+      'STANDARD_20FT': "20' Standard",
+      'STANDARD_40FT': "40' Standard",
+      'HIGH_CUBE_40FT': "40' High Cube",
+      'HIGH_CUBE_45FT': "45' High Cube",
+      'REFRIGERATED_20FT': "20' Refrigerated",
+      'REFRIGERATED_40FT': "40' Refrigerated",
+      'OPEN_TOP_20FT': "20' Open Top",
+      'OPEN_TOP_40FT': "40' Open Top",
+      'FLAT_RACK_20FT': "20' Flatrack",
+      'FLAT_RACK_40FT': "40' Flatrack",
+      'FLAT_RACK_COLLAPSIBLE_20FT': "20' Flatrack Collapsible",
+      'FLAT_RACK_COLLAPSIBLE_40FT': "40' Flatrack Collapsible",
+      'BULK_20FT': "20' Bulk",
+      'TANK_20FT': "20' Tank",
+      'PLATFORM_20FT': "20' Platform",
+      'HIGH_CUBE_48FT': "48' High Cube",
+      'HIGH_CUBE_53FT': "53' High Cube"
+    };
+    
+    return containerMap[containerType] || containerType;
   };
 
   const formatCargoType = (cargoType) => {
@@ -48,7 +66,7 @@ const FreightCards = ({ leads = [] }) => {
     const originCode = getCountryCode(originCountry);
     const destCode = getCountryCode(destCountry);
     const cost = card.freightRate ? `$${card.freightRate}` : null;
-    const containerSize = getContainerSize(card.containerType);
+    const containerSize = formatContainerType(card.containerType);
     const cargoType = formatCargoType(card.cargoType);
     const viewUrl = `https://app.bnglogisticsnetwork.com/freight/opportunities#${card.uniqueId}`;
 
@@ -58,7 +76,7 @@ const FreightCards = ({ leads = [] }) => {
           <div className="flex items-center gap-2">
             {method.includes("SEA") ? <Ship className="text-blue-600" size={20} /> : <Plane className="text-blue-600" size={20} />}
             <div className="font-bold text-lg text-gray-800">{method}</div>
-            {cost && <div className="font-medium text-gray-600 text-sm">{cost}</div>}
+            {cost && <div className="font-semibold text-blue-600 text-[17px]">{cost}</div>}
           </div>
           <div className="flex items-center gap-1">
             {containerSize && (
