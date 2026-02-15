@@ -189,7 +189,11 @@ const Testimonials = () => {
                         </div>
                       </div>
                       <div className="text-4xl" title={testimonial.country}>
-                        <Flag country={testimonial.country} />
+                        <img
+                          src={`https://flagcdn.com/w40/${testimonial.country.toLowerCase()}.png`}
+                          alt={testimonial.country}
+                          className="w-10 h-7 rounded-sm object-cover"
+                        />
                       </div>
                     </div>
                   </div>

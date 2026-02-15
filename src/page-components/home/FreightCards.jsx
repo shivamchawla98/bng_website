@@ -1,140 +1,104 @@
 "use client";
 import React from "react";
-import Flag from "react-flagkit";
 import { Ship, Plane, ArrowRight } from "lucide-react";
+import getCountryCode from "../../../utils/getCountryCode";
 
-const activeOppData = [
-  {
-    id: 1,
-    origin: { country: "US", name: "United States" },
-    destination: { country: "CN", name: "China" },
-    freightType: "SEA Freight-LCL",
-    freightId: "SH-2026-101",
-    containerType: "20\"",
-    cargoType: "Electronics",
-    status: "Ready to Load",
-    cost: "$1,200",
-  },
-  {
-    id: 2,
-    origin: { country: "IN", name: "India" },
-    destination: { country: "DE", name: "Germany" },
-    freightType: "AIR Freight",
-    freightId: "AIR-2026-102",
-    containerType: "Air",
-    cargoType: "Pharmaceuticals",
-    status: "In Transit",
-    cost: "$3,800",
-  },
-  {
-    id: 3,
-    origin: { country: "BR", name: "Brazil" },
-    destination: { country: "JP", name: "Japan" },
-    freightType: "SEA Freight-FCL",
-    freightId: "SH-2026-103",
-    containerType: "40\"",
-    cargoType: "Automotive Parts",
-    status: "Customs Clearance",
-    cost: "$2,500",
-  },
-  {
-    id: 4,
-    origin: { country: "GB", name: "United Kingdom" },
-    destination: { country: "AU", name: "Australia" },
-    freightType: "AIR Freight",
-    freightId: "AIR-2026-104",
-    containerType: "Air",
-    cargoType: "Perishables",
-    status: "Delivered",
-    cost: "$4,200",
-  },
-  {
-    id: 5,
-    origin: { country: "FR", name: "France" },
-    destination: { country: "CA", name: "Canada" },
-    freightType: "SEA Freight-LCL",
-    freightId: "SH-2026-105",
-    containerType: "20\"",
-    cargoType: "Textiles",
-    status: "Ready to Load",
-    cost: "$1,800",
-  },
-  {
-    id: 6,
-    origin: { country: "ZA", name: "South Africa" },
-    destination: { country: "IT", name: "Italy" },
-    freightType: "SEA Freight-FCL",
-    freightId: "SH-2026-106",
-    containerType: "40\"",
-    cargoType: "Machinery",
-    status: "In Transit",
-    cost: "$3,100",
-  },
-];
+const FreightCards = ({ leads = [] }) => {
+  if (!leads || leads.length === 0) return null;
 
-const FreightCards = () => {
-  return activeOppData.map((card) => (
-    <div
-      key={card.id}
-      className="bg-white rounded-lg shadow-md p-3 border border-gray-200 mb-4"
-    >
-      {/* Title, Cost, and Tags in Same Line */}
-      <div className="flex justify-between items-center mb-6">
-        {/* Title with Icon and Cost */}
-        <div className="flex items-center gap-4">
+  const formatTransportMethod = (method) => {
+    if (!method) return "Sea Freight";
+    
+    // Parse the method which comes like "SEA_FCL", "SEA_LCL", "AIR_FREIGHT"
+    const parts = method.split('_');
+    
+    if (parts[0] === "SEA") {
+      if (parts[1] === "FCL") return "SEA Freight-FCL";
+      if (parts[1] === "LCL") return "SEA Freight-LCL";
+      return "Sea Freight";
+    } else if (parts[0] === "AIR") {
+      return "AIR Freight";
+    }
+    return method;
+  };
+
+  const getContainerSize = (containerType) => {
+    if (!containerType) return null;
+    
+    if (containerType.includes("20")) return "20'";
+    if (containerType.includes("40")) return "40'";
+    if (containerType.includes("45")) return "45'";
+    return null;
+  };
+
+  const formatCargoType = (cargoType) => {
+    if (!cargoType) return null;
+    
+    // Convert GENERAL_CARGO to "General Cargo"
+    return cargoType
+      .split('_')
+      .map(word => word.charAt(0) + word.slice(1).toLowerCase())
+      .join(' ');
+  };
+
+  return leads.map((card) => {
+    const method = formatTransportMethod(card.transportationMethod);
+    const originCountry = card.loadingPort?.country;
+    const destCountry = card.destinationPort?.country;
+    const originCode = getCountryCode(originCountry);
+    const destCode = getCountryCode(destCountry);
+    const cost = card.freightRate ? `$${card.freightRate}` : null;
+    const containerSize = getContainerSize(card.containerType);
+    const cargoType = formatCargoType(card.cargoType);
+    const viewUrl = `https://app.bnglogisticsnetwork.com/freight/opportunities#${card.uniqueId}`;
+
+    return (
+      <div key={card.id} className="bg-white rounded-lg shadow-md p-3 border border-gray-200 mb-4">
+        <div className="flex justify-between items-center mb-6">
           <div className="flex items-center gap-2">
-            {card.freightType.includes("SEA") ? (
-              <Ship className="text-blue-600" size={20} />
-            ) : (
-              <Plane className="text-blue-600" size={20} />
+            {method.includes("SEA") ? <Ship className="text-blue-600" size={20} /> : <Plane className="text-blue-600" size={20} />}
+            <div className="font-bold text-lg text-gray-800">{method}</div>
+            {cost && <div className="font-medium text-gray-600 text-sm">{cost}</div>}
+          </div>
+          <div className="flex items-center gap-1">
+            {containerSize && (
+              <div className="bg-gray-100 px-2 py-0.5 rounded-full text-[10px] font-medium text-gray-700">
+                {containerSize}
+              </div>
             )}
-            <div className="font-bold text-lg text-gray-800">
-              {card.freightType}
-            </div>
-          </div>
-          <div className="font-medium text-gray-600 text-sm">
-            {card.cost}
-          </div>
-        </div>
-
-        {/* Container, Cargo, and View Button */}
-        <div className="flex items-center gap-1">
-          <div className="bg-gray-100 px-2 py-0.5 rounded-full text-[10px] font-medium text-gray-700">
-            {card.containerType}
-          </div>
-          <div className="bg-gray-100 px-2 py-0.5 rounded-full text-[10px] font-medium text-gray-700">
-            {card.cargoType}
-          </div>
-          <button className="flex items-center gap-1 bg-blue-50 hover:bg-blue-100 text-blue-600 px-2 py-0.5 rounded-full text-[10px] font-medium transition-colors">
-            View
-            <ArrowRight size={12} />
-          </button>
-        </div>
-      </div>
-
-      {/* Origin and Destination */}
-      <div className="flex justify-between items-center">
-        {/* Origin */}
-        <div className="flex items-center gap-2">
-          <Flag country={card.origin.country} className="w-8 h-8" />
-          <div className="font-bold text-gray-800">
-            {card.origin.name}
+            {cargoType && (
+              <div className="bg-gray-100 px-2 py-0.5 rounded-full text-[10px] font-medium text-gray-700">
+                {cargoType}
+              </div>
+            )}
+            <a href={viewUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 bg-blue-50 hover:bg-blue-100 text-blue-600 px-2 py-0.5 rounded-full text-[10px] font-medium transition-colors">
+              View
+              <ArrowRight size={12} />
+            </a>
           </div>
         </div>
-
-        {/* Arrow */}
-        <div className="text-gray-400 text-xl">→</div>
-
-        {/* Destination */}
-        <div className="flex items-center gap-2">
-          <Flag country={card.destination.country} className="w-8 h-8" />
-          <div className="font-bold text-gray-800">
-            {card.destination.name}
+        <div className="flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <img
+              src={`https://flagcdn.com/w40/${originCode}.png`}
+              alt={originCountry}
+              className="w-8 h-6 rounded-sm object-cover"
+            />
+            <div className="font-bold text-gray-800">{originCountry}</div>
+          </div>
+          <div className="text-gray-400 text-xl">→</div>
+          <div className="flex items-center gap-2">
+            <img
+              src={`https://flagcdn.com/w40/${destCode}.png`}
+              alt={destCountry}
+              className="w-8 h-6 rounded-sm object-cover"
+            />
+            <div className="font-bold text-gray-800">{destCountry}</div>
           </div>
         </div>
       </div>
-    </div>
-  ));
+    );
+  });
 };
 
 export default FreightCards;
