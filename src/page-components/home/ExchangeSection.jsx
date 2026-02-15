@@ -112,73 +112,20 @@ const ExchangeSection = () => {
             </h3>
 
             {/* Active Opportunities Cards */}
-<div className="mb-6 h-[300px] md:h-[400px]">
+            <div className="h-[300px] md:h-[400px]">
               <VerticalCarousel>
-    <BusinessCards />
-  </VerticalCarousel>
-              
+                <BusinessCards leads={businessLeads} />
+              </VerticalCarousel>
             </div>
 
-            <div className="space-y-4">
-              {businessLoading ? (
-                <div className="flex justify-center py-12">
-                  <div className="w-8 h-8 border-4 border-t-indigo-500 border-gray-200 rounded-full animate-spin"></div>
-                </div>
-              ) : (
-                businessLeads.map((lead) => (
-                  <div
-                    key={lead.id}
-                    className="border border-gray-200 rounded-lg p-4"
-                  >
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4 flex-1">
-                        <div className="flex items-center gap-2 text-indigo-600">
-                          {getTransportIcon(lead.transportationMethod)}
-                        </div>
-                        <div className="flex items-center gap-2 text-sm font-medium">
-                          <img
-                            src={`https://flagcdn.com/w20/${getCountryCode(
-                              lead.loadingPort?.country,
-                            )}.png`}
-                            alt="origin"
-                            className="w-5 h-5 rounded-sm"
-                          />
-                          <span>{lead.loadingPort?.country || "N/A"}</span>
-                          <ArrowRight className="h-4 w-4 text-gray-400" />
-                          <span>{lead.destinationPort?.country || "N/A"}</span>
-                          <img
-                            src={`https://flagcdn.com/w20/${getCountryCode(
-                              lead.destinationPort?.country,
-                            )}.png`}
-                            alt="destination"
-                            className="w-5 h-5 rounded-sm"
-                          />
-                        </div>
-                        <span className="text-sm text-gray-600">
-                          {lead.commodity || "General Cargo"}
-                        </span>
-                      </div>
-                      <a
-                        href={`https://app.bnglogisticsnetwork.com/business/opportunities#${lead.uniqueId}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm hover:bg-indigo-700 transition-colors"
-                      >
-                        View
-                      </a>
-                    </div>
-                  </div>
-                ))
-              )}
-              <div className="text-center mt-6">
-                <a
-                  href="/business-xchange"
-                  className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-medium"
-                >
-                  View More
-                  <ArrowRight className="h-4 w-4" />
-                </a>
-              </div>
+            <div className="text-center mt-6">
+              <a
+                href="/business-xchange"
+                className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-medium"
+              >
+                View More
+                <ArrowRight className="h-4 w-4" />
+              </a>
             </div>
           </div>
 
@@ -190,73 +137,20 @@ const ExchangeSection = () => {
             </h3>
 
             {/* Active Opportunities Cards */}
-            <div className="mb-6 h-[300px] md:h-[400px]">
-  <VerticalCarousel>
-    <FreightCards />
-  </VerticalCarousel>
-</div>
-            <div className="space-y-4">
-              {freightLoading ? (
-                <div className="flex justify-center py-12">
-                  <div className="w-8 h-8 border-4 border-t-indigo-500 border-gray-200 rounded-full animate-spin"></div>
-                </div>
-              ) : (
-                freightLeads.map((lead) => (
-                  <div
-                    key={lead.id}
-                    className="border border-gray-200 rounded-lg p-4"
-                  >
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4 flex-1">
-                        <div className="flex items-center gap-2 text-indigo-600">
-                          {getTransportIcon(lead.transportationMethod)}
-                        </div>
-                        <div className="flex items-center gap-2 text-sm font-medium">
-                          <img
-                            src={`https://flagcdn.com/w20/${getCountryCode(
-                              lead.loadingPort?.country,
-                            )}.png`}
-                            alt="origin"
-                            className="w-5 h-5 rounded-sm"
-                          />
-                          <span>{lead.loadingPort?.country || "N/A"}</span>
-                          <ArrowRight className="h-4 w-4 text-gray-400" />
-                          <span>{lead.destinationPort?.country || "N/A"}</span>
-                          <img
-                            src={`https://flagcdn.com/w20/${getCountryCode(
-                              lead.destinationPort?.country,
-                            )}.png`}
-                            alt="destination"
-                            className="w-5 h-5 rounded-sm"
-                          />
-                        </div>
-                        {lead.freightRate && (
-                          <span className="text-sm font-semibold text-green-600">
-                            {lead.freightRateCurrency} {lead.freightRate}
-                          </span>
-                        )}
-                      </div>
-                      <a
-                        href={`https://app.bnglogisticsnetwork.com/freight/opportunities#${lead.uniqueId}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm hover:bg-indigo-700 transition-colors"
-                      >
-                        View
-                      </a>
-                    </div>
-                  </div>
-                ))
-              )}
-              <div className="text-center mt-6">
-                <a
-                  href="/freight-xchange"
-                  className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-medium"
-                >
-                  View More
-                  <ArrowRight className="h-4 w-4" />
-                </a>
-              </div>
+            <div className="h-[300px] md:h-[400px]">
+              <VerticalCarousel>
+                <FreightCards leads={freightLeads} />
+              </VerticalCarousel>
+            </div>
+
+            <div className="text-center mt-6">
+              <a
+                href="/freight-xchange"
+                className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-medium"
+              >
+                View More
+                <ArrowRight className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </div>
