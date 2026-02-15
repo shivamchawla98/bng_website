@@ -1,9 +1,9 @@
 'use client';
 
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
 import { useQuery } from '@apollo/client';
-import Image from 'next/image';
+import { ZoomIn, ZoomOut, Search, ChevronUp, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
 import backgroundImage from '@/app/images/OBJECTS.png';
 import { gql } from '@apollo/client';
 import 'react-tooltip/dist/react-tooltip.css';
@@ -106,10 +106,12 @@ const WorldMap = () => {
   const [members, setMembers] = useState([]);
   const [isMounted, setIsMounted] = useState(false);
   const [mapConfig, setMapConfig] = useState({
-    scale: 100,
-    center: [0, 10],
+    scale: 150, // Increased from 100 for better zoom
+    center: [0, 20], // Adjusted center to shift map up (removes Antarctica)
   });
-
+  const [zoom, setZoom] = useState(150); // Increased from 100
+  const mapContainerRef = useRef(null);
+  const isInteractingRef = useRef(false);
 
   useEffect(() => {
     setIsMounted(true);
@@ -184,16 +186,103 @@ const WorldMap = () => {
     const updateMapConfig = () => {
       const width = window.innerWidth;
       if (width < 640) {
-        setMapConfig({ scale: 110, center: [0, 60] });
+        setMapConfig(prev => ({ ...prev, scale: zoom + 10 }));
       } else {
-        setMapConfig({ scale: 100, center: [0, 10] });
+        setMapConfig(prev => ({ ...prev, scale: zoom }));
       }
     };
 
     updateMapConfig();
     window.addEventListener('resize', updateMapConfig);
     return () => window.removeEventListener('resize', updateMapConfig);
-  }, []);
+  }, [zoom]);
+
+  // Only prevent wheel events when actually interacting with the map
+  useEffect(() => {
+    const mapContainer = mapContainerRef.current;
+    if (!mapContainer) return;
+
+    const handleWheel = (e) => {
+      // Only prevent wheel zoom on the map itself
+      if (e.target.closest('svg')) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+      // Allow scroll wheel for other elements
+    };
+
+    const handleMouseDown = (e) => {
+      // Only set interacting flag when clicking on map SVG
+      if (e.target.closest('svg')) {
+        isInteractingRef.current = true;
+      }
+    };
+
+    const handleMouseUp = () => {
+      isInteractingRef.current = false;
+    };
+
+    const handleTouchStart = (e) => {
+      if (e.target.closest('svg')) {
+        e.stopPropagation(); // Only stop propagation for map SVG
+      }
+    };
+
+    const handleTouchMove = (e) => {
+      if (e.target.closest('svg')) {
+        e.stopPropagation(); // Only stop propagation for map SVG
+      }
+    };
+
+    // Add event listeners with proper options
+    mapContainer.addEventListener('wheel', handleWheel, { passive: false });
+    mapContainer.addEventListener('mousedown', handleMouseDown);
+    mapContainer.addEventListener('mouseup', handleMouseUp);
+    mapContainer.addEventListener('mouseleave', handleMouseUp);
+    mapContainer.addEventListener('touchstart', handleTouchStart, { passive: false });
+    mapContainer.addEventListener('touchmove', handleTouchMove, { passive: false });
+
+    return () => {
+      mapContainer.removeEventListener('wheel', handleWheel);
+      mapContainer.removeEventListener('mousedown', handleMouseDown);
+      mapContainer.removeEventListener('mouseup', handleMouseUp);
+      mapContainer.removeEventListener('mouseleave', handleMouseUp);
+      mapContainer.removeEventListener('touchstart', handleTouchStart);
+      mapContainer.removeEventListener('touchmove', handleTouchMove);
+    };
+  }, [isMounted]);
+
+  const handleZoomIn = () => {
+    setZoom(prev => Math.min(prev + 20, 250));
+    setMapConfig(prev => ({ ...prev, scale: Math.min(prev.scale + 20, 250) }));
+  };
+
+  const handleZoomOut = () => {
+    setZoom(prev => Math.max(prev - 20, 100));
+    setMapConfig(prev => ({ ...prev, scale: Math.max(prev.scale - 20, 100) }));
+  };
+
+  const handlePanUp = () => {
+    setMapConfig(prev => ({ ...prev, center: [prev.center[0], prev.center[1] + 10] }));
+  };
+
+  const handlePanDown = () => {
+    setMapConfig(prev => ({ ...prev, center: [prev.center[0], prev.center[1] - 10] }));
+  };
+
+  const handlePanLeft = () => {
+    setMapConfig(prev => ({ ...prev, center: [prev.center[0] - 10, prev.center[1]] }));
+  };
+
+  const handlePanRight = () => {
+    setMapConfig(prev => ({ ...prev, center: [prev.center[0] + 10, prev.center[1]] }));
+  };
+
+  const handleSearch = () => {
+    // Placeholder for future slot availability search
+    console.log('Search for available membership slots');
+  };
 
   const getFillColor = (companyCount) => {
     if (companyCount >= 6) return '#6853DB';
@@ -220,7 +309,9 @@ const WorldMap = () => {
     return (
       <section className="world-map-section">
         <div className="title-container">
-          <h2 className="title-main">Worldwide Reach</h2>
+          <h2 className="text-[55px] font-bold text-[#27293B] text-center mb-12 relative z-10">
+            Worldwide <span className="text-[#6853DB]">Reach</span>
+          </h2>
           <h2 className="title-background" aria-hidden="true">
             Worldwide Reach
           </h2>
@@ -231,27 +322,54 @@ const WorldMap = () => {
   }
 
   return (
-    <section className="world-map-section">
-      <div className="title-container relative">
-      <h2 className="text-4xl lg:text-[55px] mt-8  font-bold text-[#27293B] text-center mb-8 sm:mb-10 lg:mb-12 relative z-10">
-          Worldwide <span className="text-primary">Reach</span>
-        </h2>
-        <h2
-          className="absolute text-center -top-[8px] lg:-top-[17px] left-0 lg:left-[1%] w-full text-[40px]  lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
-          aria-hidden="true"
-        >
-          Worldwide Reach
-        </h2>
+    <section className="world-map-section pt-16 lg:pt-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center w-7xl relative">
+          <h2 className="text-4xl lg:text-[55px] font-bold text-gray-900 mb-4">
+            Worldwide <span className="text-primary">Reach</span>
+          </h2>
+          <h2
+            className="absolute top-[-34px] lg:top-[-60px] left-1/2 transform -translate-x-1/2 text-center text-[40px] lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0 whitespace-nowrap"
+            aria-hidden="true"
+          >
+            Worldwide Reach
+          </h2>
+          <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+            A global footprint of verified freight forwarders worldwide
+          </p>
+        </div>
       </div>
 
-      <div className="map-container">
+      <div className="map-container" ref={mapContainerRef}>
         <ComposableMap
           projection="geoMercator"
           projectionConfig={{
-            scale: mapConfig.scale,
-            center: mapConfig.center,
-          }}
+    scale:170,
+    center: [0, 40], // Shift the center northward
+    clipAngle: [30, -30, 90, -90], // Clip the southern polar region
+  }}
           className="map"
+          width={1200}
+          height={700}
+          onWheel={(e) => { 
+            e.preventDefault(); 
+            e.stopPropagation(); 
+          }}
+          onMouseDown={(e) => {
+            if (!e.target.closest('.zoom-controls, .pan-controls, .search-section')) {
+              e.preventDefault();
+              e.stopPropagation();
+            }
+          }}
+          onTouchStart={(e) => { 
+            e.preventDefault(); 
+            e.stopPropagation(); 
+          }}
+          onTouchMove={(e) => { 
+            e.preventDefault(); 
+            e.stopPropagation(); 
+          }}
+          style={{ pointerEvents: 'auto' }}
         >
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
@@ -323,9 +441,7 @@ const WorldMap = () => {
       <style jsx>{`
         .world-map-section {
           width: 100%;
-          max-width: 1440px; 
-          margin: 0 auto;
-          padding: 40px 24px;
+          margin: 0;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -335,9 +451,9 @@ const WorldMap = () => {
           background-size: cover;
           background-repeat: no-repeat;
           min-height: 600px;
-          max-height: 900px;
-          overflow: hidden;
+          overflow: visible;
           box-sizing: border-box;
+          padding-bottom: 0 !important; /* Remove bottom padding */
         }
 
         .title-container {
@@ -345,7 +461,6 @@ const WorldMap = () => {
           width: 100%;
           max-width: 1200px;
           text-align: center;
-   
         }
 
         .title-main {
@@ -375,32 +490,153 @@ const WorldMap = () => {
         .map-container {
           width: 100%;
           max-width: 1200px;
-          height: 690px;
-          border-radius: 16px;
-          padding: 0px;
-        //   background: #ffffff;
-          border: 1px solid transparent;
-        //   border-image: linear-gradient(to right, #6853db, #7b66e3) 1;
+          height: 700px;
+          margin: 0 auto;
+          padding: 0;
+          border: none;
           position: relative;
-          top: -40px;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          overflow: hidden;
+          transition: transform 0.3s ease;
+          overflow: visible;
+          touch-action: pan-y;
+          -webkit-overflow-scrolling: touch;
+          margin-bottom: 0 !important; /* Remove bottom margin */
+        }
 
+        .zoom-controls {
+          position: absolute;
+          left: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          z-index: 100;
+        }
+
+        .zoom-btn {
+          width: 40px;
+          height: 40px;
+          background: #6853DB;
+          border: none;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          color: white;
+          transition: all 0.2s ease;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .zoom-btn:hover {
+          background: #5844B4;
+          transform: scale(1.05);
+        }
+
+        .pan-controls {
+          position: absolute;
+          right: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 4px;
+          z-index: 100;
+        }
+
+        .pan-horizontal {
+          display: flex;
+          gap: 4px;
+        }
+
+        .pan-btn {
+          width: 40px;
+          height: 40px;
+          background: #6853DB;
+          border: none;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          color: white;
+          transition: all 0.2s ease;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .pan-btn:hover {
+          background: #5844B4;
+          transform: scale(1.05);
+        }
+
+        .search-section {
+          position: absolute;
+          bottom: 40px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 100;
+        }
+
+        .search-btn {
+          background: #6853DB;
+          border: none;
+          border-radius: 8px;
+          padding: 12px 24px;
+          cursor: pointer;
+          color: white;
+          transition: all 0.2s ease;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          min-width: 300px;
+        }
+
+        .search-btn:hover {
+          background: #5844B4;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+
+        .search-label {
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+        }
+
+        .search-prompt {
+          font-size: 11px;
+          opacity: 0.9;
+          margin-top: 2px;
         }
 
         .map {
           width: 100%;
           height: 100%;
           display: block;
+          user-select: none;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          touch-action: none;
+        }
+
+        .map svg {
+          pointer-events: all;
+          user-drag: none;
+          -webkit-user-drag: none;
+          -moz-user-drag: none;
+          user-select: none;
+          -webkit-user-select: none;
         }
 
         .tooltip-content {
-          // padding: 10px 12px;
+          padding: 10px 12px;
           background: #ffffff;
           border-radius: 8px;
           font-size: 14px;
           color: #27293b;
-        //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .loading-text {
@@ -411,34 +647,33 @@ const WorldMap = () => {
 
         @media (max-width: 1024px) {
           .world-map-section {
-            padding: 32px 16px;
+            padding: 40px 32px 0 32px !important; /* Ensure no bottom padding */
             min-height: 500px;
-            max-height: 700px;
           }
 
           .map-container {
-            height: 350px;
+            height: 500px;
+            margin-bottom: 0 !important;
           }
 
           .title-main {
             font-size: 32px;
           }
 
-          .:title-background {
+          .title-background {
             font-size: 64px;
           }
         }
 
         @media (max-width: 768px) {
           .world-map-section {
-            padding: 24px 16px;
+            padding: 24px 16px 0 16px !important; /* Ensure no bottom padding */
             min-height: 450px;
-            max-height: 600px;
           }
 
           .map-container {
-            height: 300px;
-            padding: 16px;
+            height: 400px;
+            margin-bottom: 0 !important;
           }
 
           .title-main {
@@ -452,14 +687,13 @@ const WorldMap = () => {
 
         @media (max-width: 480px) {
           .world-map-section {
-            padding: 16px 12px;
+            padding: 16px 12px 0 12px !important; /* Ensure no bottom padding */
             min-height: 400px;
-            max-height: 500px;
           }
 
           .map-container {
-            height: 250px;
-            padding: 12px;
+            height: 300px;
+            margin-bottom: 0 !important;
           }
 
           .title-main {

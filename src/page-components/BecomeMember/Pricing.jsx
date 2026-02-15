@@ -72,18 +72,8 @@ export default function Pricing() {
   const openModal = () => setIsModalOpen(true)
   const closeModal = () => setIsModalOpen(false)
 
-  // Define tiers - Free tier remains unchanged
+  // Define tiers - All three plans
   const tiers = [
-    // {
-    //   name: 'Trial',
-    //   id: 'tier-Free',
-    //   href: '#',
-    //   priceYearly: '$0',
-    //   priceValue: 0,
-    //   mostPopular: false,
-    //   icon: GiftIcon,
-    //   durationText: '30 Days',
-    // },
     {
       name: 'Standard',
       id: 'tier-Standard',
@@ -108,7 +98,7 @@ export default function Pricing() {
       href: '#',
       priceYearly: '$1999',
       priceValue: 1999,
-      mostPopular: false,
+      mostPopular: true,
       icon: Crown,
     },
   ]

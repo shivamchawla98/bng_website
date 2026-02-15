@@ -12,8 +12,12 @@
     "@apollo/client": "^3.13.8",
     "@next/third-parties": "^15.3.1",
     "d3-scale": "^4.0.2",
+    "embla-carousel-autoplay": "^8.6.0",
+    "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.12.1",
+    "globe.gl": "^2.45.0",
     "graphql": "^16.10.0",
+    "gsap": "^3.14.2",
     "lottie-react": "^2.4.0",
     "lucide-react": "^0.447.0",
     "motion": "^12.12.1",
@@ -22,6 +26,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-flag-kit": "^1.1.1",
+    "react-flagkit": "^2.0.4",
     "react-icons": "^5.4.0",
     "react-phone-input-2": "^2.15.1",
     "react-simple-maps": "^3.0.0",
@@ -29,7 +34,8 @@
     "react-tooltip": "^5.28.1",
     "sharp": "^0.33.5",
     "slick-carousel": "^1.8.1",
-    "swiper": "^11.2.6"
+    "swiper": "^11.2.6",
+    "three": "^0.182.0"
   },
   "devDependencies": {
     "@svgr/cli": "^8.1.0",

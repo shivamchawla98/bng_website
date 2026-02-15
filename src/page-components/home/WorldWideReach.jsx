@@ -20,19 +20,22 @@ function WorldWideReach() {
 
   return (
     <section
-      className="md:px-[112px] items-center   w-full bg-primaryBg flex flex-col gap-10 py-14"
+      className="md:px-[112px] items-center w-full bg-primaryBg flex flex-col gap-10 py-16 lg:py-24"
       style={{
         backgroundImage: `url(${backgroundImage.src})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-      }}>
-      <div className="relative w-full f;ex justify-center ">
-      <h2  className="text-[55px] font-bold  text-[#27293B] text-center mb-12 relative z-10">Worldwide <span className="text-primary">Reach</span> </h2>
-     
+      }}
+    >
+      <div className="relative w-full flex justify-center">
+        <h2 className="text-4xl lg:text-[55px] font-bold text-[#27293B] text-center mb-12 relative z-10">
+          Worldwide <span className="text-primary">Reach</span>
+        </h2>
 
         <h2
           className="absolute  left-0 text-left top-[0px] md:left-[25%] text-[80px] md:w-full font-bold text-[#27293B] opacity-[3%] leading-none z-2"
-          aria-hidden="true">
+          aria-hidden="true"
+        >
           Worldwide Reach
         </h2>
       </div>
@@ -69,7 +72,10 @@ function WorldWideReach() {
           {/* Dropdown Options */}
           {dropdownOpen && (
             <div className="absolute z-10 bg-gradient-to-tr from-[#6853DB] to-[#6853DB]  divide-y divide-gray-100 rounded-lg shadow w-44 mt-12">
-              <ul className="py-2 text-sm text-white" aria-labelledby="dropdown-button">
+              <ul
+                className="py-2 text-sm text-white"
+                aria-labelledby="dropdown-button"
+              >
                 <li>
                   <button
                     type="button"
@@ -126,7 +132,6 @@ function WorldWideReach() {
           </div>
         </div>
       </form>
-
     </section>
   );
 }

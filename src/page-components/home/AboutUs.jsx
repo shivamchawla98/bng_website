@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 function AboutUs() {
   const router = useRouter();
   return (
-    <div className="bg-secondryBg px-4 sm:px-6 md:px-[112px] flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 py-10 md:py-14">
+    <div className="bg-secondryBg px-4 sm:px-6 md:px-[112px] flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 py-16 lg:py-24">
       {/* Image Section */}
       <div className="w-full md:w-[900px] relative">
         <Image
@@ -15,7 +15,6 @@ function AboutUs() {
           alt="Export Import Containers"
           layout="responsive"
           width={600}
-          // height={300}
           className="rounded-lg object-cover"
         />
       </div>
@@ -34,13 +33,26 @@ function AboutUs() {
           </h2>
         </div>
         <p className="text-sm sm:text-base text-gray-500 mb-4">
-          With over 20 years of proven expertise in logistics and supply chain management, BNG Group was founded to transform the way industry professionals connect and grow. What began as a vision backed by nearly three years of in-depth market research has evolved into a powerful logistics network—purpose-built to foster global collaboration, streamline operations, and spark real business opportunities.
+          With over 20 years of proven expertise in logistics and supply chain
+          management, BNG Group was founded to transform the way industry
+          professionals connect and grow. What began as a vision backed by
+          nearly three years of in-depth market research has evolved into a
+          powerful logistics network—purpose-built to foster global
+          collaboration, streamline operations, and spark real business
+          opportunities.
         </p>
         <p className="text-sm sm:text-base text-gray-500 mb-6">
-          BNG is more than a network; it’s a thriving hub where freight forwarders, logistics providers, and industry leaders come together to create meaningful, growth-focused partnerships. Our platform is designed to break barriers and build bridges—uniting businesses with tools, resources, and connections that matter.
+          BNG is more than a network; it's a thriving hub where freight
+          forwarders, logistics providers, and industry leaders come together to
+          create meaningful, growth-focused partnerships. Our platform is
+          designed to break barriers and build bridges—uniting businesses with
+          tools, resources, and connections that matter.
         </p>
         <p className="text-sm sm:text-base text-gray-500 mb-6">
-          As a member, you gain exclusive access to one of the largest and most accurate Exporters/Importers Data Banks in the industry—curated and maintained by BNG—to support data-driven success across every market you serve.
+          As a member, you gain exclusive access to one of the largest and most
+          accurate Exporters/Importers Data Banks in the industry—curated and
+          maintained by BNG—to support data-driven success across every market
+          you serve.
         </p>
         <button
           onClick={() => router.push("/about-us")}

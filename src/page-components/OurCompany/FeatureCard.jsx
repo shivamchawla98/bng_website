@@ -21,6 +21,6 @@ export const FeatureCard = ({ title, description, onClick, logo }) => (
       />
     </div>
     <h3 className="text-xl font-semibold mt-2 cursor-text text-primary">{title}</h3>
-    <p className="text-gray-600 m-0 cursor-text text-[18px]">{description}</p>
+    <p className="text-gray-600 mx-4 cursor-text text-[18px]">{description}</p>
   </button>
 );

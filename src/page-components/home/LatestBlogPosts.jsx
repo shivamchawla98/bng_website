@@ -65,8 +65,8 @@ const LatestBlogPosts = () => {
   }
 
   return (
-    <section className="py-14 md:py-20 bg-primaryBg relative overflow-hidden">
-      {/* Gradient Background Elements */}
+    <section className="py-16 lg:py-24 bg-primaryBg relative overflow-hidden">
+      {/* Gradient Background Elements */
       <div
         className="absolute top-0 left-8 w-[200px] h-[200px] rounded-full"
         style={{

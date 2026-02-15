@@ -28,23 +28,14 @@ const AboutSection = () => {
             </div>
             <div className="flex flex-col justify-start items-center lg:items-start gap-6 sm:gap-8">
               <h2 className="text-gray-900 text-3xl sm:text-4xl font-medium leading-normal text-center lg:text-start">
-                Building{" "}
+                
                 <span className="font-medium text-primary">
-                  Global Connections{" "}
+                  {"The Power "}
                 </span>{" "}
-                in Logistics
+                Behind the Top 1%
               </h2>
               <p className="text-gray-600 text-base sm:text-[18px] leading-relaxed text-center lg:text-start px-2 sm:px-0">
-                BNG Logistics Network is a global platform built to unite
-                logistics professionals, freight forwarders, and industry
-                leaders in an environment optimized for growth and
-                collaboration. Our network is designed around core values of
-                trust, transparency, and advanced technology, rigorously vetting
-                each member to ensure reliable, high-quality partnerships. By
-                offering a fully digitalized, secure platform, BNG empowers
-                members to streamline operations, enhance communication, and
-                access vital tools for data-driven decision-making in a dynamic
-                industry.
+                BNG Logistics Network is not an open community—it is a controlled, country-exclusive ecosystem built strictly for the top 1% of freight forwarders. With limited representation per country, verified membership, and value-protected collaboration, BNG eliminates dilution and internal competition. We replace volume-driven networking with structured, trust-based global partnerships designed to generate real business, measurable growth, and long-term strategic advantage.
               </p>
             </div>
           </div>
@@ -59,16 +50,15 @@ const AboutSection = () => {
               />
             </div>
             <div className="flex flex-col justify-start items-center lg:items-start gap-6 sm:gap-8">
+              <h2 className="text-gray-900 text-3xl sm:text-4xl font-medium leading-normal text-center lg:text-start">
+                
+                <span className="font-medium text-primary">
+                  {"The Technology "}
+                </span>{" "}
+                Behind BNG
+              </h2>
               <p className="text-gray-600 text-base sm:text-[18px] leading-relaxed text-center lg:text-start px-2 sm:px-0">
-                Members of BNG benefit from around-the-clock customer support,
-                an extensive trade directory, and free promotional services that
-                increase their visibility in the global market. Through
-                real-time chat, virtual meetings, and a unique payment
-                protection framework, BNG provides the resources needed to build
-                meaningful, profitable connections. Our commitment to innovation
-                and customer-centric support allows BNG members to expand their
-                networks and pursue new business opportunities with confidence
-                across international borders.
+                BNG operates on a proprietary digital infrastructure unlike traditional freight networks. Through AI-powered matchmaking, structured Business and Freight Xchange platforms, and intelligent data analysis, members receive targeted opportunities—not random connections. Our system identifies expansion intent, trade-lane relevance, and partnership compatibility using data science to maximise conversion potential. Technology at BNG is not decorative—it is engineered to deliver precision, efficiency, and measurable commercial value.
               </p>
             </div>
           </div>
@@ -92,34 +82,34 @@ const AboutSection = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mt-8 sm:mt-10">
           <FeatureCard
-            title="Global Collaboration"
-            description="Connecting logistics professionals worldwide to foster strong, reliable partnerships that drive growth and mutual success across borders."
-            logo={GlobalReachVector}
-          />
-          <FeatureCard
-            title="Integrity & Trust"
-            description="Upholding rigorous standards in member vetting, ensuring trustworthy relationships and a secure, credible network for dependable business interactions."
-            logo={IntigirityTrustVector}
-          />
-          <FeatureCard
-            title="Innovation & Technology"
-            description="Leveraging advanced tools and technology to streamline operations, enhance communication, and provide valuable insights for informed decision-making."
+            title="Exclusivity with Purpose"
+            description="We limit membership by country to protect value, reduce competition, and ensure meaningful partnerships—not overcrowded directories."
             logo={InnovationVector}
           />
           <FeatureCard
-            title="Customer-Centric Support"
-            description="Providing 24/7 customer support and regional assistance, dedicated to ensuring seamless service and immediate help whenever needed."
-            logo={CustomerCentericVector}
+            title="Trust Above All"
+            description="Strong global collaboration begins with credibility, verified members, and payment protection that safeguards business relationships."
+            logo={IntigirityTrustVector}
           />
           <FeatureCard
-            title="Transparency & Accountability"
-            description="Offering real-time monitoring, performance tracking, and payment protection for clear, accountable, and secure business operations."
+            title="Quality Over Quantity"
+            description="We prioritise serious, growth-driven forwarders—focused on long-term partnerships, not transactional connections."
             logo={TransparencyAccountabilityVector}
           />
           <FeatureCard
-            title="Growth & Opportunity"
-            description="Empowering members with resources like marketing support, a trade directory, and live networking opportunities to fuel continuous growth and success."
+            title="Real Business Focus"
+            description="BNG is built to generate genuine freight opportunities through structured exchange tools—not mass lead sharing."
             logo={GrowthOppurtinityVector}
+          />
+          <FeatureCard
+            title="Global Collaboration"
+            description="We connect forwarders across borders to create sustainable partnerships built on respect, transparency, and shared growth."
+            logo={GlobalReachVector}
+          />
+          <FeatureCard
+            title="Member-Centric Support"
+            description="Our dedicated relationship approach ensures every member receives proactive, personalised support to maximise value."
+            logo={CustomerCentericVector}
           />
         </div>
       </section>
@@ -153,16 +143,7 @@ const AboutSection = () => {
                 </h2>
               </div>
               <p className="text-gray-600 text-base sm:text-[18px] leading-relaxed text-center lg:text-start px-2 sm:px-0">
-                Our vision at BNG Logistics Network is to be the premier global
-                platform where logistics professionals seamlessly connect,
-                collaborate, and innovate to drive industry excellence. We
-                aspire to create a trusted network that transcends borders,
-                fostering reliable partnerships and setting new standards for
-                transparency, efficiency, and technological advancement. By
-                empowering our members with essential tools, real-time
-                resources, and robust support, we envision a world where
-                logistics thrives through unified, data-driven, and sustainable
-                growth on an international scale.
+                To redefine the global freight networking industry by building the most exclusive and performance-driven logistics community in the world. BNG aims to unite the top 1% of freight forwarders under a trust-first ecosystem where country exclusivity, structured business exchange, and protected partnerships eliminate dilution, price wars, and inefficiency—creating a powerful global platform built on credibility, strength, and measurable growth.
               </p>
             </div>
           </div>
@@ -194,15 +175,7 @@ const AboutSection = () => {
                 </h2>
               </div>
               <p className="text-gray-600 text-base sm:text-[18px] leading-relaxed text-center lg:text-start px-2 sm:px-0">
-                Our mission is to provide logistics professionals worldwide with
-                a secure, digitalized environment that enhances connectivity,
-                maximizes business potential, and fosters enduring partnerships.
-                We are committed to upholding high standards of integrity,
-                rigorous member vetting, and cutting-edge technology, ensuring
-                that each interaction within the BNG network brings real value.
-                Through dedicated customer support, innovation-driven tools, and
-                proactive engagement, we aim to support our members in achieving
-                consistent success and expanding their global reach
+                Our mission is to create real commercial advantage for serious freight forwarders through limited membership, verified business exchange, intelligent matchmaking, and payment protection. BNG is committed to protecting member value, eliminating internal competition, and replacing volume-driven networking with structured, high-conversion collaboration—empowering forwarders to expand globally with confidence, authority, and long-term strategic partnerships.
               </p>
             </div>
           </div>

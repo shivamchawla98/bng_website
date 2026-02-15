@@ -12,6 +12,9 @@ import { FAQ } from "@/components/Faq";
 import TestimonialSlider from "@/page-components/home/TestimonialSlider";
 import faqBackgroundImage from '../../../public/contact_us/FAQ_Image.jpg';
 import SplitScreenCTA from "@/page-components/Benifits/SplitScreenCTA";
+import Testimonials from "@/page-components/home/Testimonials";
+import AccreditedExcellence from "@/page-components/home/AccreditedExcellence";
+import StatsSection from "@/page-components/home/StatsSection";
 
 
 export const metadata = {
@@ -53,10 +56,16 @@ function page() {
         {/* <section className="bg-white py-12">
           <TeamSection />
         </section> */}
-        <TestimonialSlider />
+        {/* <TestimonialSlider />
+         */}
+         <Testimonials/>
+         <AccreditedExcellence/>
         <section className="bg-secondryBg py-12 md:px-[112px]">
           <LatestMembers />
+          
         </section>
+                  <StatsSection/>
+
         <section 
           style={{ backgroundImage: `url(${faqBackgroundImage.src})` }}
           className="bg-primaryBg py-16"

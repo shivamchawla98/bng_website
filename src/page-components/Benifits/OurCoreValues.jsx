@@ -11,15 +11,25 @@ import ClaimCenterImage from "../../../public/members_benefit/Claim Center.png";
 import AcknowledgmentInsigniasImage from "../../../public/members_benefit/Acknowledgment Insignias.png";
 import Image from "next/image";
 
-import MembersAreaVector from "@/app/images/home/Member_Area.png";
-import GlobalReachVector from "@/app/images/home/Global-Reach.png";
-import BusinessXchangeVector from "@/app/images/home/Business-Xchange.png";
-import TrustedPartnersVector from "@/app/images/home/Trusted-Partners.png";
-import PaymentProtectionVector from "@/app/images/home/Payment-Protection.png";
-import PaymentMonitoringVector from "@/app/images/home/Payment-Monitoring.png";
-import ClaimCenterVector from "@/app/images/home/Claim_Center.png";
-import FreightXchangeVector from "@/app/images/home/Freight-Xchange.png";
-import AcknowledgementVector from "@/app/images//home/Acknowledgment-Insignias.png";
+// import MembersAreaVector from "@/app/images/home/Member_Area.png";
+// import GlobalReachVector from "@/app/images/home/Global-Reach.png";
+// import BusinessXchangeVector from "@/app/images/home/Business-Xchange.png";
+// import TrustedPartnersVector from "@/app/images/home/Trusted-Partners.png";
+// import PaymentProtectionVector from "@/app/images/home/Payment-Protection.png";
+// import PaymentMonitoringVector from "@/app/images/home/Payment-Monitoring.png";
+// import ClaimCenterVector from "@/app/images/home/Claim_Center.png";
+// import FreightXchangeVector from "@/app/images/home/Freight-Xchange.png";
+// import AcknowledgementVector from "@/app/images//home/Acknowledgment-Insignias.png";
+
+import MembersAreaVector from "../../../public/members_benefit/Member_Area.png";
+import GlobalReachVector from "../../../public/members_benefit/Global-Reach.png";
+import BusinessXchangeVector from "../../../public/members_benefit/Business-Xchange.png";
+import TrustedPartnersVector from "../../../public/members_benefit/virtual meetings.png";
+import PaymentProtectionVector from "../../../public/members_benefit/Payment-Protection.png";
+import PaymentMonitoringVector from "../../../public/members_benefit/Payment-Monitoring.png";
+import ClaimCenterVector from "../../../public/members_benefit/Acknowledgement-insignia.png";
+import FreightXchangeVector from "../../../public/members_benefit/Freight-Xchange.png";
+import AcknowledgementVector from "../../../public/members_benefit/Acknowledgment-Insignias.png";
 
 
 function OurCoreValues() {
@@ -256,56 +266,54 @@ function OurCoreValues() {
       {/* Feature Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
         <FeatureCard
-          title="Members Area"
-          description="An intuitive, user-friendly member portal designed to streamline networking, providing a centralized space for all your business connections and collaboration needs."
+          title="Country Exclusivity "
+          description=  {<span>Strictly limited to <b>5 Elite members per country</b>, with a cap of <b>4 Elite members per state/province</b> in key markets such as India, China, and the USA. No overcrowding.</span>}
           onClick={() => handleScrollToSection(membersAreaRef)}
           logo={MembersAreaVector}
         />
         <FeatureCard
-          title="Global Reach"
-          description="Connect with reliable partners worldwide and access a growing community that meets all your logistics and supply chain requirements."
+          title="Business Matchmaking"
+          description={<span><b>AI-Powered partner recommendations</b> based on your selected trade lanes and strategic focus. Targeted expansion with confirmed, relevant partners.</span>}
           onClick={() => handleScrollToSection(globalReachRef)}
           logo={GlobalReachVector}
         />
         <FeatureCard
           title="Business Xchange"
-          description="Access the Business Center, a dedicated area for finding active business leads and sharing opportunities directly with clients in your network."
+          description=  {<span>Access <b>100% verified, genuine business queries</b> — exclusively for top freight forwarders worldwide. No random leads. Only serious opportunities.</span>}
           onClick={() => handleScrollToSection(businessXchangeRef)}
           logo={BusinessXchangeVector}
         />
         <FeatureCard
           title="Freight Xchange"
-          description="Showcase your freight rates and services to the global trade community via BNG Logistics & B2B Portals, boosting your visibility and increasing business opportunities."
+          description=  {<span>Promote your freight rates globally to <b>over 1 million freight forwarders</b> with a single click. Maximum visibility. Targeted exposure. Real business reach.</span>}
           onClick={() => handleScrollToSection(freightXchangeRef)}
           logo={FreightXchangeVector}
         />
         <FeatureCard
-          title="Trusted Partners"
-          description="Membership is granted exclusively to companies with solid reputations, verified through a three-year track record and two business references."
+          title="Virtual 1-to-1 Meetings"
+          description=  {<span>Curated business <b>meetings with interested agents</b> aligned with your priorities and preferred trade lanes. Structured networking that converts.</span>}
           onClick={() => handleScrollToSection(trustedPartnersRef)}
           logo={TrustedPartnersVector}
         />
         <FeatureCard
           title="Payment Protection"
-          description="The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment.."
+          description=  {<span>BNG safeguards members against payment risks with coverage of up to <b>USD 50,000</b>, ensuring confidence and financial security in international transactions.</span>}
           onClick={() => handleScrollToSection(paymentProtectionRef)}
           logo={PaymentProtectionVector}
         />
         <FeatureCard
-          title="Payment Monitoring"
-          description="A state-of-the-art system that automatically tracks receivables and payables, keeping all transactions organized and up-to-date.."
-          onClick={() => handleScrollToSection(paymentMonitoringRef)}
+          title="Annual Conferences"
+          description=  {<span>Hosted at <b>premium, top-tier international properties</b>, bringing together serious decision-makers for focused networking, collaboration, and deal-making.</span>}
           logo={PaymentMonitoringVector}
         />
         <FeatureCard
-          title="Claim Center"
-          description="A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts."
-          onClick={() => handleScrollToSection(claimCenterRef)}
+          title="Award-Winning Support"
+          description=  {<span>One dedicated Relationship Manager for every <b>15 members</b>, ensuring smooth communication, proactive follow-ups, and structured collaboration.</span>}
           logo={ClaimCenterVector}
         />
         <FeatureCard
           title="Acknowledgment Insignias"
-          description="Stand out with insignias displayed on your profile. Highlighting your credibility, payment status, and activity level, building trust and confidence among fellow members."
+          description=  {<span><b>A mark of trust, pride, and exclusivity</b> within the global logistics community. Recognized as part of the world’s most premium forwarder network.</span>}
           onClick={() => handleScrollToSection(acknowledgmentInsigniasRef)}
           logo={AcknowledgementVector}
         />

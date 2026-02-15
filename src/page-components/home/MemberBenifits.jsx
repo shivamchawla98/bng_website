@@ -8,10 +8,10 @@ import Vector1 from "@/app/images/Patch1.svg";
 import MembersAreaVector from "../../../public/members_benefit/Member_Area.png";
 import GlobalReachVector from "../../../public/members_benefit/Global-Reach.png";
 import BusinessXchangeVector from "../../../public/members_benefit/Business-Xchange.png";
-import TrustedPartnersVector from "../../../public/members_benefit/Trusted-Partners.png";
+import TrustedPartnersVector from "../../../public/members_benefit/virtual meetings.png";
 import PaymentProtectionVector from "../../../public/members_benefit/Payment-Protection.png";
 import PaymentMonitoringVector from "../../../public/members_benefit/Payment-Monitoring.png";
-import ClaimCenterVector from "../../../public/members_benefit/Claim_Center.png";
+import ClaimCenterVector from "../../../public/members_benefit/Acknowledgement-insignia.png";
 import FreightXchangeVector from "../../../public/members_benefit/Freight-Xchange.png";
 import AcknowledgementVector from "../../../public/members_benefit/Acknowledgment-Insignias.png";
 import ocean from "../../../public/members_benefit/ocean.webp";
@@ -64,123 +64,141 @@ function MemberBenefits() {
 
   const benefits = [
     {
-      title: "Global Reach",
-      description:
-        "Connect with reliable partners worldwide and access a growing community that meets all your logistics and supply chain requirements.",
-      image: MembersAreaVector,
-    },
-    {
-      title: "Freight Xchange",
-      description:
-        "Showcase your freight rates and services to the global trade community via B Versailles Logistics & B2B Portals, boosting your visibility and increasing business opportunities.",
-      image: BusinessXchangeVector,
-    },
-    {
       title: "Payment Protection",
       description:
-        "The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment",
-      image: TrustedPartnersVector,
+        "BNG safeguards members against payment risks with coverage of up to USD 50,000, ensuring confidence and financial security in international transactions.",
+      
+      image: MembersAreaVector
+      
     },
+
     {
-      title: "Claim Center",
+      title: "Business Xchange",
       description:
-        "A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts.",
+        "Access 100% verified, genuine business queries — exclusively for top freight forwarders worldwide. No random leads. Only serious opportunities.",
+      image: FreightXchangeVector,
+    },
+
+    {
+      title: "Virtual 1-to-1 Meetings",
+      description:
+        "Curated business meetings with interested agents aligned with your priorities and preferred trade lanes. Structured networking that converts.",
+      image: GlobalReachVector ,
+    },
+
+    {
+      title: "Acknowledgement Insignia",
+      description:
+        "A mark of trust, pride, and exclusivity within the global logistics community. Recognized as part of the world’s most premium forwarder network.",
       image: PaymentMonitoringVector,
     },
-    {
-      description: "",
-      image: AcknowledgementVector,
+    
+     {
+      
+      
+      image: ClaimCenterVector
     },
+
   ];
 
   const benefitsTwo = [
     {
-      title: "Member Area",
+      title: "Country Exclusivity",
       description:
-        "Showcase your freight rates and services to the global trade community via BNG Logistics & B2B Portals, boosting your visibility and increasing business opportunities.",
-      image: GlobalReachVector,
-    },
-    {
-      title: "Business Xchange",
-      description:
-        "Access the Business Center, a dedicated area for finding active business leads and sharing opportunities directly with clients in your network.",
-      image: FreightXchangeVector,
-    },
-    {
-      title: "Trusted Partners",
-      description:
-        "Showcase your freight rates and services to the global trade community via BNG Logistics & B2B Portals, boosting your visibility and increasing business opportunities.",
+        "Strictly limited to 5 Elite members per country, with a cap of 4 Elite members per state/province in key markets such as India, China, and the USA.",
       image: PaymentProtectionVector,
+      
     },
+    
     {
-      title: "Payment Monitoring",
+      title: "Freight Xchange",
       description:
-        "A state-of-the-art system that automatically tracks receivables and payables, keeping all transactions organized and up-to-date.",
-      image: ClaimCenterVector,
+        "Promote your freight rates globally to over 1 million freight forwarders with a single click. Maximum visibility. Targeted exposure. Real business reach.",
+      
+      image: BusinessXchangeVector,
     },
+
     {
-      title: "Acknowledgment Insignia",
+      title: "Business Matchmaking",
       description:
-        "Stand out with insignias displayed on your profile. Highlighting your credibility, payment status, and activity level, building trust and confidence among fellow members.",
+        "AI partner recommendations based on your selected trade lanes and strategic focus. Targeted expansion with confirmed, relevant partners.",
+      
+      image: TrustedPartnersVector,
+    },
+
+    {
+      title: "Annual Conferences",
+      description:
+        "Hosted at premium, top-tier international properties, bringing together serious decision-makers for focused networking, collaboration, and deal-making.",
+      
+      image: AcknowledgementVector,
+    },
+
+    {
+      title: "Award-Winning Support",
+      description:
+        "One dedicated Relationship Manager for every 15 members, ensuring smooth communication, proactive follow-ups, and structured collaboration.",
+      
     },
   ];
 
   const mobileBenefits = [
     {
-      title: "Trusted Partners",
+      title: "Country Exclusivity",
       description:
-        "The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment.",
-      image: TrustedPartnersVector,
+        "Strictly limited to 5 Elite members per country, with a cap of 4 Elite members per state/province in key markets such as India, China, and the USA. Ensures exclusivity and premium representation.",
+      image: MembersAreaVector,
     },
     {
       title: "Payment Protection",
       description:
-        "The Payment Protection Framework (PPF) and a specially designed digital interface help members mitigate risk and work with confidence in a secure environment.",
+        "BNG safeguards members against payment risks with coverage of up to USD 50,000, ensuring confidence and financial security in international transactions.",
       image: PaymentProtectionVector,
-    },
-    {
-      title: "Payment Monitoring",
-      description:
-        "A state-of-the-art system that automatically tracks receivables and payables, keeping all transactions organized and up-to-date.",
-      image: PaymentMonitoringVector,
-    },
-    {
-      title: "Claim Center",
-      description:
-        "A fully digital claims process allows members to file and resolve disputes seamlessly, ensuring prompt and fair resolutions for all conflicts.",
-      image: ClaimCenterVector,
-    },
-    {
-      title: "Members Area",
-      description:
-        "An intuitive, user-friendly member portal designed to streamline networking, providing a centralized space for all your business connections and collaboration needs.",
-      image: MembersAreaVector,
-    },
-    {
-      title: "Global Reach",
-      description:
-        "Connect with reliable partners worldwide and access a growing community that meets all your logistics and supply chain requirements.",
-      image: GlobalReachVector,
-    },
-    {
-      title: "Business Xchange",
-      description:
-        "Access the Business Center, a dedicated area for finding active business leads and sharing opportunities directly with clients in your network.",
-      image: BusinessXchangeVector,
     },
     {
       title: "Freight Xchange",
       description:
-        "Showcase your freight rates and services to the global trade community via BNG Logistics & B2B Portals, boosting your visibility and increasing business opportunities.",
+        "Promote your freight rates globally to over 1 million freight forwarders with a single click. Gain maximum visibility, targeted exposure, and real business reach on key trade lanes.",
       image: FreightXchangeVector,
     },
     {
-      title: "Acknowledgment Insignias",
+      title: "Business Xchange",
       description:
-        "Stand out with insignias displayed on your profile. Highlighting your credibility, payment status, and activity level, building trust and confidence among fellow members.",
+        "Access 100% verified, genuine business queries exclusively for top freight forwarders worldwide. Post shipment requirements, receive targeted responses, and choose partners based on capability and trust.",
+      image: BusinessXchangeVector,
+    },
+    {
+      title: "Business Matchmaking",
+      description:
+        "AI-powered partner recommendations based on your selected trade lanes and strategic focus. Connect with forwarders actively seeking or expanding business in your country for meaningful global partnerships.",
+      image: GlobalReachVector,
+    },
+    {
+      title: "Virtual 1-to-1 Meetings",
+      description:
+        "Curated business meetings with interested agents aligned with your priorities and preferred trade lanes. Schedule private one-on-one meetings for direct discussions, relationship building, and faster business alignment.",
+      image: TrustedPartnersVector,
+    },
+    {
+      title: "Annual Conferences",
+      description:
+        "Hosted at premium international properties, these conferences bring together serious decision-makers for focused networking, collaboration, and deal-making. Strengthen relationships beyond digital interactions.",
+      image: PaymentMonitoringVector,
+    },
+    {
+      title: "Acknowledgement Insignia",
+      description:
+        "A mark of trust, pride, and exclusivity within the global logistics community. Earn an official BNG Elite insignia that recognizes your credibility, status, and commitment, enhancing trust and authority worldwide.",
       image: AcknowledgementVector,
     },
-  ];
+    {
+      title: "Award-Winning Support",
+      description:
+        "One dedicated Relationship Manager for every 15 members, ensuring smooth communication, proactive follow-ups, and structured collaboration. Experience award-winning, five-star member support.",
+      image: ClaimCenterVector,
+    },
+];
+
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % mobileBenefits.length);
@@ -223,7 +241,7 @@ function MemberBenefits() {
 
   return (
     <div
-      className="relative w-full overflow-x-hidden"
+      className="relative w-full overflow-x-hidden pb-16 md:pb-0 lg:pb-0 xl:pb-0 pt-16 lg:pt-24"
       style={{
         backgroundImage: `url(${ocean.src})`,
         backgroundSize: "cover",
@@ -234,36 +252,30 @@ function MemberBenefits() {
     >
       {/* Background Overlay */}
       <div
-        className="absolute inset-0 bg-white"
+        className="absolute inset-0 bg-white px-4 sm:px-6 lg:px-8"
         style={{ opacity: 0.88, zIndex: 1 }}
       />
 
       {/* Content Container */}
       <div
         ref={sectionRef}
-        className="relative z-10 flex flex-col justify-center w-full px-4 sm:px-6 md:px-8 py-10 md:py-14"
+        className="relative z-10 flex flex-col justify-center w-full "
       >
-        {/* Top-right Patch */} 
-        {/* <div
-          className="absolute top-16 right-0 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] rounded-full"
-          style={{
-            background:
-              "radial-gradient(circle at 30% 30%, #97b6f6 0%, #6853DB 45%, #5844B4 100%)",
-            zIndex: 2,
-            filter: "blur(110px)",
-          }}
-        ></div> */}
+      
 
-        <div className="relative text-center">
-          <h2 className="text-4xl md:text-[55px] font-bold text-[#27293B] mb-8 md:mb-12">
-            Member <span className="text-primary">Benefits</span>
+        <div className="text-center mb-12 relative">
+          <h2 className="text-4xl lg:text-[55px] font-bold text-gray-900 mb-4">
+            Member <span className="text-primary">  Benefits </span> 
           </h2>
           <h2
-            className="absolute top-[-34px] md:top-[-36px] left-0 lg:-left-[1%] text-center w-full text-[40px]  md:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+            className="absolute top-[-34px] lg:top-[-60px] left-0 lg:left-[0%] text-center w-full text-[40px]  lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
             aria-hidden="true"
           >
             Member Benefits
           </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Exclusive advantages designed to deliver real business, trust, and growth
+          </p>
         </div>
 
         {/* Desktop View */}
@@ -304,14 +316,19 @@ function MemberBenefits() {
           <div className="relative" style={{ minHeight: "800px" }}>
             {/* Dotted Line */}
             <div
-              className="border-[3px] border-dashed border-sky-900 absolute left-1/2 -translate-x-1/2"
+              className="border-[3px] border-dashed border-gray-300 absolute left-1/2 -translate-x-1/2"
               style={{
                 height: "100%",
                 top: "0",
                 bottom: "0",
                 borderStyle: "dashed",
-                borderImage:
-                  "repeating-linear-gradient(to bottom , oklch(86.9% 0.022 252.894), oklch(70.4% 0.04 256.788) 16px, transparent 10px, transparent 20px) 1",
+                borderImage: `repeating-linear-gradient(
+                  to bottom,
+                  #D1D5DB,  /* gray-300 */
+                  #9CA3AF 16px,  /* gray-400 */
+                  transparent 10px,
+                  transparent 20px
+                ) 1`,
               }}
             />
 

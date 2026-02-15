@@ -46,10 +46,39 @@ import logo38 from "../../../public/LOGO_MEMBERS/38.png";
 
 function LatestMembers() {
   const logos = [
-    logo31, logo32, logo33, logo34, logo35, logo36, logo37,logo38,
-    logo1, logo2, logo3, logo5, logo6, logo8, logo9, logo10, logo11, logo12,
-    logo13, logo14, logo15, logo16, logo17, logo18, logo19, logo20, logo21, logo24,
-    logo25, logo26, logo28, logo29, logo30
+    logo31,
+    logo32,
+    logo33,
+    logo34,
+    logo35,
+    logo36,
+    logo37,
+    logo38,
+    logo1,
+    logo2,
+    logo3,
+    logo5,
+    logo6,
+    logo8,
+    logo9,
+    logo10,
+    logo11,
+    logo12,
+    logo13,
+    logo14,
+    logo15,
+    logo16,
+    logo17,
+    logo18,
+    logo19,
+    logo20,
+    logo21,
+    logo24,
+    logo25,
+    logo26,
+    logo28,
+    logo29,
+    logo30,
   ];
   const [isHovering, setIsHovering] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -60,10 +89,10 @@ function LatestMembers() {
   };
 
   return (
-    <section className="w-full mx-auto py-8 sm:py-10 lg:py-14" style={styles.section}>
-      <div style={styles.headingContainer}>
-        <h2 className="text-4xl lg:text-[55px] font-bold text-[#27293B] text-center mb-8 sm:mb-12 lg:mb-20 relative z-10">
-          Latest <span className="text-primary">Members</span>
+    <section className="w-full mx-auto pb-16 lg:pb-24" style={styles.section}>
+      <div className="text-center mb-12 relative">
+        <h2 className="text-4xl lg:text-[55px] font-bold text-gray-900 mb-4">
+          Latest <span className="text-primary"> Members </span>
         </h2>
         <h2
           className="absolute top-[-34px] lg:top-[-60px] left-0 lg:left-[0%] text-center w-full text-[40px]  lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
@@ -71,13 +100,16 @@ function LatestMembers() {
         >
           Latest Members
         </h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          Recent additions to BNG’s elite global community
+        </p>
       </div>
       <div style={styles.logoSlider}>
         <div
           style={{
             ...styles.logoSlideTrack,
             animationPlayState: isHovering || isPaused ? "paused" : "running",
-            animationDuration: "40s", // Slower for mobile readability
+            animationDuration: "80s", // Slower for mobile readability
           }}
           onTouchStart={handleTouch}
         >
@@ -86,7 +118,9 @@ function LatestMembers() {
               key={index}
               style={{
                 ...styles.logoSlide,
-                animation: `fadeIn 0.5s ease-out ${(index % logos.length) * 0.1}s both`,
+                animation: `fadeIn 0.5s ease-out ${
+                  (index % logos.length) * 0.1
+                }s both`,
               }}
               onMouseEnter={() => {
                 setIsHovering(true);
@@ -104,7 +138,7 @@ function LatestMembers() {
               >
                 <Image
                   src={logo}
-                  alt={`Member logo ${index % logos.length + 1}`}
+                  alt={`Member logo ${(index % logos.length) + 1}`}
                   width={100}
                   height={100}
                   className="max-w-[120px] sm:max-w-[140px] lg:max-w-[180px]"
@@ -152,7 +186,9 @@ const styles = {
   section: {
     width: "100%",
     margin: "0 auto",
-    marginBottom: "1rem",
+    paddingBottom: 24,
+    // marginBottom: "1rem",
+    // backgroundColor:'red'
   },
   headingContainer: {
     position: "relative",
