@@ -67,9 +67,7 @@ const ExchangeSection = () => {
     GET_BUSINESS_LEADS,
     {
       variables: {
-        filters: {
-          statuses: ["OPEN"],
-        },
+        filters: {},
       },
     },
   );
@@ -81,8 +79,8 @@ const ExchangeSection = () => {
     },
   );
 
-  const businessLeads = businessData?.apiBusinessLeads || [];
-  const freightLeads = freightData?.apiFreightLeads || [];
+  const businessLeads = (businessData?.apiBusinessLeads || []).slice(0, 9);
+  const freightLeads = (freightData?.apiFreightLeads || []).slice(0, 9);
 
   const getTransportIcon = (method) => {
     if (method?.includes("AIR")) return <Plane className="h-5 w-5" />;
