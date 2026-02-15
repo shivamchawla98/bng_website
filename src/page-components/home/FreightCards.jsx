@@ -25,25 +25,18 @@ const FreightCards = ({ leads = [] }) => {
   const formatContainerType = (containerType) => {
     if (!containerType) return null;
     
-    // Map enum keys to display values
+    // Map freight enum keys to display values
     const containerMap = {
-      'STANDARD_20FT': "20' Standard",
-      'STANDARD_40FT': "40' Standard",
-      'HIGH_CUBE_40FT': "40' High Cube",
-      'HIGH_CUBE_45FT': "45' High Cube",
-      'REFRIGERATED_20FT': "20' Refrigerated",
-      'REFRIGERATED_40FT': "40' Refrigerated",
-      'OPEN_TOP_20FT': "20' Open Top",
-      'OPEN_TOP_40FT': "40' Open Top",
-      'FLAT_RACK_20FT': "20' Flatrack",
-      'FLAT_RACK_40FT': "40' Flatrack",
-      'FLAT_RACK_COLLAPSIBLE_20FT': "20' Flatrack Collapsible",
-      'FLAT_RACK_COLLAPSIBLE_40FT': "40' Flatrack Collapsible",
-      'BULK_20FT': "20' Bulk",
-      'TANK_20FT': "20' Tank",
-      'PLATFORM_20FT': "20' Platform",
-      'HIGH_CUBE_48FT': "48' High Cube",
-      'HIGH_CUBE_53FT': "53' High Cube"
+      'TWENTY_FEET': "20'",
+      'FORTY_FEET': "40'",
+      'FORTY_FEET_HC': "40' High Cube",
+      'FORTY_FIVE_FEET_HC': "45' High Cube",
+      'TWENTY_FEET_REEFER': "20' Reefer",
+      'FORTY_FEET_REEFER': "40' Reefer",
+      'TWENTY_FEET_OPEN_TOP': "20' Open Top",
+      'FORTY_FEET_OPEN_TOP': "40' Open Top",
+      'TWENTY_FEET_FLAT_RACK': "20' Flat Rack",
+      'FORTY_FEET_FLAT_RACK': "40' Flat Rack"
     };
     
     return containerMap[containerType] || containerType;
