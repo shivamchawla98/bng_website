@@ -53,7 +53,7 @@ const FreightCards = ({ leads = [] }) => {
     const viewUrl = `https://app.bnglogisticsnetwork.com/freight/opportunities#${card.uniqueId}`;
 
     return (
-      <div key={card.id} className="bg-white rounded-lg shadow-md p-3 border border-gray-200 mb-4">
+      <div key={card.id} className="bg-[#EFF6FF] rounded-lg shadow-md p-3 border border-gray-200 mb-4">
         <div className="flex justify-between items-center mb-6">
           <div className="flex items-center gap-2">
             {method.includes("SEA") ? <Ship className="text-blue-600" size={20} /> : <Plane className="text-blue-600" size={20} />}
@@ -62,16 +62,16 @@ const FreightCards = ({ leads = [] }) => {
           </div>
           <div className="flex items-center gap-1">
             {containerSize && (
-              <div className="bg-gray-100 px-2 py-0.5 rounded-full text-[10px] font-medium text-gray-700">
+              <div className="bg-gray-100 px-2.5 py-1 rounded-full text-[12px] font-medium text-gray-700">
                 {containerSize}
               </div>
             )}
             {cargoType && (
-              <div className="bg-gray-100 px-2 py-0.5 rounded-full text-[10px] font-medium text-gray-700">
+              <div className="bg-gray-100 px-2.5 py-1 rounded-full text-[12px] font-medium text-gray-700">
                 {cargoType}
               </div>
             )}
-            <a href={viewUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 bg-blue-50 hover:bg-blue-100 text-blue-600 px-2 py-0.5 rounded-full text-[10px] font-medium transition-colors">
+            <a href={viewUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 bg-blue-50 hover:bg-blue-100 text-blue-600 px-2.5 py-1 rounded-full text-[12px] font-medium transition-colors">
               View
               <ArrowRight size={12} />
             </a>
