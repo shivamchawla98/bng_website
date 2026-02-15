@@ -7,20 +7,20 @@ const BusinessCards = ({ leads = [] }) => {
   if (!leads || leads.length === 0) return null;
 
   const formatTransportMethod = (method, containers) => {
-    if (!method) return "SEA FREIGHT";
+    if (!method) return "SEA Freight";
     
     // Determine if it's SEA or AIR based on method type and containers
     let freightType = "";
     
     if (method === "ULD") {
-      freightType = "AIR FREIGHT";
+      freightType = "AIR Freight";
     } else if (method === "FCL" || method === "BULK" || (containers && containers.length > 0)) {
-      freightType = "SEA FREIGHT";
+      freightType = "SEA Freight";
     } else if (method === "LCL" || method === "STANDARD") {
       // LCL can be both - check if containers exist
-      freightType = (containers && containers.length > 0) ? "SEA FREIGHT" : "AIR FREIGHT";
+      freightType = (containers && containers.length > 0) ? "SEA Freight" : "AIR Freight";
     } else {
-      freightType = "SEA FREIGHT";
+      freightType = "SEA Freight";
     }
 
     // Format the complete title
@@ -40,19 +40,14 @@ const BusinessCards = ({ leads = [] }) => {
       .join(' ');
   };
 
-  const getContainerSize = (containers) => {
+  const getContainerInfo = (containers) => {
     if (!containers || containers.length === 0) return null;
-    const containerType = containers[0]?.containerType;
-    if (!containerType) return null;
+    const container = containers[0];
+    if (!container?.containerType) return null;
     
-    // Extract the size from container type like "20' Standard", "40' High Cube"
-    // Match the pattern of numbers followed by apostrophe
-    const sizeMatch = containerType.match(/(\d+)'/);
-    if (sizeMatch) {
-      return `${sizeMatch[1]}'`;
-    }
-    
-    return null;
+    // Return full container type with quantity like "40' High Cube x 1"
+    const quantity = container.containerQuantity || 1;
+    return `${container.containerType} x ${quantity}`;
   };
 
   return leads.map((card) => {
@@ -62,7 +57,7 @@ const BusinessCards = ({ leads = [] }) => {
     const originCode = getCountryCode(originCountry);
     const destCode = getCountryCode(destCountry);
     const cargoCategory = formatCargoCategory(card.category);
-    const containerSize = getContainerSize(card.containers);
+    const containerInfo = getContainerInfo(card.containers);
     const viewUrl = `https://app.bnglogisticsnetwork.com/business/opportunities#${card.uniqueId}`;
 
     return (
@@ -73,9 +68,9 @@ const BusinessCards = ({ leads = [] }) => {
             <div className="font-bold text-lg text-gray-800">{method}</div>
           </div>
           <div className="flex items-center gap-1">
-            {containerSize && (
+            {containerInfo && (
               <div className="bg-gray-100 px-2 py-0.5 rounded-full text-[10px] font-medium text-gray-700">
-                {containerSize}
+                {containerInfo}
               </div>
             )}
             {cargoCategory && (
