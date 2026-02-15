@@ -43,7 +43,7 @@ function Cta() {
         </p>
 
         <a
-          href='https://calendly.com/membership-bnglogisticsnetwork'
+          href='https://calendly.com/membership-bngisticsnetwork'
           target="_blank"
           rel="noopener noreferrer"
           className="bg-white/10 text-white border-[3px] w-60 mx-auto mt-4 px-4 justify-center py-4 flex items-center border-white/60 hover:border-white rounded-lg hover:bg-[#5216ab] transition-all duration-300 group transform hover:translate-x-2"
@@ -65,8 +65,8 @@ function Cta() {
           </svg>
         </a>
 
-        {/* Mail and WhatsApp Container (Positioned at the bottom) */}
-        <div className="absolute left-0 right-0 bottom-0 flex justify-center">
+        {/* Mail and WhatsApp Container */}
+        <div className="sm:absolute sm:left-0 sm:right-0 sm:bottom-0 flex justify-center mt-8 sm:mt-0">
           <div className="flex flex-col sm:flex-row gap-4 items-center">
             {/* Email Link */}
             <a
@@ -84,7 +84,7 @@ function Cta() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-white hover:text-gray-300 transition-colors"
             >
-              <FaWhatsapp size={24} color='white' />
+              <FaWhatsapp size={24} />
               <span className='text-lg'>+91 72 4077 4077</span>
             </a>
           </div>
