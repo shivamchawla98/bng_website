@@ -66,8 +66,7 @@ function MemberBenefits() {
     {
       title: "Payment Protection",
       description:
-        "BNG safeguards members against payment risks with coverage of up to USD 50,000, ensuring confidence and financial security in international transactions.",
-      
+<span>BNG safeguards members against payment risks with coverage of up to <b>USD 50,000</b>, ensuring confidence and financial security in international transactions.</span>,      
       image: MembersAreaVector
       
     },
@@ -75,22 +74,19 @@ function MemberBenefits() {
     {
       title: "Business Xchange",
       description:
-        "Access 100% verified, genuine business queries — exclusively for top freight forwarders worldwide. No random leads. Only serious opportunities.",
-      image: FreightXchangeVector,
+<span>Access <b>100% verified, genuine business queries</b> — exclusively for top freight forwarders worldwide. No random leads. Only serious opportunities.</span>,      image: FreightXchangeVector,
     },
 
     {
       title: "Virtual 1-to-1 Meetings",
       description:
-        "Curated business meetings with interested agents aligned with your priorities and preferred trade lanes. Structured networking that converts.",
-      image: GlobalReachVector ,
+<span>Curated business <b>meetings with interested agents</b> aligned with your priorities and preferred trade lanes. Structured networking that converts.</span>,      image: GlobalReachVector ,
     },
 
     {
       title: "Acknowledgement Insignia",
       description:
-        "A mark of trust, pride, and exclusivity within the global logistics community. Recognized as part of the world’s most premium forwarder network.",
-      image: PaymentMonitoringVector,
+<span><b>A mark of trust, pride, and exclusivity</b> within the global logistics community. Recognized as part of the world’s most premium forwarder network.</span>,      image: PaymentMonitoringVector,
     },
     
      {
@@ -104,8 +100,7 @@ function MemberBenefits() {
   const benefitsTwo = [
     {
       title: "Country Exclusivity",
-      description:
-        "Strictly limited to 5 Elite members per country, with a cap of 4 Elite members per state/province in key markets such as India, China, and the USA.",
+               description: <span>Strictly limited to <b>5 Elite members per country</b>, with a cap of <b>4 Elite members per state/province</b> in key markets such as India, China, and the USA. No overcrowding.</span>,
       image: PaymentProtectionVector,
       
     },
@@ -113,90 +108,86 @@ function MemberBenefits() {
     {
       title: "Freight Xchange",
       description:
-        "Promote your freight rates globally to over 1 million freight forwarders with a single click. Maximum visibility. Targeted exposure. Real business reach.",
-      
+<span>Promote your freight rates globally to <b>over 1 million freight forwarders</b> with a single click. Maximum visibility. Targeted exposure. Real business reach.</span>,      
       image: BusinessXchangeVector,
     },
 
     {
       title: "Business Matchmaking",
       description:
-        "AI partner recommendations based on your selected trade lanes and strategic focus. Targeted expansion with confirmed, relevant partners.",
-      
+<span><b>AI-Powered partner recommendations</b> based on your selected trade lanes and strategic focus. Targeted expansion with confirmed, relevant partners.</span>,      
       image: TrustedPartnersVector,
     },
 
     {
       title: "Annual Conferences",
       description:
-        "Hosted at premium, top-tier international properties, bringing together serious decision-makers for focused networking, collaboration, and deal-making.",
-      
+<span>Hosted at <b>premium, top-tier international properties</b>, bringing together serious decision-makers for focused networking, collaboration, and deal-making.</span>,      
       image: AcknowledgementVector,
     },
 
     {
       title: "Award-Winning Support",
       description:
-        "One dedicated Relationship Manager for every 15 members, ensuring smooth communication, proactive follow-ups, and structured collaboration.",
-      
+<span>One dedicated Relationship Manager for every <b>15 members</b>, ensuring smooth communication, proactive follow-ups, and structured collaboration.</span>,      
     },
   ];
 
   const mobileBenefits = [
     {
-      title: "Country Exclusivity",
-      description:
-        "Strictly limited to 5 Elite members per country, with a cap of 4 Elite members per state/province in key markets such as India, China, and the USA. Ensures exclusivity and premium representation.",
-      image: MembersAreaVector,
-    },
-    {
-      title: "Payment Protection",
-      description:
-        "BNG safeguards members against payment risks with coverage of up to USD 50,000, ensuring confidence and financial security in international transactions.",
-      image: PaymentProtectionVector,
-    },
-    {
-      title: "Freight Xchange",
-      description:
-        "Promote your freight rates globally to over 1 million freight forwarders with a single click. Gain maximum visibility, targeted exposure, and real business reach on key trade lanes.",
-      image: FreightXchangeVector,
-    },
-    {
-      title: "Business Xchange",
-      description:
-        "Access 100% verified, genuine business queries exclusively for top freight forwarders worldwide. Post shipment requirements, receive targeted responses, and choose partners based on capability and trust.",
-      image: BusinessXchangeVector,
-    },
-    {
-      title: "Business Matchmaking",
-      description:
-        "AI-powered partner recommendations based on your selected trade lanes and strategic focus. Connect with forwarders actively seeking or expanding business in your country for meaningful global partnerships.",
-      image: GlobalReachVector,
-    },
-    {
-      title: "Virtual 1-to-1 Meetings",
-      description:
-        "Curated business meetings with interested agents aligned with your priorities and preferred trade lanes. Schedule private one-on-one meetings for direct discussions, relationship building, and faster business alignment.",
-      image: TrustedPartnersVector,
-    },
-    {
-      title: "Annual Conferences",
-      description:
-        "Hosted at premium international properties, these conferences bring together serious decision-makers for focused networking, collaboration, and deal-making. Strengthen relationships beyond digital interactions.",
-      image: PaymentMonitoringVector,
-    },
-    {
-      title: "Acknowledgement Insignia",
-      description:
-        "A mark of trust, pride, and exclusivity within the global logistics community. Earn an official BNG Elite insignia that recognizes your credibility, status, and commitment, enhancing trust and authority worldwide.",
-      image: AcknowledgementVector,
-    },
-    {
-      title: "Award-Winning Support",
-      description:
-        "One dedicated Relationship Manager for every 15 members, ensuring smooth communication, proactive follow-ups, and structured collaboration. Experience award-winning, five-star member support.",
-      image: ClaimCenterVector,
-    },
+    title: "Country Exclusivity",
+    description:
+      <span>Strictly limited to <b>5 Elite members per country</b>, with a cap of <b>4 Elite members per state/province</b> in key markets such as India, China, and the USA. Ensures exclusivity and premium representation.</span>,
+    image: MembersAreaVector,
+  },
+  {
+    title: "Payment Protection",
+    description:
+      <span>BNG safeguards members against payment risks with coverage of up to <b>USD 50,000</b>, ensuring confidence and financial security in international transactions.</span>,
+    image: PaymentProtectionVector,
+  },
+  {
+    title: "Freight Xchange",
+    description:
+      <span>Promote your freight rates globally to <b>over 1 million freight forwarders</b> with a single click. Gain maximum visibility, targeted exposure, and real business reach on key trade lanes.</span>,
+    image: FreightXchangeVector,
+  },
+  {
+    title: "Business Xchange",
+    description:
+      <span>Access <b>100% verified, genuine business queries</b> exclusively for top freight forwarders worldwide. Post shipment requirements, receive targeted responses, and choose partners based on capability and trust.</span>,
+    image: BusinessXchangeVector,
+  },
+  {
+    title: "Business Matchmaking",
+    description:
+      <span><b>AI-powered partner recommendations</b> based on your selected trade lanes and strategic focus. Connect with forwarders actively seeking or expanding business in your country for meaningful global partnerships.</span>,
+    image: GlobalReachVector,
+  },
+  {
+    title: "Virtual 1-to-1 Meetings",
+    description:
+      <span>Curated <b>business meetings with interested agents</b> aligned with your priorities and preferred trade lanes. Schedule private one-on-one meetings for direct discussions, relationship building, and faster business alignment.</span>,
+    image: TrustedPartnersVector,
+  },
+  {
+    title: "Annual Conferences",
+    description:
+      <span>Hosted at <b>premium international properties</b>, these conferences bring together serious decision-makers for focused networking, collaboration, and deal-making. Strengthen relationships beyond digital interactions.</span>,
+    image: PaymentMonitoringVector,
+  },
+  {
+    title: "Acknowledgement Insignia",
+    description:
+      <span>A <b>mark of trust, pride, and exclusivity</b> within the global logistics community. Earn an official BNG Elite insignia that recognizes your credibility, status, and commitment, enhancing trust and authority worldwide.</span>,
+    image: AcknowledgementVector,
+  },
+  {
+    title: "Award-Winning Support",
+    description:
+      <span>One dedicated <b>Relationship Manager for every 15 members</b>, ensuring smooth communication, proactive follow-ups, and structured collaboration. Experience award-winning, five-star member support.</span>,
+    image: ClaimCenterVector,
+  },
 ];
 
 

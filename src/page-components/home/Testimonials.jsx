@@ -23,6 +23,7 @@ import Virendra from "../../../public/testimonials/Virendra Kothari, GLOBE GROUN
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import { FaQuoteLeft } from "react-icons/fa";
 
 const testimonials = [
   {

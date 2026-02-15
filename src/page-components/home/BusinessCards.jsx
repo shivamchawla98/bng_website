@@ -40,6 +40,33 @@ const BusinessCards = ({ leads = [] }) => {
       .join(' ');
   };
 
+  const formatContainerType = (containerType) => {
+    if (!containerType) return null;
+    
+    // Map enum keys to display values
+    const containerMap = {
+      'STANDARD_20FT': "20' Standard",
+      'STANDARD_40FT': "40' Standard",
+      'HIGH_CUBE_40FT': "40' High Cube",
+      'HIGH_CUBE_45FT': "45' High Cube",
+      'REFRIGERATED_20FT': "20' Refrigerated",
+      'REFRIGERATED_40FT': "40' Refrigerated",
+      'OPEN_TOP_20FT': "20' Open Top",
+      'OPEN_TOP_40FT': "40' Open Top",
+      'FLAT_RACK_20FT': "20' Flatrack",
+      'FLAT_RACK_40FT': "40' Flatrack",
+      'FLAT_RACK_COLLAPSIBLE_20FT': "20' Flatrack Collapsible",
+      'FLAT_RACK_COLLAPSIBLE_40FT': "40' Flatrack Collapsible",
+      'BULK_20FT': "20' Bulk",
+      'TANK_20FT': "20' Tank",
+      'PLATFORM_20FT': "20' Platform",
+      'HIGH_CUBE_48FT': "48' High Cube",
+      'HIGH_CUBE_53FT': "53' High Cube"
+    };
+    
+    return containerMap[containerType] || containerType;
+  };
+
   const getContainerInfo = (containers) => {
     if (!containers || containers.length === 0) return null;
     const container = containers[0];
@@ -47,7 +74,8 @@ const BusinessCards = ({ leads = [] }) => {
     
     // Return full container type with quantity like "40' High Cube x 1"
     const quantity = container.containerQuantity || 1;
-    return `${container.containerType} x ${quantity}`;
+    const formattedType = formatContainerType(container.containerType);
+    return `${formattedType} x ${quantity}`;
   };
 
   return leads.map((card) => {
