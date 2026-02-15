@@ -25,6 +25,107 @@ export default function RootLayout({ children }) {
         {isStaging && (
           <meta name="robots" content="noindex, nofollow" />
         )}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'BNG Logistics Network',
+              url: 'https://bnglogisticsnetwork.com',
+              logo: 'https://bnglogisticsnetwork.com/logo.png',
+              image: {
+                '@type': 'ImageObject',
+                url: 'https://bnglogisticsnetwork.com/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'BNG Logistics Network - Global Freight Forwarding and Logistics Solutions',
+                type: 'image/png',
+              },
+              sameAs: [
+                'https://www.facebook.com/bnglogisticsnetwork/',
+                'https://www.linkedin.com/company/bnglogisticsnetwork/',
+                'https://twitter.com/bnglogistics',
+              ],
+              contactPoint: {
+                '@type': 'ContactPoint',
+                telephone: '+1 123 456 7890',
+                contactType: 'customer service',
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              url: 'https://bnglogisticsnetwork.com',
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: 'https://bnglogisticsnetwork.com/search?q={search_term_string}',
+                'query-input': 'required name=search_term_string',
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  item: {
+                    '@id': 'https://bnglogisticsnetwork.com',
+                    name: 'Home',
+                  },
+                },
+              ],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'BNG Logistics Network',
+              url: 'https://bnglogisticsnetwork.com',
+              logo: 'https://bnglogisticsnetwork.com/logo.png',
+              sameAs: [
+                'https://www.facebook.com/bnglogisticsnetwork/',
+                'https://www.linkedin.com/company/bnglogisticsnetwork/',
+                'https://twitter.com/bnglogistics',
+              ],
+              contactPoint: {
+                '@type': 'ContactPoint',
+                telephone: '+1 123 456 7890',
+                contactType: 'customer service',
+              },
+              images: [
+                {
+                  url: 'https://bnglogisticsnetwork.com/og-image.png',
+                  width: 1200,
+                  height: 630,
+                  alt: 'BNG Logistics Network - Global Freight Forwarding and Logistics Solutions',
+                  type: 'image/png',
+                },
+              ],
+              twitter: {
+                card: 'summary_large_image',
+                title: 'BNG Logistics Network | Global Freight Forwarding Solutions',
+                description: 'Join the world\'s most trusted freight forwarding network. Connect with verified partners across 90+ countries.',
+                images: ['https://bnglogisticsnetwork.com/og-image.png'],
+              },
+            }),
+          }}
+        />
       </head>
       <GoogleTagManager gtmId="GTM-5PGZMFJ6" />
       <ClientApolloProvider>
