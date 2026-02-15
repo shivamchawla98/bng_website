@@ -6,13 +6,39 @@ import getCountryCode from "../../../utils/getCountryCode";
 const BusinessCards = ({ leads = [] }) => {
   if (!leads || leads.length === 0) return null;
 
+  const formatTransportMethod = (method, category) => {
+    if (!method) return "Sea Freight";
+    
+    let transportType = "";
+    if (method.includes("SEA")) transportType = "Sea Freight";
+    else if (method.includes("AIR")) transportType = "Air Freight";
+    else transportType = method;
+
+    if (category) {
+      return `${transportType}-${category}`;
+    }
+    return transportType;
+  };
+
+  const getContainerSize = (containers) => {
+    if (!containers || containers.length === 0) return null;
+    const containerType = containers[0]?.containerType;
+    if (!containerType) return null;
+    
+    if (containerType.includes("20")) return "20'";
+    if (containerType.includes("40")) return "40'";
+    if (containerType.includes("45")) return "45'";
+    return null;
+  };
+
   return leads.map((card) => {
-    const method = card.transportationMethod || "SEA Freight";
+    const method = formatTransportMethod(card.transportationMethod, card.category);
     const originCountry = card.loadingPort?.country;
     const destCountry = card.destinationPort?.country;
     const originCode = getCountryCode(originCountry);
     const destCode = getCountryCode(destCountry);
     const commodity = card.commodity || "General Cargo";
+    const containerSize = getContainerSize(card.containers);
     const viewUrl = `https://app.bnglogisticsnetwork.com/business/opportunities#${card.uniqueId}`;
 
     return (
@@ -23,6 +49,11 @@ const BusinessCards = ({ leads = [] }) => {
             <div className="font-bold text-lg text-gray-800">{method}</div>
           </div>
           <div className="flex items-center gap-1">
+            {containerSize && (
+              <div className="bg-gray-100 px-2 py-0.5 rounded-full text-[10px] font-medium text-gray-700">
+                {containerSize}
+              </div>
+            )}
             <div className="bg-gray-100 px-2 py-0.5 rounded-full text-[10px] font-medium text-gray-700">
               {commodity}
             </div>

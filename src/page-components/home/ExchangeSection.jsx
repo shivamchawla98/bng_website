@@ -16,6 +16,7 @@ const GET_BUSINESS_LEADS = gql`
       id
       uniqueId
       commodity
+      category
       loadingPort {
         country
         name
@@ -27,6 +28,10 @@ const GET_BUSINESS_LEADS = gql`
         unlocode
       }
       transportationMethod
+      containers {
+        containerType
+        containerQuantity
+      }
       createdAt
     }
   }
@@ -48,6 +53,8 @@ const GET_FREIGHT_LEADS = gql`
         unlocode
       }
       transportationMethod
+      cargoType
+      containerType
       freightRate
       freightRateCurrency
       createdAt

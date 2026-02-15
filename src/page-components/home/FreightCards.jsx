@@ -6,26 +6,71 @@ import getCountryCode from "../../../utils/getCountryCode";
 const FreightCards = ({ leads = [] }) => {
   if (!leads || leads.length === 0) return null;
 
+  const formatTransportMethod = (method) => {
+    if (!method) return "Sea Freight";
+    
+    // Parse the method which comes like "SEA_FCL", "SEA_LCL", "AIR_FREIGHT"
+    const parts = method.split('_');
+    
+    if (parts[0] === "SEA") {
+      if (parts[1] === "FCL") return "SEA Freight-FCL";
+      if (parts[1] === "LCL") return "SEA Freight-LCL";
+      return "Sea Freight";
+    } else if (parts[0] === "AIR") {
+      return "AIR Freight";
+    }
+    return method;
+  };
+
+  const getContainerSize = (containerType) => {
+    if (!containerType) return null;
+    
+    if (containerType.includes("20")) return "20'";
+    if (containerType.includes("40")) return "40'";
+    if (containerType.includes("45")) return "45'";
+    return null;
+  };
+
+  const formatCargoType = (cargoType) => {
+    if (!cargoType) return null;
+    
+    // Convert GENERAL_CARGO to "General Cargo"
+    return cargoType
+      .split('_')
+      .map(word => word.charAt(0) + word.slice(1).toLowerCase())
+      .join(' ');
+  };
+
   return leads.map((card) => {
-    const method = card.transportationMethod || "SEA Freight";
+    const method = formatTransportMethod(card.transportationMethod);
     const originCountry = card.loadingPort?.country;
     const destCountry = card.destinationPort?.country;
     const originCode = getCountryCode(originCountry);
     const destCode = getCountryCode(destCountry);
-    const cost = card.freightRate ? `${card.freightRateCurrency || 'USD'} ${card.freightRate}` : "Contact for Rate";
+    const cost = card.freightRate ? `$${card.freightRate}` : null;
+    const containerSize = getContainerSize(card.containerType);
+    const cargoType = formatCargoType(card.cargoType);
     const viewUrl = `https://app.bnglogisticsnetwork.com/freight/opportunities#${card.uniqueId}`;
 
     return (
       <div key={card.id} className="bg-white rounded-lg shadow-md p-3 border border-gray-200 mb-4">
         <div className="flex justify-between items-center mb-6">
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
-              {method.includes("SEA") ? <Ship className="text-blue-600" size={20} /> : <Plane className="text-blue-600" size={20} />}
-              <div className="font-bold text-lg text-gray-800">{method}</div>
-            </div>
-            <div className="font-medium text-gray-600 text-sm">{cost}</div>
+          <div className="flex items-center gap-2">
+            {method.includes("SEA") ? <Ship className="text-blue-600" size={20} /> : <Plane className="text-blue-600" size={20} />}
+            <div className="font-bold text-lg text-gray-800">{method}</div>
+            {cost && <div className="font-medium text-gray-600 text-sm">{cost}</div>}
           </div>
           <div className="flex items-center gap-1">
+            {containerSize && (
+              <div className="bg-gray-100 px-2 py-0.5 rounded-full text-[10px] font-medium text-gray-700">
+                {containerSize}
+              </div>
+            )}
+            {cargoType && (
+              <div className="bg-gray-100 px-2 py-0.5 rounded-full text-[10px] font-medium text-gray-700">
+                {cargoType}
+              </div>
+            )}
             <a href={viewUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 bg-blue-50 hover:bg-blue-100 text-blue-600 px-2 py-0.5 rounded-full text-[10px] font-medium transition-colors">
               View
               <ArrowRight size={12} />
