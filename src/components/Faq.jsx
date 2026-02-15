@@ -6,36 +6,29 @@ export const FAQ = () => {
   
   const faqs = [
     {
-      question: "Who can become a BNG Logistics Network member?",
+      question: "What makes BNG different from other freight networks?",
       answer:
-        "BNG membership is open to qualified independent freight forwarders, customs brokers, and logistics/supply chain providers who meet our requirements. For standard membership, applicants need:\n" +
-        "- A valid company registration certificate\n" +
-        "- Tax registration certificate\n" +
-        "- Company website\n" +
-        "- Minimum of 3 industry references (or 1 BNG member reference)\n" +
-        "- IATA, FIATA, AEO, CUSTOMS accreditation (any one)\n" +
-        "Optional: Trade-related or other network membership certificates.\n" +
-        "If you don't have 3 references, 1 reference from a current BNG member is sufficient.",
+        "BNG operates on strict country exclusivity, verified membership, and structured business exchange. We focus on quality over quantity, real opportunities over mass lead sharing, and long-term partnerships over internal competition.",
     },
     {
-      question: "What if I'm new and lack trade references?",
+      question: "How does country exclusivity work?",
       answer:
-        "No problem! You can still join BNG. If you know a current member, their reference will suffice. Alternatively, we suggest cooperating with one of our existing members, mentioning them in your application. Our membership team will review and approve your application upon verification.",
+        "BNG limits membership to a maximum of five Elite members per country, with further state-level limits in major markets. This protects member value and reduces internal competition.",
     },
     {
-      question: "How does BNG ensure member credibility?",
+      question: "What is Freight Xchange and Business Xchange?",
       answer:
-        "BNG follows a strict vetting process supported by D-U-N-S Credit Scores, FDRS systems, and other global verification mechanisms. Applications are reviewed by legal, finance, and trade experts to ensure only reliable and trustworthy companies join the network.",
+        "Freight Xchange allows members to promote rates globally, while Business Xchange provides access to 100% verified shipment enquiries from trusted freight forwarders.",
     },
     {
-      question: "What is the Business Lead Center, and how does it work?",
+      question: "Is there payment protection for members?",
       answer:
-        "The Business Lead Center is a digital tool where members can post freight and logistics inquiries and receive quotes from fellow members. Members can use this feature directly within their dashboard, streamlining collaboration and response times.",
+        "Yes. Eligible Elite members benefit from payment protection coverage of up to USD 50,000, reducing risk and strengthening trust in international transactions.",
     },
     {
-      question: "What is Freight Xchange?",
+      question: "How can I become a BNG member?",
       answer:
-        "Freight Viewer is a tool for promoting freight rates to the global community. Members can upload rates to increase visibility and sales within the network and affiliated BNG platforms. A valid membership is required to access this feature.",
+        "Membership is selective. Companies must meet our qualification criteria and align with BNG’s standards of professionalism, credibility, and growth-focused collaboration.",
     },
   ];
 

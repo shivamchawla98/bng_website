@@ -89,7 +89,7 @@ function LatestMembers() {
   };
 
   return (
-    <section className="w-full mx-auto py-16 lg:py-24" style={styles.section}>
+    <section className="w-full mx-auto pb-16 lg:pb-24" style={styles.section}>
       <div className="text-center mb-12 relative">
         <h2 className="text-4xl lg:text-[55px] font-bold text-gray-900 mb-4">
           Latest <span className="text-primary"> Members </span>
@@ -186,7 +186,7 @@ const styles = {
   section: {
     width: "100%",
     margin: "0 auto",
-    paddingBottom: 0,
+    paddingBottom: 24,
     // marginBottom: "1rem",
     // backgroundColor:'red'
   },

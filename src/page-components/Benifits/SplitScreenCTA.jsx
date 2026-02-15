@@ -35,8 +35,8 @@ const SplitScreenCTA = () => {
               />
             </svg>
           </div>
-          <p className="text-base md:text-xl font-semibold text-white/90 max-w-lg">
-Access 100% verified, genuine shipment enquiries from serious freight forwarders worldwide.
+          <p className="text-base md:text-xl  text-white/90 max-w-lg">
+Access <b>100% verified, genuine shipment enquiries</b> from serious freight forwarders worldwide.
           </p>
         </div>
       </Link>
@@ -69,8 +69,8 @@ Access 100% verified, genuine shipment enquiries from serious freight forwarders
               />
             </svg>
           </div>
-          <p className="text-base md:text-xl font-semibold text-white/90 max-w-lg">
-Global freight rate promotion to over 1 million trusted forwarders across key trade lanes.
+          <p className="text-base md:text-xl text-white/90 max-w-lg">
+Global <b>freight rate promotion to over 1 million</b> trusted forwarders across key trade lanes.
           </p>
         </div>
       </Link>
