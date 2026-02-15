@@ -2,11 +2,12 @@
 
 import React from "react";
 import { useQuery, gql } from "@apollo/client";
-import { ArrowRight, Plane, Ship, Package } from "lucide-react";
+import { ArrowRight, Plane, Ship, Package, Truck, Briefcase, Network, Handshake, Warehouse, DollarSignIcon, LucideDollarSign, CircleDollarSign } from "lucide-react";
 import getCountryCode from "../../../utils/getCountryCode";
 import BusinessCards from "./BusinessCards";
 import FreightCards from "./FreightCards";
 import VerticalCarousel from "./VerticalCarousel";
+import { FaExchangeAlt, FaMoneyBill } from "react-icons/fa";
 
 
 // GraphQL Queries
@@ -112,7 +113,7 @@ const ExchangeSection = () => {
           {/* Business Exchange Column */}
           <div className="bg-white rounded-2xl shadow-xl p-6 h-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-              <Package className="h-6 w-6 text-primary" />
+              <Handshake className="h-6 w-6 text-primary" />
               Business Xchange
             </h3>
 
@@ -147,7 +148,7 @@ const ExchangeSection = () => {
           {/* Freight Exchange Column */}
           <div className="bg-white rounded-2xl shadow-xl p-6 h-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-              <Ship className="h-6 w-6 text-primary" />
+              <CircleDollarSign className="h-6 w-6 text-primary" />
               Freight Xchange
             </h3>
 

@@ -24,7 +24,7 @@ const HeroSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 3000); // Changed to normal timing
+    }, 4000); // Changed to normal timing
     return () => clearInterval(interval);
   }, []);
 
