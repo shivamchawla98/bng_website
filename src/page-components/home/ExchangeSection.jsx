@@ -74,8 +74,8 @@ const ExchangeSection = () => {
     },
   );
 
-  const businessLeads = (businessData?.apiBusinessLeads || []).slice(0, 3);
-  const freightLeads = (freightData?.apiFreightLeads || []).slice(0, 3);
+  const businessLeads = businessData?.apiBusinessLeads || [];
+  const freightLeads = freightData?.apiFreightLeads || [];
 
   const getTransportIcon = (method) => {
     if (method?.includes("AIR")) return <Plane className="h-5 w-5" />;
@@ -113,9 +113,19 @@ const ExchangeSection = () => {
 
             {/* Active Opportunities Cards */}
             <div className="h-[300px] md:h-[400px]">
-              <VerticalCarousel>
-                <BusinessCards leads={businessLeads} />
-              </VerticalCarousel>
+              {businessLoading ? (
+                <div className="flex items-center justify-center h-full">
+                  <div className="w-10 h-10 border-4 border-t-indigo-600 border-gray-200 rounded-full animate-spin"></div>
+                </div>
+              ) : businessLeads.length > 0 ? (
+                <VerticalCarousel>
+                  <BusinessCards leads={businessLeads} />
+                </VerticalCarousel>
+              ) : (
+                <div className="flex items-center justify-center h-full text-gray-500">
+                  No opportunities available
+                </div>
+              )}
             </div>
 
             <div className="text-center mt-6">
@@ -138,9 +148,19 @@ const ExchangeSection = () => {
 
             {/* Active Opportunities Cards */}
             <div className="h-[300px] md:h-[400px]">
-              <VerticalCarousel>
-                <FreightCards leads={freightLeads} />
-              </VerticalCarousel>
+              {freightLoading ? (
+                <div className="flex items-center justify-center h-full">
+                  <div className="w-10 h-10 border-4 border-t-indigo-600 border-gray-200 rounded-full animate-spin"></div>
+                </div>
+              ) : freightLeads.length > 0 ? (
+                <VerticalCarousel>
+                  <FreightCards leads={freightLeads} />
+                </VerticalCarousel>
+              ) : (
+                <div className="flex items-center justify-center h-full text-gray-500">
+                  No opportunities available
+                </div>
+              )}
             </div>
 
             <div className="text-center mt-6">
