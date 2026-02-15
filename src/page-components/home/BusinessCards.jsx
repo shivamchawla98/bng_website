@@ -6,18 +6,38 @@ import getCountryCode from "../../../utils/getCountryCode";
 const BusinessCards = ({ leads = [] }) => {
   if (!leads || leads.length === 0) return null;
 
-  const formatTransportMethod = (method, category) => {
-    if (!method) return "Sea Freight";
+  const formatTransportMethod = (method, containers) => {
+    if (!method) return "SEA FREIGHT";
     
-    let transportType = "";
-    if (method.includes("SEA")) transportType = "Sea Freight";
-    else if (method.includes("AIR")) transportType = "Air Freight";
-    else transportType = method;
-
-    if (category) {
-      return `${transportType}-${category}`;
+    // Determine if it's SEA or AIR based on method type and containers
+    let freightType = "";
+    
+    if (method === "ULD") {
+      freightType = "AIR FREIGHT";
+    } else if (method === "FCL" || method === "BULK" || (containers && containers.length > 0)) {
+      freightType = "SEA FREIGHT";
+    } else if (method === "LCL" || method === "STANDARD") {
+      // LCL can be both - check if containers exist
+      freightType = (containers && containers.length > 0) ? "SEA FREIGHT" : "AIR FREIGHT";
+    } else {
+      freightType = "SEA FREIGHT";
     }
-    return transportType;
+
+    // Format the complete title
+    if (method === "STANDARD") {
+      return freightType;
+    }
+    return `${freightType} - ${method}`;
+  };
+
+  const formatCargoCategory = (category) => {
+    if (!category) return null;
+    
+    // Convert enum values like REEFER_CARGO to "Reefer Cargo"
+    return category
+      .split('_')
+      .map(word => word.charAt(0) + word.slice(1).toLowerCase())
+      .join(' ');
   };
 
   const getContainerSize = (containers) => {
@@ -25,19 +45,23 @@ const BusinessCards = ({ leads = [] }) => {
     const containerType = containers[0]?.containerType;
     if (!containerType) return null;
     
-    if (containerType.includes("20")) return "20'";
-    if (containerType.includes("40")) return "40'";
-    if (containerType.includes("45")) return "45'";
+    // Extract the size from container type like "20' Standard", "40' High Cube"
+    // Match the pattern of numbers followed by apostrophe
+    const sizeMatch = containerType.match(/(\d+)'/);
+    if (sizeMatch) {
+      return `${sizeMatch[1]}'`;
+    }
+    
     return null;
   };
 
   return leads.map((card) => {
-    const method = formatTransportMethod(card.transportationMethod, card.category);
+    const method = formatTransportMethod(card.transportationMethod, card.containers);
     const originCountry = card.loadingPort?.country;
     const destCountry = card.destinationPort?.country;
     const originCode = getCountryCode(originCountry);
     const destCode = getCountryCode(destCountry);
-    const commodity = card.commodity || "General Cargo";
+    const cargoCategory = formatCargoCategory(card.category);
     const containerSize = getContainerSize(card.containers);
     const viewUrl = `https://app.bnglogisticsnetwork.com/business/opportunities#${card.uniqueId}`;
 
@@ -54,9 +78,11 @@ const BusinessCards = ({ leads = [] }) => {
                 {containerSize}
               </div>
             )}
-            <div className="bg-gray-100 px-2 py-0.5 rounded-full text-[10px] font-medium text-gray-700">
-              {commodity}
-            </div>
+            {cargoCategory && (
+              <div className="bg-gray-100 px-2 py-0.5 rounded-full text-[10px] font-medium text-gray-700">
+                {cargoCategory}
+              </div>
+            )}
             <a href={viewUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 bg-blue-50 hover:bg-blue-100 text-blue-600 px-2 py-0.5 rounded-full text-[10px] font-medium transition-colors">
               View
               <ArrowRight size={12} />
