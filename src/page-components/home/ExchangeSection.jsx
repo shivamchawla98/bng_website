@@ -114,7 +114,7 @@ const ExchangeSection = () => {
           <div className="bg-white rounded-2xl shadow-xl p-6 h-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
               <Handshake className="h-6 w-6 text-primary" />
-              Business Xchange
+              Live Business Queries
             </h3>
 
             {/* Active Opportunities Cards */}
@@ -149,7 +149,7 @@ const ExchangeSection = () => {
           <div className="bg-white rounded-2xl shadow-xl p-6 h-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
               <CircleDollarSign className="h-6 w-6 text-primary" />
-              Freight Xchange
+              Live Freight Rates
             </h3>
 
             {/* Active Opportunities Cards */}

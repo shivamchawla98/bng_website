@@ -20,7 +20,7 @@ const VendorPartners = () => {
         {
           src: "/vendor-partners/onesto.png",
           alt: "Onesto Management Consultancy",
-          link: "#", // Placeholder, replace with actual link
+          link: "https://onestoconsultancy.com/ ", // Placeholder, replace with actual link
         },
       ],
     },
@@ -32,7 +32,7 @@ const VendorPartners = () => {
         {
           src: "/vendor-partners/fdrs.png",
           alt: "FDRS Debt Recovery",
-          link: "#", // Placeholder, replace with actual link
+          link: "https://fdrs-ltd.com/", // Placeholder, replace with actual link
         },
       ],
     },
@@ -44,7 +44,7 @@ const VendorPartners = () => {
         {
           src: "/vendor-partners/exacodel.png",
           alt: "Exacodel IT & Digital",
-          link: "#", // Placeholder, replace with actual link
+          link: "https://exacodel.com/", // Placeholder, replace with actual link
         },
       ],
     },
@@ -56,12 +56,12 @@ const VendorPartners = () => {
         {
           src: "/vendor-partners/iics.png",
           alt: "IICS International Cargo Show 2025",
-          link: "https://www.intermodal.com.hk/en",
+          link: "https://www.iicsexpo.com/",
         },
         {
           src: "/vendor-partners/intermodal.png",
           alt: "Intermodal Asia",
-          link: "https://www.intermodal.com.hk/en",
+          link: "https://www.intermodal-asia.com/en/home.html",
         },
       ],
     },
