@@ -5,12 +5,14 @@ import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import LOGO from "../../../public/BNG Logo 1.png";
 import Image from "next/image";
+import LeadCaptureModal from "../LeadCaptureModal/LeadCaptureModal";
 
 function Header() {
   const router = useRouter();
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isLeadModalOpen, setIsLeadModalOpen] = useState(false);
   const [bgStyle, setBgStyle] = useState({
     opacity: 1,
     background: "linear-gradient(to top right, var(--primaryBg), var(--secondryBg))",
@@ -127,12 +129,12 @@ function Header() {
             Login
           </a>
           <div className="hidden md:flex space-x-4">
-            <Link
-              href="https://app.bnglogisticsnetwork.com/register"
+            <button
+              onClick={() => setIsLeadModalOpen(true)}
               className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-[#5216ab] hover:from-transparent transition-all duration-300 bg-primary transform hover:translate-x-2"
             >
               Become a Member
-            </Link>
+            </button>
           </div> 
         </div>
 
@@ -199,16 +201,16 @@ function Header() {
           >
             Login
           </Link>
-            <Link
-              href="https://app.bnglogisticsnetwork.com/register"
-              onClick={closeMenu}
+            <button
+              onClick={() => { closeMenu(); setIsLeadModalOpen(true); }}
               className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-primary hover:from-transparent transition-all duration-300 bg-primary transform hover:translate-x-2"
             >
               Become a Member
-            </Link>
+            </button>
           </div>
         </div>
       </div>
+      <LeadCaptureModal isOpen={isLeadModalOpen} onClose={() => setIsLeadModalOpen(false)} />
     </nav>
   );
 }
