@@ -16,6 +16,7 @@ import WorldMap from "@/page-components/home/WorldMap";
 import StatsSection from "@/page-components/home/StatsSection";
 import SplitScreenCTA from "@/page-components/Benifits/SplitScreenCTA";
 import { OrganizationSchema, WebSiteSchema } from "@/components/StructuredData";
+import HomeSponsorCarousel from "@/page-components/home/HomeSponsorCarousel";
 // import ExperimentalMap from "@/page-components/home/ExperimentalMap";
 
 export const metadata = {
@@ -64,14 +65,17 @@ export default function Home() {
           
         </section>
         <StatsSection />
+        <Conference />
+
+        <HomeSponsorCarousel />
+
         {/* <WorldWideReach /> */}
         {/* <ExperimentalMap /> */}
         <WorldMap />
         <Solutions />
         
         
-        <ConferenceOpportunities />
-        <Conference />
+        {/* <ConferenceOpportunities /> */}
         <News />
         <VendorPartners />
         <SplitScreenCTA />

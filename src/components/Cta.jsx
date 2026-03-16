@@ -43,7 +43,7 @@ function Cta() {
         </p>
 
         <a
-          href='https://calendly.com/membership-bngisticsnetwork'
+          href='https://calendly.com/membership-bnglogisticsnetwork'
           target="_blank"
           rel="noopener noreferrer"
           className="bg-white/10 text-white border-[3px] w-60 mx-auto mt-4 px-4 justify-center py-4 flex items-center border-white/60 hover:border-white rounded-lg hover:bg-[#5216ab] transition-all duration-300 group transform hover:translate-x-2"
