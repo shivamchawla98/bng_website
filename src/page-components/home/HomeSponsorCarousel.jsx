@@ -107,27 +107,27 @@ export default function HomeSponsorCarousel() {
   return (
     <>
       <HomeSponsorStyles />
-      <section className="bg-[#EFF6FF] py-16 lg:py-24">
+      <section className="bg-[#EFF6FF] py-10 sm:py-16 lg:py-24">
         <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* ── Section heading — matches bng_website pattern ── */}
-          <div className="text-center mb-12 relative">
-            <h2 className="text-4xl lg:text-[55px] font-bold text-gray-900 mb-4">
+          <div className="text-center mb-8 sm:mb-12 relative">
+            <h2 className="text-2xl sm:text-4xl lg:text-[55px] font-bold text-gray-900 mb-3 sm:mb-4">
               Conference <span className="text-primary">Sponsors</span>
             </h2>
             <h2
-              className="absolute top-[-34px] lg:top-[-60px] left-0 lg:left-[0%] text-center w-full text-[40px] lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
+              className="absolute top-[-20px] sm:top-[-34px] lg:top-[-60px] left-0 lg:left-[0%] text-center w-full text-[28px] sm:text-[40px] lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
               aria-hidden="true"
             >
               Conference Sponsors
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-lg text-gray-600 max-w-2xl mx-auto px-2">
               Meet the partners powering the BNG Logistics Conference experience
             </p>
           </div>
 
           {/* ── Sponsor type badge ── */}
-          <div className="flex items-center justify-center gap-3 sm:gap-4 mb-8">
+          <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6 sm:mb-8">
             <div className="hidden sm:block h-px flex-1 max-w-[100px] bg-gradient-to-r from-transparent to-gray-300" />
 
             <div key={badgeKey} className="hsc-badge-pop relative flex items-center">
@@ -161,23 +161,24 @@ export default function HomeSponsorCarousel() {
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
           >
-            {/* Left arrow */}
+            {/* Left arrow — hidden on mobile, shown from sm up */}
             {total > 1 && (
               <button
                 onClick={prev}
                 aria-label="Previous sponsor"
-                className="absolute -left-2 sm:-left-4 md:-left-14 top-1/2 -translate-y-1/2 z-20
+                className="hidden sm:flex absolute -left-4 md:-left-14 top-1/2 -translate-y-1/2 z-20
                            bg-white hover:bg-gray-50 border border-gray-200
-                           p-2 sm:p-3 md:p-3.5 rounded-full shadow-md transition-all
+                           p-2.5 md:p-3.5 rounded-full shadow-md transition-all
+                           items-center justify-center
                            focus:outline-none focus:ring-2 focus:ring-primary/30
                            hover:shadow-lg active:scale-95"
               >
-                <ChevronLeftIcon className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-gray-700" />
+                <ChevronLeftIcon className="h-5 w-5 md:h-6 md:w-6 text-gray-700" />
               </button>
             )}
 
             {/* Track */}
-            <div className="overflow-hidden rounded-2xl mx-6 sm:mx-8 md:mx-0">
+            <div className="overflow-hidden rounded-2xl">
               <div
                 className="flex"
                 style={{
@@ -194,18 +195,19 @@ export default function HomeSponsorCarousel() {
               </div>
             </div>
 
-            {/* Right arrow */}
+            {/* Right arrow — hidden on mobile, shown from sm up */}
             {total > 1 && (
               <button
                 onClick={next}
                 aria-label="Next sponsor"
-                className="absolute -right-2 sm:-right-4 md:-right-14 top-1/2 -translate-y-1/2 z-20
+                className="hidden sm:flex absolute -right-4 md:-right-14 top-1/2 -translate-y-1/2 z-20
                            bg-white hover:bg-gray-50 border border-gray-200
-                           p-2 sm:p-3 md:p-3.5 rounded-full shadow-md transition-all
+                           p-2.5 md:p-3.5 rounded-full shadow-md transition-all
+                           items-center justify-center
                            focus:outline-none focus:ring-2 focus:ring-primary/30
                            hover:shadow-lg active:scale-95"
               >
-                <ChevronRightIcon className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-gray-700" />
+                <ChevronRightIcon className="h-5 w-5 md:h-6 md:w-6 text-gray-700" />
               </button>
             )}
           </div>

@@ -77,7 +77,6 @@ const SponsorCard = ({ sponsor, gradient }) => {
           {/* ── Left: Photo section ── */}
           <div
             className="relative flex-shrink-0 overflow-hidden bg-gray-100"
-            style={{ minHeight: '280px' }}
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
           >
@@ -151,7 +150,7 @@ const SponsorCard = ({ sponsor, gradient }) => {
             </div>
 
             {/* Mobile: horizontal person strip */}
-            <div className="md:hidden relative w-full h-[200px] sm:h-[240px]">
+            <div className="md:hidden relative w-full h-[180px] sm:h-[220px]">
               <div
                 className="absolute inset-0"
                 style={
@@ -216,38 +215,38 @@ const SponsorCard = ({ sponsor, gradient }) => {
           </div>
 
           {/* ── Right: Company details — light theme ── */}
-          <div className="flex-1 p-5 sm:p-6 md:p-8 flex flex-col justify-between">
+          <div className="flex-1 p-4 sm:p-5 md:p-8 flex flex-col justify-between">
             <div>
               {/* Company header */}
-              <div className="flex items-start justify-between gap-4 mb-5">
+              <div className="flex items-start justify-between gap-3 sm:gap-4 mb-4 sm:mb-5">
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
+                  <h3 className="text-lg sm:text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
                     {sponsor.companyName}
                   </h3>
-                  <div className="flex flex-wrap items-center gap-2 mt-2">
+                  <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mt-1.5 sm:mt-2">
                     {sponsor.countryFlagUrl ? (
                       <Image
                         src={sponsor.countryFlagUrl}
                         alt={sponsor.country}
-                        width={28}
-                        height={10}
+                        width={24}
+                        height={9}
                         className="rounded-sm shadow-sm"
                       />
                     ) : (
-                      <span className="text-base leading-none">🌐</span>
+                      <span className="text-sm leading-none">🌐</span>
                     )}
-                    <span className="text-sm font-semibold text-primary">
+                    <span className="text-xs sm:text-sm font-semibold text-primary">
                       {sponsor.country}
                     </span>
                     <span className="text-gray-300">·</span>
-                    <MapPinIcon className="h-3.5 w-3.5 text-gray-400 flex-shrink-0" />
-                    <span className="text-sm text-gray-500">{sponsor.location}</span>
+                    <MapPinIcon className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-gray-400 flex-shrink-0" />
+                    <span className="text-xs sm:text-sm text-gray-500">{sponsor.location}</span>
                   </div>
                 </div>
 
                 {/* Logo */}
                 {sponsor.companyLogoUrl ? (
-                  <div className="relative w-24 h-16 sm:w-28 sm:h-20 md:w-32 md:h-24 bg-gray-50 rounded-xl flex-shrink-0 shadow-sm border border-gray-100 overflow-hidden p-2">
+                  <div className="relative w-16 h-12 sm:w-24 sm:h-16 md:w-32 md:h-24 bg-gray-50 rounded-lg sm:rounded-xl flex-shrink-0 shadow-sm border border-gray-100 overflow-hidden p-1 sm:p-2">
                     <Image
                       src={sponsor.companyLogoUrl}
                       alt={`${sponsor.companyName} logo`}
@@ -257,9 +256,9 @@ const SponsorCard = ({ sponsor, gradient }) => {
                   </div>
                 ) : (
                   <div
-                    className={`w-16 h-12 sm:w-20 sm:h-14 rounded-xl flex-shrink-0 flex items-center justify-center bg-gradient-to-br ${gradient} shadow-sm`}
+                    className={`w-12 h-10 sm:w-16 sm:h-12 md:w-20 md:h-14 rounded-lg sm:rounded-xl flex-shrink-0 flex items-center justify-center bg-gradient-to-br ${gradient} shadow-sm`}
                   >
-                    <span className="text-white font-black text-sm sm:text-base uppercase tracking-widest">
+                    <span className="text-black font-black text-xs sm:text-sm md:text-base uppercase tracking-widest">
                       {sponsor.companyName.slice(0, 2)}
                     </span>
                   </div>
@@ -267,13 +266,13 @@ const SponsorCard = ({ sponsor, gradient }) => {
               </div>
 
               {/* About */}
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed line-clamp-3">
+              <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed line-clamp-3">
                 {sponsor.about}
               </p>
             </div>
 
             {/* Website link */}
-            <div className="mt-5 pt-4 border-t border-gray-100">
+            <div className="mt-4 sm:mt-5 pt-3 sm:pt-4 border-t border-gray-100">
               {sponsor.website && (
                 <a
                   href={sponsor.website}
