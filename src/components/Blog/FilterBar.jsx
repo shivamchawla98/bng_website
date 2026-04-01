@@ -6,6 +6,8 @@ import { debounce } from "@/lib/utils/blogUtils";
 
 const FilterBar = ({ categories = [], tags = [], onFilterChange, onSearch, initialFilters = {} }) => {
   const [searchTerm, setSearchTerm] = useState(initialFilters.search || "");
+  const [categorySearch, setCategorySearch] = useState("");
+  const [tagsSearch, setTagsSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(initialFilters.categoryId || "");
   const [selectedTags, setSelectedTags] = useState(initialFilters.tagIds || []);
   const [sortBy, setSortBy] = useState(initialFilters.sortBy || BlogSortOptions.NEWEST);
@@ -19,6 +21,7 @@ const FilterBar = ({ categories = [], tags = [], onFilterChange, onSearch, initi
     setSelectedCategory(categoryId);
     onFilterChange?.({ categoryId, tagIds: selectedTags, sortBy });
     setOpenDropdown(null);
+    setCategorySearch("");
   };
   const handleTagToggle = (tagId) => {
     const updated = selectedTags.includes(tagId) ? selectedTags.filter((id) => id !== tagId) : [...selectedTags, tagId];
@@ -50,7 +53,7 @@ const FilterBar = ({ categories = [], tags = [], onFilterChange, onSearch, initi
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search blog posts..."
-              className="w-full pl-12 pr-12 bg-white/70 py-3 border border-gray-200 rounded-lg  focus:border-primary transition text-gray-900 shadow"
+              className="w-full pl-12 pr-12 bg-white/70 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#6853DB] focus:ring-1 focus:ring-[#6853DB]/30 transition text-gray-900 shadow"
             />
 
           {searchTerm && (
@@ -65,7 +68,7 @@ const FilterBar = ({ categories = [], tags = [], onFilterChange, onSearch, initi
           <div className="relative">
             <button
               onClick={() => toggleDropdown("category")}
-              className="w-full flex items-center justify-between px-4 py-3 rounded-lg bg-white shadow-sm border border-gray-200 hover:border-primary/40 transition"
+              className="w-full flex items-center justify-between px-4 py-3 rounded-lg bg-white shadow-sm border border-gray-200 hover:border-primary/40 focus:outline-none focus:border-[#6853DB] focus:ring-1 focus:ring-[#6853DB]/30 transition"
             >
               <span className="text-gray-800 font-medium truncate">
                 {selectedCategory ? categories.find((c) => c.id == selectedCategory)?.name : "All Categories"}
@@ -74,11 +77,22 @@ const FilterBar = ({ categories = [], tags = [], onFilterChange, onSearch, initi
             </button>
             {openDropdown === "category" && (
               <div className="absolute mt-2 w-full bg-white text-black shadow-xl border border-primary/20 rounded-lg max-h-64 overflow-auto z-[200]">
-                {categories.map((c) => (
-                  <button key={c.id} onClick={() => handleCategoryChange(c.id)} className="w-full text-left px-4 py-3 hover:bg-primary/10 transition truncate">
-                    {c.name}
-                  </button>
-                ))}
+                <div className="sticky top-0 bg-white p-2 border-b border-gray-200">
+                  <input
+                    type="text"
+                    placeholder="Search categories..."
+                    value={categorySearch}
+                    onChange={(e) => setCategorySearch(e.target.value)}
+                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-gray-900 text-sm focus:outline-none focus:border-[#6853DB] focus:ring-1 focus:ring-[#6853DB]/30"
+                  />
+                </div>
+                {categories
+                  .filter((c) => c.name.toLowerCase().includes(categorySearch.toLowerCase()))
+                  .map((c) => (
+                    <button key={c.id} onClick={() => { handleCategoryChange(c.id); setCategorySearch(""); }} className="w-full text-left px-4 py-3 hover:bg-primary/10 transition truncate">
+                      {c.name}
+                    </button>
+                  ))}
               </div>
             )}
           </div>
@@ -86,7 +100,7 @@ const FilterBar = ({ categories = [], tags = [], onFilterChange, onSearch, initi
           <div className="relative">
             <button
               onClick={() => toggleDropdown("tags")}
-              className="w-full flex items-center justify-between px-4 py-3 rounded-lg bg-white shadow-sm border border-gray-200 hover:border-primary/40 transition"
+              className="w-full flex items-center justify-between px-4 py-3 rounded-lg bg-white shadow-sm border border-gray-200 hover:border-primary/40 focus:outline-none focus:border-[#6853DB] focus:ring-1 focus:ring-[#6853DB]/30 transition"
             >
               <span className="text-gray-800 font-medium truncate">
                 {selectedTags.length > 0 ? `${selectedTags.length} Selected` : "All Tags"}
@@ -94,13 +108,26 @@ const FilterBar = ({ categories = [], tags = [], onFilterChange, onSearch, initi
               <ChevronDown className={`w-5 h-5 text-primary transition ${openDropdown === "tags" ? "rotate-180" : ""}`} />
             </button>
             {openDropdown === "tags" && (
-              <div className="absolute mt-2 w-full bg-white shadow-2xl border border-primary/20 rounded-lg max-h-72 overflow-auto z-[999] p-2">
-                {tags.map((tag) => (
-                  <label key={tag.id} className="flex items-center gap-3 px-4 py-2 hover:bg-primary/5 cursor-pointer truncate">
-                    <input type="checkbox" checked={selectedTags.includes(tag.id)} onChange={() => handleTagToggle(tag.id)} className="h-4 w-4 text-primary border-gray-300 rounded" />
-                    <span className="text-gray-900 truncate">{tag.name}</span>
-                  </label>
-                ))}
+              <div className="absolute mt-2 w-full bg-white shadow-2xl border border-primary/20 rounded-lg max-h-72 z-[999]">
+                <div className="sticky top-0 bg-white p-2 border-b border-gray-200">
+                  <input
+                    type="text"
+                    placeholder="Search tags..."
+                    value={tagsSearch}
+                    onChange={(e) => setTagsSearch(e.target.value)}
+                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-gray-900 text-sm focus:outline-none focus:border-[#6853DB] focus:ring-1 focus:ring-[#6853DB]/30"
+                  />
+                </div>
+                <div className="p-2 overflow-auto max-h-64">
+                  {tags
+                    .filter((tag) => tag.name.toLowerCase().includes(tagsSearch.toLowerCase()))
+                    .map((tag) => (
+                      <label key={tag.id} className="flex items-center gap-3 px-4 py-2 hover:bg-primary/5 cursor-pointer truncate">
+                        <input type="checkbox" checked={selectedTags.includes(tag.id)} onChange={() => handleTagToggle(tag.id)} className="h-4 w-4 text-primary border-gray-300 rounded" />
+                        <span className="text-gray-900 truncate">{tag.name}</span>
+                      </label>
+                    ))}
+                </div>
               </div>
             )}
           </div>
@@ -108,7 +135,7 @@ const FilterBar = ({ categories = [], tags = [], onFilterChange, onSearch, initi
           <div className="relative">
             <button
               onClick={() => toggleDropdown("sort")}
-              className="w-full flex items-center justify-between px-4 py-3 rounded-lg bg-white shadow-sm border border-gray-200 hover:border-primary/40 transition"
+              className="w-full flex items-center justify-between px-4 py-3 rounded-lg bg-white shadow-sm border border-gray-200 hover:border-primary/40 focus:outline-none focus:border-[#6853DB] focus:ring-1 focus:ring-[#6853DB]/30 transition"
             >
               <span className="text-gray-800 font-medium truncate">
                 {[

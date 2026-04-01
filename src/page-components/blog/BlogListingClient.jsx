@@ -10,6 +10,7 @@ import { BlogStatus, BlogSortOptions } from "@/lib/types/blog";
 import { generateBreadcrumbs, formatDate } from "@/lib/utils/blogUtils";
 import { ChevronLeft, ChevronRight, Newspaper } from "lucide-react";
 import BlogPageBanner from "@/components/Blog/BlogPageBanner";
+import BannerImg from "@/app/images/benifits/Benefits_Banner.jpg";
 
 const BlogListingClient = () => {
   const router = useRouter();
@@ -147,12 +148,17 @@ const BlogListingClient = () => {
 
       {/* HEADER */}
       <BlogPageBanner
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Blog", href: "/blog" },
-        ]}
-        title="Latest Insights"
-        subtitle="Explore expert insights on logistics, freight forwarding, and global supply chain management"
+        // breadcrumbs={[
+        //   { label: "Home", href: "/" },
+        //   { label: "Blog", href: "/blog" },
+        // ]}
+        subtitle="Blogs & Articles"
+        title={
+          <div className="font-light">
+            Explore <span className="font-bold">News</span> and  <span className="font-bold">Freight Insights.</span> 
+          </div>
+        }
+        backgroundImage={BannerImg}
       />
 
       {/* CONTENT */}
@@ -209,10 +215,10 @@ const BlogListingClient = () => {
                         onClick={() => router.push(`/blog/${blog.slug}`)}
                         className="w-full text-left rounded-lg px-3 py-2 hover:bg-primary/5 transition-colors group"
                       >
-                        <div className="text-lg font-semibold text-gray-800 group-hover:text-black line-clamp-2">
+                        <div className="text-lg font-semibold text-gray-700 group-hover:text-black line-clamp-2">
                           {blog.title}
                         </div>
-                        <div className="text-md text-gray-700 mt-1">
+                        <div className="text-sm text-gray-700 mt-1">
                           {formatDate(blog.publishedAt)}
                                             <div className='h-[1px] w-full bg-gray-300'/>
 
@@ -228,12 +234,12 @@ const BlogListingClient = () => {
               {/* Main blog list on RIGHT */}
               <div className="lg:col-span-8">
                 {featuredBlog && currentPage === 1 && (
-                  <div className="mb-6">
+                  <div className="mb-8">
                     <BlogCard blog={featuredBlog} featured={true} />
                   </div>
                 )}
 
-                <div className="flex flex-wrap gap-6 md:gap-8 mb-12">
+                <div className="space-y-6 mb-12">
                   {remainingBlogs.map((blog) => (
                     <BlogCard key={blog.id} blog={blog} />
                   ))}

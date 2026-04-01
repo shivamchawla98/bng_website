@@ -41,7 +41,7 @@ const BlogPostClient = ({ slug }) => {
 
   // Fetch related posts
   const { data: relatedData } = useQuery(GET_RELATED_BLOGS, {
-    variables: { blogId: blog?.id, limit: 3 },
+    variables: { blogId: blog?.id ? Number(blog.id) : null, limit: 3 },
     skip: !blog?.id,
   });
 
@@ -51,7 +51,7 @@ const BlogPostClient = ({ slug }) => {
   // Track page view
   useEffect(() => {
     if (blog?.id) {
-      trackView({ variables: { blogId: blog.id } }).catch(console.error);
+      trackView({ variables: { blogId: Number(blog.id) } }).catch(console.error);
     }
   }, [blog?.id, trackView]);
 
@@ -170,7 +170,6 @@ const BlogPostClient = ({ slug }) => {
           backOnly={true}
           date={formatDate(blog.publishedAt)}
           title={blog.title}
-          subtitle={blog.excerpt}
           authorName={blog.authorName}
           authorTitle={blog.authorTitle}
         />
@@ -194,64 +193,6 @@ const BlogPostClient = ({ slug }) => {
 
             {/* Main Content */}
             <div className="lg:col-span-8">
-              {/* Article Header */}
-              <header className="mb-8">
-                {/* Category */}
-                {blog.category && (
-                  <Link
-                    href={`/blog/category/${blog.category.slug}`}
-                    className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4 hover:bg-primary/20 transition-colors"
-                  >
-                    <Folder className="w-3 h-3 inline mr-1" />
-                    {blog.category.name}
-                  </Link>
-                )}
-
-                {/* Title */}
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-                  {blog.title}
-                </h1>
-
-                {/* Excerpt */}
-                {blog.excerpt && (
-                  <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-                    {blog.excerpt}
-                  </p>
-                )}
-
-                {/* Author & Date */}
-                {(blog.authorName || blog.authorTitle) && (
-                  <div className="mb-4 text-gray-600">
-                    <p className="text-base">
-                      By{' '}
-                      {blog.authorName && <span className="font-medium text-gray-900">{blog.authorName}</span>}
-                      {blog.authorName && blog.authorTitle && ', '}
-                      {blog.authorTitle && <span className="text-gray-600">{blog.authorTitle}</span>}
-                    </p>
-                  </div>
-                )}
-
-                {/* Meta Info */}
-                <div className="flex flex-wrap items-center gap-4 text-gray-600 text-sm pb-6 border-b border-gray-200">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    <time dateTime={blog.publishedAt}>{formatDate(blog.publishedAt)}</time>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Eye className="w-4 h-4" />
-                    <span>{blog.viewCount} views</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Heart className="w-4 h-4" />
-                    <span>{blog.likeCount} likes</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <MessageSquare className="w-4 h-4" />
-                    <span>{blog.commentCount} comments</span>
-                  </div>
-                </div>
-              </header>
-
               {/* Featured Image */}
               {blog.featuredImage && (
                 <div className="relative w-full h-[380px] md:h-[440px] rounded-xl overflow-hidden mb-10 shadow-lg">
@@ -266,31 +207,8 @@ const BlogPostClient = ({ slug }) => {
                 </div>
               )}
 
-              {/* Article Content - clean, no white box */}
-              <div
-                className="prose prose-lg max-w-none mb-8 text-xl
-                  prose-headings:text-gray-900 prose-headings:font-bold
-                  prose-h2:text-3xl prose-h2:mt-8 prose-h2:mb-4
-                  prose-h3:text-2xl prose-h3:mt-6 prose-h3:mb-3
-                  prose-h4:text-xl prose-h4:mt-4 prose-h4:mb-2
-                  prose-p:text-gray-900 prose-p:leading-relaxed prose-p:mb-4 prose-p:text-[15px]
-                  prose-a:text-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline
-                  prose-strong:text-gray-900 prose-strong:font-bold
-                  prose-ul:my-4 prose-ol:my-4
-                  prose-li:text-gray-900 prose-li:my-1
-                  prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-800 prose-blockquote:bg-primary/5 prose-blockquote:py-2
-                  prose-code:bg-gray-200 prose-code:text-gray-900 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-code:font-mono
-                  prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:p-6 prose-pre:rounded-lg prose-pre:overflow-x-auto
-                  prose-img:rounded-lg prose-img:shadow-md prose-img:my-6
-                  prose-table:text-gray-900
-                  prose-th:text-gray-900 prose-th:font-bold
-                  prose-td:text-gray-900"
-                dangerouslySetInnerHTML={{ __html: processedContent }}
-              />
-
-              <div className="flex flex-row justify-between">
-                 {/* Row 1: Category + Tags */}
-              <div className="flex flex-wrap items-center gap-3 mb-3">
+              {/* Tags & Categories */}
+              <div className="flex flex-wrap items-center gap-3 mb-8">
                 {blog.category && (
                   <Link
                     href={`/blog/category/${blog.category.slug}`}
@@ -317,19 +235,28 @@ const BlogPostClient = ({ slug }) => {
                 )}
               </div>
 
-              {/* Row 2: Date */}
-              <div className="flex items-center gap-2 text-gray-600 text-md mb-4">
-                <Calendar className="w-4 h-4" />
-                <time dateTime={blog.publishedAt}>
-                  {formatDate(blog.publishedAt)}
-                </time>
-              </div>
-              </div>
+              <div
+                className="prose prose-lg max-w-none mb-8 text-xl
+                  prose-headings:text-gray-900 prose-headings:font-bold
+                  prose-h2:text-3xl prose-h2:mt-8 prose-h2:mb-4
+                  prose-h3:text-2xl prose-h3:mt-6 prose-h3:mb-3
+                  prose-h4:text-xl prose-h4:mt-4 prose-h4:mb-2
+                  prose-p:text-gray-900 prose-p:leading-relaxed prose-p:mb-4 prose-p:text-[15px]
+                  prose-a:text-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline
+                  prose-strong:text-gray-900 prose-strong:font-bold
+                  prose-ul:my-4 prose-ol:my-4
+                  prose-li:text-gray-900 prose-li:my-1
+                  prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-800 prose-blockquote:bg-primary/5 prose-blockquote:py-2
+                  prose-code:bg-gray-200 prose-code:text-gray-900 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-code:font-mono
+                  prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:p-6 prose-pre:rounded-lg prose-pre:overflow-x-auto
+                  prose-img:rounded-lg prose-img:shadow-md prose-img:my-6
+                  prose-table:text-gray-900
+                  prose-th:text-gray-900 prose-th:font-bold
+                  prose-td:text-gray-900"
+                dangerouslySetInnerHTML={{ __html: processedContent }}
+              />
 
-
-             
-
-               {/* Row 3: Stats - MOVED TO END */}
+              {/* Stats - AT THE END */}
               <div className="flex flex-wrap items-center gap-4 text-gray-600 text-sm pt-3 border-t border-gray-200">
                 <div className="flex items-center gap-2">
                   <Eye className="w-4 h-4" />
