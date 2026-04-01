@@ -10,6 +10,7 @@ import { BlogStatus, BlogSortOptions } from "@/lib/types/blog";
 import { generateBreadcrumbs, formatDate } from "@/lib/utils/blogUtils";
 import { ChevronLeft, ChevronRight, Newspaper } from "lucide-react";
 import BlogPageBanner from "@/components/Blog/BlogPageBanner";
+import BannerImg from "@/app/images/benifits/Benefits_Banner.jpg";
 
 const BlogListingClient = () => {
   const router = useRouter();
@@ -147,12 +148,17 @@ const BlogListingClient = () => {
 
       {/* HEADER */}
       <BlogPageBanner
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Blog", href: "/blog" },
-        ]}
-        title="Latest Insights"
-        subtitle="Explore expert insights on logistics, freight forwarding, and global supply chain management"
+        // breadcrumbs={[
+        //   { label: "Home", href: "/" },
+        //   { label: "Blog", href: "/blog" },
+        // ]}
+        subtitle="Blogs & Articles"
+        title={
+          <div className="font-light">
+            Explore <span className="font-bold">Blogs</span> and Articles, <span className="font-bold">freight</span> forwarding insights.
+          </div>
+        }
+        backgroundImage={BannerImg}
       />
 
       {/* CONTENT */}
@@ -228,12 +234,12 @@ const BlogListingClient = () => {
               {/* Main blog list on RIGHT */}
               <div className="lg:col-span-8">
                 {featuredBlog && currentPage === 1 && (
-                  <div className="mb-6">
+                  <div className="mb-8">
                     <BlogCard blog={featuredBlog} featured={true} />
                   </div>
                 )}
 
-                <div className="flex flex-wrap gap-6 md:gap-8 mb-12">
+                <div className="space-y-6 mb-12">
                   {remainingBlogs.map((blog) => (
                     <BlogCard key={blog.id} blog={blog} />
                   ))}
