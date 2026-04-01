@@ -155,7 +155,7 @@ const BlogListingClient = () => {
         subtitle="Blogs & Articles"
         title={
           <div className="font-light">
-            Explore <span className="font-bold">News</span> and  <span className="font-bold">Freight Isights.</span> 
+            Explore <span className="font-bold">News</span> and  <span className="font-bold">Freight Inights.</span> 
           </div>
         }
         backgroundImage={BannerImg}
