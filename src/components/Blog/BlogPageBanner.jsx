@@ -44,15 +44,8 @@ export default function BlogPageBanner({
           </div>
         )}
 
-        {/* Date - Only render if date is provided */}
-        {date && (
-          <p className="text-gray-300 text-sm mb-2">
-            {date}
-          </p>
-        )}
-
-        {/* Subtitle */}
-        {subtitle && (
+        {/* Subtitle (Listing Page) */}
+        {subtitle && !date && (
           <h3 className="text-2xl sm:text-2xl md:text-5xl font-light mb-4 text-white">
             {subtitle}
           </h3>
@@ -62,6 +55,13 @@ export default function BlogPageBanner({
         <h2 className="text-3xl sm:text-4xl md:text-[52px] font-bold text-white mb-4">
           {title}
         </h2>
+
+        {/* Date - Only render if date is provided */}
+        {date && (
+          <p className="text-gray-300 text-sm mb-2">
+            {date}
+          </p>
+        )}
 
         {/* Author Info - Render based on available data */}
         {renderAuthorInfo()}
