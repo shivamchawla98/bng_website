@@ -10,6 +10,7 @@ import {
   formatViewCount,
   stripHtml,
 } from "@/lib/utils/blogUtils";
+import { FaFacebook, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
 const BlogCard = ({ blog }) => {
   const router = useRouter();
@@ -74,8 +75,8 @@ const BlogCard = ({ blog }) => {
 
         <div className="p-6 flex flex-col flex-grow">
           {/* 2. DATE AND AUTHOR */}
-          <div className="flex flex-col gap-1 mb-4 pb-4 border-b border-gray-200">
-            <p className="text-sm text-gray-500">
+          <div className="flex flex-col -mt-4 gap-1 mb-4 pb-2 border-b border-gray-200">
+            <p className="text-xs text-gray-500">
               <span className="font-medium">{formatDate(publishedAt)}</span>
               {authorName && (
                 <span className="text-gray-600"> • By <span className="font-semibold text-gray-800">{authorName}</span></span>
@@ -127,7 +128,7 @@ const BlogCard = ({ blog }) => {
             <button
             type="button"
             onClick={handleNavigateToPost}
-            className="inline-flex items-center gap-2 bg-primary p-2 rounded-lg hover:translate-x-1 transition-all duration-200 font-semibold hover:text-white/90 hover:bg-primary/90  mb-6 self-start"
+            className="inline-flex items-center gap-2 bg-[#6853DB] p-2 rounded-lg hover:translate-x-1 transition-all duration-200 font-semibold hover:text-white/90 hover:bg-primary/90  mb-6 self-start"
           >
             Continue Reading
             <ArrowRight className="w-4 h-4" />
@@ -136,30 +137,7 @@ const BlogCard = ({ blog }) => {
 
           {/* 7. SOCIAL URLS + LIKES, COMMENTS AND VIEWS */}
           <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-            {/* Social Share Icons */}
-            <div className="flex items-center gap-3">
-              <button
-                onClick={() => handleShare("twitter")}
-                className="p-2 text-gray-500 hover:text-blue-400 hover:bg-blue-50 rounded-lg transition-colors"
-                title="Share on Twitter"
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7" /></svg>
-              </button>
-              <button
-                onClick={() => handleShare("facebook")}
-                className="p-2 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
-                title="Share on Facebook"
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a6 6 0 00-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a2 2 0 012-2h3z" /></svg>
-              </button>
-              <button
-                onClick={() => handleShare("linkedin")}
-                className="p-2 text-gray-500 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-colors"
-                title="Share on LinkedIn"
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg>
-              </button>
-            </div>
+            
 
             {/* Views, Likes and Comments */}
             <div className="flex items-center gap-4 text-sm text-gray-500">
@@ -175,6 +153,37 @@ const BlogCard = ({ blog }) => {
                 <MessageSquare className="w-4 h-4" />
                 {commentCount}
               </span>
+            </div>
+
+            {/* Social Share Icons */}
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => handleShare("twitter")}
+                className="p-2 text-gray-500 hover:text-blue-400 hover:bg-blue-50 rounded-lg transition-colors"
+                title="Share on Twitter"
+              >
+                <FaTwitter/>              </button>
+              <button
+                onClick={() => handleShare("facebook")}
+                className="p-2 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                title="Share on Facebook"
+              >
+                <FaFacebook/>
+              </button>
+              <button
+                onClick={() => handleShare("linkedin")}
+                className="p-2 text-gray-500 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-colors"
+                title="Share on LinkedIn"
+              >
+                <FaLinkedin/>
+              </button>
+              <button
+                onClick={() => handleShare("whatsapp")}
+                className="p-2 text-gray-500 hover:text-green-500 hover:bg-green-50 rounded-lg transition-colors"
+                title="Share on Whatsapp"
+              >
+                <FaWhatsapp/>
+              </button>
             </div>
           </div>
         </div>

@@ -35,11 +35,11 @@ export default function BlogPageBanner({
   } : {};
 
   return (
-    <div className="relative h-[300px] md:h-[400px] bg-primary flex items-center justify-start pl-4 sm:pl-6 md:pl-10" style={bannerStyle}>
-      <div className="flex flex-col w-full max-w-7xl">
+    <div className={`relative h-[300px] md:h-[400px] bg-primary flex items-center ${date ? 'justify-center' : 'justify-start pl-4 sm:pl-6 md:pl-10'}`} style={bannerStyle}>
+      <div className={`flex flex-col w-full max-w-7xl ${date ? 'text-start px-4 sm:px-6 lg:px-8' : ''}`}>
         {/* Breadcrumbs — use backOnly prop */}
         {breadcrumbs && (
-          <div className="mb-4">
+          <div className={`${date ? 'flex justify-center mb-6' : 'mb-4'}`}>
             <Breadcrumbs items={breadcrumbs} backOnly={backOnly} />
           </div>
         )}
@@ -52,13 +52,13 @@ export default function BlogPageBanner({
         )}
 
         {/* Main Title */}
-        <h2 className="text-3xl sm:text-4xl md:text-[52px] font-bold text-white mb-4">
+        <h2 className={`font-bold text-white ${date ? 'text-3xl sm:text-4xl md:text-5xl mb-6' : 'text-3xl sm:text-4xl md:text-[52px] mb-4'}`}>
           {title}
         </h2>
 
         {/* Date - Only render if date is provided */}
         {date && (
-          <p className="text-gray-300 text-sm mb-2">
+          <p className="text-gray-300 text-sm mb-4">
             {date}
           </p>
         )}
