@@ -28,15 +28,28 @@ export default function BlogPageBanner({
     );
   };
 
-  const bannerStyle = backgroundImage ? {
-    backgroundImage: `url(${backgroundImage.src})`,
+  const getBackgroundImageUrl = () => {
+    if (!backgroundImage) return null;
+    // Handle both string and object formats
+    return typeof backgroundImage === 'string' ? backgroundImage : backgroundImage.src;
+  };
+
+  const bgImageUrl = getBackgroundImageUrl();
+  const bannerStyle = bgImageUrl ? {
+    backgroundImage: `url(${bgImageUrl})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-  } : {};
+  } : { backgroundColor: "var(--color-primary, #6853db)" };
 
   return (
-    <div className={`relative h-[300px] md:h-[400px] bg-primary flex items-center ${date ? 'justify-center' : 'justify-start pl-4 sm:pl-6 md:pl-10'}`} style={bannerStyle}>
-      <div className={`flex flex-col w-full max-w-7xl ${date ? 'text-start px-4 sm:px-6 lg:px-8' : ''}`}>
+    <div 
+      className={`relative h-[300px] md:h-[400px] bg-primary flex items-center ${date ? 'justify-center' : 'justify-start pl-4 sm:pl-6 md:pl-10'}`} 
+      style={bannerStyle}
+    >
+      {/* Background overlay for better text visibility */}
+      <div className="absolute inset-0 bg-black/40"></div>
+      
+      <div className={`flex flex-col w-full max-w-7xl relative z-10 ${date ? 'text-start px-4 sm:px-6 lg:px-8' : ''}`}>
         {/* Breadcrumbs — use backOnly prop */}
         {breadcrumbs && (
           <div className={`${date ? 'flex justify-center mb-6' : 'mb-4'}`}>
