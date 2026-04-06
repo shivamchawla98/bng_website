@@ -2,75 +2,96 @@
 
 import React from "react";
 import Image from "next/image";
-import newsImg1 from "@/app/images/home/News-The-Future-of-Logistics.png";
-import newsImg2 from "@/app/images/home/News-BNG-Welcomes-100-New-Members-in-Record-Time.png";
-import newsImg3 from "@/app/images/home/News-Global-Freight-Trends.png";
-import newsImg4 from "@/app/images/home/news4.jpg";
+import Link from "next/link";
+import { useQuery } from "@apollo/client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { GET_BLOGS } from "@/lib/graphql/blog";
+import { BlogStatus } from "@/lib/types/blog";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const newsData = [
-  {
-    id: 1,
-    src: newsImg1,
-    alt: "News Item 1",
-    title: "The Future of Logistics: Embracing Digital Transformation",
-    description:
-      "Discover how advanced technologies like AI, IoT, and blockchain are reshaping logistics and supply chain management for a smarter future.",
-    link: "#",
-    date: "May 15, 2024",
-    category: "Technology",
-  },
-  {
-    id: 2,
-    src: newsImg2,
-    alt: "News Item 2",
-    title: "BNG Welcomes 100 New Members in Record Time!",
-    description:
-      "Our network continues to grow rapidly, with over 100 new freight forwarders and logisticians joining this month. Explore the opportunities.",
-    link: "#",
-    date: "April 28, 2024",
-    category: "Community",
-  },
-  {
-    id: 3,
-    src: newsImg3,
-    alt: "News Item 3",
-    title: "Global Freight Trends: Challenges and Opportunities in 2024",
-    description:
-      "Get insights into shifting global trade patterns, rising fuel costs, and how businesses can stay resilient in a dynamic market.",
-    link: "#",
-    date: "April 10, 2024",
-    category: "Industry",
-  },
-  {
-    id: 4,
-    src: newsImg4,
-    alt: "News Item 4",
-    title:
-      "BNG Expands Strategic Partnerships to Strengthen Global Trade Lanes",
-    description:
-      "BNG strengthens global trade by expanding strategic partnerships, enhancing route access, and creating new growth opportunities for network members worldwide.",
-    link: "#",
-    date: "March 22, 2024",
-    category: "Partnerships",
-  },
-];
-
 const News = () => {
+  // Fetch blog data from GraphQL
+  const { data, loading, error } = useQuery(GET_BLOGS, {
+    variables: {
+      filters: {
+        status: BlogStatus.PUBLISHED,
+        page: 1,
+        limit: 4,
+        sortBy: "publishedAt",
+        sortOrder: "DESC",
+      },
+    },
+    fetchPolicy: "cache-and-network",
+  });
+
+  const blogs = data?.blogs?.blogs || [];
+
+  // Show skeleton while loading
+  if (loading) {
+    return (
+      <section className="pt-16 lg:pt-24 pb-12 lg:pb-12  bg-primaryBg relative overflow-hidden">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12 relative">
+            <h2 className="text-4xl lg:text-[55px] font-bold text-gray-900 mb-4">
+              Latest <span className="text-primary">  News & Updates </span> 
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[...Array(4)].map((_, index) => (
+              <div key={index} className="rounded-xl overflow-hidden shadow-lg bg-white animate-pulse">
+                <div className="h-48 sm:h-56 bg-gray-300"></div>
+                <div className="p-5 sm:p-6">
+                  <div className="h-4 bg-gray-300 rounded mb-2"></div>
+                  <div className="h-6 bg-gray-300 rounded mb-3"></div>
+                  <div className="space-y-2">
+                    <div className="h-3 bg-gray-300 rounded"></div>
+                    <div className="h-3 bg-gray-300 rounded w-5/6"></div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Don't show section if error or no blogs
+  if (error || blogs.length === 0) {
+    return null;
+  }
+
+  // Format date for display
+  const formatDate = (dateString) => {
+    if (!dateString) return "";
+    const date = new Date(dateString);
+    return date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    });
+  };
+
   return (
     <section className="pt-16 lg:pt-24 pb-12 lg:pb-12  bg-primaryBg relative overflow-hidden">
       {/* Gradient Background Elements */}
       <div
         className="absolute top-0 left-8 w-[200px] h-[200px] rounded-full"
-       
+        style={{
+          background: "linear-gradient(180deg, #6853DB 10%, #6853DB 90%)",
+          filter: "blur(100.8px)",
+        }}
       ></div>
       <div
         className="absolute bottom-10 right-10 w-[150px] h-[150px] rounded-full"
-       
+        style={{
+          background: "linear-gradient(180deg, #6853DB 10%, #6853DB 90%)",
+          filter: "blur(80px)",
+          opacity: 0.3,
+        }}
       ></div>
 
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -116,71 +137,78 @@ const News = () => {
               pauseOnMouseEnter: true,
             }}
             loop={true}
-            centeredSlides={true}
             grabCursor={true}
             className="news-swiper pb-12"
           >
-            {newsData.map(
-              ({ id, src, alt, title, description, link, date, category }) => (
-                <SwiperSlide key={id}>
-                  <div className="group relative rounded-xl overflow-hidden shadow-lg bg-white transition-all duration-500 hover:shadow-xl mx-auto w-full max-w-[380px] h-full flex flex-col">
-                    {/* Image with Gradient Overlay */}
-                    <div className="relative h-48 sm:h-56 overflow-hidden">
-                      <Image
-                        src={src}
-                        alt={alt}
-                        layout="fill"
-                        objectFit="cover"
-                        className="transition-transform duration-700 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80"></div>
-                      <div className="absolute bottom-4 left-4">
-                        <span className="inline-block px-3 py-1 text-xs font-semibold text-white bg-primary rounded-full">
-                          {category}
-                        </span>
-                      </div>
-                    </div>
+            {blogs.map(
+              ({ id, title, slug, excerpt, featuredImage, featuredImageAlt, category, publishedAt }) => {
+                // Truncate excerpt to consistent length
+                const truncatedExcerpt = excerpt 
+                  ? excerpt.length > 80 
+                    ? excerpt.substring(0, 80) + "..." 
+                    : excerpt
+                  : "Discover more insights and updates...";
+                
+                return (
+                  <SwiperSlide key={id} className="!h-auto">
+                    <Link href={`/blog/${slug}`} className="block h-full flex justify-center">
+                      <div className="group relative rounded-xl overflow-hidden shadow-lg bg-white transition-all duration-500 hover:shadow-xl w-full h-full flex flex-col cursor-pointer">
+                        {/* Image with Gradient Overlay */}
+                        <div className="relative w-full h-50 sm:h-56 overflow-hidden flex-shrink-0">
+                          <Image
+                            src={featuredImage || "/blog/blog-banner.jpg"}
+                            alt={featuredImageAlt || title}
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80"></div>
+                          <div className="absolute bottom-4 left-4">
+                            <span className="inline-block px-3 py-1 text-xs font-semibold text-white bg-primary rounded-full">
+                              {category?.name || "Blog"}
+                            </span>
+                          </div>
+                        </div>
 
-                    {/* Content */}
-                    <div className="p-5 sm:p-6 flex-grow flex flex-col">
-                      <span className="text-sm text-gray-500 mb-2">{date}</span>
-                      <h3 className="text-xl sm:text-[22px] text-[#27293B] font-bold mb-3 leading-tight group-hover:text-primary transition-colors">
-                        {title}
-                      </h3>
-                      <p className="text-gray-600 mb-5 text-base flex-grow">
-                        {description}
-                      </p>
-                      <div className="mt-auto">
-                        <a
-                          href={link}
-                          className="inline-flex items-center text-primary font-medium hover:text-indigo-700 transition-colors"
-                        >
-                          Read More
-                          <svg
-                            className="w-4 h-4 ml-2"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="2"
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            />
-                          </svg>
-                        </a>
+                        {/* Content */}
+                        <div className="p-5 sm:p-6 flex-grow flex flex-col">
+                          <span className="text-sm text-gray-500 mb-2">{formatDate(publishedAt)}</span>
+                          <h3 className="text-lg sm:text-xl text-[#27293B] font-bold mb-3 leading-tight group-hover:text-primary transition-colors line-clamp-2">
+                            {title}
+                          </h3>
+                          <p className="text-gray-600 text-sm flex-grow line-clamp-2">
+                            {truncatedExcerpt}
+                          </p>
+                          <div className="mt-auto">
+                            <span className="inline-flex items-center text-primary font-medium group-hover:text-indigo-700 transition-colors">
+                              Read More
+                              <svg
+                                className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth="2"
+                                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                                />
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ),
+                    </Link>
+                  </SwiperSlide>
+                );
+              },
             )}
           </Swiper>
 
           {/* Custom Navigation Arrows */}
-          <button className="news-swiper-button-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-white text-primary rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-primary hover:text-white transition-all duration-300 z-10 border border-gray-200">
+          <button className="news-swiper-button-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-white text-primary rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-primary hover:text-white transition-all duration-300 z-20 border border-gray-200 hover:shadow-xl">
             <svg
               className="w-5 h-5"
               fill="none"
@@ -196,7 +224,7 @@ const News = () => {
               />
             </svg>
           </button>
-          <button className="news-swiper-button-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-white text-primary rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-primary hover:text-white transition-all duration-300 z-10 border border-gray-200">
+          <button className="news-swiper-button-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-white text-primary rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-primary hover:text-white transition-all duration-300 z-20 border border-gray-200 hover:shadow-xl">
             <svg
               className="w-5 h-5"
               fill="none"
@@ -214,20 +242,33 @@ const News = () => {
           </button>
 
           {/* Pagination Dots */}
-          <div className="news-swiper-pagination self-center ml-[45%]  mb-8 flex justify-center gap-1"></div>
+          <div className="news-swiper-pagination flex justify-center gap-1 mt-8 mb-4"></div>
         </div>
       </div>
 
       {/* Custom Swiper Styles */}
       <style jsx global>{`
         .news-swiper {
-          padding: 10px;
+          padding: 10px 0;
+          overflow: visible;
         }
 
         .news-swiper .swiper-slide {
-          opacity: 0.5;
-          transform: scale(0.95);
+          opacity: 1;
+          transform: scale(1);
           transition: all 0.4s ease;
+          display: flex;
+          justify-content: center;
+          align-items: stretch;
+          height: auto;
+          min-height: 450px;
+          padding: 20px 15px;
+        }
+
+        .news-swiper .swiper-slide > a {
+          display: flex;
+          width: 100%;
+          max-width: 400px;
         }
 
         .news-swiper .swiper-slide-active,
@@ -238,8 +279,14 @@ const News = () => {
 
         .news-swiper .swiper-slide-next,
         .news-swiper .swiper-slide-prev {
-          opacity: 0.8;
-          transform: scale(0.98);
+          opacity: 1;
+          transform: scale(1);
+        }
+
+        .news-swiper-pagination {
+          position: relative !important;
+          bottom: auto !important;
+          margin-top: 24px;
         }
 
         .news-swiper-pagination .swiper-pagination-bullet {
