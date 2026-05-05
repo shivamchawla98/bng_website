@@ -130,7 +130,7 @@ const HeroSlider = () => {
                       />
                     </svg>
                     <span>
-                      June 14<sup className="text-xs">th</sup> – June 17
+                      November 19<sup className="text-xs">th</sup> – November 22
                       <sup className="text-xs">th</sup>, 2026
                     </span>
                   </div>

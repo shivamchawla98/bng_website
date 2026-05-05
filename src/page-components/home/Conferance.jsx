@@ -62,7 +62,7 @@ const Conference = () => {
             <p
               className={`text-base md:text-[18px] pr-4 lg:pr-0 text-white/90 leading-relaxed mb-6 ${styles.slideUp}`}
             >
-              The BNG Global Conference takes place 14–17 June 2026 at Royal Cliff Beach Hotel, Pattaya Thailand, bringing elite freight forwarders together for high-value global collaboration.
+              The BNG Global Conference takes place 19-22 November 2026 at Royal Cliff Beach Hotel, Pattaya Thailand, bringing elite freight forwarders together for high-value global collaboration.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 mx-auto justify-start w-full">
               <Link
