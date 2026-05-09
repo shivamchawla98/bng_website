@@ -98,28 +98,32 @@ const VendorListingClient = () => {
                       </p>
 
                       {/* Rating */}
-                      <div className="flex items-center gap-3 mb-4 pt-4 border-t border-gray-200">
-                        <div className="flex gap-1">
-                          {[...Array(5)].map((_, i) => (
-                            <Star
-                              key={i}
-                              className={`w-4 h-4 ${
-                                i < Math.floor(vendor.rating)
-                                  ? "fill-yellow-400 text-yellow-400"
-                                  : "text-gray-300"
-                              }`}
-                            />
-                          ))}
+                      {typeof vendor.rating === "number" && (
+                        <div className="flex items-center gap-3 mb-4 pt-4 border-t border-gray-200">
+                          <div className="flex gap-1">
+                            {[...Array(5)].map((_, i) => (
+                              <Star
+                                key={i}
+                                className={`w-4 h-4 ${
+                                  i < Math.floor(vendor.rating)
+                                    ? "fill-yellow-400 text-yellow-400"
+                                    : "text-gray-300"
+                                }`}
+                              />
+                            ))}
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span className="font-bold text-gray-900">
+                              {vendor.rating}
+                            </span>
+                            {vendor.reviewCount && (
+                              <span className="text-xs text-gray-600">
+                                ({vendor.reviewCount} reviews)
+                              </span>
+                            )}
+                          </div>
                         </div>
-                        <div className="flex items-center gap-2">
-                          <span className="font-bold text-gray-900">
-                            {vendor.rating}
-                          </span>
-                          <span className="text-xs text-gray-600">
-                            ({vendor.reviewCount} reviews)
-                          </span>
-                        </div>
-                      </div>
+                      )}
 
                       {/* View Details Button */}
                       <button className="w-full inline-flex items-center justify-center gap-2 bg-primary text-white font-semibold py-3 rounded-lg hover:bg-purple-700 transition group-hover:shadow-lg">
