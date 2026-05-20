@@ -130,7 +130,7 @@ const HeroSlider = () => {
                       />
                     </svg>
                     <span>
-                      June 14<sup className="text-xs">th</sup> – June 17
+                      November 19<sup className="text-xs">th</sup> – November 22
                       <sup className="text-xs">th</sup>, 2026
                     </span>
                   </div>
@@ -177,7 +177,7 @@ const HeroSlider = () => {
                   </a>
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4">
+                {/* <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href="https://conference.bnglogisticsnetwork.com/register"
                     className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 px-8 py-4 rounded-lg text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-xl text-center"
@@ -191,7 +191,7 @@ const HeroSlider = () => {
                   >
                     Download Brochure
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
