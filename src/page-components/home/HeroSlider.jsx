@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import bg from "@/app/images/home/Ellipse2.png";
 import bg1 from "../../../public/hero/heroslide.png";
+import ProtectedDownloadButton from "@/components/ProtectedDownloadButton";
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -130,7 +131,7 @@ const HeroSlider = () => {
                       />
                     </svg>
                     <span>
-                      November 19<sup className="text-xs">th</sup> – November 22
+                      June 14<sup className="text-xs">th</sup> – June 17
                       <sup className="text-xs">th</sup>, 2026
                     </span>
                   </div>
@@ -177,21 +178,20 @@ const HeroSlider = () => {
                   </a>
                 </p>
 
-                {/* <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href="https://conference.bnglogisticsnetwork.com/register"
                     className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 px-8 py-4 rounded-lg text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-xl text-center"
                   >
                     Register Now
                   </Link>
-                  <a
-                    href="https://conference.bnglogisticsnetwork.com/download/BNG Global Convention 2026.pdf"
-                    download
+                  <ProtectedDownloadButton
+                    filename="BNG Global Convention 2026.pdf"
                     className="bg-white hover:bg-gray-100 px-8 py-4 rounded-lg text-gray-900 font-bold text-lg transition-all duration-300 hover:scale-105 shadow-xl text-center"
                   >
                     Download Brochure
-                  </a>
-                </div> */}
+                  </ProtectedDownloadButton>
+                </div>
               </div>
             </div>
           </div>

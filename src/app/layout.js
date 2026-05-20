@@ -25,6 +25,12 @@ export default function RootLayout({ children }) {
         {isStaging && (
           <meta name="robots" content="noindex, nofollow" />
         )}
+        {/* Google reCAPTCHA v3 */}
+        <script
+          src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+          async
+          defer
+        ></script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -7,6 +7,7 @@ import styles from "./Conference.module.css";
 import conferenceBg from "../../../public/members_benefit/conference.png";
 import conferenceBg1 from "../../../public/members_benefit/2.png";
 import Link from "next/link";
+import ProtectedDownloadButton from "@/components/ProtectedDownloadButton";
 
 const Conference = () => {
   return (
@@ -62,23 +63,22 @@ const Conference = () => {
             <p
               className={`text-base md:text-[18px] pr-4 lg:pr-0 text-white/90 leading-relaxed mb-6 ${styles.slideUp}`}
             >
-              The BNG Global Conference takes place 19-22 November 2026 at Royal Cliff Beach Hotel, Pattaya Thailand, bringing elite freight forwarders together for high-value global collaboration.
+              The BNG Global Conference takes place 14–17 June 2026 at Royal Cliff Beach Hotel, Pattaya Thailand, bringing elite freight forwarders together for high-value global collaboration.
             </p>
-            {/* <div className="flex flex-col sm:flex-row gap-3 mx-auto justify-start w-full">
+            <div className="flex flex-col sm:flex-row gap-3 mx-auto justify-start w-full">
               <Link
                 href="https://conference.bnglogisticsnetwork.com/register"
                 className="w-full sm:w-auto bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 px-6 py-3 rounded-lg text-white font-bold text-base sm:text-lg transition-all duration-300 hover:scale-105 shadow-xl text-center"
               >
                 Conference Registration
               </Link>
-              <a
-                href="https://conference.bnglogisticsnetwork.com/download/BNG Global Convention 2026.pdf"
-                download
+              <ProtectedDownloadButton
+                filename="BNG Global Convention 2026.pdf"
                 className="w-full sm:w-auto bg-white hover:bg-gray-100 px-6 py-3 rounded-lg text-gray-900 font-bold text-base sm:text-lg transition-all duration-300 hover:scale-105 shadow-xl text-center"
               >
                 Download Brochure
-              </a>
-            </div> */}
+              </ProtectedDownloadButton>
+            </div>
           </div>
         </div>
       </div>
