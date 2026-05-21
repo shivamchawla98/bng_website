@@ -114,7 +114,7 @@ const HeroSlider = () => {
                   <span className="text-gray-600">Global Convention</span>
                 </h1>
 
-                <div className="mb-6 inline-flex flex-col sm:flex-row items-start sm:items-center gap-4 ml-1 px-4 py-3 border-l-4 border-[#5216ab]">
+                <div className="mb-6 inlin flex-col sm:flex-row items-start sm:items-center gap-4 ml-1 px-4 py-3 border-l-4 border-[#5216ab]">
                   <div className="flex items-center gap-2 text-base sm:text-lg">
                     <svg
                       className="w-5 h-5"
@@ -177,21 +177,21 @@ const HeroSlider = () => {
                   </a>
                 </p>
 
-                {/* <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href="https://conference.bnglogisticsnetwork.com/register"
                     className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 px-8 py-4 rounded-lg text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-xl text-center"
                   >
                     Register Now
                   </Link>
-                  <a
+                  {/* <a
                     href="https://conference.bnglogisticsnetwork.com/download/BNG Global Convention 2026.pdf"
                     download
                     className="bg-white hover:bg-gray-100 px-8 py-4 rounded-lg text-gray-900 font-bold text-lg transition-all duration-300 hover:scale-105 shadow-xl text-center"
                   >
                     Download Brochure
-                  </a>
-                </div> */}
+                  </a> */}
+                </div>
               </div>
             </div>
           </div>
