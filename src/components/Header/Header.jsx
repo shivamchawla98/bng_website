@@ -88,6 +88,9 @@ function Header() {
           <a href="/blog" className={`font-medium hover:text-primary text-[18px] ${isActive("/blog") || pathname?.startsWith("/blog/") ? "text-primary font-bold" : ""}`}>
             Blog
           </a>
+          <a href="/vendor-partners" className={`font-medium hover:text-primary text-[18px] ${isActive("/vendor-partners") || pathname?.startsWith("/vendor-partners/") ? "text-primary font-bold" : ""}`}>
+            Vendors
+          </a>
           <a href="/contact" className={`font-medium hover:text-primary text-[18px] ${isActive("/contact") ? "text-primary font-bold" : ""}`}>
             Contact Us
           </a>
@@ -162,6 +165,9 @@ function Header() {
           </a>
           <a href="/blog" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/blog") || pathname?.startsWith("/blog/") ? "text-primary font-bold" : "text-gray-700"}`}>
             Blog
+          </a>
+          <a href="/vendor-partners" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/vendor-partners") || pathname?.startsWith("/vendor-partners/") ? "text-primary font-bold" : "text-gray-700"}`}>
+            Vendors
           </a>
           <a href="/contact" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/contact") ? "text-primary font-bold" : "text-gray-700"}`}>
             Contact Us

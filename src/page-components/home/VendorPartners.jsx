@@ -47,7 +47,7 @@ const VendorPartners = () => {
         <div className="text-center mb-16">
           <div>
             <h2 className="text-4xl lg:text-[55px] font-bold text-[#27293B] text-center mb-4 sm:mb-4 lg:mb-4 relative z-10">
-              Our Vendors &{" "} <span className="text-primary">Partners</span>
+              Our Vendors &{" "} <span className="text-primary">Partnerships</span>
             </h2>
             <h2
               className="absolute top-[-34px] lg:top-[-60px] left-0 lg:left-[0%] text-center w-full text-[40px]  lg:text-[80px] font-bold text-[#27293B] opacity-[3%] leading-none z-0"
