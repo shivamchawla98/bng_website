@@ -5,7 +5,24 @@ import Image from 'next/image';
 import {
   GlobeAltIcon,
   MapPinIcon,
+  UserIcon,
 } from '@heroicons/react/24/outline';
+
+// ─── Person photo with graceful placeholder when no image is provided ────────
+const PersonPhoto = ({ person, sizes }) =>
+  person.personImageUrl ? (
+    <Image
+      src={person.personImageUrl}
+      alt={person.personName}
+      fill
+      sizes={sizes}
+      className="object-cover object-top"
+    />
+  ) : (
+    <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300">
+      <UserIcon className="h-20 w-20 text-gray-400" />
+    </div>
+  );
 
 // ─── Keyframe CSS for one-direction slide ────────────────────────────────────
 
@@ -91,13 +108,7 @@ const SponsorCard = ({ sponsor, gradient }) => {
                     : undefined
                 }
               >
-                <Image
-                  src={current.personImageUrl}
-                  alt={current.personName}
-                  fill
-                  sizes="300px"
-                  className="object-cover object-top"
-                />
+                <PersonPhoto person={current} sizes="300px" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               </div>
 
@@ -107,13 +118,7 @@ const SponsorCard = ({ sponsor, gradient }) => {
                   className="absolute inset-0"
                   style={{ animation: 'sponsorSlideInRight 0.48s cubic-bezier(0.25,0.46,0.45,0.94) forwards', willChange: 'transform' }}
                 >
-                  <Image
-                    src={attendees[pendingIdx].personImageUrl}
-                    alt={attendees[pendingIdx].personName}
-                    fill
-                    sizes="300px"
-                    className="object-cover object-top"
-                  />
+                  <PersonPhoto person={attendees[pendingIdx]} sizes="300px" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                 </div>
               )}
@@ -159,13 +164,7 @@ const SponsorCard = ({ sponsor, gradient }) => {
                     : undefined
                 }
               >
-                <Image
-                  src={current.personImageUrl}
-                  alt={current.personName}
-                  fill
-                  sizes="100vw"
-                  className="object-cover object-top"
-                />
+                <PersonPhoto person={current} sizes="100vw" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               </div>
 
@@ -174,13 +173,7 @@ const SponsorCard = ({ sponsor, gradient }) => {
                   className="absolute inset-0"
                   style={{ animation: 'sponsorSlideInRight 0.48s cubic-bezier(0.25,0.46,0.45,0.94) forwards', willChange: 'transform' }}
                 >
-                  <Image
-                    src={attendees[pendingIdx].personImageUrl}
-                    alt={attendees[pendingIdx].personName}
-                    fill
-                    sizes="100vw"
-                    className="object-cover object-top"
-                  />
+                  <PersonPhoto person={attendees[pendingIdx]} sizes="100vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                 </div>
               )}

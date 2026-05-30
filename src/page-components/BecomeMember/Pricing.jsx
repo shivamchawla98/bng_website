@@ -111,7 +111,7 @@ export default function Pricing() {
     {
       name: 'BNG Conference',
       features: [
-        { name: 'Delegate Pass', tiers: { Trial: false, Standard: false, Premium: false, Elite: '1 Delegate Pass free' } },
+        { name: 'Delegate Pass', tiers: { Trial: false, Standard: false, Premium: false, Elite: '1 Delegate Pass free (Limited Time Offer)' } },
       ],
     },
     {
@@ -163,7 +163,7 @@ export default function Pricing() {
         },
         { name: 'Network Xchange', tiers: { Trial: false, Standard: false, Premium: true, Elite: true } },
         {
-          name: 'Pr And Marketing',
+          name: 'PR And Marketing',
           tiers: { Trial: false, Standard: false, Premium: '1 Posts Per Month', Elite: '10 Posts Per Month' },
           tooltip: 'Create your visibility to global trade & exim market',
         },

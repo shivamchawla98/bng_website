@@ -235,7 +235,24 @@ export const sponsorTypes = [
 // Add new sponsor entries here when confirmed. Empty arrays = no members yet.
 
 export const sponsorsData = {
-  gold: [],
+  gold: [
+    {
+      id: 'gold-1',
+      personName: 'Joints Logistic Services',
+      personPosition: '',
+      personImageUrl: '',
+      companyName: 'Joints Logistic Services',
+      companyLogoUrl: '/sponsor/gold/joints-logistics.png',
+      country: 'Brazil',
+      countryFlagUrl: 'https://flagcdn.com/w40/br.png',
+      location: 'Sao Paulo',
+      about:
+        'Joints Logistic Services is a Brazil-based international logistics specialist offering air, ocean, road freight, and customs advisory, backed by partners with over 20 years of foreign trade expertise.',
+      phone: '',
+      email: '',
+      website: 'https://jointslog.com.br/',
+    },
+  ],
   'gala-dinner': [],
   'welcome-cocktail': [],
   'after-party': [],
@@ -259,6 +276,7 @@ export const sponsorsData = {
         },
       ],
       companyName: 'Stavan International',
+      companyLogoUrl: '/sponsor/lanyard/stavan-international.png',
       country: 'India',
       countryFlagUrl: 'https://flagcdn.com/w40/in.png',
       location: 'Ahmedabad',

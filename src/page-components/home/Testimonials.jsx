@@ -16,7 +16,7 @@ import Alexandre from "../../../public/testimonials/Alexandre Levy, JOINTS LOGIS
 import Allie from "../../../public/testimonials/Allie Nichlos - Victoria Projects, USA.png";
 import Anne from "../../../public/testimonials/Anne Candela - ITALFREIGHT, FRANCE.png";
 import Karolina from "../../../public/testimonials/Karolina Zarebska , MAG, POLAND.png";
-import Radu from "../../../public/testimonials/Mr. Radu Stanciu - Global Go, USA Logistics.png";
+import Patricia from "../../../public/testimonials/patricia-lema.png";
 import Timo from "../../../public/testimonials/Timo Schrimpf, TS LOGISTIC, GERMANYS, GERMANY.png";
 import Virendra from "../../../public/testimonials/Virendra Kothari, GLOBE GROUND, INDIA.png";
 
@@ -75,12 +75,12 @@ const testimonials = [
     country: "PL",
   },
   {
-    name: "Radu",
-    title: "Global Go Logistics LLC",
+    name: "Patricia Lema",
+    title: "South Agencies Sociedad",
     text: "BNG offers a structured yet personal way to connect with the right partners. Sharing requirements and engaging with fellow members has been smooth, transparent, and effective.",
-    imageUrl: Radu,
+    imageUrl: Patricia,
     rating: 5,
-    country: "US",
+    country: "PE",
   },
   {
     name: "Timo",

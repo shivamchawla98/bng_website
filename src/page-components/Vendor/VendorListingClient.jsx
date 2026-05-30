@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Star, ArrowRight, Filter } from "lucide-react";
+import { ArrowRight, Filter } from "lucide-react";
 import BannerSection from "@/components/Blog/BlogPageBanner";
 import { vendorsData, getAllVendorCategories } from "@/data/vendors";
 
@@ -64,74 +64,65 @@ const VendorListingClient = () => {
                 <Link
                   key={vendor.id}
                   href={`/vendor-partners/${vendor.slug}`}
-                  className="group"
+                  className="group block h-full"
                 >
-                  <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all transform hover:-translate-y-2 h-full flex flex-col">
-                    {/* Header Section */}
-                    <div className="bg-gradient-to-r from-primary/10 to-purple-500/10 p-6 border-b border-gray-200">
-                      <div className="relative w-full h-24 mb-4 flex items-center justify-center">
-                        <Image
-                          src={vendor.logo}
-                          alt={vendor.name}
-                          fill
-                          className="object-contain group-hover:scale-105 transition-transform"
-                        />
+                  <article className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 h-full flex flex-col">
+                    {/* Banner with logo, name & category overlay */}
+                    <div
+                      className="relative h-44 bg-gradient-to-br from-primary to-purple-700 bg-cover bg-center"
+                      style={
+                        vendor.backgroundImage?.src
+                          ? { backgroundImage: `url(${vendor.backgroundImage.src})` }
+                          : undefined
+                      }
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
+
+                      <div className="absolute bottom-0 left-0 right-0 p-4 flex items-center gap-3">
+                        {/* Logo chip */}
+                        <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white shadow-md p-1.5">
+                          <div className="relative w-full h-full">
+                            <Image
+                              src={vendor.logo}
+                              alt={vendor.name}
+                              fill
+                              className="object-contain"
+                            />
+                          </div>
+                        </div>
+
+                        <div className="min-w-0">
+                          <h3 className="text-white font-bold text-lg leading-tight drop-shadow line-clamp-1">
+                            {vendor.name}
+                          </h3>
+                          <span className="inline-block mt-1 px-2.5 py-0.5 rounded-md bg-white/90 text-gray-800 text-xs font-medium">
+                            {vendor.category}
+                          </span>
+                        </div>
                       </div>
                     </div>
 
                     {/* Content Section */}
                     <div className="p-6 flex-1 flex flex-col">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition line-clamp-2">
-                        {vendor.name}
-                      </h3>
+                      {vendor.tagline && (
+                        <p className="text-gray-900 font-medium mb-3 line-clamp-1">
+                          {vendor.tagline}
+                        </p>
+                      )}
 
-                      <p className="text-sm font-semibold text-primary mb-4">
-                        {vendor.category}
-                      </p>
-
-                      <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                        {vendor.tagline}
-                      </p>
-
-                      <p className="text-gray-700 text-sm mb-4 flex-1 line-clamp-3">
+                      <p className="text-gray-600 text-sm leading-relaxed line-clamp-3 mb-6">
                         {vendor.about}
                       </p>
 
-                      {/* Rating */}
-                      {typeof vendor.rating === "number" && (
-                        <div className="flex items-center gap-3 mb-4 pt-4 border-t border-gray-200">
-                          <div className="flex gap-1">
-                            {[...Array(5)].map((_, i) => (
-                              <Star
-                                key={i}
-                                className={`w-4 h-4 ${
-                                  i < Math.floor(vendor.rating)
-                                    ? "fill-yellow-400 text-yellow-400"
-                                    : "text-gray-300"
-                                }`}
-                              />
-                            ))}
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <span className="font-bold text-gray-900">
-                              {vendor.rating}
-                            </span>
-                            {vendor.reviewCount && (
-                              <span className="text-xs text-gray-600">
-                                ({vendor.reviewCount} reviews)
-                              </span>
-                            )}
-                          </div>
-                        </div>
-                      )}
-
-                      {/* View Details Button */}
-                      <button className="w-full inline-flex items-center justify-center gap-2 bg-primary text-white font-semibold py-3 rounded-lg hover:bg-purple-700 transition group-hover:shadow-lg">
-                        <span>View Details</span>
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </button>
+                      {/* View Details */}
+                      <div className="mt-auto flex items-center justify-end">
+                        <span className="inline-flex items-center gap-1.5 text-primary font-semibold text-sm">
+                          View Details
+                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </span>
+                      </div>
                     </div>
-                  </div>
+                  </article>
                 </Link>
               ))}
             </div>

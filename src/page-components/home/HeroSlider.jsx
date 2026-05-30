@@ -24,7 +24,7 @@ const HeroSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 4000); // Changed to normal timing
+    }, 6000); // Changed to normal timing
     return () => clearInterval(interval);
   }, []);
 
@@ -71,6 +71,95 @@ const HeroSlider = () => {
 
   return (
     <div className="min-h-[661px] h-[661px] relative overflow-hidden">
+            {/* Slide 2 - Country Exclusive Network (Slide 1) */}
+      <div
+        className={`absolute inset-0 lg:px-0 md:px-0 xl:px-0 px-4 transition-all duration-1000 ${
+          getSlidePosition(1)
+        }`}
+        style={{
+          transition: "transform 1s cubic-bezier(0.4, 0, 0.2, 1), opacity 1s cubic-bezier(0.4, 0, 0.2, 1)",
+        }}
+      >
+        <div
+          className="absolute top-10 left-0 w-[100px] h-[100px] md:w-[200px] md:h-[200px] blur-2xl rounded-full"
+          style={{
+            background: "linear-gradient(-145deg, #6853DB 16%, #6853DB 40.86%, #97b6f6 30%)",
+            zIndex: 1,
+            filter: "blur(50px)",
+            WebkitFilter: "blur(100px)",
+            backdropFilter: "blur(100px)",
+          }}
+        ></div>
+
+        {/* Right-middle Patch - Adjusted position and size for mobile */}
+        <div
+          className="absolute top-1/2 right-0 md:right-12 transform translate-x-1/2 -translate-y-1/2 w-[80px] h-[40%] md:w-[160px] md:h-[70%] rounded-full"
+          style={{
+            background: "linear-gradient(-145deg, #6853DB 16%, #6853DB 40.86%, #97b6f6 30%)",
+            zIndex: 1,
+            filter: "blur(110px)",
+          }}
+        ></div>
+
+        {/* Content and Globe Container (z-20) */}
+        <div className="container py-8 md:py-12 lg:py-16 mx-auto  flex flex-col lg:flex-row items-center relative z-20 h-full">
+          {/* Left side content */}
+          <div className="lg:w-1/2 mb-8 lg:mb-0">
+            <h1 className="text-[28px] sm:text-[35px] md:text-[50px] mb-4 text-[#27293B]">
+              <span className="text-[30px] sm:text-[40px] md:text-[60px] font-bold">
+                Country
+              </span>
+              <span className="text-[#5216ab] font-bold text-[30px] sm:text-[40px] md:text-[60px]">
+                {" "}
+                Exclusive Network
+              </span>
+              <br />
+              Built for
+              <span className="text-[#5216ab]"> Top 1% </span>
+            </h1>
+            <p className="text-gray-600 mb-6 text-sm sm:text-base">
+              <span className="text-base sm:text-lg md:text-[20px] font-semibold">A network not for everyone</span>—built for elite freight forwarders who value country exclusivity, real business opportunities, payment protection, and long-term global partnerships.{" "}
+            </p>
+            <div className="flex w-60 flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+              <Link
+                href="https://app.bnglogisticsnetwork.com/register"
+                className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-[#5216ab] hover:from-transparent transition-all duration-300 bg-primary transform hover:translate-x-2"
+              >
+                Become a Member
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </Link>
+            </div>
+          </div>
+
+          {/* Right side: Animated globe (z-30) */}
+          <div className="lg:w-1/2 relative">
+            <Image
+              src={bg}
+              alt="Globe"
+              className="lg:ml-20 relative z-50"
+              priority={true}
+              style={{
+                transform: `translateX(${Math.min(scrollY * 0.2, 100)}px)`,
+                transition: "transform 0.3s ease-out",
+                zIndex: 9999
+              }}
+            />
+          </div>
+        </div>
+      </div>
       {/* Slide 1 - Country Exclusive Network (Now slide 0) */}
       <div
         className={`absolute inset-0 transition-all duration-1000 ${
@@ -213,95 +302,7 @@ const HeroSlider = () => {
         </div>
       </div>
 
-      {/* Slide 2 - Country Exclusive Network (Slide 1) */}
-      <div
-        className={`absolute inset-0 lg:px-0 md:px-0 xl:px-0 px-4 transition-all duration-1000 ${
-          getSlidePosition(1)
-        }`}
-        style={{
-          transition: "transform 1s cubic-bezier(0.4, 0, 0.2, 1), opacity 1s cubic-bezier(0.4, 0, 0.2, 1)",
-        }}
-      >
-        <div
-          className="absolute top-10 left-0 w-[100px] h-[100px] md:w-[200px] md:h-[200px] blur-2xl rounded-full"
-          style={{
-            background: "linear-gradient(-145deg, #6853DB 16%, #6853DB 40.86%, #97b6f6 30%)",
-            zIndex: 1,
-            filter: "blur(50px)",
-            WebkitFilter: "blur(100px)",
-            backdropFilter: "blur(100px)",
-          }}
-        ></div>
 
-        {/* Right-middle Patch - Adjusted position and size for mobile */}
-        <div
-          className="absolute top-1/2 right-0 md:right-12 transform translate-x-1/2 -translate-y-1/2 w-[80px] h-[40%] md:w-[160px] md:h-[70%] rounded-full"
-          style={{
-            background: "linear-gradient(-145deg, #6853DB 16%, #6853DB 40.86%, #97b6f6 30%)",
-            zIndex: 1,
-            filter: "blur(110px)",
-          }}
-        ></div>
-
-        {/* Content and Globe Container (z-20) */}
-        <div className="container py-8 md:py-12 lg:py-16 mx-auto  flex flex-col lg:flex-row items-center relative z-20 h-full">
-          {/* Left side content */}
-          <div className="lg:w-1/2 mb-8 lg:mb-0">
-            <h1 className="text-[28px] sm:text-[35px] md:text-[50px] mb-4 text-[#27293B]">
-              <span className="text-[30px] sm:text-[40px] md:text-[60px] font-bold">
-                Country
-              </span>
-              <span className="text-[#5216ab] font-bold text-[30px] sm:text-[40px] md:text-[60px]">
-                {" "}
-                Exclusive Network
-              </span>
-              <br />
-              Built for
-              <span className="text-[#5216ab]"> Top 1% </span>
-            </h1>
-            <p className="text-gray-600 mb-6 text-sm sm:text-base">
-              <span className="text-base sm:text-lg md:text-[20px] font-semibold">A network not for everyone</span>—built for elite freight forwarders who value country exclusivity, real business opportunities, payment protection, and long-term global partnerships.{" "}
-            </p>
-            <div className="flex w-60 flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-              <Link
-                href="https://app.bnglogisticsnetwork.com/register"
-                className="group bg-gradient-to-tr from-[#6853DB] to-[#6853DB] rounded-lg text-white px-6 py-3 cursor-pointer flex items-center hover:bg-[#5216ab] hover:from-transparent transition-all duration-300 bg-primary transform hover:translate-x-2"
-              >
-                Become a Member
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-2"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  />
-                </svg>
-              </Link>
-            </div>
-          </div>
-
-          {/* Right side: Animated globe (z-30) */}
-          <div className="lg:w-1/2 relative">
-            <Image
-              src={bg}
-              alt="Globe"
-              className="lg:ml-20 relative z-50"
-              priority={true}
-              style={{
-                transform: `translateX(${Math.min(scrollY * 0.2, 100)}px)`,
-                transition: "transform 0.3s ease-out",
-                zIndex: 9999
-              }}
-            />
-          </div>
-        </div>
-      </div>
 
       {/* Navigation Arrows - Only Next */}
       <button
