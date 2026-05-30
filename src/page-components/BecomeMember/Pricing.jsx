@@ -78,8 +78,9 @@ export default function Pricing() {
       name: 'Standard',
       id: 'tier-Standard',
       href: '#',
-      priceYearly: '$499',
-      priceValue: 499,
+      priceYearly: '$199',
+      priceValue: 199,
+      originalPriceValue: 499,
       mostPopular: false,
       icon: TrophyIcon,
     },
@@ -87,8 +88,9 @@ export default function Pricing() {
       name: 'Premium',
       id: 'tier-Premium',
       href: '#',
-      priceYearly: '$999',
-      priceValue: 999,
+      priceYearly: '$699',
+      priceValue: 699,
+      originalPriceValue: 999,
       mostPopular: false,
       icon: StarsIcon,
     },
@@ -96,36 +98,52 @@ export default function Pricing() {
       name: 'Elite',
       id: 'tier-Elite',
       href: '#',
-      priceYearly: '$1999',
-      priceValue: 1999,
+      priceYearly: '$1550',
+      priceValue: 1550,
+      originalPriceValue: 1999,
       mostPopular: true,
       icon: Crown,
     },
   ]
 
-  // Define sections with Free tier features matching Elite tier
+  // Define sections - order and contents match the official pricing sheet
   const sections = [
+    {
+      name: 'BNGConference',
+      features: [
+        { name: 'Delegate Pass', tiers: { Trial: false, Standard: false, Premium: false, Elite: '1 Delegate Pass free' } },
+      ],
+    },
     {
       name: 'Basic Features',
       features: [
         { name: 'Unlimited Searches For Fellow Members', tiers: { Trial: true, Standard: true, Premium: true, Elite: true } },
-        { name: 'Realtime Chat', tiers: { Trial: true, Standard: true, Premium: true, Elite: true } },
         { name: 'Dedicated Membership Profile', tiers: { Trial: true, Standard: true, Premium: true, Elite: true } },
-        { name: 'Certificate Of Membership', tiers: { Trial: false, Standard: true, Premium: true, Elite: true } },
-        { name: 'Membership Badge', tiers: { Trial: false, Standard: true, Premium: true, Elite: true } },
+        { name: 'Realtime Chat', tiers: { Trial: false, Standard: false, Premium: true, Elite: true } },
+        { name: 'Certificate Of Membership', tiers: { Trial: false, Standard: false, Premium: true, Elite: true } },
+        { name: 'Membership Badge', tiers: { Trial: false, Standard: false, Premium: true, Elite: true } },
       ],
     },
     {
       name: 'Team Management & Offices',
       features: [
-        { name: 'Team Members / Users (Same Country / Within Company)', tiers: { Trial: 'Unlimited', Standard: '1 Users', Premium: '4 Users', Elite: 'Unlimited' } },
+        { name: 'Team Members / Users (Same Country / Within Company)', tiers: { Trial: 'Unlimited', Standard: '1 User', Premium: '2 Users', Elite: 'Unlimited' } },
         {
           name: 'Branch Offices (Same Country / Within Company)',
           tiers: {
-            Trial: '',
-            Standard: '',
-            Premium: '1HQ + 2 Branch (After That $499 Branch)',
-            Elite: '1HQ + 9 Branch (After That $499 Branch)',
+            Trial: false,
+            Standard: false,
+            Premium: false,
+            Elite: '1 HQ + 9 Branches (within same country) after that $499 every new branch',
+          },
+        },
+        {
+          name: 'Branch offices (Outside Country / Within Company)',
+          tiers: {
+            Trial: false,
+            Standard: false,
+            Premium: false,
+            Elite: '$699 Per Branch (every branch will be protected with $50k)',
           },
         },
       ],
@@ -135,20 +153,21 @@ export default function Pricing() {
       features: [
         {
           name: 'Business Xchange (Monthly Post/Bid)',
-          tiers: { Trial: 'Unlimited', Standard: '2 Enquiry', Premium: '5 Enquiries', Elite: 'Unlimited' },
+          tiers: { Trial: 'Unlimited', Standard: '1', Premium: '5 Enquiries', Elite: 'Unlimited' },
           tooltip: 'A robust system with freight enquiries from global trade community / post your enquiry / quote for enquires',
         },
         {
           name: 'Freight Xchange (Monthly Post Of Your Promotional Freight Rates)',
-          tiers: { Trial: 'Unlimited', Standard: '2 Post', Premium: '5 Posts', Elite: 'Unlimited' },
+          tiers: { Trial: 'Unlimited', Standard: '1', Premium: '5 Posts', Elite: 'Unlimited' },
           tooltip: 'A robust system gives you opportunity to grow your visibility by posting your freight rates',
         },
+        { name: 'Network Xchange', tiers: { Trial: false, Standard: false, Premium: true, Elite: true } },
         {
           name: 'Pr And Marketing',
-          tiers: { Trial: '', Standard: '', Premium: '2 Posts Per Month', Elite: '15 Posts Per Month' },
+          tiers: { Trial: false, Standard: false, Premium: '1 Posts Per Month', Elite: '10 Posts Per Month' },
           tooltip: 'Create your visibility to global trade & exim market',
         },
-        { name: 'Be On Top Search Results', tiers: { Trial: true, Standard: false, Premium: false, Elite: true } },
+        { name: 'Be On Top Search Results', tiers: { Trial: false, Standard: false, Premium: false, Elite: true } },
       ],
     },
     {
@@ -159,7 +178,7 @@ export default function Pricing() {
           tiers: {
             Trial: false,
             Standard: false,
-            Premium: 'Up To $10,000 Payment Protection',
+            Premium: 'Up To $5,000 Payment Protection',
             Elite: 'Up To $50,000 Payment Protection',
           },
         },
@@ -170,8 +189,8 @@ export default function Pricing() {
       features: [
         { name: 'Discount On Conference Fees', tiers: { Trial: false, Standard: false, Premium: false, Elite: '5% Life Time' } },
         { name: 'Discount On Sponsorship Packages', tiers: { Trial: false, Standard: false, Premium: false, Elite: '15% Life Time' } },
-        { name: 'Virtual Conference Access - Free', tiers: { Trial: false, Standard: true, Premium: true, Elite: true } },
-        { name: 'Special Discount On Cargo Insurances', tiers: { Trial: false, Standard: true, Premium: true, Elite: true } },
+        { name: 'Virtual Conference Access - Free', tiers: { Trial: true, Standard: true, Premium: true, Elite: true } },
+        { name: 'Special Discount On Cargo Insurances', tiers: { Trial: true, Standard: true, Premium: true, Elite: true } },
       ],
     },
   ];
@@ -208,11 +227,25 @@ export default function Pricing() {
 
   // Calculate price based on selected duration for a tier
   const getPrice = (tier) => {
-   
-    
+
+
     const years = selectedDurations[tier.id] || 1;
     const basePrice = tier.priceValue * years;
-    
+
+    if (currency === 'USD') {
+      return `$${basePrice.toLocaleString()}`;
+    } else {
+      const inrPrice = Math.round(basePrice * exchangeRate);
+      return `₹${inrPrice.toLocaleString()}`;
+    }
+  }
+
+  // Calculate the original (pre-discount) price for strikethrough display
+  const getOriginalPrice = (tier) => {
+    if (!tier.originalPriceValue) return null;
+    const years = selectedDurations[tier.id] || 1;
+    const basePrice = tier.originalPriceValue * years;
+
     if (currency === 'USD') {
       return `$${basePrice.toLocaleString()}`;
     } else {
@@ -290,12 +323,14 @@ export default function Pricing() {
                       <tier.icon className="h-10 w-10 text-indigo-600" />
                       <h3 className="ml-3 text-2xl font-bold text-gray-900">{tier.name}</h3>
                     </div>
-                    <p className="flex items-baseline gap-x-1 justify-center text-gray-900">
+                    <div className="flex flex-col items-center text-gray-900">
+                      {getOriginalPrice(tier) && (
+                        <span className="text-xl sm:text-2xl font-medium text-gray-400 line-through">
+                          {getOriginalPrice(tier)}
+                        </span>
+                      )}
                       <span className="text-3xl sm:text-4xl font-semibold">{getPrice(tier)}</span>
-                      {/* {tier.id === 'tier-Free' && (
-                        <span className="text-sm font-normal text-gray-500 ml-1">for 30 days</span>
-                      )} */}
-                    </p>
+                    </div>
                     {/* Duration Dropdown - Hidden for Free tier */}
                     {tier.id !== 'tier-Free' ? (
                       <div className="mt-4 relative">
@@ -451,11 +486,13 @@ export default function Pricing() {
                   </th>
                   {tiers.map((tier) => (
                     <td key={tier.id} className="px-6 pt-2 xl:px-8">
-                      <div className="altar de precios flex justify-center items-center text-gray-900">
+                      <div className="flex flex-col justify-center items-center text-gray-900">
+                        {getOriginalPrice(tier) && (
+                          <span className="text-2xl font-medium text-gray-400 line-through">
+                            {getOriginalPrice(tier)}
+                          </span>
+                        )}
                         <span className="text-4xl font-semibold">{getPrice(tier)}</span>
-                        {/* {tier.id === 'tier-Free' && (
-                          <span className="text-sm font-normal text-gray-500 ml-1">for 30 days</span>
-                        )} */}
                       </div>
                       {/* Duration Dropdown - Hidden for Free tier */}
                       {tier.id !== 'tier-Free' ? (
