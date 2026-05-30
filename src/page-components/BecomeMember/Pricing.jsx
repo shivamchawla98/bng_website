@@ -109,7 +109,7 @@ export default function Pricing() {
   // Define sections - order and contents match the official pricing sheet
   const sections = [
     {
-      name: 'BNGConference',
+      name: 'BNG Conference',
       features: [
         { name: 'Delegate Pass', tiers: { Trial: false, Standard: false, Premium: false, Elite: '1 Delegate Pass free' } },
       ],
