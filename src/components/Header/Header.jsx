@@ -11,7 +11,6 @@ function Header() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [bgStyle, setBgStyle] = useState({
     opacity: 1,
     background: "linear-gradient(to top right, var(--primaryBg), var(--secondryBg))",
@@ -25,14 +24,9 @@ function Header() {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const toggleAbout = () => {
-    setIsAboutOpen(!isAboutOpen);
-  };
-
   const closeMenu = () => {
     setIsMenuOpen(false);
     setIsDropdownOpen(false);
-    setIsAboutOpen(false);
   };
 
   const isActive = (href) => pathname === href;
@@ -85,38 +79,14 @@ function Header() {
           <a href="/benefit" className={`font-medium hover:text-primary text-[18px] ${isActive("/benefit") ? "text-primary font-bold" : ""}`}>
             Benefits
           </a>
-          {/* About Dropdown */}
-          <div className="relative" onMouseEnter={() => setIsAboutOpen(true)} onMouseLeave={() => setIsAboutOpen(false)}>
-            <button
-              className={`font-medium hover:text-primary text-[18px] focus:outline-none flex items-center gap-1 ${
-                isActive("/about-us") || isActive("/team") ? "text-primary font-bold" : ""
-              }`}
-              onClick={toggleAbout}
-            >
-              About
-              <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4 transition-transform duration-200 ${isAboutOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            {isAboutOpen && (
-              <div className="absolute top-full left-0 bg-white shadow-lg rounded-lg p-4 space-y-2 w-48 z-50">
-                <Link href="/about-us" className={`block hover:text-primary text-[18px] font-medium ${isActive("/about-us") ? "text-primary font-bold" : "text-gray-700"}`}>
-                  About us
-                </Link>
-                <Link href="/team" className={`block hover:text-primary text-[18px] font-medium ${isActive("/team") ? "text-primary font-bold" : "text-gray-700"}`}>
-                  Team
-                </Link>
-              </div>
-            )}
-          </div>
+          <a href="/about-us" className={`font-medium hover:text-primary text-[18px] ${isActive("/about-us") ? "text-primary font-bold" : ""}`}>
+            About us
+          </a>
           <a href="/pricing" className={`font-medium hover:text-primary text-[18px] ${isActive("/pricing") ? "text-primary font-bold" : ""}`}>
             Pricing
           </a>
           <a href="/blog" className={`font-medium hover:text-primary text-[18px] ${isActive("/blog") || pathname?.startsWith("/blog/") ? "text-primary font-bold" : ""}`}>
             Blog
-          </a>
-          <a href="/vendor-partners" className={`font-medium hover:text-primary text-[18px] ${isActive("/vendor-partners") || pathname?.startsWith("/vendor-partners/") ? "text-primary font-bold" : ""}`}>
-            Vendors
           </a>
           <a href="/contact" className={`font-medium hover:text-primary text-[18px] ${isActive("/contact") ? "text-primary font-bold" : ""}`}>
             Contact Us
@@ -184,38 +154,14 @@ function Header() {
           <a href="/benefit" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/benefit") ? "text-primary font-bold" : "text-gray-700"}`}>
             Benefits
           </a>
-          {/* About Dropdown for Mobile */}
-          <div>
-            <button
-              className={`hover:text-primary text-[18px] py-2 flex items-center gap-1 ${
-                isActive("/about-us") || isActive("/team") ? "text-primary font-bold" : "text-[#27293B]"
-              }`}
-              onClick={toggleAbout}
-            >
-              About
-              <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4 transition-transform duration-200 ${isAboutOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            {isAboutOpen && (
-              <div className="pl-4 space-y-2">
-                <Link href="/about-us" onClick={closeMenu} className={`hover:text-primary text-[18px] py-1 block ${isActive("/about-us") ? "text-primary font-bold" : "text-gray-700"}`}>
-                  About us
-                </Link>
-                <Link href="/team" onClick={closeMenu} className={`hover:text-primary text-[18px] py-1 block ${isActive("/team") ? "text-primary font-bold" : "text-gray-700"}`}>
-                  Team
-                </Link>
-              </div>
-            )}
-          </div>
+          <a href="/about-us" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/about-us") ? "text-primary font-bold" : "text-gray-700"}`}>
+            About us
+          </a>
           <a href="/pricing" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/pricing") ? "text-primary font-bold" : "text-gray-700"}`}>
             Pricing
           </a>
           <a href="/blog" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/blog") || pathname?.startsWith("/blog/") ? "text-primary font-bold" : "text-gray-700"}`}>
             Blog
-          </a>
-          <a href="/vendor-partners" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/vendor-partners") || pathname?.startsWith("/vendor-partners/") ? "text-primary font-bold" : "text-gray-700"}`}>
-            Vendors
           </a>
           <a href="/contact" onClick={closeMenu} className={`hover:text-primary text-[18px] py-2 ${isActive("/contact") ? "text-primary font-bold" : "text-gray-700"}`}>
             Contact Us

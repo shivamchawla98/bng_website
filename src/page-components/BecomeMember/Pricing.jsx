@@ -98,10 +98,11 @@ export default function Pricing() {
       name: 'Elite',
       id: 'tier-Elite',
       href: '#',
-      priceYearly: '$1550',
-      priceValue: 1550,
-      originalPriceValue: 1999,
+      priceYearly: '$1250',
+      priceValue: 1250,
+      originalPriceValue: 1550,
       mostPopular: true,
+      limitedTimeOffer: true,
       icon: Crown,
     },
   ]
@@ -315,8 +316,13 @@ export default function Pricing() {
               {tiers.map((tier) => (
                 <div
                   key={tier.id}
-                  className="snap-start w-[280px] sm:w-[320px] flex-shrink-0 bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl border border-gray-200"
+                  className="snap-start w-[280px] sm:w-[320px] flex-shrink-0 bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl border border-gray-200 overflow-hidden"
                 >
+                  {tier.limitedTimeOffer && (
+                    <div className="-mx-6 -mt-6 mb-4 bg-gradient-to-r from-[#6853DB] to-[#8b7bf0] px-4 py-2 text-center text-xs font-bold uppercase tracking-wide text-white">
+                      🔥 Limited Time Offer
+                    </div>
+                  )}
                   {/* Sticky Tier Header */}
                   <div className="sticky top-0 bg-white z-10 pb-4 border-b border-gray-100">
                     <div className="flex justify-center items-center mb-4">
@@ -475,6 +481,13 @@ export default function Pricing() {
                         <tier.icon className={`h-10  w-10 text-[#6853DB]`} />
                         <div className="ml-3 text-3xl font-semibold text-gray-900">{tier.name}</div>
                       </div>
+                      {tier.limitedTimeOffer && (
+                        <div className="mb-3 flex justify-center">
+                          <span className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#6853DB] to-[#8b7bf0] px-3 py-1 text-xs font-bold uppercase tracking-wide text-white shadow-sm animate-pulse">
+                            🔥 Limited Time Offer
+                          </span>
+                        </div>
+                      )}
                     </th>
                   ))}
                 </tr>
