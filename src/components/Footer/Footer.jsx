@@ -69,6 +69,7 @@ const Footer = () => {
             <FooterSection
               title="ABOUT US"
               links={[
+                { href: "/team", label: "Team" },
                 { href: "/about-us/#faq", label: "FAQ's" },
                 { href: "/about-us/#values", label: "Our Values" },
                 { href: "/about-us/#vision", label: "Our Visions" },
@@ -80,7 +81,7 @@ const Footer = () => {
             <FooterSection
               title="SERVICES"
               links={[
-                { href: "#", label: "BNG Vendors" },
+                { href: "/vendor-partners", label: "BNG Vendors" },
                 { href: "#", label: "BNG Cargo Shield" },
                 { href: "#", label: "BNG Tech & Media" },
                 { href: "#", label: "BNG B2B Marketplace" },

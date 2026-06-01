@@ -244,6 +244,7 @@ const SponsorCard = ({ sponsor, gradient }) => {
                       src={sponsor.companyLogoUrl}
                       alt={`${sponsor.companyName} logo`}
                       fill
+                      sizes="(max-width: 640px) 64px, (max-width: 768px) 96px, 128px"
                       className="object-contain"
                     />
                   </div>

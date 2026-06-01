@@ -30,7 +30,7 @@ import logo24 from "../../../public/LOGO_MEMBERS/24.png";
 import logo25 from "../../../public/LOGO_MEMBERS/25.png";
 import logo26 from "../../../public/LOGO_MEMBERS/26.png";
 
-import logo28 from "../../../public/LOGO_MEMBERS/27.png";
+// import logo28 from "../../../public/LOGO_MEMBERS/27.png";
 import logo29 from "../../../public/LOGO_MEMBERS/29.png";
 import logo30 from "../../../public/LOGO_MEMBERS/30.png";
 
@@ -76,7 +76,7 @@ function LatestMembers() {
     logo24,
     logo25,
     logo26,
-    logo28,
+    // logo28,
     logo29,
     logo30,
   ];

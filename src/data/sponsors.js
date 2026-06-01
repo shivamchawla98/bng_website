@@ -240,7 +240,7 @@ export const sponsorsData = {
       id: 'gold-1',
       personName: 'Joints Logistic Services',
       personPosition: '',
-      personImageUrl: '',
+      personImageUrl: '/sponsor/gold/alex.png',
       companyName: 'Joints Logistic Services',
       companyLogoUrl: '/sponsor/gold/joints-logistics.png',
       country: 'Brazil',
