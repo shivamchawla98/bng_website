@@ -98,9 +98,9 @@ export default function Pricing() {
       name: 'Elite',
       id: 'tier-Elite',
       href: '#',
-      priceYearly: '$1250',
-      priceValue: 1250,
-      originalPriceValue: 1550,
+      priceYearly: '$1550',
+      priceValue: 1550,
+      originalPriceValue: 1999,
       mostPopular: true,
       limitedTimeOffer: true,
       icon: Crown,
@@ -120,7 +120,7 @@ export default function Pricing() {
       features: [
         { name: 'Unlimited Searches For Fellow Members', tiers: { Trial: true, Standard: true, Premium: true, Elite: true } },
         { name: 'Dedicated Membership Profile', tiers: { Trial: true, Standard: true, Premium: true, Elite: true } },
-        { name: 'Realtime Chat', tiers: { Trial: false, Standard: false, Premium: true, Elite: true } },
+        { name: 'Realtime Chat', tiers: { Trial: true, Standard: false, Premium: true, Elite: true } },
         { name: 'Certificate Of Membership', tiers: { Trial: false, Standard: false, Premium: true, Elite: true } },
         { name: 'Membership Badge', tiers: { Trial: false, Standard: false, Premium: true, Elite: true } },
       ],
@@ -132,19 +132,19 @@ export default function Pricing() {
         {
           name: 'Branch Offices (Same Country / Within Company)',
           tiers: {
-            Trial: false,
+            Trial: '1 HQ + 9 Branches (within same country) after that $499 every new branch',
             Standard: false,
             Premium: false,
             Elite: '1 HQ + 9 Branches (within same country) after that $499 every new branch',
           },
         },
         {
-          name: 'Branch offices (Outside Country / Within Company)',
+          name: 'Branch Offices (Outside Country / Within Company)',
           tiers: {
-            Trial: false,
+            Trial: '$699 Per Branch (Protected With $50,000)',
             Standard: false,
             Premium: false,
-            Elite: '$699 Per Branch (every branch will be protected with $50k)',
+            Elite: '$699 Per Branch (Protected With $50,000)',
           },
         },
       ],
@@ -154,18 +154,18 @@ export default function Pricing() {
       features: [
         {
           name: 'Business Xchange (Monthly Post/Bid)',
-          tiers: { Trial: 'Unlimited', Standard: '1', Premium: '5 Enquiries', Elite: 'Unlimited' },
+          tiers: { Trial: 'Unlimited', Standard: '1 Enquiry', Premium: '5 Enquiries', Elite: 'Unlimited' },
           tooltip: 'A robust system with freight enquiries from global trade community / post your enquiry / quote for enquires',
         },
         {
           name: 'Freight Xchange (Monthly Post Of Your Promotional Freight Rates)',
-          tiers: { Trial: 'Unlimited', Standard: '1', Premium: '5 Posts', Elite: 'Unlimited' },
+          tiers: { Trial: 'Unlimited', Standard: '1 Post', Premium: '5 Posts', Elite: 'Unlimited' },
           tooltip: 'A robust system gives you opportunity to grow your visibility by posting your freight rates',
         },
-        { name: 'Network Xchange', tiers: { Trial: false, Standard: false, Premium: true, Elite: true } },
+        { name: 'Network Xchange', tiers: { Trial: true, Standard: false, Premium: true, Elite: true } },
         {
           name: 'PR And Marketing',
-          tiers: { Trial: false, Standard: false, Premium: '1 Posts Per Month', Elite: '10 Posts Per Month' },
+          tiers: { Trial: false, Standard: false, Premium: '1 Post Per Month', Elite: '10 Posts Per Month' },
           tooltip: 'Create your visibility to global trade & exim market',
         },
         { name: 'Be On Top Search Results', tiers: { Trial: false, Standard: false, Premium: false, Elite: true } },
@@ -228,8 +228,6 @@ export default function Pricing() {
 
   // Calculate price based on selected duration for a tier
   const getPrice = (tier) => {
-
-
     const years = selectedDurations[tier.id] || 1;
     const basePrice = tier.priceValue * years;
 
@@ -418,7 +416,7 @@ export default function Pricing() {
                                             {feature.name.includes('BRANCH OFFICES') && feature.tiers[tier.name].includes('After that $') ? 
                                               getBranchText(feature.tiers[tier.name], 499) : 
                                               feature.name.includes('PAYMENT PROTECTION') && feature.tiers[tier.name].includes('Up to $') ?
-                                              (tier.name === 'Premium' ? getProtectionText(20000) : getProtectionText(50000)) :
+                                              (tier.name === 'Premium' ? getProtectionText(5000) : getProtectionText(50000)) :
                                               feature.tiers[tier.name]
                                             }
                                           </p>
@@ -592,7 +590,7 @@ export default function Pricing() {
                                 {feature.name.includes('BRANCH OFFICES') && feature.tiers[tier.name].includes('After that $') ? 
                                   getBranchText(feature.tiers[tier.name], 499) : 
                                   feature.name.includes('PAYMENT PROTECTION') && feature.tiers[tier.name].includes('Up to $') ?
-                                  (tier.name === 'Premium' ? getProtectionText(20000) : getProtectionText(50000)) :
+                                  (tier.name === 'Premium' ? getProtectionText(5000) : getProtectionText(50000)) :
                                   feature.tiers[tier.name]
                                 }
                               </div>
