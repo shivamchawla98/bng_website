@@ -373,17 +373,15 @@ export default function Pricing() {
                    
                     </div>
                     )}
-                    <button
-                      onClick={openModal}
+                    <a
+                      href={`https://app.bnglogisticsnetwork.com/register?plan=${tier.name.toLowerCase()}`}
                       className={classNames(
-                        tier.id === 'tier-Free' 
-                          ? 'bg-gradient-to-tr from-[#6853DB] to-[#6853DB] hover:from-[#5844B4] hover:to-[#5844B4] text-white' 
-                          : 'bg-gradient-to-tr from-[#6853DB] to-[#6853DB] hover:from-[#5844B4] hover:to-[#5844B4] text-white',
+                        'bg-gradient-to-tr from-[#6853DB] to-[#6853DB] hover:from-[#5844B4] hover:to-[#5844B4] text-white',
                         'mt-4 block rounded-md hover:scale-105 px-4 py-3 text-center text-base font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-full transition-transform duration-200'
                       )}
                     >
-                      {tier.id === 'tier-Free' ? 'Start Free Trial' : 'Buy Now'}
-                    </button>
+                      Buy Now
+                    </a>
                   </div>
                   {/* Features */}
                   <div className="mt-6 space-y-4">
@@ -543,19 +541,17 @@ export default function Pricing() {
                     
                       </div>
                       )}
-                      <button
-                        onClick={openModal}
+                      <a
+                        href={`https://app.bnglogisticsnetwork.com/register?plan=${tier.name.toLowerCase()}`}
                         className={classNames(
-                          tier.id === 'tier-Free' 
-                            ? 'bg-gradient-to-tr from-[#6853DB] to-[#6853DB] text-white hover:bg-gradient-to-tr hover:from-[#5844B4] hover:to-[#5844B4]' 
-                            : tier.mostPopular
-                              ? 'bg-gradient-to-tr from-[#6853DB] to-[#6853DB] text-white hover:bg-gradient-to-tr hover:from-[#5844B4] hover:to-[#5844B4]'
-                              : 'text-[#6853DB] ring-1 ring-inset ring-[#6853DB]/20 hover:ring-[#6853DB]/30',
+                          tier.mostPopular
+                            ? 'bg-gradient-to-tr from-[#6853DB] to-[#6853DB] text-white hover:bg-gradient-to-tr hover:from-[#5844B4] hover:to-[#5844B4]'
+                            : 'text-[#6853DB] ring-1 ring-inset ring-[#6853DB]/20 hover:ring-[#6853DB]/30',
                           'mt-6 block rounded-md hover:scale-105 px-4 py-3 text-center text-base font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-full transition-transform duration-200'
                         )}
                       >
-                        {tier.id === 'tier-Free' ? 'Start Free Trial' : 'Buy Now'}
-                      </button>
+                        Buy Now
+                      </a>
                     </td>
                   ))}
                 </tr>
